@@ -1,0 +1,665 @@
+<!DOCTYPE html>
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Quravel - Streaming</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        primary: "#498BBB", 
+                        "background-light": "#F3F4F6",
+                        "background-dark": "#0B0E19",
+                        "surface-dark": "#151926",
+                        "footer-dark": "#0C0E14",
+                        "text-light": "#E5E7EB",
+                        "text-muted": "#9CA3AF"
+                    },
+                    fontFamily: {
+                        display: ["Inter", "sans-serif"],
+                        body: ["Inter", "sans-serif"],
+                    },
+                    borderRadius: {
+                        DEFAULT: "0.5rem",
+                    },
+                },
+            },
+        };
+    </script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        .hide-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .hide-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+        #mobile-menu {
+            transition: transform 0.3s ease-in-out;
+        }
+        .menu-open {
+            transform: translateX(0) !important;
+        }.custom-scrollbar::-webkit-scrollbar {
+            width: 6px;
+        }
+        .custom-scrollbar::-webkit-scrollbar-track {
+            background: rgba(255, 255, 255, 0.05);
+        }
+        .custom-scrollbar::-webkit-scrollbar-thumb {
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 3px;
+        }
+        .custom-scrollbar::-webkit-scrollbar-thumb:hover {
+            background: rgba(255, 255, 255, 0.3);
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark text-gray-900 dark:text-text-light transition-colors duration-300 min-h-screen flex flex-col relative">
+<div class="fixed inset-0 bg-black/50 z-40 hidden lg:hidden" id="mobile-menu-overlay" onclick="toggleMobileMenu()"></div>
+<div class="fixed top-0 left-0 h-full w-64 bg-white dark:bg-[#151926] z-50 transform -translate-x-full lg:hidden overflow-y-auto shadow-2xl" id="mobile-menu">
+<div class="p-4 border-b border-gray-200 dark:border-gray-700 flex justify-between items-center">
+<img alt="Quravel Logo" class="h-8 object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDqiUc86NAc2oPWF0jZS6ltVT0qDRUQLGYe-vsh90aCjNPCKRUYsR2joEXfq121iCQ1DMhEXbbjY-Rm6ydRKKVvOD7XCHpsnpYv4oUDQP6h-KZ9tUpwQb33LAseATibNSPDDxAViL3XAYheHWPQCau7pQCd7-XFT2YjY86y-DFUxv6SfYoh27gsa2-RiKjPMnhZfSvjYzFQSeYDzy64a_9Lmf5_NT9MkYffdzHclH1EyMht0psBW3wqnbmTFh6wbG5Xh4VXCnRWONM"/>
+<button class="text-gray-500 hover:text-primary" onclick="toggleMobileMenu()">
+<span class="material-symbols-outlined">close</span>
+</button>
+</div>
+<div class="p-4 space-y-4">
+<a class="block text-sm font-medium hover:text-primary py-2 border-b border-gray-100 dark:border-gray-800" href="#">Home</a>
+<div class="py-2 border-b border-gray-100 dark:border-gray-800">
+<button class="flex items-center justify-between w-full text-sm font-medium hover:text-primary focus:outline-none" onclick="toggleMobileDropdown('genre-mobile')">
+<span>Genre</span>
+<span class="material-symbols-outlined text-sm transform transition-transform" id="genre-arrow">expand_more</span>
+</button>
+<div class="hidden mt-2 ml-4 space-y-2 text-sm text-gray-500 dark:text-gray-400" id="genre-mobile">
+<a class="block hover:text-primary" href="#">Action</a>
+<a class="block hover:text-primary" href="#">Adventure</a>
+<a class="block hover:text-primary" href="#">Comedy</a>
+</div>
+</div>
+<div class="py-2 border-b border-gray-100 dark:border-gray-800">
+<button class="flex items-center justify-between w-full text-sm font-medium hover:text-primary focus:outline-none" onclick="toggleMobileDropdown('country-mobile')">
+<span>Country</span>
+<span class="material-symbols-outlined text-sm transform transition-transform" id="country-arrow">expand_more</span>
+</button>
+<div class="hidden mt-2 ml-4 space-y-2 text-sm text-gray-500 dark:text-gray-400" id="country-mobile">
+<a class="block hover:text-primary" href="#">USA</a>
+<a class="block hover:text-primary" href="#">Japan</a>
+</div>
+</div>
+<a class="block text-sm font-medium hover:text-primary py-2 border-b border-gray-100 dark:border-gray-800" href="#">Top IMDB</a>
+<a class="block text-sm font-medium hover:text-primary py-2" href="#">Updates</a>
+</div>
+</div>
+<header class="fixed top-0 w-full z-40 bg-white/95 dark:bg-[#0B0E19]/95 backdrop-blur-sm border-b border-gray-200 dark:border-gray-800 shadow-sm">
+<div class="container mx-auto px-4 h-16 flex items-center justify-between">
+<div class="flex items-center gap-4">
+<button class="lg:hidden text-gray-600 dark:text-gray-200 focus:outline-none" onclick="toggleMobileMenu()">
+<span class="material-symbols-outlined text-3xl">menu</span>
+</button>
+<nav class="hidden lg:flex items-center space-x-6 text-sm font-medium">
+<a class="hover:text-primary transition-colors" href="#">Home</a>
+<div class="relative group">
+<button class="flex items-center space-x-1 hover:text-primary transition-colors focus:outline-none py-4">
+<span>Genre</span>
+<span class="material-symbols-outlined text-sm">expand_more</span>
+</button>
+<div class="absolute top-full left-0 w-[600px] bg-white dark:bg-[#1A1D29] rounded-b-lg shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 border-t-2 border-primary grid grid-cols-4 gap-4 p-6 z-50">
+<a class="hover:text-primary block text-sm text-gray-600 dark:text-gray-400" href="#">Action</a>
+<a class="hover:text-primary block text-sm text-gray-600 dark:text-gray-400" href="#">Adventure</a>
+<a class="hover:text-primary block text-sm text-gray-600 dark:text-gray-400" href="#">Comedy</a>
+<a class="hover:text-primary block text-sm text-gray-600 dark:text-gray-400" href="#">Drama</a>
+</div>
+</div>
+<div class="relative group">
+<button class="flex items-center space-x-1 hover:text-primary transition-colors focus:outline-none py-4">
+<span>Country</span>
+<span class="material-symbols-outlined text-sm">expand_more</span>
+</button>
+<div class="absolute top-full left-0 w-[600px] bg-white dark:bg-[#1A1D29] rounded-b-lg shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 border-t-2 border-primary grid grid-cols-4 gap-4 p-6 z-50">
+<a class="hover:text-primary block text-sm text-gray-600 dark:text-gray-400" href="#">USA</a>
+<a class="hover:text-primary block text-sm text-gray-600 dark:text-gray-400" href="#">Japan</a>
+</div>
+</div>
+<a class="hover:text-primary transition-colors" href="#">Top IMDB</a>
+<a class="hover:text-primary transition-colors" href="#">Updates</a>
+</nav>
+</div>
+<div class="absolute left-1/2 transform -translate-x-1/2">
+<a class="block" href="/">
+<img alt="Quravel Logo" class="h-8 md:h-10 object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBJUVSMqcvlsLRod5Xj-MZhjFAWxv45A-9D1r1RCogjetrU2yKas3rRIuvSZRytOe6KmnI1y8NBGlIDGaE0UV5-mx19YpDf5v0SsajVxTc0VUCDku8E8PC54rDIUGGhmt44NSDXMGfnGVTtfzGJ8Cj6U15erHms74L8zDNtfVtIjG013mT9k-H5Psf5KSd570YR8_DAtEfUBmcVIMfE5LNH3WO14T7Cv3psWjV5O4UWogAMASg1czrkMA4qcRagH2Mtb7wqzWRn0BQ"/>
+</a>
+</div>
+<div class="flex items-center space-x-4">
+<div class="relative hidden sm:block group z-50">
+<input class="bg-gray-100 dark:bg-gray-800 text-sm rounded-full py-2 pl-4 pr-10 focus:outline-none focus:ring-2 focus:ring-primary w-48 transition-all dark:text-white border-none group-focus-within:w-64" placeholder="Search..." type="text"/>
+<span class="material-symbols-outlined absolute right-3 top-2 text-gray-400 text-lg cursor-pointer hover:text-primary">search</span>
+<div class="absolute right-0 top-full mt-2 w-80 bg-white dark:bg-[#1A1D29] rounded-xl shadow-2xl border border-gray-100 dark:border-gray-700 overflow-hidden invisible group-focus-within:visible opacity-0 group-focus-within:opacity-100 transition-all duration-200 origin-top-right transform scale-95 group-focus-within:scale-100 z-50">
+<div class="max-h-[400px] overflow-y-auto custom-scrollbar p-2 space-y-1">
+<a class="flex items-start gap-3 p-2 hover:bg-gray-100 dark:hover:bg-white/5 rounded-lg transition-colors group/item" href="#">
+<img alt="Poster" class="w-10 h-14 object-cover rounded shadow-sm flex-shrink-0" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBuupgb3nD25Wubm40iI5tWuP49EydCaUp0EiYjTBXI3qpDr-LerCLu9i6Cz1lAn9uEWj1X_Fo4FgoziLiAqHVGWLScn06tNXiGQnMbiwIt2Jrc5GUwtVkyxUxR-KnBNZOWx3ius4cMIi_7z-VZzkH8quuTo3pj8kme4akxKKbp_3vqbjKm9T8hT7rQXXLDHgki5FL3xJvGpHw8S68e_dM9PCjJcIIckD9hBK8E3s04iv_DuggJr6t4gvxdoUxAixkHyB5rAiCYW3k"/>
+<div class="flex-1 min-w-0">
+<h4 class="text-sm font-semibold text-gray-900 dark:text-white truncate group-hover/item:text-primary">The Lord of the Rings</h4>
+<div class="flex items-center gap-2 text-xs text-gray-500 dark:text-gray-400 mt-0.5">
+<span>2003</span>
+<span class="w-0.5 h-0.5 bg-gray-500 rounded-full"></span>
+<span>Movie</span>
+</div>
+</div>
+</a>
+<a class="flex items-start gap-3 p-2 hover:bg-gray-100 dark:hover:bg-white/5 rounded-lg transition-colors group/item" href="#">
+<img alt="Poster" class="w-10 h-14 object-cover rounded shadow-sm flex-shrink-0" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCwH3f4VjulnnLYk8EgFSCiOqFs12q4ivPSqucW7P7k4uOAN3qXURGd7iOxByylKHLJhbpiobEV442fMLZHwobXplWdRez-c71bcZODHHIHORqZw97zdSx_JgA4Cdym9n6VMtpcJXo3o5jc7jvKx13nsU2frrHJ8wgbcRH1cHIY8n7jLkRIsYOLDQ1uZWoGe99Imz98f_X9qskRvSTRVJiiJKF_DtE-ce0qw825vrwhgb66FQM3e_ymqoB8eBbjLZ5HuUePqbU5kYg"/>
+<div class="flex-1 min-w-0">
+<h4 class="text-sm font-semibold text-gray-900 dark:text-white truncate group-hover/item:text-primary">The Godfather</h4>
+<div class="flex items-center gap-2 text-xs text-gray-500 dark:text-gray-400 mt-0.5">
+<span>1972</span>
+<span class="w-0.5 h-0.5 bg-gray-500 rounded-full"></span>
+<span>Movie</span>
+</div>
+</div>
+</a>
+</div>
+<div class="p-3 border-t border-gray-100 dark:border-gray-700 bg-gray-50 dark:bg-[#151926] flex justify-center">
+<button class="bg-primary hover:bg-opacity-90 text-white text-xs font-semibold py-2 px-6 rounded-full transition-colors shadow-sm">
+                            View all results
+                        </button>
+</div>
+</div>
+</div>
+<button class="sm:hidden text-gray-600 dark:text-gray-200" onclick="toggleMobileSearch()">
+<span class="material-symbols-outlined">search</span>
+</button>
+</div>
+</div>
+<div class="hidden sm:hidden bg-white dark:bg-[#0B0E19] border-b border-gray-200 dark:border-gray-800 p-3 absolute w-full top-16 left-0 z-30" id="mobile-search-bar">
+<div class="relative group">
+<input class="w-full bg-gray-100 dark:bg-gray-800 text-sm rounded-full py-2 pl-4 pr-10 focus:outline-none focus:ring-2 focus:ring-primary dark:text-white border-none" placeholder="Search movies, shows..." type="text"/>
+<span class="material-symbols-outlined absolute right-3 top-2 text-gray-400 text-lg">search</span>
+<div class="absolute left-0 top-full mt-2 w-full bg-white dark:bg-[#1A1D29] rounded-xl shadow-2xl border border-gray-100 dark:border-gray-700 overflow-hidden invisible group-focus-within:visible opacity-0 group-focus-within:opacity-100 transition-all duration-200 origin-top transform scale-95 group-focus-within:scale-100 z-50">
+<div class="max-h-[300px] overflow-y-auto custom-scrollbar p-2 space-y-1">
+<a class="flex items-start gap-3 p-2 hover:bg-gray-100 dark:hover:bg-white/5 rounded-lg transition-colors" href="#">
+<img alt="Poster" class="w-10 h-14 object-cover rounded shadow-sm flex-shrink-0" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBuupgb3nD25Wubm40iI5tWuP49EydCaUp0EiYjTBXI3qpDr-LerCLu9i6Cz1lAn9uEWj1X_Fo4FgoziLiAqHVGWLScn06tNXiGQnMbiwIt2Jrc5GUwtVkyxUxR-KnBNZOWx3ius4cMIi_7z-VZzkH8quuTo3pj8kme4akxKKbp_3vqbjKm9T8hT7rQXXLDHgki5FL3xJvGpHw8S68e_dM9PCjJcIIckD9hBK8E3s04iv_DuggJr6t4gvxdoUxAixkHyB5rAiCYW3k"/>
+<div>
+<h4 class="text-sm font-semibold text-gray-900 dark:text-white truncate">The Lord of the Rings</h4>
+<div class="text-xs text-gray-500 dark:text-gray-400 mt-0.5">2003 • Movie</div>
+</div>
+</a>
+</div>
+<div class="p-3 border-t border-gray-100 dark:border-gray-700 bg-gray-50 dark:bg-[#151926] flex justify-center">
+<button class="bg-primary hover:bg-opacity-90 text-white text-xs font-semibold py-2 px-6 rounded-full transition-colors shadow-sm">
+                        View all results
+                    </button>
+</div>
+</div>
+</div>
+</div>
+</header>
+<main class="flex-grow pt-20 pb-12 w-full max-w-[1920px] mx-auto">
+<div class="container mx-auto px-4 lg:px-6">
+<div class="grid grid-cols-1 lg:grid-cols-4 gap-6">
+<div class="lg:col-span-3 space-y-6">
+<div class="w-full aspect-video bg-black rounded-xl overflow-hidden shadow-2xl relative group">
+<div class="absolute inset-0 flex items-center justify-center bg-black">
+<span class="material-symbols-outlined text-6xl text-white opacity-50 group-hover:opacity-100 transition-opacity cursor-pointer">play_circle</span>
+</div>
+<div class="absolute bottom-0 left-0 w-full p-4 bg-gradient-to-t from-black/90 to-transparent opacity-0 group-hover:opacity-100 transition-opacity">
+<div class="flex items-center justify-between text-white mb-2">
+<div class="flex items-center gap-4">
+<button><span class="material-symbols-outlined">play_arrow</span></button>
+<button><span class="material-symbols-outlined">volume_up</span></button>
+<span class="text-xs">12:34 / 24:00</span>
+</div>
+<div class="flex items-center gap-4">
+<button><span class="material-symbols-outlined">settings</span></button>
+<button><span class="material-symbols-outlined">fullscreen</span></button>
+</div>
+</div>
+<div class="w-full bg-gray-700 h-1 rounded-full overflow-hidden">
+<div class="bg-primary h-full w-1/2"></div>
+</div>
+</div>
+</div>
+<div class="bg-white dark:bg-[#151926] rounded-xl p-4 shadow-sm border border-gray-200 dark:border-gray-800">
+<div class="flex flex-col md:flex-row items-start md:items-center justify-between gap-4 mb-4 border-b border-gray-200 dark:border-gray-700 pb-4">
+<div class="flex items-center gap-2">
+<span class="text-sm text-gray-500 dark:text-gray-400">You are watching:</span>
+<span class="font-bold text-primary" id="current-episode-display">Episode 1</span>
+</div>
+<div class="flex items-center gap-2">
+<button class="flex items-center gap-1 text-xs bg-gray-100 dark:bg-gray-800 hover:bg-primary hover:text-white px-3 py-1.5 rounded transition-colors dark:text-gray-300" onclick="changeEpisode('prev')">
+<span class="material-symbols-outlined text-sm">skip_previous</span> Prev
+                            </button>
+<button class="flex items-center gap-1 text-xs bg-gray-100 dark:bg-gray-800 hover:bg-primary hover:text-white px-3 py-1.5 rounded transition-colors dark:text-gray-300" onclick="changeEpisode('next')">
+                                Next <span class="material-symbols-outlined text-sm">skip_next</span>
+</button>
+<div class="relative group ml-2">
+<button class="flex items-center gap-1 text-xs bg-primary/10 text-primary hover:bg-primary hover:text-white px-3 py-1.5 rounded transition-colors" id="add-to-list-btn">
+<span class="material-symbols-outlined text-sm">add</span>
+<span id="current-list-status-text">Add to List</span>
+</button>
+<div class="absolute right-0 top-full mt-2 w-48 bg-white dark:bg-surface-dark rounded-lg shadow-xl py-1 z-20 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 border border-gray-200 dark:border-gray-700 text-xs">
+<button class="block w-full text-left px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-800 text-gray-700 dark:text-gray-300" onclick="updateListStatus('Planning to watch')">Planning to watch</button>
+<button class="block w-full text-left px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-800 text-gray-700 dark:text-gray-300" onclick="updateListStatus('Watching')">Watching</button>
+<button class="block w-full text-left px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-800 text-gray-700 dark:text-gray-300" onclick="updateListStatus('Completed')">Completed</button>
+<button class="block w-full text-left px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-800 text-gray-700 dark:text-gray-300" onclick="updateListStatus('Rewatching')">Rewatching</button>
+<button class="block w-full text-left px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-800 text-gray-700 dark:text-gray-300" onclick="updateListStatus('Dropped')">Dropped</button>
+<div class="border-t border-gray-200 dark:border-gray-700 my-1"></div>
+<button class="block w-full text-left px-4 py-2 hover:bg-red-50 dark:hover:bg-red-900/20 text-red-500" onclick="updateListStatus('Add to List')">Remove from list</button>
+</div>
+</div>
+</div>
+</div>
+<div class="space-y-3 mb-6 bg-gray-50 dark:bg-black/20 p-4 rounded-lg">
+<div class="flex flex-col sm:flex-row gap-4 items-start sm:items-center">
+<span class="text-xs font-bold text-gray-500 dark:text-gray-400 w-12">SUB:</span>
+<div class="flex flex-wrap gap-2">
+<button class="server-btn px-3 py-1.5 rounded text-xs font-medium bg-primary text-white shadow-sm hover:bg-primary/90 transition" data-server="SUB-HD-01" onclick="selectServer(this)">HD-01</button>
+<button class="server-btn px-3 py-1.5 rounded text-xs font-medium bg-gray-200 dark:bg-gray-800 text-gray-700 dark:text-gray-300 hover:bg-gray-300 dark:hover:bg-gray-700 transition" data-server="SUB-HD-02" onclick="selectServer(this)">HD-02</button>
+<button class="server-btn px-3 py-1.5 rounded text-xs font-medium bg-gray-200 dark:bg-gray-800 text-gray-700 dark:text-gray-300 hover:bg-gray-300 dark:hover:bg-gray-700 transition" data-server="SUB-HD-03" onclick="selectServer(this)">HD-03</button>
+</div>
+</div>
+<div class="flex flex-col sm:flex-row gap-4 items-start sm:items-center">
+<span class="text-xs font-bold text-gray-500 dark:text-gray-400 w-12">DUB:</span>
+<div class="flex flex-wrap gap-2">
+<button class="server-btn px-3 py-1.5 rounded text-xs font-medium bg-gray-200 dark:bg-gray-800 text-gray-700 dark:text-gray-300 hover:bg-gray-300 dark:hover:bg-gray-700 transition" data-server="DUB-HD-01" onclick="selectServer(this)">HD-01</button>
+<button class="server-btn px-3 py-1.5 rounded text-xs font-medium bg-gray-200 dark:bg-gray-800 text-gray-700 dark:text-gray-300 hover:bg-gray-300 dark:hover:bg-gray-700 transition" data-server="DUB-HD-02" onclick="selectServer(this)">HD-02</button>
+<button class="server-btn px-3 py-1.5 rounded text-xs font-medium bg-gray-200 dark:bg-gray-800 text-gray-700 dark:text-gray-300 hover:bg-gray-300 dark:hover:bg-gray-700 transition" data-server="DUB-HD-03" onclick="selectServer(this)">HD-03</button>
+</div>
+</div>
+<div class="flex flex-col sm:flex-row gap-4 items-start sm:items-center">
+<span class="text-xs font-bold text-gray-500 dark:text-gray-400 w-12">RAW:</span>
+<div class="flex flex-wrap gap-2">
+<button class="server-btn px-3 py-1.5 rounded text-xs font-medium bg-gray-200 dark:bg-gray-800 text-gray-700 dark:text-gray-300 hover:bg-gray-300 dark:hover:bg-gray-700 transition" data-server="RAW-HD-01" onclick="selectServer(this)">HD-01</button>
+<button class="server-btn px-3 py-1.5 rounded text-xs font-medium bg-gray-200 dark:bg-gray-800 text-gray-700 dark:text-gray-300 hover:bg-gray-300 dark:hover:bg-gray-700 transition" data-server="RAW-HD-02" onclick="selectServer(this)">HD-02</button>
+<button class="server-btn px-3 py-1.5 rounded text-xs font-medium bg-gray-200 dark:bg-gray-800 text-gray-700 dark:text-gray-300 hover:bg-gray-300 dark:hover:bg-gray-700 transition" data-server="RAW-HD-03" onclick="selectServer(this)">HD-03</button>
+</div>
+</div>
+</div>
+<div class="flex items-center gap-2 overflow-x-auto hide-scrollbar mb-4 border-b border-gray-200 dark:border-gray-700">
+<button class="season-btn px-4 py-2 text-sm font-medium text-primary border-b-2 border-primary whitespace-nowrap transition-colors" data-season="1" onclick="selectSeason(this)">Season 1</button>
+<button class="season-btn px-4 py-2 text-sm font-medium text-gray-500 dark:text-gray-400 hover:text-gray-800 dark:hover:text-gray-200 whitespace-nowrap transition-colors border-b-2 border-transparent" data-season="2" onclick="selectSeason(this)">Season 2</button>
+<button class="season-btn px-4 py-2 text-sm font-medium text-gray-500 dark:text-gray-400 hover:text-gray-800 dark:hover:text-gray-200 whitespace-nowrap transition-colors border-b-2 border-transparent" data-season="3" onclick="selectSeason(this)">Season 3</button>
+<button class="season-btn px-4 py-2 text-sm font-medium text-gray-500 dark:text-gray-400 hover:text-gray-800 dark:hover:text-gray-200 whitespace-nowrap transition-colors border-b-2 border-transparent" data-season="ova" onclick="selectSeason(this)">OVA</button>
+</div>
+<div class="max-h-[500px] overflow-y-auto custom-scrollbar pr-2" id="episode-list-container">
+<div class="flex flex-col gap-1">
+<button class="episode-btn group flex items-center justify-between p-3 rounded-lg bg-primary/10 border-l-4 border-primary text-left transition-all hover:bg-primary/20 w-full" data-episode="1" onclick="selectEpisode(this)">
+<div class="flex items-center gap-4">
+<span class="flex items-center justify-center w-8 h-8 rounded bg-primary text-white font-bold text-sm">1</span>
+<span class="text-sm font-medium text-gray-900 dark:text-gray-100 group-hover:text-primary">Pilot</span>
+</div>
+<span class="material-symbols-outlined text-primary text-lg">play_circle</span>
+</button>
+<button class="episode-btn group flex items-center justify-between p-3 rounded-lg bg-gray-50 dark:bg-white/5 border-l-4 border-transparent text-left transition-all hover:bg-gray-100 dark:hover:bg-white/10 w-full" data-episode="2" onclick="selectEpisode(this)">
+<div class="flex items-center gap-4">
+<span class="flex items-center justify-center w-8 h-8 rounded bg-gray-200 dark:bg-gray-700 text-gray-600 dark:text-gray-300 font-bold text-sm">2</span>
+<span class="text-sm font-medium text-gray-900 dark:text-gray-100 group-hover:text-primary">First Night</span>
+</div>
+<span class="material-symbols-outlined text-gray-400 text-lg group-hover:text-primary">play_circle</span>
+</button>
+<button class="episode-btn group flex items-center justify-between p-3 rounded-lg bg-gray-50 dark:bg-white/5 border-l-4 border-transparent text-left transition-all hover:bg-gray-100 dark:hover:bg-white/10 w-full" data-episode="3" onclick="selectEpisode(this)">
+<div class="flex items-center gap-4">
+<span class="flex items-center justify-center w-8 h-8 rounded bg-gray-200 dark:bg-gray-700 text-gray-600 dark:text-gray-300 font-bold text-sm">3</span>
+<span class="text-sm font-medium text-gray-900 dark:text-gray-100 group-hover:text-primary">The Choice</span>
+</div>
+<span class="material-symbols-outlined text-gray-400 text-lg group-hover:text-primary">play_circle</span>
+</button>
+</div>
+</div>
+</div>
+<div class="bg-white dark:bg-[#151926] rounded-xl overflow-hidden shadow-sm border border-gray-200 dark:border-gray-800">
+<div class="p-4 border-b border-gray-200 dark:border-gray-700 font-bold text-lg text-primary">Recommended for you</div>
+<div class="max-h-[500px] overflow-y-auto custom-scrollbar p-2 space-y-2">
+<a class="flex gap-3 p-2 hover:bg-gray-100 dark:hover:bg-white/5 rounded-lg transition-colors group" href="#">
+<div class="w-12 h-16 bg-gray-200 rounded overflow-hidden flex-shrink-0 relative">
+<img class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB6aKroKe4_Hr_QOThhIQ1eSBsj6XHa6M1h1ij1beOOwYZsLuAKaEUwhzePp5w2e0ZiNq23ueXCujFcscvpvX5l0fSEO1JhKa6gwDDPDrdfapY86HeYs5fG_M99b926v37WwsUlyZ7ugSX23giOl25toAwGLS8wOeBXwUajaxUzaTcHC_Yh5fJqnnwy6HgEx_QviGDLtROQ6LVPu2Z1BRIxBOEdc9fz9ozk1sYgF_aWaLm0ZXBf9Mh7BLQkJKaAnfSKTVLxnnvAS1o"/>
+<div class="absolute bottom-0 left-0 right-0 bg-primary/90 text-white text-[9px] text-center font-bold">HD</div>
+</div>
+<div class="flex-1 min-w-0 flex flex-col justify-center">
+<h4 class="text-sm font-medium truncate group-hover:text-primary transition-colors">Spirited Away</h4>
+<div class="text-xs text-gray-500 mt-1 flex items-center gap-2">
+<span>2001</span>
+<span class="w-1 h-1 bg-gray-500 rounded-full"></span>
+<span>Anime</span>
+</div>
+</div>
+<div class="flex items-center text-gray-400">
+<span class="material-symbols-outlined text-lg">add</span>
+</div>
+</a>
+<a class="flex gap-3 p-2 hover:bg-gray-100 dark:hover:bg-white/5 rounded-lg transition-colors group" href="#">
+<div class="w-12 h-16 bg-gray-200 rounded overflow-hidden flex-shrink-0 relative">
+<img class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC4DL0CgtcYAUCgstMJaa3MOKxfRf-4gMF5Pz7AA-vJqjO992P2Ln_vsEztjSVehozCL5rsHt1KXYxgOpHPykUZEMDio6Kowlgy6GWvo4do0-5lXXQYfWesN_lwBCxnEcWF4XBvqDH9JFtqGEnkTLf_a-dREBJUINFFoE2kBQ0XpDqfi5NlPjxrmCbvXX31J0PHegzUCxDnemVeINrotIOfjM7FeAzSPl6Y0W2Xlf5WxpWq7OBZ7oPcgpUXCPkvHT-o8GnA6D-kHow"/>
+<div class="absolute bottom-0 left-0 right-0 bg-primary/90 text-white text-[9px] text-center font-bold">HD</div>
+</div>
+<div class="flex-1 min-w-0 flex flex-col justify-center">
+<h4 class="text-sm font-medium truncate group-hover:text-primary transition-colors">Pulp Fiction</h4>
+<div class="text-xs text-gray-500 mt-1 flex items-center gap-2">
+<span>1994</span>
+<span class="w-1 h-1 bg-gray-500 rounded-full"></span>
+<span>Movie</span>
+</div>
+</div>
+<div class="flex items-center text-gray-400">
+<span class="material-symbols-outlined text-lg">add</span>
+</div>
+</a>
+</div>
+</div>
+</div>
+<div class="lg:col-span-1 space-y-6">
+<div class="bg-white dark:bg-[#151926] rounded-xl p-6 shadow-sm border border-gray-200 dark:border-gray-800 h-fit">
+<div class="flex gap-4 mb-4">
+<img alt="Poster" class="w-24 h-36 object-cover rounded-lg shadow-md flex-shrink-0" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBL8sSKQhkIHjJRpfaXPOb2Ntr-YMNUhdTfQQNGnnmqGZu3SSewBEFAnXpGTo1YxqHXlb8pOCJCZrgrSF00Ey3CMmhZW5Q7dqz5o0qIOeV3DXsmqV-RKQGF2yEnwCFPLqyZ1R9luYVGdw-P_L6bRKjMPRM2RO5ISubiOat46Ovv-uMFsJfxGzRT0ngWoCZXAiiHQbJOA91N5Wyn21gKPKb6rWilqbabiqUYqUEEe31UdFQXOki6b3glJcCnNMssztZkZ0UYU_mwBbY"/>
+<div>
+<h1 class="text-xl font-bold leading-tight mb-2">The Shawshank Redemption</h1>
+<div class="flex flex-wrap gap-2 text-xs text-gray-500 dark:text-gray-400 mb-2">
+<span class="px-1.5 py-0.5 border border-gray-300 dark:border-gray-700 rounded">TV-MA</span>
+<span class="px-1.5 py-0.5 bg-primary text-white rounded font-bold">HD</span>
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-sm">mic</span> 12</span>
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-sm">subtitles</span> 12</span>
+</div>
+<div class="text-xs text-gray-500 dark:text-gray-400">
+                                 Movie • 2h 22m
+                             </div>
+</div>
+</div>
+<p class="text-sm text-gray-600 dark:text-gray-300 line-clamp-4 mb-4 leading-relaxed">
+                        Framed in the 1940s for the double murder of his wife and her lover, upstanding banker Andy Dufresne begins a new life at the Shawshank prison, where he puts his accounting skills to work for an amoral warden.
+                    </p>
+<div class="grid grid-cols-2 gap-2 text-xs text-gray-500 dark:text-gray-400 border-t border-gray-100 dark:border-gray-700 pt-4">
+<div><span class="font-semibold text-gray-700 dark:text-gray-200">Genre:</span> Drama</div>
+<div><span class="font-semibold text-gray-700 dark:text-gray-200">Year:</span> 1994</div>
+<div><span class="font-semibold text-gray-700 dark:text-gray-200">Country:</span> USA</div>
+<div><span class="font-semibold text-gray-700 dark:text-gray-200">Studio:</span> Castle Rock</div>
+<div class="col-span-2 mt-2">
+<span class="font-semibold text-gray-700 dark:text-gray-200">Title (EN):</span> The Shawshank Redemption
+                        </div>
+<div class="col-span-2">
+<span class="font-semibold text-gray-700 dark:text-gray-200">Synonyms:</span> Shawshank Redemption
+                        </div>
+<div class="col-span-2">
+<span class="font-semibold text-gray-700 dark:text-gray-200">Scores:</span> MAL: 9.11 | IMDb: 9.3
+                        </div>
+<div class="col-span-2">
+<span class="font-semibold text-gray-700 dark:text-gray-200">Producers:</span> Niki Marvin
+                        </div>
+</div>
+</div>
+<div class="bg-[#1A1D29] rounded-xl p-5 shadow-lg border border-gray-800">
+<div class="flex items-center justify-between mb-4">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-yellow-500 fill-current">star</span>
+<span class="text-2xl font-bold text-white">9.3</span>
+</div>
+<span class="text-sm font-semibold text-white">Vote now</span>
+</div>
+<div class="text-sm text-gray-400 mb-6 text-center">What do you think about this show?</div>
+<div class="flex justify-between px-2">
+<button class="flex flex-col items-center gap-2 group" onclick="rateShow('boring')">
+<span class="text-3xl grayscale group-hover:grayscale-0 transition-all transform group-hover:scale-110">😩</span>
+<span class="text-xs font-medium text-gray-400 group-hover:text-white transition-colors">Boring</span>
+</button>
+<button class="flex flex-col items-center gap-2 group" onclick="rateShow('great')">
+<span class="text-3xl grayscale group-hover:grayscale-0 transition-all transform group-hover:scale-110">😃</span>
+<span class="text-xs font-medium text-gray-400 group-hover:text-white transition-colors">Great</span>
+</button>
+<button class="flex flex-col items-center gap-2 group" onclick="rateShow('amazing')">
+<span class="text-3xl grayscale group-hover:grayscale-0 transition-all transform group-hover:scale-110">🤩</span>
+<span class="text-xs font-medium text-gray-400 group-hover:text-white transition-colors">Amazing</span>
+</button>
+</div>
+</div>
+<div class="bg-white dark:bg-[#151926] rounded-xl overflow-hidden shadow-sm border border-gray-200 dark:border-gray-800">
+<div class="p-4 border-b border-gray-200 dark:border-gray-700 font-bold text-lg">Most Popular</div>
+<div class="max-h-[500px] overflow-y-auto custom-scrollbar p-2 space-y-2">
+<a class="flex gap-3 p-2 hover:bg-gray-100 dark:hover:bg-white/5 rounded-lg transition-colors group" href="#">
+<div class="w-12 h-16 bg-gray-200 rounded overflow-hidden flex-shrink-0 relative">
+<img class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB74Fp72ev7QNZU469wTbrsvPSqgnjiWWoMOtIa0MAjQhQ1L33JGPpodM_sMQek4yZw6tRKlWPbMR6A8WeRapMkaH-T11LXGfejWy1r1bhWBwFgHhBoYl8KvmFdP0z1AzCeyDBbQAk4qqrgXQgFIiUfJh05RZYjZZz8rG09UvMIVFX4ZI-oP6j8oSExgu_KvJ_nvGwbgNIhEzXE5b5_lwPMYOzIs3TCBjMzWi8UdDqiKr2W9XaPSF7JhbMvJhQVj0heWtGm59mVp1E"/>
+<div class="absolute bottom-0 left-0 right-0 bg-primary/90 text-white text-[9px] text-center font-bold">HD</div>
+</div>
+<div class="flex-1 min-w-0 flex flex-col justify-center">
+<h4 class="text-sm font-medium truncate group-hover:text-primary transition-colors">The Dark Knight</h4>
+<div class="text-xs text-gray-500 mt-1 flex items-center gap-2">
+<span>2008</span>
+<span class="w-1 h-1 bg-gray-500 rounded-full"></span>
+<span>Movie</span>
+</div>
+</div>
+<div class="flex items-center text-gray-400">
+<span class="material-symbols-outlined text-lg">add</span>
+</div>
+</a>
+<a class="flex gap-3 p-2 hover:bg-gray-100 dark:hover:bg-white/5 rounded-lg transition-colors group" href="#">
+<div class="w-12 h-16 bg-gray-200 rounded overflow-hidden flex-shrink-0 relative">
+<img class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCwH3f4VjulnnLYk8EgFSCiOqFs12q4ivPSqucW7P7k4uOAN3qXURGd7iOxByylKHLJhbpiobEV442fMLZHwobXplWdRez-c71bcZODHHIHORqZw97zdSx_JgA4Cdym9n6VMtpcJXo3o5jc7jvKx13nsU2frrHJ8wgbcRH1cHIY8n7jLkRIsYOLDQ1uZWoGe99Imz98f_X9qskRvSTRVJiiJKF_DtE-ce0qw825vrwhgb66FQM3e_ymqoB8eBbjLZ5HuUePqbU5kYg"/>
+<div class="absolute bottom-0 left-0 right-0 bg-primary/90 text-white text-[9px] text-center font-bold">HD</div>
+</div>
+<div class="flex-1 min-w-0 flex flex-col justify-center">
+<h4 class="text-sm font-medium truncate group-hover:text-primary transition-colors">The Godfather</h4>
+<div class="text-xs text-gray-500 mt-1 flex items-center gap-2">
+<span>1972</span>
+<span class="w-1 h-1 bg-gray-500 rounded-full"></span>
+<span>Movie</span>
+</div>
+</div>
+<div class="flex items-center text-gray-400">
+<span class="material-symbols-outlined text-lg">add</span>
+</div>
+</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</main>
+<footer class="bg-white dark:bg-footer-dark border-t border-gray-200 dark:border-gray-800 mt-auto">
+<div class="container mx-auto px-4 py-8 md:py-12">
+<div class="flex flex-col md:flex-row justify-between items-start md:items-center gap-6">
+<div class="flex-1 max-w-2xl">
+<img alt="Quravel Logo" class="h-8 mb-4" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAyQkhWkWRKHdBKcKeKIQPSp0dqUxzkKXlQI9e-linyzdZc9vxD5aQvA-ZV_wOo7084k8eQ29HZJd3WqF6fhl5ywezJ9q4mrXm4IXYZnsrFWIdQpQGJRxxoSsAH0BJ7T_rXsfSDASTzBL9VkhWJq2VaqxNU8lIq-c1X5b8JBJP3GlTMQPDc7w1h4CxDMBAlzCY-SB1q84jFGtF6k7hS7VqPnzYc8hjOHgQWrprfsOoJEFcCFtN-N3rEH8TW-lRH0reqCAVonCPGynA"/>
+<p class="text-sm text-gray-600 dark:text-gray-400 mb-6 leading-relaxed">
+                    Quravel offers free, ad-free access to top movies and series in stunning quality. Stream effortlessly or save for later with easy downloads, perfect for movie lovers on the go!
+                </p>
+<p class="text-xs text-gray-500 dark:text-gray-500">
+                    This site does not store any files on our server, we only linked to the media which is hosted on 3rd party services.
+                    <br/>
+                    watch free movies, watch free tv shows, free movies online
+                </p>
+</div>
+<div class="flex flex-col items-center md:items-end gap-2 w-full md:w-auto">
+<div class="flex gap-4 text-sm font-semibold text-gray-700 dark:text-gray-300">
+<a class="hover:text-primary transition-colors" href="#">REQUEST</a>
+<a class="hover:text-primary transition-colors" href="#">CONTACT</a>
+</div>
+<div class="text-xs text-gray-500 dark:text-gray-500 mt-2 text-center md:text-right w-full">
+<span class="text-primary font-bold">Quravel</span>
+<br/>
+                    @ 2025 Quravel
+                </div>
+</div>
+</div>
+</div>
+</footer>
+<script>
+    // State management
+    let currentEpisode = 1;
+    let currentServer = 'SUB-HD-01';
+    let currentSeason = '1';
+    // Mock episode data structure
+    const episodeData = {
+        '1': [
+            { id: 1, title: 'Pilot' }, { id: 2, title: 'First Night' }, { id: 3, title: 'The Choice' },
+            { id: 4, title: 'The Battle' }, { id: 5, title: 'Reunion' }, { id: 6, title: 'Departure' },
+            { id: 7, title: 'New Hope' }, { id: 8, title: 'Betrayal' }, { id: 9, title: 'Awakening' },
+            { id: 10, title: 'The End of the Beginning' }, { id: 11, title: 'Shadows' }, { id: 12, title: 'Finale' }
+        ],
+        '2': [
+            { id: 1, title: 'New World' }, { id: 2, title: 'Lost' }, { id: 3, title: 'Found' }
+        ],
+        '3': [
+             { id: 1, title: 'Return' }, { id: 2, title: 'Conquest' }
+        ],
+        'ova': [
+            { id: 1, title: 'Special Episode' }
+        ]
+    };
+    // Initialize UI
+    document.addEventListener('DOMContentLoaded', () => {
+        renderEpisodeList();
+        updateUI();
+    });
+    // Handle Season Selection
+    function selectSeason(btn) {
+        currentSeason = btn.getAttribute('data-season');
+        // Reset to first episode of new season
+        currentEpisode = 1; 
+        renderEpisodeList();
+        updateUI();
+    }
+    // Handle Server Selection
+    function selectServer(btn) {
+        currentServer = btn.getAttribute('data-server');
+        // Visual feedback only as streaming logic is simulated
+        updateUI();
+        console.log(`Server switched to: ${currentServer}`);
+    }
+    // Handle Episode Selection
+    function selectEpisode(btn) {
+        const ep = parseInt(btn.getAttribute('data-episode'));
+        currentEpisode = ep;
+        updateUI();
+        renderEpisodeList(); // Re-render to update active state styles
+    }
+    // Handle Previous/Next Buttons
+    function changeEpisode(direction) {
+        const episodes = episodeData[currentSeason];
+        if (direction === 'next' && currentEpisode < episodes.length) {
+            currentEpisode++;
+        } else if (direction === 'prev' && currentEpisode > 1) {
+            currentEpisode--;
+        }
+        updateUI();
+        renderEpisodeList();
+    }
+    // Render Episode List
+    function renderEpisodeList() {
+        const container = document.getElementById('episode-list-container');
+        const episodes = episodeData[currentSeason] || [];
+        let html = '<div class="flex flex-col gap-1">';
+        episodes.forEach(ep => {
+            const isActive = ep.id === currentEpisode;
+            const bgClass = isActive ? 'bg-primary/10 border-l-4 border-primary' : 'bg-gray-50 dark:bg-white/5 border-l-4 border-transparent hover:bg-gray-100 dark:hover:bg-white/10';
+            const numBgClass = isActive ? 'bg-primary text-white' : 'bg-gray-200 dark:bg-gray-700 text-gray-600 dark:text-gray-300';
+            const iconClass = isActive ? 'text-primary' : 'text-gray-400 group-hover:text-primary';
+            html += `
+                <button class="episode-btn group flex items-center justify-between p-3 rounded-lg ${bgClass} text-left transition-all w-full" data-episode="${ep.id}" onclick="selectEpisode(this)">
+                    <div class="flex items-center gap-4">
+                        <span class="flex items-center justify-center w-8 h-8 rounded ${numBgClass} font-bold text-sm">${ep.id}</span>
+                        <span class="text-sm font-medium text-gray-900 dark:text-gray-100 group-hover:text-primary">${ep.title}</span>
+                    </div>
+                    <span class="material-symbols-outlined ${iconClass} text-lg">play_circle</span>
+                </button>
+            `;
+        });
+        html += '</div>';
+        container.innerHTML = html;
+    }
+    // Update General UI (Active Classes, Text)
+    function updateUI() {
+        // Update "You are watching" text
+        document.getElementById('current-episode-display').innerText = `Episode ${currentEpisode}`;
+        // Update Season Buttons
+        document.querySelectorAll('.season-btn').forEach(btn => {
+            if(btn.getAttribute('data-season') === currentSeason) {
+                btn.classList.remove('text-gray-500', 'dark:text-gray-400', 'border-transparent');
+                btn.classList.add('text-primary', 'border-primary');
+            } else {
+                btn.classList.add('text-gray-500', 'dark:text-gray-400', 'border-transparent');
+                btn.classList.remove('text-primary', 'border-primary');
+            }
+        });
+        // Update Server Buttons
+        document.querySelectorAll('.server-btn').forEach(btn => {
+            if(btn.getAttribute('data-server') === currentServer) {
+                btn.classList.remove('bg-gray-200', 'dark:bg-gray-800', 'text-gray-700', 'dark:text-gray-300');
+                btn.classList.add('bg-primary', 'text-white');
+            } else {
+                btn.classList.add('bg-gray-200', 'dark:bg-gray-800', 'text-gray-700', 'dark:text-gray-300');
+                btn.classList.remove('bg-primary', 'text-white');
+            }
+        });
+    }
+    // Local Storage logic for "Add to list" button
+    const listButtonText = document.getElementById('current-list-status-text');
+    const storageKey = 'quravel_list_status_shawshank'; // Unique key per show
+    // Initialize button text from local storage
+    const savedStatus = localStorage.getItem(storageKey);
+    if (savedStatus) {
+         if(savedStatus === 'Add to List') {
+             listButtonText.innerText = 'Add to List';
+        } else {
+             listButtonText.innerText = savedStatus;
+        }
+    }
+    function updateListStatus(status) {
+        if (status === 'Add to List') {
+            listButtonText.innerText = 'Add to List';
+            localStorage.removeItem(storageKey); // Clear status
+        } else {
+            listButtonText.innerText = status;
+            localStorage.setItem(storageKey, status);
+        }
+    }
+    // Rating Feature Logic
+    function rateShow(sentiment) {
+        // In a real app, this would send an API request
+        // For demo, we just update local storage to simulate "once per user"
+        const ratedKey = 'quravel_rated_shawshank';
+        if(localStorage.getItem(ratedKey)) {
+            alert('You have already rated this show!');
+            return;
+        }
+        localStorage.setItem(ratedKey, 'true');
+        alert(`Thanks for rating it as ${sentiment}!`);
+        // Disable buttons visually
+        const buttons = document.querySelectorAll('button[onclick^="rateShow"]');
+        buttons.forEach(btn => {
+            btn.disabled = true;
+            btn.classList.add('opacity-50', 'cursor-not-allowed');
+        });
+    }
+    // Mobile Menu Toggle
+    function toggleMobileMenu() {
+        const menu = document.getElementById('mobile-menu');
+        const overlay = document.getElementById('mobile-menu-overlay');
+        menu.classList.toggle('menu-open');
+        overlay.classList.toggle('hidden');
+    }
+    // Mobile Search Toggle
+    function toggleMobileSearch() {
+        const searchBar = document.getElementById('mobile-search-bar');
+        searchBar.classList.toggle('hidden');
+    }
+    // Mobile Dropdown Accordion
+    function toggleMobileDropdown(id) {
+        const dropdown = document.getElementById(id);
+        dropdown.classList.toggle('hidden');
+        // Rotate arrow
+        const arrowId = id === 'genre-mobile' ? 'genre-arrow' : 'country-arrow';
+        const arrow = document.getElementById(arrowId);
+        if (dropdown.classList.contains('hidden')) {
+            arrow.style.transform = 'rotate(0deg)';
+        } else {
+            arrow.style.transform = 'rotate(180deg)';
+        }
+    }
+</script>
+</body></html>
