@@ -1,0 +1,652 @@
+<!DOCTYPE html>
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Quravel - Show Details</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        primary: "#498BBB", 
+                        "background-light": "#F3F4F6",
+                        "background-dark": "#0B0E19",
+                        "surface-dark": "#151926",
+                        "footer-dark": "#0C0E14",
+                        "text-light": "#E5E7EB",
+                        "text-muted": "#9CA3AF"
+                    },
+                    fontFamily: {
+                        display: ["Inter", "sans-serif"],
+                        body: ["Inter", "sans-serif"],
+                    },
+                    borderRadius: {
+                        DEFAULT: "0.5rem",
+                    },
+                },
+            },
+        };
+    </script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        .hide-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .hide-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+        #mobile-menu {
+            transition: transform 0.3s ease-in-out;
+        }
+        .menu-open {
+            transform: translateX(0) !important;
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark text-gray-900 dark:text-text-light transition-colors duration-300 min-h-screen flex flex-col relative">
+<div class="fixed inset-0 bg-black/50 z-40 hidden lg:hidden" id="mobile-menu-overlay" onclick="toggleMobileMenu()"></div>
+<div class="fixed top-0 left-0 h-full w-64 bg-white dark:bg-[#151926] z-50 transform -translate-x-full lg:hidden overflow-y-auto shadow-2xl" id="mobile-menu">
+<div class="p-4 border-b border-gray-200 dark:border-gray-700 flex justify-between items-center">
+<img alt="Quravel Logo" class="h-8 object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDqiUc86NAc2oPWF0jZS6ltVT0qDRUQLGYe-vsh90aCjNPCKRUYsR2joEXfq121iCQ1DMhEXbbjY-Rm6ydRKKVvOD7XCHpsnpYv4oUDQP6h-KZ9tUpwQb33LAseATibNSPDDxAViL3XAYheHWPQCau7pQCd7-XFT2YjY86y-DFUxv6SfYoh27gsa2-RiKjPMnhZfSvjYzFQSeYDzy64a_9Lmf5_NT9MkYffdzHclH1EyMht0psBW3wqnbmTFh6wbG5Xh4VXCnRWONM"/>
+<button class="text-gray-500 hover:text-primary" onclick="toggleMobileMenu()">
+<span class="material-symbols-outlined">close</span>
+</button>
+</div>
+<div class="p-4 space-y-4">
+<a class="block text-sm font-medium hover:text-primary py-2 border-b border-gray-100 dark:border-gray-800" href="#">Home</a>
+<div class="py-2 border-b border-gray-100 dark:border-gray-800">
+<button class="flex items-center justify-between w-full text-sm font-medium hover:text-primary focus:outline-none" onclick="toggleMobileDropdown('genre-mobile')">
+<span>Genre</span>
+<span class="material-symbols-outlined text-sm transform transition-transform" id="genre-arrow">expand_more</span>
+</button>
+<div class="hidden mt-2 ml-4 space-y-2 text-sm text-gray-500 dark:text-gray-400" id="genre-mobile">
+<a class="block hover:text-primary" href="#">Action</a>
+<a class="block hover:text-primary" href="#">Adventure</a>
+<a class="block hover:text-primary" href="#">Comedy</a>
+<a class="block hover:text-primary" href="#">Drama</a>
+<a class="block hover:text-primary" href="#">Horror</a>
+<a class="block hover:text-primary" href="#">Romance</a>
+<a class="block hover:text-primary" href="#">Sci-Fi</a>
+</div>
+</div>
+<div class="py-2 border-b border-gray-100 dark:border-gray-800">
+<button class="flex items-center justify-between w-full text-sm font-medium hover:text-primary focus:outline-none" onclick="toggleMobileDropdown('country-mobile')">
+<span>Country</span>
+<span class="material-symbols-outlined text-sm transform transition-transform" id="country-arrow">expand_more</span>
+</button>
+<div class="hidden mt-2 ml-4 space-y-2 text-sm text-gray-500 dark:text-gray-400" id="country-mobile">
+<a class="block hover:text-primary" href="#">USA</a>
+<a class="block hover:text-primary" href="#">UK</a>
+<a class="block hover:text-primary" href="#">Korea</a>
+<a class="block hover:text-primary" href="#">Japan</a>
+<a class="block hover:text-primary" href="#">India</a>
+</div>
+</div>
+<a class="block text-sm font-medium hover:text-primary py-2 border-b border-gray-100 dark:border-gray-800" href="#">Top IMDB</a>
+<a class="block text-sm font-medium hover:text-primary py-2 border-b border-gray-100 dark:border-gray-800" href="#">Updates</a>
+<a class="block text-sm font-medium hover:text-primary py-2" href="#">Sent request</a>
+</div>
+</div>
+<header class="fixed top-0 w-full z-40 bg-white/95 dark:bg-[#0B0E19]/95 backdrop-blur-sm border-b border-gray-200 dark:border-gray-800 shadow-sm">
+<div class="container mx-auto px-4 h-16 flex items-center justify-between">
+<div class="flex items-center gap-4">
+<button class="lg:hidden text-gray-600 dark:text-gray-200 focus:outline-none" onclick="toggleMobileMenu()">
+<span class="material-symbols-outlined text-3xl">menu</span>
+</button>
+<nav class="hidden lg:flex items-center space-x-6 text-sm font-medium">
+<a class="hover:text-primary transition-colors" href="#">Home</a>
+<div class="relative group">
+<button class="flex items-center space-x-1 hover:text-primary transition-colors focus:outline-none py-4">
+<span>Genre</span>
+<span class="material-symbols-outlined text-sm">expand_more</span>
+</button>
+<div class="absolute top-full left-0 w-[600px] bg-white dark:bg-[#1A1D29] rounded-b-lg shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 border-t-2 border-primary grid grid-cols-4 gap-4 p-6 z-50">
+<a class="hover:text-primary block text-sm text-gray-600 dark:text-gray-400" href="#">Action</a>
+<a class="hover:text-primary block text-sm text-gray-600 dark:text-gray-400" href="#">Adventure</a>
+<a class="hover:text-primary block text-sm text-gray-600 dark:text-gray-400" href="#">Animation</a>
+<a class="hover:text-primary block text-sm text-gray-600 dark:text-gray-400" href="#">Biography</a>
+<a class="hover:text-primary block text-sm text-gray-600 dark:text-gray-400" href="#">Comedy</a>
+<a class="hover:text-primary block text-sm text-gray-600 dark:text-gray-400" href="#">Crime</a>
+<a class="hover:text-primary block text-sm text-gray-600 dark:text-gray-400" href="#">Documentary</a>
+<a class="hover:text-primary block text-sm text-gray-600 dark:text-gray-400" href="#">Drama</a>
+<a class="hover:text-primary block text-sm text-gray-600 dark:text-gray-400" href="#">Family</a>
+<a class="hover:text-primary block text-sm text-gray-600 dark:text-gray-400" href="#">Fantasy</a>
+<a class="hover:text-primary block text-sm text-gray-600 dark:text-gray-400" href="#">History</a>
+<a class="hover:text-primary block text-sm text-gray-600 dark:text-gray-400" href="#">Horror</a>
+<a class="hover:text-primary block text-sm text-gray-600 dark:text-gray-400" href="#">Music</a>
+<a class="hover:text-primary block text-sm text-gray-600 dark:text-gray-400" href="#">Mystery</a>
+<a class="hover:text-primary block text-sm text-gray-600 dark:text-gray-400" href="#">Romance</a>
+<a class="hover:text-primary block text-sm text-gray-600 dark:text-gray-400" href="#">Sci-Fi</a>
+</div>
+</div>
+<div class="relative group">
+<button class="flex items-center space-x-1 hover:text-primary transition-colors focus:outline-none py-4">
+<span>Country</span>
+<span class="material-symbols-outlined text-sm">expand_more</span>
+</button>
+<div class="absolute top-full left-0 w-[600px] bg-white dark:bg-[#1A1D29] rounded-b-lg shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 border-t-2 border-primary grid grid-cols-4 gap-4 p-6 z-50">
+<a class="hover:text-primary block text-sm text-gray-600 dark:text-gray-400" href="#">Argentina</a>
+<a class="hover:text-primary block text-sm text-gray-600 dark:text-gray-400" href="#">Australia</a>
+<a class="hover:text-primary block text-sm text-gray-600 dark:text-gray-400" href="#">Austria</a>
+<a class="hover:text-primary block text-sm text-gray-600 dark:text-gray-400" href="#">Belgium</a>
+<a class="hover:text-primary block text-sm text-gray-600 dark:text-gray-400" href="#">Brazil</a>
+<a class="hover:text-primary block text-sm text-gray-600 dark:text-gray-400" href="#">Canada</a>
+<a class="hover:text-primary block text-sm text-gray-600 dark:text-gray-400" href="#">China</a>
+<a class="hover:text-primary block text-sm text-gray-600 dark:text-gray-400" href="#">France</a>
+<a class="hover:text-primary block text-sm text-gray-600 dark:text-gray-400" href="#">Germany</a>
+<a class="hover:text-primary block text-sm text-gray-600 dark:text-gray-400" href="#">India</a>
+<a class="hover:text-primary block text-sm text-gray-600 dark:text-gray-400" href="#">Japan</a>
+<a class="hover:text-primary block text-sm text-gray-600 dark:text-gray-400" href="#">Korea</a>
+<a class="hover:text-primary block text-sm text-gray-600 dark:text-gray-400" href="#">Mexico</a>
+<a class="hover:text-primary block text-sm text-gray-600 dark:text-gray-400" href="#">UK</a>
+<a class="hover:text-primary block text-sm text-gray-600 dark:text-gray-400" href="#">USA</a>
+</div>
+</div>
+<a class="hover:text-primary transition-colors" href="#">Top IMDB</a>
+<a class="hover:text-primary transition-colors" href="#">Updates</a>
+<a class="hover:text-primary transition-colors" href="#">Sent request</a>
+</nav>
+</div>
+<div class="absolute left-1/2 transform -translate-x-1/2">
+<a class="block" href="/">
+<img alt="Quravel Logo" class="h-8 md:h-10 object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBJUVSMqcvlsLRod5Xj-MZhjFAWxv45A-9D1r1RCogjetrU2yKas3rRIuvSZRytOe6KmnI1y8NBGlIDGaE0UV5-mx19YpDf5v0SsajVxTc0VUCDku8E8PC54rDIUGGhmt44NSDXMGfnGVTtfzGJ8Cj6U15erHms74L8zDNtfVtIjG013mT9k-H5Psf5KSd570YR8_DAtEfUBmcVIMfE5LNH3WO14T7Cv3psWjV5O4UWogAMASg1czrkMA4qcRagH2Mtb7wqzWRn0BQ"/>
+</a>
+</div>
+<div class="flex items-center space-x-4">
+<div class="relative hidden sm:block group z-50">
+<input class="bg-gray-100 dark:bg-gray-800 text-sm rounded-full py-2 pl-4 pr-10 focus:outline-none focus:ring-2 focus:ring-primary w-48 transition-all dark:text-white border-none group-focus-within:w-64" placeholder="Search..." type="text"/>
+<span class="material-symbols-outlined absolute right-3 top-2 text-gray-400 text-lg cursor-pointer hover:text-primary">search</span>
+<div class="absolute right-0 top-full mt-2 w-80 bg-white dark:bg-[#1A1D29] rounded-xl shadow-2xl border border-gray-100 dark:border-gray-700 overflow-hidden invisible group-focus-within:visible opacity-0 group-focus-within:opacity-100 transition-all duration-200 origin-top-right transform scale-95 group-focus-within:scale-100 z-50">
+<div class="max-h-[400px] overflow-y-auto hide-scrollbar p-2 space-y-1">
+<a class="flex items-start gap-3 p-2 hover:bg-gray-100 dark:hover:bg-white/5 rounded-lg transition-colors group/item" href="#">
+<img alt="Poster" class="w-10 h-14 object-cover rounded shadow-sm flex-shrink-0" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBuupgb3nD25Wubm40iI5tWuP49EydCaUp0EiYjTBXI3qpDr-LerCLu9i6Cz1lAn9uEWj1X_Fo4FgoziLiAqHVGWLScn06tNXiGQnMbiwIt2Jrc5GUwtVkyxUxR-KnBNZOWx3ius4cMIi_7z-VZzkH8quuTo3pj8kme4akxKKbp_3vqbjKm9T8hT7rQXXLDHgki5FL3xJvGpHw8S68e_dM9PCjJcIIckD9hBK8E3s04iv_DuggJr6t4gvxdoUxAixkHyB5rAiCYW3k"/>
+<div class="flex-1 min-w-0">
+<h4 class="text-sm font-semibold text-gray-900 dark:text-white truncate group-hover/item:text-primary">The Lord of the Rings</h4>
+<div class="flex items-center gap-2 text-xs text-gray-500 dark:text-gray-400 mt-0.5">
+<span>2003</span>
+<span class="w-0.5 h-0.5 bg-gray-500 rounded-full"></span>
+<span>Movie</span>
+</div>
+<div class="text-[10px] text-gray-400 mt-0.5 truncate">Fantasy, Adventure</div>
+</div>
+</a>
+<a class="flex items-start gap-3 p-2 hover:bg-gray-100 dark:hover:bg-white/5 rounded-lg transition-colors group/item" href="#">
+<img alt="Poster" class="w-10 h-14 object-cover rounded shadow-sm flex-shrink-0" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCwH3f4VjulnnLYk8EgFSCiOqFs12q4ivPSqucW7P7k4uOAN3qXURGd7iOxByylKHLJhbpiobEV442fMLZHwobXplWdRez-c71bcZODHHIHORqZw97zdSx_JgA4Cdym9n6VMtpcJXo3o5jc7jvKx13nsU2frrHJ8wgbcRH1cHIY8n7jLkRIsYOLDQ1uZWoGe99Imz98f_X9qskRvSTRVJiiJKF_DtE-ce0qw825vrwhgb66FQM3e_ymqoB8eBbjLZ5HuUePqbU5kYg"/>
+<div class="flex-1 min-w-0">
+<h4 class="text-sm font-semibold text-gray-900 dark:text-white truncate group-hover/item:text-primary">The Godfather</h4>
+<div class="flex items-center gap-2 text-xs text-gray-500 dark:text-gray-400 mt-0.5">
+<span>1972</span>
+<span class="w-0.5 h-0.5 bg-gray-500 rounded-full"></span>
+<span>Movie</span>
+</div>
+<div class="text-[10px] text-gray-400 mt-0.5 truncate">Crime, Drama</div>
+</div>
+</a>
+<a class="flex items-start gap-3 p-2 hover:bg-gray-100 dark:hover:bg-white/5 rounded-lg transition-colors group/item" href="#">
+<img alt="Poster" class="w-10 h-14 object-cover rounded shadow-sm flex-shrink-0" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC4DL0CgtcYAUCgstMJaa3MOKxfRf-4gMF5Pz7AA-vJqjO992P2Ln_vsEztjSVehozCL5rsHt1KXYxgOpHPykUZEMDio6Kowlgy6GWvo4do0-5lXXQYfWesN_lwBCxnEcWF4XBvqDH9JFtqGEnkTLf_a-dREBJUINFFoE2kBQ0XpDqfi5NlPjxrmCbvXX31J0PHegzUCxDnemVeINrotIOfjM7FeAzSPl6Y0W2Xlf5WxpWq7OBZ7oPcgpUXCPkvHT-o8GnA6D-kHow"/>
+<div class="flex-1 min-w-0">
+<h4 class="text-sm font-semibold text-gray-900 dark:text-white truncate group-hover/item:text-primary">Pulp Fiction</h4>
+<div class="flex items-center gap-2 text-xs text-gray-500 dark:text-gray-400 mt-0.5">
+<span>1994</span>
+<span class="w-0.5 h-0.5 bg-gray-500 rounded-full"></span>
+<span>Movie</span>
+</div>
+<div class="text-[10px] text-gray-400 mt-0.5 truncate">Crime, Drama</div>
+</div>
+</a>
+<a class="flex items-start gap-3 p-2 hover:bg-gray-100 dark:hover:bg-white/5 rounded-lg transition-colors group/item" href="#">
+<img alt="Poster" class="w-10 h-14 object-cover rounded shadow-sm flex-shrink-0" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAWDG7W-EHvCGO6AOk0LDv2cxGsetsdcPblclKS1wVK3MQv4Fj_GiJpDoSYDcNwJrCYOz29g-FhsQOo9O_1CP7dvKsW3GKE6JfGAq8LUCU3Vk8A-AgKIbpFT50VlqnKIa-bNWxP6wrMSM1bk0abtMKKSCUoY8e8NTUY4CGgfqqjZkW-eJP5--tz8pfc8XzVLKbfvPpA015qvL4RQQ1H4ozFhJNr3H2YwCAMneW3D-iySlLubqn9nb1Edu-hnxmvSEkNQh7snL7aGL0"/>
+<div class="flex-1 min-w-0">
+<h4 class="text-sm font-semibold text-gray-900 dark:text-white truncate group-hover/item:text-primary">12 Angry Men</h4>
+<div class="flex items-center gap-2 text-xs text-gray-500 dark:text-gray-400 mt-0.5">
+<span>1957</span>
+<span class="w-0.5 h-0.5 bg-gray-500 rounded-full"></span>
+<span>Movie</span>
+</div>
+<div class="text-[10px] text-gray-400 mt-0.5 truncate">Drama</div>
+</div>
+</a>
+<a class="flex items-start gap-3 p-2 hover:bg-gray-100 dark:hover:bg-white/5 rounded-lg transition-colors group/item" href="#">
+<img alt="Poster" class="w-10 h-14 object-cover rounded shadow-sm flex-shrink-0" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBgXhItyIcN_f0jDrGmIOMKN4F0WOyDvcXRwOpout1ddb93aE06e1fDZ4tTdqP_NqdfUMZ-n4VI-fiBxsWKXroLwDYis8zjBcajfazwu6WClbt415JaGcoTQoD-Nco9sOnyjiGKa0naWdz4LgSHo42Udpa8c48FXSA_8Frru87eoNLInqG-ZVFWytOZ1KnNlA8LKIhaoVvSD_2nx0UvuqXCR8dmiMv2Rhd5qetbIr3vrBOPma_OLUnw-0F0MlZuHdOKZYCsnF1Oi4M"/>
+<div class="flex-1 min-w-0">
+<h4 class="text-sm font-semibold text-gray-900 dark:text-white truncate group-hover/item:text-primary">Forrest Gump</h4>
+<div class="flex items-center gap-2 text-xs text-gray-500 dark:text-gray-400 mt-0.5">
+<span>1994</span>
+<span class="w-0.5 h-0.5 bg-gray-500 rounded-full"></span>
+<span>Movie</span>
+</div>
+<div class="text-[10px] text-gray-400 mt-0.5 truncate">Drama, Romance</div>
+</div>
+</a>
+<a class="flex items-start gap-3 p-2 hover:bg-gray-100 dark:hover:bg-white/5 rounded-lg transition-colors group/item" href="#">
+<img alt="Poster" class="w-10 h-14 object-cover rounded shadow-sm flex-shrink-0" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB6aKroKe4_Hr_QOThhIQ1eSBsj6XHa6M1h1ij1beOOwYZsLuAKaEUwhzePp5w2e0ZiNq23ueXCujFcscvpvX5l0fSEO1JhKa6gwDDPDrdfapY86HeYs5fG_M99b926v37WwsUlyZ7ugSX23giOl25toAwGLS8wOeBXwUajaxUzaTcHC_Yh5fJqnnwy6HgEx_QviGDLtROQ6LVPu2Z1BRIxBOEdc9fz9ozk1sYgF_aWaLm0ZXBf9Mh7BLQkJKaAnfSKTVLxnnvAS1o"/>
+<div class="flex-1 min-w-0">
+<h4 class="text-sm font-semibold text-gray-900 dark:text-white truncate group-hover/item:text-primary">Spirited Away</h4>
+<div class="flex items-center gap-2 text-xs text-gray-500 dark:text-gray-400 mt-0.5">
+<span>2001</span>
+<span class="w-0.5 h-0.5 bg-gray-500 rounded-full"></span>
+<span>Anime</span>
+</div>
+<div class="text-[10px] text-gray-400 mt-0.5 truncate">Adventure, Family</div>
+</div>
+</a>
+<a class="flex items-start gap-3 p-2 hover:bg-gray-100 dark:hover:bg-white/5 rounded-lg transition-colors group/item" href="#">
+<img alt="Poster" class="w-10 h-14 object-cover rounded shadow-sm flex-shrink-0" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB74Fp72ev7QNZU469wTbrsvPSqgnjiWWoMOtIa0MAjQhQ1L33JGPpodM_sMQek4yZw6tRKlWPbMR6A8WeRapMkaH-T11LXGfejWy1r1bhWBwFgHhBoYl8KvmFdP0z1AzCeyDBbQAk4qqrgXQgFIiUfJh05RZYjZZz8rG09UvMIVFX4ZI-oP6j8oSExgu_KvJ_nvGwbgNIhEzXE5b5_lwPMYOzIs3TCBjMzWi8UdDqiKr2W9XaPSF7JhbMvJhQVj0heWtGm59mVp1E"/>
+<div class="flex-1 min-w-0">
+<h4 class="text-sm font-semibold text-gray-900 dark:text-white truncate group-hover/item:text-primary">The Dark Knight</h4>
+<div class="flex items-center gap-2 text-xs text-gray-500 dark:text-gray-400 mt-0.5">
+<span>2008</span>
+<span class="w-0.5 h-0.5 bg-gray-500 rounded-full"></span>
+<span>Movie</span>
+</div>
+<div class="text-[10px] text-gray-400 mt-0.5 truncate">Action, Crime</div>
+</div>
+</a>
+</div>
+<div class="p-3 border-t border-gray-100 dark:border-gray-700 bg-gray-50 dark:bg-[#151926] flex justify-center">
+<button class="bg-primary hover:bg-opacity-90 text-white text-xs font-semibold py-2 px-6 rounded-full transition-colors shadow-sm">
+                                View all results
+                            </button>
+</div>
+</div>
+</div>
+<button class="sm:hidden text-gray-600 dark:text-gray-200" onclick="toggleMobileSearch()">
+<span class="material-symbols-outlined">search</span>
+</button>
+</div>
+</div>
+<div class="hidden sm:hidden bg-white dark:bg-[#0B0E19] border-b border-gray-200 dark:border-gray-800 p-3 absolute w-full top-16 left-0 z-30" id="mobile-search-bar">
+<div class="relative group">
+<input class="w-full bg-gray-100 dark:bg-gray-800 text-sm rounded-full py-2 pl-4 pr-10 focus:outline-none focus:ring-2 focus:ring-primary dark:text-white border-none" placeholder="Search movies, shows..." type="text"/>
+<span class="material-symbols-outlined absolute right-3 top-2 text-gray-400 text-lg">search</span>
+<div class="absolute left-0 top-full mt-2 w-full bg-white dark:bg-[#1A1D29] rounded-xl shadow-2xl border border-gray-100 dark:border-gray-700 overflow-hidden invisible group-focus-within:visible opacity-0 group-focus-within:opacity-100 transition-all duration-200 origin-top transform scale-95 group-focus-within:scale-100 z-50">
+<div class="max-h-[300px] overflow-y-auto hide-scrollbar p-2 space-y-1">
+<a class="flex items-start gap-3 p-2 hover:bg-gray-100 dark:hover:bg-white/5 rounded-lg transition-colors" href="#">
+<img alt="Poster" class="w-10 h-14 object-cover rounded shadow-sm flex-shrink-0" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBuupgb3nD25Wubm40iI5tWuP49EydCaUp0EiYjTBXI3qpDr-LerCLu9i6Cz1lAn9uEWj1X_Fo4FgoziLiAqHVGWLScn06tNXiGQnMbiwIt2Jrc5GUwtVkyxUxR-KnBNZOWx3ius4cMIi_7z-VZzkH8quuTo3pj8kme4akxKKbp_3vqbjKm9T8hT7rQXXLDHgki5FL3xJvGpHw8S68e_dM9PCjJcIIckD9hBK8E3s04iv_DuggJr6t4gvxdoUxAixkHyB5rAiCYW3k"/>
+<div>
+<h4 class="text-sm font-semibold text-gray-900 dark:text-white truncate">The Lord of the Rings</h4>
+<div class="text-xs text-gray-500 dark:text-gray-400 mt-0.5">2003 • Movie</div>
+</div>
+</a>
+<a class="flex items-start gap-3 p-2 hover:bg-gray-100 dark:hover:bg-white/5 rounded-lg transition-colors" href="#">
+<img alt="Poster" class="w-10 h-14 object-cover rounded shadow-sm flex-shrink-0" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCwH3f4VjulnnLYk8EgFSCiOqFs12q4ivPSqucW7P7k4uOAN3qXURGd7iOxByylKHLJhbpiobEV442fMLZHwobXplWdRez-c71bcZODHHIHORqZw97zdSx_JgA4Cdym9n6VMtpcJXo3o5jc7jvKx13nsU2frrHJ8wgbcRH1cHIY8n7jLkRIsYOLDQ1uZWoGe99Imz98f_X9qskRvSTRVJiiJKF_DtE-ce0qw825vrwhgb66FQM3e_ymqoB8eBbjLZ5HuUePqbU5kYg"/>
+<div>
+<h4 class="text-sm font-semibold text-gray-900 dark:text-white truncate">The Godfather</h4>
+<div class="text-xs text-gray-500 dark:text-gray-400 mt-0.5">1972 • Movie</div>
+</div>
+</a>
+<div class="p-2 text-center text-xs text-gray-500">
+                           And 5 more results...
+                        </div>
+</div>
+<div class="p-3 border-t border-gray-100 dark:border-gray-700 bg-gray-50 dark:bg-[#151926] flex justify-center">
+<button class="bg-primary hover:bg-opacity-90 text-white text-xs font-semibold py-2 px-6 rounded-full transition-colors shadow-sm">
+                            View all results
+                        </button>
+</div>
+</div>
+</div>
+</div>
+</header>
+<main class="flex-grow pt-24 pb-12">
+<div class="container mx-auto px-4">
+<div class="bg-white dark:bg-[#151926] rounded-2xl p-6 md:p-8 lg:p-10 shadow-lg mb-12 relative overflow-hidden">
+<div class="absolute top-0 right-0 w-2/3 h-full bg-gradient-to-l from-primary/5 to-transparent pointer-events-none opacity-20"></div>
+<div class="flex flex-col md:flex-row gap-8 lg:gap-12 relative z-10">
+<div class="flex-shrink-0 mx-auto md:mx-0 w-64 md:w-72 lg:w-80 relative group">
+<img alt="Show Poster" class="w-full h-auto rounded-xl shadow-2xl object-cover aspect-[2/3] transform transition duration-500 hover:scale-[1.02]" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBL8sSKQhkIHjJRpfaXPOb2Ntr-YMNUhdTfQQNGnnmqGZu3SSewBEFAnXpGTo1YxqHXlb8pOCJCZrgrSF00Ey3CMmhZW5Q7dqz5o0qIOeV3DXsmqV-RKQGF2yEnwCFPLqyZ1R9luYVGdw-P_L6bRKjMPRM2RO5ISubiOat46Ovv-uMFsJfxGzRT0ngWoCZXAiiHQbJOA91N5Wyn21gKPKb6rWilqbabiqUYqUEEe31UdFQXOki6b3glJcCnNMssztZkZ0UYU_mwBbY"/>
+<div class="absolute inset-0 rounded-xl ring-1 ring-white/10 pointer-events-none"></div>
+</div>
+<div class="flex-grow flex flex-col justify-start text-center md:text-left">
+<div class="text-primary text-sm font-semibold mb-2 uppercase tracking-wide">Home • Movie • Action</div>
+<h1 class="text-3xl md:text-4xl lg:text-5xl font-bold mb-4 leading-tight">The Shawshank Redemption</h1>
+<div class="flex flex-wrap items-center justify-center md:justify-start gap-4 mb-6 text-sm">
+<div class="flex items-center space-x-1 bg-yellow-500/10 text-yellow-500 px-2 py-1 rounded border border-yellow-500/20">
+<span class="material-symbols-outlined text-base">star</span>
+<span class="font-bold">9.3</span>
+<span class="text-xs opacity-70">IMDb</span>
+</div>
+<div class="px-2 py-0.5 rounded border border-primary text-primary bg-primary/10 text-xs font-mono font-bold">HD</div>
+<span class="px-2 py-0.5 rounded border border-gray-300 dark:border-gray-600 text-xs">R</span>
+<span class="text-gray-500 dark:text-gray-400">• Movie</span>
+<span class="text-gray-500 dark:text-gray-400">• 1994</span>
+<span class="text-gray-500 dark:text-gray-400">• 2h 22m</span>
+</div>
+<div class="flex flex-wrap items-center justify-center md:justify-start gap-4 mb-8">
+<button class="bg-primary hover:bg-opacity-90 text-white font-semibold py-3 px-8 rounded-full flex items-center gap-2 transition-all shadow-lg shadow-primary/30 transform hover:-translate-y-0.5 w-full md:w-auto justify-center">
+<span class="material-symbols-outlined">play_arrow</span>
+                                Watch now
+                            </button>
+<div class="relative group dropdown-container w-full md:w-auto">
+<button class="bg-gray-200 dark:bg-gray-800 hover:bg-gray-300 dark:hover:bg-gray-700 text-gray-800 dark:text-white font-semibold py-3 px-6 rounded-full flex items-center justify-center gap-2 transition-colors w-full md:w-auto" id="add-to-list-btn">
+<span class="material-symbols-outlined">add</span>
+<span id="current-list-status">Add to list</span>
+<span class="material-symbols-outlined text-sm ml-1">expand_more</span>
+</button>
+<div class="absolute left-0 top-full mt-2 w-full md:w-56 bg-white dark:bg-surface-dark rounded-lg shadow-xl py-2 z-20 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 border border-gray-200 dark:border-gray-700 text-sm">
+<button class="block w-full text-left px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-800 text-gray-700 dark:text-gray-300" onclick="updateListStatus('Planning to watch')">Planning to watch</button>
+<button class="block w-full text-left px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-800 text-gray-700 dark:text-gray-300" onclick="updateListStatus('Watching')">Watching</button>
+<button class="block w-full text-left px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-800 text-gray-700 dark:text-gray-300" onclick="updateListStatus('Completed')">Completed</button>
+<button class="block w-full text-left px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-800 text-gray-700 dark:text-gray-300" onclick="updateListStatus('Re-watching')">Re-watching</button>
+<button class="block w-full text-left px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-800 text-gray-700 dark:text-gray-300" onclick="updateListStatus('Dropped')">Dropped</button>
+<div class="border-t border-gray-200 dark:border-gray-700 my-1"></div>
+<button class="block w-full text-left px-4 py-2 hover:bg-red-50 dark:hover:bg-red-900/20 text-red-500" onclick="updateListStatus('Add to list')">Remove from list</button>
+</div>
+</div>
+</div>
+<div class="grid md:grid-cols-5 gap-8 text-sm">
+<div class="md:col-span-3">
+<p class="text-gray-600 dark:text-gray-300 leading-relaxed mb-6">
+                                    Framed in the 1940s for the double murder of his wife and her lover, upstanding banker Andy Dufresne begins a new life at the Shawshank prison, where he puts his accounting skills to work for an amoral warden. During his long stretch in prison, Dufresne comes to be admired by the other inmates -- including an older prisoner named Red -- for his integrity and unquenchable sense of hope.
+                                </p>
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-full bg-gray-200 dark:bg-gray-700 overflow-hidden">
+<img alt="User Avatar" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCKepUuUHAz1GAAh9d1TP86fQ1cNEGF_A7Fi00ANN4rMbe5iAkgL18ZwXQ_bLabOJGS3Iw3kmWCMR-_bC6J8ZAQj7Fa0-ag_YKIFuGatJ4ZNgTMz3biJI_2j3tsHgv6s5Plmkoc0FaWk6FRXJ7WJDhwAwq6eIC8fEwWyZ8Qvnrk_GSsXRCVgO8Pvsa1YoJHTDbL3GoE4tSEYDIt8M5edImu39b2CQwvrurfgk06BuS_MZ3XIZgyYP78SnTXm3iVxTS6JSkhKhF0G4U"/>
+</div>
+<div class="text-xs">
+<div class="font-bold text-primary">Share Quravel</div>
+<div class="text-gray-500">to your friends</div>
+</div>
+</div>
+</div>
+<div class="md:col-span-2 space-y-4 text-gray-600 dark:text-gray-400 border-l border-gray-200 dark:border-gray-700 pl-0 md:pl-6">
+<div class="grid grid-cols-3 gap-2">
+<span class="font-medium text-gray-900 dark:text-white">Title:</span>
+<span class="col-span-2 text-xs">The Shawshank Redemption</span>
+</div>
+<div class="grid grid-cols-3 gap-2">
+<span class="font-medium text-gray-900 dark:text-white">Synonyms:</span>
+<span class="col-span-2 text-xs">Shawshank Redemption, Hope Springs Eternal</span>
+</div>
+<div class="grid grid-cols-3 gap-2">
+<span class="font-medium text-gray-900 dark:text-white">Japanese:</span>
+<span class="col-span-2 text-xs truncate">ショーシャンクの空に</span>
+</div>
+<div class="grid grid-cols-3 gap-2">
+<span class="font-medium text-gray-900 dark:text-white">Aired:</span>
+<span class="col-span-2 text-xs">Sep 23, 1994</span>
+</div>
+<div class="grid grid-cols-3 gap-2">
+<span class="font-medium text-gray-900 dark:text-white">Duration:</span>
+<span class="col-span-2 text-xs">142 min</span>
+</div>
+<div class="grid grid-cols-3 gap-2">
+<span class="font-medium text-gray-900 dark:text-white">Status:</span>
+<span class="col-span-2 text-xs">Finished Airing</span>
+</div>
+<div class="grid grid-cols-3 gap-2">
+<span class="font-medium text-gray-900 dark:text-white">Score:</span>
+<div class="col-span-2 text-xs flex items-center gap-3">
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-[14px] text-blue-500">star</span> MAL: 9.11</span>
+<span class="text-gray-300 dark:text-gray-600">|</span>
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-[14px] text-yellow-500">star</span> IMDb: 9.3</span>
+</div>
+</div>
+<div class="grid grid-cols-3 gap-2">
+<span class="font-medium text-gray-900 dark:text-white">Genres:</span>
+<div class="col-span-2 flex flex-wrap gap-1">
+<a class="border border-gray-300 dark:border-gray-600 rounded px-1.5 py-0.5 text-[10px] hover:text-primary hover:border-primary transition" href="#">Drama</a>
+<a class="border border-gray-300 dark:border-gray-600 rounded px-1.5 py-0.5 text-[10px] hover:text-primary hover:border-primary transition" href="#">Crime</a>
+</div>
+</div>
+<div class="grid grid-cols-3 gap-2">
+<span class="font-medium text-gray-900 dark:text-white">Studios:</span>
+<span class="col-span-2 text-xs text-primary">Castle Rock Entertainment</span>
+</div>
+<div class="grid grid-cols-3 gap-2">
+<span class="font-medium text-gray-900 dark:text-white">Producers:</span>
+<span class="col-span-2 text-xs text-primary">Niki Marvin</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="mb-12">
+<h2 class="text-2xl font-bold mb-6 text-gray-900 dark:text-white border-l-4 border-primary pl-4">You may like this</h2>
+<div class="relative group">
+<div class="absolute inset-y-0 left-0 w-12 bg-gradient-to-r from-background-light dark:from-background-dark to-transparent z-10 pointer-events-none"></div>
+<div class="absolute inset-y-0 right-0 w-12 bg-gradient-to-l from-background-light dark:from-background-dark to-transparent z-10 pointer-events-none"></div>
+<button class="hidden lg:flex absolute left-0 top-1/2 -translate-y-1/2 z-20 bg-black/60 hover:bg-primary text-white p-2 rounded-full shadow-lg transform -translate-x-1/2 opacity-0 group-hover:opacity-100 transition-all duration-300" onclick="scrollContainer('left')">
+<span class="material-symbols-outlined text-2xl">chevron_left</span>
+</button>
+<button class="hidden lg:flex absolute right-0 top-1/2 -translate-y-1/2 z-20 bg-black/60 hover:bg-primary text-white p-2 rounded-full shadow-lg transform translate-x-1/2 opacity-0 group-hover:opacity-100 transition-all duration-300" onclick="scrollContainer('right')">
+<span class="material-symbols-outlined text-2xl">chevron_right</span>
+</button>
+<div class="flex overflow-x-auto gap-4 pb-6 pt-2 px-2 hide-scrollbar snap-x snap-mandatory scroll-smooth" id="recommendations-container">
+<a class="flex-shrink-0 w-40 sm:w-48 group snap-start" href="#">
+<div class="relative aspect-[2/3] rounded-lg overflow-hidden mb-3 bg-gray-200 dark:bg-gray-800 shadow-md transition-transform duration-300 group-hover:scale-105 group-hover:shadow-primary/20">
+<img alt="The Lord of the Rings" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBuupgb3nD25Wubm40iI5tWuP49EydCaUp0EiYjTBXI3qpDr-LerCLu9i6Cz1lAn9uEWj1X_Fo4FgoziLiAqHVGWLScn06tNXiGQnMbiwIt2Jrc5GUwtVkyxUxR-KnBNZOWx3ius4cMIi_7z-VZzkH8quuTo3pj8kme4akxKKbp_3vqbjKm9T8hT7rQXXLDHgki5FL3xJvGpHw8S68e_dM9PCjJcIIckD9hBK8E3s04iv_DuggJr6t4gvxdoUxAixkHyB5rAiCYW3k"/>
+<div class="absolute top-2 right-2 bg-primary text-white text-[10px] font-bold px-1.5 py-0.5 rounded">HD</div>
+<div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+<div class="bg-white/20 backdrop-blur rounded-full p-3 text-white">
+<span class="material-symbols-outlined text-2xl">play_arrow</span>
+</div>
+</div>
+</div>
+<h3 class="font-medium text-sm text-gray-900 dark:text-white truncate group-hover:text-primary transition-colors">The Lord of the Rings</h3>
+<div class="flex items-center text-xs text-gray-500 dark:text-gray-400 mt-1 gap-2">
+<span>2003</span>
+<span class="w-1 h-1 bg-gray-500 rounded-full"></span>
+<span>Movie</span>
+</div>
+</a>
+<a class="flex-shrink-0 w-40 sm:w-48 group snap-start" href="#">
+<div class="relative aspect-[2/3] rounded-lg overflow-hidden mb-3 bg-gray-200 dark:bg-gray-800 shadow-md transition-transform duration-300 group-hover:scale-105 group-hover:shadow-primary/20">
+<img alt="The Godfather" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCwH3f4VjulnnLYk8EgFSCiOqFs12q4ivPSqucW7P7k4uOAN3qXURGd7iOxByylKHLJhbpiobEV442fMLZHwobXplWdRez-c71bcZODHHIHORqZw97zdSx_JgA4Cdym9n6VMtpcJXo3o5jc7jvKx13nsU2frrHJ8wgbcRH1cHIY8n7jLkRIsYOLDQ1uZWoGe99Imz98f_X9qskRvSTRVJiiJKF_DtE-ce0qw825vrwhgb66FQM3e_ymqoB8eBbjLZ5HuUePqbU5kYg"/>
+<div class="absolute top-2 right-2 bg-primary text-white text-[10px] font-bold px-1.5 py-0.5 rounded">HD</div>
+<div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+<div class="bg-white/20 backdrop-blur rounded-full p-3 text-white">
+<span class="material-symbols-outlined text-2xl">play_arrow</span>
+</div>
+</div>
+</div>
+<h3 class="font-medium text-sm text-gray-900 dark:text-white truncate group-hover:text-primary transition-colors">The Godfather</h3>
+<div class="flex items-center text-xs text-gray-500 dark:text-gray-400 mt-1 gap-2">
+<span>1972</span>
+<span class="w-1 h-1 bg-gray-500 rounded-full"></span>
+<span>Movie</span>
+</div>
+</a>
+<a class="flex-shrink-0 w-40 sm:w-48 group snap-start" href="#">
+<div class="relative aspect-[2/3] rounded-lg overflow-hidden mb-3 bg-gray-200 dark:bg-gray-800 shadow-md transition-transform duration-300 group-hover:scale-105 group-hover:shadow-primary/20">
+<img alt="Pulp Fiction" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC4DL0CgtcYAUCgstMJaa3MOKxfRf-4gMF5Pz7AA-vJqjO992P2Ln_vsEztjSVehozCL5rsHt1KXYxgOpHPykUZEMDio6Kowlgy6GWvo4do0-5lXXQYfWesN_lwBCxnEcWF4XBvqDH9JFtqGEnkTLf_a-dREBJUINFFoE2kBQ0XpDqfi5NlPjxrmCbvXX31J0PHegzUCxDnemVeINrotIOfjM7FeAzSPl6Y0W2Xlf5WxpWq7OBZ7oPcgpUXCPkvHT-o8GnA6D-kHow"/>
+<div class="absolute top-2 right-2 bg-primary text-white text-[10px] font-bold px-1.5 py-0.5 rounded">HD</div>
+<div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+<div class="bg-white/20 backdrop-blur rounded-full p-3 text-white">
+<span class="material-symbols-outlined text-2xl">play_arrow</span>
+</div>
+</div>
+</div>
+<h3 class="font-medium text-sm text-gray-900 dark:text-white truncate group-hover:text-primary transition-colors">Pulp Fiction</h3>
+<div class="flex items-center text-xs text-gray-500 dark:text-gray-400 mt-1 gap-2">
+<span>1994</span>
+<span class="w-1 h-1 bg-gray-500 rounded-full"></span>
+<span>Movie</span>
+</div>
+</a>
+<a class="flex-shrink-0 w-40 sm:w-48 group snap-start" href="#">
+<div class="relative aspect-[2/3] rounded-lg overflow-hidden mb-3 bg-gray-200 dark:bg-gray-800 shadow-md transition-transform duration-300 group-hover:scale-105 group-hover:shadow-primary/20">
+<img alt="12 Angry Men" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAWDG7W-EHvCGO6AOk0LDv2cxGsetsdcPblclKS1wVK3MQv4Fj_GiJpDoSYDcNwJrCYOz29g-FhsQOo9O_1CP7dvKsW3GKE6JfGAq8LUCU3Vk8A-AgKIbpFT50VlqnKIa-bNWxP6wrMSM1bk0abtMKKSCUoY8e8NTUY4CGgfqqjZkW-eJP5--tz8pfc8XzVLKbfvPpA015qvL4RQQ1H4ozFhJNr3H2YwCAMneW3D-iySlLubqn9nb1Edu-hnxmvSEkNQh7snL7aGL0"/>
+<div class="absolute top-2 right-2 bg-primary text-white text-[10px] font-bold px-1.5 py-0.5 rounded">HD</div>
+<div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+<div class="bg-white/20 backdrop-blur rounded-full p-3 text-white">
+<span class="material-symbols-outlined text-2xl">play_arrow</span>
+</div>
+</div>
+</div>
+<h3 class="font-medium text-sm text-gray-900 dark:text-white truncate group-hover:text-primary transition-colors">12 Angry Men</h3>
+<div class="flex items-center text-xs text-gray-500 dark:text-gray-400 mt-1 gap-2">
+<span>1957</span>
+<span class="w-1 h-1 bg-gray-500 rounded-full"></span>
+<span>Movie</span>
+</div>
+</a>
+<a class="flex-shrink-0 w-40 sm:w-48 group snap-start" href="#">
+<div class="relative aspect-[2/3] rounded-lg overflow-hidden mb-3 bg-gray-200 dark:bg-gray-800 shadow-md transition-transform duration-300 group-hover:scale-105 group-hover:shadow-primary/20">
+<img alt="Forrest Gump" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBgXhItyIcN_f0jDrGmIOMKN4F0WOyDvcXRwOpout1ddb93aE06e1fDZ4tTdqP_NqdfUMZ-n4VI-fiBxsWKXroLwDYis8zjBcajfazwu6WClbt415JaGcoTQoD-Nco9sOnyjiGKa0naWdz4LgSHo42Udpa8c48FXSA_8Frru87eoNLInqG-ZVFWytOZ1KnNlA8LKIhaoVvSD_2nx0UvuqXCR8dmiMv2Rhd5qetbIr3vrBOPma_OLUnw-0F0MlZuHdOKZYCsnF1Oi4M"/>
+<div class="absolute top-2 right-2 bg-primary text-white text-[10px] font-bold px-1.5 py-0.5 rounded">HD</div>
+<div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+<div class="bg-white/20 backdrop-blur rounded-full p-3 text-white">
+<span class="material-symbols-outlined text-2xl">play_arrow</span>
+</div>
+</div>
+</div>
+<h3 class="font-medium text-sm text-gray-900 dark:text-white truncate group-hover:text-primary transition-colors">Forrest Gump</h3>
+<div class="flex items-center text-xs text-gray-500 dark:text-gray-400 mt-1 gap-2">
+<span>1994</span>
+<span class="w-1 h-1 bg-gray-500 rounded-full"></span>
+<span>Movie</span>
+</div>
+</a>
+<a class="flex-shrink-0 w-40 sm:w-48 group snap-start" href="#">
+<div class="relative aspect-[2/3] rounded-lg overflow-hidden mb-3 bg-gray-200 dark:bg-gray-800 shadow-md transition-transform duration-300 group-hover:scale-105 group-hover:shadow-primary/20">
+<img alt="Spirited Away" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB6aKroKe4_Hr_QOThhIQ1eSBsj6XHa6M1h1ij1beOOwYZsLuAKaEUwhzePp5w2e0ZiNq23ueXCujFcscvpvX5l0fSEO1JhKa6gwDDPDrdfapY86HeYs5fG_M99b926v37WwsUlyZ7ugSX23giOl25toAwGLS8wOeBXwUajaxUzaTcHC_Yh5fJqnnwy6HgEx_QviGDLtROQ6LVPu2Z1BRIxBOEdc9fz9ozk1sYgF_aWaLm0ZXBf9Mh7BLQkJKaAnfSKTVLxnnvAS1o"/>
+<div class="absolute top-2 right-2 bg-primary text-white text-[10px] font-bold px-1.5 py-0.5 rounded">HD</div>
+<div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+<div class="bg-white/20 backdrop-blur rounded-full p-3 text-white">
+<span class="material-symbols-outlined text-2xl">play_arrow</span>
+</div>
+</div>
+</div>
+<h3 class="font-medium text-sm text-gray-900 dark:text-white truncate group-hover:text-primary transition-colors">Spirited Away</h3>
+<div class="flex items-center text-xs text-gray-500 dark:text-gray-400 mt-1 gap-2">
+<span>2001</span>
+<span class="w-1 h-1 bg-gray-500 rounded-full"></span>
+<span>Anime</span>
+</div>
+</a>
+<a class="flex-shrink-0 w-40 sm:w-48 group snap-start" href="#">
+<div class="relative aspect-[2/3] rounded-lg overflow-hidden mb-3 bg-gray-200 dark:bg-gray-800 shadow-md transition-transform duration-300 group-hover:scale-105 group-hover:shadow-primary/20">
+<img alt="The Dark Knight" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB74Fp72ev7QNZU469wTbrsvPSqgnjiWWoMOtIa0MAjQhQ1L33JGPpodM_sMQek4yZw6tRKlWPbMR6A8WeRapMkaH-T11LXGfejWy1r1bhWBwFgHhBoYl8KvmFdP0z1AzCeyDBbQAk4qqrgXQgFIiUfJh05RZYjZZz8rG09UvMIVFX4ZI-oP6j8oSExgu_KvJ_nvGwbgNIhEzXE5b5_lwPMYOzIs3TCBjMzWi8UdDqiKr2W9XaPSF7JhbMvJhQVj0heWtGm59mVp1E"/>
+<div class="absolute top-2 right-2 bg-primary text-white text-[10px] font-bold px-1.5 py-0.5 rounded">HD</div>
+<div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+<div class="bg-white/20 backdrop-blur rounded-full p-3 text-white">
+<span class="material-symbols-outlined text-2xl">play_arrow</span>
+</div>
+</div>
+</div>
+<h3 class="font-medium text-sm text-gray-900 dark:text-white truncate group-hover:text-primary transition-colors">The Dark Knight</h3>
+<div class="flex items-center text-xs text-gray-500 dark:text-gray-400 mt-1 gap-2">
+<span>2008</span>
+<span class="w-1 h-1 bg-gray-500 rounded-full"></span>
+<span>Movie</span>
+</div>
+</a>
+<a class="flex-shrink-0 w-40 sm:w-48 group snap-start" href="#">
+<div class="relative aspect-[2/3] rounded-lg overflow-hidden mb-3 bg-gray-200 dark:bg-gray-800 shadow-md transition-transform duration-300 group-hover:scale-105 group-hover:shadow-primary/20">
+<img alt="Schindlers List" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAY0PPVNXmzLKZJ_-Inp_y1VXlw5NvW3wJZr_gW3JYpkwlHfyDfH7npd9_ZIQq_MVYXHCM5pV933KX8cYn-qmvnB1b6o6ks9B8ApnWI5D08pkarqmgNr8RCn-mgNQoN73MZVOAvBlIBG77yisxgoYoRvydQm8zrFt6I0T6v2OVntJ3DnLhDbF6dXZUyBvbdhfKxuveBcXK7_cqhceH2iFotGjsTk56E0vjfSinB-1K9zovWk08jgWRQCk44bDwoGnscyG4n1vQfXL0"/>
+<div class="absolute top-2 right-2 bg-primary text-white text-[10px] font-bold px-1.5 py-0.5 rounded">HD</div>
+<div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+<div class="bg-white/20 backdrop-blur rounded-full p-3 text-white">
+<span class="material-symbols-outlined text-2xl">play_arrow</span>
+</div>
+</div>
+</div>
+<h3 class="font-medium text-sm text-gray-900 dark:text-white truncate group-hover:text-primary transition-colors">Schindler's List</h3>
+<div class="flex items-center text-xs text-gray-500 dark:text-gray-400 mt-1 gap-2">
+<span>1993</span>
+<span class="w-1 h-1 bg-gray-500 rounded-full"></span>
+<span>Movie</span>
+</div>
+</a>
+</div>
+</div>
+</div>
+</div>
+</main>
+<footer class="bg-white dark:bg-footer-dark border-t border-gray-200 dark:border-gray-800 mt-auto">
+<div class="container mx-auto px-4 py-8 md:py-12">
+<div class="flex flex-col md:flex-row justify-between items-start md:items-center gap-6">
+<div class="flex-1 max-w-2xl">
+<img alt="Quravel Logo" class="h-8 mb-4" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAyQkhWkWRKHdBKcKeKIQPSp0dqUxzkKXlQI9e-linyzdZc9vxD5aQvA-ZV_wOo7084k8eQ29HZJd3WqF6fhl5ywezJ9q4mrXm4IXYZnsrFWIdQpQGJRxxoSsAH0BJ7T_rXsfSDASTzBL9VkhWJq2VaqxNU8lIq-c1X5b8JBJP3GlTMQPDc7w1h4CxDMBAlzCY-SB1q84jFGtF6k7hS7VqPnzYc8hjOHgQWrprfsOoJEFcCFtN-N3rEH8TW-lRH0reqCAVonCPGynA"/>
+<p class="text-sm text-gray-600 dark:text-gray-400 mb-6 leading-relaxed">
+                        Quravel offers free, ad-free access to top movies and series in stunning quality. Stream effortlessly or save for later with easy downloads, perfect for movie lovers on the go!
+                    </p>
+<p class="text-xs text-gray-500 dark:text-gray-500">
+                        This site does not store any files on our server, we only linked to the media which is hosted on 3rd party services.
+                        <br/>
+                        watch free movies, watch free tv shows, free movies online
+                    </p>
+</div>
+<div class="flex flex-col items-center md:items-end gap-2 w-full md:w-auto">
+<div class="flex gap-4 text-sm font-semibold text-gray-700 dark:text-gray-300">
+<a class="hover:text-primary transition-colors" href="#">REQUEST</a>
+<a class="hover:text-primary transition-colors" href="#">CONTACT</a>
+</div>
+<div class="text-xs text-gray-500 dark:text-gray-500 mt-2 text-center md:text-right w-full">
+<span class="text-primary font-bold">Quravel</span>
+<br/>
+                         @ 2025 Quravel
+                    </div>
+</div>
+</div>
+</div>
+</footer>
+<script>
+    // Local Storage logic for "Add to list" button
+    const listButtonText = document.getElementById('current-list-status');
+    const storageKey = 'quravel_list_status_shawshank'; // Unique key per show
+    // Initialize button text from local storage
+    const savedStatus = localStorage.getItem(storageKey);
+    if (savedStatus) {
+        if(savedStatus === 'Add to list') {
+             listButtonText.innerText = 'Add to list';
+        } else {
+             listButtonText.innerText = savedStatus;
+        }
+    }
+    function updateListStatus(status) {
+        if (status === 'Add to list') {
+            listButtonText.innerText = 'Add to list';
+            localStorage.removeItem(storageKey); // Clear status
+        } else {
+            listButtonText.innerText = status;
+            localStorage.setItem(storageKey, status);
+        }
+    }
+    // Mobile Menu Toggle
+    function toggleMobileMenu() {
+        const menu = document.getElementById('mobile-menu');
+        const overlay = document.getElementById('mobile-menu-overlay');
+        menu.classList.toggle('menu-open');
+        overlay.classList.toggle('hidden');
+    }
+    // Mobile Search Toggle
+    function toggleMobileSearch() {
+        const searchBar = document.getElementById('mobile-search-bar');
+        searchBar.classList.toggle('hidden');
+    }
+    // Mobile Dropdown Accordion
+    function toggleMobileDropdown(id) {
+        const dropdown = document.getElementById(id);
+        dropdown.classList.toggle('hidden');
+        // Rotate arrow (optional logic if arrow IDs were dynamic, hardcoded for now)
+        const arrowId = id === 'genre-mobile' ? 'genre-arrow' : 'country-arrow';
+        const arrow = document.getElementById(arrowId);
+        if (dropdown.classList.contains('hidden')) {
+            arrow.style.transform = 'rotate(0deg)';
+        } else {
+            arrow.style.transform = 'rotate(180deg)';
+        }
+    }
+    // Scroll Logic for "You may like this"
+    function scrollContainer(direction) {
+        const container = document.getElementById('recommendations-container');
+        const scrollAmount = 300; // Adjust scroll distance
+        if (direction === 'left') {
+            container.scrollLeft -= scrollAmount;
+        } else {
+            container.scrollLeft += scrollAmount;
+        }
+    }
+</script>
+
+</body></html>
