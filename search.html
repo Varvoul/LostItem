@@ -1,0 +1,660 @@
+<!DOCTYPE html>
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Search Results - Quravel</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        primary: "#498BBB", 
+                        "background-light": "#F3F4F6",
+                        "background-dark": "#0B0E19",
+                        "surface-dark": "#151926",
+                        "footer-dark": "#0C0E14",
+                        "text-light": "#E5E7EB",
+                        "text-muted": "#9CA3AF"
+                    },
+                    fontFamily: {
+                        display: ["Inter", "sans-serif"],
+                        body: ["Inter", "sans-serif"],
+                    },
+                    borderRadius: {
+                        DEFAULT: "0.5rem",
+                    },
+                },
+            },
+        };
+    </script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        .hide-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .hide-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+        #mobile-menu {
+            transition: transform 0.3s ease-in-out;
+        }
+        .menu-open {
+            transform: translateX(0) !important;
+        }
+        .custom-scrollbar::-webkit-scrollbar {
+            width: 6px;
+        }
+        .custom-scrollbar::-webkit-scrollbar-track {
+            background: rgba(255, 255, 255, 0.05);
+        }
+        .custom-scrollbar::-webkit-scrollbar-thumb {
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 3px;
+        }
+        .custom-scrollbar::-webkit-scrollbar-thumb:hover {
+            background: rgba(255, 255, 255, 0.3);
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark text-gray-900 dark:text-text-light transition-colors duration-300 min-h-screen flex flex-col relative">
+<div class="fixed inset-0 bg-black/50 z-40 hidden lg:hidden" id="mobile-menu-overlay" onclick="toggleMobileMenu()"></div>
+<div class="fixed top-0 left-0 h-full w-64 bg-white dark:bg-[#151926] z-50 transform -translate-x-full lg:hidden overflow-y-auto shadow-2xl" id="mobile-menu">
+<div class="p-4 border-b border-gray-200 dark:border-gray-700 flex justify-between items-center">
+<img alt="Quravel Logo" class="h-8 object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDqiUc86NAc2oPWF0jZS6ltVT0qDRUQLGYe-vsh90aCjNPCKRUYsR2joEXfq121iCQ1DMhEXbbjY-Rm6ydRKKVvOD7XCHpsnpYv4oUDQP6h-KZ9tUpwQb33LAseATibNSPDDxAViL3XAYheHWPQCau7pQCd7-XFT2YjY86y-DFUxv6SfYoh27gsa2-RiKjPMnhZfSvjYzFQSeYDzy64a_9Lmf5_NT9MkYffdzHclH1EyMht0psBW3wqnbmTFh6wbG5Xh4VXCnRWONM"/>
+<button class="text-gray-500 hover:text-primary" onclick="toggleMobileMenu()">
+<span class="material-symbols-outlined">close</span>
+</button>
+</div>
+<div class="p-4 space-y-4">
+<a class="block text-sm font-medium hover:text-primary py-2 border-b border-gray-100 dark:border-gray-800" href="#">Home</a>
+<div class="py-2 border-b border-gray-100 dark:border-gray-800">
+<button class="flex items-center justify-between w-full text-sm font-medium hover:text-primary focus:outline-none" onclick="toggleMobileDropdown('genre-mobile')">
+<span>Genre</span>
+<span class="material-symbols-outlined text-sm transform transition-transform" id="genre-arrow">expand_more</span>
+</button>
+<div class="hidden mt-2 ml-4 space-y-2 text-sm text-gray-500 dark:text-gray-400" id="genre-mobile">
+<a class="block hover:text-primary" href="#">Action</a>
+<a class="block hover:text-primary" href="#">Adventure</a>
+<a class="block hover:text-primary" href="#">Comedy</a>
+</div>
+</div>
+<div class="py-2 border-b border-gray-100 dark:border-gray-800">
+<button class="flex items-center justify-between w-full text-sm font-medium hover:text-primary focus:outline-none" onclick="toggleMobileDropdown('country-mobile')">
+<span>Country</span>
+<span class="material-symbols-outlined text-sm transform transition-transform" id="country-arrow">expand_more</span>
+</button>
+<div class="hidden mt-2 ml-4 space-y-2 text-sm text-gray-500 dark:text-gray-400" id="country-mobile">
+<a class="block hover:text-primary" href="#">USA</a>
+<a class="block hover:text-primary" href="#">Japan</a>
+</div>
+</div>
+<a class="block text-sm font-medium hover:text-primary py-2 border-b border-gray-100 dark:border-gray-800" href="#">Top IMDB</a>
+<a class="block text-sm font-medium hover:text-primary py-2" href="#">Updates</a>
+</div>
+</div>
+<header class="fixed top-0 w-full z-40 bg-white/95 dark:bg-[#0B0E19]/95 backdrop-blur-sm border-b border-gray-200 dark:border-gray-800 shadow-sm">
+<div class="container mx-auto px-4 h-16 flex items-center justify-between">
+<div class="flex items-center gap-4">
+<button class="lg:hidden text-gray-600 dark:text-gray-200 focus:outline-none" onclick="toggleMobileMenu()">
+<span class="material-symbols-outlined text-3xl">menu</span>
+</button>
+<nav class="hidden lg:flex items-center space-x-6 text-sm font-medium">
+<a class="hover:text-primary transition-colors" href="#">Home</a>
+<div class="relative group">
+<button class="flex items-center space-x-1 hover:text-primary transition-colors focus:outline-none py-4">
+<span>Genre</span>
+<span class="material-symbols-outlined text-sm">expand_more</span>
+</button>
+<div class="absolute top-full left-0 w-[600px] bg-white dark:bg-[#1A1D29] rounded-b-lg shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 border-t-2 border-primary grid grid-cols-4 gap-4 p-6 z-50">
+<a class="hover:text-primary block text-sm text-gray-600 dark:text-gray-400" href="#">Action</a>
+<a class="hover:text-primary block text-sm text-gray-600 dark:text-gray-400" href="#">Adventure</a>
+<a class="hover:text-primary block text-sm text-gray-600 dark:text-gray-400" href="#">Comedy</a>
+<a class="hover:text-primary block text-sm text-gray-600 dark:text-gray-400" href="#">Drama</a>
+</div>
+</div>
+<div class="relative group">
+<button class="flex items-center space-x-1 hover:text-primary transition-colors focus:outline-none py-4">
+<span>Country</span>
+<span class="material-symbols-outlined text-sm">expand_more</span>
+</button>
+<div class="absolute top-full left-0 w-[600px] bg-white dark:bg-[#1A1D29] rounded-b-lg shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 border-t-2 border-primary grid grid-cols-4 gap-4 p-6 z-50">
+<a class="hover:text-primary block text-sm text-gray-600 dark:text-gray-400" href="#">USA</a>
+<a class="hover:text-primary block text-sm text-gray-600 dark:text-gray-400" href="#">Japan</a>
+</div>
+</div>
+<a class="hover:text-primary transition-colors" href="#">Top IMDB</a>
+<a class="hover:text-primary transition-colors" href="#">Updates</a>
+</nav>
+</div>
+<div class="absolute left-1/2 transform -translate-x-1/2">
+<a class="block" href="/">
+<img alt="Quravel Logo" class="h-8 md:h-10 object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBJUVSMqcvlsLRod5Xj-MZhjFAWxv45A-9D1r1RCogjetrU2yKas3rRIuvSZRytOe6KmnI1y8NBGlIDGaE0UV5-mx19YpDf5v0SsajVxTc0VUCDku8E8PC54rDIUGGhmt44NSDXMGfnGVTtfzGJ8Cj6U15erHms74L8zDNtfVtIjG013mT9k-H5Psf5KSd570YR8_DAtEfUBmcVIMfE5LNH3WO14T7Cv3psWjV5O4UWogAMASg1czrkMA4qcRagH2Mtb7wqzWRn0BQ"/>
+</a>
+</div>
+<div class="flex items-center space-x-4">
+<div class="relative hidden sm:block group z-50">
+<input class="bg-gray-100 dark:bg-gray-800 text-sm rounded-full py-2 pl-4 pr-10 focus:outline-none focus:ring-2 focus:ring-primary w-48 transition-all dark:text-white border-none group-focus-within:w-64" placeholder="Search..." type="text" value="Action"/>
+<span class="material-symbols-outlined absolute right-3 top-2 text-gray-400 text-lg cursor-pointer hover:text-primary">search</span>
+<div class="absolute right-0 top-full mt-2 w-80 bg-white dark:bg-[#1A1D29] rounded-xl shadow-2xl border border-gray-100 dark:border-gray-700 overflow-hidden invisible group-focus-within:visible opacity-0 group-focus-within:opacity-100 transition-all duration-200 origin-top-right transform scale-95 group-focus-within:scale-100 z-50">
+<div class="max-h-[400px] overflow-y-auto custom-scrollbar p-2 space-y-1">
+<a class="flex items-start gap-3 p-2 hover:bg-gray-100 dark:hover:bg-white/5 rounded-lg transition-colors group/item" href="#">
+<img alt="Poster" class="w-10 h-14 object-cover rounded shadow-sm flex-shrink-0" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBuupgb3nD25Wubm40iI5tWuP49EydCaUp0EiYjTBXI3qpDr-LerCLu9i6Cz1lAn9uEWj1X_Fo4FgoziLiAqHVGWLScn06tNXiGQnMbiwIt2Jrc5GUwtVkyxUxR-KnBNZOWx3ius4cMIi_7z-VZzkH8quuTo3pj8kme4akxKKbp_3vqbjKm9T8hT7rQXXLDHgki5FL3xJvGpHw8S68e_dM9PCjJcIIckD9hBK8E3s04iv_DuggJr6t4gvxdoUxAixkHyB5rAiCYW3k"/>
+<div class="flex-1 min-w-0">
+<h4 class="text-sm font-semibold text-gray-900 dark:text-white truncate group-hover/item:text-primary">The Lord of the Rings</h4>
+<div class="flex items-center gap-2 text-xs text-gray-500 dark:text-gray-400 mt-0.5">
+<span>2003</span>
+<span class="w-0.5 h-0.5 bg-gray-500 rounded-full"></span>
+<span>Movie</span>
+</div>
+</div>
+</a>
+<a class="flex items-start gap-3 p-2 hover:bg-gray-100 dark:hover:bg-white/5 rounded-lg transition-colors group/item" href="#">
+<img alt="Poster" class="w-10 h-14 object-cover rounded shadow-sm flex-shrink-0" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCwH3f4VjulnnLYk8EgFSCiOqFs12q4ivPSqucW7P7k4uOAN3qXURGd7iOxByylKHLJhbpiobEV442fMLZHwobXplWdRez-c71bcZODHHIHORqZw97zdSx_JgA4Cdym9n6VMtpcJXo3o5jc7jvKx13nsU2frrHJ8wgbcRH1cHIY8n7jLkRIsYOLDQ1uZWoGe99Imz98f_X9qskRvSTRVJiiJKF_DtE-ce0qw825vrwhgb66FQM3e_ymqoB8eBbjLZ5HuUePqbU5kYg"/>
+<div class="flex-1 min-w-0">
+<h4 class="text-sm font-semibold text-gray-900 dark:text-white truncate group-hover/item:text-primary">The Godfather</h4>
+<div class="flex items-center gap-2 text-xs text-gray-500 dark:text-gray-400 mt-0.5">
+<span>1972</span>
+<span class="w-0.5 h-0.5 bg-gray-500 rounded-full"></span>
+<span>Movie</span>
+</div>
+</div>
+</a>
+</div>
+<div class="p-3 border-t border-gray-100 dark:border-gray-700 bg-gray-50 dark:bg-[#151926] flex justify-center">
+<button class="bg-primary hover:bg-opacity-90 text-white text-xs font-semibold py-2 px-6 rounded-full transition-colors shadow-sm">
+                            View all results
+                        </button>
+</div>
+</div>
+</div>
+<button class="sm:hidden text-gray-600 dark:text-gray-200" onclick="toggleMobileSearch()">
+<span class="material-symbols-outlined">search</span>
+</button>
+</div>
+</div>
+<div class="hidden sm:hidden bg-white dark:bg-[#0B0E19] border-b border-gray-200 dark:border-gray-800 p-3 absolute w-full top-16 left-0 z-30" id="mobile-search-bar">
+<div class="relative group">
+<input class="w-full bg-gray-100 dark:bg-gray-800 text-sm rounded-full py-2 pl-4 pr-10 focus:outline-none focus:ring-2 focus:ring-primary dark:text-white border-none" placeholder="Search movies, shows..." type="text"/>
+<span class="material-symbols-outlined absolute right-3 top-2 text-gray-400 text-lg">search</span>
+<div class="absolute left-0 top-full mt-2 w-full bg-white dark:bg-[#1A1D29] rounded-xl shadow-2xl border border-gray-100 dark:border-gray-700 overflow-hidden invisible group-focus-within:visible opacity-0 group-focus-within:opacity-100 transition-all duration-200 origin-top transform scale-95 group-focus-within:scale-100 z-50">
+<div class="max-h-[300px] overflow-y-auto custom-scrollbar p-2 space-y-1">
+<a class="flex items-start gap-3 p-2 hover:bg-gray-100 dark:hover:bg-white/5 rounded-lg transition-colors" href="#">
+<img alt="Poster" class="w-10 h-14 object-cover rounded shadow-sm flex-shrink-0" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBuupgb3nD25Wubm40iI5tWuP49EydCaUp0EiYjTBXI3qpDr-LerCLu9i6Cz1lAn9uEWj1X_Fo4FgoziLiAqHVGWLScn06tNXiGQnMbiwIt2Jrc5GUwtVkyxUxR-KnBNZOWx3ius4cMIi_7z-VZzkH8quuTo3pj8kme4akxKKbp_3vqbjKm9T8hT7rQXXLDHgki5FL3xJvGpHw8S68e_dM9PCjJcIIckD9hBK8E3s04iv_DuggJr6t4gvxdoUxAixkHyB5rAiCYW3k"/>
+<div>
+<h4 class="text-sm font-semibold text-gray-900 dark:text-white truncate">The Lord of the Rings</h4>
+<div class="text-xs text-gray-500 dark:text-gray-400 mt-0.5">2003 • Movie</div>
+</div>
+</a>
+</div>
+<div class="p-3 border-t border-gray-100 dark:border-gray-700 bg-gray-50 dark:bg-[#151926] flex justify-center">
+<button class="bg-primary hover:bg-opacity-90 text-white text-xs font-semibold py-2 px-6 rounded-full transition-colors shadow-sm">
+                        View all results
+                    </button>
+</div>
+</div>
+</div>
+</div>
+</header>
+<main class="flex-grow pt-24 pb-12 w-full max-w-[1920px] mx-auto min-h-screen">
+<div class="container mx-auto px-4 lg:px-6">
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-4 mb-8">
+<div>
+<h1 class="text-2xl md:text-3xl font-bold text-gray-900 dark:text-white">
+                    Search Results for <span class="text-primary">"Action"</span>
+</h1>
+<p class="text-sm text-gray-500 dark:text-gray-400 mt-2">
+                    Found 20 results for your search query.
+                </p>
+</div>
+<div class="flex items-center gap-3">
+<select class="bg-gray-100 dark:bg-[#151926] border-none text-sm rounded-lg py-2 px-3 text-gray-700 dark:text-gray-300 focus:ring-1 focus:ring-primary cursor-pointer">
+<option>Relevance</option>
+<option>Latest</option>
+<option>Oldest</option>
+<option>Top Rated</option>
+</select>
+<div class="flex bg-gray-100 dark:bg-[#151926] rounded-lg p-1">
+<button class="p-1.5 rounded bg-white dark:bg-gray-700 shadow-sm text-primary">
+<span class="material-symbols-outlined text-lg">grid_view</span>
+</button>
+<button class="p-1.5 rounded hover:text-primary text-gray-500 dark:text-gray-400 transition-colors">
+<span class="material-symbols-outlined text-lg">view_list</span>
+</button>
+</div>
+</div>
+</div>
+<div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4 lg:gap-6">
+<a class="group relative block" href="#">
+<div class="relative aspect-[2/3] rounded-xl overflow-hidden bg-gray-200 dark:bg-surface-dark shadow-sm transition-all duration-300 group-hover:shadow-lg group-hover:scale-[1.02] group-hover:-translate-y-1">
+<img alt="Poster" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBuupgb3nD25Wubm40iI5tWuP49EydCaUp0EiYjTBXI3qpDr-LerCLu9i6Cz1lAn9uEWj1X_Fo4FgoziLiAqHVGWLScn06tNXiGQnMbiwIt2Jrc5GUwtVkyxUxR-KnBNZOWx3ius4cMIi_7z-VZzkH8quuTo3pj8kme4akxKKbp_3vqbjKm9T8hT7rQXXLDHgki5FL3xJvGpHw8S68e_dM9PCjJcIIckD9hBK8E3s04iv_DuggJr6t4gvxdoUxAixkHyB5rAiCYW3k"/>
+<div class="absolute top-2 right-2 bg-primary text-white text-[10px] font-bold px-1.5 py-0.5 rounded shadow-sm">HD</div>
+<div class="absolute top-2 left-2 bg-black/60 backdrop-blur-sm text-white text-[10px] font-bold px-1.5 py-0.5 rounded flex items-center gap-0.5">
+<span class="material-symbols-outlined text-[10px] filled text-yellow-400">star</span> 9.2
+                    </div>
+<div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+<span class="material-symbols-outlined text-white text-5xl drop-shadow-lg scale-75 group-hover:scale-100 transition-transform duration-300">play_circle</span>
+</div>
+</div>
+<div class="mt-3">
+<h3 class="text-sm font-semibold text-gray-900 dark:text-white truncate group-hover:text-primary transition-colors">The Lord of the Rings</h3>
+<div class="flex items-center gap-2 text-xs text-gray-500 dark:text-gray-400 mt-1">
+<span>2003</span>
+<span class="w-1 h-1 bg-gray-500 rounded-full"></span>
+<span>Movie</span>
+<span class="w-1 h-1 bg-gray-500 rounded-full"></span>
+<span>201m</span>
+</div>
+</div>
+</a>
+<a class="group relative block" href="#">
+<div class="relative aspect-[2/3] rounded-xl overflow-hidden bg-gray-200 dark:bg-surface-dark shadow-sm transition-all duration-300 group-hover:shadow-lg group-hover:scale-[1.02] group-hover:-translate-y-1">
+<img alt="Poster" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCwH3f4VjulnnLYk8EgFSCiOqFs12q4ivPSqucW7P7k4uOAN3qXURGd7iOxByylKHLJhbpiobEV442fMLZHwobXplWdRez-c71bcZODHHIHORqZw97zdSx_JgA4Cdym9n6VMtpcJXo3o5jc7jvKx13nsU2frrHJ8wgbcRH1cHIY8n7jLkRIsYOLDQ1uZWoGe99Imz98f_X9qskRvSTRVJiiJKF_DtE-ce0qw825vrwhgb66FQM3e_ymqoB8eBbjLZ5HuUePqbU5kYg"/>
+<div class="absolute top-2 right-2 bg-primary text-white text-[10px] font-bold px-1.5 py-0.5 rounded shadow-sm">HD</div>
+<div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+<span class="material-symbols-outlined text-white text-5xl drop-shadow-lg scale-75 group-hover:scale-100 transition-transform duration-300">play_circle</span>
+</div>
+</div>
+<div class="mt-3">
+<h3 class="text-sm font-semibold text-gray-900 dark:text-white truncate group-hover:text-primary transition-colors">The Godfather</h3>
+<div class="flex items-center gap-2 text-xs text-gray-500 dark:text-gray-400 mt-1">
+<span>1972</span>
+<span class="w-1 h-1 bg-gray-500 rounded-full"></span>
+<span>Movie</span>
+<span class="w-1 h-1 bg-gray-500 rounded-full"></span>
+<span>175m</span>
+</div>
+</div>
+</a>
+<a class="group relative block" href="#">
+<div class="relative aspect-[2/3] rounded-xl overflow-hidden bg-gray-200 dark:bg-surface-dark shadow-sm transition-all duration-300 group-hover:shadow-lg group-hover:scale-[1.02] group-hover:-translate-y-1">
+<img alt="Poster" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBL8sSKQhkIHjJRpfaXPOb2Ntr-YMNUhdTfQQNGnnmqGZu3SSewBEFAnXpGTo1YxqHXlb8pOCJCZrgrSF00Ey3CMmhZW5Q7dqz5o0qIOeV3DXsmqV-RKQGF2yEnwCFPLqyZ1R9luYVGdw-P_L6bRKjMPRM2RO5ISubiOat46Ovv-uMFsJfxGzRT0ngWoCZXAiiHQbJOA91N5Wyn21gKPKb6rWilqbabiqUYqUEEe31UdFQXOki6b3glJcCnNMssztZkZ0UYU_mwBbY"/>
+<div class="absolute top-2 right-2 bg-primary text-white text-[10px] font-bold px-1.5 py-0.5 rounded shadow-sm">HD</div>
+<div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+<span class="material-symbols-outlined text-white text-5xl drop-shadow-lg scale-75 group-hover:scale-100 transition-transform duration-300">play_circle</span>
+</div>
+</div>
+<div class="mt-3">
+<h3 class="text-sm font-semibold text-gray-900 dark:text-white truncate group-hover:text-primary transition-colors">The Shawshank Redemption</h3>
+<div class="flex items-center gap-2 text-xs text-gray-500 dark:text-gray-400 mt-1">
+<span>1994</span>
+<span class="w-1 h-1 bg-gray-500 rounded-full"></span>
+<span>Movie</span>
+</div>
+</div>
+</a>
+<a class="group relative block" href="#">
+<div class="relative aspect-[2/3] rounded-xl overflow-hidden bg-gray-200 dark:bg-surface-dark shadow-sm transition-all duration-300 group-hover:shadow-lg group-hover:scale-[1.02] group-hover:-translate-y-1">
+<img alt="Poster" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB6aKroKe4_Hr_QOThhIQ1eSBsj6XHa6M1h1ij1beOOwYZsLuAKaEUwhzePp5w2e0ZiNq23ueXCujFcscvpvX5l0fSEO1JhKa6gwDDPDrdfapY86HeYs5fG_M99b926v37WwsUlyZ7ugSX23giOl25toAwGLS8wOeBXwUajaxUzaTcHC_Yh5fJqnnwy6HgEx_QviGDLtROQ6LVPu2Z1BRIxBOEdc9fz9ozk1sYgF_aWaLm0ZXBf9Mh7BLQkJKaAnfSKTVLxnnvAS1o"/>
+<div class="absolute top-2 right-2 bg-primary text-white text-[10px] font-bold px-1.5 py-0.5 rounded shadow-sm">HD</div>
+<div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+<span class="material-symbols-outlined text-white text-5xl drop-shadow-lg scale-75 group-hover:scale-100 transition-transform duration-300">play_circle</span>
+</div>
+</div>
+<div class="mt-3">
+<h3 class="text-sm font-semibold text-gray-900 dark:text-white truncate group-hover:text-primary transition-colors">Spirited Away</h3>
+<div class="flex items-center gap-2 text-xs text-gray-500 dark:text-gray-400 mt-1">
+<span>2001</span>
+<span class="w-1 h-1 bg-gray-500 rounded-full"></span>
+<span>Anime</span>
+</div>
+</div>
+</a>
+<a class="group relative block" href="#">
+<div class="relative aspect-[2/3] rounded-xl overflow-hidden bg-gray-200 dark:bg-surface-dark shadow-sm transition-all duration-300 group-hover:shadow-lg group-hover:scale-[1.02] group-hover:-translate-y-1">
+<img alt="Poster" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC4DL0CgtcYAUCgstMJaa3MOKxfRf-4gMF5Pz7AA-vJqjO992P2Ln_vsEztjSVehozCL5rsHt1KXYxgOpHPykUZEMDio6Kowlgy6GWvo4do0-5lXXQYfWesN_lwBCxnEcWF4XBvqDH9JFtqGEnkTLf_a-dREBJUINFFoE2kBQ0XpDqfi5NlPjxrmCbvXX31J0PHegzUCxDnemVeINrotIOfjM7FeAzSPl6Y0W2Xlf5WxpWq7OBZ7oPcgpUXCPkvHT-o8GnA6D-kHow"/>
+<div class="absolute top-2 right-2 bg-primary text-white text-[10px] font-bold px-1.5 py-0.5 rounded shadow-sm">HD</div>
+<div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+<span class="material-symbols-outlined text-white text-5xl drop-shadow-lg scale-75 group-hover:scale-100 transition-transform duration-300">play_circle</span>
+</div>
+</div>
+<div class="mt-3">
+<h3 class="text-sm font-semibold text-gray-900 dark:text-white truncate group-hover:text-primary transition-colors">Pulp Fiction</h3>
+<div class="flex items-center gap-2 text-xs text-gray-500 dark:text-gray-400 mt-1">
+<span>1994</span>
+<span class="w-1 h-1 bg-gray-500 rounded-full"></span>
+<span>Movie</span>
+</div>
+</div>
+</a>
+<a class="group relative block" href="#">
+<div class="relative aspect-[2/3] rounded-xl overflow-hidden bg-gray-200 dark:bg-surface-dark shadow-sm transition-all duration-300 group-hover:shadow-lg group-hover:scale-[1.02] group-hover:-translate-y-1">
+<img alt="Poster" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB74Fp72ev7QNZU469wTbrsvPSqgnjiWWoMOtIa0MAjQhQ1L33JGPpodM_sMQek4yZw6tRKlWPbMR6A8WeRapMkaH-T11LXGfejWy1r1bhWBwFgHhBoYl8KvmFdP0z1AzCeyDBbQAk4qqrgXQgFIiUfJh05RZYjZZz8rG09UvMIVFX4ZI-oP6j8oSExgu_KvJ_nvGwbgNIhEzXE5b5_lwPMYOzIs3TCBjMzWi8UdDqiKr2W9XaPSF7JhbMvJhQVj0heWtGm59mVp1E"/>
+<div class="absolute top-2 right-2 bg-primary text-white text-[10px] font-bold px-1.5 py-0.5 rounded shadow-sm">HD</div>
+<div class="absolute top-2 left-2 bg-black/60 backdrop-blur-sm text-white text-[10px] font-bold px-1.5 py-0.5 rounded flex items-center gap-0.5">
+<span class="material-symbols-outlined text-[10px] filled text-yellow-400">star</span> 9.0
+                    </div>
+<div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+<span class="material-symbols-outlined text-white text-5xl drop-shadow-lg scale-75 group-hover:scale-100 transition-transform duration-300">play_circle</span>
+</div>
+</div>
+<div class="mt-3">
+<h3 class="text-sm font-semibold text-gray-900 dark:text-white truncate group-hover:text-primary transition-colors">The Dark Knight</h3>
+<div class="flex items-center gap-2 text-xs text-gray-500 dark:text-gray-400 mt-1">
+<span>2008</span>
+<span class="w-1 h-1 bg-gray-500 rounded-full"></span>
+<span>Movie</span>
+</div>
+</div>
+</a>
+<a class="group relative block" href="#">
+<div class="relative aspect-[2/3] rounded-xl overflow-hidden bg-gray-200 dark:bg-surface-dark shadow-sm transition-all duration-300 group-hover:shadow-lg group-hover:scale-[1.02] group-hover:-translate-y-1">
+<img alt="Poster" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCwH3f4VjulnnLYk8EgFSCiOqFs12q4ivPSqucW7P7k4uOAN3qXURGd7iOxByylKHLJhbpiobEV442fMLZHwobXplWdRez-c71bcZODHHIHORqZw97zdSx_JgA4Cdym9n6VMtpcJXo3o5jc7jvKx13nsU2frrHJ8wgbcRH1cHIY8n7jLkRIsYOLDQ1uZWoGe99Imz98f_X9qskRvSTRVJiiJKF_DtE-ce0qw825vrwhgb66FQM3e_ymqoB8eBbjLZ5HuUePqbU5kYg"/>
+<div class="absolute top-2 right-2 bg-primary text-white text-[10px] font-bold px-1.5 py-0.5 rounded shadow-sm">HD</div>
+<div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+<span class="material-symbols-outlined text-white text-5xl drop-shadow-lg scale-75 group-hover:scale-100 transition-transform duration-300">play_circle</span>
+</div>
+</div>
+<div class="mt-3">
+<h3 class="text-sm font-semibold text-gray-900 dark:text-white truncate group-hover:text-primary transition-colors">The Godfather II</h3>
+<div class="flex items-center gap-2 text-xs text-gray-500 dark:text-gray-400 mt-1">
+<span>1974</span>
+<span class="w-1 h-1 bg-gray-500 rounded-full"></span>
+<span>Movie</span>
+</div>
+</div>
+</a>
+<a class="group relative block" href="#">
+<div class="relative aspect-[2/3] rounded-xl overflow-hidden bg-gray-200 dark:bg-surface-dark shadow-sm transition-all duration-300 group-hover:shadow-lg group-hover:scale-[1.02] group-hover:-translate-y-1">
+<img alt="Poster" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBuupgb3nD25Wubm40iI5tWuP49EydCaUp0EiYjTBXI3qpDr-LerCLu9i6Cz1lAn9uEWj1X_Fo4FgoziLiAqHVGWLScn06tNXiGQnMbiwIt2Jrc5GUwtVkyxUxR-KnBNZOWx3ius4cMIi_7z-VZzkH8quuTo3pj8kme4akxKKbp_3vqbjKm9T8hT7rQXXLDHgki5FL3xJvGpHw8S68e_dM9PCjJcIIckD9hBK8E3s04iv_DuggJr6t4gvxdoUxAixkHyB5rAiCYW3k"/>
+<div class="absolute top-2 right-2 bg-primary text-white text-[10px] font-bold px-1.5 py-0.5 rounded shadow-sm">HD</div>
+<div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+<span class="material-symbols-outlined text-white text-5xl drop-shadow-lg scale-75 group-hover:scale-100 transition-transform duration-300">play_circle</span>
+</div>
+</div>
+<div class="mt-3">
+<h3 class="text-sm font-semibold text-gray-900 dark:text-white truncate group-hover:text-primary transition-colors">Fellowship of the Ring</h3>
+<div class="flex items-center gap-2 text-xs text-gray-500 dark:text-gray-400 mt-1">
+<span>2001</span>
+<span class="w-1 h-1 bg-gray-500 rounded-full"></span>
+<span>Movie</span>
+</div>
+</div>
+</a>
+<a class="group relative block" href="#">
+<div class="relative aspect-[2/3] rounded-xl overflow-hidden bg-gray-200 dark:bg-surface-dark shadow-sm transition-all duration-300 group-hover:shadow-lg group-hover:scale-[1.02] group-hover:-translate-y-1">
+<img alt="Poster" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBuupgb3nD25Wubm40iI5tWuP49EydCaUp0EiYjTBXI3qpDr-LerCLu9i6Cz1lAn9uEWj1X_Fo4FgoziLiAqHVGWLScn06tNXiGQnMbiwIt2Jrc5GUwtVkyxUxR-KnBNZOWx3ius4cMIi_7z-VZzkH8quuTo3pj8kme4akxKKbp_3vqbjKm9T8hT7rQXXLDHgki5FL3xJvGpHw8S68e_dM9PCjJcIIckD9hBK8E3s04iv_DuggJr6t4gvxdoUxAixkHyB5rAiCYW3k"/>
+<div class="absolute top-2 right-2 bg-purple-600 text-white text-[10px] font-bold px-1.5 py-0.5 rounded shadow-sm">TV</div>
+<div class="absolute bottom-2 left-2 bg-primary text-white text-[10px] font-bold px-1.5 py-0.5 rounded shadow-sm">Ep 12</div>
+<div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+<span class="material-symbols-outlined text-white text-5xl drop-shadow-lg scale-75 group-hover:scale-100 transition-transform duration-300">play_circle</span>
+</div>
+</div>
+<div class="mt-3">
+<h3 class="text-sm font-semibold text-gray-900 dark:text-white truncate group-hover:text-primary transition-colors">Rings of Power</h3>
+<div class="flex items-center gap-2 text-xs text-gray-500 dark:text-gray-400 mt-1">
+<span>2022</span>
+<span class="w-1 h-1 bg-gray-500 rounded-full"></span>
+<span>TV Show</span>
+</div>
+</div>
+</a>
+<a class="group relative block" href="#">
+<div class="relative aspect-[2/3] rounded-xl overflow-hidden bg-gray-200 dark:bg-surface-dark shadow-sm transition-all duration-300 group-hover:shadow-lg group-hover:scale-[1.02] group-hover:-translate-y-1">
+<img alt="Poster" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCwH3f4VjulnnLYk8EgFSCiOqFs12q4ivPSqucW7P7k4uOAN3qXURGd7iOxByylKHLJhbpiobEV442fMLZHwobXplWdRez-c71bcZODHHIHORqZw97zdSx_JgA4Cdym9n6VMtpcJXo3o5jc7jvKx13nsU2frrHJ8wgbcRH1cHIY8n7jLkRIsYOLDQ1uZWoGe99Imz98f_X9qskRvSTRVJiiJKF_DtE-ce0qw825vrwhgb66FQM3e_ymqoB8eBbjLZ5HuUePqbU5kYg"/>
+<div class="absolute top-2 right-2 bg-primary text-white text-[10px] font-bold px-1.5 py-0.5 rounded shadow-sm">HD</div>
+<div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+<span class="material-symbols-outlined text-white text-5xl drop-shadow-lg scale-75 group-hover:scale-100 transition-transform duration-300">play_circle</span>
+</div>
+</div>
+<div class="mt-3">
+<h3 class="text-sm font-semibold text-gray-900 dark:text-white truncate group-hover:text-primary transition-colors">Action Hero 1</h3>
+<div class="flex items-center gap-2 text-xs text-gray-500 dark:text-gray-400 mt-1">
+<span>2020</span>
+<span class="w-1 h-1 bg-gray-500 rounded-full"></span>
+<span>Movie</span>
+</div>
+</div>
+</a>
+<a class="group relative block" href="#">
+<div class="relative aspect-[2/3] rounded-xl overflow-hidden bg-gray-200 dark:bg-surface-dark shadow-sm transition-all duration-300 group-hover:shadow-lg group-hover:scale-[1.02] group-hover:-translate-y-1">
+<img alt="Poster" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBL8sSKQhkIHjJRpfaXPOb2Ntr-YMNUhdTfQQNGnnmqGZu3SSewBEFAnXpGTo1YxqHXlb8pOCJCZrgrSF00Ey3CMmhZW5Q7dqz5o0qIOeV3DXsmqV-RKQGF2yEnwCFPLqyZ1R9luYVGdw-P_L6bRKjMPRM2RO5ISubiOat46Ovv-uMFsJfxGzRT0ngWoCZXAiiHQbJOA91N5Wyn21gKPKb6rWilqbabiqUYqUEEe31UdFQXOki6b3glJcCnNMssztZkZ0UYU_mwBbY"/>
+<div class="absolute top-2 right-2 bg-primary text-white text-[10px] font-bold px-1.5 py-0.5 rounded shadow-sm">HD</div>
+<div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+<span class="material-symbols-outlined text-white text-5xl drop-shadow-lg scale-75 group-hover:scale-100 transition-transform duration-300">play_circle</span>
+</div>
+</div>
+<div class="mt-3">
+<h3 class="text-sm font-semibold text-gray-900 dark:text-white truncate group-hover:text-primary transition-colors">Prison Break</h3>
+<div class="flex items-center gap-2 text-xs text-gray-500 dark:text-gray-400 mt-1">
+<span>2005</span>
+<span class="w-1 h-1 bg-gray-500 rounded-full"></span>
+<span>TV Show</span>
+</div>
+</div>
+</a>
+<a class="group relative block" href="#">
+<div class="relative aspect-[2/3] rounded-xl overflow-hidden bg-gray-200 dark:bg-surface-dark shadow-sm transition-all duration-300 group-hover:shadow-lg group-hover:scale-[1.02] group-hover:-translate-y-1">
+<img alt="Poster" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB6aKroKe4_Hr_QOThhIQ1eSBsj6XHa6M1h1ij1beOOwYZsLuAKaEUwhzePp5w2e0ZiNq23ueXCujFcscvpvX5l0fSEO1JhKa6gwDDPDrdfapY86HeYs5fG_M99b926v37WwsUlyZ7ugSX23giOl25toAwGLS8wOeBXwUajaxUzaTcHC_Yh5fJqnnwy6HgEx_QviGDLtROQ6LVPu2Z1BRIxBOEdc9fz9ozk1sYgF_aWaLm0ZXBf9Mh7BLQkJKaAnfSKTVLxnnvAS1o"/>
+<div class="absolute top-2 right-2 bg-primary text-white text-[10px] font-bold px-1.5 py-0.5 rounded shadow-sm">HD</div>
+<div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+<span class="material-symbols-outlined text-white text-5xl drop-shadow-lg scale-75 group-hover:scale-100 transition-transform duration-300">play_circle</span>
+</div>
+</div>
+<div class="mt-3">
+<h3 class="text-sm font-semibold text-gray-900 dark:text-white truncate group-hover:text-primary transition-colors">Ninja Scroll</h3>
+<div class="flex items-center gap-2 text-xs text-gray-500 dark:text-gray-400 mt-1">
+<span>1993</span>
+<span class="w-1 h-1 bg-gray-500 rounded-full"></span>
+<span>Anime</span>
+</div>
+</div>
+</a>
+<a class="group relative block" href="#">
+<div class="relative aspect-[2/3] rounded-xl overflow-hidden bg-gray-200 dark:bg-surface-dark shadow-sm transition-all duration-300 group-hover:shadow-lg group-hover:scale-[1.02] group-hover:-translate-y-1">
+<img alt="Poster" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC4DL0CgtcYAUCgstMJaa3MOKxfRf-4gMF5Pz7AA-vJqjO992P2Ln_vsEztjSVehozCL5rsHt1KXYxgOpHPykUZEMDio6Kowlgy6GWvo4do0-5lXXQYfWesN_lwBCxnEcWF4XBvqDH9JFtqGEnkTLf_a-dREBJUINFFoE2kBQ0XpDqfi5NlPjxrmCbvXX31J0PHegzUCxDnemVeINrotIOfjM7FeAzSPl6Y0W2Xlf5WxpWq7OBZ7oPcgpUXCPkvHT-o8GnA6D-kHow"/>
+<div class="absolute top-2 right-2 bg-primary text-white text-[10px] font-bold px-1.5 py-0.5 rounded shadow-sm">HD</div>
+<div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+<span class="material-symbols-outlined text-white text-5xl drop-shadow-lg scale-75 group-hover:scale-100 transition-transform duration-300">play_circle</span>
+</div>
+</div>
+<div class="mt-3">
+<h3 class="text-sm font-semibold text-gray-900 dark:text-white truncate group-hover:text-primary transition-colors">Kill Bill: Vol 1</h3>
+<div class="flex items-center gap-2 text-xs text-gray-500 dark:text-gray-400 mt-1">
+<span>2003</span>
+<span class="w-1 h-1 bg-gray-500 rounded-full"></span>
+<span>Movie</span>
+</div>
+</div>
+</a>
+<a class="group relative block" href="#">
+<div class="relative aspect-[2/3] rounded-xl overflow-hidden bg-gray-200 dark:bg-surface-dark shadow-sm transition-all duration-300 group-hover:shadow-lg group-hover:scale-[1.02] group-hover:-translate-y-1">
+<img alt="Poster" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB74Fp72ev7QNZU469wTbrsvPSqgnjiWWoMOtIa0MAjQhQ1L33JGPpodM_sMQek4yZw6tRKlWPbMR6A8WeRapMkaH-T11LXGfejWy1r1bhWBwFgHhBoYl8KvmFdP0z1AzCeyDBbQAk4qqrgXQgFIiUfJh05RZYjZZz8rG09UvMIVFX4ZI-oP6j8oSExgu_KvJ_nvGwbgNIhEzXE5b5_lwPMYOzIs3TCBjMzWi8UdDqiKr2W9XaPSF7JhbMvJhQVj0heWtGm59mVp1E"/>
+<div class="absolute top-2 right-2 bg-primary text-white text-[10px] font-bold px-1.5 py-0.5 rounded shadow-sm">HD</div>
+<div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+<span class="material-symbols-outlined text-white text-5xl drop-shadow-lg scale-75 group-hover:scale-100 transition-transform duration-300">play_circle</span>
+</div>
+</div>
+<div class="mt-3">
+<h3 class="text-sm font-semibold text-gray-900 dark:text-white truncate group-hover:text-primary transition-colors">Batman Begins</h3>
+<div class="flex items-center gap-2 text-xs text-gray-500 dark:text-gray-400 mt-1">
+<span>2005</span>
+<span class="w-1 h-1 bg-gray-500 rounded-full"></span>
+<span>Movie</span>
+</div>
+</div>
+</a>
+<a class="group relative block" href="#">
+<div class="relative aspect-[2/3] rounded-xl overflow-hidden bg-gray-200 dark:bg-surface-dark shadow-sm transition-all duration-300 group-hover:shadow-lg group-hover:scale-[1.02] group-hover:-translate-y-1">
+<img alt="Poster" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCwH3f4VjulnnLYk8EgFSCiOqFs12q4ivPSqucW7P7k4uOAN3qXURGd7iOxByylKHLJhbpiobEV442fMLZHwobXplWdRez-c71bcZODHHIHORqZw97zdSx_JgA4Cdym9n6VMtpcJXo3o5jc7jvKx13nsU2frrHJ8wgbcRH1cHIY8n7jLkRIsYOLDQ1uZWoGe99Imz98f_X9qskRvSTRVJiiJKF_DtE-ce0qw825vrwhgb66FQM3e_ymqoB8eBbjLZ5HuUePqbU5kYg"/>
+<div class="absolute top-2 right-2 bg-primary text-white text-[10px] font-bold px-1.5 py-0.5 rounded shadow-sm">HD</div>
+<div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+<span class="material-symbols-outlined text-white text-5xl drop-shadow-lg scale-75 group-hover:scale-100 transition-transform duration-300">play_circle</span>
+</div>
+</div>
+<div class="mt-3">
+<h3 class="text-sm font-semibold text-gray-900 dark:text-white truncate group-hover:text-primary transition-colors">Scarface</h3>
+<div class="flex items-center gap-2 text-xs text-gray-500 dark:text-gray-400 mt-1">
+<span>1983</span>
+<span class="w-1 h-1 bg-gray-500 rounded-full"></span>
+<span>Movie</span>
+</div>
+</div>
+</a>
+<a class="group relative block" href="#">
+<div class="relative aspect-[2/3] rounded-xl overflow-hidden bg-gray-200 dark:bg-surface-dark shadow-sm transition-all duration-300 group-hover:shadow-lg group-hover:scale-[1.02] group-hover:-translate-y-1">
+<img alt="Poster" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBuupgb3nD25Wubm40iI5tWuP49EydCaUp0EiYjTBXI3qpDr-LerCLu9i6Cz1lAn9uEWj1X_Fo4FgoziLiAqHVGWLScn06tNXiGQnMbiwIt2Jrc5GUwtVkyxUxR-KnBNZOWx3ius4cMIi_7z-VZzkH8quuTo3pj8kme4akxKKbp_3vqbjKm9T8hT7rQXXLDHgki5FL3xJvGpHw8S68e_dM9PCjJcIIckD9hBK8E3s04iv_DuggJr6t4gvxdoUxAixkHyB5rAiCYW3k"/>
+<div class="absolute top-2 right-2 bg-primary text-white text-[10px] font-bold px-1.5 py-0.5 rounded shadow-sm">HD</div>
+<div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+<span class="material-symbols-outlined text-white text-5xl drop-shadow-lg scale-75 group-hover:scale-100 transition-transform duration-300">play_circle</span>
+</div>
+</div>
+<div class="mt-3">
+<h3 class="text-sm font-semibold text-gray-900 dark:text-white truncate group-hover:text-primary transition-colors">The Two Towers</h3>
+<div class="flex items-center gap-2 text-xs text-gray-500 dark:text-gray-400 mt-1">
+<span>2002</span>
+<span class="w-1 h-1 bg-gray-500 rounded-full"></span>
+<span>Movie</span>
+</div>
+</div>
+</a>
+<a class="group relative block" href="#">
+<div class="relative aspect-[2/3] rounded-xl overflow-hidden bg-gray-200 dark:bg-surface-dark shadow-sm transition-all duration-300 group-hover:shadow-lg group-hover:scale-[1.02] group-hover:-translate-y-1">
+<img alt="Poster" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBuupgb3nD25Wubm40iI5tWuP49EydCaUp0EiYjTBXI3qpDr-LerCLu9i6Cz1lAn9uEWj1X_Fo4FgoziLiAqHVGWLScn06tNXiGQnMbiwIt2Jrc5GUwtVkyxUxR-KnBNZOWx3ius4cMIi_7z-VZzkH8quuTo3pj8kme4akxKKbp_3vqbjKm9T8hT7rQXXLDHgki5FL3xJvGpHw8S68e_dM9PCjJcIIckD9hBK8E3s04iv_DuggJr6t4gvxdoUxAixkHyB5rAiCYW3k"/>
+<div class="absolute top-2 right-2 bg-purple-600 text-white text-[10px] font-bold px-1.5 py-0.5 rounded shadow-sm">TV</div>
+<div class="absolute bottom-2 left-2 bg-primary text-white text-[10px] font-bold px-1.5 py-0.5 rounded shadow-sm">Ep 8</div>
+<div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+<span class="material-symbols-outlined text-white text-5xl drop-shadow-lg scale-75 group-hover:scale-100 transition-transform duration-300">play_circle</span>
+</div>
+</div>
+<div class="mt-3">
+<h3 class="text-sm font-semibold text-gray-900 dark:text-white truncate group-hover:text-primary transition-colors">Stranger Things</h3>
+<div class="flex items-center gap-2 text-xs text-gray-500 dark:text-gray-400 mt-1">
+<span>2022</span>
+<span class="w-1 h-1 bg-gray-500 rounded-full"></span>
+<span>TV Show</span>
+</div>
+</div>
+</a>
+<a class="group relative block" href="#">
+<div class="relative aspect-[2/3] rounded-xl overflow-hidden bg-gray-200 dark:bg-surface-dark shadow-sm transition-all duration-300 group-hover:shadow-lg group-hover:scale-[1.02] group-hover:-translate-y-1">
+<img alt="Poster" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCwH3f4VjulnnLYk8EgFSCiOqFs12q4ivPSqucW7P7k4uOAN3qXURGd7iOxByylKHLJhbpiobEV442fMLZHwobXplWdRez-c71bcZODHHIHORqZw97zdSx_JgA4Cdym9n6VMtpcJXo3o5jc7jvKx13nsU2frrHJ8wgbcRH1cHIY8n7jLkRIsYOLDQ1uZWoGe99Imz98f_X9qskRvSTRVJiiJKF_DtE-ce0qw825vrwhgb66FQM3e_ymqoB8eBbjLZ5HuUePqbU5kYg"/>
+<div class="absolute top-2 right-2 bg-primary text-white text-[10px] font-bold px-1.5 py-0.5 rounded shadow-sm">HD</div>
+<div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+<span class="material-symbols-outlined text-white text-5xl drop-shadow-lg scale-75 group-hover:scale-100 transition-transform duration-300">play_circle</span>
+</div>
+</div>
+<div class="mt-3">
+<h3 class="text-sm font-semibold text-gray-900 dark:text-white truncate group-hover:text-primary transition-colors">Heat</h3>
+<div class="flex items-center gap-2 text-xs text-gray-500 dark:text-gray-400 mt-1">
+<span>1995</span>
+<span class="w-1 h-1 bg-gray-500 rounded-full"></span>
+<span>Movie</span>
+</div>
+</div>
+</a>
+<a class="group relative block" href="#">
+<div class="relative aspect-[2/3] rounded-xl overflow-hidden bg-gray-200 dark:bg-surface-dark shadow-sm transition-all duration-300 group-hover:shadow-lg group-hover:scale-[1.02] group-hover:-translate-y-1">
+<img alt="Poster" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBL8sSKQhkIHjJRpfaXPOb2Ntr-YMNUhdTfQQNGnnmqGZu3SSewBEFAnXpGTo1YxqHXlb8pOCJCZrgrSF00Ey3CMmhZW5Q7dqz5o0qIOeV3DXsmqV-RKQGF2yEnwCFPLqyZ1R9luYVGdw-P_L6bRKjMPRM2RO5ISubiOat46Ovv-uMFsJfxGzRT0ngWoCZXAiiHQbJOA91N5Wyn21gKPKb6rWilqbabiqUYqUEEe31UdFQXOki6b3glJcCnNMssztZkZ0UYU_mwBbY"/>
+<div class="absolute top-2 right-2 bg-primary text-white text-[10px] font-bold px-1.5 py-0.5 rounded shadow-sm">HD</div>
+<div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+<span class="material-symbols-outlined text-white text-5xl drop-shadow-lg scale-75 group-hover:scale-100 transition-transform duration-300">play_circle</span>
+</div>
+</div>
+<div class="mt-3">
+<h3 class="text-sm font-semibold text-gray-900 dark:text-white truncate group-hover:text-primary transition-colors">The Green Mile</h3>
+<div class="flex items-center gap-2 text-xs text-gray-500 dark:text-gray-400 mt-1">
+<span>1999</span>
+<span class="w-1 h-1 bg-gray-500 rounded-full"></span>
+<span>Movie</span>
+</div>
+</div>
+</a>
+<a class="group relative block" href="#">
+<div class="relative aspect-[2/3] rounded-xl overflow-hidden bg-gray-200 dark:bg-surface-dark shadow-sm transition-all duration-300 group-hover:shadow-lg group-hover:scale-[1.02] group-hover:-translate-y-1">
+<img alt="Poster" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB6aKroKe4_Hr_QOThhIQ1eSBsj6XHa6M1h1ij1beOOwYZsLuAKaEUwhzePp5w2e0ZiNq23ueXCujFcscvpvX5l0fSEO1JhKa6gwDDPDrdfapY86HeYs5fG_M99b926v37WwsUlyZ7ugSX23giOl25toAwGLS8wOeBXwUajaxUzaTcHC_Yh5fJqnnwy6HgEx_QviGDLtROQ6LVPu2Z1BRIxBOEdc9fz9ozk1sYgF_aWaLm0ZXBf9Mh7BLQkJKaAnfSKTVLxnnvAS1o"/>
+<div class="absolute top-2 right-2 bg-primary text-white text-[10px] font-bold px-1.5 py-0.5 rounded shadow-sm">HD</div>
+<div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+<span class="material-symbols-outlined text-white text-5xl drop-shadow-lg scale-75 group-hover:scale-100 transition-transform duration-300">play_circle</span>
+</div>
+</div>
+<div class="mt-3">
+<h3 class="text-sm font-semibold text-gray-900 dark:text-white truncate group-hover:text-primary transition-colors">Princess Mononoke</h3>
+<div class="flex items-center gap-2 text-xs text-gray-500 dark:text-gray-400 mt-1">
+<span>1997</span>
+<span class="w-1 h-1 bg-gray-500 rounded-full"></span>
+<span>Anime</span>
+</div>
+</div>
+</a>
+</div>
+<div class="mt-12 flex justify-center">
+<nav class="flex items-center gap-2">
+<button class="px-3 py-2 rounded-lg bg-white dark:bg-[#151926] border border-gray-200 dark:border-gray-800 text-gray-500 hover:text-primary disabled:opacity-50 transition-colors">
+<span class="material-symbols-outlined text-sm">chevron_left</span>
+</button>
+<button class="px-3.5 py-2 rounded-lg bg-primary text-white font-medium text-sm shadow-sm transition-colors">1</button>
+<button class="px-3.5 py-2 rounded-lg bg-white dark:bg-[#151926] border border-gray-200 dark:border-gray-800 text-gray-600 dark:text-gray-400 hover:bg-gray-50 dark:hover:bg-gray-800 font-medium text-sm transition-colors">2</button>
+<button class="px-3.5 py-2 rounded-lg bg-white dark:bg-[#151926] border border-gray-200 dark:border-gray-800 text-gray-600 dark:text-gray-400 hover:bg-gray-50 dark:hover:bg-gray-800 font-medium text-sm transition-colors">3</button>
+<span class="text-gray-400 px-2">...</span>
+<button class="px-3.5 py-2 rounded-lg bg-white dark:bg-[#151926] border border-gray-200 dark:border-gray-800 text-gray-600 dark:text-gray-400 hover:bg-gray-50 dark:hover:bg-gray-800 font-medium text-sm transition-colors">8</button>
+<button class="px-3 py-2 rounded-lg bg-white dark:bg-[#151926] border border-gray-200 dark:border-gray-800 text-gray-500 hover:text-primary transition-colors">
+<span class="material-symbols-outlined text-sm">chevron_right</span>
+</button>
+</nav>
+</div>
+</div>
+</main>
+<footer class="bg-white dark:bg-footer-dark border-t border-gray-200 dark:border-gray-800 mt-auto">
+<div class="container mx-auto px-4 py-8 md:py-12">
+<div class="flex flex-col md:flex-row justify-between items-start md:items-center gap-6">
+<div class="flex-1 max-w-2xl">
+<img alt="Quravel Logo" class="h-8 mb-4" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAyQkhWkWRKHdBKcKeKIQPSp0dqUxzkKXlQI9e-linyzdZc9vxD5aQvA-ZV_wOo7084k8eQ29HZJd3WqF6fhl5ywezJ9q4mrXm4IXYZnsrFWIdQpQGJRxxoSsAH0BJ7T_rXsfSDASTzBL9VkhWJq2VaqxNU8lIq-c1X5b8JBJP3GlTMQPDc7w1h4CxDMBAlzCY-SB1q84jFGtF6k7hS7VqPnzYc8hjOHgQWrprfsOoJEFcCFtN-N3rEH8TW-lRH0reqCAVonCPGynA"/>
+<p class="text-sm text-gray-600 dark:text-gray-400 mb-6 leading-relaxed">
+                    Quravel offers free, ad-free access to top movies and series in stunning quality. Stream effortlessly or save for later with easy downloads, perfect for movie lovers on the go!
+                </p>
+<p class="text-xs text-gray-500 dark:text-gray-500">
+                    This site does not store any files on our server, we only linked to the media which is hosted on 3rd party services.
+                    <br/>
+                    watch free movies, watch free tv shows, free movies online
+                </p>
+</div>
+<div class="flex flex-col items-center md:items-end gap-2 w-full md:w-auto">
+<div class="flex gap-4 text-sm font-semibold text-gray-700 dark:text-gray-300">
+<a class="hover:text-primary transition-colors" href="#">REQUEST</a>
+<a class="hover:text-primary transition-colors" href="#">CONTACT</a>
+</div>
+<div class="text-xs text-gray-500 dark:text-gray-500 mt-2 text-center md:text-right w-full">
+<span class="text-primary font-bold">Quravel</span>
+<br/>
+                    @ 2025 Quravel
+                </div>
+</div>
+</div>
+</div>
+</footer>
+<script>
+    // Mobile Menu Toggle
+    function toggleMobileMenu() {
+        const menu = document.getElementById('mobile-menu');
+        const overlay = document.getElementById('mobile-menu-overlay');
+        menu.classList.toggle('menu-open');
+        overlay.classList.toggle('hidden');
+    }
+    // Mobile Search Toggle
+    function toggleMobileSearch() {
+        const searchBar = document.getElementById('mobile-search-bar');
+        searchBar.classList.toggle('hidden');
+    }
+    // Mobile Dropdown Accordion
+    function toggleMobileDropdown(id) {
+        const dropdown = document.getElementById(id);
+        dropdown.classList.toggle('hidden');
+        // Rotate arrow
+        const arrowId = id === 'genre-mobile' ? 'genre-arrow' : 'country-arrow';
+        const arrow = document.getElementById(arrowId);
+        if (dropdown.classList.contains('hidden')) {
+            arrow.style.transform = 'rotate(0deg)';
+        } else {
+            arrow.style.transform = 'rotate(180deg)';
+        }
+    }
+</script>
+
+</body></html>
