@@ -300,7 +300,7 @@
             <div class="bg-white dark:bg-[#151926] rounded-xl overflow-hidden shadow-sm border border-gray-200 dark:border-gray-800">
                 <div class="video-container-wrapper" id="video-player-container">
                     <!-- Video will be loaded here dynamically -->
-                    <div class="absolute inset-0 flex items-center justify-center bg-black">
+                    <div class="absolute inset-0 flex items-center justify-center bg-black" id="video-loading-overlay">
                         <span class="material-symbols-outlined text-6xl text-white opacity-50 group-hover:opacity-100 transition-opacity cursor-pointer" id="play-button">play_circle</span>
                     </div>
                 </div>
@@ -447,7 +447,9 @@
                         <span class="font-semibold text-gray-700 dark:text-gray-200">Synonyms:</span> Shawshank Redemption
                     </div>
                     <div class="col-span-2">
-                        <span class="font-semibold text-gray-700 dark:text-gray-200">Scores:</span> MAL: 9.11 | IMDb: 9.3
+                        <span class="font-s
+
+emibold text-gray-700 dark:text-gray-200">Scores:</span> MAL: 9.11 | IMDb: 9.3
                     </div>
                     <div class="col-span-2">
                         <span class="font-semibold text-gray-700 dark:text-gray-200">Producers:</span> Niki Marvin
@@ -529,66 +531,82 @@
     let currentSeason = '1';
     let isVideoLoaded = false;
     
-    // Video URLs for Season 1, DUB-HD-01
+    // ALL 13 EPISODE URLs for Season 1
+    const allEpisodeUrls = [
+        'https://filemoon.in/e/bzd5u1d7rzql',    // Episode 1
+        'https://filemoon.in/e/85jphgrl8l82',    // Episode 2
+        'https://filemoon.in/e/bof3lye419lq',    // Episode 3
+        'https://filemoon.in/e/ywgs23cxk5i5',    // Episode 4
+        'https://filemoon.in/e/jtjobjam5v1p',    // Episode 5
+        'https://filemoon.in/e/gy31eb38sq5h',    // Episode 6
+        'https://filemoon.in/e/l35uymelfik6',    // Episode 7
+        'https://filemoon.in/e/smzk83075q3s',    // Episode 8
+        'https://filemoon.in/e/y8liviumbcg5',    // Episode 9
+        'https://filemoon.in/e/887ppm2lxvtp',    // Episode 10
+        'https://filemoon.in/e/cmnzrzc7t0io',    // Episode 11
+        'https://filemoon.in/e/5g4slx1i6tlt',    // Episode 12
+        'https://filemoon.in/e/fcln6lu754yb'     // Episode 13
+    ];
+    
+    // Video URLs for ALL servers - each server has all 13 episodes
     const episodeUrls = {
-        'SUB-HD-01': [
-            'https://filemoon.in/e/bzd5u1d7rzql',
-            'https://filemoon.in/e/85jphgrl8l82',
-            'https://filemoon.in/e/bof3lye419lq',
-            'https://filemoon.in/e/ywgs23cxk5i5',
-            'https://filemoon.in/e/jtjobjam5v1p',
-            'https://filemoon.in/e/gy31eb38sq5h',
-            'https://filemoon.in/e/l35uymelfik6',
-            'https://filemoon.in/e/smzk83075q3s',
-            'https://filemoon.in/e/y8liviumbcg5',
-            'https://filemoon.in/e/887ppm2lxvtp',
-            'https://filemoon.in/e/cmnzrzc7t0io',
-            'https://filemoon.in/e/5g4slx1i6tlt',
-            'https://filemoon.in/e/fcln6lu754yb'
-        ],
-        'SUB-HD-02': Array(13).fill('https://filemoon.in/e/bzd5u1d7rzql'),
-        'SUB-HD-03': Array(13).fill('https://filemoon.in/e/bzd5u1d7rzql'),
-        'DUB-HD-01': [
-            'https://filemoon.in/e/bzd5u1d7rzql',
-            'https://filemoon.in/e/85jphgrl8l82',
-            'https://filemoon.in/e/bof3lye419lq',
-            'https://filemoon.in/e/ywgs23cxk5i5',
-            'https://filemoon.in/e/jtjobjam5v1p',
-            'https://filemoon.in/e/gy31eb38sq5h',
-            'https://filemoon.in/e/l35uymelfik6',
-            'https://filemoon.in/e/smzk83075q3s',
-            'https://filemoon.in/e/y8liviumbcg5',
-            'https://filemoon.in/e/887ppm2lxvtp',
-            'https://filemoon.in/e/cmnzrzc7t0io',
-            'https://filemoon.in/e/5g4slx1i6tlt',
-            'https://filemoon.in/e/fcln6lu754yb'
-        ],
-        'DUB-HD-02': Array(13).fill('https://filemoon.in/e/bzd5u1d7rzql'),
-        'DUB-HD-03': Array(13).fill('https://filemoon.in/e/bzd5u1d7rzql'),
-        'RAW-HD-01': Array(13).fill('https://filemoon.in/e/bzd5u1d7rzql'),
-        'RAW-HD-02': Array(13).fill('https://filemoon.in/e/bzd5u1d7rzql'),
-        'RAW-HD-03': Array(13).fill('https://filemoon.in/e/bzd5u1d7rzql')
+        'SUB-HD-01': allEpisodeUrls,
+        'SUB-HD-02': allEpisodeUrls,
+        'SUB-HD-03': allEpisodeUrls,
+        'DUB-HD-01': allEpisodeUrls,
+        'DUB-HD-02': allEpisodeUrls,
+        'DUB-HD-03': allEpisodeUrls,
+        'RAW-HD-01': allEpisodeUrls,
+        'RAW-HD-02': allEpisodeUrls,
+        'RAW-HD-03': allEpisodeUrls
     };
 
     // Mock episode data structure
     const episodeData = {
         '1': [
-            { id: 1, title: 'Pilot' }, { id: 2, title: 'First Night' }, { id: 3, title: 'The Choice' },
-            { id: 4, title: 'The Battle' }, { id: 5, title: 'Reunion' }, { id: 6, title: 'Departure' },
-            { id: 7, title: 'New Hope' }, { id: 8, title: 'Betrayal' }, { id: 9, title: 'Awakening' },
-            { id: 10, title: 'The End of the Beginning' }, { id: 11, title: 'Shadows' }, { id: 12, title: 'Finale' },
+            { id: 1, title: 'Pilot' }, 
+            { id: 2, title: 'First Night' }, 
+            { id: 3, title: 'The Choice' },
+            { id: 4, title: 'The Battle' }, 
+            { id: 5, title: 'Reunion' }, 
+            { id: 6, title: 'Departure' },
+            { id: 7, title: 'New Hope' }, 
+            { id: 8, title: 'Betrayal' }, 
+            { id: 9, title: 'Awakening' },
+            { id: 10, title: 'The End of the Beginning' }, 
+            { id: 11, title: 'Shadows' }, 
+            { id: 12, title: 'Finale' },
             { id: 13, title: 'Epilogue' }
         ],
         '2': [
-            { id: 1, title: 'New World' }, { id: 2, title: 'Lost' }, { id: 3, title: 'Found' }
+            { id: 1, title: 'New World' }, 
+            { id: 2, title: 'Lost' }, 
+            { id: 3, title: 'Found' }
         ],
         '3': [
-             { id: 1, title: 'Return' }, { id: 2, title: 'Conquest' }
+             { id: 1, title: 'Return' }, 
+             { id: 2, title: 'Conquest' }
         ],
         'ova': [
             { id: 1, title: 'Special Episode' }
         ]
     };
+    
+    // For demo purposes, Season 2 and 3 will use the same URLs
+    const season2Urls = [
+        'https://filemoon.in/e/bzd5u1d7rzql',
+        'https://filemoon.in/e/85jphgrl8l82',
+        'https://filemoon.in/e/bof3lye419lq'
+    ];
+    
+    const season3Urls = [
+        'https://filemoon.in/e/ywgs23cxk5i5',
+        'https://filemoon.in/e/jtjobjam5v1p'
+    ];
+    
+    const ovaUrls = [
+        'https://filemoon.in/e/gy31eb38sq5h'
+    ];
     
     // --- COMMENTS FEATURE ---
     const commentsStorageKey = 'quravel_comments_shawshank';
@@ -649,14 +667,14 @@
             if (!isVideoLoaded) {
                 loadVideo();
                 isVideoLoaded = true;
-                playButton.style.display = 'none';
+                document.getElementById('video-loading-overlay').style.display = 'none';
             }
         });
         
         // Load first video initially
         loadVideo();
         isVideoLoaded = true;
-        playButton.style.display = 'none';
+        document.getElementById('video-loading-overlay').style.display = 'none';
     }
     
     // Load Video based on current state
@@ -669,15 +687,35 @@
             currentEpisode = 1;
         }
         
-        // Get video URL based on server and episode
-        let videoUrl = '';
-        const serverUrls = episodeUrls[currentServer];
+        // Get the correct episode index (arrays are 0-based)
+        const episodeIndex = currentEpisode - 1;
         
-        if (serverUrls && serverUrls[currentEpisode - 1]) {
-            videoUrl = serverUrls[currentEpisode - 1];
+        // Determine which URL array to use based on season
+        let urlArray;
+        switch(currentSeason) {
+            case '1':
+                urlArray = allEpisodeUrls;
+                break;
+            case '2':
+                urlArray = season2Urls;
+                break;
+            case '3':
+                urlArray = season3Urls;
+                break;
+            case 'ova':
+                urlArray = ovaUrls;
+                break;
+            default:
+                urlArray = allEpisodeUrls;
+        }
+        
+        // Get video URL based on episode index
+        let videoUrl = '';
+        if (episodeIndex < urlArray.length) {
+            videoUrl = urlArray[episodeIndex];
         } else {
-            // Fallback to first available URL
-            videoUrl = serverUrls[0] || 'https://filemoon.in/e/bzd5u1d7rzql';
+            // Fallback to first episode if index is out of bounds
+            videoUrl = urlArray[0] || 'https://filemoon.in/e/bzd5u1d7rzql';
         }
         
         // Create embed URL (assuming FileMoon embed structure)
@@ -693,6 +731,8 @@
         iframe.allowFullscreen = true;
         iframe.title = `Episode ${currentEpisode} - The Shawshank Redemption`;
         container.appendChild(iframe);
+        
+        console.log(`Loading video: Season ${currentSeason}, Episode ${currentEpisode}, Server: ${currentServer}, URL: ${videoUrl}`);
     }
     
     // Handle Season Selection
