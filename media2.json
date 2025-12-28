@@ -1,0 +1,836 @@
+[
+  {
+    "id": "mha-s1",
+    "slug": "my-hero-academia-season-1",
+    "title": "My Hero Academia Season 1",
+    "originalTitle": "Boku no Hero Academia",
+    "japaneseTitle": "僕のヒーローアカデミア",
+    "synonyms": ["MHA Season 1", "Boku no Hero Academia S1"],
+    "searchableTitle": "My Hero Academia Season 1 Boku no Hero Academia 僕のヒーローアカデミア MHA Season 1 Boku no Hero Academia S1",
+    "airedYear": 2016,
+    "dateAdded": "2024-12-16",
+    "type": "anime",
+    "featured": false,
+    "rating": 8.0,
+    "category": "action",
+    "premiered": "Spring 2016",
+    "duration": "24 min",
+    "status": "Finished Airing",
+    "description": "In a world where 80% of humanity possesses 'Quirks,' Izuku Midoriya is born powerless but gains a chance to become a hero after a fated meeting with All Might.",
+    "posterUrl": "https://cdn.myanimelist.net/images/anime/10/78745l.jpg",
+    "backdropUrl": "https://image.tmdb.org/t/p/original/6v6pBvM6oXG7WpYm8M9r8R0R6j.jpg",
+    "trailerUrl": "https://www.youtube.com/watch?v=-77UEct0K7Q",
+    "malScore": 7.96,
+    "imbdScore": 8.4,
+    "popularity": 99,
+    "genres": ["Super Hero", "Action", "Fantasy", "School"],
+    "cast": ["Daiki Yamashita", "Kenta Miyake", "Nobuhiko Okamoto"],
+    "certification": "TV-14",
+    "country": "Japan",
+    "studio": "Bones",
+    "producers": ["TOHO", "Shueisha"],
+    "seasons": [
+      {
+        "seasonNumber": 1,
+        "episodes": [
+          {
+            "number": 1,
+            "title": "Izuku Midoriya: Origin",
+            "duration": "24 min",
+            "servers": {
+              "raw": [
+                { "name": "HD-01", "url": "https://server-raw.com/mha-s1-e1-1" },
+                { "name": "HD-02", "url": "https://server-raw.com/mha-s1-e1-2" },
+                { "name": "HD-03", "url": "https://server-raw.com/mha-s1-e1-3" }
+              ],
+              "sub": [
+                { "name": "HD-01", "url": "https://server-sub.com/mha-s1-e1-1" },
+                { "name": "HD-02", "url": "https://server-sub.com/mha-s1-e1-2" },
+                { "name": "HD-03", "url": "https://server-sub.com/mha-s1-e1-3" }
+              ],
+              "dub": [
+                { "name": "HD-01", "url": "https://server-dub.com/mha-s1-e1-1" },
+                { "name": "HD-02", "url": "https://server-dub.com/mha-s1-e1-2" },
+                { "name": "HD-03", "url": "https://server-dub.com/mha-s1-e1-3" }
+              ]
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "mha-s2",
+    "slug": "my-hero-academia-season-2",
+    "title": "My Hero Academia Season 2",
+    "originalTitle": "Boku no Hero Academia 2nd Season",
+    "japaneseTitle": "僕のヒーローアカデミア 2nd Season",
+    "synonyms": ["MHA Season 2"],
+    "searchableTitle": "My Hero Academia Season 2 Boku no Hero Academia 2nd Season 僕のヒーローアカデミア 2nd Season MHA Season 2",
+    "airedYear": 2017,
+    "dateAdded": "2024-12-01",
+    "type": "anime",
+    "featured": false,
+    "rating": 8.1,
+    "category": "action",
+    "premiered": "Spring 2017",
+    "duration": "24 min",
+    "status": "Finished Airing",
+    "description": "The UA students compete in the world-renowned Sports Festival. Later, Deku, Iida, and Todoroki face off against the fearsome Hero Killer: Stain.",
+    "posterUrl": "https://cdn.myanimelist.net/images/anime/12/85221l.jpg",
+    "backdropUrl": "https://image.tmdb.org/t/p/original/6v6pBvM6oXG7WpYm8M9r8R0R6j.jpg",
+    "trailerUrl": "https://www.youtube.com/watch?v=42X4H9G5I6c",
+    "malScore": 8.15,
+    "imbdScore": 8.5,
+    "popularity": 97,
+    "genres": ["Animation", "Action", "School", "Shounen"],
+    "cast": ["Daiki Yamashita", "Nobuhiko Okamoto", "Yuki Kaji"],
+    "certification": "TV-14",
+    "country": "Japan",
+    "studio": "Bones",
+    "producers": ["TOHO", "Shueisha"],
+    "seasons": [
+      {
+        "seasonNumber": 1,
+        "episodes": [
+          {
+            "number": 1,
+            "title": "Episode 1",
+            "duration": "24 min",
+            "servers": {
+              "raw": [
+                { "name": "HD-01", "url": "https://server.com/mha-s2-e1-raw" }
+              ],
+              "sub": [
+                { "name": "HD-01", "url": "https://server.com/mha-s2-e1-sub" }
+              ],
+              "dub": [
+                { "name": "HD-01", "url": "https://server.com/mha-s2-e1-dub" }
+              ]
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "mha-s3",
+    "slug": "my-hero-academia-season-3",
+    "title": "My Hero Academia Season 3",
+    "originalTitle": "Boku no Hero Academia 3rd Season",
+    "japaneseTitle": "僕のヒーローアカデミア 3rd Season",
+    "synonyms": ["MHA Season 3"],
+    "searchableTitle": "My Hero Academia Season 3 Boku no Hero Academia 3rd Season 僕のヒーローアカデミア 3rd Season MHA Season 3",
+    "airedYear": 2018,
+    "dateAdded": "2024-12-01",
+    "type": "anime",
+    "featured": false,
+    "rating": 8.1,
+    "category": "action",
+    "premiered": "Spring 2018",
+    "duration": "24 min",
+    "status": "Finished Airing",
+    "description": "During a summer training camp, the League of Villains launches a surprise attack. This leads to the historic final battle between All Might and All For One.",
+    "posterUrl": "https://cdn.myanimelist.net/images/anime/1319/92084l.jpg",
+    "backdropUrl": "https://image.tmdb.org/t/p/original/9r9rYm8M9r8R0R6j.jpg",
+    "trailerUrl": "https://www.youtube.com/watch?v=VQGCKyvzIM4",
+    "malScore": 8.12,
+    "imbdScore": 8.6,
+    "popularity": 96,
+    "genres": ["Super Hero", "Action", "School", "Shounen"],
+    "cast": ["Daiki Yamashita", "Kenta Miyake", "Akio Otsuka"],
+    "certification": "TV-14",
+    "country": "Japan",
+    "studio": "Bones",
+    "producers": ["TOHO", "Shueisha"],
+    "seasons": [
+      {
+        "seasonNumber": 1,
+        "episodes": [
+          {
+            "number": 1,
+            "title": "Episode 1",
+            "duration": "24 min",
+            "servers": {
+              "raw": [
+                { "name": "Raw-HD-01", "url": "https://server.com/mha-s3-e1-raw" }
+              ],
+              "sub": [
+                { "name": "Sub-HD-01", "url": "https://server.com/mha-s3-e1-sub" }
+              ],
+              "dub": [
+                { "name": "Dub-HD-01", "url": "https://server.com/mha-s3-e1-dub" }
+              ]
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "mha-s4",
+    "slug": "my-hero-academia-season-4",
+    "title": "My Hero Academia Season 4",
+    "originalTitle": "Boku no Hero Academia 4th Season",
+    "japaneseTitle": "僕のヒーローアカデミア 4th Season",
+    "synonyms": ["MHA Season 4"],
+    "searchableTitle": "My Hero Academia Season 4 Boku no Hero Academia 4th Season 僕のヒーローアカデミア 4th Season MHA Season 4",
+    "airedYear": 2019,
+    "dateAdded": "2024-12-01",
+    "type": "anime",
+    "featured": false,
+    "rating": 7.9,
+    "category": "action",
+    "premiered": "Fall 2019",
+    "duration": "24 min",
+    "status": "Finished Airing",
+    "description": "Deku takes on an internship with Sir Nighteye and joins a mission to rescue a young girl named Eri from the Yakuza leader, Overhaul.",
+    "posterUrl": "https://cdn.myanimelist.net/images/anime/1315/102961l.jpg",
+    "backdropUrl": "https://image.tmdb.org/t/p/original/nTvMzcB7vicU2YNQUnS64fsEzbL.jpg",
+    "trailerUrl": "https://www.youtube.com/watch?v=PraFso1sVIc",
+    "malScore": 7.94,
+    "imbdScore": 8.3,
+    "popularity": 95,
+    "genres": ["Super Hero", "Action", "School", "Shounen"],
+    "cast": ["Daiki Yamashita", "Shin-ichiro Miki", "Seiran Kobayashi"],
+    "certification": "TV-14",
+    "country": "Japan",
+    "studio": "Bones",
+    "producers": ["TOHO", "Shueisha"],
+    "seasons": [
+      {
+        "seasonNumber": 1,
+        "episodes": [
+          {
+            "number": 1,
+            "title": "Episode 1",
+            "duration": "24 min",
+            "servers": {
+              "raw": [
+                { "name": "Raw-HD-01", "url": "https://server.com/mha-s4-e1-raw" }
+              ],
+              "sub": [
+                { "name": "Sub-HD-01", "url": "https://server.com/mha-s4-e1-sub" }
+              ],
+              "dub": [
+                { "name": "Dub-HD-01", "url": "https://server.com/mha-s4-e1-dub" }
+              ]
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "mha-s5",
+    "slug": "my-hero-academia-season-5",
+    "title": "My Hero Academia Season 5",
+    "originalTitle": "Boku no Hero Academia 5th Season",
+    "japaneseTitle": "僕のヒーローアカデミア 5th Season",
+    "synonyms": ["MHA Season 5"],
+    "searchableTitle": "My Hero Academia Season 5 Boku no Hero Academia 5th Season 僕のヒーローアカデミア 5th Season MHA Season 5",
+    "airedYear": 2021,
+    "dateAdded": "2024-12-01",
+    "type": "anime",
+    "featured": false,
+    "rating": 7.4,
+    "category": "action",
+    "premiered": "Spring 2021",
+    "duration": "24 min",
+    "status": "Finished Airing",
+    "description": "Class 1-A and Class 1-B battle in a joint training exercise. Meanwhile, the League of Villains faces off against the Meta Liberation Army.",
+    "posterUrl": "https://cdn.myanimelist.net/images/anime/1911/113611l.jpg",
+    "backdropUrl": "https://image.tmdb.org/t/p/original/o969966p377N2776R8L.jpg",
+    "trailerUrl": "https://www.youtube.com/watch?v=8pI7_V_0V9c",
+    "malScore": 7.42,
+    "imbdScore": 7.8,
+    "popularity": 94,
+    "genres": ["Super Hero", "Action", "School", "Shounen"],
+    "cast": ["Daiki Yamashita", "Koki Uchiyama", "Misato Fukuen"],
+    "certification": "TV-14",
+    "country": "Japan",
+    "studio": "Bones",
+    "producers": ["TOHO", "Shueisha"],
+    "seasons": [
+      {
+        "seasonNumber": 1,
+        "episodes": [
+          {
+            "number": 1,
+            "title": "Episode 1",
+            "duration": "24 min",
+            "servers": {
+              "raw": [
+                { "name": "Raw-HD-01", "url": "https://server.com/mha-s5-e1-raw" }
+              ],
+              "sub": [
+                { "name": "Sub-HD-01", "url": "https://server.com/mha-s5-e1-sub" }
+              ],
+              "dub": [
+                { "name": "Dub-HD-01", "url": "https://server.com/mha-s5-e1-dub" }
+              ]
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "mha-s6",
+    "slug": "my-hero-academia-season-6",
+    "title": "My Hero Academia Season 6",
+    "originalTitle": "Boku no Hero Academia 6th Season",
+    "japaneseTitle": "僕のヒーローアカデミア 6th Season",
+    "synonyms": ["MHA Season 6"],
+    "searchableTitle": "My Hero Academia Season 6 Boku no Hero Academia 6th Season 僕のヒーローアカデミア 6th Season MHA Season 6",
+    "airedYear": 2022,
+    "dateAdded": "2024-12-01",
+    "type": "anime",
+    "featured": false,
+    "rating": 8.2,
+    "category": "action",
+    "premiered": "Fall 2022",
+    "duration": "24 min",
+    "status": "Finished Airing",
+    "description": "The Paranormal Liberation War begins. Heroes and Villains engage in an all-out war that will change hero society forever.",
+    "posterUrl": "https://cdn.myanimelist.net/images/anime/1483/126005l.jpg",
+    "backdropUrl": "https://image.tmdb.org/t/p/original/tcYO8ay3A0liCWxHu2creU3Q9IB.jpg",
+    "trailerUrl": "https://www.youtube.com/watch?v=PraFso1sVIc",
+    "malScore": 8.24,
+    "imbdScore": 8.7,
+    "popularity": 97,
+    "genres": ["Super Hero", "Action", "School", "Shounen"],
+    "cast": ["Daiki Yamashita", "Nobuhiko Okamoto", "Koki Uchiyama"],
+    "certification": "TV-14",
+    "country": "Japan",
+    "studio": "Bones",
+    "producers": ["TOHO", "Shueisha"],
+    "seasons": [
+      {
+        "seasonNumber": 1,
+        "episodes": [
+          {
+            "number": 1,
+            "title": "Episode 1",
+            "duration": "24 min",
+            "servers": {
+              "raw": [
+                { "name": "Raw-HD-01", "url": "https://server.com/mha-s6-e1-raw" }
+              ],
+              "sub": [
+                { "name": "Sub-HD-01", "url": "https://server.com/mha-s6-e1-sub" }
+              ],
+              "dub": [
+                { "name": "Dub-HD-01", "url": "https://server.com/mha-s6-e1-dub" }
+              ]
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "mha-s7",
+    "slug": "my-hero-academia-season-7",
+    "title": "My Hero Academia Season 7",
+    "originalTitle": "Boku no Hero Academia 7th Season",
+    "japaneseTitle": "僕のヒーローアカデミア 7th Season",
+    "synonyms": ["MHA Season 7"],
+    "searchableTitle": "My Hero Academia Season 7 Boku no Hero Academia 7th Season 僕のヒーローアカデミア 7th Season MHA Season 7",
+    "airedYear": 2024,
+    "dateAdded": "2024-12-01",
+    "type": "anime",
+    "featured": true,
+    "rating": 8.3,
+    "category": "action",
+    "premiered": "Spring 2024",
+    "duration": "24 min",
+    "status": "Currently Airing",
+    "description": "The final war between Heroes and Villains begins as Star and Stripe arrives from the USA to face Shigaraki.",
+    "posterUrl": "https://cdn.myanimelist.net/images/anime/1529/140306l.jpg",
+    "backdropUrl": "https://i.postimg.cc/hvL6RgYP/145802l.jpg",
+    "trailerUrl": "https://www.youtube.com/watch?v=7oxoT2w9cCA",
+    "malScore": 8.34,
+    "imbdScore": 8.8,
+    "popularity": 98,
+    "genres": ["Super Hero", "Action", "School", "Shounen"],
+    "cast": ["Daiki Yamashita", "Nobuhiko Okamoto", "Yuki Kaji"],
+    "certification": "TV-14",
+    "country": "Japan",
+    "studio": "Bones",
+    "producers": ["TOHO", "Shueisha"],
+    "seasons": [
+      {
+        "seasonNumber": 1,
+        "episodes": [
+          {
+            "number": 1,
+            "title": "Episode 1",
+            "duration": "24 min",
+            "servers": {
+              "raw": [
+                { "name": "Raw-HD-01", "url": "https://server.com/mha-s7-e1-raw" }
+              ],
+              "sub": [
+                { "name": "Sub-HD-01", "url": "https://server.com/mha-s7-e1-sub" }
+              ],
+              "dub": [
+                { "name": "Dub-HD-01", "url": "https://server.com/mha-s7-e1-dub" }
+              ]
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "mha-s8",
+    "slug": "my-hero-academia-final-season",
+    "title": "My Hero Academia Final Season",
+    "originalTitle": "Boku no Hero Academia Final Season",
+    "japaneseTitle": "僕のヒーローアカデミア FINAL SEASON",
+    "synonyms": ["MHA Final Season"],
+    "searchableTitle": "My Hero Academia Final Season Boku no Hero Academia Final Season 僕のヒーローアカデミア FINAL SEASON MHA Final Season",
+    "airedYear": 2025,
+    "dateAdded": "2024-12-01",
+    "type": "anime",
+    "featured": true,
+    "rating": 8.7,
+    "category": "action",
+    "premiered": "2025",
+    "duration": "24 min",
+    "status": "Upcoming",
+    "description": "The appearance of 'quirks,' newly discovered super powers, has been steadily increasing over the years, with 80 percent of humanity possessing various abilities from manipulation of elements to shapeshifting. This leaves the remainder of the world completely powerless, and Izuku Midoriya is one such individual.",
+    "posterUrl": "https://cdn.myanimelist.net/images/anime/1959/151055l.jpg",
+    "backdropUrl": "https://cdn.myanimelist.net/images/anime/1441/148713l.jpg",
+    "trailerUrl": "https://www.youtube.com/watch?v=example",
+    "malScore": null,
+    "imbdScore": 0.0,
+    "popularity": 98,
+    "genres": ["Super Hero", "Action", "School", "Shounen"],
+    "cast": ["Daiki Yamashita", "Nobuhiko Okamoto", "Yuki Kaji"],
+    "certification": "TV-14",
+    "country": "Japan",
+    "studio": "Bones",
+    "producers": ["TOHO", "Shueisha"],
+    "seasons": [
+      {
+        "seasonNumber": 1,
+        "episodes": [
+          {
+            "number": 1,
+            "title": "Episode 1",
+            "duration": "24 min",
+            "servers": {
+              "raw": [
+                { "name": "Raw-HD-01", "url": "https://server.com/mha-s8-e1-raw" }
+              ],
+              "sub": [
+                { "name": "Sub-HD-01", "url": "https://server.com/mha-s8-e1-sub" }
+              ],
+              "dub": [
+                { "name": "Dub-HD-01", "url": "https://server.com/mha-s8-e1-dub" }
+              ]
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "the-fantastic-four-first-steps-2025",
+    "slug": "the-fantastic-four-first-steps-2025",
+    "title": "The Fantastic Four: First Steps",
+    "originalTitle": "The Fantastic Four: First Steps",
+    "japaneseTitle": null,
+    "synonyms": ["Fantastic Four 2025", "FF 2025"],
+    "searchableTitle": "The Fantastic Four: First Steps Fantastic Four 2025 FF 2025",
+    "airedYear": 2025,
+    "dateAdded": "2024-12-17",
+    "type": "movie",
+    "featured": false,
+    "rating": 0.0,
+    "category": "action",
+    "premiered": "July 25, 2025",
+    "duration": "Upcoming",
+    "status": "Upcoming",
+    "description": "Marvel's First Family enters the MCU. Set in a retro-futuristic 1960s, the team must balance their new powers with a cosmic threat that could destroy the universe.",
+    "posterUrl": "https://image.tmdb.org/t/p/original/z7wI0jpec9gz2IwVciND1nbRBy0.jpg",
+    "backdropUrl": "https://image.tmdb.org/t/p/original/jjk0_backdrop.jpg",
+    "trailerUrl": "https://www.youtube.com/watch?v=example-fantastic-four-trailer",
+    "malScore": null,
+    "imbdScore": 0.0,
+    "popularity": 97,
+    "genres": ["Action", "Sci-Fi", "Adventure", "Superhero"],
+    "cast": ["Pedro Pascal", "Vanessa Kirby", "Joseph Quinn", "Ebon Moss-Bachrach", "Julia Garner"],
+    "certification": "PG-13",
+    "country": "USA",
+    "studio": "Marvel Studios",
+    "producers": ["Kevin Feige", "Matt Shakman"],
+    "seasons": [
+      {
+        "seasonNumber": 1,
+        "episodes": [
+          {
+            "number": 1,
+            "title": "The Fantastic Four: First Steps",
+            "duration": "Unknown",
+            "servers": {
+              "raw": [
+                { "name": "Raw-4K", "url": "https://server-raw.com/ff-2025-1" },
+                { "name": "Raw-HD", "url": "https://server-raw.com/ff-2025-2" }
+              ],
+              "sub": [
+                { "name": "Sub-HD-01", "url": "https://server-sub.com/ff-2025-1" },
+                { "name": "Sub-HD-02", "url": "https://server-sub.com/ff-2025-2" }
+              ],
+              "dub": [
+                { "name": "Dub-HD-01", "url": "https://server-dub.com/ff-2025-1" },
+                { "name": "Dub-HD-02", "url": "https://server-dub.com/ff-2025-2" }
+              ]
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "jurassic-world-rebirth-2025",
+    "slug": "jurassic-world-rebirth-2025",
+    "title": "Jurassic World Rebirth",
+    "originalTitle": "Jurassic World Rebirth",
+    "japaneseTitle": null,
+    "synonyms": ["Jurassic World 4", "JW Rebirth"],
+    "searchableTitle": "Jurassic World Rebirth Jurassic World 4 JW Rebirth",
+    "airedYear": 2025,
+    "dateAdded": "2024-12-17",
+    "type": "movie",
+    "featured": false,
+    "rating": 0.0,
+    "category": "action",
+    "premiered": "July 2, 2025",
+    "duration": "Upcoming",
+    "status": "Upcoming",
+    "description": "A new era of the Jurassic franchise begins. Five years after the events of Dominion, a specialized team races to secure DNA samples from the world's most dangerous dinosaurs before they fall into the wrong hands.",
+    "posterUrl": "https://image.tmdb.org/t/p/original/q0fGCmjLu42MPlSO9OYWpI5w86I.jpg",
+    "backdropUrl": "https://image.tmdb.org/t/p/original/tcYO8ay3A0liCWxHu2creU3Q9IB.jpg",
+    "trailerUrl": "https://www.youtube.com/watch?v=example-jurassic-rebirth-trailer",
+    "malScore": null,
+    "imbdScore": 0.0,
+    "popularity": 96,
+    "genres": ["Action", "Sci-Fi", "Adventure", "Thriller"],
+    "cast": ["Scarlett Johansson", "Jonathan Bailey", "Mahershala Ali", "Manuel Garcia-Rulfo"],
+    "certification": "PG-13",
+    "country": "USA",
+    "studio": "Universal Pictures",
+    "producers": ["Frank Marshall", "Patrick Crowley"],
+    "seasons": [
+      {
+        "seasonNumber": 1,
+        "episodes": [
+          {
+            "number": 1,
+            "title": "Jurassic World Rebirth",
+            "duration": "Unknown",
+            "servers": {
+              "raw": [
+                { "name": "Raw-4K", "url": "https://server-raw.com/jw-rebirth-1" },
+                { "name": "Raw-HD", "url": "https://server-raw.com/jw-rebirth-2" }
+              ],
+              "sub": [
+                { "name": "Sub-HD-01", "url": "https://server-sub.com/jw-rebirth-1" },
+                { "name": "Sub-HD-02", "url": "https://server-sub.com/jw-rebirth-2" }
+              ],
+              "dub": [
+                { "name": "Dub-HD-01", "url": "https://server-dub.com/jw-rebirth-1" },
+                { "name": "Dub-HD-02", "url": "https://server-dub.com/jw-rebirth-2" }
+              ]
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "voldemort-origins-of-the-heir-2026",
+    "slug": "voldemort-origins-of-the-heir-2026",
+    "title": "Voldemort: Origins of the Heir",
+    "originalTitle": "Voldemort: Origins of the Heir",
+    "japaneseTitle": null,
+    "synonyms": ["Harry Potter Prequel", "Tom Riddle Origins"],
+    "searchableTitle": "Voldemort: Origins of the Heir Harry Potter Prequel Tom Riddle Origins",
+    "airedYear": 2026,
+    "dateAdded": "2024-12-17",
+    "type": "movie",
+    "featured": false,
+    "rating": 0.0,
+    "category": "fantasy",
+    "premiered": "2026",
+    "duration": "Upcoming",
+    "status": "Upcoming",
+    "description": "While initially a fan project, HBO's upcoming Harry Potter reboot series has sparked renewed interest in the origins of Tom Riddle. This entry tracks the anticipated 2026 window for the Wizarding World's return with a focus on young Tom Riddle's transformation into Lord Voldemort.",
+    "posterUrl": "https://i.postimg.cc/Qxsx9MhQ/th-id-OIP-R5MYVZwjsc-P9R89i-XOhnt-AHa-K5-w-600-h-315-c-0-rs-1-qlt-100-cdv-1-pid-16.jpg",
+    "backdropUrl": "https://image.tmdb.org/t/p/original/s16H6tpS2bnqUZv9pUlynpxC2no.jpg",
+    "trailerUrl": "https://www.youtube.com/watch?v=example-harry-potter-trailer",
+    "malScore": null,
+    "imbdScore": 0.0,
+    "popularity": 94,
+    "genres": ["Fantasy", "Drama", "Adventure", "Mystery"],
+    "cast": ["To Be Announced"],
+    "certification": "PG-13",
+    "country": "USA",
+    "studio": "Warner Bros. / HBO",
+    "producers": ["J.K. Rowling", "David Heyman"],
+    "seasons": [
+      {
+        "seasonNumber": 1,
+        "episodes": [
+          {
+            "number": 1,
+            "title": "Voldemort: Origins of the Heir",
+            "duration": "Unknown",
+            "servers": {
+              "raw": [
+                { "name": "Raw-4K", "url": "https://server-raw.com/voldemort-1" }
+              ],
+              "sub": [
+                { "name": "Sub-HD-01", "url": "https://server-sub.com/voldemort-1" }
+              ],
+              "dub": [
+                { "name": "Dub-HD-01", "url": "https://server-dub.com/voldemort-1" }
+              ]
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "superman-2025",
+    "slug": "superman-2025",
+    "title": "Superman",
+    "originalTitle": "Superman",
+    "japaneseTitle": null,
+    "synonyms": ["Superman: Legacy", "Superman (2025)"],
+    "searchableTitle": "Superman Superman: Legacy Superman (2025)",
+    "airedYear": 2025,
+    "dateAdded": "2024-12-17",
+    "type": "movie",
+    "featured": true,
+    "rating": 0.0,
+    "category": "action",
+    "premiered": "July 11, 2025",
+    "duration": "150 min",
+    "status": "Upcoming",
+    "description": "Directed by James Gunn, this film follows Clark Kent as he reconciles his Kryptonian heritage with his human upbringing in Smallville, Kansas. He is the embodiment of truth, justice, and a better tomorrow in a world that views kindness as old-fashioned.",
+    "posterUrl": "https://image.tmdb.org/t/p/original/78ba8N6T96GTMq98Y6y69HkWvM7s.jpg",
+    "backdropUrl": "https://image.tmdb.org/t/p/original/5mY69M7sIu7j69HkWvM7sIu7j.jpg",
+    "trailerUrl": "https://www.youtube.com/watch?v=example-superman-trailer",
+    "malScore": null,
+    "imbdScore": 0.0,
+    "popularity": 100,
+    "genres": ["Action", "Adventure", "Sci-Fi", "Superhero"],
+    "cast": ["David Corenswet", "Rachel Brosnahan", "Nicholas Hoult", "Isabela Merced", "Nathan Fillion"],
+    "certification": "PG-13",
+    "country": "USA",
+    "studio": "DC Studios / Warner Bros.",
+    "producers": ["James Gunn", "Peter Safran"],
+    "seasons": [
+      {
+        "seasonNumber": 1,
+        "episodes": [
+          {
+            "number": 1,
+            "title": "Superman",
+            "duration": "150 min",
+            "servers": {
+              "raw": [
+                { "name": "Raw-4K", "url": "https://server-raw.com/superman-2025-1" },
+                { "name": "Raw-HD", "url": "https://server-raw.com/superman-2025-2" }
+              ],
+              "sub": [
+                { "name": "Sub-HD-01", "url": "https://server-sub.com/superman-2025-1" },
+                { "name": "Sub-HD-02", "url": "https://server-sub.com/superman-2025-2" }
+              ],
+              "dub": [
+                { "name": "Dub-HD-01", "url": "https://server-dub.com/superman-2025-1" },
+                { "name": "Dub-HD-02", "url": "https://server-dub.com/superman-2025-2" }
+              ]
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "mission-impossible-dead-reckoning-part-2",
+    "slug": "mission-impossible-dead-reckoning-part-two",
+    "title": "Mission: Impossible - Dead Reckoning Part Two",
+    "originalTitle": "Mission: Impossible - Dead Reckoning Part Two",
+    "japaneseTitle": null,
+    "synonyms": ["Mission: Impossible 8", "MI8"],
+    "searchableTitle": "Mission: Impossible - Dead Reckoning Part Two Mission: Impossible 8 MI8",
+    "airedYear": 2025,
+    "dateAdded": "2024-12-17",
+    "type": "movie",
+    "featured": false,
+    "rating": 0.0,
+    "category": "action",
+    "premiered": "May 23, 2025",
+    "duration": "Unknown",
+    "status": "Upcoming",
+    "description": "Ethan Hunt and his IMF team embark on their most dangerous mission yet to track down a terrifying new weapon that threatens all of humanity before it falls into the wrong hands.",
+    "posterUrl": "https://image.tmdb.org/t/p/original/6v6pBvM6oXG7WpYm8M9r8R0R6j.jpg",
+    "backdropUrl": "https://image.tmdb.org/t/p/original/vL5o40STRXS2Zrx0mR95t996qqW.jpg",
+    "trailerUrl": "https://www.youtube.com/watch?v=example-mi8-trailer",
+    "malScore": null,
+    "imbdScore": 0.0,
+    "popularity": 98,
+    "genres": ["Action", "Adventure", "Thriller"],
+    "cast": ["Tom Cruise", "Hayley Atwell", "Ving Rhames", "Simon Pegg", "Rebecca Ferguson"],
+    "certification": "PG-13",
+    "country": "USA",
+    "studio": "Paramount Pictures",
+    "producers": ["Tom Cruise", "Christopher McQuarrie"],
+    "seasons": [
+      {
+        "seasonNumber": 1,
+        "episodes": [
+          {
+            "number": 1,
+            "title": "Mission: Impossible - Dead Reckoning Part Two",
+            "duration": "Unknown",
+            "servers": {
+              "raw": [
+                { "name": "Raw-4K", "url": "https://server-raw.com/mi8-1" },
+                { "name": "Raw-HD", "url": "https://server-raw.com/mi8-2" }
+              ],
+              "sub": [
+                { "name": "Sub-HD-01", "url": "https://server-sub.com/mi8-1" },
+                { "name": "Sub-HD-02", "url": "https://server-sub.com/mi8-2" }
+              ],
+              "dub": [
+                { "name": "Dub-HD-01", "url": "https://server-dub.com/mi8-1" },
+                { "name": "Dub-HD-02", "url": "https://server-dub.com/mi8-2" }
+              ]
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "puss-in-boots-last-wish-2022",
+    "slug": "puss-in-boots-the-last-wish-2022",
+    "title": "Puss in Boots: The Last Wish",
+    "originalTitle": "Puss in Boots: The Last Wish",
+    "japaneseTitle": null,
+    "synonyms": ["Puss in Boots 2", "The Last Wish"],
+    "searchableTitle": "Puss in Boots: The Last Wish Puss in Boots 2 The Last Wish",
+    "airedYear": 2022,
+    "dateAdded": "2024-12-17",
+    "type": "movie",
+    "featured": false,
+    "rating": 7.8,
+    "category": "animation",
+    "premiered": "December 21, 2022",
+    "duration": "102 min",
+    "status": "Released",
+    "description": "Puss in Boots discovers that his passion for adventure has taken its toll: he has burned through eight of his nine lives. Puss sets out on an epic journey to find the mythical Last Wish and restore his nine lives.",
+    "posterUrl": "https://image.tmdb.org/t/p/original/kuf6evRbcS3UOAfmH0HNsCc1SPg.jpg",
+    "backdropUrl": "https://image.tmdb.org/t/p/original/r9oUsaruelv3YmZdqaoBcSD9p1X.jpg",
+    "trailerUrl": "https://www.youtube.com/watch?v=RqrXhwS33yc",
+    "malScore": null,
+    "imbdScore": 7.8,
+    "popularity": 95,
+    "genres": ["Animation", "Adventure", "Comedy", "Family"],
+    "cast": ["Antonio Banderas", "Salma Hayek", "Harvey Guillén", "Florence Pugh", "John Mulaney"],
+    "certification": "PG",
+    "country": "USA",
+    "studio": "DreamWorks Animation",
+    "producers": ["Mark Swift", "Guillermo del Toro"],
+    "seasons": [
+      {
+        "seasonNumber": 1,
+        "episodes": [
+          {
+            "number": 1,
+            "title": "Puss in Boots: The Last Wish",
+            "duration": "102 min",
+            "servers": {
+              "raw": [
+                { "name": "Raw-4K", "url": "https://server-raw.com/puss-boots-1" },
+                { "name": "Raw-HD", "url": "https://server-raw.com/puss-boots-2" }
+              ],
+              "sub": [
+                { "name": "Sub-HD-01", "url": "https://server-sub.com/puss-boots-1" },
+                { "name": "Sub-HD-02", "url": "https://server-sub.com/puss-boots-2" }
+              ],
+              "dub": [
+                { "name": "Dub-HD-01", "url": "https://server-dub.com/puss-boots-1" },
+                { "name": "Dub-HD-02", "url": "https://server-dub.com/puss-boots-2" }
+              ]
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "top-gun-maverick-2022",
+    "slug": "top-gun-maverick-2022",
+    "title": "Top Gun: Maverick",
+    "originalTitle": "Top Gun: Maverick",
+    "japaneseTitle": null,
+    "synonyms": ["Top Gun 2", "Top Gun Maverick"],
+    "searchableTitle": "Top Gun: Maverick Top Gun 2 Top Gun Maverick",
+    "airedYear": 2022,
+    "dateAdded": "2024-12-17",
+    "type": "movie",
+    "featured": false,
+    "rating": 8.2,
+    "category": "action",
+    "premiered": "May 27, 2022",
+    "duration": "130 min",
+    "status": "Released",
+    "description": "After thirty years, Maverick is still pushing the envelope as a top naval aviator, but must confront ghosts of his past when he leads TOP GUN's elite graduates on a mission that demands the ultimate sacrifice.",
+    "posterUrl": "https://image.tmdb.org/t/p/original/62HCnUTziL75KWvYWnu35Yp10mZ.jpg",
+    "backdropUrl": "https://image.tmdb.org/t/p/original/Aa91p7mq13L7vYStFc09a9N9YmB.jpg",
+    "trailerUrl": "https://www.youtube.com/watch?v=giXco2jaZ_4",
+    "malScore": null,
+    "imbdScore": 8.2,
+    "popularity": 97,
+    "genres": ["Action", "Drama"],
+    "cast": ["Tom Cruise", "Miles Teller", "Jennifer Connelly", "Jon Hamm", "Glen Powell"],
+    "certification": "PG-13",
+    "country": "USA",
+    "studio": "Paramount Pictures",
+    "producers": ["Tom Cruise", "Jerry Bruckheimer", "David Ellison"],
+    "seasons": [
+      {
+        "seasonNumber": 1,
+        "episodes": [
+          {
+            "number": 1,
+            "title": "Top Gun: Maverick",
+            "duration": "130 min",
+            "servers": {
+              "raw": [
+                { "name": "Raw-4K", "url": "https://server-raw.com/topgun2-1" },
+                { "name": "Raw-HD", "url": "https://server-raw.com/topgun2-2" }
+              ],
+              "sub": [
+                { "name": "Sub-HD-01", "url": "https://server-sub.com/topgun2-1" },
+                { "name": "Sub-HD-02", "url": "https://server-sub.com/topgun2-2" }
+              ],
+              "dub": [
+                { "name": "Dub-HD-01", "url": "https://server-dub.com/topgun2-1" },
+                { "name": "Dub-HD-02", "url": "https://server-dub.com/topgun2-2" }
+              ]
+            }
+          }
+        ]
+      }
+    ]
+  }
+]
