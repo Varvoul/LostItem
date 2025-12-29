@@ -1,0 +1,54 @@
+{% comment %}
+    Card component for show items
+    Usage: {% include 'card.liquid', item: show_item, type: 'movie' %}
+    
+    Required properties:
+    - item.img: image URL
+    - item.title: show title
+    - item.year: release year
+    - item.time: duration (optional)
+    - item.ss: season info for TV shows (optional)
+    - type: 'movie', 'tv', or 'anime'
+{% endcomment %}
+
+<a href="{{ item.url | default: '#' }}" class="flex-shrink-0 w-40 sm:w-48 group snap-start bg-white dark:bg-surface-dark rounded-xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300">
+    <div class="aspect-[2/3] relative overflow-hidden">
+        <img src="{{ item.img }}" alt="{{ item.title }}" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+        <div class="absolute top-2 right-2 bg-primary/90 text-white text-[10px] font-bold px-2 py-0.5 rounded backdrop-blur-sm">HD</div>
+        
+        {% if item.rating %}
+        <div class="absolute bottom-2 left-2 bg-black/60 text-white text-[10px] font-bold px-2 py-0.5 rounded backdrop-blur-sm flex items-center gap-1">
+            {% if type == 'movie' %}
+            <span class="material-symbols-outlined text-[10px]">star</span> {{ item.rating }}
+            {% else %}
+            Eps {{ item.episodes | default: '24' }}
+            {% endif %}
+        </div>
+        {% endif %}
+        
+        <div class="absolute inset-0 bg-black/20 group-hover:bg-black/40 transition-colors flex items-center justify-center opacity-0 group-hover:opacity-100">
+            <div class="bg-primary text-white rounded-full p-3 shadow-lg transform scale-0 group-hover:scale-100 transition-transform duration-300">
+                <span class="material-symbols-outlined text-2xl">play_arrow</span>
+            </div>
+        </div>
+    </div>
+    <div class="p-4">
+        <h3 class="font-semibold text-gray-900 dark:text-white line-clamp-1 group-hover:text-primary transition-colors mb-2">{{ item.title }}</h3>
+        <div class="flex justify-between items-center text-xs text-gray-500 dark:text-gray-400">
+            <span>{{ item.year }}</span>
+            <span class="truncate max-w-[80px]">
+                {% case type %}
+                    {% when 'movie' %}
+                        Movie
+                    {% when 'tv' %}
+                        TV Show
+                    {% when 'anime' %}
+                        Anime
+                    {% else %}
+                        {{ type | capitalize }}
+                {% endcase %}
+            </span>
+            <span>{{ item.time | default: item.ss | default: '142m' }}</span>
+        </div>
+    </div>
+</a>
