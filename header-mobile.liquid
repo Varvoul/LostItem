@@ -1,0 +1,40 @@
+<div class="p-4 border-b border-gray-200 dark:border-gray-700 flex justify-between items-center">
+    <img alt="Quravel Logo" class="h-8 object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCqLjw2b3zIJYAUXSR-0wnqCCSiHxBpWopeX4YkK91UxQUQErP8E3fBTKHGPMn44svm6TkV73RcFl8uZYm6unBNmb_F5B0XAtvw-yAnSKJzR-DIoMzoWA519xKDUhoH8DE4biRu7joxNso-Ui3U1pLkiOaL02GPgdP6zHD6BmF10aMv5toxV6-cghRon9fHKmJihBEYz21Rmh4zx3Kz6pm1xk_o-fcYhwfAxeV0fx3eRLBxYIrLqzBBjdbVn1H1B5RVpSEDH9EgFZ4"/>
+    <button class="text-gray-500 hover:text-primary" onclick="toggleMobileMenu()">
+        <span class="material-symbols-outlined">close</span>
+    </button>
+</div>
+<div class="p-4 space-y-4">
+    <a class="block text-sm font-medium hover:text-primary py-2 border-b border-gray-100 dark:border-gray-800" href="/">Home</a>
+    <div class="py-2 border-b border-gray-100 dark:border-gray-800">
+        <button class="flex items-center justify-between w-full text-sm font-medium hover:text-primary focus:outline-none" onclick="toggleMobileDropdown('genre-mobile')">
+            <span>Genre</span>
+            <span class="material-symbols-outlined text-sm transform transition-transform" id="genre-arrow">expand_more</span>
+        </button>
+        <div class="hidden mt-2 ml-4 space-y-2 text-sm text-gray-500 dark:text-gray-400" id="genre-mobile">
+            <a class="block hover:text-primary" href="#">Action</a>
+            <a class="block hover:text-primary" href="#">Adventure</a>
+            <a class="block hover:text-primary" href="#">Comedy</a>
+            <a class="block hover:text-primary" href="#">Drama</a>
+            <a class="block hover:text-primary" href="#">Horror</a>
+            <a class="block hover:text-primary" href="#">Romance</a>
+            <a class="block hover:text-primary" href="#">Sci-Fi</a>
+        </div>
+    </div>
+    <div class="py-2 border-b border-gray-100 dark:border-gray-800">
+        <button class="flex items-center justify-between w-full text-sm font-medium hover:text-primary focus:outline-none" onclick="toggleMobileDropdown('country-mobile')">
+            <span>Country</span>
+            <span class="material-symbols-outlined text-sm transform transition-transform" id="country-arrow">expand_more</span>
+        </button>
+        <div class="hidden mt-2 ml-4 space-y-2 text-sm text-gray-500 dark:text-gray-400" id="country-mobile">
+            <a class="block hover:text-primary" href="#">USA</a>
+            <a class="block hover:text-primary" href="#">UK</a>
+            <a class="block hover:text-primary" href="#">Korea</a>
+            <a class="block hover:text-primary" href="#">Japan</a>
+            <a class="block hover:text-primary" href="#">India</a>
+        </div>
+    </div>
+    <a class="block text-sm font-medium hover:text-primary py-2 border-b border-gray-100 dark:border-gray-800" href="#">Top IMDB</a>
+    <a class="block text-sm font-medium hover:text-primary py-2 border-b border-gray-100 dark:border-gray-800" href="#">Updates</a>
+    <a class="block text-sm font-medium hover:text-primary py-2" href="#">Sent request</a>
+</div>
