@@ -1940,5 +1940,34 @@
     }
   ]
 },
-]
+{
+  "id": "tffbwd-s1",
+  "slug": "the-fragrant-flower-blooms-with-dignity-season-1",
+  "title": "The Fragrant Flower Blooms with Dignity",
+  "originalTitle": "Kaoru Hana wa Rin to Saku",
+  "japaneseTitle": "薫る花は凛と咲く",
+  "synonyms": ["The Fragrant Flower Blooms With Dignity", "KaoruHana"],
+  "searchableTitle": "The Fragrant Flower Blooms with Dignity Kaoru Hana wa Rin to Saku 薫る花は凛と咲く KaoruHana",
+  "airedYear": 2025,
+  "dateAdded": "2025-12-29",
+  "type": "anime",
+  "featured": true,
+  "rating": 8.5,
+  "category": "romance",
+  "premiered": "Summer 2025",
+  "duration": "24 min",
+  "status": "Finished Airing",
+  "description": "In a town where the delinquent-heavy Chidori High and the elite Kikyo Girls' High are bitter rivals, Rintaro Tsumugi, a misunderstood student with a fierce face but a gentle heart, meets Kaoruko Waguri. As they grow closer, they must navigate the deep-seated prejudices and social barriers between their two schools.",
+  "posterUrl": "kaoruhana-anime.com",
+  "backdropUrl": ""
+  "trailerUrl": 
+  "malScore": 8.62,
+  "imbdScore": 8.2,
+  "popularity": 450,
+  "genres": ["Romance", "Drama", "School", "Shounen"],
+  "cast": [ "Yoshinori Nakayama", "Honoka Inoue", "Koki Uchiyama", "Aya Yamane"],
+  "certification": "TV-PG",
+  "country": "Japan",
+  "studio": "CloverWorks",
+  "producers": ["Aniplex", "Kodansha", "Netflix"]
 
