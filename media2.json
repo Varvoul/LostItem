@@ -2336,3 +2336,973 @@
     }
   ]
 },
+{
+  "id": "landman-series",
+  "slug": "landman",
+  "title": "Landman",
+  "originalTitle": "Landman",
+  "japaneseTitle": "ランドマン",
+  "synonyms": ["Landman"],
+  "searchableTitle": "Landman Taylor Sheridan Billy Bob Thornton Sam Elliott 2024 2025",
+  "airedYear": 2024,
+  "dateAdded": "2024-11-17",
+  "type": "show",
+  "featured": true,
+  "rating": 7.7,
+  "category": "drama",
+  "premiered": "Fall 2024",
+  "duration": "55 min",
+  "status": "Currently Airing",
+  "description": "Set in the boomtowns of West Texas, Landman is a modern-day tale of fortune-seeking in the world of oil rigs. Based on the podcast 'Boomtown,' the series follows Tommy Norris, a crisis executive for an oil company, as he navigates the high-stakes industry where billionaires and roughnecks collide in a quest for wealth and power.",
+  "posterUrl": "m.media-amazon.com",
+  "backdropUrl": "i.postimg.cc",
+  "trailerUrl": "www.youtube.com",
+  "malScore": null,
+  "imbdScore": 8.2,
+  "popularity": 850,
+  "genres": ["Drama", "Neo-Western", "Thriller"],
+  "cast": ["Billy Bob Thornton", "Ali Larter", "Jacob Lofland", "Demi Moore", "Jon Hamm", "Sam Elliott", "Andy Garcia"],
+  "certification": "TV-MA",
+  "country": "USA",
+  "studio": "MTV Entertainment Studios",
+  "producers": ["Taylor Sheridan", "Christian Wallace", "101 Studios", "Bosque Ranch Productions", "Paramount Television Studios", "David C. Glasser", "Ron Burkle"],
+  "seasons": [
+    {
+      "seasonNumber": 1,
+      "airedYear": 2024,
+      "episodes": [
+        {
+          "number": 1,
+          "title": "Pilot",
+          "duration": "55 min",
+          "servers": {
+            "raw": [
+              { "name": "HD-01", "url": "https://filemoon.to/e/0zqbhnrtaitg" },
+              { "name": "HD-02", "url": "https://server-raw.com/landman-s1-e1-2" },
+              { "name": "HD-03", "url": "https://server-raw.com/landman-s1-e1-3" }
+            ],
+            "sub": [
+              { "name": "HD-01", "url": "https://server-sub.com/landman-s1-e1-1" },
+              { "name": "HD-02", "url": "https://server-sub.com/landman-s1-e1-2" },
+              { "name": "HD-03", "url": "https://server-sub.com/landman-s1-e1-3" }
+            ],
+            "dub": [
+              { "name": "HD-01", "url": "https://server-dub.com/landman-s1-e1-1" },
+              { "name": "HD-02", "url": "https://server-dub.com/landman-s1-e1-2" },
+              { "name": "HD-03", "url": "https://server-dub.com/landman-s1-e1-3" }
+            ]
+          }
+        },
+        {
+          "number": 2,
+          "title": "The Land Rush",
+          "duration": "55 min",
+          "servers": {
+            "raw": [
+              { "name": "HD-01", "url": "https://filemoon.to/e/1tu0fgni5e0c" },
+              { "name": "HD-02", "url": "https://server-raw.com/landman-s1-e2-2" },
+              { "name": "HD-03", "url": "https://server-raw.com/landman-s1-e2-3" }
+            ],
+            "sub": [
+              { "name": "HD-01", "url": "https://server-sub.com/landman-s1-e2-1" },
+              { "name": "HD-02", "url": "https://server-sub.com/landman-s1-e2-2" },
+              { "name": "HD-03", "url": "https://server-sub.com/landman-s1-e2-3" }
+            ],
+            "dub": [
+              { "name": "HD-01", "url": "https://server-dub.com/landman-s1-e2-1" },
+              { "name": "HD-02", "url": "https://server-dub.com/landman-s1-e2-2" },
+              { "name": "HD-03", "url": "https://server-dub.com/landman-s1-e2-3" }
+            ]
+          }
+        },
+        {
+          "number": 3,
+          "title": "Black Gold",
+          "duration": "55 min",
+          "servers": {
+            "raw": [
+              { "name": "HD-01", "url": "https://filemoon.to/e/g65d0dfriiqg" },
+              { "name": "HD-02", "url": "https://server-raw.com/landman-s1-e3-2" },
+              { "name": "HD-03", "url": "https://server-raw.com/landman-s1-e3-3" }
+            ],
+            "sub": [
+              { "name": "HD-01", "url": "https://server-sub.com/landman-s1-e3-1" },
+              { "name": "HD-02", "url": "https://server-sub.com/landman-s1-e3-2" },
+              { "name": "HD-03", "url": "https://server-sub.com/landman-s1-e3-3" }
+            ],
+            "dub": [
+              { "name": "HD-01", "url": "https://server-dub.com/landman-s1-e3-1" },
+              { "name": "HD-02", "url": "https://server-dub.com/landman-s1-e3-2" },
+              { "name": "HD-03", "url": "https://server-dub.com/landman-s1-e3-3" }
+            ]
+          }
+        },
+        {
+          "number": 4,
+          "title": "Roughnecks",
+          "duration": "55 min",
+          "servers": {
+            "raw": [
+              { "name": "HD-01", "url": "https://filemoon.to/e/wxlf41pbgn5e" },
+              { "name": "HD-02", "url": "https://server-raw.com/landman-s1-e4-2" },
+              { "name": "HD-03", "url": "https://server-raw.com/landman-s1-e4-3" }
+            ],
+            "sub": [
+              { "name": "HD-01", "url": "https://server-sub.com/landman-s1-e4-1" },
+              { "name": "HD-02", "url": "https://server-sub.com/landman-s1-e4-2" },
+              { "name": "HD-03", "url": "https://server-sub.com/landman-s1-e4-3" }
+            ],
+            "dub": [
+              { "name": "HD-01", "url": "https://server-dub.com/landman-s1-e4-1" },
+              { "name": "HD-02", "url": "https://server-dub.com/landman-s1-e4-2" },
+              { "name": "HD-03", "url": "https://server-dub.com/landman-s1-e4-3" }
+            ]
+          }
+        },
+        {
+          "number": 5,
+          "title": "Boomtown",
+          "duration": "55 min",
+          "servers": {
+            "raw": [
+              { "name": "HD-01", "url": "https://filemoon.to/e/81igy93lt623" },
+              { "name": "HD-02", "url": "https://server-raw.com/landman-s1-e5-2" },
+              { "name": "HD-03", "url": "https://server-raw.com/landman-s1-e5-3" }
+            ],
+            "sub": [
+              { "name": "HD-01", "url": "https://server-sub.com/landman-s1-e5-1" },
+              { "name": "HD-02", "url": "https://server-sub.com/landman-s1-e5-2" },
+              { "name": "HD-03", "url": "https://server-sub.com/landman-s1-e5-3" }
+            ],
+            "dub": [
+              { "name": "HD-01", "url": "https://server-dub.com/landman-s1-e5-1" },
+              { "name": "HD-02", "url": "https://server-dub.com/landman-s1-e5-2" },
+              { "name": "HD-03", "url": "https://server-dub.com/landman-s1-e5-3" }
+            ]
+          }
+        },
+        {
+          "number": 6,
+          "title": "The Deal",
+          "duration": "55 min",
+          "servers": {
+            "raw": [
+              { "name": "HD-01", "url": "https://filemoon.to/e/rwzv2yjvslzg" },
+              { "name": "HD-02", "url": "https://server-raw.com/landman-s1-e6-2" },
+              { "name": "HD-03", "url": "https://server-raw.com/landman-s1-e6-3" }
+            ],
+            "sub": [
+              { "name": "HD-01", "url": "https://server-sub.com/landman-s1-e6-1" },
+              { "name": "HD-02", "url": "https://server-sub.com/landman-s1-e6-2" },
+              { "name": "HD-03", "url": "https://server-sub.com/landman-s1-e6-3" }
+            ],
+            "dub": [
+              { "name": "HD-01", "url": "https://server-dub.com/landman-s1-e6-1" },
+              { "name": "HD-02", "url": "https://server-dub.com/landman-s1-e6-2" },
+              { "name": "HD-03", "url": "https://server-dub.com/landman-s1-e6-3" }
+            ]
+          }
+        },
+        {
+          "number": 7,
+          "title": "Wildcatters",
+          "duration": "55 min",
+          "servers": {
+            "raw": [
+              { "name": "HD-01", "url": "https://filemoon.to/e/13hwax5lbn8i" },
+              { "name": "HD-02", "url": "https://server-raw.com/landman-s1-e7-2" },
+              { "name": "HD-03", "url": "https://server-raw.com/landman-s1-e7-3" }
+            ],
+            "sub": [
+              { "name": "HD-01", "url": "https://server-sub.com/landman-s1-e7-1" },
+              { "name": "HD-02", "url": "https://server-sub.com/landman-s1-e7-2" },
+              { "name": "HD-03", "url": "https://server-sub.com/landman-s1-e7-3" }
+            ],
+            "dub": [
+              { "name": "HD-01", "url": "https://server-dub.com/landman-s1-e7-1" },
+              { "name": "HD-02", "url": "https://server-dub.com/landman-s1-e7-2" },
+              { "name": "HD-03", "url": "https://server-dub.com/landman-s1-e7-3" }
+            ]
+          }
+        },
+        {
+          "number": 8,
+          "title": "The Fallout",
+          "duration": "55 min",
+          "servers": {
+            "raw": [
+              { "name": "HD-01", "url": "https://filemoon.to/e/awr669zpu6cv" },
+              { "name": "HD-02", "url": "https://server-raw.com/landman-s1-e8-2" },
+              { "name": "HD-03", "url": "https://server-raw.com/landman-s1-e8-3" }
+            ],
+            "sub": [
+              { "name": "HD-01", "url": "https://server-sub.com/landman-s1-e8-1" },
+              { "name": "HD-02", "url": "https://server-sub.com/landman-s1-e8-2" },
+              { "name": "HD-03", "url": "https://server-sub.com/landman-s1-e8-3" }
+            ],
+            "dub": [
+              { "name": "HD-01", "url": "https://server-dub.com/landman-s1-e8-1" },
+              { "name": "HD-02", "url": "https://server-dub.com/landman-s1-e8-2" },
+              { "name": "HD-03", "url": "https://server-dub.com/landman-s1-e8-3" }
+            ]
+          }
+        },
+        {
+          "number": 9,
+          "title": "Corporate Warfare",
+          "duration": "55 min",
+          "servers": {
+            "raw": [
+              { "name": "HD-01", "url": "https://filemoon.to/e/d7kn0xbu1gp8" },
+              { "name": "HD-02", "url": "https://server-raw.com/landman-s1-e9-2" },
+              { "name": "HD-03", "url": "https://server-raw.com/landman-s1-e9-3" }
+            ],
+            "sub": [
+              { "name": "HD-01", "url": "https://server-sub.com/landman-s1-e9-1" },
+              { "name": "HD-02", "url": "https://server-sub.com/landman-s1-e9-2" },
+              { "name": "HD-03", "url": "https://server-sub.com/landman-s1-e9-3" }
+            ],
+            "dub": [
+              { "name": "HD-01", "url": "https://server-dub.com/landman-s1-e9-1" },
+              { "name": "HD-02", "url": "https://server-dub.com/landman-s1-e9-2" },
+              { "name": "HD-03", "url": "https://server-dub.com/landman-s1-e9-3" }
+            ]
+          }
+        },
+        {
+          "number": 10,
+          "title": "The Crown",
+          "duration": "55 min",
+          "servers": {
+            "raw": [
+              { "name": "HD-01", "url": "https://filemoon.to/e/td5s5zlm5koh" },
+              { "name": "HD-02", "url": "https://server-raw.com/landman-s1-e10-2" },
+              { "name": "HD-03", "url": "https://server-raw.com/landman-s1-e10-3" }
+            ],
+            "sub": [
+              { "name": "HD-01", "url": "https://server-sub.com/landman-s1-e10-1" },
+              { "name": "HD-02", "url": "https://server-sub.com/landman-s1-e10-2" },
+              { "name": "HD-03", "url": "https://server-sub.com/landman-s1-e10-3" }
+            ],
+            "dub": [
+              { "name": "HD-01", "url": "https://server-dub.com/landman-s1-e10-1" },
+              { "name": "HD-02", "url": "https://server-dub.com/landman-s1-e10-2" },
+              { "name": "HD-03", "url": "https://server-dub.com/landman-s1-e10-3" }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "seasonNumber": 2,
+      "airedYear": 2025,
+      "episodes": [
+        {
+          "number": 1,
+          "title": "The New CEO",
+          "duration": "58 min",
+          "servers": {
+            "raw": [
+              { "name": "HD-01", "url": "https://filemoon.to/e/29inby3yf9or" },
+              { "name": "HD-02", "url": "https://server-raw.com/landman-s2-e1-2" },
+              { "name": "HD-03", "url": "https://server-raw.com/landman-s2-e1-3" }
+            ],
+            "sub": [
+              { "name": "HD-01", "url": "https://server-sub.com/landman-s2-e1-1" },
+              { "name": "HD-02", "url": "https://server-sub.com/landman-s2-e1-2" },
+              { "name": "HD-03", "url": "https://server-sub.com/landman-s2-e1-3" }
+            ],
+            "dub": [
+              { "name": "HD-01", "url": "https://server-dub.com/landman-s2-e1-1" },
+              { "name": "HD-02", "url": "https://server-dub.com/landman-s2-e1-2" },
+              { "name": "HD-03", "url": "https://server-dub.com/landman-s2-e1-3" }
+            ]
+          }
+        },
+        {
+          "number": 2,
+          "title": "Family Business",
+          "duration": "58 min",
+          "servers": {
+            "raw": [
+              { "name": "HD-01", "url": "https://filemoon.to/e/5qam5bs5qp6l" },
+              { "name": "HD-02", "url": "https://server-raw.com/landman-s2-e2-2" },
+              { "name": "HD-03", "url": "https://server-raw.com/landman-s2-e2-3" }
+            ],
+            "sub": [
+              { "name": "HD-01", "url": "https://server-sub.com/landman-s2-e2-1" },
+              { "name": "HD-02", "url": "https://server-sub.com/landman-s2-e2-2" },
+              { "name": "HD-03", "url": "https://server-sub.com/landman-s2-e2-3" }
+            ],
+            "dub": [
+              { "name": "HD-01", "url": "https://server-dub.com/landman-s2-e2-1" },
+              { "name": "HD-02", "url": "https://server-dub.com/landman-s2-e2-2" },
+              { "name": "HD-03", "url": "https://server-dub.com/landman-s2-e2-3" }
+            ]
+          }
+        },
+        {
+          "number": 3,
+          "title": "Legacy",
+          "duration": "58 min",
+          "servers": {
+            "raw": [
+              { "name": "HD-01", "url": "https://filemoon.to/e/e64zuv15ci2s" },
+              { "name": "HD-02", "url": "https://server-raw.com/landman-s2-e3-2" },
+              { "name": "HD-03", "url": "https://server-raw.com/landman-s2-e3-3" }
+            ],
+            "sub": [
+              { "name": "HD-01", "url": "https://server-sub.com/landman-s2-e3-1" },
+              { "name": "HD-02", "url": "https://server-sub.com/landman-s2-e3-2" },
+              { "name": "HD-03", "url": "https://server-sub.com/landman-s2-e3-3" }
+            ],
+            "dub": [
+              { "name": "HD-01", "url": "https://server-dub.com/landman-s2-e3-1" },
+              { "name": "HD-02", "url": "https://server-dub.com/landman-s2-e3-2" },
+              { "name": "HD-03", "url": "https://server-dub.com/landman-s2-e3-3" }
+            ]
+          }
+        },
+        {
+          "number": 4,
+          "title": "Blood and Oil",
+          "duration": "58 min",
+          "servers": {
+            "raw": [
+              { "name": "HD-01", "url": "https://filemoon.to/e/xkjfjdjb6vx6" },
+              { "name": "HD-02", "url": "https://server-raw.com/landman-s2-e4-2" },
+              { "name": "HD-03", "url": "https://server-raw.com/landman-s2-e4-3" }
+            ],
+            "sub": [
+              { "name": "HD-01", "url": "https://server-sub.com/landman-s2-e4-1" },
+              { "name": "HD-02", "url": "https://server-sub.com/landman-s2-e4-2" },
+              { "name": "HD-03", "url": "https://server-sub.com/landman-s2-e4-3" }
+            ],
+            "dub": [
+              { "name": "HD-01", "url": "https://server-dub.com/landman-s2-e4-1" },
+              { "name": "HD-02", "url": "https://server-dub.com/landman-s2-e4-2" },
+              { "name": "HD-03", "url": "https://server-dub.com/landman-s2-e4-3" }
+            ]
+          }
+        },
+        {
+          "number": 5,
+          "title": "The Takeover",
+          "duration": "58 min",
+          "servers": {
+            "raw": [
+              { "name": "HD-01", "url": "https://filemoon.to/e/0hqem0bqjkp5" },
+              { "name": "HD-02", "url": "https://server-raw.com/landman-s2-e5-2" },
+              { "name": "HD-03", "url": "https://server-raw.com/landman-s2-e5-3" }
+            ],
+            "sub": [
+              { "name": "HD-01", "url": "https://server-sub.com/landman-s2-e5-1" },
+              { "name": "HD-02", "url": "https://server-sub.com/landman-s2-e5-2" },
+              { "name": "HD-03", "url": "https://server-sub.com/landman-s2-e5-3" }
+            ],
+            "dub": [
+              { "name": "HD-01", "url": "https://server-dub.com/landman-s2-e5-1" },
+              { "name": "HD-02", "url": "https://server-dub.com/landman-s2-e5-2" },
+              { "name": "HD-03", "url": "https://server-dub.com/landman-s2-e5-3" }
+            ]
+          }
+        },
+        {
+          "number": 6,
+          "title": "Betrayal",
+          "duration": "58 min",
+          "servers": {
+            "raw": [
+              { "name": "HD-01", "url": "https://filemoon.to/e/9hqr5jrcg2hd" },
+              { "name": "HD-02", "url": "https://server-raw.com/landman-s2-e6-2" },
+              { "name": "HD-03", "url": "https://server-raw.com/landman-s2-e6-3" }
+            ],
+            "sub": [
+              { "name": "HD-01", "url": "https://server-sub.com/landman-s2-e6-1" },
+              { "name": "HD-02", "url": "https://server-sub.com/landman-s2-e6-2" },
+              { "name": "HD-03", "url": "https://server-sub.com/landman-s2-e6-3" }
+            ],
+            "dub": [
+              { "name": "HD-01", "url": "https://server-dub.com/landman-s2-e6-1" },
+              { "name": "HD-02", "url": "https://server-dub.com/landman-s2-e6-2" },
+              { "name": "HD-03", "url": "https://server-dub.com/landman-s2-e6-3" }
+            ]
+          }
+        },
+        {
+          "number": 7,
+          "title": "Texas Standoff",
+          "duration": "58 min",
+          "servers": {
+            "raw": [
+              { "name": "HD-01", "url": "https://filemoon.to/e/swm38d9e7q82" },
+              { "name": "HD-02", "url": "https://server-raw.com/landman-s2-e7-2" },
+              { "name": "HD-03", "url": "https://server-raw.com/landman-s2-e7-3" }
+            ],
+            "sub": [
+              { "name": "HD-01", "url": "https://server-sub.com/landman-s2-e7-1" },
+              { "name": "HD-02", "url": "https://server-sub.com/landman-s2-e7-2" },
+              { "name": "HD-03", "url": "https://server-sub.com/landman-s2-e7-3" }
+            ],
+            "dub": [
+              { "name": "HD-01", "url": "https://server-dub.com/landman-s2-e7-1" },
+              { "name": "HD-02", "url": "https://server-dub.com/landman-s2-e7-2" },
+              { "name": "HD-03", "url": "https://server-dub.com/landman-s2-e7-3" }
+            ]
+          }
+        },
+        {
+          "number": 8,
+          "title": "The Reckoning",
+          "duration": "58 min",
+          "servers": {
+            "raw": [
+              { "name": "HD-01", "url": "https://server-raw.com/landman-s2-e8-1" },
+              { "name": "HD-02", "url": "https://server-raw.com/landman-s2-e8-2" },
+              { "name": "HD-03", "url": "https://server-raw.com/landman-s2-e8-3" }
+            ],
+            "sub": [
+              { "name": "HD-01", "url": "https://server-sub.com/landman-s2-e8-1" },
+              { "name": "HD-02", "url": "https://server-sub.com/landman-s2-e8-2" },
+              { "name": "HD-03", "url": "https://server-sub.com/landman-s2-e8-3" }
+            ],
+            "dub": [
+              { "name": "HD-01", "url": "https://server-dub.com/landman-s2-e8-1" },
+              { "name": "HD-02", "url": "https://server-dub.com/landman-s2-e8-2" },
+              { "name": "HD-03", "url": "https://server-dub.com/landman-s2-e8-3" }
+            ]
+          }
+        },
+        {
+          "number": 9,
+          "title": "Empire",
+          "duration": "58 min",
+          "servers": {
+            "raw": [
+              { "name": "HD-01", "url": "https://server-raw.com/landman-s2-e9-1" },
+              { "name": "HD-02", "url": "https://server-raw.com/landman-s2-e9-2" },
+              { "name": "HD-03", "url": "https://server-raw.com/landman-s2-e9-3" }
+            ],
+            "sub": [
+              { "name": "HD-01", "url": "https://server-sub.com/landman-s2-e9-1" },
+              { "name": "HD-02", "url": "https://server-sub.com/landman-s2-e9-2" },
+              { "name": "HD-03", "url": "https://server-sub.com/landman-s2-e9-3" }
+            ],
+            "dub": [
+              { "name": "HD-01", "url": "https://server-dub.com/landman-s2-e9-1" },
+              { "name": "HD-02", "url": "https://server-dub.com/landman-s2-e9-2" },
+              { "name": "HD-03", "url": "https://server-dub.com/landman-s2-e9-3" }
+            ]
+          }
+        },
+        {
+          "number": 10,
+          "title": "The Price of Power",
+          "duration": "58 min",
+          "servers": {
+            "raw": [
+              { "name": "HD-01", "url": "https://server-raw.com/landman-s2-e10-1" },
+              { "name": "HD-02", "url": "https://server-raw.com/landman-s2-e10-2" },
+              { "name": "HD-03", "url": "https://server-raw.com/landman-s2-e10-3" }
+            ],
+            "sub": [
+              { "name": "HD-01", "url": "https://server-sub.com/landman-s2-e10-1" },
+              { "name": "HD-02", "url": "https://server-sub.com/landman-s2-e10-2" },
+              { "name": "HD-03", "url": "https://server-sub.com/landman-s2-e10-3" }
+            ],
+            "dub": [
+              { "name": "HD-01", "url": "https://server-dub.com/landman-s2-e10-1" },
+              { "name": "HD-02", "url": "https://server-dub.com/landman-s2-e10-2" },
+              { "name": "HD-03", "url": "https://server-dub.com/landman-s2-e10-3" }
+            ]
+          }
+        }
+      ]
+    }
+  ]
+},
+{
+  "id": "landman-s2",
+  "slug": "landman-season-2",
+  "title": "Landman Season 2",
+  "originalTitle": "Landman Season 2",
+  "japaneseTitle": "ランドマン シーズン2",
+  "synonyms": ["Landman: Season 2"],
+  "searchableTitle": "Landman Season 2 Taylor Sheridan Billy Bob Thornton Sam Elliott 2025",
+  "airedYear": 2025,
+  "dateAdded": "2025-11-16",
+  "type": "show",
+  "featured": true,
+  "rating": 8.1,
+  "category": "drama",
+  "premiered": "Fall 2025",
+  "duration": "58 min",
+  "status": "Currently Airing",
+  "description": "The saga continues in West Texas as Tommy Norris steps into the role of CEO following the dramatic fallout of the first season. With corporate stakes higher than ever and Sam Elliott joining as Tommy's father, the family must navigate new betrayals and explosive confrontations as they attempt to hold onto their oil empire in an increasingly ruthless landscape.",
+  "posterUrl": "m.media-amazon.com",
+  "backdropUrl": "i.postimg.cc",
+  "trailerUrl": "www.youtube.com",
+  "malScore": null,
+  "imbdScore": 8.4,
+  "popularity": 420,
+  "genres": ["Drama", "Thriller", "Neo-Western"],
+  "cast": ["Billy Bob Thornton", "Ali Larter", "Sam Elliott", "Demi Moore", "Andy Garcia"],
+  "certification": "TV-MA",
+  "country": "USA",
+  "studio": "Paramount Television Studios",
+  "producers": ["Taylor Sheridan", "Christian Wallace", "David C. Glasser", "Ron Burkle"],
+  "seasons": [
+    {
+      "seasonNumber": 1,
+      "airedYear": 2024,
+      "episodes": [
+        {
+          "number": 1,
+          "title": "Pilot",
+          "duration": "55 min",
+          "servers": {
+            "raw": [
+              { "name": "HD-01", "url": "https://filemoon.to/e/0zqbhnrtaitg" },
+              { "name": "HD-02", "url": "https://server-raw.com/landman-s1-e1-2" },
+              { "name": "HD-03", "url": "https://server-raw.com/landman-s1-e1-3" }
+            ],
+            "sub": [
+              { "name": "HD-01", "url": "https://server-sub.com/landman-s1-e1-1" },
+              { "name": "HD-02", "url": "https://server-sub.com/landman-s1-e1-2" },
+              { "name": "HD-03", "url": "https://server-sub.com/landman-s1-e1-3" }
+            ],
+            "dub": [
+              { "name": "HD-01", "url": "https://server-dub.com/landman-s1-e1-1" },
+              { "name": "HD-02", "url": "https://server-dub.com/landman-s1-e1-2" },
+              { "name": "HD-03", "url": "https://server-dub.com/landman-s1-e1-3" }
+            ]
+          }
+        },
+        {
+          "number": 2,
+          "title": "The Land Rush",
+          "duration": "55 min",
+          "servers": {
+            "raw": [
+              { "name": "HD-01", "url": "https://filemoon.to/e/1tu0fgni5e0c" },
+              { "name": "HD-02", "url": "https://server-raw.com/landman-s1-e2-2" },
+              { "name": "HD-03", "url": "https://server-raw.com/landman-s1-e2-3" }
+            ],
+            "sub": [
+              { "name": "HD-01", "url": "https://server-sub.com/landman-s1-e2-1" },
+              { "name": "HD-02", "url": "https://server-sub.com/landman-s1-e2-2" },
+              { "name": "HD-03", "url": "https://server-sub.com/landman-s1-e2-3" }
+            ],
+            "dub": [
+              { "name": "HD-01", "url": "https://server-dub.com/landman-s1-e2-1" },
+              { "name": "HD-02", "url": "https://server-dub.com/landman-s1-e2-2" },
+              { "name": "HD-03", "url": "https://server-dub.com/landman-s1-e2-3" }
+            ]
+          }
+        },
+        {
+          "number": 3,
+          "title": "Black Gold",
+          "duration": "55 min",
+          "servers": {
+            "raw": [
+              { "name": "HD-01", "url": "https://filemoon.to/e/g65d0dfriiqg" },
+              { "name": "HD-02", "url": "https://server-raw.com/landman-s1-e3-2" },
+              { "name": "HD-03", "url": "https://server-raw.com/landman-s1-e3-3" }
+            ],
+            "sub": [
+              { "name": "HD-01", "url": "https://server-sub.com/landman-s1-e3-1" },
+              { "name": "HD-02", "url": "https://server-sub.com/landman-s1-e3-2" },
+              { "name": "HD-03", "url": "https://server-sub.com/landman-s1-e3-3" }
+            ],
+            "dub": [
+              { "name": "HD-01", "url": "https://server-dub.com/landman-s1-e3-1" },
+              { "name": "HD-02", "url": "https://server-dub.com/landman-s1-e3-2" },
+              { "name": "HD-03", "url": "https://server-dub.com/landman-s1-e3-3" }
+            ]
+          }
+        },
+        {
+          "number": 4,
+          "title": "Roughnecks",
+          "duration": "55 min",
+          "servers": {
+            "raw": [
+              { "name": "HD-01", "url": "https://filemoon.to/e/wxlf41pbgn5e" },
+              { "name": "HD-02", "url": "https://server-raw.com/landman-s1-e4-2" },
+              { "name": "HD-03", "url": "https://server-raw.com/landman-s1-e4-3" }
+            ],
+            "sub": [
+              { "name": "HD-01", "url": "https://server-sub.com/landman-s1-e4-1" },
+              { "name": "HD-02", "url": "https://server-sub.com/landman-s1-e4-2" },
+              { "name": "HD-03", "url": "https://server-sub.com/landman-s1-e4-3" }
+            ],
+            "dub": [
+              { "name": "HD-01", "url": "https://server-dub.com/landman-s1-e4-1" },
+              { "name": "HD-02", "url": "https://server-dub.com/landman-s1-e4-2" },
+              { "name": "HD-03", "url": "https://server-dub.com/landman-s1-e4-3" }
+            ]
+          }
+        },
+        {
+          "number": 5,
+          "title": "Boomtown",
+          "duration": "55 min",
+          "servers": {
+            "raw": [
+              { "name": "HD-01", "url": "https://filemoon.to/e/81igy93lt623" },
+              { "name": "HD-02", "url": "https://server-raw.com/landman-s1-e5-2" },
+              { "name": "HD-03", "url": "https://server-raw.com/landman-s1-e5-3" }
+            ],
+            "sub": [
+              { "name": "HD-01", "url": "https://server-sub.com/landman-s1-e5-1" },
+              { "name": "HD-02", "url": "https://server-sub.com/landman-s1-e5-2" },
+              { "name": "HD-03", "url": "https://server-sub.com/landman-s1-e5-3" }
+            ],
+            "dub": [
+              { "name": "HD-01", "url": "https://server-dub.com/landman-s1-e5-1" },
+              { "name": "HD-02", "url": "https://server-dub.com/landman-s1-e5-2" },
+              { "name": "HD-03", "url": "https://server-dub.com/landman-s1-e5-3" }
+            ]
+          }
+        },
+        {
+          "number": 6,
+          "title": "The Deal",
+          "duration": "55 min",
+          "servers": {
+            "raw": [
+              { "name": "HD-01", "url": "https://filemoon.to/e/rwzv2yjvslzg" },
+              { "name": "HD-02", "url": "https://server-raw.com/landman-s1-e6-2" },
+              { "name": "HD-03", "url": "https://server-raw.com/landman-s1-e6-3" }
+            ],
+            "sub": [
+              { "name": "HD-01", "url": "https://server-sub.com/landman-s1-e6-1" },
+              { "name": "HD-02", "url": "https://server-sub.com/landman-s1-e6-2" },
+              { "name": "HD-03", "url": "https://server-sub.com/landman-s1-e6-3" }
+            ],
+            "dub": [
+              { "name": "HD-01", "url": "https://server-dub.com/landman-s1-e6-1" },
+              { "name": "HD-02", "url": "https://server-dub.com/landman-s1-e6-2" },
+              { "name": "HD-03", "url": "https://server-dub.com/landman-s1-e6-3" }
+            ]
+          }
+        },
+        {
+          "number": 7,
+          "title": "Wildcatters",
+          "duration": "55 min",
+          "servers": {
+            "raw": [
+              { "name": "HD-01", "url": "https://filemoon.to/e/13hwax5lbn8i" },
+              { "name": "HD-02", "url": "https://server-raw.com/landman-s1-e7-2" },
+              { "name": "HD-03", "url": "https://server-raw.com/landman-s1-e7-3" }
+            ],
+            "sub": [
+              { "name": "HD-01", "url": "https://server-sub.com/landman-s1-e7-1" },
+              { "name": "HD-02", "url": "https://server-sub.com/landman-s1-e7-2" },
+              { "name": "HD-03", "url": "https://server-sub.com/landman-s1-e7-3" }
+            ],
+            "dub": [
+              { "name": "HD-01", "url": "https://server-dub.com/landman-s1-e7-1" },
+              { "name": "HD-02", "url": "https://server-dub.com/landman-s1-e7-2" },
+              { "name": "HD-03", "url": "https://server-dub.com/landman-s1-e7-3" }
+            ]
+          }
+        },
+        {
+          "number": 8,
+          "title": "The Fallout",
+          "duration": "55 min",
+          "servers": {
+            "raw": [
+              { "name": "HD-01", "url": "https://filemoon.to/e/awr669zpu6cv" },
+              { "name": "HD-02", "url": "https://server-raw.com/landman-s1-e8-2" },
+              { "name": "HD-03", "url": "https://server-raw.com/landman-s1-e8-3" }
+            ],
+            "sub": [
+              { "name": "HD-01", "url": "https://server-sub.com/landman-s1-e8-1" },
+              { "name": "HD-02", "url": "https://server-sub.com/landman-s1-e8-2" },
+              { "name": "HD-03", "url": "https://server-sub.com/landman-s1-e8-3" }
+            ],
+            "dub": [
+              { "name": "HD-01", "url": "https://server-dub.com/landman-s1-e8-1" },
+              { "name": "HD-02", "url": "https://server-dub.com/landman-s1-e8-2" },
+              { "name": "HD-03", "url": "https://server-dub.com/landman-s1-e8-3" }
+            ]
+          }
+        },
+        {
+          "number": 9,
+          "title": "Corporate Warfare",
+          "duration": "55 min",
+          "servers": {
+            "raw": [
+              { "name": "HD-01", "url": "https://filemoon.to/e/d7kn0xbu1gp8" },
+              { "name": "HD-02", "url": "https://server-raw.com/landman-s1-e9-2" },
+              { "name": "HD-03", "url": "https://server-raw.com/landman-s1-e9-3" }
+            ],
+            "sub": [
+              { "name": "HD-01", "url": "https://server-sub.com/landman-s1-e9-1" },
+              { "name": "HD-02", "url": "https://server-sub.com/landman-s1-e9-2" },
+              { "name": "HD-03", "url": "https://server-sub.com/landman-s1-e9-3" }
+            ],
+            "dub": [
+              { "name": "HD-01", "url": "https://server-dub.com/landman-s1-e9-1" },
+              { "name": "HD-02", "url": "https://server-dub.com/landman-s1-e9-2" },
+              { "name": "HD-03", "url": "https://server-dub.com/landman-s1-e9-3" }
+            ]
+          }
+        },
+        {
+          "number": 10,
+          "title": "The Crown",
+          "duration": "55 min",
+          "servers": {
+            "raw": [
+              { "name": "HD-01", "url": "https://filemoon.to/e/td5s5zlm5koh" },
+              { "name": "HD-02", "url": "https://server-raw.com/landman-s1-e10-2" },
+              { "name": "HD-03", "url": "https://server-raw.com/landman-s1-e10-3" }
+            ],
+            "sub": [
+              { "name": "HD-01", "url": "https://server-sub.com/landman-s1-e10-1" },
+              { "name": "HD-02", "url": "https://server-sub.com/landman-s1-e10-2" },
+              { "name": "HD-03", "url": "https://server-sub.com/landman-s1-e10-3" }
+            ],
+            "dub": [
+              { "name": "HD-01", "url": "https://server-dub.com/landman-s1-e10-1" },
+              { "name": "HD-02", "url": "https://server-dub.com/landman-s1-e10-2" },
+              { "name": "HD-03", "url": "https://server-dub.com/landman-s1-e10-3" }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "seasonNumber": 2,
+      "airedYear": 2025,
+      "episodes": [
+        {
+          "number": 1,
+          "title": "The New CEO",
+          "duration": "58 min",
+          "servers": {
+            "raw": [
+              { "name": "HD-01", "url": "https://filemoon.to/e/29inby3yf9or" },
+              { "name": "HD-02", "url": "https://server-raw.com/landman-s2-e1-2" },
+              { "name": "HD-03", "url": "https://server-raw.com/landman-s2-e1-3" }
+            ],
+            "sub": [
+              { "name": "HD-01", "url": "https://server-sub.com/landman-s2-e1-1" },
+              { "name": "HD-02", "url": "https://server-sub.com/landman-s2-e1-2" },
+              { "name": "HD-03", "url": "https://server-sub.com/landman-s2-e1-3" }
+            ],
+            "dub": [
+              { "name": "HD-01", "url": "https://server-dub.com/landman-s2-e1-1" },
+              { "name": "HD-02", "url": "https://server-dub.com/landman-s2-e1-2" },
+              { "name": "HD-03", "url": "https://server-dub.com/landman-s2-e1-3" }
+            ]
+          }
+        },
+        {
+          "number": 2,
+          "title": "Family Business",
+          "duration": "58 min",
+          "servers": {
+            "raw": [
+              { "name": "HD-01", "url": "https://filemoon.to/e/5qam5bs5qp6l" },
+              { "name": "HD-02", "url": "https://server-raw.com/landman-s2-e2-2" },
+              { "name": "HD-03", "url": "https://server-raw.com/landman-s2-e2-3" }
+            ],
+            "sub": [
+              { "name": "HD-01", "url": "https://server-sub.com/landman-s2-e2-1" },
+              { "name": "HD-02", "url": "https://server-sub.com/landman-s2-e2-2" },
+              { "name": "HD-03", "url": "https://server-sub.com/landman-s2-e2-3" }
+            ],
+            "dub": [
+              { "name": "HD-01", "url": "https://server-dub.com/landman-s2-e2-1" },
+              { "name": "HD-02", "url": "https://server-dub.com/landman-s2-e2-2" },
+              { "name": "HD-03", "url": "https://server-dub.com/landman-s2-e2-3" }
+            ]
+          }
+        },
+        {
+          "number": 3,
+          "title": "Legacy",
+          "duration": "58 min",
+          "servers": {
+            "raw": [
+              { "name": "HD-01", "url": "https://filemoon.to/e/e64zuv15ci2s" },
+              { "name": "HD-02", "url": "https://server-raw.com/landman-s2-e3-2" },
+              { "name": "HD-03", "url": "https://server-raw.com/landman-s2-e3-3" }
+            ],
+            "sub": [
+              { "name": "HD-01", "url": "https://server-sub.com/landman-s2-e3-1" },
+              { "name": "HD-02", "url": "https://server-sub.com/landman-s2-e3-2" },
+              { "name": "HD-03", "url": "https://server-sub.com/landman-s2-e3-3" }
+            ],
+            "dub": [
+              { "name": "HD-01", "url": "https://server-dub.com/landman-s2-e3-1" },
+              { "name": "HD-02", "url": "https://server-dub.com/landman-s2-e3-2" },
+              { "name": "HD-03", "url": "https://server-dub.com/landman-s2-e3-3" }
+            ]
+          }
+        },
+        {
+          "number": 4,
+          "title": "Blood and Oil",
+          "duration": "58 min",
+          "servers": {
+            "raw": [
+              { "name": "HD-01", "url": "https://filemoon.to/e/xkjfjdjb6vx6" },
+              { "name": "HD-02", "url": "https://server-raw.com/landman-s2-e4-2" },
+              { "name": "HD-03", "url": "https://server-raw.com/landman-s2-e4-3" }
+            ],
+            "sub": [
+              { "name": "HD-01", "url": "https://server-sub.com/landman-s2-e4-1" },
+              { "name": "HD-02", "url": "https://server-sub.com/landman-s2-e4-2" },
+              { "name": "HD-03", "url": "https://server-sub.com/landman-s2-e4-3" }
+            ],
+            "dub": [
+              { "name": "HD-01", "url": "https://server-dub.com/landman-s2-e4-1" },
+              { "name": "HD-02", "url": "https://server-dub.com/landman-s2-e4-2" },
+              { "name": "HD-03", "url": "https://server-dub.com/landman-s2-e4-3" }
+            ]
+          }
+        },
+        {
+          "number": 5,
+          "title": "The Takeover",
+          "duration": "58 min",
+          "servers": {
+            "raw": [
+              { "name": "HD-01", "url": "https://filemoon.to/e/0hqem0bqjkp5" },
+              { "name": "HD-02", "url": "https://server-raw.com/landman-s2-e5-2" },
+              { "name": "HD-03", "url": "https://server-raw.com/landman-s2-e5-3" }
+            ],
+            "sub": [
+              { "name": "HD-01", "url": "https://server-sub.com/landman-s2-e5-1" },
+              { "name": "HD-02", "url": "https://server-sub.com/landman-s2-e5-2" },
+              { "name": "HD-03", "url": "https://server-sub.com/landman-s2-e5-3" }
+            ],
+            "dub": [
+              { "name": "HD-01", "url": "https://server-dub.com/landman-s2-e5-1" },
+              { "name": "HD-02", "url": "https://server-dub.com/landman-s2-e5-2" },
+              { "name": "HD-03", "url": "https://server-dub.com/landman-s2-e5-3" }
+            ]
+          }
+        },
+        {
+          "number": 6,
+          "title": "Betrayal",
+          "duration": "58 min",
+          "servers": {
+            "raw": [
+              { "name": "HD-01", "url": "https://filemoon.to/e/9hqr5jrcg2hd" },
+              { "name": "HD-02", "url": "https://server-raw.com/landman-s2-e6-2" },
+              { "name": "HD-03", "url": "https://server-raw.com/landman-s2-e6-3" }
+            ],
+            "sub": [
+              { "name": "HD-01", "url": "https://server-sub.com/landman-s2-e6-1" },
+              { "name": "HD-02", "url": "https://server-sub.com/landman-s2-e6-2" },
+              { "name": "HD-03", "url": "https://server-sub.com/landman-s2-e6-3" }
+            ],
+            "dub": [
+              { "name": "HD-01", "url": "https://server-dub.com/landman-s2-e6-1" },
+              { "name": "HD-02", "url": "https://server-dub.com/landman-s2-e6-2" },
+              { "name": "HD-03", "url": "https://server-dub.com/landman-s2-e6-3" }
+            ]
+          }
+        },
+        {
+          "number": 7,
+          "title": "Texas Standoff",
+          "duration": "58 min",
+          "servers": {
+            "raw": [
+              { "name": "HD-01", "url": "https://filemoon.to/e/swm38d9e7q82" },
+              { "name": "HD-02", "url": "https://server-raw.com/landman-s2-e7-2" },
+              { "name": "HD-03", "url": "https://server-raw.com/landman-s2-e7-3" }
+            ],
+            "sub": [
+              { "name": "HD-01", "url": "https://server-sub.com/landman-s2-e7-1" },
+              { "name": "HD-02", "url": "https://server-sub.com/landman-s2-e7-2" },
+              { "name": "HD-03", "url": "https://server-sub.com/landman-s2-e7-3" }
+            ],
+            "dub": [
+              { "name": "HD-01", "url": "https://server-dub.com/landman-s2-e7-1" },
+              { "name": "HD-02", "url": "https://server-dub.com/landman-s2-e7-2" },
+              { "name": "HD-03", "url": "https://server-dub.com/landman-s2-e7-3" }
+            ]
+          }
+        },
+        {
+          "number": 8,
+          "title": "The Reckoning",
+          "duration": "58 min",
+          "servers": {
+            "raw": [
+              { "name": "HD-01", "url": "https://server-raw.com/landman-s2-e8-1" },
+              { "name": "HD-02", "url": "https://server-raw.com/landman-s2-e8-2" },
+              { "name": "HD-03", "url": "https://server-raw.com/landman-s2-e8-3" }
+            ],
+            "sub": [
+              { "name": "HD-01", "url": "https://server-sub.com/landman-s2-e8-1" },
+              { "name": "HD-02", "url": "https://server-sub.com/landman-s2-e8-2" },
+              { "name": "HD-03", "url": "https://server-sub.com/landman-s2-e8-3" }
+            ],
+            "dub": [
+              { "name": "HD-01", "url": "https://server-dub.com/landman-s2-e8-1" },
+              { "name": "HD-02", "url": "https://server-dub.com/landman-s2-e8-2" },
+              { "name": "HD-03", "url": "https://server-dub.com/landman-s2-e8-3" }
+            ]
+          }
+        },
+        {
+          "number": 9,
+          "title": "Empire",
+          "duration": "58 min",
+          "servers": {
+            "raw": [
+              { "name": "HD-01", "url": "https://server-raw.com/landman-s2-e9-1" },
+              { "name": "HD-02", "url": "https://server-raw.com/landman-s2-e9-2" },
+              { "name": "HD-03", "url": "https://server-raw.com/landman-s2-e9-3" }
+            ],
+            "sub": [
+              { "name": "HD-01", "url": "https://server-sub.com/landman-s2-e9-1" },
+              { "name": "HD-02", "url": "https://server-sub.com/landman-s2-e9-2" },
+              { "name": "HD-03", "url": "https://server-sub.com/landman-s2-e9-3" }
+            ],
+            "dub": [
+              { "name": "HD-01", "url": "https://server-dub.com/landman-s2-e9-1" },
+              { "name": "HD-02", "url": "https://server-dub.com/landman-s2-e9-2" },
+              { "name": "HD-03", "url": "https://server-dub.com/landman-s2-e9-3" }
+            ]
+          }
+        },
+        {
+          "number": 10,
+          "title": "The Price of Power",
+          "duration": "58 min",
+          "servers": {
+            "raw": [
+              { "name": "HD-01", "url": "https://server-raw.com/landman-s2-e10-1" },
+              { "name": "HD-02", "url": "https://server-raw.com/landman-s2-e10-2" },
+              { "name": "HD-03", "url": "https://server-raw.com/landman-s2-e10-3" }
+            ],
+            "sub": [
+              { "name": "HD-01", "url": "https://server-sub.com/landman-s2-e10-1" },
+              { "name": "HD-02", "url": "https://server-sub.com/landman-s2-e10-2" },
+              { "name": "HD-03", "url": "https://server-sub.com/landman-s2-e10-3" }
+            ],
+            "dub": [
+              { "name": "HD-01", "url": "https://server-dub.com/landman-s2-e10-1" },
+              { "name": "HD-02", "url": "https://server-dub.com/landman-s2-e10-2" },
+              { "name": "HD-03", "url": "https://server-dub.com/landman-s2-e10-3" }
+            ]
+          }
+        }
+      ]
+    }
+  ]
+},
