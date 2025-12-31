@@ -3306,3 +3306,365 @@
     }
   ]
 },
+{
+  "id": "roshidere-s1",
+  "slug": "alya-sometimes-hides-her-feelings-in-russian-season-1",
+  "title": "Alya Sometimes Hides Her Feelings in Russian",
+  "originalTitle": "Tokidoki Bosotto Russia-go de Dereru Tonari no Alya-san",
+  "japaneseTitle": "時々ボソッとロシア語でデレる隣のアーリャさん",
+  "synonyms": ["Roshidere"],
+  "searchableTitle": "Alya Sometimes Hides Her Feelings in Russian Tokidoki Bosotto Russia-go de Dereru Tonari no Alya-san Roshidere",
+  "airedYear": 2024,
+  "dateAdded": "2024-07-03",
+  "type": "anime",
+  "featured": true,
+  "rating": 7.7,
+  "category": "romance",
+  "premiered": "Summer 2024",
+  "duration": "24 min",
+  "status": "Finished Airing",
+  "description": "Alisa Mikhailovna Kujou, known as Alya, is the beautiful and talented 'Ice Princess' of Seirei Academy. She often scolds her deskmate Masachika Kuze, but secretly flirts with him in Russian, believing he doesn't understand. Unbeknownst to her, Masachika is actually fluent in Russian and understands every word of her affectionate confessions.",
+  "posterUrl": "https://cdn.myanimelist.net/images/anime/1825/142258l.jpg",
+  "backdropUrl": "https://i.postimg.cc/x1dtPfmB/134324l.jpg",
+  "trailerUrl": "https://www.youtube.com/watch?v=CgacdWLGd0Y",
+  "malScore": 7.71,
+  "imbdScore": 7.5,
+  "popularity": 250,
+  "genres": ["Comedy", "Romance", "School"],
+  "cast": ["Sumire Uesaka", "Kohei Amasaki", "Wakana Maruoka", "Yukiyo Fujii"],
+  "certification": "TV-14",
+  "country": "Japan",
+  "studio": "Doga Kobo",
+  "producers": ["Kadokawa", "Sony Music Solutions"],
+  "seasons": [
+    {
+      "seasonNumber": 1,
+      "episodes": [
+        {
+          "number": 1,
+          "title": "Alya Hides Her Feelings in Russian",
+          "duration": "24 min",
+          "servers": {
+            "raw": [
+              { "name": "HD-01", "url": "https://server-raw.com/roshidere-s1-e1-1" },
+              { "name": "HD-02", "url": "https://server-raw.com/roshidere-s1-e1-2" },
+              { "name": "HD-03", "url": "https://server-raw.com/roshidere-s1-e1-3" }
+            ],
+            "sub": [
+              { "name": "HD-01", "url": "https://server-sub.com/roshidere-s1-e1-1" },
+              { "name": "HD-02", "url": "https://server-sub.com/roshidere-s1-e1-2" },
+              { "name": "HD-03", "url": "https://server-sub.com/roshidere-s1-e1-3" }
+            ],
+            "dub": [
+              { "name": "HD-01", "url": "https://server-dub.com/roshidere-s1-e1-1" },
+              { "name": "HD-02", "url": "https://server-dub.com/roshidere-s1-e1-2" },
+              { "name": "HD-03", "url": "https://server-dub.com/roshidere-s1-e1-3" }
+            ]
+          }
+        },
+        {
+          "number": 2,
+          "title": "So Much For Childhood Friends",
+          "duration": "24 min",
+          "servers": {
+            "raw": [
+              { "name": "HD-01", "url": "https://server-raw.com/roshidere-s1-e2-1" },
+              { "name": "HD-02", "url": "https://server-raw.com/roshidere-s1-e2-2" },
+              { "name": "HD-03", "url": "https://server-raw.com/roshidere-s1-e2-3" }
+            ],
+            "sub": [
+              { "name": "HD-01", "url": "https://server-sub.com/roshidere-s1-e2-1" },
+              { "name": "HD-02", "url": "https://server-sub.com/roshidere-s1-e2-2" },
+              { "name": "HD-03", "url": "https://server-sub.com/roshidere-s1-e2-3" }
+            ],
+            "dub": [
+              { "name": "HD-01", "url": "https://server-dub.com/roshidere-s1-e2-1" },
+              { "name": "HD-02", "url": "https://server-dub.com/roshidere-s1-e2-2" },
+              { "name": "HD-03", "url": "https://server-dub.com/roshidere-s1-e2-3" }
+            ]
+          }
+        },
+        {
+          "number": 3,
+          "title": "And So They Met",
+          "duration": "24 min",
+          "servers": {
+            "raw": [
+              { "name": "HD-01", "url": "https://server-raw.com/roshidere-s1-e3-1" },
+              { "name": "HD-02", "url": "https://server-raw.com/roshidere-s1-e3-2" },
+              { "name": "HD-03", "url": "https://server-raw.com/roshidere-s1-e3-3" }
+            ],
+            "sub": [
+              { "name": "HD-01", "url": "https://server-sub.com/roshidere-s1-e3-1" },
+              { "name": "HD-02", "url": "https://server-sub.com/roshidere-s1-e3-2" },
+              { "name": "HD-03", "url": "https://server-sub.com/roshidere-s1-e3-3" }
+            ],
+            "dub": [
+              { "name": "HD-01", "url": "https://server-dub.com/roshidere-s1-e3-1" },
+              { "name": "HD-02", "url": "https://server-dub.com/roshidere-s1-e3-2" },
+              { "name": "HD-03", "url": "https://server-dub.com/roshidere-s1-e3-3" }
+            ]
+          }
+        },
+        {
+          "number": 4,
+          "title": "An Outpouring of Emotion",
+          "duration": "24 min",
+          "servers": {
+            "raw": [
+              { "name": "HD-01", "url": "https://server-raw.com/roshidere-s1-e4-1" },
+              { "name": "HD-02", "url": "https://server-raw.com/roshidere-s1-e4-2" },
+              { "name": "HD-03", "url": "https://server-raw.com/roshidere-s1-e4-3" }
+            ],
+            "sub": [
+              { "name": "HD-01", "url": "https://server-sub.com/roshidere-s1-e4-1" },
+              { "name": "HD-02", "url": "https://server-sub.com/roshidere-s1-e4-2" },
+              { "name": "HD-03", "url": "https://server-sub.com/roshidere-s1-e4-3" }
+            ],
+            "dub": [
+              { "name": "HD-01", "url": "https://server-dub.com/roshidere-s1-e4-1" },
+              { "name": "HD-02", "url": "https://server-dub.com/roshidere-s1-e4-2" },
+              { "name": "HD-03", "url": "https://server-dub.com/roshidere-s1-e4-3" }
+            ]
+          }
+        },
+        {
+          "number": 5,
+          "title": "Different People, Common Undercurrent",
+          "duration": "24 min",
+          "servers": {
+            "raw": [
+              { "name": "HD-01", "url": "https://server-raw.com/roshidere-s1-e5-1" },
+              { "name": "HD-02", "url": "https://server-raw.com/roshidere-s1-e5-2" },
+              { "name": "HD-03", "url": "https://server-raw.com/roshidere-s1-e5-3" }
+            ],
+            "sub": [
+              { "name": "HD-01", "url": "https://server-sub.com/roshidere-s1-e5-1" },
+              { "name": "HD-02", "url": "https://server-sub.com/roshidere-s1-e5-2" },
+              { "name": "HD-03", "url": "https://server-sub.com/roshidere-s1-e5-3" }
+            ],
+            "dub": [
+              { "name": "HD-01", "url": "https://server-dub.com/roshidere-s1-e5-1" },
+              { "name": "HD-02", "url": "https://server-dub.com/roshidere-s1-e5-2" },
+              { "name": "HD-03", "url": "https://server-dub.com/roshidere-s1-e5-3" }
+            ]
+          }
+        },
+        {
+          "number": 6,
+          "title": "A Kiss of the Indirect Variety",
+          "duration": "23 min",
+          "servers": {
+            "raw": [
+              { "name": "HD-01", "url": "https://server-raw.com/roshidere-s1-e6-1" },
+              { "name": "HD-02", "url": "https://server-raw.com/roshidere-s1-e6-2" },
+              { "name": "HD-03", "url": "https://server-raw.com/roshidere-s1-e6-3" }
+            ],
+            "sub": [
+              { "name": "HD-01", "url": "https://server-sub.com/roshidere-s1-e6-1" },
+              { "name": "HD-02", "url": "https://server-sub.com/roshidere-s1-e6-2" },
+              { "name": "HD-03", "url": "https://server-sub.com/roshidere-s1-e6-3" }
+            ],
+            "dub": [
+              { "name": "HD-01", "url": "https://server-dub.com/roshidere-s1-e6-1" },
+              { "name": "HD-02", "url": "https://server-dub.com/roshidere-s1-e6-2" },
+              { "name": "HD-03", "url": "https://server-dub.com/roshidere-s1-e6-3" }
+            ]
+          }
+        },
+        {
+          "number": 7,
+          "title": "A Storm Arrives",
+          "duration": "24 min",
+          "servers": {
+            "raw": [
+              { "name": "HD-01", "url": "https://server-raw.com/roshidere-s1-e7-1" },
+              { "name": "HD-02", "url": "https://server-raw.com/roshidere-s1-e7-2" },
+              { "name": "HD-03", "url": "https://server-raw.com/roshidere-s1-e7-3" }
+            ],
+            "sub": [
+              { "name": "HD-01", "url": "https://server-sub.com/roshidere-s1-e7-1" },
+              { "name": "HD-02", "url": "https://server-sub.com/roshidere-s1-e7-2" },
+              { "name": "HD-03", "url": "https://server-sub.com/roshidere-s1-e7-3" }
+            ],
+            "dub": [
+              { "name": "HD-01", "url": "https://server-dub.com/roshidere-s1-e7-1" },
+              { "name": "HD-02", "url": "https://server-dub.com/roshidere-s1-e7-2" },
+              { "name": "HD-03", "url": "https://server-dub.com/roshidere-s1-e7-3" }
+            ]
+          }
+        },
+        {
+          "number": 8,
+          "title": "Student Congress",
+          "duration": "24 min",
+          "servers": {
+            "raw": [
+              { "name": "HD-01", "url": "https://server-raw.com/roshidere-s1-e8-1" },
+              { "name": "HD-02", "url": "https://server-raw.com/roshidere-s1-e8-2" },
+              { "name": "HD-03", "url": "https://server-raw.com/roshidere-s1-e8-3" }
+            ],
+            "sub": [
+              { "name": "HD-01", "url": "https://server-sub.com/roshidere-s1-e8-1" },
+              { "name": "HD-02", "url": "https://server-sub.com/roshidere-s1-e8-2" },
+              { "name": "HD-03", "url": "https://server-sub.com/roshidere-s1-e8-3" }
+            ],
+            "dub": [
+              { "name": "HD-01", "url": "https://server-dub.com/roshidere-s1-e8-1" },
+              { "name": "HD-02", "url": "https://server-dub.com/roshidere-s1-e8-2" },
+              { "name": "HD-03", "url": "https://server-dub.com/roshidere-s1-e8-3" }
+            ]
+          }
+        },
+        {
+          "number": 9,
+          "title": "Rom-commy with a Chance of Hypnosis",
+          "duration": "25 min",
+          "servers": {
+            "raw": [
+              { "name": "HD-01", "url": "https://server-raw.com/roshidere-s1-e9-1" },
+              { "name": "HD-02", "url": "https://server-raw.com/roshidere-s1-e9-2" },
+              { "name": "HD-03", "url": "https://server-raw.com/roshidere-s1-e9-3" }
+            ],
+            "sub": [
+              { "name": "HD-01", "url": "https://server-sub.com/roshidere-s1-e9-1" },
+              { "name": "HD-02", "url": "https://server-sub.com/roshidere-s1-e9-2" },
+              { "name": "HD-03", "url": "https://server-sub.com/roshidere-s1-e9-3" }
+            ],
+            "dub": [
+              { "name": "HD-01", "url": "https://server-dub.com/roshidere-s1-e9-1" },
+              { "name": "HD-02", "url": "https://server-dub.com/roshidere-s1-e9-2" },
+              { "name": "HD-03", "url": "https://server-dub.com/roshidere-s1-e9-3" }
+            ]
+          }
+        },
+        {
+          "number": 10,
+          "title": "Birthday Party, Much Belated",
+          "duration": "24 min",
+          "servers": {
+            "raw": [
+              { "name": "HD-01", "url": "https://server-raw.com/roshidere-s1-e10-1" },
+              { "name": "HD-02", "url": "https://server-raw.com/roshidere-s1-e10-2" },
+              { "name": "HD-03", "url": "https://server-raw.com/roshidere-s1-e10-3" }
+            ],
+            "sub": [
+              { "name": "HD-01", "url": "https://server-sub.com/roshidere-s1-e10-1" },
+              { "name": "HD-02", "url": "https://server-sub.com/roshidere-s1-e10-2" },
+              { "name": "HD-03", "url": "https://server-sub.com/roshidere-s1-e10-3" }
+            ],
+            "dub": [
+              { "name": "HD-01", "url": "https://server-dub.com/roshidere-s1-e10-1" },
+              { "name": "HD-02", "url": "https://server-dub.com/roshidere-s1-e10-2" },
+              { "name": "HD-03", "url": "https://server-dub.com/roshidere-s1-e10-3" }
+            ]
+          }
+        },
+        {
+          "number": 11,
+          "title": "An Unexpected Curtain-Raiser",
+          "duration": "24 min",
+          "servers": {
+            "raw": [
+              { "name": "HD-01", "url": "https://server-raw.com/roshidere-s1-e11-1" },
+              { "name": "HD-02", "url": "https://server-raw.com/roshidere-s1-e11-2" },
+              { "name": "HD-03", "url": "https://server-raw.com/roshidere-s1-e11-3" }
+            ],
+            "sub": [
+              { "name": "HD-01", "url": "https://server-sub.com/roshidere-s1-e11-1" },
+              { "name": "HD-02", "url": "https://server-sub.com/roshidere-s1-e11-2" },
+              { "name": "HD-03", "url": "https://server-sub.com/roshidere-s1-e11-3" }
+            ],
+            "dub": [
+              { "name": "HD-01", "url": "https://server-dub.com/roshidere-s1-e11-1" },
+              { "name": "HD-02", "url": "https://server-dub.com/roshidere-s1-e11-2" },
+              { "name": "HD-03", "url": "https://server-dub.com/roshidere-s1-e11-3" }
+            ]
+          }
+        },
+        {
+          "number": 12,
+          "title": "Chin Up and Face Forward",
+          "duration": "25 min",
+          "servers": {
+            "raw": [
+              { "name": "HD-01", "url": "https://server-raw.com/roshidere-s1-e12-1" },
+              { "name": "HD-02", "url": "https://server-raw.com/roshidere-s1-e12-2" },
+              { "name": "HD-03", "url": "https://server-raw.com/roshidere-s1-e12-3" }
+            ],
+            "sub": [
+              { "name": "HD-01", "url": "https://server-sub.com/roshidere-s1-e12-1" },
+              { "name": "HD-02", "url": "https://server-sub.com/roshidere-s1-e12-2" },
+              { "name": "HD-03", "url": "https://server-sub.com/roshidere-s1-e12-3" }
+            ],
+            "dub": [
+              { "name": "HD-01", "url": "https://server-dub.com/roshidere-s1-e12-1" },
+              { "name": "HD-02", "url": "https://server-dub.com/roshidere-s1-e12-2" },
+              { "name": "HD-03", "url": "https://server-dub.com/roshidere-s1-e12-3" }
+            ]
+          }
+        }
+      ]
+    }
+  ]
+},
+{
+  "id": "noor-bd-2025",
+  "slug": "noor-2025",
+  "title": "Noor",
+  "originalTitle": "Noor",
+  "japaneseTitle": "ヌール",
+  "synonyms": ["Noor: A Tale of Love", "Noor (নূর)"],
+  "searchableTitle": "Noor 2025 Arifin Shuvoo Jannatul Ferdous Oishee Raihan Rafi Bioscope+",
+  "airedYear": "Upcoming",
+  "dateAdded": "2025-12-11",
+  "type": "movie",
+  "featured": false,
+  "rating": 7.5,
+  "category": "drama",
+  "premiered": "Winter 2025",
+  "duration": "120 min",
+  "status": "Finished Airing",
+  "description": "Noor falls deeply in love with Shuili, but his intense devotion slowly turns into an unhealthy obsession. As his temper and insecurities grow, their once beautiful marriage begins to unravel. When Shuili leaves, Noor's life spirals out of control, leading him to a path of redemption and confronting memories of a love that nearly destroyed them both.",
+  "posterUrl": "https://i.postimg.cc/PJ38fjqN/img-1-1767197184087.jpg",
+  "backdropUrl": "i.postimg.cc",
+  "trailerUrl": "https://www.youtube.com/watch?v=SPpYzFCj0io",
+  "malScore": null,
+  "imbdScore": 7.8,
+  "popularity": 310,
+  "genres": ["Drama", "Romance", "Social"],
+  "cast": ["Arifin Shuvoo", "Jannatul Ferdous Oishee", "Somu Chowdhury", "Mili Bashar"],
+  "certification": "TV-14",
+  "country": "Bangladesh",
+  "studio": "Quiet on Set Productions",
+  "producers": ["Tiger Media", "Tahsin Saeed", "Ishtiak Sadeeq"],
+  "seasons": [
+    {
+      "seasonNumber": 1,
+      "episodes": [
+        {
+          "number": 1,
+          "title": "Noor",
+          "duration": "120 min",
+          "servers": {
+            "raw": [
+              { "name": "HD-01", "url": "https://filemoon.to/e/jiet2z8047vr" },
+              { "name": "HD-02", "url": "https://server-raw.com/noor-2025-e1-2" },
+              { "name": "HD-03", "url": "https://server-raw.com/noor-2025-e1-3" }
+            ],
+            "sub": [
+              { "name": "HD-01", "url": "https://server-sub.com/noor-2025-e1-1" },
+              { "name": "HD-02", "url": "https://server-sub.com/noor-2025-e1-2" },
+              { "name": "HD-03", "url": "https://server-sub.com/noor-2025-e1-3" }
+            ],
+            "dub": [
+              { "name": "HD-01", "url": "https://filemoon.to/e/jiet2z8047vr" },
+              { "name": "HD-02", "url": "https://server-dub.com/noor-2025-e1-2" },
+              { "name": "HD-03", "url": "https://server-dub.com/noor-2025-e1-3" }
+            ]
+          }
+        }
+      ]
+    }
+  ]
+},
