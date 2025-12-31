@@ -1958,15 +1958,381 @@
   "status": "Finished Airing",
   "description": "In a town where the delinquent-heavy Chidori High and the elite Kikyo Girls' High are bitter rivals, Rintaro Tsumugi, a misunderstood student with a fierce face but a gentle heart, meets Kaoruko Waguri. As they grow closer, they must navigate the deep-seated prejudices and social barriers between their two schools.",
   "posterUrl": "https://cdn.myanimelist.net/images/anime/1133/150446l.jpg",
-  "backdropUrl": "https://i.postimg.cc/76Jn5zx8/Waguri-X-Rintaro.jpg"
+  "backdropUrl": "https://i.postimg.cc/76Jn5zx8/Waguri-X-Rintaro.jpg",
   "trailerUrl": null,
   "malScore": 8.62,
   "imbdScore": 8.2,
   "popularity": 450,
   "genres": ["Romance", "Drama", "School", "Shounen"],
-  "cast": [ "Yoshinori Nakayama", "Honoka Inoue", "Koki Uchiyama", "Aya Yamane"],
+  "cast": ["Yoshinori Nakayama", "Honoka Inoue", "Koki Uchiyama", "Aya Yamane"],
   "certification": "TV-PG",
   "country": "Japan",
   "studio": "CloverWorks",
-  "producers": ["Aniplex", "Kodansha", "Netflix"]
-
+  "producers": ["Aniplex", "Kodansha", "Netflix"],
+  "seasons": [
+    {
+      "seasonNumber": 1,
+      "episodes": [
+        {
+          "number": 1,
+          "title": "Rintaro and Kaoruko",
+          "japaneseTitle": "Rintarou to Kaoruko (凛太郎と薫子)",
+          "duration": "24 min",
+          "servers": {
+            "raw": [
+              { "name": "HD-01", "url": "https://server-raw.com/kaoruhana-s1-e1-1" },
+              { "name": "HD-02", "url": "https://server-raw.com/kaoruhana-s1-e1-2" },
+              { "name": "HD-03", "url": "https://server-raw.com/kaoruhana-s1-e1-3" }
+            ],
+            "sub": [
+              { "name": "HD-01", "url": "https://filemoon.to/e/lyewn4jvexcr" },
+              { "name": "HD-02", "url": "https://server-sub.com/kaoruhana-s1-e1-2" },
+              { "name": "HD-03", "url": "https://server-sub.com/kaoruhana-s1-e1-3" }
+            ],
+            "dub": [
+              { "name": "HD-01", "url": "https://filemoon.to/e/qrirqlnmd77r" },
+              { "name": "HD-02", "url": "https://server-dub.com/kaoruhana-s1-e1-2" },
+              { "name": "HD-03", "url": "https://server-dub.com/kaoruhana-s1-e1-3" }
+            ]
+          }
+        },
+        {
+          "number": 2,
+          "title": "Chidori and Kikyo",
+          "japaneseTitle": "Chidori to Kikyou (千鳥と桔梗)",
+          "duration": "24 min",
+          "servers": {
+            "raw": [
+              { "name": "HD-01", "url": "https://server-raw.com/kaoruhana-s1-e2-1" },
+              { "name": "HD-02", "url": "https://server-raw.com/kaoruhana-s1-e2-2" },
+              { "name": "HD-03", "url": "https://server-raw.com/kaoruhana-s1-e2-3" }
+            ],
+            "sub": [
+              { "name": "HD-01", "url": "https://filemoon.to/e/obaxt7enrvsu" },
+              { "name": "HD-02", "url": "https://server-sub.com/kaoruhana-s1-e2-2" },
+              { "name": "HD-03", "url": "https://server-sub.com/kaoruhana-s1-e2-3" }
+            ],
+            "dub": [
+              { "name": "HD-01", "url": "https://filemoon.to/e/ofh3giughrsv" },
+              { "name": "HD-02", "url": "https://server-dub.com/kaoruhana-s1-e2-2" },
+              { "name": "HD-03", "url": "https://server-dub.com/kaoruhana-s1-e2-3" }
+            ]
+          }
+        },
+        {
+          "number": 3,
+          "title": "A Kind Person",
+          "japaneseTitle": "Yasashii Hito (優しい人)",
+          "duration": "24 min",
+          "servers": {
+            "raw": [
+              { "name": "HD-01", "url": "https://server-raw.com/kaoruhana-s1-e3-1" },
+              { "name": "HD-02", "url": "https://server-raw.com/kaoruhana-s1-e3-2" },
+              { "name": "HD-03", "url": "https://server-raw.com/kaoruhana-s1-e3-3" }
+            ],
+            "sub": [
+              { "name": "HD-01", "url": "https://filemoon.to/e/4vhqymxd2vub" },
+              { "name": "HD-02", "url": "https://server-sub.com/kaoruhana-s1-e3-2" },
+              { "name": "HD-03", "url": "https://server-sub.com/kaoruhana-s1-e3-3" }
+            ],
+            "dub": [
+              { "name": "HD-01", "url": "https://filemoon.to/e/ll5ahzzr8on7" },
+              { "name": "HD-02", "url": "https://server-dub.com/kaoruhana-s1-e3-2" },
+              { "name": "HD-03", "url": "https://server-dub.com/kaoruhana-s1-e3-3" }
+            ]
+          }
+        },
+        {
+          "number": 4,
+          "title": "Warmth of the Heart",
+          "japaneseTitle": "Kokoro no Ondo (心の温度)",
+          "duration": "24 min",
+          "servers": {
+            "raw": [
+              { "name": "HD-01", "url": "https://server-raw.com/kaoruhana-s1-e4-1" },
+              { "name": "HD-02", "url": "https://server-raw.com/kaoruhana-s1-e4-2" },
+              { "name": "HD-03", "url": "https://server-raw.com/kaoruhana-s1-e4-3" }
+            ],
+            "sub": [
+              { "name": "HD-01", "url": "https://filemoon.to/e/nv3s9i2efv79" },
+              { "name": "HD-02", "url": "https://server-sub.com/kaoruhana-s1-e4-2" },
+              { "name": "HD-03", "url": "https://server-sub.com/kaoruhana-s1-e4-3" }
+            ],
+            "dub": [
+              { "name": "HD-01", "url": "https://filemoon.to/e/0rrzgxbglijb" },
+              { "name": "HD-02", "url": "https://server-dub.com/kaoruhana-s1-e4-2" },
+              { "name": "HD-03", "url": "https://server-dub.com/kaoruhana-s1-e4-3" }
+            ]
+          }
+        },
+        {
+          "number": 5,
+          "title": "Premonition of a New Beginning",
+          "japaneseTitle": "Hajimari no Yokan (はじまりの予感)",
+          "duration": "24 min",
+          "servers": {
+            "raw": [
+              { "name": "HD-01", "url": "https://server-raw.com/kaoruhana-s1-e5-1" },
+              { "name": "HD-02", "url": "https://server-raw.com/kaoruhana-s1-e5-2" },
+              { "name": "HD-03", "url": "https://server-raw.com/kaoruhana-s1-e5-3" }
+            ],
+            "sub": [
+              { "name": "HD-01", "url": "https://filemoon.to/e/d1wlik3ltseq" },
+              { "name": "HD-02", "url": "https://server-sub.com/kaoruhana-s1-e5-2" },
+              { "name": "HD-03", "url": "https://server-sub.com/kaoruhana-s1-e5-3" }
+            ],
+            "dub": [
+              { "name": "HD-01", "url": "https://filemoon.to/e/8hehp88wuuzi" },
+              { "name": "HD-02", "url": "https://server-dub.com/kaoruhana-s1-e5-2" },
+              { "name": "HD-03", "url": "https://server-dub.com/kaoruhana-s1-e5-3" }
+            ]
+          }
+        },
+        {
+          "number": 6,
+          "title": "Self-Loathing / I Love You!",
+          "japaneseTitle": "Daikirai Daisuki (大嫌い 大好き)",
+          "duration": "24 min",
+          "servers": {
+            "raw": [
+              { "name": "HD-01", "url": "https://server-raw.com/kaoruhana-s1-e6-1" },
+              { "name": "HD-02", "url": "https://server-raw.com/kaoruhana-s1-e6-2" },
+              { "name": "HD-03", "url": "https://server-raw.com/kaoruhana-s1-e6-3" }
+            ],
+            "sub": [
+              { "name": "HD-01", "url": "https://filemoon.to/e/xzv60bwz4i2z" },
+              { "name": "HD-02", "url": "https://server-sub.com/kaoruhana-s1-e6-2" },
+              { "name": "HD-03", "url": "https://server-sub.com/kaoruhana-s1-e6-3" }
+            ],
+            "dub": [
+              { "name": "HD-01", "url": "https://filemoon.to/e/y1ucn2001ky8" },
+              { "name": "HD-02", "url": "https://server-dub.com/kaoruhana-s1-e6-2" },
+              { "name": "HD-03", "url": "https://server-dub.com/kaoruhana-s1-e6-3" }
+            ]
+          }
+        },
+        {
+          "number": 7,
+          "title": "Coolest Guy Ever",
+          "japaneseTitle": "Kakkoii Otoko (かっこいい男)",
+          "duration": "24 min",
+          "servers": {
+            "raw": [
+              { "name": "HD-01", "url": "https://server-raw.com/kaoruhana-s1-e7-1" },
+              { "name": "HD-02", "url": "https://server-raw.com/kaoruhana-s1-e7-2" },
+              { "name": "HD-03", "url": "https://server-raw.com/kaoruhana-s1-e7-3" }
+            ],
+            "sub": [
+              { "name": "HD-01", "url": "https://filemoon.to/e/kuboimxde4yy" },
+              { "name": "HD-02", "url": "https://server-sub.com/kaoruhana-s1-e7-2" },
+              { "name": "HD-03", "url": "https://server-sub.com/kaoruhana-s1-e7-3" }
+            ],
+            "dub": [
+              { "name": "HD-01", "url": "https://filemoon.to/e/5kjf3zghgw6r" },
+              { "name": "HD-02", "url": "https://server-dub.com/kaoruhana-s1-e7-2" },
+              { "name": "HD-03", "url": "https://server-dub.com/kaoruhana-s1-e7-3" }
+            ]
+          }
+        },
+        {
+          "number": 8,
+          "title": "The Meaning of These Feelings",
+          "japaneseTitle": "Kanjou no Shoutai (感情の正体)",
+          "duration": "24 min",
+          "servers": {
+            "raw": [
+              { "name": "HD-01", "url": "https://server-raw.com/kaoruhana-s1-e8-1" },
+              { "name": "HD-02", "url": "https://server-raw.com/kaoruhana-s1-e8-2" },
+              { "name": "HD-03", "url": "https://server-raw.com/kaoruhana-s1-e8-3" }
+            ],
+            "sub": [
+              { "name": "HD-01", "url": "https://filemoon.to/e/he9733ka5s3m" },
+              { "name": "HD-02", "url": "https://server-sub.com/kaoruhana-s1-e8-2" },
+              { "name": "HD-03", "url": "https://server-sub.com/kaoruhana-s1-e8-3" }
+            ],
+            "dub": [
+              { "name": "HD-01", "url": "https://filemoon.to/e/n5wnmbar21fl" },
+              { "name": "HD-02", "url": "https://server-dub.com/kaoruhana-s1-e8-2" },
+              { "name": "HD-03", "url": "https://server-dub.com/kaoruhana-s1-e8-3" }
+            ]
+          }
+        },
+        {
+          "number": 9,
+          "title": "Blond Hair and Pierced Ears",
+          "japaneseTitle": "Kinpatsu to Pierce (金髪とピアス)",
+          "duration": "24 min",
+          "servers": {
+            "raw": [
+              { "name": "HD-01", "url": "https://server-raw.com/kaoruhana-s1-e9-1" },
+              { "name": "HD-02", "url": "https://server-raw.com/kaoruhana-s1-e9-2" },
+              { "name": "HD-03", "url": "https://server-raw.com/kaoruhana-s1-e9-3" }
+            ],
+            "sub": [
+              { "name": "HD-01", "url": "https://filemoon.to/e/pwuxln5yy1am" },
+              { "name": "HD-02", "url": "https://server-sub.com/kaoruhana-s1-e9-2" },
+              { "name": "HD-03", "url": "https://server-sub.com/kaoruhana-s1-e9-3" }
+            ],
+            "dub": [
+              { "name": "HD-01", "url": "https://filemoon.to/e/cgzznoa6xv9a" },
+              { "name": "HD-02", "url": "https://server-dub.com/kaoruhana-s1-e9-2" },
+              { "name": "HD-03", "url": "https://server-dub.com/kaoruhana-s1-e9-3" }
+            ]
+          }
+        },
+        {
+          "number": 10,
+          "title": "Summer Storm",
+          "japaneseTitle": "Aoi Arashi (青い嵐)",
+          "duration": "24 min",
+          "servers": {
+            "raw": [
+              { "name": "HD-01", "url": "https://server-raw.com/kaoruhana-s1-e10-1" },
+              { "name": "HD-02", "url": "https://server-raw.com/kaoruhana-s1-e10-2" },
+              { "name": "HD-03", "url": "https://server-raw.com/kaoruhana-s1-e10-3" }
+            ],
+            "sub": [
+              { "name": "HD-01", "url": "https://filemoon.to/e/gm784yys25zo" },
+              { "name": "HD-02", "url": "https://server-sub.com/kaoruhana-s1-e10-2" },
+              { "name": "HD-03", "url": "https://server-sub.com/kaoruhana-s1-e10-3" }
+            ],
+            "dub": [
+              { "name": "HD-01", "url": "https://filemoon.to/e/jmi55pe23fwi" },
+              { "name": "HD-02", "url": "https://server-dub.com/kaoruhana-s1-e10-2" },
+              { "name": "HD-03", "url": "https://server-dub.com/kaoruhana-s1-e10-3" }
+            ]
+          }
+        },
+        {
+          "number": 11,
+          "title": "A Morsel of Warmth",
+          "japaneseTitle": "Nukumori no Hitokuchi (ぬくもりのひとくち)",
+          "duration": "24 min",
+          "servers": {
+            "raw": [
+              { "name": "HD-01", "url": "https://server-raw.com/kaoruhana-s1-e11-1" },
+              { "name": "HD-02", "url": "https://server-raw.com/kaoruhana-s1-e11-2" },
+              { "name": "HD-03", "url": "https://server-raw.com/kaoruhana-s1-e11-3" }
+            ],
+            "sub": [
+              { "name": "HD-01", "url": "https://filemoon.to/e/isbqjcv9oguj" },
+              { "name": "HD-02", "url": "https://server-sub.com/kaoruhana-s1-e11-2" },
+              { "name": "HD-03", "url": "https://server-sub.com/kaoruhana-s1-e11-3" }
+            ],
+            "dub": [
+              { "name": "HD-01", "url": "https://filemoon.to/e/4jf1wink36iq" },
+              { "name": "HD-02", "url": "https://server-dub.com/kaoruhana-s1-e11-2" },
+              { "name": "HD-03", "url": "https://server-dub.com/kaoruhana-s1-e11-3" }
+            ]
+          }
+        },
+        {
+          "number": 12,
+          "title": "Bewilderment at the Beachside",
+          "japaneseTitle": "Umibe no Madoi (海辺の惑い)",
+          "duration": "24 min",
+          "servers": {
+            "raw": [
+              { "name": "HD-01", "url": "https://server-raw.com/kaoruhana-s1-e12-1" },
+              { "name": "HD-02", "url": "https://server-raw.com/kaoruhana-s1-e12-2" },
+              { "name": "HD-03", "url": "https://server-raw.com/kaoruhana-s1-e12-3" }
+            ],
+            "sub": [
+              { "name": "HD-01", "url": "https://filemoon.to/e/udnx6btrxn1k" },
+              { "name": "HD-02", "url": "https://server-sub.com/kaoruhana-s1-e12-2" },
+              { "name": "HD-03", "url": "https://server-sub.com/kaoruhana-s1-e12-3" }
+            ],
+            "dub": [
+              { "name": "HD-01", "url": "https://filemoon.to/e/l25ltei2dav1" },
+              { "name": "HD-02", "url": "https://server-dub.com/kaoruhana-s1-e12-2" },
+              { "name": "HD-03", "url": "https://server-dub.com/kaoruhana-s1-e12-3" }
+            ]
+          }
+        },
+        {
+          "number": 13,
+          "title": "Kaoruko and Rintaro",
+          "japaneseTitle": "Kaoruko to Rintarou (薫子と凛太郎)",
+          "duration": "24 min",
+          "servers": {
+            "raw": [
+              { "name": "HD-01", "url": "https://server-raw.com/kaoruhana-s1-e13-1" },
+              { "name": "HD-02", "url": "https://server-raw.com/kaoruhana-s1-e13-2" },
+              { "name": "HD-03", "url": "https://server-raw.com/kaoruhana-s1-e13-3" }
+            ],
+            "sub": [
+              { "name": "HD-01", "url": "https://filemoon.to/e/uaqenv5u0bqo" },
+              { "name": "HD-02", "url": "https://server-sub.com/kaoruhana-s1-e13-2" },
+              { "name": "HD-03", "url": "https://server-sub.com/kaoruhana-s1-e13-3" }
+            ],
+            "dub": [
+              { "name": "HD-01", "url": "https://filemoon.to/e/eh07gan1qkx3" },
+              { "name": "HD-02", "url": "https://server-dub.com/kaoruhana-s1-e13-2" },
+              { "name": "HD-03", "url": "https://server-dub.com/kaoruhana-s1-e13-3" }
+            ]
+          }
+        }
+      ]
+    }
+  ]
+},
+{
+  "id": "csm-movie-2025",
+  "slug": "chainsaw-man-the-movie-reze-arc",
+  "title": "Chainsaw Man – The Movie: Reze Arc",
+  "originalTitle": "Gekijō-ban Chensō Man Reze-hen",
+  "japaneseTitle": "劇場版 チェンソーマン レゼ篇",
+  "synonyms": ["Chainsaw Man: Reze Arc", "Chainsaw Man: Bomb Girl Arc"],
+  "searchableTitle": "Chainsaw Man – The Movie: Reze Arc Gekijō-ban Chensō Man Reze-hen 劇場版 チェンソーマン レゼ篇 Reze Arc",
+  "airedYear": 2025,
+  "dateAdded": "2025-09-19",
+  "type": "anime",
+  "featured": true,
+  "rating": 8.8,
+  "category": "action",
+  "premiered": "Fall 2025",
+  "duration": "100 min",
+  "status": "Finished Airing",
+  "description": "A direct sequel to the first season, the film follows Denji as he navigates his life as a hybrid devil hunter. His peaceful days are interrupted when he meets Reze, a mysterious girl working at a local cafe. What starts as a budding romance quickly spirals into a high-stakes battle as Reze's true identity as the Bomb Devil is revealed, leading to an explosive confrontation that tests Denji's heart and resolve.",
+  "posterUrl": "cdn.myanimelist.net",
+  "backdropUrl": "i.postimg.cc",
+  "trailerUrl": "https://www.youtube.com/watch?v=EPaoHkV0dYw",
+  "malScore": 8.75,
+  "imbdScore": 8.4,
+  "popularity": 120,
+  "genres": ["Action", "Gore", "Supernatural", "Romance", "Shounen"],
+  "cast": ["Kikunosuke Toya", "Reina Ueda", "Tomori Kusunoki", "Fairouz Ai", "Shogo Sakata"],
+  "certification": "R-17+",
+  "country": "Japan",
+  "studio": "MAPPA",
+  "producers": ["Toho", "Crunchyroll", "Sony Pictures"],
+  "seasons": [
+    {
+      "seasonNumber": 1,
+      "episodes": [
+        {
+          "number": 1,
+          "title": "The Reze Arc",
+          "duration": "100 min",
+          "servers": {
+            "raw": [
+              { "name": "HD-01", "url": "https://server-raw.com/csm-movie-2025" },
+              { "name": "HD-02", "url": "https://server-raw.com/csm-movie-2025-2" },
+              { "name": "HD-03", "url": "https://server-raw.com/csm-movie-2025-3" }
+            ],
+            "sub": [
+              { "name": "HD-01", "url": "https://filemoon.to/e/veszqo62aopd" },
+              { "name": "HD-02", "url": "https://server-sub.com/csm-movie-2025-2" },
+              { "name": "HD-03", "url": "https://server-sub.com/csm-movie-2025-3" }
+            ],
+            "dub": [
+              { "name": "HD-01", "url": "https://filemoon.to/e/bpvatw7inwsr" },
+              { "name": "HD-02", "url": "https://server-dub.com/csm-movie-2025-2" },
+              { "name": "HD-03", "url": "https://server-dub.com/csm-movie-2025-3" }
+            ]
+          }
+        }
+      ]
+    }
+  ]
+},
