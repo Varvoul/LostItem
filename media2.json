@@ -4289,5 +4289,117 @@
     "studio": "HiDIVE",
     "producers": ["Shogakukan"]
   },
+  {
+    "id": "spy-family-s1",
+    "slug": "spy-family-season-1",
+    "title": "SPY×FAMILY Season 1",
+    "originalTitle": "SPY×FAMILY",
+    "japaneseTitle": "スパイファミリー",
+    "synonyms": ["MHA Season 1", "Boku no Hero Academia S1"],
+    "searchableTitle": "SPY×FAMILY Season 1 スパイファミリー Loid Anya Yor Forger Operation Strix 2022",
+    "airedYear": 2022,
+    "dateAdded": "2024-12-16",
+    "type": "anime",
+    "featured": false,
+    "rating": 8.6,
+    "category": "action",
+    "premiered": "Spring 2022",
+    "duration": "24 min",
+    "status": "Finished Airing",
+    "description": "To maintain peace between rival nations Westalis and Ostania, Westalian spy 'Twilight' must infiltrate an elite private school. To do so, he creates a fake family with an orphan telepath and a professional assassin, none of whom know each other's secrets.",
+    "posterUrl": "cdn.myanimelist.net",
+    "backdropUrl": "image.tmdb.org",
+    "trailerUrl": "www.youtube.com",
+    "malScore": 8.50,
+    "imbdScore": 8.4,
+    "popularity": 45,
+    "genres": ["Action", "Comedy", "Slice of Life", "Shounen"],
+    "cast": ["Takuya Eguchi", "Atsumi Tanezaki", "Saori Hayami"],
+    "certification": "TV-14",
+    "country": "Japan",
+    "studio": "Wit Studio, CloverWorks",
+    "producers": ["TOHO", "TV Tokyo", "Shueisha"],
+    "seasons": [
+      {
+        "seasonNumber": 1,
+        "episodes": [
+          {
+            "number": 1,
+            "title": "Operation Strix",
+            "duration": "24 min",
+            "servers": {
+              "raw": [
+                { "name": "HD-01", "url": "server-raw.com" }
+              ],
+              "sub": [
+                { "name": "HD-01", "url": "server-sub.com" }
+              ],
+              "dub": [
+                { "name": "HD-01", "url": "server-dub.com" }
+              ]
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+  "id": "spy-family-s2",
+  "slug": "spy-family-season-2",
+  "title": "SPY×FAMILY Season 2",
+  "originalTitle": "SPY×FAMILY Season 2",
+  "japaneseTitle": "SPY×FAMILY 第2期",
+  "synonyms": ["Spy x Family S2"],
+  "searchableTitle": "SPY×FAMILY Season 2 Cruise Adventure Arc 2023",
+  "airedYear": 2023,
+  "dateAdded": "2024-12-16",
+  "type": "anime",
+  "featured": false,
+  "rating": 8.3,
+  "category": "action",
+  "premiered": "Fall 2023",
+  "duration": "24 min",
+  "status": "Finished Airing",
+  "description": "The Forger family's adventures continue with the high-stakes 'Cruise Adventure' arc, where Yor must protect a client on a luxury liner while Loid and Anya happen to be on the same ship.",
+  "posterUrl": "cdn.myanimelist.net",
+  "backdropUrl": "image.tmdb.org",
+  "trailerUrl": "www.youtube.com",
+  "malScore": 8.16,
+  "imbdScore": 8.2,
+  "popularity": 88,
+  "genres": ["Action", "Comedy", "Slice of Life", "Shounen"],
+  "cast": ["Takuya Eguchi", "Atsumi Tanezaki", "Saori Hayami"],
+  "certification": "TV-14",
+  "country": "Japan",
+  "studio": "Wit Studio, CloverWorks",
+  "producers": ["TOHO", "TV Tokyo", "Shueisha"],
+  "seasons": [
+    {
+      "seasonNumber": 2,
+      "episodes": [
+        {
+          "number": 26,
+          "title": "Let's Follow Mama and Papa",
+          "duration": "24 min",
+          "servers": {
+            "raw": [{ "name": "HD-01", "url": "server-raw.com" }],
+            "sub": [{ "name": "HD-01", "url": "server-sub.com" }],
+            "dub": [{ "name": "HD-01", "url": "server-dub.com" }]
+          }
+        },
+        {
+          "number": 30,
+          "title": "The Fearsome Luxury Cruise Ship",
+          "duration": "24 min",
+          "servers": {
+            "raw": [{ "name": "HD-01", "url": "server-raw.com" }],
+            "sub": [{ "name": "HD-01", "url": "server-sub.com" }],
+            "dub": [{ "name": "HD-01", "url": "server-dub.com" }]
+          }
+        }
+      ]
+    }
+  ]
+},
 
 
