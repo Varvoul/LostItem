@@ -3808,54 +3808,6 @@
     }
   ]
 },
-{
-  "id": "spy-family-s3",
-  "slug": "spy-family-season-3",
-  "title": "SPY×FAMILY Season 3",
-  "originalTitle": "SPY×FAMILY Season 3",
-  "japaneseTitle": "SPY×FAMILY 第3期",
-  "synonyms": ["Spy x Family S3"],
-  "searchableTitle": "SPY×FAMILY Season 3 Loid Anya Yor Bond Forger",
-  "airedYear": 2025,
-  "dateAdded": "2025-10-04",
-  "type": "anime",
-  "featured": true,
-  "rating": 8.5,
-  "category": "comedy",
-  "premiered": "Fall 2025",
-  "duration": "24 min",
-  "status": "Finished Airing",
-  "description": "Twilight, Yor, and Anya return as their pretend family life gets even more complicated with higher stakes for world peace.",
-  "posterUrl": "cdn.myanimelist.net",
-  "backdropUrl": "image.tmdb.org",
-  "trailerUrl": "www.youtube.com",
-  "malScore": 8.40,
-  "imbdScore": 8.5,
-  "popularity": 25,
-  "genres": ["Comedy", "Action", "Slice of Life"],
-  "cast": ["Takuya Eguchi", "Atsumi Tanezaki", "Saori Hayami"],
-  "certification": "TV-14",
-  "country": "Japan",
-  "studio": "Wit Studio, CloverWorks",
-  "producers": ["TOHO", "TV Tokyo"],
-  "seasons": [
-    {
-      "seasonNumber": 3,
-      "episodes": [
-        {
-          "number": 1,
-          "title": "Mission 38",
-          "duration": "24 min",
-          "servers": {
-            "raw": [{ "name": "HD-01", "url": "server-raw.com" }],
-            "sub": [{ "name": "HD-01", "url": "server-sub.com" }],
-            "dub": [{ "name": "HD-01", "url": "server-dub.com" }]
-          }
-        }
-      ]
-    }
-  ]
-},
   {
     "id": "opm-s3",
     "slug": "one-punch-man-season-3",
