@@ -509,14 +509,14 @@
     "rating": 0.0,
     "category": "action",
     "premiered": "July 2, 2025",
-    "duration": "Upcoming",
-    "status": "Upcoming",
+    "duration": "133min",
+    "status": "Finished",
     "description": "A new era of the Jurassic franchise begins. Five years after the events of Dominion, a specialized team races to secure DNA samples from the world's most dangerous dinosaurs before they fall into the wrong hands.",
     "posterUrl": "https://image.tmdb.org/t/p/original/q0fGCmjLu42MPlSO9OYWpI5w86I.jpg",
     "backdropUrl": "https://image.tmdb.org/t/p/original/tcYO8ay3A0liCWxHu2creU3Q9IB.jpg",
     "trailerUrl": "https://www.youtube.com/watch?v=example-jurassic-rebirth-trailer",
     "malScore": null,
-    "imbdScore": 0.0,
+    "imbdScore": 7.0,
     "popularity": 96,
     "genres": ["Action", "Sci-Fi", "Adventure", "Thriller"],
     "cast": ["Scarlett Johansson", "Jonathan Bailey", "Mahershala Ali", "Manuel Garcia-Rulfo"],
@@ -534,8 +534,9 @@
             "duration": "Unknown",
             "servers": {
               "raw": [
-                { "name": "Raw-4K", "url": "https://server-raw.com/jw-rebirth-1" },
-                { "name": "Raw-HD", "url": "https://server-raw.com/jw-rebirth-2" }
+                { "name": "HD-01", "url": "https://filemoon.to/e/egtfatk7905y" },
+                { "name": "HD-02", "url": "https://hglink.to/x7m2gagwgjgo" },
+                { "name": "HD-03", "url": "https://mxdrop.to/e/03z703ejhmed39" }
               ],
               "sub": [
                 { "name": "Sub-HD-01", "url": "https://server-sub.com/jw-rebirth-1" },
