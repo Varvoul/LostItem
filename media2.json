@@ -3702,20 +3702,298 @@
   "country": "Japan",
   "studio": "Liden Films",
   "producers": ["Fuji TV", "Aniplex", "Sentai Filmworks"],
-  "episodes": [
-    { "number": 1, "title": "Night Flight", "duration": "23 min" },
-    { "number": 2, "title": "Do You Do LINE?", "duration": "23 min" },
-    { "number": 3, "title": "A Lot Came Out", "duration": "23 min" },
-    { "number": 4, "title": "Isn't This a Bit Tight?", "duration": "23 min" },
-    { "number": 5, "title": "That's a Problem", "duration": "23 min" },
-    { "number": 6, "title": "Might as Well Have Fun", "duration": "23 min" },
-    { "number": 7, "title": "You Reproduce?", "duration": "23 min" },
-    { "number": 8, "title": "All of Us", "duration": "23 min" },
-    { "number": 9, "title": "Unfair", "duration": "23 min" },
-    { "number": 10, "title": "You're Making Me Blush", "duration": "23 min" },
-    { "number": 11, "title": "Do You Know What a Vampire Is?", "duration": "23 min" },
-    { "number": 12, "title": "Today's My Parents' Night Away", "duration": "23 min" },
-    { "number": 13, "title": "Yofukashi no Uta", "duration": "23 min" }
+  "seasons": [
+    {
+      "seasonNumber": 1,
+      "episodes": [
+        {
+          "number": 1,
+          "title": "Night Flight",
+          "duration": "23 min",
+          "servers": {
+            "raw": [
+              { "name": "HD-01", "url": "https://filemoon.to/e/egabpcsc6xgd/Call_of_the_Night_Sub_Ep01" },
+              { "name": "HD-02", "url": "https://hglink.to/e/5wm8mc3yj6or" },
+              { "name": "HD-03", "url": "https://server-raw.com/call-night-s1-e1-3" }
+            ],
+            "sub": [
+              { "name": "HD-01", "url": "https://filemoon.to/e/egabpcsc6xgd/Call_of_the_Night_Sub_Ep01" },
+              { "name": "HD-02", "url": "https://hglink.to/e/5wm8mc3yj6or" },
+              { "name": "HD-03", "url": "https://server-sub.com/call-night-s1-e1-3" }
+            ],
+            "dub": [
+              { "name": "HD-01", "url": "https://filemoon.to/e/loc4imbfm0qr/Watch_Call_of_the_Night_Dub_Ep01" },
+              { "name": "HD-02", "url": "https://hglink.to/e/z3whhd6bb0hs" },
+              { "name": "HD-03", "url": "https://server-dub.com/call-night-s1-e1-3" }
+            ]
+          }
+        },
+        {
+          "number": 2,
+          "title": "Do You Do LINE?",
+          "duration": "23 min",
+          "servers": {
+            "raw": [
+              { "name": "HD-01", "url": "https://filemoon.to/e/khwzy19zb8vm/Call_of_the_Night_Ep02" },
+              { "name": "HD-02", "url": "https://hglink.to/e/r3c1d6cgqae9" },
+              { "name": "HD-03", "url": "https://server-raw.com/call-night-s1-e2-3" }
+            ],
+            "sub": [
+              { "name": "HD-01", "url": "https://filemoon.to/e/khwzy19zb8vm/Call_of_the_Night_Ep02" },
+              { "name": "HD-02", "url": "https://hglink.to/e/r3c1d6cgqae9" },
+              { "name": "HD-03", "url": "https://server-sub.com/call-night-s1-e2-3" }
+            ],
+            "dub": [
+              { "name": "HD-01", "url": "https://filemoon.to/e/op8a3fupfd6z/Watch_Call_of_the_Night_Dub_Ep02" },
+              { "name": "HD-02", "url": "https://hglink.to/e/be6vsdpo4pns" },
+              { "name": "HD-03", "url": "https://server-dub.com/call-night-s1-e2-3" }
+            ]
+          }
+        },
+        {
+          "number": 3,
+          "title": "A Lot Came Out",
+          "duration": "23 min",
+          "servers": {
+            "raw": [
+              { "name": "HD-01", "url": "https://filemoon.to/e/lipaajjh6zao/Call_of_the_Night_Ep03" },
+              { "name": "HD-02", "url": "https://hglink.to/e/4jxjgrmu7k1o" },
+              { "name": "HD-03", "url": "https://server-raw.com/call-night-s1-e3-3" }
+            ],
+            "sub": [
+              { "name": "HD-01", "url": "https://filemoon.to/e/lipaajjh6zao/Call_of_the_Night_Ep03" },
+              { "name": "HD-02", "url": "https://hglink.to/e/4jxjgrmu7k1o" },
+              { "name": "HD-03", "url": "https://server-sub.com/call-night-s1-e3-3" }
+            ],
+            "dub": [
+              { "name": "HD-01", "url": "https://filemoon.to/e/6c5o5g0k1a1v/Watch_Call_of_the_Night_Dub_Ep03" },
+              { "name": "HD-02", "url": "https://hglink.to/e/4dxvbgbg63ts" },
+              { "name": "HD-03", "url": "https://server-dub.com/call-night-s1-e3-3" }
+            ]
+          }
+        },
+        {
+          "number": 4,
+          "title": "Isn't This a Bit Tight?",
+          "duration": "23 min",
+          "servers": {
+            "raw": [
+              { "name": "HD-01", "url": "https://filemoon.to/e/tkpv7mk35kwh/Watch_Call_of_the_Night_Ep04" },
+              { "name": "HD-02", "url": "https://hglink.to/e/ta1vjrirafi1" },
+              { "name": "HD-03", "url": "https://server-raw.com/call-night-s1-e4-3" }
+            ],
+            "sub": [
+              { "name": "HD-01", "url": "https://filemoon.to/e/tkpv7mk35kwh/Watch_Call_of_the_Night_Ep04" },
+              { "name": "HD-02", "url": "https://hglink.to/e/ta1vjrirafi1" },
+              { "name": "HD-03", "url": "https://server-sub.com/call-night-s1-e4-3" }
+            ],
+            "dub": [
+              { "name": "HD-01", "url": "https://filemoon.to/e/gpadw2vb8q0s/Watch_Call_of_the_Night_Dub_Ep04" },
+              { "name": "HD-02", "url": "https://hglink.to/e/3qwnnt1op1uw" },
+              { "name": "HD-03", "url": "https://server-dub.com/call-night-s1-e4-3" }
+            ]
+          }
+        },
+        {
+          "number": 5,
+          "title": "That's a Problem",
+          "duration": "23 min",
+          "servers": {
+            "raw": [
+              { "name": "HD-01", "url": "https://filemoon.to/e/z4ukn2w6939h/Watch_Call_of_the_Night_Ep05" },
+              { "name": "HD-02", "url": "https://hglink.to/e/epque0orbpho" },
+              { "name": "HD-03", "url": "https://server-raw.com/call-night-s1-e5-3" }
+            ],
+            "sub": [
+              { "name": "HD-01", "url": "https://filemoon.to/e/z4ukn2w6939h/Watch_Call_of_the_Night_Ep05" },
+              { "name": "HD-02", "url": "https://hglink.to/e/epque0orbpho" },
+              { "name": "HD-03", "url": "https://server-sub.com/call-night-s1-e5-3" }
+            ],
+            "dub": [
+              { "name": "HD-01", "url": "https://filemoon.to/e/nlof4jmvldia/Watch_Call_of_the_Night_Dub_Ep05" },
+              { "name": "HD-02", "url": "https://hglink.to/e/beynaeb56bhv" },
+              { "name": "HD-03", "url": "https://server-dub.com/call-night-s1-e5-3" }
+            ]
+          }
+        },
+        {
+          "number": 6,
+          "title": "Might as Well Have Fun",
+          "duration": "23 min",
+          "servers": {
+            "raw": [
+              { "name": "HD-01", "url": "https://filemoon.to/e/n8qk90o72pa4/Watch_Call_of_the_Night_Ep06" },
+              { "name": "HD-02", "url": "https://hglink.to/e/knylfpzgg596" },
+              { "name": "HD-03", "url": "https://server-raw.com/call-night-s1-e6-3" }
+            ],
+            "sub": [
+              { "name": "HD-01", "url": "https://filemoon.to/e/n8qk90o72pa4/Watch_Call_of_the_Night_Ep06" },
+              { "name": "HD-02", "url": "https://hglink.to/e/knylfpzgg596" },
+              { "name": "HD-03", "url": "https://server-sub.com/call-night-s1-e6-3" }
+            ],
+            "dub": [
+              { "name": "HD-01", "url": "https://filemoon.to/e/qtxkjhox22zc/Watch_Call_of_the_Night_Dub_Ep06" },
+              { "name": "HD-02", "url": "https://hglink.to/e/ujqky92cycq1" },
+              { "name": "HD-03", "url": "https://server-dub.com/call-night-s1-e6-3" }
+            ]
+          }
+        },
+        {
+          "number": 7,
+          "title": "You Reproduce?",
+          "duration": "23 min",
+          "servers": {
+            "raw": [
+              { "name": "HD-01", "url": "https://filemoon.to/e/bt8a672j1f7n/Watch_Call_of_the_Night_Ep07" },
+              { "name": "HD-02", "url": "https://hglink.to/e/ken9tt31ajfq" },
+              { "name": "HD-03", "url": "https://server-raw.com/call-night-s1-e7-3" }
+            ],
+            "sub": [
+              { "name": "HD-01", "url": "https://filemoon.to/e/bt8a672j1f7n/Watch_Call_of_the_Night_Ep07" },
+              { "name": "HD-02", "url": "https://hglink.to/e/ken9tt31ajfq" },
+              { "name": "HD-03", "url": "https://server-sub.com/call-night-s1-e7-3" }
+            ],
+            "dub": [
+              { "name": "HD-01", "url": "https://filemoon.to/e/gjumpkesfnq1/Watch_Call_of_the_Night_Dub_Ep07" },
+              { "name": "HD-02", "url": "https://hglink.to/e/4xevo1fvc90r" },
+              { "name": "HD-03", "url": "https://server-dub.com/call-night-s1-e7-3" }
+            ]
+          }
+        },
+        {
+          "number": 8,
+          "title": "All of Us",
+          "duration": "23 min",
+          "servers": {
+            "raw": [
+              { "name": "HD-01", "url": "https://filemoon.to/e/za6u2wlkrdq2/Watch_Call_of_the_Night_Ep08" },
+              { "name": "HD-02", "url": "https://hglink.to/e/lkfznpg75cyt" },
+              { "name": "HD-03", "url": "https://server-raw.com/call-night-s1-e8-3" }
+            ],
+            "sub": [
+              { "name": "HD-01", "url": "https://filemoon.to/e/za6u2wlkrdq2/Watch_Call_of_the_Night_Ep08" },
+              { "name": "HD-02", "url": "https://hglink.to/e/lkfznpg75cyt" },
+              { "name": "HD-03", "url": "https://server-sub.com/call-night-s1-e8-3" }
+            ],
+            "dub": [
+              { "name": "HD-01", "url": "https://filemoon.to/e/o2hwda8j7vfo/Watch_Call_of_the_Night_Dub_Ep08" },
+              { "name": "HD-02", "url": "https://hglink.to/e/0vgc4f22g6xp" },
+              { "name": "HD-03", "url": "https://server-dub.com/call-night-s1-e8-3" }
+            ]
+          }
+        },
+        {
+          "number": 9,
+          "title": "Unfair",
+          "duration": "23 min",
+          "servers": {
+            "raw": [
+              { "name": "HD-01", "url": "https://filemoon.to/e/pq0ym6mrrrm6/Watch_Call_of_the_Night_Ep09" },
+              { "name": "HD-02", "url": "https://hglink.to/e/zr2yodyqr2b1" },
+              { "name": "HD-03", "url": "https://server-raw.com/call-night-s1-e9-3" }
+            ],
+            "sub": [
+              { "name": "HD-01", "url": "https://filemoon.to/e/pq0ym6mrrrm6/Watch_Call_of_the_Night_Ep09" },
+              { "name": "HD-02", "url": "https://hglink.to/e/zr2yodyqr2b1" },
+              { "name": "HD-03", "url": "https://server-sub.com/call-night-s1-e9-3" }
+            ],
+            "dub": [
+              { "name": "HD-01", "url": "https://filemoon.to/e/mmbgpnbealki/Watch_Call_of_the_Night_Dub_Ep09" },
+              { "name": "HD-02", "url": "https://hglink.to/e/ypnpgvdcuq4o" },
+              { "name": "HD-03", "url": "https://server-dub.com/call-night-s1-e9-3" }
+            ]
+          }
+        },
+        {
+          "number": 10,
+          "title": "You're Making Me Blush",
+          "duration": "23 min",
+          "servers": {
+            "raw": [
+              { "name": "HD-01", "url": "https://filemoon.to/e/zx41pi4xymq0/Watch_Call_of_the_Night_Ep10" },
+              { "name": "HD-02", "url": "https://hglink.to/e/wsuybgwdvsgr" },
+              { "name": "HD-03", "url": "https://server-raw.com/call-night-s1-e10-3" }
+            ],
+            "sub": [
+              { "name": "HD-01", "url": "https://filemoon.to/e/zx41pi4xymq0/Watch_Call_of_the_Night_Ep10" },
+              { "name": "HD-02", "url": "https://hglink.to/e/wsuybgwdvsgr" },
+              { "name": "HD-03", "url": "https://server-sub.com/call-night-s1-e10-3" }
+            ],
+            "dub": [
+              { "name": "HD-01", "url": "https://filemoon.to/e/ws7jcig1oeps/Watch_Call_of_the_Night_Dub_Ep10" },
+              { "name": "HD-02", "url": "https://hglink.to/e/ks9e0o30yc40" },
+              { "name": "HD-03", "url": "https://server-dub.com/call-night-s1-e10-3" }
+            ]
+          }
+        },
+        {
+          "number": 11,
+          "title": "Do You Know What a Vampire Is?",
+          "duration": "23 min",
+          "servers": {
+            "raw": [
+              { "name": "HD-01", "url": "https://filemoon.to/e/inwg7hsyw2ax/Watch_Call_of_the_Night_Ep11" },
+              { "name": "HD-02", "url": "https://hglink.to/e/fejzmvzwb9qo" },
+              { "name": "HD-03", "url": "https://server-raw.com/call-night-s1-e11-3" }
+            ],
+            "sub": [
+              { "name": "HD-01", "url": "https://filemoon.to/e/inwg7hsyw2ax/Watch_Call_of_the_Night_Ep11" },
+              { "name": "HD-02", "url": "https://hglink.to/e/fejzmvzwb9qo" },
+              { "name": "HD-03", "url": "https://server-sub.com/call-night-s1-e11-3" }
+            ],
+            "dub": [
+              { "name": "HD-01", "url": "https://filemoon.to/e/zcmtp9df5xtu/Watch_Call_of_the_Night_Dub_Ep11" },
+              { "name": "HD-02", "url": "https://hglink.to/e/uew9ek489hz1" },
+              { "name": "HD-03", "url": "https://server-dub.com/call-night-s1-e11-3" }
+            ]
+          }
+        },
+        {
+          "number": 12,
+          "title": "Today's My Parents' Night Away",
+          "duration": "23 min",
+          "servers": {
+            "raw": [
+              { "name": "HD-01", "url": "https://filemoon.to/e/nurie5y2w2bh/Watch_Call_of_the_Night_Ep12" },
+              { "name": "HD-02", "url": "https://hglink.to/e/t1isl3ovz963" },
+              { "name": "HD-03", "url": "https://server-raw.com/call-night-s1-e12-3" }
+            ],
+            "sub": [
+              { "name": "HD-01", "url": "https://filemoon.to/e/nurie5y2w2bh/Watch_Call_of_the_Night_Ep12" },
+              { "name": "HD-02", "url": "https://hglink.to/e/t1isl3ovz963" },
+              { "name": "HD-03", "url": "https://server-sub.com/call-night-s1-e12-3" }
+            ],
+            "dub": [
+              { "name": "HD-01", "url": "https://filemoon.to/e/vs0q4ddz58j2/Watch_Call_of_the_Night_Dub_Ep12" },
+              { "name": "HD-02", "url": "https://hglink.to/e/jxepfb5mdsrp" },
+              { "name": "HD-03", "url": "https://server-dub.com/call-night-s1-e12-3" }
+            ]
+          }
+        },
+        {
+          "number": 13,
+          "title": "Yofukashi no Uta",
+          "duration": "23 min",
+          "servers": {
+            "raw": [
+              { "name": "HD-01", "url": "https://filemoon.to/e/bq82czpzdj4f/Watch_Call_of_the_Night_Ep13" },
+              { "name": "HD-02", "url": "https://hglink.to/e/fuh0p5htdmh4" },
+              { "name": "HD-03", "url": "https://server-raw.com/call-night-s1-e13-3" }
+            ],
+            "sub": [
+              { "name": "HD-01", "url": "https://filemoon.to/e/bq82czpzdj4f/Watch_Call_of_the_Night_Ep13" },
+              { "name": "HD-02", "url": "https://hglink.to/e/fuh0p5htdmh4" },
+              { "name": "HD-03", "url": "https://server-sub.com/call-night-s1-e13-3" }
+            ],
+            "dub": [
+              { "name": "HD-01", "url": "https://filemoon.to/e/ost8q385gcfi/Watch_Call_of_the_Night_Dub_Ep13" },
+              { "name": "HD-02", "url": "https://hglink.to/e/n0yv3pzaf3hw" },
+              { "name": "HD-03", "url": "https://server-dub.com/call-night-s1-e13-3" }
+            ]
+          }
+        }
+      ]
+    }
   ]
 },
 {
