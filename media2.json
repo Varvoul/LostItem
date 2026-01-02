@@ -646,8 +646,9 @@
             "duration": "150 min",
             "servers": {
               "raw": [
-                { "name": "Raw-4K", "url": "https://server-raw.com/superman-2025-1" },
-                { "name": "Raw-HD", "url": "https://server-raw.com/superman-2025-2" }
+                { "name": "HD-01", "url": "https://filemoon.to/e/amqwkmxget3c" },
+                { "name": "HD-02", "url": "https://hglink.to/e/gkttlzgf22rd" },
+                { "name": "HD-03", "url": "https://mxdrop.to/e/z1jm3l3wi1wgl6" }
               ],
               "sub": [
                 { "name": "Sub-HD-01", "url": "https://server-sub.com/superman-2025-1" },
