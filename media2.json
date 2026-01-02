@@ -1711,13 +1711,15 @@
           "description": "Denji falls for the enigmatic Reze, not knowing she is a lethal hybrid assassin. Their relationship triggers a catastrophic battle involving the Typhoon Devil and forces Denji to question trust and desire[citation:1].",
           "servers": {
             "raw": [
-              { "name": "Raw-1080p", "url": "https://server.com/csm-movie-raw" }
+              { "name": "HD-01", "url": "https://hglink.to/e/h9ahguz8s9wo" }
             ],
             "sub": [
-              { "name": "Sub-1080p", "url": "https://server.com/csm-movie-sub" }
+              { "name": "HD-01", "url": "https://filemoon.to/e/veszqo62aopd" },
+              { "name": "HD-02", "url": "https://mxdrop.to/e/vkqjj3deu4766v" }
             ],
             "dub": [
-              { "name": "Dub-1080p", "url": "https://server.com/csm-movie-dub" }
+              { "name": "HD-01", "url": "https://filemoon.to/e/bpvatw7inwsr" },
+              { "name": "HD-02", "url": "https://hglink.to/e/cpn3914zajj9" }
             ]
           }
         }
