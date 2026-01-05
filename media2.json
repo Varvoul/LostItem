@@ -4893,19 +4893,1369 @@
   "producers": ["TOHO", "TV Tokyo"],
   "seasons": [
     {
-      "seasonNumber": 3,
-      "episodes": [
-        {
-          "number": 1,
-          "title": "Mission 38",
-          "duration": "24 min",
-          "servers": {
-            "raw": [{ "name": "HD-01", "url": "server-raw.com" }],
-            "sub": [{ "name": "HD-01", "url": "server-sub.com" }],
-            "dub": [{ "name": "HD-01", "url": "server-dub.com" }]
+  "seasonNumber": 1,
+  "part": 1,
+  "totalEpisodes": 12,
+  "episodes": [
+    {
+      "episodeNumber": 1,
+      "title": "Operation Strix",
+      "duration": "24 min",
+      "servers": {
+        "sub": [
+          {
+            "name": "HD-01",
+            "url": "https://filemoon.in/e/38ts0we8oisx/Watch_SPY_x_FAMILY_01_sub"
+          },
+          {
+            "name": "HD-03",
+            "url": "https://mxdrop.to/e/jdkrlwkxskoqo1"
           }
-        }
-      ]
+        ],
+        "dub": [
+          {
+            "name": "HD-01",
+            "url": "https://filemoon.in/e/vptksq123b8h/Watch_SPY_x_FAMILY_Ep01_Dub"
+          },
+          {
+            "name": "HD-03",
+            "url": "https://mxdrop.to/e/67rxnj11il6nopd"
+          }
+        ]
+      }
+    },
+    {
+      "episodeNumber": 2,
+      "title": "Secure a Wife",
+      "duration": "24 min",
+      "servers": {
+        "sub": [
+          {
+            "name": "HD-01",
+            "url": "https://filemoon.in/e/7wl7g7lstzdv/Watch_SPY_x_FAMILY_02_sub"
+          },
+          {
+            "name": "HD-03",
+            "url": "https://mxdrop.to/e/elzgodz7c1ekg3"
+          }
+        ],
+        "dub": [
+          {
+            "name": "HD-01",
+            "url": "https://filemoon.in/e/an1smvvzqrnq/Watch_SPY_x_FAMILY_Ep02_Dub"
+          },
+          {
+            "name": "HD-03",
+            "url": "https://mxdrop.to/e/k0eoj9emu33npr8"
+          }
+        ]
+      }
+    },
+    {
+      "episodeNumber": 3,
+      "title": "Prepare for the Interview",
+      "duration": "24 min",
+      "servers": {
+        "sub": [
+          {
+            "name": "HD-01",
+            "url": "https://filemoon.in/e/v4ct3s3niz15/Watch_SPY_x_FAMILY_03_sub"
+          },
+          {
+            "name": "HD-03",
+            "url": "https://mxdrop.to/e/vkqjw4z9uqqggj6"
+          }
+        ],
+        "dub": [
+          {
+            "name": "HD-01",
+            "url": "https://filemoon.in/e/7eivwg65joj4/Watch_SPY_x_FAMILY_Ep03_Dub"
+          },
+          {
+            "name": "HD-02",
+            "url": "https://hglink.to/e/0mlawb1wav4v"
+          },
+          {
+            "name": "HD-03",
+            "url": "https://mxdrop.to/e/mkzpmoz4tx64oz8"
+          }
+        ]
+      }
+    },
+    {
+      "episodeNumber": 4,
+      "title": "The Prestigious School's Interview",
+      "duration": "24 min",
+      "servers": {
+        "sub": [
+          {
+            "name": "HD-01",
+            "url": "https://filemoon.in/e/5ili32dzf74z/Watch_SPY_x_FAMILY_04_sub"
+          },
+          {
+            "name": "HD-03",
+            "url": "https://mxdrop.to/e/nlne3zg0cgzedm"
+          }
+        ],
+        "dub": [
+          {
+            "name": "HD-01",
+            "url": "https://filemoon.in/e/huypf50jkjkv/Watch_SPY_x_FAMILY_04_Dub"
+          },
+          {
+            "name": "HD-03",
+            "url": "https://mxdrop.to/e/r607eowgfv8p9l3"
+          }
+        ]
+      }
+    },
+    {
+      "episodeNumber": 5,
+      "title": "Will They Pass or Fail?",
+      "duration": "24 min",
+      "servers": {
+        "sub": [
+          {
+            "name": "HD-01",
+            "url": "https://filemoon.in/e/oeakgpef3pls/Watch_SPY_x_FAMILY_05_sub"
+          },
+          {
+            "name": "HD-03",
+            "url": "https://mxdrop.to/e/7kjzo7dqizjg6q"
+          }
+        ],
+        "dub": [
+          {
+            "name": "HD-01",
+            "url": "https://filemoon.in/e/mlomjys9920i/Watch_SPY_x_FAMILY_05_dub"
+          },
+          {
+            "name": "HD-03",
+            "url": "https://mxdrop.to/e/67rxnj1zuoojxg"
+          }
+        ]
+      }
+    },
+    {
+      "episodeNumber": 6,
+      "title": "The Friendship Scheme",
+      "duration": "24 min",
+      "servers": {
+        "sub": [
+          {
+            "name": "HD-01",
+            "url": "https://filemoon.in/e/8g8vk3u3rhcd/Watch_SPY_x_FAMILY_06_sub"
+          },
+          {
+            "name": "HD-02",
+            "url": "https://hglink.to/e/evioksvmdimo"
+          },
+          {
+            "name": "HD-03",
+            "url": "https://mxdrop.to/e/gjd8971eidkxj1"
+          }
+        ],
+        "dub": [
+          {
+            "name": "HD-01",
+            "url": "https://filemoon.in/e/frhxhe9w9m3i/Watch_SPY_x_FAMILY_06_dub"
+          },
+          {
+            "name": "HD-03",
+            "url": "https://mxdrop.to/e/nlne3ow9sl89x4"
+          }
+        ]
+      }
+    },
+    {
+      "episodeNumber": 7,
+      "title": "The Target's Second Son",
+      "duration": "24 min",
+      "servers": {
+        "sub": [
+          {
+            "name": "HD-01",
+            "url": "https://filemoon.in/e/6g69m0u915k5/Watch_SPY_x_FAMILY_07_sub"
+          },
+          {
+            "name": "HD-02",
+            "url": "https://hglink.to/e/w9nhmfpjqzz9"
+          },
+          {
+            "name": "HD-03",
+            "url": "https://mxdrop.to/e/jdkrlwg8u79vqw9"
+          }
+        ],
+        "dub": [
+          {
+            "name": "HD-01",
+            "url": "https://filemoon.in/e/xjqdos1sceys/Watch_SPY_x_FAMILY_07_dub"
+          },
+          {
+            "name": "HD-03",
+            "url": "https://mxdrop.to/e/r607eoj8t6pqpd"
+          }
+        ]
+      }
+    },
+    {
+      "episodeNumber": 8,
+      "title": "The Counter-Secret Police Cover Operation",
+      "duration": "24 min",
+      "servers": {
+        "sub": [
+          {
+            "name": "HD-01",
+            "url": "https://filemoon.in/e/jbh3qwv56djl/Watch_SPY_x_FAMILY_08_sub"
+          },
+          {
+            "name": "HD-02",
+            "url": "https://hglink.to/e/5l6krr5usflf"
+          },
+          {
+            "name": "HD-03",
+            "url": "https://mxdrop.to/e/8ljmpkdqu64ew3k"
+          }
+        ],
+        "dub": [
+          {
+            "name": "HD-01",
+            "url": "https://filemoon.in/e/81ie6b7opp6z/Watch_SPY_x_FAMILY_08_dub"
+          },
+          {
+            "name": "HD-03",
+            "url": "https://mxdrop.to/e/q1d04zvpu6loqq"
+          }
+        ]
+      }
+    },
+    {
+      "episodeNumber": 9,
+      "title": "Show Off How In Love You Are",
+      "duration": "24 min",
+      "servers": {
+        "sub": [
+          {
+            "name": "HD-01",
+            "url": "https://filemoon.in/e/2pfjmzkolg2m/Watch_SPY_x_FAMILY_09_sub"
+          },
+          {
+            "name": "HD-02",
+            "url": "https://hglink.to/e/xg3cc5blrafq"
+          },
+          {
+            "name": "HD-03",
+            "url": "https://mxdrop.to/e/xw9xz34rcm9k00"
+          }
+        ],
+        "dub": [
+          {
+            "name": "HD-01",
+            "url": "https://filemoon.in/e/wze441aimvm9/Watch_SPY_x_FAMILY_09_dub"
+          },
+          {
+            "name": "HD-03",
+            "url": "https://mxdrop.to/e/nlne3jlxhez89k"
+          }
+        ]
+      }
+    },
+    {
+      "episodeNumber": 10,
+      "title": "The Great Dodgeball Plan",
+      "duration": "24 min",
+      "servers": {
+        "sub": [
+          {
+            "name": "HD-01",
+            "url": "https://filemoon.in/e/se4qlejo2d4p/Watch_SPY_x_FAMILY_10_sub"
+          },
+          {
+            "name": "HD-02",
+            "url": "https://hglink.to/e/oauf4xuprr5g"
+          },
+          {
+            "name": "HD-03",
+            "url": "https://mxdrop.to/e/elzgoddlhq066r8"
+          }
+        ],
+        "dub": [
+          {
+            "name": "HD-01",
+            "url": "https://filemoon.in/e/olujrn9d5i3s/Watch_SPY_x_FAMILY_10_dub"
+          },
+          {
+            "name": "HD-03",
+            "url": "https://mxdrop.to/e/k0eoj9zjszl60g"
+          }
+        ]
+      }
+    },
+    {
+      "episodeNumber": 11,
+      "title": "Stella",
+      "duration": "24 min",
+      "servers": {
+        "sub": [
+          {
+            "name": "HD-01",
+            "url": "https://filemoon.in/e/f6ag1ks1ujqr/Watch_SPY_x_FAMILY_11_sub"
+          }
+        ],
+        "dub": [
+          {
+            "name": "HD-01",
+            "url": "https://filemoon.in/e/xqbstefqcry4/Watch_SPY_x_FAMILY_11_dub"
+          },
+          {
+            "name": "HD-03",
+            "url": "https://mxdrop.to/e/gjd8960rbpvdv4"
+          }
+        ]
+      }
+    },
+    {
+      "episodeNumber": 12,
+      "title": "Penguin Park",
+      "duration": "24 min",
+      "servers": {
+        "sub": [
+          {
+            "name": "HD-01",
+            "url": "https://filemoon.in/e/kkax09s7b24c/Watch_SPY_x_FAMILY_12_sub"
+          }
+        ],
+        "dub": [
+          {
+            "name": "HD-01",
+            "url": "https://filemoon.in/e/wvydv7p48xe0/Watch_SPY_x_FAMILY_12_dub"
+          },
+          {
+            "name": "HD-03",
+            "url": "https://mxdrop.to/e/67rxnj3etl69e6r"
+          }
+        ]
+      }
+    }
+  ]
+},
+{
+  "seasonNumber": 1,
+  "part": 2,
+  "totalEpisodes": 13,
+  "previousPart": "Season 01 Part 01 (Episodes 1-12)",
+  "episodes": [
+    {
+      "episodeNumber": 1,
+      "title": "Project Apple",
+      "duration": "24 min",
+      "servers": {
+        "sub": [
+          {
+            "name": "HD-01",
+            "url": "https://filemoon.in/e/h044iu8bm419/Watch_SPY_x_FAMILY_Cour_2_Ep_01_sub"
+          },
+          {
+            "name": "HD-02",
+            "url": "https://mxdrop.to/e/xw9xzz93b9493v"
+          }
+        ],
+        "dub": [
+          {
+            "name": "HD-01",
+            "url": "https://filemoon.in/e/iaatg2snxmso/Watch_SPY_x_FAMILY_Cour_2_Dub_Ep_01"
+          },
+          {
+            "name": "HD-02",
+            "url": "https://mxdrop.to/e/nln38ol4uljxpzo"
+          }
+        ]
+      }
+    },
+    {
+      "episodeNumber": 2,
+      "title": "Disarm the Time Bomb",
+      "duration": "24 min",
+      "servers": {
+        "sub": [
+          {
+            "name": "HD-01",
+            "url": "https://filemoon.in/e/3ifliesh34rm/Watch_SPY_x_FAMILY_Cour_2_SUB_Ep_02"
+          },
+          {
+            "name": "HD-02",
+            "url": "https://mxdrop.to/e/9wxg996gc3nk9lj"
+          }
+        ],
+        "dub": [
+          {
+            "name": "HD-01",
+            "url": "https://filemoon.in/e/t1ygfc1otw7i/Watch_SPY_x_FAMILY_Cour_2_Dub_Ep_02"
+          },
+          {
+            "name": "HD-02",
+            "url": "https://mxdrop.to/e/1nowdl0zs3xmdw"
+          }
+        ]
+      }
+    },
+    {
+      "episodeNumber": 3,
+      "title": "A New Family Member",
+      "duration": "24 min",
+      "servers": {
+        "sub": [
+          {
+            "name": "HD-01",
+            "url": "https://filemoon.in/e/aliilcg1cvot/Watch_SPY_x_FAMILY_Cour_2_Sub_Ep_03"
+          },
+          {
+            "name": "HD-02",
+            "url": "https://mxdrop.to/e/k0eojj1mh1emqp"
+          }
+        ],
+        "dub": [
+          {
+            "name": "HD-01",
+            "url": "https://filemoon.in/e/c8x2uv2jopm1/Watch_SPY_x_FAMILY_Cour_2_Dub_ep_03"
+          },
+          {
+            "name": "HD-02",
+            "url": "https://mxdrop.to/e/7kjo4mn8idwm0wr"
+          }
+        ]
+      }
+    },
+    {
+      "episodeNumber": 4,
+      "title": "Yor's Kitchen / The Informant's Great Romance Plan",
+      "duration": "24 min",
+      "servers": {
+        "sub": [
+          {
+            "name": "HD-01",
+            "url": "https://filemoon.in/e/11j3dkfvppzy/Watch_SPY_x_FAMILY_Cour_2_sub_ep_04"
+          },
+          {
+            "name": "HD-02",
+            "url": "https://mxdrop.to/e/mkzpmp6dto8er3"
+          }
+        ],
+        "dub": [
+          {
+            "name": "HD-01",
+            "url": "https://filemoon.in/e/p3ffhhvp23u7/Watch_SPY_x_FAMILY_Cour_2_Dub_ep_04"
+          },
+          {
+            "name": "HD-02",
+            "url": "https://mxdrop.to/e/k0ejv99vhrol9z"
+          }
+        ]
+      }
+    },
+    {
+      "episodeNumber": 5,
+      "title": "Carry Out the Griffin Plan / Fullmetal Lady / Omelet Rice",
+      "duration": "24 min",
+      "servers": {
+        "sub": [
+          {
+            "name": "HD-01",
+            "url": "https://filemoon.in/e/10gre3qc074i/Watch_SPY_x_FAMILY_Cour_2_sub_ep_05"
+          },
+          {
+            "name": "HD-02",
+            "url": "https://mxdrop.to/e/nlne3edzade38r"
+          }
+        ],
+        "dub": [
+          {
+            "name": "HD-01",
+            "url": "https://filemoon.in/e/lz38fondybid/Watch_SPY_x_FAMILY_Cour_2_dub_ep_05"
+          },
+          {
+            "name": "HD-02",
+            "url": "https://mxdrop.to/e/elzor97kfrkole"
+          }
+        ]
+      }
+    },
+    {
+      "episodeNumber": 6,
+      "title": "Uncle the Private Tutor / Daybreak",
+      "duration": "24 min",
+      "servers": {
+        "sub": [
+          {
+            "name": "HD-01",
+            "url": "https://filemoon.in/e/bta1qz18kipm/Watch_SPY_x_FAMILY_Cour_2_sub_ep_06"
+          },
+          {
+            "name": "HD-02",
+            "url": "https://mxdrop.to/e/dkrmnnllig44r7"
+          }
+        ],
+        "dub": [
+          {
+            "name": "HD-01",
+            "url": "https://filemoon.in/e/w1kmskkcxtrs/Watch_SPY_x_FAMILY_Cour_2_dib_ep_06"
+          },
+          {
+            "name": "HD-02",
+            "url": "https://mxdrop.to/e/xw9z1d3gf6o1dn"
+          }
+        ]
+      }
+    },
+    {
+      "episodeNumber": 7,
+      "title": "A Revenge Plot Against Desmond / Mama Becomes the Wind",
+      "duration": "24 min",
+      "servers": {
+        "sub": [
+          {
+            "name": "HD-01",
+            "url": "https://filemoon.in/e/omn0yjab9hfr/Watch_SPY_x_FAMILY_Cour_2_Sub_ep_07"
+          },
+          {
+            "name": "HD-02",
+            "url": "https://mxdrop.to/e/owz6vv73ugwx99"
+          }
+        ],
+        "dub": [
+          {
+            "name": "HD-01",
+            "url": "https://filemoon.in/e/4kjgl6nbr5cd/Watch_SPY_x_FAMILY_Cour_2_dub_ep_07"
+          },
+          {
+            "name": "HD-02",
+            "url": "https://mxdrop.to/e/36qzojdrtmwzqqg"
+          }
+        ]
+      }
+    },
+    {
+      "episodeNumber": 8,
+      "title": "Investigate the General Hospital / Decipher the Code",
+      "duration": "24 min",
+      "servers": {
+        "sub": [
+          {
+            "name": "HD-01",
+            "url": "https://filemoon.in/e/kbwsx9b8ciee/Watch_SPY_x_FAMILY_Cour_2_Sub_ep_08"
+          },
+          {
+            "name": "HD-02",
+            "url": "https://mxdrop.to/e/vkqjwwoqse6q38"
+          }
+        ],
+        "dub": [
+          {
+            "name": "HD-01",
+            "url": "https://filemoon.in/e/g8uykzjynmyx/Watch_SPY_x_FAMILY_Cour_2_dub_ep_08"
+          },
+          {
+            "name": "HD-02",
+            "url": "https://mxdrop.to/e/67rnwzk1ikmmpm"
+          }
+        ]
+      }
+    },
+    {
+      "episodeNumber": 9,
+      "title": "Nightfall / First Fit of Jealousy",
+      "duration": "24 min",
+      "servers": {
+        "sub": [
+          {
+            "name": "HD-01",
+            "url": "https://filemoon.in/e/j5qem87mx9ik/Watch_SPY_x_FAMILY_Cour_2_sub_ep_09"
+          },
+          {
+            "name": "HD-02",
+            "url": "https://mxdrop.to/e/l794xxm9cqdqed"
+          }
+        ],
+        "dub": [
+          {
+            "name": "HD-01",
+            "url": "https://filemoon.in/e/kku4gnojhp4z/Watch_SPY_x_FAMILY_Cour_2_dub_ep_09"
+          },
+          {
+            "name": "HD-02",
+            "url": "https://mxdrop.to/e/r60evoloh3oll1"
+          }
+        ]
+      }
+    },
+    {
+      "episodeNumber": 10,
+      "title": "The Underground Tennis Tournament: The Campbelldon",
+      "duration": "24 min",
+      "servers": {
+        "sub": [
+          {
+            "name": "HD-01",
+            "url": "https://filemoon.in/e/xewcgbqaqa7s/Watch_SPY_x_FAMILY_Cour_2_sub_ep_10"
+          },
+          {
+            "name": "HD-02",
+            "url": "https://mxdrop.to/e/03z7kkeqi13gel"
+          }
+        ],
+        "dub": [
+          {
+            "name": "HD-01",
+            "url": "https://filemoon.in/e/yo0hw0ctbk5i/Watch_SPY_x_FAMILY_Cour_2_dub_ep_10"
+          },
+          {
+            "name": "HD-02",
+            "url": "https://mxdrop.to/e/owzvdov7br0rlw"
+          }
+        ]
+      }
+    },
+    {
+      "episodeNumber": 11,
+      "title": "The Unwavering Path",
+      "duration": "24 min",
+      "servers": {
+        "sub": [
+          {
+            "name": "HD-01",
+            "url": "https://filemoon.in/e/f17mtcj0hn3z/Watch_SPY_x_FAMILY_Cour_2_Sub_ep_11"
+          },
+          {
+            "name": "HD-02",
+            "url": "https://mxdrop.to/e/gjd8998ntdxgog"
+          }
+        ],
+        "dub": [
+          {
+            "name": "HD-01",
+            "url": "https://filemoon.in/e/unv0zp16e9u6/Watch_SPY_x_FAMILY_Cour_2_dub_ep_11"
+          },
+          {
+            "name": "HD-02",
+            "url": "https://mxdrop.to/e/l79xv1eqidvjl6"
+          }
+        ]
+      }
+    },
+    {
+      "episodeNumber": 12,
+      "title": "The Role of a Mother and Wife / Shopping with Friends",
+      "duration": "24 min",
+      "servers": {
+        "sub": [
+          {
+            "name": "HD-01",
+            "url": "https://filemoon.in/e/38i8juxmo4bn/Watch_SPY_x_FAMILY_Cour_2_sub_ep_12"
+          },
+          {
+            "name": "HD-02",
+            "url": "https://mxdrop.to/e/k0eojjjdbvmg3v"
+          }
+        ],
+        "dub": [
+          {
+            "name": "HD-01",
+            "url": "https://filemoon.in/e/6ajb9y94k3ku/Watch_SPY_x_FAMILY_Cour_2_dub_ep_12"
+          },
+          {
+            "name": "HD-02",
+            "url": "https://mxdrop.to/e/pj6r0gpph76e73"
+          }
+        ]
+      }
+    },
+    {
+      "episodeNumber": 13,
+      "title": "First Contact",
+      "duration": "24 min",
+      "servers": {
+        "sub": [
+          {
+            "name": "HD-01",
+            "url": "https://filemoon.in/e/1v01bpj8e8kv/Watch_SPY_x_FAMILY_Cour_2_sub_ep_13"
+          },
+          {
+            "name": "HD-02",
+            "url": "https://mxdrop.to/e/67rnlg3gad6pg8"
+          }
+        ],
+        "dub": [
+          {
+            "name": "HD-01",
+            "url": "https://filemoon.in/e/612vpjcyyt49/Watch_SPY_x_FAMILY_Cour_2_Dub_ep_13"
+          },
+          {
+            "name": "HD-02",
+            "url": "https://mxdrop.to/e/gjd9mwz1hdn344"
+          }
+        ]
+      }
+    }
+  ]
+},
+{
+  "seasonNumber": 2,
+  "totalEpisodes": 12,
+  "previousSeason": "Season 01 Part 02 (Episodes 1-13)",
+  "episodes": [
+    {
+      "episodeNumber": 1,
+      "title": "Follow Mama and Papa",
+      "duration": "24 min",
+      "servers": {
+        "sub": [
+          {
+            "name": "HD-01",
+            "url": "https://filemoon.in/e/i314ntezw1m9/Watch_SPY_x_FAMILY_Season_2_sub_01"
+          },
+          {
+            "name": "HD-02",
+            "url": "https://mxdrop.to/e/36qzpmogb031k1"
+          }
+        ],
+        "dub": [
+          {
+            "name": "HD-01",
+            "url": "https://filemoon.in/e/lvi6q7bxq79x/Watch_SPY_x_FAMILY_Season_2_Dub_01"
+          },
+          {
+            "name": "HD-02",
+            "url": "https://mxdrop.to/e/l79xepe8i31lpg"
+          }
+        ]
+      }
+    },
+    {
+      "episodeNumber": 2,
+      "title": "Bond's Strategy to Stay Alive / Damian's Field Research Trip",
+      "duration": "24 min",
+      "servers": {
+        "sub": [
+          {
+            "name": "HD-01",
+            "url": "https://filemoon.in/e/0w7tda6nd3h1/Watch_SPY_x_FAMILY_Season_2_sub_02"
+          },
+          {
+            "name": "HD-02",
+            "url": "https://mxdrop.to/e/7kjo3vwrbqmj1r"
+          }
+        ],
+        "dub": [
+          {
+            "name": "HD-01",
+            "url": "https://filemoon.in/e/5dqucg5rd0ts/Watch_SPY_x_FAMILY_Season_2_Dub_02"
+          },
+          {
+            "name": "HD-02",
+            "url": "https://mxdrop.to/e/9wx9ve9lbrkvkl"
+          }
+        ]
+      }
+    },
+    {
+      "episodeNumber": 3,
+      "title": "Mission and Family / The Elegant Bondman / Waking Up",
+      "duration": "24 min",
+      "servers": {
+        "sub": [
+          {
+            "name": "HD-01",
+            "url": "https://filemoon.in/e/asb0ke1pdtb7/Watch_SPY_x_FAMILY_Season_2_sub_03"
+          },
+          {
+            "name": "HD-02",
+            "url": "https://mxdrop.to/e/7kjo3l9vh6d0xk"
+          }
+        ],
+        "dub": [
+          {
+            "name": "HD-01",
+            "url": "https://filemoon.in/e/x7lsfp0m223x/Watch_SPY_x_FAMILY_Season_2_dub_03"
+          },
+          {
+            "name": "HD-02",
+            "url": "https://mxdrop.to/e/q1d4pjk4fx78176"
+          }
+        ]
+      }
+    },
+    {
+      "episodeNumber": 4,
+      "title": "The Pastry of Knowledge / The Informant's Romance Plan II",
+      "duration": "24 min",
+      "servers": {
+        "sub": [
+          {
+            "name": "HD-01",
+            "url": "https://filemoon.in/e/pu3w9r7g30ot/Watch_SPY_x_FAMILY_Season_2_sub_04"
+          },
+          {
+            "name": "HD-02",
+            "url": "https://mxdrop.to/e/1nowmr9ei68xg4"
+          }
+        ],
+        "dub": [
+          {
+            "name": "HD-01",
+            "url": "https://filemoon.in/e/7wir3s0l3s02/Watch_SPY_x_FAMILY_Season_2_dub_04"
+          },
+          {
+            "name": "HD-02",
+            "url": "https://mxdrop.to/e/gjd9eve1cw0lqpk"
+          }
+        ]
+      }
+    },
+    {
+      "episodeNumber": 5,
+      "title": "Plan to Cross the Border",
+      "duration": "24 min",
+      "servers": {
+        "sub": [
+          {
+            "name": "HD-01",
+            "url": "https://filemoon.in/e/my1gyqjbyp8k/Watch_SPY_x_FAMILY_Season_2_sub_05"
+          },
+          {
+            "name": "HD-02",
+            "url": "https://mxdrop.to/e/vkqw68rzf39nv6"
+          }
+        ],
+        "dub": [
+          {
+            "name": "HD-01",
+            "url": "https://filemoon.in/e/0ul9rsyk8s6r/Watch_SPY_x_FAMILY_Season_2_Dub_05"
+          },
+          {
+            "name": "HD-02",
+            "url": "https://mxdrop.to/e/jdklpovjf8dok"
+          }
+        ]
+      }
+    },
+    {
+      "episodeNumber": 6,
+      "title": "The Fearsome Luxury Cruise Ship",
+      "duration": "24 min",
+      "servers": {
+        "sub": [
+          {
+            "name": "HD-01",
+            "url": "https://filemoon.in/e/r9xayo7e0hhj/Watch_SPY_x_FAMILY_Season_2_sub_06"
+          },
+          {
+            "name": "HD-02",
+            "url": "https://mxdrop.to/e/l79xekmkt48lnw"
+          }
+        ],
+        "dub": [
+          {
+            "name": "HD-01",
+            "url": "https://filemoon.in/e/0tvr921xof24/Watch_SPY_x_FAMILY_Season_2_Dub_06"
+          },
+          {
+            "name": "HD-02",
+            "url": "https://mxdrop.to/e/1nowm7g6f4zlv8"
+          }
+        ]
+      }
+    },
+    {
+      "episodeNumber": 7,
+      "title": "Who Is This Mission For?",
+      "duration": "24 min",
+      "servers": {
+        "sub": [
+          {
+            "name": "HD-01",
+            "url": "https://filemoon.in/e/oc136yrnymfv/Watch_SPY_x_FAMILY_Season_2_sub_ep_o7"
+          },
+          {
+            "name": "HD-02",
+            "url": "https://mxdrop.to/e/wlw1dvg3c03ljdo"
+          }
+        ],
+        "dub": [
+          {
+            "name": "HD-01",
+            "url": "https://filemoon.in/e/xxmswyuxd2a1/Watch_SPY_x_FAMILY_Season_2_Dub_07"
+          },
+          {
+            "name": "HD-02",
+            "url": "https://mxdrop.to/e/8ljp3z8rt7xe74"
+          }
+        ]
+      }
+    },
+    {
+      "episodeNumber": 8,
+      "title": "The Symphony Upon the Ship",
+      "duration": "24 min",
+      "servers": {
+        "sub": [
+          {
+            "name": "HD-01",
+            "url": "https://filemoon.in/e/nnbj7ifssgm8/Watch_SPY_x_FAMILY_Season_2_sub_08"
+          },
+          {
+            "name": "HD-02",
+            "url": "https://mxdrop.to/e/vkqw68jxu06pg6"
+          }
+        ],
+        "dub": [
+          {
+            "name": "HD-01",
+            "url": "https://filemoon.in/e/o1q2eu3mv4ld/Watch_SPY_x_FAMILY_Season_2_Dub_08"
+          },
+          {
+            "name": "HD-02",
+            "url": "https://mxdrop.to/e/owzvp01wf4rkkx"
+          }
+        ]
+      }
+    },
+    {
+      "episodeNumber": 9,
+      "title": "The Hand That Connects to the Future",
+      "duration": "24 min",
+      "servers": {
+        "sub": [
+          {
+            "name": "HD-01",
+            "url": "https://filemoon.in/e/l7g7z6tfhz14/Watch_SPY_x_FAMILY_Season_2_sub_ep_09"
+          },
+          {
+            "name": "HD-02",
+            "url": "https://mxdrop.to/e/vkqw688kspd06o"
+          }
+        ],
+        "dub": [
+          {
+            "name": "HD-01",
+            "url": "https://filemoon.in/e/zaiztr6debol/Watch_SPY_x_FAMILY_Season_2_Dub_09"
+          },
+          {
+            "name": "HD-02",
+            "url": "https://mxdrop.to/e/r60enl41bw14lg"
+          }
+        ]
+      }
+    },
+    {
+      "episodeNumber": 10,
+      "title": "Enjoy the Resort to the Fullest / Bragging About Vacation",
+      "duration": "24 min",
+      "servers": {
+        "sub": [
+          {
+            "name": "HD-01",
+            "url": "https://filemoon.in/e/6ilaru5w8u0h/Watch_SPY_x_FAMILY_Season_2_coir_2_sub_ep_10"
+          },
+          {
+            "name": "HD-02",
+            "url": "https://mxdrop.to/e/dkrn1pnvs73eeg1"
+          }
+        ],
+        "dub": [
+          {
+            "name": "HD-01",
+            "url": "https://filemoon.in/e/l9g043a937gc/Watch_SPY_x_FAMILY_Season_2_dub_10"
+          },
+          {
+            "name": "HD-02",
+            "url": "https://mxdrop.to/e/03zkp0qeceo73n"
+          }
+        ]
+      }
+    },
+    {
+      "episodeNumber": 11,
+      "title": "Berlint in Love / Nightfall's Daily Life",
+      "duration": "24 min",
+      "servers": {
+        "sub": [
+          {
+            "name": "HD-01",
+            "url": "https://filemoon.in/e/ev4up8lee064/Watch_SPY_x_FAMILY_Season_2_sub_ep_11"
+          }
+        ],
+        "dub": [
+          {
+            "name": "HD-01",
+            "url": "https://filemoon.in/e/ewnoarq82mrm/Watch_SPY_x_FAMILY_Season_2_Dub_11"
+          },
+          {
+            "name": "HD-02",
+            "url": "https://mxdrop.to/e/7kjo3x11adpowdo"
+          }
+        ]
+      }
+    },
+    {
+      "episodeNumber": 12,
+      "title": "Part of the Family",
+      "duration": "24 min",
+      "servers": {
+        "sub": [
+          {
+            "name": "HD-01",
+            "url": "https://filemoon.in/e/a7n03cp2194o/Watch_SPY_x_FAMILY_Season_2_sub_12"
+          },
+          {
+            "name": "HD-02",
+            "url": "https://mxdrop.to/e/dkrn1z6osv76p9"
+          }
+        ],
+        "dub": [
+          {
+            "name": "HD-01",
+            "url": "https://filemoon.in/e/b7vqmu69m5bu/Watch_SPY_x_FAMILY_Season_2_Dub_12"
+          },
+          {
+            "name": "HD-02",
+            "url": "https://mxdrop.to/e/owzvp0krbq3wjj"
+          }
+        ]
+      }
+    }
+  ]
+},
+{
+  "seasonNumber": 3,
+  "totalEpisodes": 13,
+  "previousSeason": "Season 02 (Episodes 1-12)",
+  "episodes": [
+    {
+      "episodeNumber": 1,
+      "title": "Berlint Panic / The Informant and Nightfall",
+      "duration": "24 min",
+      "servers": {
+        "sub": [
+          {
+            "name": "HD-01",
+            "url": "https://filemoon.in/e/9ro0sk8chc2i/Watch_Spy_x_Family_Season_3_Sub_01"
+          },
+          {
+            "name": "HD-02",
+            "url": "https://mxdrop.to/e/l79x9exlh8jlq7"
+          }
+        ],
+        "dub": [
+          {
+            "name": "HD-01",
+            "url": "https://filemoon.in/e/rvzqvvmn6gmo/Watch_Spy_x_Family_Season_3_Dub_01"
+          },
+          {
+            "name": "HD-02",
+            "url": "https://mxdrop.to/e/8ljpj0r6ckjg43"
+          }
+        ]
+      }
+    },
+    {
+      "episodeNumber": 2,
+      "title": "Avoid Getting Tonitrus Bolts / Memories I",
+      "duration": "24 min",
+      "servers": {
+        "sub": [
+          {
+            "name": "HD-01",
+            "url": "https://filemoon.in/e/qtjlshorwlwj/Watch_Spy_x_Family_Season_3_sub_02"
+          },
+          {
+            "name": "HD-02",
+            "url": "https://mxdrop.to/e/67rnrdw6idq8qm"
+          }
+        ],
+        "dub": [
+          {
+            "name": "HD-01",
+            "url": "https://filemoon.in/e/c62kstosvzga/Spy_x_Family_dub_02"
+          },
+          {
+            "name": "HD-02",
+            "url": "https://mxdrop.to/e/q1d4dgorf7vpx8"
+          }
+        ]
+      }
+    },
+    {
+      "episodeNumber": 3,
+      "title": "Memories II",
+      "duration": "24 min",
+      "servers": {
+        "sub": [
+          {
+            "name": "HD-01",
+            "url": "https://filemoon.in/e/14d9xuvuyib8/Watch_Spy_x_Family_Season_3_sub_03"
+          },
+          {
+            "name": "HD-02",
+            "url": "https://mxdrop.to/e/4d9g9r0ji3ee8v"
+          }
+        ],
+        "dub": [
+          {
+            "name": "HD-01",
+            "url": "https://filemoon.in/e/g0y28fpilu36/Spy_x_Family_Eng_dub_03"
+          },
+          {
+            "name": "HD-02",
+            "url": "https://mxdrop.to/e/9wx9x693b3vm4po"
+          }
+        ]
+      }
+    },
+    {
+      "episodeNumber": 4,
+      "title": "Behind the Scandal / The Path to an Imperial Scholar",
+      "duration": "24 min",
+      "servers": {
+        "sub": [
+          {
+            "name": "HD-01",
+            "url": "https://filemoon.in/e/m4wu7x8yiwj3/Watch_Spy_x_Family_Season_3_sub_04"
+          },
+          {
+            "name": "HD-02",
+            "url": "https://mxdrop.to/e/owzvzp0pid93p1"
+          }
+        ],
+        "dub": [
+          {
+            "name": "HD-01",
+            "url": "https://filemoon.in/e/py1uv6fvs5xp/Spy_x_Family_Eng_dub_04"
+          },
+          {
+            "name": "HD-02",
+            "url": "https://mxdrop.to/e/03zkzokkc1xwnd"
+          }
+        ]
+      }
+    },
+    {
+      "episodeNumber": 5,
+      "title": "The Mommy-Friends Scheme",
+      "duration": "24 min",
+      "servers": {
+        "sub": [
+          {
+            "name": "HD-01",
+            "url": "https://filemoon.in/e/8kp5ioch0pc3/Watch_Spy_x_Family_Season_3_sub_05"
+          },
+          {
+            "name": "HD-02",
+            "url": "https://mxdrop.to/e/9wx9xv9ei3vwej3"
+          }
+        ],
+        "dub": [
+          {
+            "name": "HD-01",
+            "url": "https://filemoon.in/e/1j4dlq6ayhkw/Spy_x_Family_Eng_dub_05"
+          },
+          {
+            "name": "HD-02",
+            "url": "https://mxdrop.to/e/mkzmz46nbk0gqk"
+          }
+        ]
+      }
+    },
+    {
+      "episodeNumber": 6,
+      "title": "White Jealousy / The Eden College Busjacking Incident",
+      "duration": "24 min",
+      "servers": {
+        "sub": [
+          {
+            "name": "HD-01",
+            "url": "https://filemoon.in/e/fqwpf5qsukx0/Watch_Spy_x_Family_Season_3_sub_06"
+          },
+          {
+            "name": "HD-02",
+            "url": "https://mxdrop.to/e/gjd9dog7hd96jw"
+          }
+        ],
+        "dub": [
+          {
+            "name": "HD-01",
+            "url": "https://filemoon.in/e/cgy7bagga9mb/Spy_x_Family_Eng_Dub_-_06"
+          },
+          {
+            "name": "HD-02",
+            "url": "https://mxdrop.to/e/wlw1w848al4mk7"
+          }
+        ]
+      }
+    },
+    {
+      "episodeNumber": 7,
+      "title": "The Red Circus",
+      "duration": "24 min",
+      "servers": {
+        "sub": [
+          {
+            "name": "HD-01",
+            "url": "https://filemoon.in/e/sq3y5x64y5u1/Watch_Spy_x_Family_Season_3_sub_07"
+          },
+          {
+            "name": "HD-02",
+            "url": "https://mxdrop.to/e/1nowo6mwtkq8ej1"
+          }
+        ],
+        "dub": [
+          {
+            "name": "HD-01",
+            "url": "https://filemoon.in/e/yzgk584eqoar/Spy_x_Family_Eng_Dub_-_7"
+          },
+          {
+            "name": "HD-02",
+            "url": "https://mxdrop.to/e/9wx9x6lnbvjz3n"
+          }
+        ]
+      }
+    },
+    {
+      "episodeNumber": 8,
+      "title": "Take Down the Busjacker",
+      "duration": "24 min",
+      "servers": {
+        "sub": [
+          {
+            "name": "HD-01",
+            "url": "https://filemoon.in/e/ju02f66lfr61/Watch_Spy_x_Family_Season_3_sub_08"
+          },
+          {
+            "name": "HD-02",
+            "url": "https://mxdrop.to/e/z1j8jdj9tgw8e0"
+          }
+        ],
+        "dub": [
+          {
+            "name": "HD-01",
+            "url": "https://filemoon.in/e/3ttu2bpmjdkj/Spy_x_Family_Eng_Dub_-_08"
+          },
+          {
+            "name": "HD-02",
+            "url": "https://mxdrop.to/e/xw9z9pnpslll9jp"
+          }
+        ]
+      }
+    },
+    {
+      "episodeNumber": 9,
+      "title": "Anya's Era Has Come",
+      "duration": "24 min",
+      "servers": {
+        "sub": [
+          {
+            "name": "HD-01",
+            "url": "https://filemoon.in/e/qxk39jej0gry/Watch_Spy_x_Family_Season_3_sub_09"
+          },
+          {
+            "name": "HD-02",
+            "url": "https://mxdrop.to/e/nln3nmxohx6r91"
+          }
+        ],
+        "dub": [
+          {
+            "name": "HD-01",
+            "url": "https://filemoon.in/e/p37b2o39lnm0/Spy_x_Family_Eng_Dub_09"
+          },
+          {
+            "name": "HD-02",
+            "url": "https://mxdrop.to/e/jdklk4o8t9nv8n"
+          }
+        ]
+      }
+    },
+    {
+      "episodeNumber": 10,
+      "title": "Austin's Troubles / A Normal Mixer / Moon Landing",
+      "duration": "24 min",
+      "servers": {
+        "sub": [
+          {
+            "name": "HD-01",
+            "url": "https://filemoon.in/e/u6dczxua5cgi/Watch_Spy_x_Family_Season_3_sub_10"
+          },
+          {
+            "name": "HD-02",
+            "url": "https://mxdrop.to/e/wlw1wxdli64olq"
+          }
+        ],
+        "dub": [
+          {
+            "name": "HD-01",
+            "url": "https://filemoon.in/e/wrcg8dovy2wb/Spy_x_Family_Eng_Dub_10"
+          },
+          {
+            "name": "HD-02",
+            "url": "https://mxdrop.to/e/nln3ngepilzkwx"
+          }
+        ]
+      }
+    },
+    {
+      "episodeNumber": 11,
+      "title": "Extreme Level 3 Situation",
+      "duration": "24 min",
+      "servers": {
+        "sub": [
+          {
+            "name": "HD-01",
+            "url": "https://filemoon.in/e/ml2888rptjj5/Watch_Spy_x_Family_Season_3_sub_11"
+          }
+        ],
+        "dub": [
+          {
+            "name": "Coming Soon",
+            "url": "#"
+          }
+        ]
+      }
+    },
+    {
+      "episodeNumber": 12,
+      "title": "Battle to the Death in the Sewers",
+      "duration": "24 min",
+      "servers": {
+        "sub": [
+          {
+            "name": "HD-01",
+            "url": "https://filemoon.in/e/si6tdyx7idq2/Watch_Spy_x_Family_Season_3_sub_12"
+          }
+        ],
+        "dub": [
+          {
+            "name": "Coming Soon",
+            "url": "#"
+          }
+        ]
+      }
+    },
+    {
+      "episodeNumber": 13,
+      "title": "A World Where We Cannot Survive",
+      "duration": "24 min",
+      "servers": {
+        "sub": [
+          {
+            "name": "HD-01",
+            "url": "https://filemoon.in/e/ef1o4jjxt9v4/Watch_Spy_x_Family_Season_3_sub_13"
+          }
+        ],
+        "dub": [
+          {
+            "name": "Coming Soon",
+            "url": "#"
+          }
+        ]
+      }
     }
   ]
 },
@@ -5344,28 +6694,782 @@
     "producers": ["TOHO", "TV Tokyo", "Shueisha"],
     "seasons": [
       {
-        "seasonNumber": 1,
-        "episodes": [
-          {
-            "number": 1,
-            "title": "Operation Strix",
-            "duration": "24 min",
-            "servers": {
-              "raw": [
-                { "name": "HD-01", "url": "server-raw.com" }
-              ],
-              "sub": [
-                { "name": "HD-01", "url": "server-sub.com" }
-              ],
-              "dub": [
-                { "name": "HD-01", "url": "server-dub.com" }
-              ]
-            }
+  "seasons": [
+    {
+      "seasonNumber": 1,
+      "part": 1,
+      "airedYear": 2022,
+      "episodes": [
+        {
+          "number": 1,
+          "title": "Operation Strix",
+          "duration": "24 min",
+          "servers": {
+            "sub": [
+              { "name": "HD-01", "url": "https://filemoon.in/e/38ts0we8oisx/Watch_SPY_x_FAMILY_01_sub" },
+              { "name": "HD-03", "url": "https://mxdrop.to/e/jdkrlwkxskoqo1" }
+            ],
+            "dub": [
+              { "name": "HD-01", "url": "https://filemoon.in/e/vptksq123b8h/Watch_SPY_x_FAMILY_Ep01_Dub" },
+              { "name": "HD-03", "url": "https://mxdrop.to/e/67rxnj11il6nopd" }
+            ]
           }
-        ]
-      }
-    ]
-  },
+        },
+        {
+          "number": 2,
+          "title": "Secure a Wife",
+          "duration": "24 min",
+          "servers": {
+            "sub": [
+              { "name": "HD-01", "url": "https://filemoon.in/e/7wl7g7lstzdv/Watch_SPY_x_FAMILY_02_sub" },
+              { "name": "HD-03", "url": "https://mxdrop.to/e/elzgodz7c1ekg3" }
+            ],
+            "dub": [
+              { "name": "HD-01", "url": "https://filemoon.in/e/an1smvvzqrnq/Watch_SPY_x_FAMILY_Ep02_Dub" },
+              { "name": "HD-03", "url": "https://mxdrop.to/e/k0eoj9emu33npr8" }
+            ]
+          }
+        },
+        {
+          "number": 3,
+          "title": "Prepare for the Interview",
+          "duration": "24 min",
+          "servers": {
+            "sub": [
+              { "name": "HD-01", "url": "https://filemoon.in/e/v4ct3s3niz15/Watch_SPY_x_FAMILY_03_sub" },
+              { "name": "HD-03", "url": "https://mxdrop.to/e/vkqjw4z9uqqggj6" }
+            ],
+            "dub": [
+              { "name": "HD-01", "url": "https://filemoon.in/e/7eivwg65joj4/Watch_SPY_x_FAMILY_Ep03_Dub" },
+              { "name": "HD-02", "url": "https://hglink.to/e/0mlawb1wav4v" },
+              { "name": "HD-03", "url": "https://mxdrop.to/e/mkzpmoz4tx64oz8" }
+            ]
+          }
+        },
+        {
+          "number": 4,
+          "title": "The Prestigious School's Interview",
+          "duration": "24 min",
+          "servers": {
+            "sub": [
+              { "name": "HD-01", "url": "https://filemoon.in/e/5ili32dzf74z/Watch_SPY_x_FAMILY_04_sub" },
+              { "name": "HD-03", "url": "https://mxdrop.to/e/nlne3zg0cgzedm" }
+            ],
+            "dub": [
+              { "name": "HD-01", "url": "https://filemoon.in/e/huypf50jkjkv/Watch_SPY_x_FAMILY_04_Dub" },
+              { "name": "HD-03", "url": "https://mxdrop.to/e/r607eowgfv8p9l3" }
+            ]
+          }
+        },
+        {
+          "number": 5,
+          "title": "Will They Pass or Fail?",
+          "duration": "24 min",
+          "servers": {
+            "sub": [
+              { "name": "HD-01", "url": "https://filemoon.in/e/oeakgpef3pls/Watch_SPY_x_FAMILY_05_sub" },
+              { "name": "HD-03", "url": "https://mxdrop.to/e/7kjzo7dqizjg6q" }
+            ],
+            "dub": [
+              { "name": "HD-01", "url": "https://filemoon.in/e/mlomjys9920i/Watch_SPY_x_FAMILY_05_dub" },
+              { "name": "HD-03", "url": "https://mxdrop.to/e/67rxnj1zuoojxg" }
+            ]
+          }
+        },
+        {
+          "number": 6,
+          "title": "The Friendship Scheme",
+          "duration": "24 min",
+          "servers": {
+            "sub": [
+              { "name": "HD-01", "url": "https://filemoon.in/e/8g8vk3u3rhcd/Watch_SPY_x_FAMILY_06_sub" },
+              { "name": "HD-02", "url": "https://hglink.to/e/evioksvmdimo" },
+              { "name": "HD-03", "url": "https://mxdrop.to/e/gjd8971eidkxj1" }
+            ],
+            "dub": [
+              { "name": "HD-01", "url": "https://filemoon.in/e/frhxhe9w9m3i/Watch_SPY_x_FAMILY_06_dub" },
+              { "name": "HD-03", "url": "https://mxdrop.to/e/nlne3ow9sl89x4" }
+            ]
+          }
+        },
+        {
+          "number": 7,
+          "title": "The Target's Second Son",
+          "duration": "24 min",
+          "servers": {
+            "sub": [
+              { "name": "HD-01", "url": "https://filemoon.in/e/6g69m0u915k5/Watch_SPY_x_FAMILY_07_sub" },
+              { "name": "HD-02", "url": "https://hglink.to/e/w9nhmfpjqzz9" },
+              { "name": "HD-03", "url": "https://mxdrop.to/e/jdkrlwg8u79vqw9" }
+            ],
+            "dub": [
+              { "name": "HD-01", "url": "https://filemoon.in/e/xjqdos1sceys/Watch_SPY_x_FAMILY_07_dub" },
+              { "name": "HD-03", "url": "https://mxdrop.to/e/r607eoj8t6pqpd" }
+            ]
+          }
+        },
+        {
+          "number": 8,
+          "title": "The Counter-Secret Police Cover Operation",
+          "duration": "24 min",
+          "servers": {
+            "sub": [
+              { "name": "HD-01", "url": "https://filemoon.in/e/jbh3qwv56djl/Watch_SPY_x_FAMILY_08_sub" },
+              { "name": "HD-02", "url": "https://hglink.to/e/5l6krr5usflf" },
+              { "name": "HD-03", "url": "https://mxdrop.to/e/8ljmpkdqu64ew3k" }
+            ],
+            "dub": [
+              { "name": "HD-01", "url": "https://filemoon.in/e/81ie6b7opp6z/Watch_SPY_x_FAMILY_08_dub" },
+              { "name": "HD-03", "url": "https://mxdrop.to/e/q1d04zvpu6loqq" }
+            ]
+          }
+        },
+        {
+          "number": 9,
+          "title": "Show Off How In Love You Are",
+          "duration": "24 min",
+          "servers": {
+            "sub": [
+              { "name": "HD-01", "url": "https://filemoon.in/e/2pfjmzkolg2m/Watch_SPY_x_FAMILY_09_sub" },
+              { "name": "HD-02", "url": "https://hglink.to/e/xg3cc5blrafq" },
+              { "name": "HD-03", "url": "https://mxdrop.to/e/xw9xz34rcm9k00" }
+            ],
+            "dub": [
+              { "name": "HD-01", "url": "https://filemoon.in/e/wze441aimvm9/Watch_SPY_x_FAMILY_09_dub" },
+              { "name": "HD-03", "url": "https://mxdrop.to/e/nlne3jlxhez89k" }
+            ]
+          }
+        },
+        {
+          "number": 10,
+          "title": "The Great Dodgeball Plan",
+          "duration": "24 min",
+          "servers": {
+            "sub": [
+              { "name": "HD-01", "url": "https://filemoon.in/e/se4qlejo2d4p/Watch_SPY_x_FAMILY_10_sub" },
+              { "name": "HD-02", "url": "https://hglink.to/e/oauf4xuprr5g" },
+              { "name": "HD-03", "url": "https://mxdrop.to/e/elzgoddlhq066r8" }
+            ],
+            "dub": [
+              { "name": "HD-01", "url": "https://filemoon.in/e/olujrn9d5i3s/Watch_SPY_x_FAMILY_10_dub" },
+              { "name": "HD-03", "url": "https://mxdrop.to/e/k0eoj9zjszl60g" }
+            ]
+          }
+        },
+        {
+          "number": 11,
+          "title": "Stella",
+          "duration": "24 min",
+          "servers": {
+            "sub": [
+              { "name": "HD-01", "url": "https://filemoon.in/e/f6ag1ks1ujqr/Watch_SPY_x_FAMILY_11_sub" }
+            ],
+            "dub": [
+              { "name": "HD-01", "url": "https://filemoon.in/e/xqbstefqcry4/Watch_SPY_x_FAMILY_11_dub" },
+              { "name": "HD-03", "url": "https://mxdrop.to/e/gjd8960rbpvdv4" }
+            ]
+          }
+        },
+        {
+          "number": 12,
+          "title": "Penguin Park",
+          "duration": "24 min",
+          "servers": {
+            "sub": [
+              { "name": "HD-01", "url": "https://filemoon.in/e/kkax09s7b24c/Watch_SPY_x_FAMILY_12_sub" }
+            ],
+            "dub": [
+              { "name": "HD-01", "url": "https://filemoon.in/e/wvydv7p48xe0/Watch_SPY_x_FAMILY_12_dub" },
+              { "name": "HD-03", "url": "https://mxdrop.to/e/67rxnj3etl69e6r" }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "seasonNumber": 1,
+      "part": 2,
+      "airedYear": 2022,
+      "episodes": [
+        {
+          "number": 1,
+          "title": "Project Apple",
+          "duration": "24 min",
+          "servers": {
+            "sub": [
+              { "name": "HD-01", "url": "https://filemoon.in/e/h044iu8bm419/Watch_SPY_x_FAMILY_Cour_2_Ep_01_sub" },
+              { "name": "HD-02", "url": "https://mxdrop.to/e/xw9xzz93b9493v" }
+            ],
+            "dub": [
+              { "name": "HD-01", "url": "https://filemoon.in/e/iaatg2snxmso/Watch_SPY_x_FAMILY_Cour_2_Dub_Ep_01" },
+              { "name": "HD-02", "url": "https://mxdrop.to/e/nln38ol4uljxpzo" }
+            ]
+          }
+        },
+        {
+          "number": 2,
+          "title": "Disarm the Time Bomb",
+          "duration": "24 min",
+          "servers": {
+            "sub": [
+              { "name": "HD-01", "url": "https://filemoon.in/e/3ifliesh34rm/Watch_SPY_x_FAMILY_Cour_2_SUB_Ep_02" },
+              { "name": "HD-02", "url": "https://mxdrop.to/e/9wxg996gc3nk9lj" }
+            ],
+            "dub": [
+              { "name": "HD-01", "url": "https://filemoon.in/e/t1ygfc1otw7i/Watch_SPY_x_FAMILY_Cour_2_Dub_Ep_02" },
+              { "name": "HD-02", "url": "https://mxdrop.to/e/1nowdl0zs3xmdw" }
+            ]
+          }
+        },
+        {
+          "number": 3,
+          "title": "A New Family Member",
+          "duration": "24 min",
+          "servers": {
+            "sub": [
+              { "name": "HD-01", "url": "https://filemoon.in/e/aliilcg1cvot/Watch_SPY_x_FAMILY_Cour_2_Sub_Ep_03" },
+              { "name": "HD-02", "url": "https://mxdrop.to/e/k0eojj1mh1emqp" }
+            ],
+            "dub": [
+              { "name": "HD-01", "url": "https://filemoon.in/e/c8x2uv2jopm1/Watch_SPY_x_FAMILY_Cour_2_Dub_ep_03" },
+              { "name": "HD-02", "url": "https://mxdrop.to/e/7kjo4mn8idwm0wr" }
+            ]
+          }
+        },
+        {
+          "number": 4,
+          "title": "Yor's Kitchen / The Informant's Great Romance Plan",
+          "duration": "24 min",
+          "servers": {
+            "sub": [
+              { "name": "HD-01", "url": "https://filemoon.in/e/11j3dkfvppzy/Watch_SPY_x_FAMILY_Cour_2_sub_ep_04" },
+              { "name": "HD-02", "url": "https://mxdrop.to/e/mkzpmp6dto8er3" }
+            ],
+            "dub": [
+              { "name": "HD-01", "url": "https://filemoon.in/e/p3ffhhvp23u7/Watch_SPY_x_FAMILY_Cour_2_Dub_ep_04" },
+              { "name": "HD-02", "url": "https://mxdrop.to/e/k0ejv99vhrol9z" }
+            ]
+          }
+        },
+        {
+          "number": 5,
+          "title": "Carry Out the Griffin Plan / Fullmetal Lady / Omelet Rice",
+          "duration": "24 min",
+          "servers": {
+            "sub": [
+              { "name": "HD-01", "url": "https://filemoon.in/e/10gre3qc074i/Watch_SPY_x_FAMILY_Cour_2_sub_ep_05" },
+              { "name": "HD-02", "url": "https://mxdrop.to/e/nlne3edzade38r" }
+            ],
+            "dub": [
+              { "name": "HD-01", "url": "https://filemoon.in/e/lz38fondybid/Watch_SPY_x_FAMILY_Cour_2_dub_ep_05" },
+              { "name": "HD-02", "url": "https://mxdrop.to/e/elzor97kfrkole" }
+            ]
+          }
+        },
+        {
+          "number": 6,
+          "title": "Uncle the Private Tutor / Daybreak",
+          "duration": "24 min",
+          "servers": {
+            "sub": [
+              { "name": "HD-01", "url": "https://filemoon.in/e/bta1qz18kipm/Watch_SPY_x_FAMILY_Cour_2_sub_ep_06" },
+              { "name": "HD-02", "url": "https://mxdrop.to/e/dkrmnnllig44r7" }
+            ],
+            "dub": [
+              { "name": "HD-01", "url": "https://filemoon.in/e/w1kmskkcxtrs/Watch_SPY_x_FAMILY_Cour_2_dib_ep_06" },
+              { "name": "HD-02", "url": "https://mxdrop.to/e/xw9z1d3gf6o1dn" }
+            ]
+          }
+        },
+        {
+          "number": 7,
+          "title": "A Revenge Plot Against Desmond / Mama Becomes the Wind",
+          "duration": "24 min",
+          "servers": {
+            "sub": [
+              { "name": "HD-01", "url": "https://filemoon.in/e/omn0yjab9hfr/Watch_SPY_x_FAMILY_Cour_2_Sub_ep_07" },
+              { "name": "HD-02", "url": "https://mxdrop.to/e/owz6vv73ugwx99" }
+            ],
+            "dub": [
+              { "name": "HD-01", "url": "https://filemoon.in/e/4kjgl6nbr5cd/Watch_SPY_x_FAMILY_Cour_2_dub_ep_07" },
+              { "name": "HD-02", "url": "https://mxdrop.to/e/36qzojdrtmwzqqg" }
+            ]
+          }
+        },
+        {
+          "number": 8,
+          "title": "Investigate the General Hospital / Decipher the Code",
+          "duration": "24 min",
+          "servers": {
+            "sub": [
+              { "name": "HD-01", "url": "https://filemoon.in/e/kbwsx9b8ciee/Watch_SPY_x_FAMILY_Cour_2_Sub_ep_08" },
+              { "name": "HD-02", "url": "https://mxdrop.to/e/vkqjwwoqse6q38" }
+            ],
+            "dub": [
+              { "name": "HD-01", "url": "https://filemoon.in/e/g8uykzjynmyx/Watch_SPY_x_FAMILY_Cour_2_dub_ep_08" },
+              { "name": "HD-02", "url": "https://mxdrop.to/e/67rnwzk1ikmmpm" }
+            ]
+          }
+        },
+        {
+          "number": 9,
+          "title": "Nightfall / First Fit of Jealousy",
+          "duration": "24 min",
+          "servers": {
+            "sub": [
+              { "name": "HD-01", "url": "https://filemoon.in/e/j5qem87mx9ik/Watch_SPY_x_FAMILY_Cour_2_sub_ep_09" },
+              { "name": "HD-02", "url": "https://mxdrop.to/e/l794xxm9cqdqed" }
+            ],
+            "dub": [
+              { "name": "HD-01", "url": "https://filemoon.in/e/kku4gnojhp4z/Watch_SPY_x_FAMILY_Cour_2_dub_ep_09" },
+              { "name": "HD-02", "url": "https://mxdrop.to/e/r60evoloh3oll1" }
+            ]
+          }
+        },
+        {
+          "number": 10,
+          "title": "The Underground Tennis Tournament: The Campbelldon",
+          "duration": "24 min",
+          "servers": {
+            "sub": [
+              { "name": "HD-01", "url": "https://filemoon.in/e/xewcgbqaqa7s/Watch_SPY_x_FAMILY_Cour_2_sub_ep_10" },
+              { "name": "HD-02", "url": "https://mxdrop.to/e/03z7kkeqi13gel" }
+            ],
+            "dub": [
+              { "name": "HD-01", "url": "https://filemoon.in/e/yo0hw0ctbk5i/Watch_SPY_x_FAMILY_Cour_2_dub_ep_10" },
+              { "name": "HD-02", "url": "https://mxdrop.to/e/owzvdov7br0rlw" }
+            ]
+          }
+        },
+        {
+          "number": 11,
+          "title": "The Unwavering Path",
+          "duration": "24 min",
+          "servers": {
+            "sub": [
+              { "name": "HD-01", "url": "https://filemoon.in/e/f17mtcj0hn3z/Watch_SPY_x_FAMILY_Cour_2_Sub_ep_11" },
+              { "name": "HD-02", "url": "https://mxdrop.to/e/gjd8998ntdxgog" }
+            ],
+            "dub": [
+              { "name": "HD-01", "url": "https://filemoon.in/e/unv0zp16e9u6/Watch_SPY_x_FAMILY_Cour_2_dub_ep_11" },
+              { "name": "HD-02", "url": "https://mxdrop.to/e/l79xv1eqidvjl6" }
+            ]
+          }
+        },
+        {
+          "number": 12,
+          "title": "The Role of a Mother and Wife / Shopping with Friends",
+          "duration": "24 min",
+          "servers": {
+            "sub": [
+              { "name": "HD-01", "url": "https://filemoon.in/e/38i8juxmo4bn/Watch_SPY_x_FAMILY_Cour_2_sub_ep_12" },
+              { "name": "HD-02", "url": "https://mxdrop.to/e/k0eojjjdbvmg3v" }
+            ],
+            "dub": [
+              { "name": "HD-01", "url": "https://filemoon.in/e/6ajb9y94k3ku/Watch_SPY_x_FAMILY_Cour_2_dub_ep_12" },
+              { "name": "HD-02", "url": "https://mxdrop.to/e/pj6r0gpph76e73" }
+            ]
+          }
+        },
+        {
+          "number": 13,
+          "title": "First Contact",
+          "duration": "24 min",
+          "servers": {
+            "sub": [
+              { "name": "HD-01", "url": "https://filemoon.in/e/1v01bpj8e8kv/Watch_SPY_x_FAMILY_Cour_2_sub_ep_13" },
+              { "name": "HD-02", "url": "https://mxdrop.to/e/67rnlg3gad6pg8" }
+            ],
+            "dub": [
+              { "name": "HD-01", "url": "https://filemoon.in/e/612vpjcyyt49/Watch_SPY_x_FAMILY_Cour_2_Dub_ep_13" },
+              { "name": "HD-02", "url": "https://mxdrop.to/e/gjd9mwz1hdn344" }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "seasonNumber": 2,
+      "airedYear": 2023,
+      "episodes": [
+        {
+          "number": 1,
+          "title": "Follow Mama and Papa",
+          "duration": "24 min",
+          "servers": {
+            "sub": [
+              { "name": "HD-01", "url": "https://filemoon.in/e/i314ntezw1m9/Watch_SPY_x_FAMILY_Season_2_sub_01" },
+              { "name": "HD-02", "url": "https://mxdrop.to/e/36qzpmogb031k1" }
+            ],
+            "dub": [
+              { "name": "HD-01", "url": "https://filemoon.in/e/lvi6q7bxq79x/Watch_SPY_x_FAMILY_Season_2_Dub_01" },
+              { "name": "HD-02", "url": "https://mxdrop.to/e/l79xepe8i31lpg" }
+            ]
+          }
+        },
+        {
+          "number": 2,
+          "title": "Bond's Strategy to Stay Alive / Damian's Field Research Trip",
+          "duration": "24 min",
+          "servers": {
+            "sub": [
+              { "name": "HD-01", "url": "https://filemoon.in/e/0w7tda6nd3h1/Watch_SPY_x_FAMILY_Season_2_sub_02" },
+              { "name": "HD-02", "url": "https://mxdrop.to/e/7kjo3vwrbqmj1r" }
+            ],
+            "dub": [
+              { "name": "HD-01", "url": "https://filemoon.in/e/5dqucg5rd0ts/Watch_SPY_x_FAMILY_Season_2_Dub_02" },
+              { "name": "HD-02", "url": "https://mxdrop.to/e/9wx9ve9lbrkvkl" }
+            ]
+          }
+        },
+        {
+          "number": 3,
+          "title": "Mission and Family / The Elegant Bondman / Waking Up",
+          "duration": "24 min",
+          "servers": {
+            "sub": [
+              { "name": "HD-01", "url": "https://filemoon.in/e/asb0ke1pdtb7/Watch_SPY_x_FAMILY_Season_2_sub_03" },
+              { "name": "HD-02", "url": "https://mxdrop.to/e/7kjo3l9vh6d0xk" }
+            ],
+            "dub": [
+              { "name": "HD-01", "url": "https://filemoon.in/e/x7lsfp0m223x/Watch_SPY_x_FAMILY_Season_2_dub_03" },
+              { "name": "HD-02", "url": "https://mxdrop.to/e/q1d4pjk4fx78176" }
+            ]
+          }
+        },
+        {
+          "number": 4,
+          "title": "The Pastry of Knowledge / The Informant's Romance Plan II",
+          "duration": "24 min",
+          "servers": {
+            "sub": [
+              { "name": "HD-01", "url": "https://filemoon.in/e/pu3w9r7g30ot/Watch_SPY_x_FAMILY_Season_2_sub_04" },
+              { "name": "HD-02", "url": "https://mxdrop.to/e/1nowmr9ei68xg4" }
+            ],
+            "dub": [
+              { "name": "HD-01", "url": "https://filemoon.in/e/7wir3s0l3s02/Watch_SPY_x_FAMILY_Season_2_dub_04" },
+              { "name": "HD-02", "url": "https://mxdrop.to/e/gjd9eve1cw0lqpk" }
+            ]
+          }
+        },
+        {
+          "number": 5,
+          "title": "Plan to Cross the Border",
+          "duration": "24 min",
+          "servers": {
+            "sub": [
+              { "name": "HD-01", "url": "https://filemoon.in/e/my1gyqjbyp8k/Watch_SPY_x_FAMILY_Season_2_sub_05" },
+              { "name": "HD-02", "url": "https://mxdrop.to/e/vkqw68rzf39nv6" }
+            ],
+            "dub": [
+              { "name": "HD-01", "url": "https://filemoon.in/e/0ul9rsyk8s6r/Watch_SPY_x_FAMILY_Season_2_Dub_05" },
+              { "name": "HD-02", "url": "https://mxdrop.to/e/jdklpovjf8dok" }
+            ]
+          }
+        },
+        {
+          "number": 6,
+          "title": "The Fearsome Luxury Cruise Ship",
+          "duration": "24 min",
+          "servers": {
+            "sub": [
+              { "name": "HD-01", "url": "https://filemoon.in/e/r9xayo7e0hhj/Watch_SPY_x_FAMILY_Season_2_sub_06" },
+              { "name": "HD-02", "url": "https://mxdrop.to/e/l79xekmkt48lnw" }
+            ],
+            "dub": [
+              { "name": "HD-01", "url": "https://filemoon.in/e/0tvr921xof24/Watch_SPY_x_FAMILY_Season_2_Dub_06" },
+              { "name": "HD-02", "url": "https://mxdrop.to/e/1nowm7g6f4zlv8" }
+            ]
+          }
+        },
+        {
+          "number": 7,
+          "title": "Who Is This Mission For?",
+          "duration": "24 min",
+          "servers": {
+            "sub": [
+              { "name": "HD-01", "url": "https://filemoon.in/e/oc136yrnymfv/Watch_SPY_x_FAMILY_Season_2_sub_ep_o7" },
+              { "name": "HD-02", "url": "https://mxdrop.to/e/wlw1dvg3c03ljdo" }
+            ],
+            "dub": [
+              { "name": "HD-01", "url": "https://filemoon.in/e/xxmswyuxd2a1/Watch_SPY_x_FAMILY_Season_2_Dub_07" },
+              { "name": "HD-02", "url": "https://mxdrop.to/e/8ljp3z8rt7xe74" }
+            ]
+          }
+        },
+        {
+          "number": 8,
+          "title": "The Symphony Upon the Ship",
+          "duration": "24 min",
+          "servers": {
+            "sub": [
+              { "name": "HD-01", "url": "https://filemoon.in/e/nnbj7ifssgm8/Watch_SPY_x_FAMILY_Season_2_sub_08" },
+              { "name": "HD-02", "url": "https://mxdrop.to/e/vkqw68jxu06pg6" }
+            ],
+            "dub": [
+              { "name": "HD-01", "url": "https://filemoon.in/e/o1q2eu3mv4ld/Watch_SPY_x_FAMILY_Season_2_Dub_08" },
+              { "name": "HD-02", "url": "https://mxdrop.to/e/owzvp01wf4rkkx" }
+            ]
+          }
+        },
+        {
+          "number": 9,
+          "title": "The Hand That Connects to the Future",
+          "duration": "24 min",
+          "servers": {
+            "sub": [
+              { "name": "HD-01", "url": "https://filemoon.in/e/l7g7z6tfhz14/Watch_SPY_x_FAMILY_Season_2_sub_ep_09" },
+              { "name": "HD-02", "url": "https://mxdrop.to/e/vkqw688kspd06o" }
+            ],
+            "dub": [
+              { "name": "HD-01", "url": "https://filemoon.in/e/zaiztr6debol/Watch_SPY_x_FAMILY_Season_2_Dub_09" },
+              { "name": "HD-02", "url": "https://mxdrop.to/e/r60enl41bw14lg" }
+            ]
+          }
+        },
+        {
+          "number": 10,
+          "title": "Enjoy the Resort to the Fullest / Bragging About Vacation",
+          "duration": "24 min",
+          "servers": {
+            "sub": [
+              { "name": "HD-01", "url": "https://filemoon.in/e/6ilaru5w8u0h/Watch_SPY_x_FAMILY_Season_2_coir_2_sub_ep_10" },
+              { "name": "HD-02", "url": "https://mxdrop.to/e/dkrn1pnvs73eeg1" }
+            ],
+            "dub": [
+              { "name": "HD-01", "url": "https://filemoon.in/e/l9g043a937gc/Watch_SPY_x_FAMILY_Season_2_dub_10" },
+              { "name": "HD-02", "url": "https://mxdrop.to/e/03zkp0qeceo73n" }
+            ]
+          }
+        },
+        {
+          "number": 11,
+          "title": "Berlint in Love / Nightfall's Daily Life",
+          "duration": "24 min",
+          "servers": {
+            "sub": [
+              { "name": "HD-01", "url": "https://filemoon.in/e/ev4up8lee064/Watch_SPY_x_FAMILY_Season_2_sub_ep_11" }
+            ],
+            "dub": [
+              { "name": "HD-01", "url": "https://filemoon.in/e/ewnoarq82mrm/Watch_SPY_x_FAMILY_Season_2_Dub_11" },
+              { "name": "HD-02", "url": "https://mxdrop.to/e/7kjo3x11adpowdo" }
+            ]
+          }
+        },
+        {
+          "number": 12,
+          "title": "Part of the Family",
+          "duration": "24 min",
+          "servers": {
+            "sub": [
+              { "name": "HD-01", "url": "https://filemoon.in/e/a7n03cp2194o/Watch_SPY_x_FAMILY_Season_2_sub_12" },
+              { "name": "HD-02", "url": "https://mxdrop.to/e/dkrn1z6osv76p9" }
+            ],
+            "dub": [
+              { "name": "HD-01", "url": "https://filemoon.in/e/b7vqmu69m5bu/Watch_SPY_x_FAMILY_Season_2_Dub_12" },
+              { "name": "HD-02", "url": "https://mxdrop.to/e/owzvp0krbq3wjj" }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "seasonNumber": 3,
+      "airedYear": 2025,
+      "episodes": [
+        {
+          "number": 1,
+          "title": "Berlint Panic / The Informant and Nightfall",
+          "duration": "24 min",
+          "servers": {
+            "sub": [
+              { "name": "HD-01", "url": "https://filemoon.in/e/9ro0sk8chc2i/Watch_Spy_x_Family_Season_3_Sub_01" },
+              { "name": "HD-02", "url": "https://mxdrop.to/e/l79x9exlh8jlq7" }
+            ],
+            "dub": [
+              { "name": "HD-01", "url": "https://filemoon.in/e/rvzqvvmn6gmo/Watch_Spy_x_Family_Season_3_Dub_01" },
+              { "name": "HD-02", "url": "https://mxdrop.to/e/8ljpj0r6ckjg43" }
+            ]
+          }
+        },
+        {
+          "number": 2,
+          "title": "Avoid Getting Tonitrus Bolts / Memories I",
+          "duration": "24 min",
+          "servers": {
+            "sub": [
+              { "name": "HD-01", "url": "https://filemoon.in/e/qtjlshorwlwj/Watch_Spy_x_Family_Season_3_sub_02" },
+              { "name": "HD-02", "url": "https://mxdrop.to/e/67rnrdw6idq8qm" }
+            ],
+            "dub": [
+              { "name": "HD-01", "url": "https://filemoon.in/e/c62kstosvzga/Spy_x_Family_dub_02" },
+              { "name": "HD-02", "url": "https://mxdrop.to/e/q1d4dgorf7vpx8" }
+            ]
+          }
+        },
+        {
+          "number": 3,
+          "title": "Memories II",
+          "duration": "24 min",
+          "servers": {
+            "sub": [
+              { "name": "HD-01", "url": "https://filemoon.in/e/14d9xuvuyib8/Watch_Spy_x_Family_Season_3_sub_03" },
+              { "name": "HD-02", "url": "https://mxdrop.to/e/4d9g9r0ji3ee8v" }
+            ],
+            "dub": [
+              { "name": "HD-01", "url": "https://filemoon.in/e/g0y28fpilu36/Spy_x_Family_Eng_dub_03" },
+              { "name": "HD-02", "url": "https://mxdrop.to/e/9wx9x693b3vm4po" }
+            ]
+          }
+        },
+        {
+          "number": 4,
+          "title": "Behind the Scandal / The Path to an Imperial Scholar",
+          "duration": "24 min",
+          "servers": {
+            "sub": [
+              { "name": "HD-01", "url": "https://filemoon.in/e/m4wu7x8yiwj3/Watch_Spy_x_Family_Season_3_sub_04" },
+              { "name": "HD-02", "url": "https://mxdrop.to/e/owzvzp0pid93p1" }
+            ],
+            "dub": [
+              { "name": "HD-01", "url": "https://filemoon.in/e/py1uv6fvs5xp/Spy_x_Family_Eng_dub_04" },
+              { "name": "HD-02", "url": "https://mxdrop.to/e/03zkzokkc1xwnd" }
+            ]
+          }
+        },
+        {
+          "number": 5,
+          "title": "The Mommy-Friends Scheme",
+          "duration": "24 min",
+          "servers": {
+            "sub": [
+              { "name": "HD-01", "url": "https://filemoon.in/e/8kp5ioch0pc3/Watch_Spy_x_Family_Season_3_sub_05" },
+              { "name": "HD-02", "url": "https://mxdrop.to/e/9wx9xv9ei3vwej3" }
+            ],
+            "dub": [
+              { "name": "HD-01", "url": "https://filemoon.in/e/1j4dlq6ayhkw/Spy_x_Family_Eng_dub_05" },
+              { "name": "HD-02", "url": "https://mxdrop.to/e/mkzmz46nbk0gqk" }
+            ]
+          }
+        },
+        {
+          "number": 6,
+          "title": "White Jealousy / The Eden College Busjacking Incident",
+          "duration": "24 min",
+          "servers": {
+            "sub": [
+              { "name": "HD-01", "url": "https://filemoon.in/e/fqwpf5qsukx0/Watch_Spy_x_Family_Season_3_sub_06" },
+              { "name": "HD-02", "url": "https://mxdrop.to/e/gjd9dog7hd96jw" }
+            ],
+            "dub": [
+              { "name": "HD-01", "url": "https://filemoon.in/e/cgy7bagga9mb/Spy_x_Family_Eng_Dub_-_06" },
+              { "name": "HD-02", "url": "https://mxdrop.to/e/wlw1w848al4mk7" }
+            ]
+          }
+        },
+        {
+          "number": 7,
+          "title": "The Red Circus",
+          "duration": "24 min",
+          "servers": {
+            "sub": [
+              { "name": "HD-01", "url": "https://filemoon.in/e/sq3y5x64y5u1/Watch_Spy_x_Family_Season_3_sub_07" },
+              { "name": "HD-02", "url": "https://mxdrop.to/e/1nowo6mwtkq8ej1" }
+            ],
+            "dub": [
+              { "name": "HD-01", "url": "https://filemoon.in/e/yzgk584eqoar/Spy_x_Family_Eng_Dub_-_7" },
+              { "name": "HD-02", "url": "https://mxdrop.to/e/9wx9x6lnbvjz3n" }
+            ]
+          }
+        },
+        {
+          "number": 8,
+          "title": "Take Down the Busjacker",
+          "duration": "24 min",
+          "servers": {
+            "sub": [
+              { "name": "HD-01", "url": "https://filemoon.in/e/ju02f66lfr61/Watch_Spy_x_Family_Season_3_sub_08" },
+              { "name": "HD-02", "url": "https://mxdrop.to/e/z1j8jdj9tgw8e0" }
+            ],
+            "dub": [
+              { "name": "HD-01", "url": "https://filemoon.in/e/3ttu2bpmjdkj/Spy_x_Family_Eng_Dub_-_08" },
+              { "name": "HD-02", "url": "https://mxdrop.to/e/xw9z9pnpslll9jp" }
+            ]
+          }
+        },
+        {
+          "number": 9,
+          "title": "Anya's Era Has Come",
+          "duration": "24 min",
+          "servers": {
+            "sub": [
+              { "name": "HD-01", "url": "https://filemoon.in/e/qxk39jej0gry/Watch_Spy_x_Family_Season_3_sub_09" },
+              { "name": "HD-02", "url": "https://mxdrop.to/e/nln3nmxohx6r91" }
+            ],
+            "dub": [
+              { "name": "HD-01", "url": "https://filemoon.in/e/p37b2o39lnm0/Spy_x_Family_Eng_Dub_09" },
+              { "name": "HD-02", "url": "https://mxdrop.to/e/jdklk4o8t9nv8n" }
+            ]
+          }
+        },
+        {
+          "number": 10,
+          "title": "Austin's Troubles / A Normal Mixer / Moon Landing",
+          "duration": "24 min",
+          "servers": {
+            "sub": [
+              { "name": "HD-01", "url": "https://filemoon.in/e/u6dczxua5cgi/Watch_Spy_x_Family_Season_3_sub_10" },
+              { "name": "HD-02", "url": "https://mxdrop.to/e/wlw1wxdli64olq" }
+            ],
+            "dub": [
+              { "name": "HD-01", "url": "https://filemoon.in/e/wrcg8dovy2wb/Spy_x_Family_Eng_Dub_10" },
+              { "name": "HD-02", "url": "https://mxdrop.to/e/nln3ngepilzkwx" }
+            ]
+          }
+        },
+        {
+          "number": 11,
+          "title": "Extreme Level 3 Situation",
+          "duration": "24 min",
+          "servers": {
+            "sub": [
+              { "name": "HD-01", "url": "https://filemoon.in/e/ml2888rptjj5/Watch_Spy_x_Family_Season_3_sub_11" }
+            ],
+            "dub": [
+              { "name": "Coming Soon", "url": "#" }
+            ]
+          }
+        },
+        {
+          "number": 12,
+          "title": "Battle to the Death in the Sewers",
+          "duration": "24 min",
+          "servers": {
+            "sub": [
+              { "name": "HD-01", "url": "https://filemoon.in/e/si6tdyx7idq2/Watch_Spy_x_Family_Season_3_sub_12" }
+            ],
+            "dub": [
+              { "name": "Coming Soon", "url": "#" }
+            ]
+          }
+        },
+        {
+          "number": 13,
+          "title": "A World Where We Cannot Survive",
+          "duration": "24 min",
+          "servers": {
+            "sub": [
+              { "name": "HD-01", "url": "https://filemoon.in/e/ef1o4jjxt9v4/Watch_Spy_x_Family_Season_3_sub_13" }
+            ],
+            "dub": [
+              { "name": "Coming Soon", "url": "#" }
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}       
   {
   "id": "spy-family-s2",
   "slug": "spy-family-season-2",
@@ -5398,31 +7502,781 @@
   "producers": ["TOHO", "TV Tokyo", "Shueisha"],
   "seasons": [
     {
-      "seasonNumber": 2,
+  "seasons": [
+    {
+      "seasonNumber": 1,
+      "part": 1,
+      "airedYear": 2022,
       "episodes": [
         {
-          "number": 26,
-          "title": "Let's Follow Mama and Papa",
+          "number": 1,
+          "title": "Operation Strix",
           "duration": "24 min",
           "servers": {
-            "raw": [{ "name": "HD-01", "url": "server-raw.com" }],
-            "sub": [{ "name": "HD-01", "url": "server-sub.com" }],
-            "dub": [{ "name": "HD-01", "url": "server-dub.com" }]
+            "sub": [
+              { "name": "HD-01", "url": "https://filemoon.in/e/38ts0we8oisx/Watch_SPY_x_FAMILY_01_sub" },
+              { "name": "HD-03", "url": "https://mxdrop.to/e/jdkrlwkxskoqo1" }
+            ],
+            "dub": [
+              { "name": "HD-01", "url": "https://filemoon.in/e/vptksq123b8h/Watch_SPY_x_FAMILY_Ep01_Dub" },
+              { "name": "HD-03", "url": "https://mxdrop.to/e/67rxnj11il6nopd" }
+            ]
           }
         },
         {
-          "number": 30,
+          "number": 2,
+          "title": "Secure a Wife",
+          "duration": "24 min",
+          "servers": {
+            "sub": [
+              { "name": "HD-01", "url": "https://filemoon.in/e/7wl7g7lstzdv/Watch_SPY_x_FAMILY_02_sub" },
+              { "name": "HD-03", "url": "https://mxdrop.to/e/elzgodz7c1ekg3" }
+            ],
+            "dub": [
+              { "name": "HD-01", "url": "https://filemoon.in/e/an1smvvzqrnq/Watch_SPY_x_FAMILY_Ep02_Dub" },
+              { "name": "HD-03", "url": "https://mxdrop.to/e/k0eoj9emu33npr8" }
+            ]
+          }
+        },
+        {
+          "number": 3,
+          "title": "Prepare for the Interview",
+          "duration": "24 min",
+          "servers": {
+            "sub": [
+              { "name": "HD-01", "url": "https://filemoon.in/e/v4ct3s3niz15/Watch_SPY_x_FAMILY_03_sub" },
+              { "name": "HD-03", "url": "https://mxdrop.to/e/vkqjw4z9uqqggj6" }
+            ],
+            "dub": [
+              { "name": "HD-01", "url": "https://filemoon.in/e/7eivwg65joj4/Watch_SPY_x_FAMILY_Ep03_Dub" },
+              { "name": "HD-02", "url": "https://hglink.to/e/0mlawb1wav4v" },
+              { "name": "HD-03", "url": "https://mxdrop.to/e/mkzpmoz4tx64oz8" }
+            ]
+          }
+        },
+        {
+          "number": 4,
+          "title": "The Prestigious School's Interview",
+          "duration": "24 min",
+          "servers": {
+            "sub": [
+              { "name": "HD-01", "url": "https://filemoon.in/e/5ili32dzf74z/Watch_SPY_x_FAMILY_04_sub" },
+              { "name": "HD-03", "url": "https://mxdrop.to/e/nlne3zg0cgzedm" }
+            ],
+            "dub": [
+              { "name": "HD-01", "url": "https://filemoon.in/e/huypf50jkjkv/Watch_SPY_x_FAMILY_04_Dub" },
+              { "name": "HD-03", "url": "https://mxdrop.to/e/r607eowgfv8p9l3" }
+            ]
+          }
+        },
+        {
+          "number": 5,
+          "title": "Will They Pass or Fail?",
+          "duration": "24 min",
+          "servers": {
+            "sub": [
+              { "name": "HD-01", "url": "https://filemoon.in/e/oeakgpef3pls/Watch_SPY_x_FAMILY_05_sub" },
+              { "name": "HD-03", "url": "https://mxdrop.to/e/7kjzo7dqizjg6q" }
+            ],
+            "dub": [
+              { "name": "HD-01", "url": "https://filemoon.in/e/mlomjys9920i/Watch_SPY_x_FAMILY_05_dub" },
+              { "name": "HD-03", "url": "https://mxdrop.to/e/67rxnj1zuoojxg" }
+            ]
+          }
+        },
+        {
+          "number": 6,
+          "title": "The Friendship Scheme",
+          "duration": "24 min",
+          "servers": {
+            "sub": [
+              { "name": "HD-01", "url": "https://filemoon.in/e/8g8vk3u3rhcd/Watch_SPY_x_FAMILY_06_sub" },
+              { "name": "HD-02", "url": "https://hglink.to/e/evioksvmdimo" },
+              { "name": "HD-03", "url": "https://mxdrop.to/e/gjd8971eidkxj1" }
+            ],
+            "dub": [
+              { "name": "HD-01", "url": "https://filemoon.in/e/frhxhe9w9m3i/Watch_SPY_x_FAMILY_06_dub" },
+              { "name": "HD-03", "url": "https://mxdrop.to/e/nlne3ow9sl89x4" }
+            ]
+          }
+        },
+        {
+          "number": 7,
+          "title": "The Target's Second Son",
+          "duration": "24 min",
+          "servers": {
+            "sub": [
+              { "name": "HD-01", "url": "https://filemoon.in/e/6g69m0u915k5/Watch_SPY_x_FAMILY_07_sub" },
+              { "name": "HD-02", "url": "https://hglink.to/e/w9nhmfpjqzz9" },
+              { "name": "HD-03", "url": "https://mxdrop.to/e/jdkrlwg8u79vqw9" }
+            ],
+            "dub": [
+              { "name": "HD-01", "url": "https://filemoon.in/e/xjqdos1sceys/Watch_SPY_x_FAMILY_07_dub" },
+              { "name": "HD-03", "url": "https://mxdrop.to/e/r607eoj8t6pqpd" }
+            ]
+          }
+        },
+        {
+          "number": 8,
+          "title": "The Counter-Secret Police Cover Operation",
+          "duration": "24 min",
+          "servers": {
+            "sub": [
+              { "name": "HD-01", "url": "https://filemoon.in/e/jbh3qwv56djl/Watch_SPY_x_FAMILY_08_sub" },
+              { "name": "HD-02", "url": "https://hglink.to/e/5l6krr5usflf" },
+              { "name": "HD-03", "url": "https://mxdrop.to/e/8ljmpkdqu64ew3k" }
+            ],
+            "dub": [
+              { "name": "HD-01", "url": "https://filemoon.in/e/81ie6b7opp6z/Watch_SPY_x_FAMILY_08_dub" },
+              { "name": "HD-03", "url": "https://mxdrop.to/e/q1d04zvpu6loqq" }
+            ]
+          }
+        },
+        {
+          "number": 9,
+          "title": "Show Off How In Love You Are",
+          "duration": "24 min",
+          "servers": {
+            "sub": [
+              { "name": "HD-01", "url": "https://filemoon.in/e/2pfjmzkolg2m/Watch_SPY_x_FAMILY_09_sub" },
+              { "name": "HD-02", "url": "https://hglink.to/e/xg3cc5blrafq" },
+              { "name": "HD-03", "url": "https://mxdrop.to/e/xw9xz34rcm9k00" }
+            ],
+            "dub": [
+              { "name": "HD-01", "url": "https://filemoon.in/e/wze441aimvm9/Watch_SPY_x_FAMILY_09_dub" },
+              { "name": "HD-03", "url": "https://mxdrop.to/e/nlne3jlxhez89k" }
+            ]
+          }
+        },
+        {
+          "number": 10,
+          "title": "The Great Dodgeball Plan",
+          "duration": "24 min",
+          "servers": {
+            "sub": [
+              { "name": "HD-01", "url": "https://filemoon.in/e/se4qlejo2d4p/Watch_SPY_x_FAMILY_10_sub" },
+              { "name": "HD-02", "url": "https://hglink.to/e/oauf4xuprr5g" },
+              { "name": "HD-03", "url": "https://mxdrop.to/e/elzgoddlhq066r8" }
+            ],
+            "dub": [
+              { "name": "HD-01", "url": "https://filemoon.in/e/olujrn9d5i3s/Watch_SPY_x_FAMILY_10_dub" },
+              { "name": "HD-03", "url": "https://mxdrop.to/e/k0eoj9zjszl60g" }
+            ]
+          }
+        },
+        {
+          "number": 11,
+          "title": "Stella",
+          "duration": "24 min",
+          "servers": {
+            "sub": [
+              { "name": "HD-01", "url": "https://filemoon.in/e/f6ag1ks1ujqr/Watch_SPY_x_FAMILY_11_sub" }
+            ],
+            "dub": [
+              { "name": "HD-01", "url": "https://filemoon.in/e/xqbstefqcry4/Watch_SPY_x_FAMILY_11_dub" },
+              { "name": "HD-03", "url": "https://mxdrop.to/e/gjd8960rbpvdv4" }
+            ]
+          }
+        },
+        {
+          "number": 12,
+          "title": "Penguin Park",
+          "duration": "24 min",
+          "servers": {
+            "sub": [
+              { "name": "HD-01", "url": "https://filemoon.in/e/kkax09s7b24c/Watch_SPY_x_FAMILY_12_sub" }
+            ],
+            "dub": [
+              { "name": "HD-01", "url": "https://filemoon.in/e/wvydv7p48xe0/Watch_SPY_x_FAMILY_12_dub" },
+              { "name": "HD-03", "url": "https://mxdrop.to/e/67rxnj3etl69e6r" }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "seasonNumber": 1,
+      "part": 2,
+      "airedYear": 2022,
+      "episodes": [
+        {
+          "number": 1,
+          "title": "Project Apple",
+          "duration": "24 min",
+          "servers": {
+            "sub": [
+              { "name": "HD-01", "url": "https://filemoon.in/e/h044iu8bm419/Watch_SPY_x_FAMILY_Cour_2_Ep_01_sub" },
+              { "name": "HD-02", "url": "https://mxdrop.to/e/xw9xzz93b9493v" }
+            ],
+            "dub": [
+              { "name": "HD-01", "url": "https://filemoon.in/e/iaatg2snxmso/Watch_SPY_x_FAMILY_Cour_2_Dub_Ep_01" },
+              { "name": "HD-02", "url": "https://mxdrop.to/e/nln38ol4uljxpzo" }
+            ]
+          }
+        },
+        {
+          "number": 2,
+          "title": "Disarm the Time Bomb",
+          "duration": "24 min",
+          "servers": {
+            "sub": [
+              { "name": "HD-01", "url": "https://filemoon.in/e/3ifliesh34rm/Watch_SPY_x_FAMILY_Cour_2_SUB_Ep_02" },
+              { "name": "HD-02", "url": "https://mxdrop.to/e/9wxg996gc3nk9lj" }
+            ],
+            "dub": [
+              { "name": "HD-01", "url": "https://filemoon.in/e/t1ygfc1otw7i/Watch_SPY_x_FAMILY_Cour_2_Dub_Ep_02" },
+              { "name": "HD-02", "url": "https://mxdrop.to/e/1nowdl0zs3xmdw" }
+            ]
+          }
+        },
+        {
+          "number": 3,
+          "title": "A New Family Member",
+          "duration": "24 min",
+          "servers": {
+            "sub": [
+              { "name": "HD-01", "url": "https://filemoon.in/e/aliilcg1cvot/Watch_SPY_x_FAMILY_Cour_2_Sub_Ep_03" },
+              { "name": "HD-02", "url": "https://mxdrop.to/e/k0eojj1mh1emqp" }
+            ],
+            "dub": [
+              { "name": "HD-01", "url": "https://filemoon.in/e/c8x2uv2jopm1/Watch_SPY_x_FAMILY_Cour_2_Dub_ep_03" },
+              { "name": "HD-02", "url": "https://mxdrop.to/e/7kjo4mn8idwm0wr" }
+            ]
+          }
+        },
+        {
+          "number": 4,
+          "title": "Yor's Kitchen / The Informant's Great Romance Plan",
+          "duration": "24 min",
+          "servers": {
+            "sub": [
+              { "name": "HD-01", "url": "https://filemoon.in/e/11j3dkfvppzy/Watch_SPY_x_FAMILY_Cour_2_sub_ep_04" },
+              { "name": "HD-02", "url": "https://mxdrop.to/e/mkzpmp6dto8er3" }
+            ],
+            "dub": [
+              { "name": "HD-01", "url": "https://filemoon.in/e/p3ffhhvp23u7/Watch_SPY_x_FAMILY_Cour_2_Dub_ep_04" },
+              { "name": "HD-02", "url": "https://mxdrop.to/e/k0ejv99vhrol9z" }
+            ]
+          }
+        },
+        {
+          "number": 5,
+          "title": "Carry Out the Griffin Plan / Fullmetal Lady / Omelet Rice",
+          "duration": "24 min",
+          "servers": {
+            "sub": [
+              { "name": "HD-01", "url": "https://filemoon.in/e/10gre3qc074i/Watch_SPY_x_FAMILY_Cour_2_sub_ep_05" },
+              { "name": "HD-02", "url": "https://mxdrop.to/e/nlne3edzade38r" }
+            ],
+            "dub": [
+              { "name": "HD-01", "url": "https://filemoon.in/e/lz38fondybid/Watch_SPY_x_FAMILY_Cour_2_dub_ep_05" },
+              { "name": "HD-02", "url": "https://mxdrop.to/e/elzor97kfrkole" }
+            ]
+          }
+        },
+        {
+          "number": 6,
+          "title": "Uncle the Private Tutor / Daybreak",
+          "duration": "24 min",
+          "servers": {
+            "sub": [
+              { "name": "HD-01", "url": "https://filemoon.in/e/bta1qz18kipm/Watch_SPY_x_FAMILY_Cour_2_sub_ep_06" },
+              { "name": "HD-02", "url": "https://mxdrop.to/e/dkrmnnllig44r7" }
+            ],
+            "dub": [
+              { "name": "HD-01", "url": "https://filemoon.in/e/w1kmskkcxtrs/Watch_SPY_x_FAMILY_Cour_2_dib_ep_06" },
+              { "name": "HD-02", "url": "https://mxdrop.to/e/xw9z1d3gf6o1dn" }
+            ]
+          }
+        },
+        {
+          "number": 7,
+          "title": "A Revenge Plot Against Desmond / Mama Becomes the Wind",
+          "duration": "24 min",
+          "servers": {
+            "sub": [
+              { "name": "HD-01", "url": "https://filemoon.in/e/omn0yjab9hfr/Watch_SPY_x_FAMILY_Cour_2_Sub_ep_07" },
+              { "name": "HD-02", "url": "https://mxdrop.to/e/owz6vv73ugwx99" }
+            ],
+            "dub": [
+              { "name": "HD-01", "url": "https://filemoon.in/e/4kjgl6nbr5cd/Watch_SPY_x_FAMILY_Cour_2_dub_ep_07" },
+              { "name": "HD-02", "url": "https://mxdrop.to/e/36qzojdrtmwzqqg" }
+            ]
+          }
+        },
+        {
+          "number": 8,
+          "title": "Investigate the General Hospital / Decipher the Code",
+          "duration": "24 min",
+          "servers": {
+            "sub": [
+              { "name": "HD-01", "url": "https://filemoon.in/e/kbwsx9b8ciee/Watch_SPY_x_FAMILY_Cour_2_Sub_ep_08" },
+              { "name": "HD-02", "url": "https://mxdrop.to/e/vkqjwwoqse6q38" }
+            ],
+            "dub": [
+              { "name": "HD-01", "url": "https://filemoon.in/e/g8uykzjynmyx/Watch_SPY_x_FAMILY_Cour_2_dub_ep_08" },
+              { "name": "HD-02", "url": "https://mxdrop.to/e/67rnwzk1ikmmpm" }
+            ]
+          }
+        },
+        {
+          "number": 9,
+          "title": "Nightfall / First Fit of Jealousy",
+          "duration": "24 min",
+          "servers": {
+            "sub": [
+              { "name": "HD-01", "url": "https://filemoon.in/e/j5qem87mx9ik/Watch_SPY_x_FAMILY_Cour_2_sub_ep_09" },
+              { "name": "HD-02", "url": "https://mxdrop.to/e/l794xxm9cqdqed" }
+            ],
+            "dub": [
+              { "name": "HD-01", "url": "https://filemoon.in/e/kku4gnojhp4z/Watch_SPY_x_FAMILY_Cour_2_dub_ep_09" },
+              { "name": "HD-02", "url": "https://mxdrop.to/e/r60evoloh3oll1" }
+            ]
+          }
+        },
+        {
+          "number": 10,
+          "title": "The Underground Tennis Tournament: The Campbelldon",
+          "duration": "24 min",
+          "servers": {
+            "sub": [
+              { "name": "HD-01", "url": "https://filemoon.in/e/xewcgbqaqa7s/Watch_SPY_x_FAMILY_Cour_2_sub_ep_10" },
+              { "name": "HD-02", "url": "https://mxdrop.to/e/03z7kkeqi13gel" }
+            ],
+            "dub": [
+              { "name": "HD-01", "url": "https://filemoon.in/e/yo0hw0ctbk5i/Watch_SPY_x_FAMILY_Cour_2_dub_ep_10" },
+              { "name": "HD-02", "url": "https://mxdrop.to/e/owzvdov7br0rlw" }
+            ]
+          }
+        },
+        {
+          "number": 11,
+          "title": "The Unwavering Path",
+          "duration": "24 min",
+          "servers": {
+            "sub": [
+              { "name": "HD-01", "url": "https://filemoon.in/e/f17mtcj0hn3z/Watch_SPY_x_FAMILY_Cour_2_Sub_ep_11" },
+              { "name": "HD-02", "url": "https://mxdrop.to/e/gjd8998ntdxgog" }
+            ],
+            "dub": [
+              { "name": "HD-01", "url": "https://filemoon.in/e/unv0zp16e9u6/Watch_SPY_x_FAMILY_Cour_2_dub_ep_11" },
+              { "name": "HD-02", "url": "https://mxdrop.to/e/l79xv1eqidvjl6" }
+            ]
+          }
+        },
+        {
+          "number": 12,
+          "title": "The Role of a Mother and Wife / Shopping with Friends",
+          "duration": "24 min",
+          "servers": {
+            "sub": [
+              { "name": "HD-01", "url": "https://filemoon.in/e/38i8juxmo4bn/Watch_SPY_x_FAMILY_Cour_2_sub_ep_12" },
+              { "name": "HD-02", "url": "https://mxdrop.to/e/k0eojjjdbvmg3v" }
+            ],
+            "dub": [
+              { "name": "HD-01", "url": "https://filemoon.in/e/6ajb9y94k3ku/Watch_SPY_x_FAMILY_Cour_2_dub_ep_12" },
+              { "name": "HD-02", "url": "https://mxdrop.to/e/pj6r0gpph76e73" }
+            ]
+          }
+        },
+        {
+          "number": 13,
+          "title": "First Contact",
+          "duration": "24 min",
+          "servers": {
+            "sub": [
+              { "name": "HD-01", "url": "https://filemoon.in/e/1v01bpj8e8kv/Watch_SPY_x_FAMILY_Cour_2_sub_ep_13" },
+              { "name": "HD-02", "url": "https://mxdrop.to/e/67rnlg3gad6pg8" }
+            ],
+            "dub": [
+              { "name": "HD-01", "url": "https://filemoon.in/e/612vpjcyyt49/Watch_SPY_x_FAMILY_Cour_2_Dub_ep_13" },
+              { "name": "HD-02", "url": "https://mxdrop.to/e/gjd9mwz1hdn344" }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "seasonNumber": 2,
+      "airedYear": 2023,
+      "episodes": [
+        {
+          "number": 1,
+          "title": "Follow Mama and Papa",
+          "duration": "24 min",
+          "servers": {
+            "sub": [
+              { "name": "HD-01", "url": "https://filemoon.in/e/i314ntezw1m9/Watch_SPY_x_FAMILY_Season_2_sub_01" },
+              { "name": "HD-02", "url": "https://mxdrop.to/e/36qzpmogb031k1" }
+            ],
+            "dub": [
+              { "name": "HD-01", "url": "https://filemoon.in/e/lvi6q7bxq79x/Watch_SPY_x_FAMILY_Season_2_Dub_01" },
+              { "name": "HD-02", "url": "https://mxdrop.to/e/l79xepe8i31lpg" }
+            ]
+          }
+        },
+        {
+          "number": 2,
+          "title": "Bond's Strategy to Stay Alive / Damian's Field Research Trip",
+          "duration": "24 min",
+          "servers": {
+            "sub": [
+              { "name": "HD-01", "url": "https://filemoon.in/e/0w7tda6nd3h1/Watch_SPY_x_FAMILY_Season_2_sub_02" },
+              { "name": "HD-02", "url": "https://mxdrop.to/e/7kjo3vwrbqmj1r" }
+            ],
+            "dub": [
+              { "name": "HD-01", "url": "https://filemoon.in/e/5dqucg5rd0ts/Watch_SPY_x_FAMILY_Season_2_Dub_02" },
+              { "name": "HD-02", "url": "https://mxdrop.to/e/9wx9ve9lbrkvkl" }
+            ]
+          }
+        },
+        {
+          "number": 3,
+          "title": "Mission and Family / The Elegant Bondman / Waking Up",
+          "duration": "24 min",
+          "servers": {
+            "sub": [
+              { "name": "HD-01", "url": "https://filemoon.in/e/asb0ke1pdtb7/Watch_SPY_x_FAMILY_Season_2_sub_03" },
+              { "name": "HD-02", "url": "https://mxdrop.to/e/7kjo3l9vh6d0xk" }
+            ],
+            "dub": [
+              { "name": "HD-01", "url": "https://filemoon.in/e/x7lsfp0m223x/Watch_SPY_x_FAMILY_Season_2_dub_03" },
+              { "name": "HD-02", "url": "https://mxdrop.to/e/q1d4pjk4fx78176" }
+            ]
+          }
+        },
+        {
+          "number": 4,
+          "title": "The Pastry of Knowledge / The Informant's Romance Plan II",
+          "duration": "24 min",
+          "servers": {
+            "sub": [
+              { "name": "HD-01", "url": "https://filemoon.in/e/pu3w9r7g30ot/Watch_SPY_x_FAMILY_Season_2_sub_04" },
+              { "name": "HD-02", "url": "https://mxdrop.to/e/1nowmr9ei68xg4" }
+            ],
+            "dub": [
+              { "name": "HD-01", "url": "https://filemoon.in/e/7wir3s0l3s02/Watch_SPY_x_FAMILY_Season_2_dub_04" },
+              { "name": "HD-02", "url": "https://mxdrop.to/e/gjd9eve1cw0lqpk" }
+            ]
+          }
+        },
+        {
+          "number": 5,
+          "title": "Plan to Cross the Border",
+          "duration": "24 min",
+          "servers": {
+            "sub": [
+              { "name": "HD-01", "url": "https://filemoon.in/e/my1gyqjbyp8k/Watch_SPY_x_FAMILY_Season_2_sub_05" },
+              { "name": "HD-02", "url": "https://mxdrop.to/e/vkqw68rzf39nv6" }
+            ],
+            "dub": [
+              { "name": "HD-01", "url": "https://filemoon.in/e/0ul9rsyk8s6r/Watch_SPY_x_FAMILY_Season_2_Dub_05" },
+              { "name": "HD-02", "url": "https://mxdrop.to/e/jdklpovjf8dok" }
+            ]
+          }
+        },
+        {
+          "number": 6,
           "title": "The Fearsome Luxury Cruise Ship",
           "duration": "24 min",
           "servers": {
-            "raw": [{ "name": "HD-01", "url": "server-raw.com" }],
-            "sub": [{ "name": "HD-01", "url": "server-sub.com" }],
-            "dub": [{ "name": "HD-01", "url": "server-dub.com" }]
+            "sub": [
+              { "name": "HD-01", "url": "https://filemoon.in/e/r9xayo7e0hhj/Watch_SPY_x_FAMILY_Season_2_sub_06" },
+              { "name": "HD-02", "url": "https://mxdrop.to/e/l79xekmkt48lnw" }
+            ],
+            "dub": [
+              { "name": "HD-01", "url": "https://filemoon.in/e/0tvr921xof24/Watch_SPY_x_FAMILY_Season_2_Dub_06" },
+              { "name": "HD-02", "url": "https://mxdrop.to/e/1nowm7g6f4zlv8" }
+            ]
+          }
+        },
+        {
+          "number": 7,
+          "title": "Who Is This Mission For?",
+          "duration": "24 min",
+          "servers": {
+            "sub": [
+              { "name": "HD-01", "url": "https://filemoon.in/e/oc136yrnymfv/Watch_SPY_x_FAMILY_Season_2_sub_ep_o7" },
+              { "name": "HD-02", "url": "https://mxdrop.to/e/wlw1dvg3c03ljdo" }
+            ],
+            "dub": [
+              { "name": "HD-01", "url": "https://filemoon.in/e/xxmswyuxd2a1/Watch_SPY_x_FAMILY_Season_2_Dub_07" },
+              { "name": "HD-02", "url": "https://mxdrop.to/e/8ljp3z8rt7xe74" }
+            ]
+          }
+        },
+        {
+          "number": 8,
+          "title": "The Symphony Upon the Ship",
+          "duration": "24 min",
+          "servers": {
+            "sub": [
+              { "name": "HD-01", "url": "https://filemoon.in/e/nnbj7ifssgm8/Watch_SPY_x_FAMILY_Season_2_sub_08" },
+              { "name": "HD-02", "url": "https://mxdrop.to/e/vkqw68jxu06pg6" }
+            ],
+            "dub": [
+              { "name": "HD-01", "url": "https://filemoon.in/e/o1q2eu3mv4ld/Watch_SPY_x_FAMILY_Season_2_Dub_08" },
+              { "name": "HD-02", "url": "https://mxdrop.to/e/owzvp01wf4rkkx" }
+            ]
+          }
+        },
+        {
+          "number": 9,
+          "title": "The Hand That Connects to the Future",
+          "duration": "24 min",
+          "servers": {
+            "sub": [
+              { "name": "HD-01", "url": "https://filemoon.in/e/l7g7z6tfhz14/Watch_SPY_x_FAMILY_Season_2_sub_ep_09" },
+              { "name": "HD-02", "url": "https://mxdrop.to/e/vkqw688kspd06o" }
+            ],
+            "dub": [
+              { "name": "HD-01", "url": "https://filemoon.in/e/zaiztr6debol/Watch_SPY_x_FAMILY_Season_2_Dub_09" },
+              { "name": "HD-02", "url": "https://mxdrop.to/e/r60enl41bw14lg" }
+            ]
+          }
+        },
+        {
+          "number": 10,
+          "title": "Enjoy the Resort to the Fullest / Bragging About Vacation",
+          "duration": "24 min",
+          "servers": {
+            "sub": [
+              { "name": "HD-01", "url": "https://filemoon.in/e/6ilaru5w8u0h/Watch_SPY_x_FAMILY_Season_2_coir_2_sub_ep_10" },
+              { "name": "HD-02", "url": "https://mxdrop.to/e/dkrn1pnvs73eeg1" }
+            ],
+            "dub": [
+              { "name": "HD-01", "url": "https://filemoon.in/e/l9g043a937gc/Watch_SPY_x_FAMILY_Season_2_dub_10" },
+              { "name": "HD-02", "url": "https://mxdrop.to/e/03zkp0qeceo73n" }
+            ]
+          }
+        },
+        {
+          "number": 11,
+          "title": "Berlint in Love / Nightfall's Daily Life",
+          "duration": "24 min",
+          "servers": {
+            "sub": [
+              { "name": "HD-01", "url": "https://filemoon.in/e/ev4up8lee064/Watch_SPY_x_FAMILY_Season_2_sub_ep_11" }
+            ],
+            "dub": [
+              { "name": "HD-01", "url": "https://filemoon.in/e/ewnoarq82mrm/Watch_SPY_x_FAMILY_Season_2_Dub_11" },
+              { "name": "HD-02", "url": "https://mxdrop.to/e/7kjo3x11adpowdo" }
+            ]
+          }
+        },
+        {
+          "number": 12,
+          "title": "Part of the Family",
+          "duration": "24 min",
+          "servers": {
+            "sub": [
+              { "name": "HD-01", "url": "https://filemoon.in/e/a7n03cp2194o/Watch_SPY_x_FAMILY_Season_2_sub_12" },
+              { "name": "HD-02", "url": "https://mxdrop.to/e/dkrn1z6osv76p9" }
+            ],
+            "dub": [
+              { "name": "HD-01", "url": "https://filemoon.in/e/b7vqmu69m5bu/Watch_SPY_x_FAMILY_Season_2_Dub_12" },
+              { "name": "HD-02", "url": "https://mxdrop.to/e/owzvp0krbq3wjj" }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "seasonNumber": 3,
+      "airedYear": 2025,
+      "episodes": [
+        {
+          "number": 1,
+          "title": "Berlint Panic / The Informant and Nightfall",
+          "duration": "24 min",
+          "servers": {
+            "sub": [
+              { "name": "HD-01", "url": "https://filemoon.in/e/9ro0sk8chc2i/Watch_Spy_x_Family_Season_3_Sub_01" },
+              { "name": "HD-02", "url": "https://mxdrop.to/e/l79x9exlh8jlq7" }
+            ],
+            "dub": [
+              { "name": "HD-01", "url": "https://filemoon.in/e/rvzqvvmn6gmo/Watch_Spy_x_Family_Season_3_Dub_01" },
+              { "name": "HD-02", "url": "https://mxdrop.to/e/8ljpj0r6ckjg43" }
+            ]
+          }
+        },
+        {
+          "number": 2,
+          "title": "Avoid Getting Tonitrus Bolts / Memories I",
+          "duration": "24 min",
+          "servers": {
+            "sub": [
+              { "name": "HD-01", "url": "https://filemoon.in/e/qtjlshorwlwj/Watch_Spy_x_Family_Season_3_sub_02" },
+              { "name": "HD-02", "url": "https://mxdrop.to/e/67rnrdw6idq8qm" }
+            ],
+            "dub": [
+              { "name": "HD-01", "url": "https://filemoon.in/e/c62kstosvzga/Spy_x_Family_dub_02" },
+              { "name": "HD-02", "url": "https://mxdrop.to/e/q1d4dgorf7vpx8" }
+            ]
+          }
+        },
+        {
+          "number": 3,
+          "title": "Memories II",
+          "duration": "24 min",
+          "servers": {
+            "sub": [
+              { "name": "HD-01", "url": "https://filemoon.in/e/14d9xuvuyib8/Watch_Spy_x_Family_Season_3_sub_03" },
+              { "name": "HD-02", "url": "https://mxdrop.to/e/4d9g9r0ji3ee8v" }
+            ],
+            "dub": [
+              { "name": "HD-01", "url": "https://filemoon.in/e/g0y28fpilu36/Spy_x_Family_Eng_dub_03" },
+              { "name": "HD-02", "url": "https://mxdrop.to/e/9wx9x693b3vm4po" }
+            ]
+          }
+        },
+        {
+          "number": 4,
+          "title": "Behind the Scandal / The Path to an Imperial Scholar",
+          "duration": "24 min",
+          "servers": {
+            "sub": [
+              { "name": "HD-01", "url": "https://filemoon.in/e/m4wu7x8yiwj3/Watch_Spy_x_Family_Season_3_sub_04" },
+              { "name": "HD-02", "url": "https://mxdrop.to/e/owzvzp0pid93p1" }
+            ],
+            "dub": [
+              { "name": "HD-01", "url": "https://filemoon.in/e/py1uv6fvs5xp/Spy_x_Family_Eng_dub_04" },
+              { "name": "HD-02", "url": "https://mxdrop.to/e/03zkzokkc1xwnd" }
+            ]
+          }
+        },
+        {
+          "number": 5,
+          "title": "The Mommy-Friends Scheme",
+          "duration": "24 min",
+          "servers": {
+            "sub": [
+              { "name": "HD-01", "url": "https://filemoon.in/e/8kp5ioch0pc3/Watch_Spy_x_Family_Season_3_sub_05" },
+              { "name": "HD-02", "url": "https://mxdrop.to/e/9wx9xv9ei3vwej3" }
+            ],
+            "dub": [
+              { "name": "HD-01", "url": "https://filemoon.in/e/1j4dlq6ayhkw/Spy_x_Family_Eng_dub_05" },
+              { "name": "HD-02", "url": "https://mxdrop.to/e/mkzmz46nbk0gqk" }
+            ]
+          }
+        },
+        {
+          "number": 6,
+          "title": "White Jealousy / The Eden College Busjacking Incident",
+          "duration": "24 min",
+          "servers": {
+            "sub": [
+              { "name": "HD-01", "url": "https://filemoon.in/e/fqwpf5qsukx0/Watch_Spy_x_Family_Season_3_sub_06" },
+              { "name": "HD-02", "url": "https://mxdrop.to/e/gjd9dog7hd96jw" }
+            ],
+            "dub": [
+              { "name": "HD-01", "url": "https://filemoon.in/e/cgy7bagga9mb/Spy_x_Family_Eng_Dub_-_06" },
+              { "name": "HD-02", "url": "https://mxdrop.to/e/wlw1w848al4mk7" }
+            ]
+          }
+        },
+        {
+          "number": 7,
+          "title": "The Red Circus",
+          "duration": "24 min",
+          "servers": {
+            "sub": [
+              { "name": "HD-01", "url": "https://filemoon.in/e/sq3y5x64y5u1/Watch_Spy_x_Family_Season_3_sub_07" },
+              { "name": "HD-02", "url": "https://mxdrop.to/e/1nowo6mwtkq8ej1" }
+            ],
+            "dub": [
+              { "name": "HD-01", "url": "https://filemoon.in/e/yzgk584eqoar/Spy_x_Family_Eng_Dub_-_7" },
+              { "name": "HD-02", "url": "https://mxdrop.to/e/9wx9x6lnbvjz3n" }
+            ]
+          }
+        },
+        {
+          "number": 8,
+          "title": "Take Down the Busjacker",
+          "duration": "24 min",
+          "servers": {
+            "sub": [
+              { "name": "HD-01", "url": "https://filemoon.in/e/ju02f66lfr61/Watch_Spy_x_Family_Season_3_sub_08" },
+              { "name": "HD-02", "url": "https://mxdrop.to/e/z1j8jdj9tgw8e0" }
+            ],
+            "dub": [
+              { "name": "HD-01", "url": "https://filemoon.in/e/3ttu2bpmjdkj/Spy_x_Family_Eng_Dub_-_08" },
+              { "name": "HD-02", "url": "https://mxdrop.to/e/xw9z9pnpslll9jp" }
+            ]
+          }
+        },
+        {
+          "number": 9,
+          "title": "Anya's Era Has Come",
+          "duration": "24 min",
+          "servers": {
+            "sub": [
+              { "name": "HD-01", "url": "https://filemoon.in/e/qxk39jej0gry/Watch_Spy_x_Family_Season_3_sub_09" },
+              { "name": "HD-02", "url": "https://mxdrop.to/e/nln3nmxohx6r91" }
+            ],
+            "dub": [
+              { "name": "HD-01", "url": "https://filemoon.in/e/p37b2o39lnm0/Spy_x_Family_Eng_Dub_09" },
+              { "name": "HD-02", "url": "https://mxdrop.to/e/jdklk4o8t9nv8n" }
+            ]
+          }
+        },
+        {
+          "number": 10,
+          "title": "Austin's Troubles / A Normal Mixer / Moon Landing",
+          "duration": "24 min",
+          "servers": {
+            "sub": [
+              { "name": "HD-01", "url": "https://filemoon.in/e/u6dczxua5cgi/Watch_Spy_x_Family_Season_3_sub_10" },
+              { "name": "HD-02", "url": "https://mxdrop.to/e/wlw1wxdli64olq" }
+            ],
+            "dub": [
+              { "name": "HD-01", "url": "https://filemoon.in/e/wrcg8dovy2wb/Spy_x_Family_Eng_Dub_10" },
+              { "name": "HD-02", "url": "https://mxdrop.to/e/nln3ngepilzkwx" }
+            ]
+          }
+        },
+        {
+          "number": 11,
+          "title": "Extreme Level 3 Situation",
+          "duration": "24 min",
+          "servers": {
+            "sub": [
+              { "name": "HD-01", "url": "https://filemoon.in/e/ml2888rptjj5/Watch_Spy_x_Family_Season_3_sub_11" }
+            ],
+            "dub": [
+              { "name": "Coming Soon", "url": "#" }
+            ]
+          }
+        },
+        {
+          "number": 12,
+          "title": "Battle to the Death in the Sewers",
+          "duration": "24 min",
+          "servers": {
+            "sub": [
+              { "name": "HD-01", "url": "https://filemoon.in/e/si6tdyx7idq2/Watch_Spy_x_Family_Season_3_sub_12" }
+            ],
+            "dub": [
+              { "name": "Coming Soon", "url": "#" }
+            ]
+          }
+        },
+        {
+          "number": 13,
+          "title": "A World Where We Cannot Survive",
+          "duration": "24 min",
+          "servers": {
+            "sub": [
+              { "name": "HD-01", "url": "https://filemoon.in/e/ef1o4jjxt9v4/Watch_Spy_x_Family_Season_3_sub_13" }
+            ],
+            "dub": [
+              { "name": "Coming Soon", "url": "#" }
+            ]
           }
         }
       ]
     }
   ]
 },
-
+      
 
