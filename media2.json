@@ -8278,5 +8278,39 @@
     }
   ]
 },
+{
+  "id": "fate-strange-fake-tv",
+  "slug": "fate-strange-fake",
+  "title": "Fate/strange Fake",
+  "originalTitle": "Fate/strange Fake",
+  "japaneseTitle": "フェイト/ストレンジフェイク",
+  "synonyms": ["FSF"],
+  "searchableTitle": "Fate/strange Fake FSF Fate Series Snowfield Holy Grail War",
+  "airedYear": 2026,
+  "dateAdded": "2026-01-03",
+  "type": "TV",
+  "featured": true,
+  "rating": null,
+  "category": "action",
+  "premiered": "Winter 2026",
+  "duration": "24 min",
+  "status": "Currently Airing",
+  "description": "In the American city of Snowfield, a false Holy Grail War begins, faultily copied from the Third Holy Grail War in Fuyuki. This irregular ritual summons strange Servants and lacks a standard Saber class, drawing the attention of the Mage's Association and various factions into a twisted conflict where the definition of a 'hero' is blurred.",
+  "posterUrl": "fatesf-anime.com",
+  "backdropUrl": null,
+  "trailerUrl": "https://www.youtube.com/watch?v=qMZThcudH5c",
+",
+  "malScore": null,
+  "imbdScore": null,
+  "popularity": 0,
+  "genres": ["Action", "Fantasy", "Supernatural", "Mystery"],
+  "cast": ["Kana Hanazawa", "Yūki Ono", "Tomokazu Seki", "Yū Kobayashi"],
+  "certification": "TV-14",
+  "country": "Japan",
+  "studio": "A-1 Pictures",
+  "producers": ["Aniplex", "Notes", "Kadokawa"]
+},
+
+
       
 
