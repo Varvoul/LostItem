@@ -1,6 +1,3 @@
-Posts.json- F
-
-
 [
   {
     "id": "mha-s1",
@@ -10327,8 +10324,8 @@ Posts.json- F
   "duration": "24 min",
   "status": "Finished Airing",
   "description": "At a formal ball, Scarlet, a noblewoman of a ducal family, is publicly humiliated when her fiancé, Second Prince Kyle, abruptly annuls their engagement. Falsely accused of bullying the Prince's favorite, Scarlet decides she has had enough of the idiocy. She asks for one final favor: to give the arrogant prince a good fist in the face. Thus begins the story of an elegant yet rebellious fighter who deals with her problems with bare-knuckle justice.",
-  "posterUrl": "https://saihito-anime.com/assets/img/top/main_visual.jpg",
-  "backdropUrl": "https://static1.cbrimages.com/wordpress/wp-content/uploads/2024/09/may-i-ask-for-one-final-thing-anime.jpg",
+  "posterUrl": "https://cdn.myanimelist.net/images/anime/1212/145512l.jpg",
+  "backdropUrl": "https://cdn.myanimelist.net/images/anime/1190/151754l.jpg",
   "trailerUrl": "https://www.youtube.com/watch?v=OaZO-vSY774",
   "malScore": 7.62,
   "imbdScore": 7.9,
@@ -10639,7 +10636,7 @@ Posts.json- F
     "title": "Dead Account",
     "originalTitle": "Dead Account",
     "japaneseTitle": "デッド・アカウント",
-    "synonyms": [],
+    "synonyms": ["Dead Account; デドアカ"],
     "searchableTitle": "Dead Account デッド・アカウント",
     "airedYear": 2026,
     "dateAdded": "2025-12-15",
@@ -10651,20 +10648,312 @@ Posts.json- F
     "duration": "24 min",
     "status": "Airing",
     "description": "The online streamer Aoringo is a troll, making the worst of the worst of boundary-pushing flamebait content and raking in the revenue from the hate-watchers. Always ready for a fight! Destruction for destruction's sake! [[9]]",
-    "posterUrl": "https://cdn.myanimelist.net/images/anime/placeholder.jpg",
+    "posterUrl": "https://cdn.myanimelist.net/images/anime/1250/148452l.jpg",
     "backdropUrl": null,
     "trailerUrl": null,
     "malScore": 6.48,
     "imbdScore": 0.0,
-    "popularity": 0,
+    "popularity": 5407,
     "genres": ["Supernatural", "Action"],
     "cast": ["Renri Hasumi", "Fumiya Imai"],
     "certification": "TV-14",
     "country": "Japan",
     "studio": "SynergySP",
     "producers": ["Bushiroad"],
-    "seasons": []
-  },
+    "seasons": [
+  {
+    "seasonNumber": 1,
+    "episodes": [
+      {
+        "number": 1,
+        "title": "The Man is the Flamboyant Type",
+        "duration": "24 min",
+        "servers": {
+          "raw": [
+            { "name": "HD-01", "url": "https://strmup.cc/6d9858d0fbcc6" },
+            { "name": "HD-02", "url": "https://filemoon.to/e/qg1umu9zc227" },
+            { "name": "HD-03", "url": "https://mxdrop.to/e/z1zxl4neigo09w9" }
+          ],
+          "sub": [
+            { "name": "HD-01", "url": "https://strmup.cc/6d9858d0fbcc6" },
+            { "name": "HD-02", "url": "https://filemoon.to/e/qg1umu9zc227" },
+            { "name": "HD-03", "url": "https://mxdrop.to/e/z1zxl4neigo09w9" }
+          ],
+          "dub": [
+            { "name": "HD-01", "url": "https://placeholder.example.com/da-s1-e1-dub" },
+            { "name": "HD-02", "url": "https://placeholder.example.com/da-s1-e1-dub" },
+            { "name": "HD-03", "url": "https://placeholder.example.com/da-s1-e1-dub" }
+          ]
+        }
+      },
+      {
+        "number": 2,
+        "title": "Episode 2",
+        "duration": "24 min",
+        "servers": {
+          "raw": [
+            { "name": "HD-01", "url": "https://placeholder.example.com/da-s1-e2-raw" },
+            { "name": "HD-02", "url": "https://placeholder.example.com/da-s1-e2-raw" },
+            { "name": "HD-03", "url": "https://placeholder.example.com/da-s1-e2-raw" }
+          ],
+          "sub": [
+            { "name": "HD-01", "url": "https://placeholder.example.com/da-s1-e2-sub" },
+            { "name": "HD-02", "url": "https://placeholder.example.com/da-s1-e2-sub" },
+            { "name": "HD-03", "url": "https://placeholder.example.com/da-s1-e2-sub" }
+          ],
+          "dub": [
+            { "name": "HD-01", "url": "https://placeholder.example.com/da-s1-e2-dub" },
+            { "name": "HD-02", "url": "https://placeholder.example.com/da-s1-e2-dub" },
+            { "name": "HD-03", "url": "https://placeholder.example.com/da-s1-e2-dub" }
+          ]
+        }
+      },
+      {
+        "number": 3,
+        "title": "Episode 3",
+        "duration": "24 min",
+        "servers": {
+          "raw": [
+            { "name": "HD-01", "url": "https://placeholder.example.com/da-s1-e3-raw" },
+            { "name": "HD-02", "url": "https://placeholder.example.com/da-s1-e3-raw" },
+            { "name": "HD-03", "url": "https://placeholder.example.com/da-s1-e3-raw" }
+          ],
+          "sub": [
+            { "name": "HD-01", "url": "https://placeholder.example.com/da-s1-e3-sub" },
+            { "name": "HD-02", "url": "https://placeholder.example.com/da-s1-e3-sub" },
+            { "name": "HD-03", "url": "https://placeholder.example.com/da-s1-e3-sub" }
+          ],
+          "dub": [
+            { "name": "HD-01", "url": "https://placeholder.example.com/da-s1-e3-dub" },
+            { "name": "HD-02", "url": "https://placeholder.example.com/da-s1-e3-dub" },
+            { "name": "HD-03", "url": "https://placeholder.example.com/da-s1-e3-dub" }
+          ]
+        }
+      },
+      {
+        "number": 4,
+        "title": "Episode 4",
+        "duration": "24 min",
+        "servers": {
+          "raw": [
+            { "name": "HD-01", "url": "https://placeholder.example.com/da-s1-e4-raw" },
+            { "name": "HD-02", "url": "https://placeholder.example.com/da-s1-e4-raw" },
+            { "name": "HD-03", "url": "https://placeholder.example.com/da-s1-e4-raw" }
+          ],
+          "sub": [
+            { "name": "HD-01", "url": "https://placeholder.example.com/da-s1-e4-sub" },
+            { "name": "HD-02", "url": "https://placeholder.example.com/da-s1-e4-sub" },
+            { "name": "HD-03", "url": "https://placeholder.example.com/da-s1-e4-sub" }
+          ],
+          "dub": [
+            { "name": "HD-01", "url": "https://placeholder.example.com/da-s1-e4-dub" },
+            { "name": "HD-02", "url": "https://placeholder.example.com/da-s1-e4-dub" },
+            { "name": "HD-03", "url": "https://placeholder.example.com/da-s1-e4-dub" }
+          ]
+        }
+      },
+      {
+        "number": 5,
+        "title": "Episode 5",
+        "duration": "24 min",
+        "servers": {
+          "raw": [
+            { "name": "HD-01", "url": "https://placeholder.example.com/da-s1-e5-raw" },
+            { "name": "HD-02", "url": "https://placeholder.example.com/da-s1-e5-raw" },
+            { "name": "HD-03", "url": "https://placeholder.example.com/da-s1-e5-raw" }
+          ],
+          "sub": [
+            { "name": "HD-01", "url": "https://placeholder.example.com/da-s1-e5-sub" },
+            { "name": "HD-02", "url": "https://placeholder.example.com/da-s1-e5-sub" },
+            { "name": "HD-03", "url": "https://placeholder.example.com/da-s1-e5-sub" }
+          ],
+          "dub": [
+            { "name": "HD-01", "url": "https://placeholder.example.com/da-s1-e5-dub" },
+            { "name": "HD-02", "url": "https://placeholder.example.com/da-s1-e5-dub" },
+            { "name": "HD-03", "url": "https://placeholder.example.com/da-s1-e5-dub" }
+          ]
+        }
+      },
+      {
+        "number": 6,
+        "title": "Episode 6",
+        "duration": "24 min",
+        "servers": {
+          "raw": [
+            { "name": "HD-01", "url": "https://placeholder.example.com/da-s1-e6-raw" },
+            { "name": "HD-02", "url": "https://placeholder.example.com/da-s1-e6-raw" },
+            { "name": "HD-03", "url": "https://placeholder.example.com/da-s1-e6-raw" }
+          ],
+          "sub": [
+            { "name": "HD-01", "url": "https://placeholder.example.com/da-s1-e6-sub" },
+            { "name": "HD-02", "url": "https://placeholder.example.com/da-s1-e6-sub" },
+            { "name": "HD-03", "url": "https://placeholder.example.com/da-s1-e6-sub" }
+          ],
+          "dub": [
+            { "name": "HD-01", "url": "https://placeholder.example.com/da-s1-e6-dub" },
+            { "name": "HD-02", "url": "https://placeholder.example.com/da-s1-e6-dub" },
+            { "name": "HD-03", "url": "https://placeholder.example.com/da-s1-e6-dub" }
+          ]
+        }
+      },
+      {
+        "number": 7,
+        "title": "Episode 7",
+        "duration": "24 min",
+        "servers": {
+          "raw": [
+            { "name": "HD-01", "url": "https://placeholder.example.com/da-s1-e7-raw" },
+            { "name": "HD-02", "url": "https://placeholder.example.com/da-s1-e7-raw" },
+            { "name": "HD-03", "url": "https://placeholder.example.com/da-s1-e7-raw" }
+          ],
+          "sub": [
+            { "name": "HD-01", "url": "https://placeholder.example.com/da-s1-e7-sub" },
+            { "name": "HD-02", "url": "https://placeholder.example.com/da-s1-e7-sub" },
+            { "name": "HD-03", "url": "https://placeholder.example.com/da-s1-e7-sub" }
+          ],
+          "dub": [
+            { "name": "HD-01", "url": "https://placeholder.example.com/da-s1-e7-dub" },
+            { "name": "HD-02", "url": "https://placeholder.example.com/da-s1-e7-dub" },
+            { "name": "HD-03", "url": "https://placeholder.example.com/da-s1-e7-dub" }
+          ]
+        }
+      },
+      {
+        "number": 8,
+        "title": "Episode 8",
+        "duration": "24 min",
+        "servers": {
+          "raw": [
+            { "name": "HD-01", "url": "https://placeholder.example.com/da-s1-e8-raw" },
+            { "name": "HD-02", "url": "https://placeholder.example.com/da-s1-e8-raw" },
+            { "name": "HD-03", "url": "https://placeholder.example.com/da-s1-e8-raw" }
+          ],
+          "sub": [
+            { "name": "HD-01", "url": "https://placeholder.example.com/da-s1-e8-sub" },
+            { "name": "HD-02", "url": "https://placeholder.example.com/da-s1-e8-sub" },
+            { "name": "HD-03", "url": "https://placeholder.example.com/da-s1-e8-sub" }
+          ],
+          "dub": [
+            { "name": "HD-01", "url": "https://placeholder.example.com/da-s1-e8-dub" },
+            { "name": "HD-02", "url": "https://placeholder.example.com/da-s1-e8-dub" },
+            { "name": "HD-03", "url": "https://placeholder.example.com/da-s1-e8-dub" }
+          ]
+        }
+      },
+      {
+        "number": 9,
+        "title": "Episode 9",
+        "duration": "24 min",
+        "servers": {
+          "raw": [
+            { "name": "HD-01", "url": "https://placeholder.example.com/da-s1-e9-raw" },
+            { "name": "HD-02", "url": "https://placeholder.example.com/da-s1-e9-raw" },
+            { "name": "HD-03", "url": "https://placeholder.example.com/da-s1-e9-raw" }
+          ],
+          "sub": [
+            { "name": "HD-01", "url": "https://placeholder.example.com/da-s1-e9-sub" },
+            { "name": "HD-02", "url": "https://placeholder.example.com/da-s1-e9-sub" },
+            { "name": "HD-03", "url": "https://placeholder.example.com/da-s1-e9-sub" }
+          ],
+          "dub": [
+            { "name": "HD-01", "url": "https://placeholder.example.com/da-s1-e9-dub" },
+            { "name": "HD-02", "url": "https://placeholder.example.com/da-s1-e9-dub" },
+            { "name": "HD-03", "url": "https://placeholder.example.com/da-s1-e9-dub" }
+          ]
+        }
+      },
+      {
+        "number": 10,
+        "title": "Episode 10",
+        "duration": "24 min",
+        "servers": {
+          "raw": [
+            { "name": "HD-01", "url": "https://placeholder.example.com/da-s1-e10-raw" },
+            { "name": "HD-02", "url": "https://placeholder.example.com/da-s1-e10-raw" },
+            { "name": "HD-03", "url": "https://placeholder.example.com/da-s1-e10-raw" }
+          ],
+          "sub": [
+            { "name": "HD-01", "url": "https://placeholder.example.com/da-s1-e10-sub" },
+            { "name": "HD-02", "url": "https://placeholder.example.com/da-s1-e10-sub" },
+            { "name": "HD-03", "url": "https://placeholder.example.com/da-s1-e10-sub" }
+          ],
+          "dub": [
+            { "name": "HD-01", "url": "https://placeholder.example.com/da-s1-e10-dub" },
+            { "name": "HD-02", "url": "https://placeholder.example.com/da-s1-e10-dub" },
+            { "name": "HD-03", "url": "https://placeholder.example.com/da-s1-e10-dub" }
+          ]
+        }
+      },
+      {
+        "number": 11,
+        "title": "Episode 11",
+        "duration": "24 min",
+        "servers": {
+          "raw": [
+            { "name": "HD-01", "url": "https://placeholder.example.com/da-s1-e11-raw" },
+            { "name": "HD-02", "url": "https://placeholder.example.com/da-s1-e11-raw" },
+            { "name": "HD-03", "url": "https://placeholder.example.com/da-s1-e11-raw" }
+          ],
+          "sub": [
+            { "name": "HD-01", "url": "https://placeholder.example.com/da-s1-e11-sub" },
+            { "name": "HD-02", "url": "https://placeholder.example.com/da-s1-e11-sub" },
+            { "name": "HD-03", "url": "https://placeholder.example.com/da-s1-e11-sub" }
+          ],
+          "dub": [
+            { "name": "HD-01", "url": "https://placeholder.example.com/da-s1-e11-dub" },
+            { "name": "HD-02", "url": "https://placeholder.example.com/da-s1-e11-dub" },
+            { "name": "HD-03", "url": "https://placeholder.example.com/da-s1-e11-dub" }
+          ]
+        }
+      },
+      {
+        "number": 12,
+        "title": "Episode 12",
+        "duration": "24 min",
+        "servers": {
+          "raw": [
+            { "name": "HD-01", "url": "https://placeholder.example.com/da-s1-e12-raw" },
+            { "name": "HD-02", "url": "https://placeholder.example.com/da-s1-e12-raw" },
+            { "name": "HD-03", "url": "https://placeholder.example.com/da-s1-e12-raw" }
+          ],
+          "sub": [
+            { "name": "HD-01", "url": "https://placeholder.example.com/da-s1-e12-sub" },
+            { "name": "HD-02", "url": "https://placeholder.example.com/da-s1-e12-sub" },
+            { "name": "HD-03", "url": "https://placeholder.example.com/da-s1-e12-sub" }
+          ],
+          "dub": [
+            { "name": "HD-01", "url": "https://placeholder.example.com/da-s1-e12-dub" },
+            { "name": "HD-02", "url": "https://placeholder.example.com/da-s1-e12-dub" },
+            { "name": "HD-03", "url": "https://placeholder.example.com/da-s1-e12-dub" }
+          ]
+        }
+      },
+      {
+        "number": 13,
+        "title": "Episode 13",
+        "duration": "24 min",
+        "servers": {
+          "raw": [
+            { "name": "HD-01", "url": "https://placeholder.example.com/da-s1-e13-raw" },
+            { "name": "HD-02", "url": "https://placeholder.example.com/da-s1-e13-raw" },
+            { "name": "HD-03", "url": "https://placeholder.example.com/da-s1-e13-raw" }
+          ],
+          "sub": [
+            { "name": "HD-01", "url": "https://placeholder.example.com/da-s1-e13-sub" },
+            { "name": "HD-02", "url": "https://placeholder.example.com/da-s1-e13-sub" },
+            { "name": "HD-03", "url": "https://placeholder.example.com/da-s1-e13-sub" }
+          ],
+          "dub": [
+            { "name": "HD-01", "url": "https://placeholder.example.com/da-s1-e13-dub" },
+            { "name": "HD-02", "url": "https://placeholder.example.com/da-s1-e13-dub" },
+            { "name": "HD-03", "url": "https://placeholder.example.com/da-s1-e13-dub" }
+          ]
+        }
+      }
+    ]
+  }
+]
+},
   {
     "id": "you-and-i-are-polar-opposites",
     "slug": "you-and-i-are-polar-opposites",
