@@ -85,6 +85,50 @@
         background: linear-gradient(90deg, rgba(73, 139, 187, 0.15) 0%, rgba(73, 139, 187, 0.05) 100%);
         border-left: 4px solid #498BBB !important;
     }
+    /* Description expand styles */
+    .expandable-description {
+        cursor: pointer;
+        transition: all 0.3s ease;
+        position: relative;
+    }
+    .expandable-description::after {
+        content: 'Read more';
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        background: linear-gradient(90deg, transparent, #ffffff 30%);
+        padding-left: 40px;
+        color: #498BBB;
+        font-weight: 500;
+        font-size: 0.875rem;
+        padding-top: 4px;
+        padding-bottom: 4px;
+    }
+    .dark .expandable-description::after {
+        background: linear-gradient(90deg, transparent, #1f2937 30%);
+    }
+    .expandable-description.expanded::after {
+        content: 'Read less';
+        background: none;
+        position: relative;
+        padding-left: 0;
+        display: block;
+        text-align: center;
+        margin-top: 10px;
+        color: #498BBB;
+        font-weight: 500;
+        font-size: 0.875rem;
+    }
+    .line-clamp-4 {
+        display: -webkit-box;
+        -webkit-line-clamp: 4;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+    }
+    .line-clamp-none {
+        -webkit-line-clamp: unset;
+        display: block;
+    }
     /* Responsive grid adjustments */
     @media (max-width: 1024px) {
         .main-content {
@@ -101,6 +145,13 @@
         }
         .comments-section {
             order: 4;
+        }
+        /* Adjust description gradient for mobile */
+        .expandable-description::after {
+            background: linear-gradient(90deg, transparent, #ffffff 40%);
+        }
+        .dark .expandable-description::after {
+            background: linear-gradient(90deg, transparent, #1f2937 40%);
         }
     }
     /* Mobile optimizations */
@@ -128,6 +179,14 @@
         .recommended-grid {
             grid-template-columns: repeat(2, 1fr) !important;
         }
+        /* Mobile description adjustments */
+        .expandable-description::after {
+            font-size: 0.8125rem;
+            padding-left: 35px;
+        }
+        .expandable-description.expanded::after {
+            font-size: 0.8125rem;
+        }
     }
     @media (max-width: 480px) {
         .recommended-grid {
@@ -139,6 +198,10 @@
         }
         .comment-input-section > div:first-child {
             align-self: flex-start;
+        }
+        /* Small mobile description adjustments */
+        .expandable-description::after {
+            padding-left: 30px;
         }
     }
 </style>
@@ -432,9 +495,14 @@
                         </div>
                     </div>
                 </div>
-                <p class="text-sm text-gray-600 dark:text-gray-300 line-clamp-4 mb-4 leading-relaxed">
-                    Framed in the 1940s for the double murder of his wife and her lover, upstanding banker Andy Dufresne begins a new life at the Shawshank prison, where he puts his accounting skills to work for an amoral warden.
-                </p>
+<div class="mb-6">
+    <h3 class="text-lg font-semibold text-gray-900 dark:text-white mb-2">Description</h3>
+    <p id="description-text" 
+       class="text-sm text-gray-600 dark:text-gray-300 line-clamp-4 mb-4 leading-relaxed expandable-description"
+       onclick="toggleDescription()">
+        Framed in the 1940s for the double murder of his wife and her lover, upstanding banker Andy Dufresne begins a new life at the Shawshank prison, where he puts his accounting skills to work for an amoral warden.
+    </p>
+</div>
                <div class="grid grid-cols-2 gap-2 text-xs text-gray-500 dark:text-gray-400 border-t border-gray-100 dark:border-gray-700 pt-4">
     <div class="col-span-2">
         <span class="font-semibold text-gray-700 dark:text-gray-200">Title:</span> To Be Hero X
@@ -1148,6 +1216,21 @@
             arrow.style.transform = 'rotate(180deg)';
         }
     }
+
+    function toggleDescription() {
+    const description = document.getElementById('description-text');
+    const isExpanded = description.classList.contains('expanded');
+    
+    if (isExpanded) {
+        // Collapse
+        description.classList.remove('line-clamp-none', 'expanded');
+        description.classList.add('line-clamp-4');
+    } else {
+        // Expand
+        description.classList.remove('line-clamp-4');
+        description.classList.add('line-clamp-none', 'expanded');
+    }
+}
     
     // Initialize everything when DOM is loaded
     document.addEventListener('DOMContentLoaded', initializePage);
