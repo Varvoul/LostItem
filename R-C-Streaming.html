@@ -26,42 +26,60 @@
                 borderRadius: {
                     DEFAULT: "0.5rem",
                 },
+                screens: {
+                    'xs': '475px',
+                },
             },
         },
     };
 </script>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
 <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
-    <style>
+<style>
+    /* Prevent horizontal scrolling */
+    html, body {
+        overflow-x: hidden;
+        width: 100%;
+    }
+    
     body {
         font-family: 'Inter', sans-serif;
     }
+    
     .hide-scrollbar::-webkit-scrollbar {
         display: none;
     }
+    
     .hide-scrollbar {
         -ms-overflow-style: none;
         scrollbar-width: none;
     }
+    
     #mobile-menu {
         transition: transform 0.3s ease-in-out;
     }
+    
     .menu-open {
         transform: translateX(0) !important;
     }
+    
     .custom-scrollbar::-webkit-scrollbar {
         width: 6px;
     }
+    
     .custom-scrollbar::-webkit-scrollbar-track {
         background: rgba(255, 255, 255, 0.05);
     }
+    
     .custom-scrollbar::-webkit-scrollbar-thumb {
         background: rgba(255, 255, 255, 0.2);
         border-radius: 3px;
     }
+    
     .custom-scrollbar::-webkit-scrollbar-thumb:hover {
         background: rgba(255, 255, 255, 0.3);
     }
+    
     /* Video Container Responsive */
     .video-container-wrapper {
         position: relative;
@@ -72,6 +90,7 @@
         border-radius: 0.75rem;
         background: #000;
     }
+    
     .video-container {
         position: absolute;
         top: 0;
@@ -80,173 +99,11 @@
         height: 100%;
         border: none;
     }
+    
     /* Episode list responsive styles */
     .episode-list-item.active {
         background: linear-gradient(90deg, rgba(73, 139, 187, 0.15) 0%, rgba(73, 139, 187, 0.05) 100%);
         border-left: 4px solid #498BBB !important;
-    }
-    /* Description expand styles */
-    .expandable-description {
-        cursor: pointer;
-        transition: all 0.3s ease;
-        position: relative;
-    }
-    .expandable-description::after {
-        content: 'Read more';
-        position: absolute;
-        bottom: 0;
-        right: 0;
-        background: linear-gradient(90deg, transparent, #ffffff 30%);
-        padding-left: 40px;
-        color: #498BBB;
-        font-weight: 500;
-        font-size: 0.875rem;
-        padding-top: 4px;
-        padding-bottom: 4px;
-    }
-    .dark .expandable-description::after {
-        background: linear-gradient(90deg, transparent, #1f2937 30%);
-    }
-    .expandable-description.expanded::after {
-        content: 'Read less';
-        background: none;
-        position: relative;
-        padding-left: 0;
-        display: block;
-        text-align: center;
-        margin-top: 10px;
-        color: #498BBB;
-        font-weight: 500;
-        font-size: 0.875rem;
-    }
-    .line-clamp-4 {
-        display: -webkit-box;
-        -webkit-line-clamp: 4;
-        -webkit-box-orient: vertical;
-        overflow: hidden;
-    }
-    .line-clamp-none {
-        -webkit-line-clamp: unset;
-        display: block;
-    }
-    /* Season tabs scrolling enhancement */
-    .season-tabs {
-        scroll-behavior: smooth;
-        -webkit-overflow-scrolling: touch;
-        padding-bottom: 8px;
-        margin-bottom: -8px;
-    }
-    
-    /* Show arrows only on desktop */
-    .season-nav-btn-prev,
-    .season-nav-btn-next {
-        display: none;
-    }
-    
-    @media (min-width: 1024px) {
-        .season-nav-btn-prev,
-        .season-nav-btn-next {
-            display: flex;
-        }
-        
-        .season-tabs {
-            padding-left: 20px;
-            padding-right: 20px;
-        }
-        
-        /* Hide scrollbar on desktop since we have arrows */
-        .season-tabs::-webkit-scrollbar {
-            display: none;
-        }
-        
-        .season-tabs {
-            -ms-overflow-style: none;
-            scrollbar-width: none;
-        }
-    }
-    
-    /* Touch-friendly scroll indicators */
-    @media (max-width: 1023px) {
-        .season-tabs {
-            /* Gradient fade indicators for mobile */
-            mask-image: linear-gradient(to right, transparent, black 20px, black 90%, transparent);
-            -webkit-mask-image: linear-gradient(to right, transparent, black 20px, black 90%, transparent);
-        }
-    }
-    
-    /* Active season styling */
-    .season-btn.active {
-        color: #498BBB;
-        border-bottom-color: #498BBB;
-        font-weight: 600;
-    }
-    
-    /* Hover effects */
-    .season-btn:hover:not(.active) {
-        transform: translateY(-1px);
-    }
-    
-    /* Smooth transition for active state */
-    .season-btn {
-        transition: all 0.2s ease;
-    }
-    
-    /* Main Grid Layout */
-    .main-content-grid {
-        display: grid;
-        grid-template-columns: 1fr;
-        gap: 1.5rem;
-    }
-    
-    /* Mobile & Tablet (up to 1023px) */
-    @media (max-width: 1023px) {
-        .main-content-grid {
-            grid-template-columns: 1fr !important;
-        }
-        
-        .mobile-full-width {
-            width: 100% !important;
-        }
-        
-        /* Adjust description gradient for mobile */
-        .expandable-description::after {
-            background: linear-gradient(90deg, transparent, #ffffff 40%);
-        }
-        .dark .expandable-description::after {
-            background: linear-gradient(90deg, transparent, #1f2937 40%);
-        }
-        
-        /* Reset orders for mobile stacking */
-        .main-content,
-        .sidebar-content {
-            order: 0 !important;
-        }
-    }
-    
-    /* Desktop (1024px and above) */
-    @media (min-width: 1024px) {
-        .main-content-grid {
-            grid-template-columns: 3fr 1fr !important;
-            gap: 1.5rem;
-        }
-        
-        /* Sidebar content styling */
-        .sidebar-content > * {
-            max-width: 100%;
-        }
-        
-        /* Adjust spacing for sidebar sections */
-        .sidebar-content > * + * {
-            margin-top: 1.5rem;
-        }
-        
-        /* Make poster responsive in details section */
-        .details-poster {
-            width: 100%;
-            max-width: 192px;
-            height: auto;
-            aspect-ratio: 2/3;
-        }
     }
     
     /* Mobile optimizations */
@@ -256,59 +113,209 @@
             overflow-x: auto;
             padding-bottom: 8px;
         }
+        
         .server-buttons button {
             flex-shrink: 0;
         }
+        
         .season-tabs {
             overflow-x: auto;
             padding-bottom: 4px;
         }
-        .video-controls {
-            flex-wrap: wrap;
-            gap: 8px;
-        }
-        .video-controls > div {
-            width: 100%;
-            justify-content: space-between;
-        }
-        .recommended-grid {
-            grid-template-columns: repeat(2, 1fr) !important;
-        }
-        /* Mobile description adjustments */
-        .expandable-description::after {
-            font-size: 0.8125rem;
-            padding-left: 35px;
-        }
-        .expandable-description.expanded::after {
-            font-size: 0.8125rem;
-        }
-        
-        /* Make poster smaller on mobile */
-        .details-poster {
-            max-width: 120px;
+    }
+    
+    @media (min-width: 769px) {
+        .video-controls-mobile {
+            display: none;
         }
     }
     
-    @media (max-width: 480px) {
-        .recommended-grid {
-            grid-template-columns: repeat(2, 1fr) !important;
+    /* New styles for description expansion */
+    .description-container {
+        position: relative;
+        overflow: hidden;
+        transition: max-height 0.3s ease-out;
+    }
+    
+    .description-container.collapsed {
+        max-height: 4.5rem; /* Approximately 3 lines */
+    }
+    
+    .description-container.expanded {
+        max-height: 1000px;
+    }
+    
+    .description-toggle {
+        display: flex;
+        align-items: center;
+        gap: 4px;
+        color: #498BBB;
+        font-size: 0.875rem;
+        font-weight: 500;
+        cursor: pointer;
+        margin-top: 8px;
+        transition: color 0.2s;
+    }
+    
+    .description-toggle:hover {
+        color: #3a6ea5;
+    }
+    
+    .description-toggle .material-symbols-outlined {
+        font-size: 18px;
+        transition: transform 0.3s;
+    }
+    
+    .description-toggle.expanded .material-symbols-outlined {
+        transform: rotate(90deg);
+    }
+    
+    /* New styles for season navigation */
+    .season-navigation-container {
+        position: relative;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        margin-bottom: 16px;
+    }
+    
+    .season-tabs-wrapper {
+        position: relative;
+        flex: 1;
+        overflow: hidden;
+    }
+    
+    .season-tabs {
+        display: flex;
+        gap: 4px;
+        overflow-x: auto;
+        scroll-behavior: smooth;
+        padding: 8px 0;
+        -webkit-overflow-scrolling: touch;
+    }
+    
+    .season-tabs::-webkit-scrollbar {
+        display: none;
+    }
+    
+    .season-nav-btn {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        background: rgba(73, 139, 187, 0.9);
+        color: white;
+        border: none;
+        width: 32px;
+        height: 32px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        z-index: 10;
+        transition: all 0.2s;
+        opacity: 0;
+        visibility: hidden;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+    }
+    
+    .season-nav-btn:hover {
+        background: #498BBB;
+        transform: translateY(-50%) scale(1.1);
+    }
+    
+    .season-nav-btn.left {
+        left: 0;
+    }
+    
+    .season-nav-btn.right {
+        right: 0;
+    }
+    
+    .season-navigation-container:hover .season-nav-btn {
+        opacity: 1;
+        visibility: visible;
+    }
+    
+    /* Show arrows only on desktop */
+    @media (max-width: 1024px) {
+        .season-nav-btn {
+            display: none;
         }
-        .comment-input-section {
-            flex-direction: column;
-            gap: 12px;
-        }
-        .comment-input-section > div:first-child {
-            align-self: flex-start;
-        }
-        /* Small mobile description adjustments */
-        .expandable-description::after {
-            padding-left: 30px;
+    }
+    
+    /* Mobile touch scrolling enhancement */
+    @media (max-width: 768px) {
+        .season-tabs {
+            scroll-snap-type: x mandatory;
+            scroll-padding: 16px;
         }
         
-        /* Make poster even smaller on very small screens */
-        .details-poster {
-            max-width: 100px;
+        .season-btn {
+            scroll-snap-align: start;
         }
+    }
+    
+    /* Season button hover effects */
+    .season-btn {
+        position: relative;
+        transition: all 0.2s ease;
+        padding: 10px 20px;
+        border-radius: 6px;
+        min-width: 100px;
+        text-align: center;
+    }
+    
+    .season-btn:hover:not(.active) {
+        background: rgba(73, 139, 187, 0.1);
+        transform: translateY(-1px);
+        box-shadow: 0 2px 8px rgba(73, 139, 187, 0.15);
+    }
+    
+    .season-btn.active {
+        background: rgba(73, 139, 187, 0.15);
+        box-shadow: 0 4px 12px rgba(73, 139, 187, 0.2);
+        transform: translateY(-1px);
+    }
+    
+    /* Mobile header adjustments */
+    @media (max-width: 640px) {
+        .header-logo {
+            position: static !important;
+            transform: none !important;
+            margin-left: auto;
+            margin-right: auto;
+            width: fit-content;
+        }
+        
+        .header-left {
+            width: 40px;
+            flex-shrink: 0;
+        }
+        
+        .header-right {
+            width: 40px;
+            flex-shrink: 0;
+        }
+    }
+    
+    /* Card hover effects */
+    .recommended-card {
+        transition: transform 0.3s ease;
+    }
+    
+    .recommended-card:hover {
+        transform: translateY(-4px);
+    }
+    
+    /* Mobile video controls */
+    .video-controls-mobile {
+        background: white;
+        dark:bg-[#151926];
+        border-radius: 0.75rem;
+        margin-top: 12px;
+        padding: 16px;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
     }
 </style>
 </head>
@@ -349,14 +356,13 @@
 </div>
 <a class="block text-sm font-medium hover:text-primary py-2 border-b border-gray-100 dark:border-gray-800" href="#">Top IMDB</a>
 <a class="block text-sm font-medium hover:text-primary py-2" href="#">Updates</a>
-<a class="block text-sm font-medium hover:text-primary py-2" href="#">Sent Request</a>
 </div>
 </div>
 
 <!-- Header -->
 <header class="fixed top-0 w-full z-40 bg-white/95 dark:bg-[#0B0E19]/95 backdrop-blur-sm border-b border-gray-200 dark:border-gray-800 shadow-sm">
 <div class="container mx-auto px-4 h-16 flex items-center justify-between">
-<div class="flex items-center gap-4">
+<div class="flex items-center gap-4 header-left">
 <button class="lg:hidden text-gray-600 dark:text-gray-200 focus:outline-none" onclick="toggleMobileMenu()">
 <span class="material-symbols-outlined text-3xl">menu</span>
 </button>
@@ -367,7 +373,7 @@
 <span>Genre</span>
 <span class="material-symbols-outlined text-sm">expand_more</span>
 </button>
-<div class="absolute top-full left-0 w-[600px] bg-white dark:bg-[#1A1D29] rounded-b-lg shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 border-t-2 border-primary grid grid-cols-4 gap-4 p-6 z-50">
+<div class="absolute top-full left-0 w-48 sm:w-64 md:w-[600px] bg-white dark:bg-[#1A1D29] rounded-b-lg shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 border-t-2 border-primary grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4 p-6 z-50">
 <a class="hover:text-primary block text-sm text-gray-600 dark:text-gray-400" href="#">Action</a>
 <a class="hover:text-primary block text-sm text-gray-600 dark:text-gray-400" href="#">Adventure</a>
 <a class="hover:text-primary block text-sm text-gray-600 dark:text-gray-400" href="#">Comedy</a>
@@ -379,22 +385,21 @@
 <span>Country</span>
 <span class="material-symbols-outlined text-sm">expand_more</span>
 </button>
-<div class="absolute top-full left-0 w-[600px] bg-white dark:bg-[#1A1D29] rounded-b-lg shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 border-t-2 border-primary grid grid-cols-4 gap-4 p-6 z-50">
+<div class="absolute top-full left-0 w-48 sm:w-64 md:w-[600px] bg-white dark:bg-[#1A1D29] rounded-b-lg shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 border-t-2 border-primary grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4 p-6 z-50">
 <a class="hover:text-primary block text-sm text-gray-600 dark:text-gray-400" href="#">USA</a>
 <a class="hover:text-primary block text-sm text-gray-600 dark:text-gray-400" href="#">Japan</a>
 </div>
 </div>
 <a class="hover:text-primary transition-colors" href="#">Top IMDB</a>
 <a class="hover:text-primary transition-colors" href="#">Updates</a>
-<a class="block text-sm font-medium hover:text-primary py-2" href="#">Sent Request</a>
 </nav>
 </div>
-<div class="absolute left-1/2 transform -translate-x-1/2">
+<div class="header-logo absolute left-1/2 transform -translate-x-1/2 sm:static sm:transform-none sm:mx-auto">
 <a class="block" href="/">
 <img alt="Quravel Logo" class="h-8 md:h-10 object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBJUVSMqcvlsLRod5Xj-MZhjFAWxv45A-9D1r1RCogjetrU2yKas3rRIuvSZRytOe6KmnI1y8NBGlIDGaE0UV5-mx19YpDf5v0SsajVxTc0VUCDku8E8PC54rDIUGGhmt44NSDXMGfnGVTtfzGJ8Cj6U15erHms74L8zDNtfVtIjG013mT9k-H5Psf5KSd570YR8_DAtEfUBmcVIMfE5LNH3WO14T7Cv3psWjV5O4UWogAMASg1czrkMA4qcRagH2Mtb7wqzWRn0BQ"/>
 </a>
 </div>
-<div class="flex items-center space-x-4">
+<div class="flex items-center space-x-4 header-right">
 <div class="relative hidden sm:block group z-50">
 <input class="bg-gray-100 dark:bg-gray-800 text-sm rounded-full py-2 pl-4 pr-10 focus:outline-none focus:ring-2 focus:ring-primary w-48 transition-all dark:text-white border-none group-focus-within:w-64" placeholder="Search..." type="text"/>
 <span class="material-symbols-outlined absolute right-3 top-2 text-gray-400 text-lg cursor-pointer hover:text-primary">search</span>
@@ -459,273 +464,533 @@
 </div>
 </header>
 
-<main class="flex-grow pt-20 pb-12 w-full max-w-[1920px] mx-auto">
-    <div class="container mx-auto px-4 lg:px-6">
-        <!-- Main Grid Container -->
-        <div class="main-content-grid">
+<main class="flex-grow pt-20 pb-12 w-full max-w-screen-2xl mx-auto px-4">
+    <!-- Mobile Video Controls (Below Video Player) -->
+    <div class="lg:hidden video-controls-mobile mb-6">
+        <div class="flex flex-col gap-4">
+            <!-- Current watching info -->
+            <div class="flex items-center justify-between">
+                <div class="flex items-center gap-2">
+                    <span class="text-sm text-gray-500 dark:text-gray-400">Watching:</span>
+                    <span class="font-bold text-primary" id="current-episode-display-mobile">Episode 1</span>
+                </div>
+                <div class="flex items-center gap-1 text-xs text-gray-500 dark:text-gray-400">
+                    <span class="material-symbols-outlined text-sm">tv</span>
+                    <span id="current-season-display-mobile">S1</span>
+                </div>
+            </div>
             
-            <!-- Left Column (Main Content) -->
-            <div class="main-content">
+            <!-- Server info -->
+            <div class="flex items-center gap-2">
+                <span class="text-xs text-gray-500 dark:text-gray-400">Server:</span>
+                <span class="text-xs font-bold text-primary" id="current-server-display-mobile">SUB-HD-01</span>
+            </div>
+            
+            <!-- Episode navigation and Add to List -->
+            <div class="flex items-center justify-between gap-3">
+                <button class="flex items-center gap-1 flex-1 justify-center text-xs bg-gray-100 dark:bg-gray-800 hover:bg-primary hover:text-white px-4 py-3 rounded-lg transition-colors dark:text-gray-300" onclick="changeEpisode('prev')">
+                    <span class="material-symbols-outlined text-sm">skip_previous</span> Prev
+                </button>
                 
-                <!-- Video Player -->
-                <div class="bg-white dark:bg-[#151926] rounded-xl overflow-hidden shadow-sm border border-gray-200 dark:border-gray-800">
-                    <div class="video-container-wrapper" id="video-player-container">
-                        <div class="absolute inset-0 flex items-center justify-center bg-black" id="video-loading-overlay">
-                            <span class="material-symbols-outlined text-6xl text-white opacity-50 group-hover:opacity-100 transition-opacity cursor-pointer" id="play-button">play_circle</span>
+                <div class="relative group">
+                    <button class="flex items-center gap-1 text-xs bg-primary/10 text-primary hover:bg-primary hover:text-white px-4 py-3 rounded-lg transition-colors" id="add-to-list-btn-mobile">
+                        <span class="material-symbols-outlined text-sm">add</span>
+                        <span id="current-list-status-text-mobile">Add to List</span>
+                    </button>
+                    <div class="absolute left-0 top-full mt-2 w-48 bg-white dark:bg-surface-dark rounded-lg shadow-xl py-1 z-20 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 border border-gray-200 dark:border-gray-700 text-xs">
+                        <button class="block w-full text-left px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-800 text-gray-700 dark:text-gray-300" onclick="updateListStatus('Planning to watch')">Planning to watch</button>
+                        <button class="block w-full text-left px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-800 text-gray-700 dark:text-gray-300" onclick="updateListStatus('Watching')">Watching</button>
+                        <button class="block w-full text-left px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-800 text-gray-700 dark:text-gray-300" onclick="updateListStatus('Completed')">Completed</button>
+                        <button class="block w-full text-left px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-800 text-gray-700 dark:text-gray-300" onclick="updateListStatus('Rewatching')">Rewatching</button>
+                        <button class="block w-full text-left px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-800 text-gray-700 dark:text-gray-300" onclick="updateListStatus('Dropped')">Dropped</button>
+                        <div class="border-t border-gray-200 dark:border-gray-700 my-1"></div>
+                        <button class="block w-full text-left px-4 py-2 hover:bg-red-50 dark:hover:bg-red-900/20 text-red-500" onclick="updateListStatus('Add to List')">Remove from list</button>
+                    </div>
+                </div>
+                
+                <button class="flex items-center gap-1 flex-1 justify-center text-xs bg-gray-100 dark:bg-gray-800 hover:bg-primary hover:text-white px-4 py-3 rounded-lg transition-colors dark:text-gray-300" onclick="changeEpisode('next')">
+                    Next <span class="material-symbols-outlined text-sm">skip_next</span>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Responsive Layout - Mobile: Stacked, Desktop: Sidebar -->
+    <div class="flex flex-col lg:flex-row gap-6">
+        
+        <!-- Main Content - 75% width on desktop -->
+        <div class="w-full lg:w-[75%] space-y-6">
+            
+            <!-- Video Player -->
+            <div class="bg-white dark:bg-[#151926] rounded-xl overflow-hidden shadow-sm border border-gray-200 dark:border-gray-800">
+                <div class="video-container-wrapper" id="video-player-container">
+                    <!-- Video will be loaded here dynamically -->
+                    <div class="absolute inset-0 flex items-center justify-center bg-black" id="video-loading-overlay">
+                        <span class="material-symbols-outlined text-6xl text-white opacity-50 group-hover:opacity-100 transition-opacity cursor-pointer" id="play-button">play_circle</span>
+                    </div>
+                </div>
+                
+                <!-- Video Controls (Desktop) -->
+                <div class="hidden lg:block p-4 border-t border-gray-200 dark:border-gray-700">
+                    <div class="flex flex-col md:flex-row items-start md:items-center justify-between gap-4 mb-4 video-controls">
+                        <div class="flex items-center gap-2">
+                            <span class="text-sm text-gray-500 dark:text-gray-400">You are watching:</span>
+                            <span class="font-bold text-primary" id="current-episode-display">Episode 1</span>
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <button class="flex items-center gap-1 text-xs bg-gray-100 dark:bg-gray-800 hover:bg-primary hover:text-white px-3 py-2 rounded transition-colors dark:text-gray-300" onclick="changeEpisode('prev')">
+                                <span class="material-symbols-outlined text-sm">skip_previous</span> Prev
+                            </button>
+                            <button class="flex items-center gap-1 text-xs bg-gray-100 dark:bg-gray-800 hover:bg-primary hover:text-white px-3 py-2 rounded transition-colors dark:text-gray-300" onclick="changeEpisode('next')">
+                                Next <span class="material-symbols-outlined text-sm">skip_next</span>
+                            </button>
+                            <div class="relative group ml-2">
+                                <button class="flex items-center gap-1 text-xs bg-primary/10 text-primary hover:bg-primary hover:text-white px-3 py-2 rounded transition-colors" id="add-to-list-btn">
+                                    <span class="material-symbols-outlined text-sm">add</span>
+                                    <span id="current-list-status-text">Add to List</span>
+                                </button>
+                                <div class="absolute right-0 top-full mt-2 w-48 bg-white dark:bg-surface-dark rounded-lg shadow-xl py-1 z-20 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 border border-gray-200 dark:border-gray-700 text-xs">
+                                    <button class="block w-full text-left px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-800 text-gray-700 dark:text-gray-300" onclick="updateListStatus('Planning to watch')">Planning to watch</button>
+                                    <button class="block w-full text-left px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-800 text-gray-700 dark:text-gray-300" onclick="updateListStatus('Watching')">Watching</button>
+                                    <button class="block w-full text-left px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-800 text-gray-700 dark:text-gray-300" onclick="updateListStatus('Completed')">Completed</button>
+                                    <button class="block w-full text-left px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-800 text-gray-700 dark:text-gray-300" onclick="updateListStatus('Rewatching')">Rewatching</button>
+                                    <button class="block w-full text-left px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-800 text-gray-700 dark:text-gray-300" onclick="updateListStatus('Dropped')">Dropped</button>
+                                    <div class="border-t border-gray-200 dark:border-gray-700 my-1"></div>
+                                    <button class="block w-full text-left px-4 py-2 hover:bg-red-50 dark:hover:bg-red-900/20 text-red-500" onclick="updateListStatus('Add to List')">Remove from list</button>
+                                </div>
+                            </div>
                         </div>
                     </div>
                     
-                    <!-- Video Controls -->
-                    <div class="p-4 border-t border-gray-200 dark:border-gray-700">
-                        <div class="flex flex-col md:flex-row items-start md:items-center justify-between gap-4 mb-4 video-controls">
-                            <div class="flex items-center gap-2">
-                                <span class="text-sm text-gray-500 dark:text-gray-400">You are watching:</span>
-                                <span class="font-bold text-primary" id="current-episode-display">Episode 1</span>
-                            </div>
-                            <div class="flex items-center gap-2">
-                                <button class="flex items-center gap-1 text-xs bg-gray-100 dark:bg-gray-800 hover:bg-primary hover:text-white px-3 py-2 rounded transition-colors dark:text-gray-300" onclick="changeEpisode('prev')">
-                                    <span class="material-symbols-outlined text-sm">skip_previous</span> Prev
-                                </button>
-                                <button class="flex items-center gap-1 text-xs bg-gray-100 dark:bg-gray-800 hover:bg-primary hover:text-white px-3 py-2 rounded transition-colors dark:text-gray-300" onclick="changeEpisode('next')">
-                                    Next <span class="material-symbols-outlined text-sm">skip_next</span>
-                                </button>
-                                <div class="relative group ml-2">
-                                    <button class="flex items-center gap-1 text-xs bg-primary/10 text-primary hover:bg-primary hover:text-white px-3 py-2 rounded transition-colors" id="add-to-list-btn">
-                                        <span class="material-symbols-outlined text-sm">add</span>
-                                        <span id="current-list-status-text">Add to List</span>
-                                    </button>
-                                    <div class="absolute right-0 top-full mt-2 w-48 bg-white dark:bg-surface-dark rounded-lg shadow-xl py-1 z-20 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 border border-gray-200 dark:border-gray-700 text-xs">
-                                        <button class="block w-full text-left px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-800 text-gray-700 dark:text-gray-300" onclick="updateListStatus('Planning to watch')">Planning to watch</button>
-                                        <button class="block w-full text-left px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-800 text-gray-700 dark:text-gray-300" onclick="updateListStatus('Watching')">Watching</button>
-                                        <button class="block w-full text-left px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-800 text-gray-700 dark:text-gray-300" onclick="updateListStatus('Completed')">Completed</button>
-                                        <button class="block w-full text-left px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-800 text-gray-700 dark:text-gray-300" onclick="updateListStatus('Rewatching')">Rewatching</button>
-                                        <button class="block w-full text-left px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-800 text-gray-700 dark:text-gray-300" onclick="updateListStatus('Dropped')">Dropped</button>
-                                        <div class="border-t border-gray-200 dark:border-gray-700 my-1"></div>
-                                        <button class="block w-full text-left px-4 py-2 hover:bg-red-50 dark:hover:bg-red-900/20 text-red-500" onclick="updateListStatus('Add to List')">Remove from list</button>
-                                    </div>
-                                </div>
+                    <!-- Server Selection -->
+                    <div class="space-y-3 mb-6 bg-gray-50 dark:bg-black/20 p-4 rounded-lg">
+                        <div class="flex flex-col sm:flex-row gap-4 items-start sm:items-center">
+                            <span class="text-xs font-bold text-gray-500 dark:text-gray-400 w-12 flex-shrink-0">SUB:</span>
+                            <div class="flex flex-wrap gap-2 server-buttons">
+                                <button class="server-btn px-3 py-2 rounded text-xs font-medium bg-primary text-white shadow-sm hover:bg-primary/90 transition" data-server="SUB-HD-01" onclick="selectServer(this)">HD-01</button>
+                                <button class="server-btn px-3 py-2 rounded text-xs font-medium bg-gray-200 dark:bg-gray-800 text-gray-700 dark:text-gray-300 hover:bg-gray-300 dark:hover:bg-gray-700 transition" data-server="SUB-HD-02" onclick="selectServer(this)">HD-02</button>
+                                <button class="server-btn px-3 py-2 rounded text-xs font-medium bg-gray-200 dark:bg-gray-800 text-gray-700 dark:text-gray-300 hover:bg-gray-300 dark:hover:bg-gray-700 transition" data-server="SUB-HD-03" onclick="selectServer(this)">HD-03</button>
+                                <button class="server-btn px-3 py-2 rounded text-xs font-medium bg-gray-200 dark:bg-gray-800 text-gray-700 dark:text-gray-300 hover:bg-gray-300 dark:hover:bg-gray-700 transition" data-server="SUB-HD-04" onclick="selectServer(this)">HD-04</button>
+                                <button class="server-btn px-3 py-2 rounded text-xs font-medium bg-gray-200 dark:bg-gray-800 text-gray-700 dark:text-gray-300 hover:bg-gray-300 dark:hover:bg-gray-700 transition" data-server="SUB-HD-05" onclick="selectServer(this)">HD-05</button>
                             </div>
                         </div>
-                        
-                        <!-- Server Selection -->
-                        <div class="space-y-3 mb-6 bg-gray-50 dark:bg-black/20 p-4 rounded-lg">
-                            <div class="flex flex-col sm:flex-row gap-4 items-start sm:items-center">
-                                <span class="text-xs font-bold text-gray-500 dark:text-gray-400 w-12 flex-shrink-0">SUB:</span>
-                                <div class="flex flex-wrap gap-2 server-buttons">
-                                    <button class="server-btn px-3 py-2 rounded text-xs font-medium bg-primary text-white shadow-sm hover:bg-primary/90 transition" data-server="SUB-HD-01" onclick="selectServer(this)">HD-01</button>
-                                    <button class="server-btn px-3 py-2 rounded text-xs font-medium bg-gray-200 dark:bg-gray-800 text-gray-700 dark:text-gray-300 hover:bg-gray-300 dark:hover:bg-gray-700 transition" data-server="SUB-HD-02" onclick="selectServer(this)">HD-02</button>
-                                    <button class="server-btn px-3 py-2 rounded text-xs font-medium bg-gray-200 dark:bg-gray-800 text-gray-700 dark:text-gray-300 hover:bg-gray-300 dark:hover:bg-gray-700 transition" data-server="SUB-HD-03" onclick="selectServer(this)">HD-03</button>
-                                    <button class="server-btn px-3 py-2 rounded text-xs font-medium bg-gray-200 dark:bg-gray-800 text-gray-700 dark:text-gray-300 hover:bg-gray-300 dark:hover:bg-gray-700 transition" data-server="SUB-HD-04" onclick="selectServer(this)">HD-04</button>
-                                    <button class="server-btn px-3 py-2 rounded text-xs font-medium bg-gray-200 dark:bg-gray-800 text-gray-700 dark:text-gray-300 hover:bg-gray-300 dark:hover:bg-gray-700 transition" data-server="SUB-HD-05" onclick="selectServer(this)">HD-05</button>
-                                </div>
-                            </div>
-                            <div class="flex flex-col sm:flex-row gap-4 items-start sm:items-center">
-                                <span class="text-xs font-bold text-gray-500 dark:text-gray-400 w-12 flex-shrink-0">DUB:</span>
-                                <div class="flex flex-wrap gap-2 server-buttons">
-                                    <button class="server-btn px-3 py-2 rounded text-xs font-medium bg-gray-200 dark:bg-gray-800 text-gray-700 dark:text-gray-300 hover:bg-gray-300 dark:hover:bg-gray-700 transition" data-server="DUB-HD-01" onclick="selectServer(this)">HD-01</button>
-                                    <button class="server-btn px-3 py-2 rounded text-xs font-medium bg-gray-200 dark:bg-gray-800 text-gray-700 dark:text-gray-300 hover:bg-gray-300 dark:hover:bg-gray-700 transition" data-server="DUB-HD-02" onclick="selectServer(this)">HD-02</button>
-                                    <button class="server-btn px-3 py-2 rounded text-xs font-medium bg-gray-200 dark:bg-gray-800 text-gray-700 dark:text-gray-300 hover:bg-gray-300 dark:hover:bg-gray-700 transition" data-server="DUB-HD-03" onclick="selectServer(this)">HD-03</button>
-                                    <button class="server-btn px-3 py-2 rounded text-xs font-medium bg-gray-200 dark:bg-gray-800 text-gray-700 dark:text-gray-300 hover:bg-gray-300 dark:hover:bg-gray-700 transition" data-server="DUB-HD-04" onclick="selectServer(this)">HD-04</button>
-                                    <button class="server-btn px-3 py-2 rounded text-xs font-medium bg-gray-200 dark:bg-gray-800 text-gray-700 dark:text-gray-300 hover:bg-gray-300 dark:hover:bg-gray-700 transition" data-server="DUB-HD-05" onclick="selectServer(this)">HD-05</button>
-                                </div>
-                            </div>
-                            <div class="flex flex-col sm:flex-row gap-4 items-start sm:items-center">
-                                <span class="text-xs font-bold text-gray-500 dark:text-gray-400 w-12 flex-shrink-0">RAW:</span>
-                                <div class="flex flex-wrap gap-2 server-buttons">
-                                    <button class="server-btn px-3 py-2 rounded text-xs font-medium bg-gray-200 dark:bg-gray-800 text-gray-700 dark:text-gray-300 hover:bg-gray-300 dark:hover:bg-gray-700 transition" data-server="RAW-HD-01" onclick="selectServer(this)">HD-01</button>
-                                    <button class="server-btn px-3 py-2 rounded text-xs font-medium bg-gray-200 dark:bg-gray-800 text-gray-700 dark:text-gray-300 hover:bg-gray-300 dark:hover:bg-gray-700 transition" data-server="RAW-HD-02" onclick="selectServer(this)">HD-02</button>
-                                    <button class="server-btn px-3 py-2 rounded text-xs font-medium bg-gray-200 dark:bg-gray-800 text-gray-700 dark:text-gray-300 hover:bg-gray-300 dark:hover:bg-gray-700 transition" data-server="RAW-HD-03" onclick="selectServer(this)">HD-03</button>
-                                    <button class="server-btn px-3 py-2 rounded text-xs font-medium bg-gray-200 dark:bg-gray-800 text-gray-700 dark:text-gray-300 hover:bg-gray-300 dark:hover:bg-gray-700 transition" data-server="RAW-HD-04" onclick="selectServer(this)">HD-04</button>
-                                    <button class="server-btn px-3 py-2 rounded text-xs font-medium bg-gray-200 dark:bg-gray-800 text-gray-700 dark:text-gray-300 hover:bg-gray-300 dark:hover:bg-gray-700 transition" data-server="RAW-HD-05" onclick="selectServer(this)">HD-05</button>
-                                </div>
+                        <div class="flex flex-col sm:flex-row gap-4 items-start sm:items-center">
+                            <span class="text-xs font-bold text-gray-500 dark:text-gray-400 w-12 flex-shrink-0">DUB:</span>
+                            <div class="flex flex-wrap gap-2 server-buttons">
+                                <button class="server-btn px-3 py-2 rounded text-xs font-medium bg-gray-200 dark:bg-gray-800 text-gray-700 dark:text-gray-300 hover:bg-gray-300 dark:hover:bg-gray-700 transition" data-server="DUB-HD-01" onclick="selectServer(this)">HD-01</button>
+                                <button class="server-btn px-3 py-2 rounded text-xs font-medium bg-gray-200 dark:bg-gray-800 text-gray-700 dark:text-gray-300 hover:bg-gray-300 dark:hover:bg-gray-700 transition" data-server="DUB-HD-02" onclick="selectServer(this)">HD-02</button>
+                                <button class="server-btn px-3 py-2 rounded text-xs font-medium bg-gray-200 dark:bg-gray-800 text-gray-700 dark:text-gray-300 hover:bg-gray-300 dark:hover:bg-gray-700 transition" data-server="DUB-HD-03" onclick="selectServer(this)">HD-03</button>
+                                <button class="server-btn px-3 py-2 rounded text-xs font-medium bg-gray-200 dark:bg-gray-800 text-gray-700 dark:text-gray-300 hover:bg-gray-300 dark:hover:bg-gray-700 transition" data-server="DUB-HD-04" onclick="selectServer(this)">HD-04</button>
+                                <button class="server-btn px-3 py-2 rounded text-xs font-medium bg-gray-200 dark:bg-gray-800 text-gray-700 dark:text-gray-300 hover:bg-gray-300 dark:hover:bg-gray-700 transition" data-server="DUB-HD-05" onclick="selectServer(this)">HD-05</button>
                             </div>
                         </div>
-                        
-                        <!-- Season Selection -->
-                        <div class="relative mb-4">
-                            <!-- Desktop Arrow Navigation -->
-                            <div class="hidden lg:flex absolute left-0 top-0 bottom-0 items-center z-10">
-                                <button class="season-nav-btn-prev bg-white dark:bg-gray-800 shadow-lg rounded-full p-2 -ml-2 hover:bg-gray-100 dark:hover:bg-gray-700 transition-all disabled:opacity-50 disabled:cursor-not-allowed" onclick="scrollSeasons('left')" aria-label="Scroll seasons left">
-                                    <svg class="w-5 h-5 text-gray-700 dark:text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
-                                    </svg>
-                                </button>
-                            </div>
-                            
-                            <div class="hidden lg:flex absolute right-0 top-0 bottom-0 items-center z-10">
-                                <button class="season-nav-btn-next bg-white dark:bg-gray-800 shadow-lg rounded-full p-2 -mr-2 hover:bg-gray-100 dark:hover:bg-gray-700 transition-all disabled:opacity-50 disabled:cursor-not-allowed" onclick="scrollSeasons('right')" aria-label="Scroll seasons right">
-                                    <svg class="w-5 h-5 text-gray-700 dark:text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
-                                    </svg>
-                                </button>
-                            </div>
-                            
-                            <!-- Season Tabs Container -->
-                            <div class="flex items-center gap-2 overflow-x-auto hide-scrollbar pb-2 border-b border-gray-200 dark:border-gray-700 season-tabs" id="season-tabs-container">
-                                <button class="season-btn px-4 py-2 text-sm font-medium text-primary border-b-2 border-primary whitespace-nowrap transition-colors flex-shrink-0" data-season="1" onclick="selectSeason(this)">Season 1</button>
-                                <button class="season-btn px-4 py-2 text-sm font-medium text-gray-500 dark:text-gray-400 hover:text-gray-800 dark:hover:text-gray-200 whitespace-nowrap transition-colors border-b-2 border-transparent flex-shrink-0" data-season="2" onclick="selectSeason(this)">Season 2</button>
-                                <button class="season-btn px-4 py-2 text-sm font-medium text-gray-500 dark:text-gray-400 hover:text-gray-800 dark:hover:text-gray-200 whitespace-nowrap transition-colors border-b-2 border-transparent flex-shrink-0" data-season="3" onclick="selectSeason(this)">Season 3</button>
-                                <button class="season-btn px-4 py-2 text-sm font-medium text-gray-500 dark:text-gray-400 hover:text-gray-800 dark:hover:text-gray-200 whitespace-nowrap transition-colors border-b-2 border-transparent flex-shrink-0" data-season="4" onclick="selectSeason(this)">Season 4</button>
-                                <button class="season-btn px-4 py-2 text-sm font-medium text-gray-500 dark:text-gray-400 hover:text-gray-800 dark:hover:text-gray-200 whitespace-nowrap transition-colors border-b-2 border-transparent flex-shrink-0" data-season="5" onclick="selectSeason(this)">Season 5</button>
-                                <button class="season-btn px-4 py-2 text-sm font-medium text-gray-500 dark:text-gray-400 hover:text-gray-800 dark:hover:text-gray-200 whitespace-nowrap transition-colors border-b-2 border-transparent flex-shrink-0" data-season="6" onclick="selectSeason(this)">Season 6</button>
-                                <button class="season-btn px-4 py-2 text-sm font-medium text-gray-500 dark:text-gray-400 hover:text-gray-800 dark:hover:text-gray-200 whitespace-nowrap transition-colors border-b-2 border-transparent flex-shrink-0" data-season="7" onclick="selectSeason(this)">Season 7</button>
-                                <button class="season-btn px-4 py-2 text-sm font-medium text-gray-500 dark:text-gray-400 hover:text-gray-800 dark:hover:text-gray-200 whitespace-nowrap transition-colors border-b-2 border-transparent flex-shrink-0" data-season="8" onclick="selectSeason(this)">Season 8</button>
-                                <button class="season-btn px-4 py-2 text-sm font-medium text-gray-500 dark:text-gray-400 hover:text-gray-800 dark:hover:text-gray-200 whitespace-nowrap transition-colors border-b-2 border-transparent flex-shrink-0" data-season="9" onclick="selectSeason(this)">Season 9</button>
-                                <button class="season-btn px-4 py-2 text-sm font-medium text-gray-500 dark:text-gray-400 hover:text-gray-800 dark:hover:text-gray-200 whitespace-nowrap transition-colors border-b-2 border-transparent flex-shrink-0" data-season="ova" onclick="selectSeason(this)">OVA</button>
-                                <button class="season-btn px-4 py-2 text-sm font-medium text-gray-500 dark:text-gray-400 hover:text-gray-800 dark:hover:text-gray-200 whitespace-nowrap transition-colors border-b-2 border-transparent flex-shrink-0" data-season="specials" onclick="selectSeason(this)">Specials</button>
-                                <button class="season-btn px-4 py-2 text-sm font-medium text-gray-500 dark:text-gray-400 hover:text-gray-800 dark:hover:text-gray-200 whitespace-nowrap transition-colors border-b-2 border-transparent flex-shrink-0" data-season="movies" onclick="selectSeason(this)">Movies</button>
+                        <div class="flex flex-col sm:flex-row gap-4 items-start sm:items-center">
+                            <span class="text-xs font-bold text-gray-500 dark:text-gray-400 w-12 flex-shrink-0">RAW:</span>
+                            <div class="flex flex-wrap gap-2 server-buttons">
+                                <button class="server-btn px-3 py-2 rounded text-xs font-medium bg-gray-200 dark:bg-gray-800 text-gray-700 dark:text-gray-300 hover:bg-gray-300 dark:hover:bg-gray-700 transition" data-server="RAW-HD-01" onclick="selectServer(this)">HD-01</button>
+                                <button class="server-btn px-3 py-2 rounded text-xs font-medium bg-gray-200 dark:bg-gray-800 text-gray-700 dark:text-gray-300 hover:bg-gray-300 dark:hover:bg-gray-700 transition" data-server="RAW-HD-02" onclick="selectServer(this)">HD-02</button>
+                                <button class="server-btn px-3 py-2 rounded text-xs font-medium bg-gray-200 dark:bg-gray-800 text-gray-700 dark:text-gray-300 hover:bg-gray-300 dark:hover:bg-gray-700 transition" data-server="RAW-HD-03" onclick="selectServer(this)">HD-03</button>
+                                <button class="server-btn px-3 py-2 rounded text-xs font-medium bg-gray-200 dark:bg-gray-800 text-gray-700 dark:text-gray-300 hover:bg-gray-300 dark:hover:bg-gray-700 transition" data-server="RAW-HD-04" onclick="selectServer(this)">HD-04</button>
+                                <button class="server-btn px-3 py-2 rounded text-xs font-medium bg-gray-200 dark:bg-gray-800 text-gray-700 dark:text-gray-300 hover:bg-gray-300 dark:hover:bg-gray-700 transition" data-server="RAW-HD-05" onclick="selectServer(this)">HD-05</button>
                             </div>
                         </div>
                     </div>
-                </div>
-
-                <!-- Episode List -->
-                <div class="bg-white dark:bg-[#151926] rounded-xl overflow-hidden shadow-sm border border-gray-200 dark:border-gray-800">
-                    <div class="p-4 border-b border-gray-200 dark:border-gray-700 font-bold text-lg">Episodes</div>
-                    <div class="max-h-[500px] overflow-y-auto custom-scrollbar p-2" id="episode-list-container">
-                        <!-- Episodes will be loaded here -->
-                    </div>
-                </div>
-
-                <!-- Recommended for You -->
-                <div class="bg-white dark:bg-[#151926] rounded-xl overflow-hidden shadow-sm border border-gray-200 dark:border-gray-800 recommended-section">
-                    <div class="p-4 border-b border-gray-200 dark:border-gray-700 font-bold text-lg text-primary">Recommended for you</div>
-                    <div class="max-h-[600px] overflow-y-auto custom-scrollbar p-4 grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 xl:grid-cols-7 gap-4 recommended-grid" id="recommended-list-container">
-                        <!-- Recommended content will be loaded here -->
-                    </div>
-                </div>
-
-                <!-- Comments Section -->
-                <div class="bg-white dark:bg-[#151926] rounded-xl overflow-hidden shadow-sm border border-gray-200 dark:border-gray-800 comments-section">
-                    <div class="p-4 border-b border-gray-200 dark:border-gray-700 flex justify-between items-center">
-                        <span class="font-bold text-lg text-gray-900 dark:text-white">Comments <span class="text-primary text-sm font-normal ml-1" id="comment-count-badge"></span></span>
-                    </div>
-                    <div class="p-4 bg-gray-50 dark:bg-black/20">
-                        <div class="flex gap-4 comment-input-section">
-                            <div class="w-10 h-10 rounded-full bg-primary/20 flex items-center justify-center text-primary font-bold flex-shrink-0">You</div>
-                            <div class="flex-1">
-                                <textarea class="w-full bg-white dark:bg-gray-800 border-0 rounded-lg p-3 text-sm focus:ring-2 focus:ring-primary dark:text-white placeholder-gray-400" id="new-comment-input" placeholder="Join the discussion..." rows="3"></textarea>
-                                <div class="flex justify-end mt-2">
-                                    <button class="bg-primary hover:bg-opacity-90 text-white text-xs font-semibold py-2 px-6 rounded-full transition-colors shadow-sm" onclick="postNewComment()">Post Comment</button>
-                                </div>
+                    
+                    <!-- Season Selection with Navigation Arrows -->
+                    <div class="season-navigation-container">
+                        <button class="season-nav-btn left" onclick="scrollSeasons(-1)">
+                            <span class="material-symbols-outlined text-lg">chevron_left</span>
+                        </button>
+                        <div class="season-tabs-wrapper">
+                            <div class="season-tabs hide-scrollbar" id="season-tabs-container">
+                                <button class="season-btn px-4 py-2 text-sm font-medium text-primary border-b-2 border-primary whitespace-nowrap transition-colors active" data-season="1" onclick="selectSeason(this)">Season 1</button>
+                                <button class="season-btn px-4 py-2 text-sm font-medium text-gray-500 dark:text-gray-400 hover:text-gray-800 dark:hover:text-gray-200 whitespace-nowrap transition-colors border-b-2 border-transparent" data-season="2" onclick="selectSeason(this)">Season 2</button>
+                                <button class="season-btn px-4 py-2 text-sm font-medium text-gray-500 dark:text-gray-400 hover:text-gray-800 dark:hover:text-gray-200 whitespace-nowrap transition-colors border-b-2 border-transparent" data-season="3" onclick="selectSeason(this)">Season 3</button>
+                                <button class="season-btn px-4 py-2 text-sm font-medium text-gray-500 dark:text-gray-400 hover:text-gray-800 dark:hover:text-gray-200 whitespace-nowrap transition-colors border-b-2 border-transparent" data-season="4" onclick="selectSeason(this)">Season 4</button>
+                                <button class="season-btn px-4 py-2 text-sm font-medium text-gray-500 dark:text-gray-400 hover:text-gray-800 dark:hover:text-gray-200 whitespace-nowrap transition-colors border-b-2 border-transparent" data-season="ova" onclick="selectSeason(this)">OVA</button>
                             </div>
                         </div>
-                    </div>
-                    <div class="max-h-[600px] overflow-y-auto custom-scrollbar" id="comments-list-container">
-                        <!-- Comments will be loaded here -->
+                        <button class="season-nav-btn right" onclick="scrollSeasons(1)">
+                            <span class="material-symbols-outlined text-lg">chevron_right</span>
+                        </button>
                     </div>
                 </div>
             </div>
 
-            <!-- Right Sidebar Column -->
-            <div class="sidebar-content">
-                
-                <!-- Movie Details Card (TOP) -->
-                <div class="bg-white dark:bg-[#151926] rounded-xl p-6 shadow-sm border border-gray-200 dark:border-gray-800 h-fit">
-                    <div class="flex gap-4 mb-4">
-                        <img alt="Poster" class="details-poster w-24 h-36 object-cover rounded-lg shadow-md flex-shrink-0" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBL8sSKQhkIHjJRpfaXPOb2Ntr-YMNUhdTfQQNGnnmqGZu3SSewBEFAnXpGTo1YxqHXlb8pOCJCZrgrSF00Ey3CMmhZW5Q7dqz5o0qIOeV3DXsmqV-RKQGF2yEnwCFPLqyZ1R9luYVGdw-P_L6bRKjMPRM2RO5ISubiOat46Ovv-uMFsJfxGzRT0ngWoCZXAiiHQbJOA91N5Wyn21gKPKb6rWilqbabiqUYqUEEe31UdFQXOki6b3glJcCnNMssztZkZ0UYU_mwBbY"/>
+            <!-- Mobile Server and Season Selection -->
+            <div class="lg:hidden bg-white dark:bg-[#151926] rounded-xl p-4 shadow-sm border border-gray-200 dark:border-gray-800">
+                <div class="space-y-4">
+                    <!-- Season Selection for Mobile -->
+                    <div>
+                        <h3 class="text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">Select Season:</h3>
+                        <div class="flex overflow-x-auto gap-2 pb-2 hide-scrollbar">
+                            <button class="season-btn px-4 py-2 text-sm font-medium text-primary border-b-2 border-primary whitespace-nowrap transition-colors active" data-season="1" onclick="selectSeason(this)">Season 1</button>
+                            <button class="season-btn px-4 py-2 text-sm font-medium text-gray-500 dark:text-gray-400 hover:text-gray-800 dark:hover:text-gray-200 whitespace-nowrap transition-colors border-b-2 border-transparent" data-season="2" onclick="selectSeason(this)">Season 2</button>
+                            <button class="season-btn px-4 py-2 text-sm font-medium text-gray-500 dark:text-gray-400 hover:text-gray-800 dark:hover:text-gray-200 whitespace-nowrap transition-colors border-b-2 border-transparent" data-season="3" onclick="selectSeason(this)">Season 3</button>
+                            <button class="season-btn px-4 py-2 text-sm font-medium text-gray-500 dark:text-gray-400 hover:text-gray-800 dark:hover:text-gray-200 whitespace-nowrap transition-colors border-b-2 border-transparent" data-season="4" onclick="selectSeason(this)">Season 4</button>
+                            <button class="season-btn px-4 py-2 text-sm font-medium text-gray-500 dark:text-gray-400 hover:text-gray-800 dark:hover:text-gray-200 whitespace-nowrap transition-colors border-b-2 border-transparent" data-season="ova" onclick="selectSeason(this)">OVA</button>
+                        </div>
+                    </div>
+                    
+                    <!-- Server Selection for Mobile -->
+                    <div class="space-y-3">
                         <div>
-                            <h1 class="text-xl font-bold leading-tight mb-2">The Shawshank Redemption</h1>
-                            <div class="flex flex-wrap gap-2 text-xs text-gray-500 dark:text-gray-400 mb-2">
-                                <span class="px-1.5 py-0.5 border border-gray-300 dark:border-gray-700 rounded">TV-MA</span>
-                                <span class="px-1.5 py-0.5 bg-primary text-white rounded font-bold">HD</span>
-                                <span class="flex items-center gap-1"><span class="material-symbols-outlined text-sm">mic</span> 12</span>
-                                <span class="flex items-center gap-1"><span class="material-symbols-outlined text-sm">subtitles</span> 12</span>
+                            <h3 class="text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">Select Server:</h3>
+                            <div class="space-y-3">
+                                <div>
+                                    <span class="text-xs font-bold text-gray-500 dark:text-gray-400">SUB:</span>
+                                    <div class="flex flex-wrap gap-2 mt-1 server-buttons">
+                                        <button class="server-btn px-3 py-2 rounded text-xs font-medium bg-primary text-white shadow-sm hover:bg-primary/90 transition" data-server="SUB-HD-01" onclick="selectServer(this)">HD-01</button>
+                                        <button class="server-btn px-3 py-2 rounded text-xs font-medium bg-gray-200 dark:bg-gray-800 text-gray-700 dark:text-gray-300 hover:bg-gray-300 dark:hover:bg-gray-700 transition" data-server="SUB-HD-02" onclick="selectServer(this)">HD-02</button>
+                                        <button class="server-btn px-3 py-2 rounded text-xs font-medium bg-gray-200 dark:bg-gray-800 text-gray-700 dark:text-gray-300 hover:bg-gray-300 dark:hover:bg-gray-700 transition" data-server="SUB-HD-03" onclick="selectServer(this)">HD-03</button>
+                                        <button class="server-btn px-3 py-2 rounded text-xs font-medium bg-gray-200 dark:bg-gray-800 text-gray-700 dark:text-gray-300 hover:bg-gray-300 dark:hover:bg-gray-700 transition" data-server="SUB-HD-04" onclick="selectServer(this)">HD-04</button>
+                                        <button class="server-btn px-3 py-2 rounded text-xs font-medium bg-gray-200 dark:bg-gray-800 text-gray-700 dark:text-gray-300 hover:bg-gray-300 dark:hover:bg-gray-700 transition" data-server="SUB-HD-05" onclick="selectServer(this)">HD-05</button>
+                                    </div>
+                                </div>
+                                <div>
+                                    <span class="text-xs font-bold text-gray-500 dark:text-gray-400">DUB:</span>
+                                    <div class="flex flex-wrap gap-2 mt-1 server-buttons">
+                                        <button class="server-btn px-3 py-2 rounded text-xs font-medium bg-gray-200 dark:bg-gray-800 text-gray-700 dark:text-gray-300 hover:bg-gray-300 dark:hover:bg-gray-700 transition" data-server="DUB-HD-01" onclick="selectServer(this)">HD-01</button>
+                                        <button class="server-btn px-3 py-2 rounded text-xs font-medium bg-gray-200 dark:bg-gray-800 text-gray-700 dark:text-gray-300 hover:bg-gray-300 dark:hover:bg-gray-700 transition" data-server="DUB-HD-02" onclick="selectServer(this)">HD-02</button>
+                                        <button class="server-btn px-3 py-2 rounded text-xs font-medium bg-gray-200 dark:bg-gray-800 text-gray-700 dark:text-gray-300 hover:bg-gray-300 dark:hover:bg-gray-700 transition" data-server="DUB-HD-03" onclick="selectServer(this)">HD-03</button>
+                                        <button class="server-btn px-3 py-2 rounded text-xs font-medium bg-gray-200 dark:bg-gray-800 text-gray-700 dark:text-gray-300 hover:bg-gray-300 dark:hover:bg-gray-700 transition" data-server="DUB-HD-04" onclick="selectServer(this)">HD-04</button>
+                                        <button class="server-btn px-3 py-2 rounded text-xs font-medium bg-gray-200 dark:bg-gray-800 text-gray-700 dark:text-gray-300 hover:bg-gray-300 dark:hover:bg-gray-700 transition" data-server="DUB-HD-05" onclick="selectServer(this)">HD-05</button>
+                                    </div>
+                                </div>
+                                <div>
+                                    <span class="text-xs font-bold text-gray-500 dark:text-gray-400">RAW:</span>
+                                    <div class="flex flex-wrap gap-2 mt-1 server-buttons">
+                                        <button class="server-btn px-3 py-2 rounded text-xs font-medium bg-gray-200 dark:bg-gray-800 text-gray-700 dark:text-gray-300 hover:bg-gray-300 dark:hover:bg-gray-700 transition" data-server="RAW-HD-01" onclick="selectServer(this)">HD-01</button>
+                                        <button class="server-btn px-3 py-2 rounded text-xs font-medium bg-gray-200 dark:bg-gray-800 text-gray-700 dark:text-gray-300 hover:bg-gray-300 dark:hover:bg-gray-700 transition" data-server="RAW-HD-02" onclick="selectServer(this)">HD-02</button>
+                                        <button class="server-btn px-3 py-2 rounded text-xs font-medium bg-gray-200 dark:bg-gray-800 text-gray-700 dark:text-gray-300 hover:bg-gray-300 dark:hover:bg-gray-700 transition" data-server="RAW-HD-03" onclick="selectServer(this)">HD-03</button>
+                                        <button class="server-btn px-3 py-2 rounded text-xs font-medium bg-gray-200 dark:bg-gray-800 text-gray-700 dark:text-gray-300 hover:bg-gray-300 dark:hover:bg-gray-700 transition" data-server="RAW-HD-04" onclick="selectServer(this)">HD-04</button>
+                                        <button class="server-btn px-3 py-2 rounded text-xs font-medium bg-gray-200 dark:bg-gray-800 text-gray-700 dark:text-gray-300 hover:bg-gray-300 dark:hover:bg-gray-700 transition" data-server="RAW-HD-05" onclick="selectServer(this)">HD-05</button>
+                                    </div>
+                                </div>
                             </div>
-                            <div class="text-xs text-gray-500 dark:text-gray-400">
-                                Movie • 2h 22m
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="mb-6">
-                        <h3 class="text-lg font-semibold text-gray-900 dark:text-white mb-2">Description</h3>
-                        <p id="description-text" 
-                           class="text-sm text-gray-600 dark:text-gray-300 line-clamp-4 mb-4 leading-relaxed expandable-description"
-                           onclick="toggleDescription()">
-                            Framed in the 1940s for the double murder of his wife and her lover, upstanding banker Andy Dufresne begins a new life at the Shawshank prison, where he puts his accounting skills to work for an amoral warden.
-                        </p>
-                    </div>
-                    
-                    <!-- Detailed Info -->
-                    <div class="space-y-4 text-gray-600 dark:text-gray-400 border-l border-gray-200 dark:border-gray-700 pl-0 md:pl-6">
-                        <div class="grid grid-cols-3 gap-2">
-                            <span class="font-medium text-gray-900 dark:text-white">Title:</span>
-                            <span class="col-span-2 text-xs">The Shawshank Redemption</span>
-                        </div>
-                        <div class="grid grid-cols-3 gap-2">
-                            <span class="font-medium text-gray-900 dark:text-white">Original:</span>
-                            <span class="col-span-2 text-xs">The Shawshank Redemption</span>
-                        </div>
-                        <div class="grid grid-cols-3 gap-2">
-                            <span class="font-medium text-gray-900 dark:text-white">Aired:</span>
-                            <span class="col-span-2 text-xs">1994</span>
-                        </div>
-                        <div class="grid grid-cols-3 gap-2">
-                            <span class="font-medium text-gray-900 dark:text-white">Duration:</span>
-                            <span class="col-span-2 text-xs">2h 22m</span>
-                        </div>
-                        <div class="grid grid-cols-3 gap-2">
-                            <span class="font-medium text-gray-900 dark:text-white">Status:</span>
-                            <span class="col-span-2 text-xs">Completed</span>
-                        </div>
-                        <div class="grid grid-cols-3 gap-2">
-                            <span class="font-medium text-gray-900 dark:text-white">Genres:</span>
-                            <div class="col-span-2 flex flex-wrap gap-1">
-                                <span class="border border-gray-300 dark:border-gray-600 rounded px-1.5 py-0.5 text-[10px]">Drama</span>
-                                <span class="border border-gray-300 dark:border-gray-600 rounded px-1.5 py-0.5 text-[10px]">Crime</span>
-                            </div>
-                        </div>
-                        <div class="grid grid-cols-3 gap-2">
-                            <span class="font-medium text-gray-900 dark:text-white">Cast:</span>
-                            <span class="col-span-2 text-xs">Tim Robbins, Morgan Freeman, Bob Gunton</span>
-                        </div>
-                        <div class="grid grid-cols-3 gap-2">
-                            <span class="font-medium text-gray-900 dark:text-white">Score:</span>
-                            <div class="col-span-2 text-xs flex items-center gap-3">
-                                <span class="flex items-center gap-1">
-                                    <span class="material-symbols-outlined text-[14px] text-yellow-500">star</span> 
-                                    IMDb: 9.3
-                                </span>
-                            </div>
-                        </div>
-                        <div class="grid grid-cols-3 gap-2">
-                            <span class="font-medium text-gray-900 dark:text-white">Studio:</span>
-                            <span class="col-span-2 text-xs text-primary">Castle Rock Entertainment</span>
                         </div>
                     </div>
                 </div>
+            </div>
 
-                <!-- Rating Card (SECOND) -->
-                <div class="bg-[#1A1D29] rounded-xl p-5 shadow-lg border border-gray-800">
-                    <div class="flex items-center justify-between mb-4">
-                        <div class="flex items-center gap-2">
-                            <span class="material-symbols-outlined text-yellow-500 fill-current">star</span>
-                            <span class="text-2xl font-bold text-white">9.3</span>
-                        </div>
-                        <span class="text-sm font-semibold text-white">Vote now</span>
-                    </div>
-                    <div class="text-sm text-gray-400 mb-6 text-center">What do you think about this show?</div>
-                    <div class="flex justify-between px-2">
-                        <button class="flex flex-col items-center gap-2 group" onclick="rateShow('boring')">
-                            <span class="text-3xl grayscale group-hover:grayscale-0 transition-all transform group-hover:scale-110">😩</span>
-                            <span class="text-xs font-medium text-gray-400 group-hover:text-white transition-colors">Boring</span>
-                        </button>
-                        <button class="flex flex-col items-center gap-2 group" onclick="rateShow('great')">
-                            <span class="text-3xl grayscale group-hover:grayscale-0 transition-all transform group-hover:scale-110">😃</span>
-                            <span class="text-xs font-medium text-gray-400 group-hover:text-white transition-colors">Great</span>
-                        </button>
-                        <button class="flex flex-col items-center gap-2 group" onclick="rateShow('amazing')">
-                            <span class="text-3xl grayscale group-hover:grayscale-0 transition-all transform group-hover:scale-110">🤩</span>
-                            <span class="text-xs font-medium text-gray-400 group-hover:text-white transition-colors">Amazing</span>
-                        </button>
+            <!-- Episodes List (Mobile) -->
+            <div class="lg:hidden bg-white dark:bg-[#151926] rounded-xl overflow-hidden shadow-sm border border-gray-200 dark:border-gray-800">
+                <div class="p-4 border-b border-gray-200 dark:border-gray-700 font-bold text-lg">Episodes</div>
+                <div class="p-4">
+                    <div class="max-h-[400px] overflow-y-auto custom-scrollbar" id="episode-list-container-mobile">
+                        <!-- Episodes will be loaded here for mobile -->
                     </div>
                 </div>
+            </div>
 
-                <!-- Most Popular (THIRD) -->
-                <div class="bg-white dark:bg-[#151926] rounded-xl overflow-hidden shadow-sm border border-gray-200 dark:border-gray-800">
-                    <div class="p-4 border-b border-gray-200 dark:border-gray-700 font-bold text-lg">Most Popular</div>
-                    <div class="max-h-[500px] overflow-y-auto custom-scrollbar p-2 space-y-2" id="most-popular-list-container">
+           <!-- Show Details (Mobile) -->
+<div class="lg:hidden bg-white dark:bg-[#151926] rounded-xl p-6 shadow-sm border border-gray-200 dark:border-gray-800 h-fit">
+    <div class="flex gap-4 mb-4">
+        <img alt="Poster" class="w-24 h-36 object-cover rounded-lg shadow-md flex-shrink-0" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBL8sSKQhkIHjJRpfaXPOb2Ntr-YMNUhdTfQQNGnnmqGZu3SSewBEFAnXpGTo1YxqHXlb8pOCJCZrgrSF00Ey3CMmhZW5Q7dqz5o0qIOeV3DXsmqV-RKQGF2yEnwCFPLqyZ1R9luYVGdw-P_L6bRKjMPRM2RO5ISubiOat46Ovv-uMFsJfxGzRT0ngWoCZXAiiHQbJOA91N5Wyn21gKPKb6rWilqbabiqUYqUEEe31UdFQXOki6b3glJcCnNMssztZkZ0UYU_mwBbY"/>
+        <div>
+            <h1 class="text-xl font-bold leading-tight mb-2">Alya Sometimes Hides Her Feelings in Russian</h1>
+            <div class="flex flex-wrap gap-2 text-xs text-gray-500 dark:text-gray-400 mb-2">
+                <span class="px-1.5 py-0.5 border border-gray-300 dark:border-gray-700 rounded">TV-14</span>
+                <span class="px-1.5 py-0.5 bg-primary text-white rounded font-bold">HD</span>
+                <span class="flex items-center gap-1"><span class="material-symbols-outlined text-sm">mic</span> 12</span>
+                <span class="flex items-center gap-1"><span class="material-symbols-outlined text-sm">subtitles</span> 12</span>
+            </div>
+            <div class="text-xs text-gray-500 dark:text-gray-400">
+                Anime • 12 Episodes
+            </div>
+        </div>
+    </div>
+    <div class="description-container collapsed" id="description-container-mobile">
+        <p class="text-sm text-gray-600 dark:text-gray-300 leading-relaxed mb-2">
+            Alisa Mikhailovna Kujou is a beautiful half-Russian girl who sits next to Masachika Kuze in class. Despite her appearance, she's a tsundere who is always glaring at Kuze. She's also the vice president of the student council and is secretly a light novel author. Kuze is a lazy student who always naps in class, but he's actually quite capable when he wants to be. He understands Russian and can hear Alisa's affectionate mutterings in Russian, but he pretends not to understand to tease her.
+        </p>
+    </div>
+    <div class="description-toggle" id="description-toggle-mobile" onclick="toggleDescriptionMobile()">
+        <span>Read more</span>
+        <span class="material-symbols-outlined">arrow_forward</span>
+    </div>
+    <!-- SHOW DETAILS INFORMATION -->
+    <div class="grid grid-cols-1 gap-3 text-xs text-gray-500 dark:text-gray-400 border-t border-gray-100 dark:border-gray-700 pt-4 mt-4">
+        <!-- Title Information -->
+        <div>
+            <span class="font-semibold text-gray-700 dark:text-gray-200">Title:</span> 
+            <span class="ml-1">Alya Sometimes Hides Her Feelings in Russian</span>
+        </div>
+        <div>
+            <span class="font-semibold text-gray-700 dark:text-gray-200">Original Title:</span> 
+            <span class="ml-1">Tokidoki Bosotto Russia-go de Dereru Tonari no Alya-san</span>
+        </div>
+        <div>
+            <span class="font-semibold text-gray-700 dark:text-gray-200">Japanese Title:</span> 
+            <span class="ml-1">時々ボソッとロシア語でデレる隣のアーリャさん</span>
+        </div>
+        
+        <!-- Synonyms -->
+        <div>
+            <span class="font-semibold text-gray-700 dark:text-gray-200">Synonyms:</span> 
+            <span class="ml-1">Roshidere, Alya-san, who sits besides me and sometimes murmurs affectionately in Russian., Arya Next Door Sometimes Lapses into Russian</span>
+        </div>
+        
+        <!-- Airing Information -->
+        <div class="grid grid-cols-2 gap-2 mt-1">
+            <div>
+                <span class="font-semibold text-gray-700 dark:text-gray-200">Aired Year:</span> 
+                <span class="ml-1">2023</span>
+            </div>
+            <div>
+                <span class="font-semibold text-gray-700 dark:text-gray-200">Premiered:</span> 
+                <span class="ml-1">Fall 2023</span>
+            </div>
+        </div>
+        
+        <!-- Duration & Status -->
+        <div class="grid grid-cols-2 gap-2">
+            <div>
+                <span class="font-semibold text-gray-700 dark:text-gray-200">Duration:</span> 
+                <span class="ml-1">24 min</span>
+            </div>
+            <div>
+                <span class="font-semibold text-gray-700 dark:text-gray-200">Status:</span> 
+                <span class="ml-1 text-green-500">Finished Airing</span>
+            </div>
+        </div>
+        
+        <!-- Scores with Star Icons -->
+        <div class="mt-2">
+            <span class="font-semibold text-gray-700 dark:text-gray-200">Score:</span> 
+            <div class="flex items-center gap-3 mt-1">
+                <!-- MAL Score with Blue Star -->
+                <div class="flex items-center gap-1">
+                    <!-- Blue Star for MAL -->
+                    <svg class="w-4 h-4 text-blue-500 fill-current" viewBox="0 0 24 24">
+                        <path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/>
+                    </svg>
+                    <span class="font-medium text-gray-700 dark:text-gray-200">8.16</span>
+                    <span class="text-gray-500 text-xs">MAL</span>
+                </div>
+                
+                <!-- Separator -->
+                <span class="text-gray-400">|</span>
+                
+                <!-- IMDb Score with Yellow Star -->
+                <div class="flex items-center gap-1">
+                    <!-- Yellow Star for IMDb -->
+                    <svg class="w-4 h-4 text-yellow-500 fill-current" viewBox="0 0 24 24">
+                        <path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/>
+                    </svg>
+                    <span class="font-medium text-gray-700 dark:text-gray-200">8.2</span>
+                    <span class="text-gray-500 text-xs">IMDb</span>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Popularity -->
+        <div>
+            <span class="font-semibold text-gray-700 dark:text-gray-200">Popularity:</span> 
+            <span class="ml-1">#88</span>
+        </div>
+        
+        <!-- Genres -->
+        <div>
+            <span class="font-semibold text-gray-700 dark:text-gray-200">Genres:</span> 
+            <div class="flex flex-wrap gap-1 mt-1">
+                <span class="px-2 py-1 bg-gray-100 dark:bg-gray-800 rounded text-xs">Action</span>
+                <span class="px-2 py-1 bg-gray-100 dark:bg-gray-800 rounded text-xs">Comedy</span>
+                <span class="px-2 py-1 bg-gray-100 dark:bg-gray-800 rounded text-xs">Slice of Life</span>
+                <span class="px-2 py-1 bg-gray-100 dark:bg-gray-800 rounded text-xs">Shounen</span>
+            </div>
+        </div>
+        
+        <!-- Cast -->
+        <div class="mt-1">
+            <span class="font-semibold text-gray-700 dark:text-gray-200">Cast:</span> 
+            <div class="mt-1 space-y-1">
+                <div class="flex items-center gap-2">
+                    <span class="text-gray-600 dark:text-gray-400">•</span>
+                    <span>Takuya Eguchi</span>
+                </div>
+                <div class="flex items-center gap-2">
+                    <span class="text-gray-600 dark:text-gray-400">•</span>
+                    <span>Atsumi Tanezaki</span>
+                </div>
+                <div class="flex items-center gap-2">
+                    <span class="text-gray-600 dark:text-gray-400">•</span>
+                    <span>Saori Hayami</span>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Certification & Country -->
+        <div class="grid grid-cols-2 gap-2 mt-1">
+            <div>
+                <span class="font-semibold text-gray-700 dark:text-gray-200">Certification:</span> 
+                <span class="ml-1">TV-14</span>
+            </div>
+            <div>
+                <span class="font-semibold text-gray-700 dark:text-gray-200">Country:</span> 
+                <span class="ml-1">Japan</span>
+            </div>
+        </div>
+        
+        <!-- Studio & Producers -->
+        <div class="mt-1">
+            <span class="font-semibold text-gray-700 dark:text-gray-200">Studio:</span> 
+            <span class="ml-1">Wit Studio, CloverWorks</span>
+        </div>
+        <div>
+            <span class="font-semibold text-gray-700 dark:text-gray-200">Producers:</span> 
+            <div class="mt-1 space-y-1">
+                <div class="flex items-center gap-2">
+                    <span class="text-gray-600 dark:text-gray-400">•</span>
+                    <span>TOHO</span>
+                </div>
+                <div class="flex items-center gap-2">
+                    <span class="text-gray-600 dark:text-gray-400">•</span>
+                    <span>TV Tokyo</span>
+                </div>
+                <div class="flex items-center gap-2">
+                    <span class="text-gray-600 dark:text-gray-400">•</span>
+                    <span>Shueisha</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+            <!-- Recommended for You -->
+            <div class="bg-white dark:bg-[#151926] rounded-xl overflow-hidden shadow-sm border border-gray-200 dark:border-gray-800">
+                <div class="p-4 border-b border-gray-200 dark:border-gray-700 font-bold text-lg text-primary">Recommended for you</div>
+                <div class="p-4">
+                    <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 2xl:grid-cols-7 gap-4" id="recommended-list-container">
+                        <!-- Recommended content will be loaded here -->
+                    </div>
+                </div>
+            </div>
+
+            <!-- Comments Section -->
+            <div class="bg-white dark:bg-[#151926] rounded-xl overflow-hidden shadow-sm border border-gray-200 dark:border-gray-800">
+                <div class="p-4 border-b border-gray-200 dark:border-gray-700 flex justify-between items-center">
+                    <span class="font-bold text-lg text-gray-900 dark:text-white">Comments <span class="text-primary text-sm font-normal ml-1" id="comment-count-badge"></span></span>
+                </div>
+                <div class="p-4 bg-gray-50 dark:bg-black/20">
+                    <div class="flex gap-4 comment-input-section">
+                        <div class="w-10 h-10 rounded-full bg-primary/20 flex items-center justify-center text-primary font-bold flex-shrink-0">You</div>
+                        <div class="flex-1">
+                            <textarea class="w-full bg-white dark:bg-gray-800 border-0 rounded-lg p-3 text-sm focus:ring-2 focus:ring-primary dark:text-white placeholder-gray-400" id="new-comment-input" placeholder="Join the discussion..." rows="3"></textarea>
+                            <div class="flex justify-end mt-2">
+                                <button class="bg-primary hover:bg-opacity-90 text-white text-xs font-semibold py-2 px-6 rounded-full transition-colors shadow-sm" onclick="postNewComment()">Post Comment</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="max-h-[600px] overflow-y-auto custom-scrollbar" id="comments-list-container">
+                    <!-- Comments will be loaded here -->
+                </div>
+            </div>
+        </div>
+
+        <!-- Right Sidebar - 25% width on desktop -->
+        <div class="w-full lg:w-[25%] space-y-6">
+           <!-- Show Details Card (Desktop) -->
+<div class="hidden lg:block bg-white dark:bg-[#151926] rounded-xl p-6 shadow-sm border border-gray-200 dark:border-gray-800 h-fit">
+    <div class="flex gap-4 mb-4">
+        <img alt="Poster" class="w-24 h-36 object-cover rounded-lg shadow-md flex-shrink-0" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBL8sSKQhkIHjJRpfaXPOb2Ntr-YMNUhdTfQQNGnnmqGZu3SSewBEFAnXpGTo1YxqHXlb8pOCJCZrgrSF00Ey3CMmhZW5Q7dqz5o0qIOeV3DXsmqV-RKQGF2yEnwCFPLqyZ1R9luYVGdw-P_L6bRKjMPRM2RO5ISubiOat46Ovv-uMFsJfxGzRT0ngWoCZXAiiHQbJOA91N5Wyn21gKPKb6rWilqbabiqUYqUEEe31UdFQXOki6b3glJcCnNMssztZkZ0UYU_mwBbY"/>
+        <div>
+            <h1 class="text-xl font-bold leading-tight mb-2">Alya Sometimes Hides Her Feelings in Russian</h1>
+            <div class="flex flex-wrap gap-2 text-xs text-gray-500 dark:text-gray-400 mb-2">
+                <span class="px-1.5 py-0.5 border border-gray-300 dark:border-gray-700 rounded">TV-14</span>
+                <span class="px-1.5 py-0.5 bg-primary text-white rounded font-bold">HD</span>
+                <span class="flex items-center gap-1"><span class="material-symbols-outlined text-sm">mic</span> 12</span>
+                <span class="flex items-center gap-1"><span class="material-symbols-outlined text-sm">subtitles</span> 12</span>
+            </div>
+            <div class="text-xs text-gray-500 dark:text-gray-400">
+                Anime • 12 Episodes
+            </div>
+        </div>
+    </div>
+    <div class="description-container collapsed" id="description-container-desktop">
+        <p class="text-sm text-gray-600 dark:text-gray-300 leading-relaxed mb-2">
+            Alisa Mikhailovna Kujou is a beautiful half-Russian girl who sits next to Masachika Kuze in class. Despite her appearance, she's a tsundere who is always glaring at Kuze. She's also the vice president of the student council and is secretly a light novel author. Kuze is a lazy student who always naps in class, but he's actually quite capable when he wants to be. He understands Russian and can hear Alisa's affectionate mutterings in Russian, but he pretends not to understand to tease her.
+        </p>
+    </div>
+    <div class="description-toggle" id="description-toggle-desktop" onclick="toggleDescriptionDesktop()">
+        <span>Read more</span>
+        <span class="material-symbols-outlined">arrow_forward</span>
+    </div>
+    <div class="grid grid-cols-2 gap-2 text-xs text-gray-500 dark:text-gray-400 border-t border-gray-100 dark:border-gray-700 pt-4">
+         <div><span class="font-semibold text-gray-700 dark:text-gray-200">Title:</span> Alya Sometimes Hides Her Feelings in Russian</div>
+        <div><span class="font-semibold text-gray-700 dark:text-gray-200">Original:</span> Tokidoki Bosotto Russia-go de Dereru Tonari no Alya-san</div>
+        <div><span class="font-semibold text-gray-700 dark:text-gray-200">Japanese:</span> 時々ボソッとロシア語でデレる隣のアーリャさん</div>
+        <div class="col-span-2"><span class="font-semibold text-gray-700 dark:text-gray-200">Synonyms:</span> Roshidere | Alya-san, who sits besides me and sometimes murmurs affectionately in Russian. | Arya Next Door Sometimes Lapses into Russian</div>
+        <div><span class="font-semibold text-gray-700 dark:text-gray-200">Aired Year:</span> 2023</div>
+        <div><span class="font-semibold text-gray-700 dark:text-gray-200">Premiered:</span> Fall 2023</div>
+        <div><span class="font-semibold text-gray-700 dark:text-gray-200">Duration:</span> 24 min</div>
+        <div><span class="font-semibold text-gray-700 dark:text-gray-200">Status:</span> Finished Airing</div>
+       <div class="col-span-2"><span class="font-semibold text-gray-700 dark:text-gray-200">Scores:</span> 
+  <svg class="w-4 h-4 inline fill-blue-500" viewBox="0 0 24 24">
+    <path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/>
+  </svg> 8.16 | 
+  <svg class="w-4 h-4 inline fill-yellow-500" viewBox="0 0 24 24">
+    <path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/>
+  </svg> 8.2
+</div>
+        <div class="col-span-2"><span class="font-semibold text-gray-700 dark:text-gray-200">Popularity:</span> #88</div>
+        <div class="col-span-2">
+            <span class="font-semibold text-gray-700 dark:text-gray-200 mr-2">Genres:</span>
+            <div class="inline-flex flex-wrap gap-2 mt-1">
+                <span class="px-3 py-1 rounded-full border border-gray-300 dark:border-gray-600 bg-transparent text-gray-700 dark:text-gray-300 text-xs transition-all duration-200 hover:bg-[#46678C] hover:border-[#46678C] hover:text-white dark:hover:text-white hover:scale-105 hover:shadow-sm cursor-pointer">Action</span>
+                <span class="px-3 py-1 rounded-full border border-gray-300 dark:border-gray-600 bg-transparent text-gray-700 dark:text-gray-300 text-xs transition-all duration-200 hover:bg-[#46678C] hover:border-[#46678C] hover:text-white dark:hover:text-white hover:scale-105 hover:shadow-sm cursor-pointer">Comedy</span>
+                <span class="px-3 py-1 rounded-full border border-gray-300 dark:border-gray-600 bg-transparent text-gray-700 dark:text-gray-300 text-xs transition-all duration-200 hover:bg-[#46678C] hover:border-[#46678C] hover:text-white dark:hover:text-white hover:scale-105 hover:shadow-sm cursor-pointer">Slice of Life</span>
+                <span class="px-3 py-1 rounded-full border border-gray-300 dark:border-gray-600 bg-transparent text-gray-700 dark:text-gray-300 text-xs transition-all duration-200 hover:bg-[#46678C] hover:border-[#46678C] hover:text-white dark:hover:text-white hover:scale-105 hover:shadow-sm cursor-pointer">Shounen</span>
+            </div>
+        </div>
+        <div class="col-span-2"><span class="font-semibold text-gray-700 dark:text-gray-200">Cast:</span> Takuya Eguchi | Atsumi Tanezaki | Saori Hayami</div>
+        <div><span class="font-semibold text-gray-700 dark:text-gray-200">Country:</span> Japan</div>
+        <div><span class="font-semibold text-gray-700 dark:text-gray-200">Studio:</span> Wit Studio | CloverWorks</div>
+        <div class="col-span-2"><span class="font-semibold text-gray-700 dark:text-gray-200">Producers:</span> TOHO | TV Tokyo | Shueisha</div>
+    </div>
+</div>
+            <!-- Rating Card -->
+            <div class="bg-[#1A1D29] rounded-xl p-5 shadow-lg border border-gray-800">
+                <div class="flex items-center justify-between mb-4">
+                    <div class="flex items-center gap-2">
+                        <span class="material-symbols-outlined text-yellow-500 fill-current">star</span>
+                        <span class="text-2xl font-bold text-white">8.2</span>
+                    </div>
+                    <span class="text-sm font-semibold text-white">Vote now</span>
+                </div>
+                <div class="text-sm text-gray-400 mb-6 text-center">What do you think about this show?</div>
+                <div class="flex justify-between px-2">
+                    <button class="flex flex-col items-center gap-2 group" onclick="rateShow('boring')">
+                        <span class="text-3xl grayscale group-hover:grayscale-0 transition-all transform group-hover:scale-110">😩</span>
+                        <span class="text-xs font-medium text-gray-400 group-hover:text-white transition-colors">Boring</span>
+                    </button>
+                    <button class="flex flex-col items-center gap-2 group" onclick="rateShow('great')">
+                        <span class="text-3xl grayscale group-hover:grayscale-0 transition-all transform group-hover:scale-110">😃</span>
+                        <span class="text-xs font-medium text-gray-400 group-hover:text-white transition-colors">Great</span>
+                    </button>
+                    <button class="flex flex-col items-center gap-2 group" onclick="rateShow('amazing')">
+                        <span class="text-3xl grayscale group-hover:grayscale-0 transition-all transform group-hover:scale-110">🤩</span>
+                        <span class="text-xs font-medium text-gray-400 group-hover:text-white transition-colors">Amazing</span>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Episode List (Desktop) -->
+            <div class="hidden lg:block bg-white dark:bg-[#151926] rounded-xl overflow-hidden shadow-sm border border-gray-200 dark:border-gray-800">
+                <div class="p-4 border-b border-gray-200 dark:border-gray-700 font-bold text-lg">Episodes</div>
+                <div class="p-4">
+                    <div class="max-h-[500px] overflow-y-auto custom-scrollbar" id="episode-list-container">
+                        <!-- Episodes will be loaded here for desktop -->
+                    </div>
+                </div>
+            </div>
+
+            <!-- Most Popular -->
+            <div class="bg-white dark:bg-[#151926] rounded-xl overflow-hidden shadow-sm border border-gray-200 dark:border-gray-800">
+                <div class="p-4 border-b border-gray-200 dark:border-gray-700 font-bold text-lg">Most Popular</div>
+                <div class="p-4">
+                    <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-1 xl:grid-cols-2 gap-4" id="most-popular-list-container">
                         <!-- Most Popular content will be loaded here -->
                     </div>
                 </div>
@@ -769,195 +1034,127 @@
     let currentServer = 'SUB-HD-01';
     let currentSeason = '1';
     let isVideoLoaded = false;
+    let isDescriptionExpandedDesktop = false;
+    let isDescriptionExpandedMobile = false;
     
-    // EPISODE URLs FOR EACH SEASON
-    const seasonEpisodeUrls = {
-        '1': [ // Season 1 episodes
-            'https://filemoon.in/e/bzd5u1d7rzql',    // Episode 1
-            'https://filemoon.in/e/85jphgrl8l82',    // Episode 2
-            'https://filemoon.in/e/bof3lye419lq',    // Episode 3
-            'https://filemoon.in/e/ywgs23cxk5i5',    // Episode 4
-            'https://filemoon.in/e/jtjobjam5v1p',    // Episode 5
-            'https://filemoon.in/e/gy31eb38sq5h',    // Episode 6
-            'https://filemoon.in/e/l35uymelfik6',    // Episode 7
-            'https://filemoon.in/e/smzk83075q3s',    // Episode 8
-            'https://filemoon.in/e/y8liviumbcg5',    // Episode 9
-            'https://filemoon.in/e/887ppm2lxvtp',    // Episode 10
-            'https://filemoon.in/e/cmnzrzc7t0io',    // Episode 11
-            'https://filemoon.in/e/5g4slx1i6tlt',    // Episode 12
-            'https://filemoon.in/e/fcln6lu754yb'     // Episode 13
-        ],
-        '2': [ // Season 2 episodes
-            'https://filemoon.in/e/s2e1-url',
-            'https://filemoon.in/e/s2e2-url',
-            'https://filemoon.in/e/s2e3-url'
-        ],
-        '3': [ // Season 3 episodes
-            'https://filemoon.in/e/s3e1-url',
-            'https://filemoon.in/e/s3e2-url'
-        ],
-        '4': [ // Season 4 episodes
-            'https://filemoon.in/e/s4e1-url',
-            'https://filemoon.in/e/s4e2-url',
-            'https://filemoon.in/e/s4e3-url'
-        ],
-        '5': [ // Season 5 episodes
-            'https://filemoon.in/e/s5e1-url',
-            'https://filemoon.in/e/s5e2-url'
-        ],
-        '6': [ // Season 6 episodes
-            'https://filemoon.in/e/s6e1-url'
-        ],
-        '7': [],
-        '8': [],
-        '9': [],
-        'ova': [ // OVA episodes
-            'https://filemoon.in/e/ova1-url'
-        ],
-        'specials': [ // Specials
-            'https://filemoon.in/e/special1-url',
-            'https://filemoon.in/e/special2-url'
-        ],
-        'movies': [ // Movies
-            'https://filemoon.in/e/movie1-url',
-            'https://filemoon.in/e/movie2-url'
-        ]
-    };
+    // Updated streaming links from your provided data
+    const subEpisodes = [
+        'https://streamhls.to/e/0p9iw7b3utgf',    // Episode 1 (Link 1)
+        'https://streamhls.to/e/ybklzmszdyen',    // Episode 2
+        'https://streamhls.to/e/xtriwp7nrn64',    // Episode 3
+        'https://streamhls.to/e/hg1iob38mg5j',    // Episode 4
+        'https://streamhls.to/e/l0k2eoap3ing',    // Episode 5
+        'https://streamhls.to/e/yyo3p3pfv4lo',    // Episode 6
+        'https://streamhls.to/e/8kn01fu67h32',    // Episode 7
+        'https://streamhls.to/e/8a2evep9gf0v',    // Episode 8
+        'https://streamhls.to/e/zve9orpga80e',    // Episode 9
+        'https://streamhls.to/e/om8s1fksqdj5',    // Episode 10
+        'https://streamhls.to/e/5k61mcdh2a0a',    // Episode 11
+        'https://streamhls.to/e/ul5fhrhxc1og'     // Episode 12
+    ];
     
-    // SERVERS DATA FOR EACH SEASON
-    const seasonServersData = {
-        '1': { // Season 1 servers
-            'SUB-HD-01': seasonEpisodeUrls['1'],
-            'SUB-HD-02': seasonEpisodeUrls['1'],
-            'SUB-HD-03': seasonEpisodeUrls['1'],
-            'SUB-HD-04': seasonEpisodeUrls['1'],
-            'SUB-HD-05': seasonEpisodeUrls['1'],
-            'DUB-HD-01': seasonEpisodeUrls['1'],
-            'DUB-HD-02': seasonEpisodeUrls['1'],
-            'DUB-HD-03': seasonEpisodeUrls['1'],
-            'DUB-HD-04': seasonEpisodeUrls['1'],
-            'DUB-HD-05': seasonEpisodeUrls['1'],
-            'RAW-HD-01': seasonEpisodeUrls['1'],
-            'RAW-HD-02': seasonEpisodeUrls['1'],
-            'RAW-HD-03': seasonEpisodeUrls['1'],
-            'RAW-HD-04': seasonEpisodeUrls['1'],
-            'RAW-HD-05': seasonEpisodeUrls['1']
-        },
-        '2': { // Season 2 servers
-            'SUB-HD-01': seasonEpisodeUrls['2'],
-            'SUB-HD-02': seasonEpisodeUrls['2'],
-            'SUB-HD-03': seasonEpisodeUrls['2'],
-            'SUB-HD-04': seasonEpisodeUrls['2'],
-            'SUB-HD-05': seasonEpisodeUrls['2'],
-            'DUB-HD-01': seasonEpisodeUrls['2'],
-            'DUB-HD-02': seasonEpisodeUrls['2'],
-            'DUB-HD-03': seasonEpisodeUrls['2'],
-            'DUB-HD-04': seasonEpisodeUrls['2'],
-            'DUB-HD-05': seasonEpisodeUrls['2'],
-            'RAW-HD-01': seasonEpisodeUrls['2'],
-            'RAW-HD-02': seasonEpisodeUrls['2'],
-            'RAW-HD-03': seasonEpisodeUrls['2'],
-            'RAW-HD-04': seasonEpisodeUrls['2'],
-            'RAW-HD-05': seasonEpisodeUrls['2']
-        },
-        '3': { // Season 3 servers
-            'SUB-HD-01': seasonEpisodeUrls['3'],
-            'SUB-HD-02': seasonEpisodeUrls['3'],
-            'SUB-HD-03': seasonEpisodeUrls['3'],
-            'SUB-HD-04': seasonEpisodeUrls['3'],
-            'SUB-HD-05': seasonEpisodeUrls['3'],
-            'DUB-HD-01': seasonEpisodeUrls['3'],
-            'DUB-HD-02': seasonEpisodeUrls['3'],
-            'DUB-HD-03': seasonEpisodeUrls['3'],
-            'DUB-HD-04': seasonEpisodeUrls['3'],
-            'DUB-HD-05': seasonEpisodeUrls['3'],
-            'RAW-HD-01': seasonEpisodeUrls['3'],
-            'RAW-HD-02': seasonEpisodeUrls['3'],
-            'RAW-HD-03': seasonEpisodeUrls['3'],
-            'RAW-HD-04': seasonEpisodeUrls['3'],
-            'RAW-HD-05': seasonEpisodeUrls['3']
-        },
-        '4': {
-            'SUB-HD-01': seasonEpisodeUrls['4'],
-            'SUB-HD-02': seasonEpisodeUrls['4'],
-            'SUB-HD-03': seasonEpisodeUrls['4']
-        },
-        '5': {
-            'SUB-HD-01': seasonEpisodeUrls['5'],
-            'SUB-HD-02': seasonEpisodeUrls['5']
-        },
-        '6': {
-            'SUB-HD-01': seasonEpisodeUrls['6']
-        },
-        'ova': {
-            'SUB-HD-01': seasonEpisodeUrls['ova'],
-            'SUB-HD-02': seasonEpisodeUrls['ova'],
-            'SUB-HD-03': seasonEpisodeUrls['ova']
-        }
+    const dubEpisodes = [
+        'https://streamhls.to/e/s4wjjoq9oc7c',    // Episode 1
+        'https://streamhls.to/e/q888456vf7gk',    // Episode 2
+        'https://streamhls.to/e/rhp8cuxkdcin',    // Episode 3
+        'https://streamhls.to/e/2axx0rqgad7p',    // Episode 4
+        'https://streamhls.to/e/4qieuu8umm5d',    // Episode 5
+        'https://streamhls.to/e/btm71yxg2nhj',    // Episode 6
+        'https://streamhls.to/e/cbj8lnlkyw2d',    // Episode 7
+        'https://streamhls.to/e/rss00ysbbrgz',    // Episode 8
+        'https://streamhls.to/e/crkafly2zsep',    // Episode 9
+        'https://streamhls.to/e/jb11468qa9pl',    // Episode 10
+        'https://streamhls.to/e/gi61kby6fzxx',    // Episode 11
+        'https://streamhls.to/e/mz3g5tlqcwyg'     // Episode 12
+    ];
+    
+    const rawEpisodes = [
+        'https://filemoon.to/e/m2t1dbe70xug/Alya_Sometimes_Hides_Her_Feelings_in_Russian_sub_01',
+        'https://filemoon.to/e/di5xfydskla9/Alya_Sometimes_Hides_Her_Feelings_in_Russian_sub_02',
+        'https://filemoon.to/e/8gpfd2057g14/Alya_Sometimes_Hides_Her_Feelings_in_Russian_sub_03',
+        'https://filemoon.to/e/m2dqbguw6hmn/Alya_Sometimes_Hides_Her_Feelings_in_Russian_sub_04',
+        'https://filemoon.to/e/b2midmp9x1zt/Alya_Sometimes_Hides_Her_Feelings_in_Russian_sub_05',
+        'https://filemoon.to/e/ep77yurju30z/Alya_Sometimes_Hides_Her_Feelings_in_Russian_sub_06',
+        'https://filemoon.to/e/56guf0ddp590/Alya_Sometimes_Hides_Her_Feelings_in_Russian_sub_07',
+        'https://filemoon.to/e/ufixpoucky98/Alya_Sometimes_Hides_Her_Feelings_in_Russian_sub_08',
+        'https://filemoon.to/e/qn63festgt4m/Alya_Sometimes_Hides_Her_Feelings_in_Russian_Watch_sub_09',
+        'https://filemoon.to/e/soiis8o28zd0/Alya_Sometimes_Hides_Her_Feelings_in_Russian_sub_10',
+        'https://filemoon.to/e/c6mx2hfvs3d8/Alya_Sometimes_Hides_Her_Feelings_in_Russian_sub_11',
+        'https://filemoon.to/e/4ht6iswfo984/Alya_Sometimes_Hides_Her_Feelings_in_Russian_sub_12'
+    ];
+    
+    // Video URLs for ALL servers
+    const episodeUrls = {
+        'SUB-HD-01': subEpisodes,
+        'SUB-HD-02': subEpisodes,
+        'SUB-HD-03': subEpisodes,
+        'SUB-HD-04': subEpisodes,
+        'SUB-HD-05': subEpisodes,
+        'DUB-HD-01': dubEpisodes,
+        'DUB-HD-02': dubEpisodes,
+        'DUB-HD-03': dubEpisodes,
+        'DUB-HD-04': dubEpisodes,
+        'DUB-HD-05': dubEpisodes,
+        'RAW-HD-01': rawEpisodes,
+        'RAW-HD-02': rawEpisodes,
+        'RAW-HD-03': rawEpisodes,
+        'RAW-HD-04': rawEpisodes,
+        'RAW-HD-05': rawEpisodes
     };
 
-    // EPISODE TITLES FOR EACH SEASON
+    // Episode data for Season 1 (Alya Sometimes Hides Her Feelings in Russian)
     const episodeData = {
         '1': [
-            { id: 1, title: 'Pilot' }, 
-            { id: 2, title: 'First Night' }, 
-            { id: 3, title: 'The Choice' },
-            { id: 4, title: 'The Battle' }, 
-            { id: 5, title: 'Reunion' }, 
-            { id: 6, title: 'Departure' },
-            { id: 7, title: 'New Hope' }, 
-            { id: 8, title: 'Betrayal' }, 
-            { id: 9, title: 'Awakening' },
-            { id: 10, title: 'The End of the Beginning' }, 
-            { id: 11, title: 'Shadows' }, 
-            { id: 12, title: 'Finale' },
-            { id: 13, title: 'Epilogue' }
+            { id: 1, title: 'I Sometimes Express Myself in Russian' },
+            { id: 2, title: 'The Confused Tsundere' },
+            { id: 3, title: 'Cultural Festival Preparations' },
+            { id: 4, title: 'The Russian Secret' },
+            { id: 5, title: 'Library Encounter' },
+            { id: 6, title: 'Summer Festival' },
+            { id: 7, title: 'Beach Episode' },
+            { id: 8, title: 'Cultural Festival Day' },
+            { id: 9, title: 'The Light Novel Author' },
+            { id: 10, title: 'Winter Confessions' },
+            { id: 11, title: 'Valentines Day' },
+            { id: 12, title: 'My Feelings in Russian' }
         ],
         '2': [
-            { id: 1, title: 'New World' }, 
-            { id: 2, title: 'Lost' }, 
-            { id: 3, title: 'Found' }
+            { id: 1, title: 'Second Year Begins' },
+            { id: 2, title: 'New Club Activities' },
+            { id: 3, title: 'School Trip to Kyoto' },
+            { id: 4, title: 'Cultural Exchange' },
+            { id: 5, title: 'Sports Festival' },
+            { id: 6, title: 'Midterm Exams' }
         ],
         '3': [
-             { id: 1, title: 'Return' }, 
-             { id: 2, title: 'Conquest' }
+            { id: 1, title: 'Third Year Decisions' },
+            { id: 2, title: 'University Entrance Exams' },
+            { id: 3, title: 'Graduation Preparation' },
+            { id: 4, title: 'Final Cultural Festival' }
         ],
         '4': [
-            { id: 1, title: 'Rebirth' },
-            { id: 2, title: 'Evolution' },
-            { id: 3, title: 'Revolution' }
+            { id: 1, title: 'University Life' },
+            { id: 2, title: 'New Beginnings' },
+            { id: 3, title: 'Adult Relationships' }
         ],
-        '5': [
-            { id: 1, title: 'Destiny' },
-            { id: 2, title: 'Fate' }
-        ],
-        '6': [
-            { id: 1, title: 'Final Chapter' }
-        ],
-        '7': [],
-        '8': [],
-        '9': [],
         'ova': [
-            { id: 1, title: 'Special Episode' }
-        ],
-        'specials': [
-            { id: 1, title: 'Christmas Special' },
-            { id: 2, title: 'New Year Special' }
-        ],
-        'movies': [
-            { id: 1, title: 'The Movie: Part 1' },
-            { id: 2, title: 'The Movie: Part 2' }
+            { id: 1, title: 'Beach Special' },
+            { id: 2, title: 'Christmas Special' },
+            { id: 3, title: 'Cultural Festival Aftermath' }
         ]
     };
     
     // --- COMMENTS FEATURE ---
-    const commentsStorageKey = 'quravel_comments_shawshank';
+    const commentsStorageKey = 'quravel_comments_alya';
     const defaultComments = [
-        { id: 1, user: 'MovieBuff99', avatarColor: 'bg-red-500', time: '2 hours ago', text: 'This episode was absolutely mind-blowing! The cinematography is top-notch.', likes: 45, dislikes: 2, replies: [
-            { id: 101, user: 'CinephileX', time: '1 hour ago', text: 'Totally agree, especially the final scene.' }
+        { id: 1, user: 'AnimeLover', avatarColor: 'bg-red-500', time: '2 hours ago', text: 'Alya is such a great tsundere character! The Russian muttering is adorable.', likes: 45, dislikes: 2, replies: [
+            { id: 101, user: 'TsundereFan', time: '1 hour ago', text: 'Totally agree! Best tsundere of the season!' }
         ]},
-        { id: 2, user: 'AnimeLover', avatarColor: 'bg-blue-500', time: '3 hours ago', text: 'Can anyone explain what happened at the 15-minute mark?', likes: 12, dislikes: 0, replies: [] },
-        { id: 3, user: 'Hater123', avatarColor: 'bg-gray-500', time: '5 hours ago', text: 'Honestly, pacing was a bit slow for me. Expected more action.', likes: 3, dislikes: 15, replies: [] }
+        { id: 2, user: 'RussianSpeaker', avatarColor: 'bg-blue-500', time: '3 hours ago', text: 'As a Russian speaker, I appreciate the accurate Russian phrases they use in the show!', likes: 32, dislikes: 0, replies: [] },
+        { id: 3, user: 'RomanceFan', avatarColor: 'bg-purple-500', time: '5 hours ago', text: 'The chemistry between Alya and Masachika is incredible. Episode 5 had me smiling the whole time!', likes: 28, dislikes: 1, replies: [] },
+        { id: 4, user: 'LightNovelReader', avatarColor: 'bg-green-500', time: '6 hours ago', text: 'The adaptation is faithful to the light novel. The animation by Doga Kobo is beautiful as always.', likes: 18, dislikes: 0, replies: [
+             { id: 102, user: 'AdaptationFan', time: '4 hours ago', text: 'Yes! They kept all the best moments from the novels.' }
+        ]}
     ];
     let comments = [];
     
@@ -965,23 +1162,146 @@
     function initializePage() {
         renderEpisodeList();
         updateUI();
+        updateMobileDisplay();
         initComments();
         renderRelatedLists();
         setupVideoPlayer();
-        updateSeasonArrows();
+        setupSeasonNavigation();
         
+        // Handle window resize for responsive adjustments
         window.addEventListener('resize', handleResponsiveLayout);
         handleResponsiveLayout();
+        
+        // Load first video
+        loadVideo();
     }
     
-    function handleResponsiveLayout() {
-        const isMobile = window.innerWidth < 768;
-        const episodeContainer = document.getElementById('episode-list-container');
-        if (episodeContainer) {
-            episodeContainer.style.maxHeight = isMobile ? '400px' : '500px';
+    // Update mobile display information
+    function updateMobileDisplay() {
+        // Update episode display
+        document.getElementById('current-episode-display-mobile').innerText = `Episode ${currentEpisode}`;
+        
+        // Update season display
+        document.getElementById('current-season-display-mobile').innerText = `S${currentSeason}`;
+        
+        // Update server display (extract server type from currentServer)
+        const serverType = currentServer.includes('SUB') ? 'SUB' : 
+                          currentServer.includes('DUB') ? 'DUB' : 'RAW';
+        const serverNumber = currentServer.split('-').pop();
+        document.getElementById('current-server-display-mobile').innerText = `${serverType}-${serverNumber}`;
+    }
+    
+    // Setup season navigation
+    function setupSeasonNavigation() {
+        const seasonTabs = document.getElementById('season-tabs-container');
+        const leftBtn = document.querySelector('.season-nav-btn.left');
+        const rightBtn = document.querySelector('.season-nav-btn.right');
+        
+        // Update arrow visibility based on scroll position
+        function updateArrowVisibility() {
+            if (window.innerWidth > 1024) {
+                leftBtn.style.opacity = seasonTabs.scrollLeft > 0 ? '1' : '0';
+                leftBtn.style.visibility = seasonTabs.scrollLeft > 0 ? 'visible' : 'hidden';
+                
+                rightBtn.style.opacity = 
+                    seasonTabs.scrollLeft < (seasonTabs.scrollWidth - seasonTabs.clientWidth - 10) ? '1' : '0';
+                rightBtn.style.visibility = 
+                    seasonTabs.scrollLeft < (seasonTabs.scrollWidth - seasonTabs.clientWidth - 10) ? 'visible' : 'hidden';
+            }
+        }
+        
+        seasonTabs.addEventListener('scroll', updateArrowVisibility);
+        window.addEventListener('resize', updateArrowVisibility);
+        updateArrowVisibility();
+    }
+    
+    // Scroll season tabs horizontally
+    function scrollSeasons(direction) {
+        const seasonTabs = document.getElementById('season-tabs-container');
+        const scrollAmount = 200;
+        
+        if (direction === 1) {
+            // Right scroll
+            seasonTabs.scrollBy({ left: scrollAmount, behavior: 'smooth' });
+        } else {
+            // Left scroll
+            seasonTabs.scrollBy({ left: -scrollAmount, behavior: 'smooth' });
+        }
+        
+        // Update arrow visibility after scrolling
+        setTimeout(() => {
+            const leftBtn = document.querySelector('.season-nav-btn.left');
+            const rightBtn = document.querySelector('.season-nav-btn.right');
+            
+            if (window.innerWidth > 1024) {
+                leftBtn.style.opacity = seasonTabs.scrollLeft > 0 ? '1' : '0';
+                leftBtn.style.visibility = seasonTabs.scrollLeft > 0 ? 'visible' : 'hidden';
+                
+                rightBtn.style.opacity = 
+                    seasonTabs.scrollLeft < (seasonTabs.scrollWidth - seasonTabs.clientWidth - 10) ? '1' : '0';
+                rightBtn.style.visibility = 
+                    seasonTabs.scrollLeft < (seasonTabs.scrollWidth - seasonTabs.clientWidth - 10) ? 'visible' : 'hidden';
+            }
+        }, 300);
+    }
+    
+    // Toggle description expansion for desktop
+    function toggleDescriptionDesktop() {
+        const container = document.getElementById('description-container-desktop');
+        const toggle = document.getElementById('description-toggle-desktop');
+        
+        isDescriptionExpandedDesktop = !isDescriptionExpandedDesktop;
+        
+        if (isDescriptionExpandedDesktop) {
+            container.classList.remove('collapsed');
+            container.classList.add('expanded');
+            toggle.innerHTML = '<span>Show less</span><span class="material-symbols-outlined">arrow_forward</span>';
+            toggle.classList.add('expanded');
+        } else {
+            container.classList.remove('expanded');
+            container.classList.add('collapsed');
+            toggle.innerHTML = '<span>Read more</span><span class="material-symbols-outlined">arrow_forward</span>';
+            toggle.classList.remove('expanded');
         }
     }
     
+    // Toggle description expansion for mobile
+    function toggleDescriptionMobile() {
+        const container = document.getElementById('description-container-mobile');
+        const toggle = document.getElementById('description-toggle-mobile');
+        
+        isDescriptionExpandedMobile = !isDescriptionExpandedMobile;
+        
+        if (isDescriptionExpandedMobile) {
+            container.classList.remove('collapsed');
+            container.classList.add('expanded');
+            toggle.innerHTML = '<span>Show less</span><span class="material-symbols-outlined">arrow_forward</span>';
+            toggle.classList.add('expanded');
+        } else {
+            container.classList.remove('expanded');
+            container.classList.add('collapsed');
+            toggle.innerHTML = '<span>Read more</span><span class="material-symbols-outlined">arrow_forward</span>';
+            toggle.classList.remove('expanded');
+        }
+    }
+    
+    // Handle responsive layout adjustments
+    function handleResponsiveLayout() {
+        const isMobile = window.innerWidth < 768;
+        const isTablet = window.innerWidth >= 768 && window.innerWidth < 1024;
+        
+        // For mobile and tablet, add smooth scrolling to season tabs
+        const seasonTabs = document.getElementById('season-tabs-container');
+        if (seasonTabs) {
+            if (isMobile || isTablet) {
+                seasonTabs.style.scrollBehavior = 'smooth';
+            } else {
+                seasonTabs.style.scrollBehavior = 'auto';
+            }
+        }
+    }
+    
+    // Setup video player
     function setupVideoPlayer() {
         const playButton = document.getElementById('play-button');
         const videoContainer = document.getElementById('video-player-container');
@@ -993,50 +1313,41 @@
                 document.getElementById('video-loading-overlay').style.display = 'none';
             }
         });
-        
-        loadVideo();
-        isVideoLoaded = true;
-        document.getElementById('video-loading-overlay').style.display = 'none';
     }
     
-    // UPDATED: Load Video based on current season and server
+    // Load Video based on current state
     function loadVideo() {
         const container = document.getElementById('video-player-container');
         const episodes = episodeData[currentSeason] || [];
         
-        // Check if episode exists for this season
+        // Check if episode exists
         if (currentEpisode > episodes.length) {
             currentEpisode = 1;
         }
         
+        // Get the correct episode index (arrays are 0-based)
         const episodeIndex = currentEpisode - 1;
         
-        // Get server data for current season
-        const seasonServers = seasonServersData[currentSeason] || seasonServersData['1'];
-        if (!seasonServers) {
-            console.error(`No server data found for season ${currentSeason}`);
-            return;
-        }
-        
-        // Get URLs for current server in current season
-        const serverUrls = seasonServers[currentServer];
-        if (!serverUrls || serverUrls.length === 0) {
-            console.error(`No URLs found for server ${currentServer} in season ${currentSeason}`);
-            return;
-        }
-        
-        // Get video URL based on episode index
+        // Get video URL based on current server
         let videoUrl = '';
+        const serverUrls = episodeUrls[currentServer] || subEpisodes;
+        
         if (episodeIndex < serverUrls.length) {
             videoUrl = serverUrls[episodeIndex];
-        } else if (serverUrls.length > 0) {
-            videoUrl = serverUrls[0];
         } else {
-            videoUrl = 'https://filemoon.in/e/bzd5u1d7rzql';
+            // Fallback to first episode if index is out of bounds
+            videoUrl = serverUrls[0] || subEpisodes[0];
         }
         
-        const embedUrl = `${videoUrl}?autoplay=1&controls=1&modestbranding=1&rel=0`;
+        // Determine if it's a StreamHLS or Filemoon link
+        let embedUrl = videoUrl;
+        if (videoUrl.includes('streamhls.to')) {
+            embedUrl = `${videoUrl}?autoplay=1&controls=1&modestbranding=1&rel=0`;
+        } else if (videoUrl.includes('filemoon.to')) {
+            embedUrl = `${videoUrl}?autoplay=1&controls=1`;
+        }
         
+        // Clear container and add iframe
         container.innerHTML = '';
         const iframe = document.createElement('iframe');
         iframe.className = 'video-container';
@@ -1044,97 +1355,94 @@
         iframe.frameBorder = '0';
         iframe.allow = 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture';
         iframe.allowFullscreen = true;
-        iframe.title = `Season ${currentSeason} Episode ${currentEpisode}`;
+        iframe.title = `Season ${currentSeason} Episode ${currentEpisode} - Alya Sometimes Hides Her Feelings in Russian`;
         container.appendChild(iframe);
         
-        console.log(`Loading: Season ${currentSeason}, Episode ${currentEpisode}, Server: ${currentServer}`);
+        // Hide loading overlay
+        document.getElementById('video-loading-overlay').style.display = 'none';
+        isVideoLoaded = true;
+        
+        // Update mobile display
+        updateMobileDisplay();
+        
+        console.log(`Loading video: Season ${currentSeason}, Episode ${currentEpisode}, Server: ${currentServer}`);
     }
     
-    // UPDATED: Season Selection with proper season-based loading
+    // Handle Season Selection
     function selectSeason(btn) {
-        // Update UI
-        document.querySelectorAll('.season-btn').forEach(b => {
-            b.classList.remove('active', 'text-primary', 'border-primary');
-            b.classList.add('text-gray-500', 'dark:text-gray-400', 'border-transparent');
+        // Remove active class from all season buttons
+        document.querySelectorAll('.season-btn').forEach(button => {
+            button.classList.remove('active', 'text-primary', 'border-primary');
+            button.classList.add('text-gray-500', 'dark:text-gray-400', 'border-transparent');
         });
         
+        // Add active class to clicked button
         btn.classList.remove('text-gray-500', 'dark:text-gray-400', 'border-transparent');
         btn.classList.add('active', 'text-primary', 'border-primary');
         
-        // Update current season
         currentSeason = btn.getAttribute('data-season');
-        
         // Reset to first episode of new season
         currentEpisode = 1; 
-        
-        // Reset to default server for the season
-        currentServer = 'SUB-HD-01';
-        
-        // Re-render everything
         renderEpisodeList();
         updateUI();
+        updateMobileDisplay();
         loadVideo();
-        
-        // Scroll the selected season into view
-        setTimeout(() => {
-            if (btn) {
-                btn.scrollIntoView({
-                    behavior: 'smooth',
-                    inline: 'center',
-                    block: 'nearest'
-                });
-            }
-        }, 100);
     }
     
-    // UPDATED: Server Selection with season-based URLs
+    // Handle Server Selection
     function selectServer(btn) {
+        // Remove active class from all server buttons
+        document.querySelectorAll('.server-btn').forEach(button => {
+            button.classList.remove('bg-primary', 'text-white');
+            button.classList.add('bg-gray-200', 'dark:bg-gray-800', 'text-gray-700', 'dark:text-gray-300');
+        });
+        
+        // Add active class to clicked button
+        btn.classList.remove('bg-gray-200', 'dark:bg-gray-800', 'text-gray-700', 'dark:text-gray-300');
+        btn.classList.add('bg-primary', 'text-white');
+        
         currentServer = btn.getAttribute('data-server');
         updateUI();
+        updateMobileDisplay();
         loadVideo();
     }
     
+    // Handle Episode Selection
     function selectEpisode(btn) {
         const ep = parseInt(btn.getAttribute('data-episode'));
         currentEpisode = ep;
         updateUI();
+        updateMobileDisplay();
         renderEpisodeList();
         loadVideo();
     }
     
+    // Handle Previous/Next Buttons
     function changeEpisode(direction) {
-        const episodes = episodeData[currentSeason] || [];
+        const episodes = episodeData[currentSeason];
         const currentIndex = episodes.findIndex(ep => ep.id === currentEpisode);
         
         if (direction === 'next' && currentIndex < episodes.length - 1) {
             currentEpisode = episodes[currentIndex + 1].id;
         } else if (direction === 'prev' && currentIndex > 0) {
             currentEpisode = episodes[currentIndex - 1].id;
-        } else {
-            return;
         }
         
         updateUI();
+        updateMobileDisplay();
         renderEpisodeList();
         loadVideo();
     }
     
-    // UPDATED: Render episode list for current season
+    // Render Episode List
     function renderEpisodeList() {
-        const container = document.getElementById('episode-list-container');
+        // Desktop episode list
+        const desktopContainer = document.getElementById('episode-list-container');
+        // Mobile episode list
+        const mobileContainer = document.getElementById('episode-list-container-mobile');
         const episodes = episodeData[currentSeason] || [];
         
-        if (episodes.length === 0) {
-            container.innerHTML = `
-                <div class="text-center py-8 text-gray-500 dark:text-gray-400">
-                    <span class="material-symbols-outlined text-4xl mb-2">movie</span>
-                    <p class="text-sm">No episodes available for this season</p>
-                </div>
-            `;
-            return;
-        }
-        
-        let html = '<div class="space-y-1">';
+        let html = '<div class="space-y-2">';
         episodes.forEach(ep => {
             const isActive = ep.id === currentEpisode;
             const activeClass = isActive ? 'active episode-list-item' : '';
@@ -1152,7 +1460,7 @@
                             <span class="text-sm font-medium ${isActive ? 'text-primary' : 'text-gray-900 dark:text-gray-100'}">
                                 Episode ${ep.id}
                             </span>
-                            <span class="text-xs ${isActive ? 'text-primary' : 'text-gray-500 dark:text-gray-400'}">
+                            <span class="text-xs ${isActive ? 'text-primary' : 'text-gray-500 dark:text-gray-400'} truncate max-w-[180px]">
                                 ${ep.title}
                             </span>
                         </div>
@@ -1164,78 +1472,33 @@
             `;
         });
         html += '</div>';
-        container.innerHTML = html;
+        
+        if (desktopContainer) desktopContainer.innerHTML = html;
+        if (mobileContainer) mobileContainer.innerHTML = html;
     }
     
+    // Update General UI (Active Classes, Text)
     function updateUI() {
-        const episodeDisplay = document.getElementById('current-episode-display');
-        if (episodeDisplay) {
-            episodeDisplay.innerText = `Episode ${currentEpisode}`;
-        }
+        // Update "You are watching" text for desktop
+        document.getElementById('current-episode-display').innerText = `Episode ${currentEpisode}`;
+        
+        // Update list status text for desktop and mobile
+        const savedStatus = localStorage.getItem('quravel_list_status_alya');
+        const listStatusText = savedStatus && savedStatus !== 'Add to List' ? savedStatus : 'Add to List';
+        
+        document.getElementById('current-list-status-text').innerText = listStatusText;
+        document.getElementById('current-list-status-text-mobile').innerText = listStatusText;
         
         // Update Season Buttons
         document.querySelectorAll('.season-btn').forEach(btn => {
             if(btn.getAttribute('data-season') === currentSeason) {
                 btn.classList.remove('text-gray-500', 'dark:text-gray-400', 'border-transparent');
-                btn.classList.add('text-primary', 'border-primary');
+                btn.classList.add('text-primary', 'border-primary', 'active');
             } else {
                 btn.classList.add('text-gray-500', 'dark:text-gray-400', 'border-transparent');
-                btn.classList.remove('text-primary', 'border-primary');
+                btn.classList.remove('text-primary', 'border-primary', 'active');
             }
         });
-        
-        // Update Server Buttons
-        document.querySelectorAll('.server-btn').forEach(btn => {
-            if(btn.getAttribute('data-server') === currentServer) {
-                btn.classList.remove('bg-gray-200', 'dark:bg-gray-800', 'text-gray-700', 'dark:text-gray-300');
-                btn.classList.add('bg-primary', 'text-white');
-            } else {
-                btn.classList.add('bg-gray-200', 'dark:bg-gray-800', 'text-gray-700', 'dark:text-gray-300');
-                btn.classList.remove('bg-primary', 'text-white');
-            }
-        });
-    }
-    
-    // --- SEASON SCROLLING FUNCTIONS ---
-    function scrollSeasons(direction) {
-        const container = document.getElementById('season-tabs-container');
-        if (!container) return;
-        
-        const scrollAmount = 200;
-        
-        if (direction === 'left') {
-            container.scrollLeft -= scrollAmount;
-        } else {
-            container.scrollLeft += scrollAmount;
-        }
-        
-        updateSeasonArrows();
-    }
-    
-    function updateSeasonArrows() {
-        const container = document.getElementById('season-tabs-container');
-        if (!container) return;
-        
-        const prevBtn = document.querySelector('.season-nav-btn-prev');
-        const nextBtn = document.querySelector('.season-nav-btn-next');
-        
-        if (!prevBtn || !nextBtn) return;
-        
-        if (container.scrollLeft <= 10) {
-            prevBtn.disabled = true;
-            prevBtn.classList.add('opacity-50', 'cursor-not-allowed');
-        } else {
-            prevBtn.disabled = false;
-            prevBtn.classList.remove('opacity-50', 'cursor-not-allowed');
-        }
-        
-        if (container.scrollLeft + container.clientWidth >= container.scrollWidth - 10) {
-            nextBtn.disabled = true;
-            nextBtn.classList.add('opacity-50', 'cursor-not-allowed');
-        } else {
-            nextBtn.disabled = false;
-            nextBtn.classList.remove('opacity-50', 'cursor-not-allowed');
-        }
     }
     
     // --- COMMENTS FUNCTIONS ---
@@ -1257,10 +1520,7 @@
     
     function renderComments() {
         const container = document.getElementById('comments-list-container');
-        const badge = document.getElementById('comment-count-badge');
-        if (!container || !badge) return;
-        
-        badge.innerText = `(${comments.length})`;
+        document.getElementById('comment-count-badge').innerText = `(${comments.length})`;
         
         let html = '';
         comments.forEach(comment => {
@@ -1379,13 +1639,11 @@
     
     function toggleReplyBox(id) {
         const box = document.getElementById(`reply-box-${id}`);
-        if (box) box.classList.toggle('hidden');
+        box.classList.toggle('hidden');
     }
     
     function postReply(commentId) {
         const input = document.getElementById(`reply-input-${commentId}`);
-        if (!input) return;
-        
         const text = input.value.trim();
         if(text) {
             const comment = comments.find(c => c.id === commentId);
@@ -1406,91 +1664,145 @@
     function renderRelatedLists() {
         const recContainer = document.getElementById('recommended-list-container');
         const popContainer = document.getElementById('most-popular-list-container');
+        
         const recImages = [
             'https://lh3.googleusercontent.com/aida-public/AB6AXuB6aKroKe4_Hr_QOThhIQ1eSBsj6XHa6M1h1ij1beOOwYZsLuAKaEUwhzePp5w2e0ZiNq23ueXCujFcscvpvX5l0fSEO1JhKa6gwDDPDrdfapY86HeYs5fG_M99b926v37WwsUlyZ7ugSX23giOl25toAwGLS8wOeBXwUajaxUzaTcHC_Yh5fJqnnwy6HgEx_QviGDLtROQ6LVPu2Z1BRIxBOEdc9fz9ozk1sYgF_aWaLm0ZXBf9Mh7BLQkJKaAnfSKTVLxnnvAS1o',
             'https://lh3.googleusercontent.com/aida-public/AB6AXuC4DL0CgtcYAUCgstMJaa3MOKxfRf-4gMF5Pz7AA-vJqjO992P2Ln_vsEztjSVehozCL5rsHt1KXYxgOpHPykUZEMDio6Kowlgy6GWvo4do0-5lXXQYfWesN_lwBCxnEcWF4XBvqDH9JFtqGEnkTLf_a-dREBJUINFFoE2kBQ0XpDqfi5NlPjxrmCbvXX31J0PHegzUCxDnemVeINrotIOfjM7FeAzSPl6Y0W2Xlf5WxpWq7OBZ7oPcgpUXCPkvHT-o8GnA6D-kHow'
         ];
+        
         const popImages = [
             'https://lh3.googleusercontent.com/aida-public/AB6AXuB74Fp72ev7QNZU469wTbrsvPSqgnjiWWoMOtIa0MAjQhQ1L33JGPpodM_sMQek4yZw6tRKlWPbMR6A8WeRapMkaH-T11LXGfejWy1r1bhWBwFgHhBoYl8KvmFdP0z1AzCeyDBbQAk4qqrgXQgFIiUfJh05RZYjZZz8rG09UvMIVFX4ZI-oP6j8oSExgu_KvJ_nvGwbgNIhEzXE5b5_lwPMYOzIs3TCBjMzWi8UdDqiKr2W9XaPSF7JhbMvJhQVj0heWtGm59mVp1E',
             'https://lh3.googleusercontent.com/aida-public/AB6AXuCwH3f4VjulnnLYk8EgFSCiOqFs12q4ivPSqucW7P7k4uOAN3qXURGd7iOxByylKHLJhbpiobEV442fMLZHwobXplWdRez-c71bcZODHHIHORqZw97zdSx_JgA4Cdym9n6VMtpcJXo3o5jc7jvKx13nsU2frrHJ8wgbcRH1cHIY8n7jLkRIsYOLDQ1uZWoGe99Imz98f_X9qskRvSTRVJiiJKF_DtE-ce0qw825vrwhgb66FQM3e_ymqoB8eBbjLZ5HuUePqbU5kYg'
         ];
         
-        // Generate 18 items for Recommended
+        // Generate 21 items for Recommended with perfect responsive card layout
         let recHtml = '';
-        for(let i = 1; i <= 18; i++) {
+        const showTitles = [
+            'Demon Slayer: Kimetsu no Yaiba',
+            'Jujutsu Kaisen',
+            'Attack on Titan',
+            'My Hero Academia',
+            'One Piece',
+            'Spy x Family',
+            'Chainsaw Man',
+            'Haikyuu!!',
+            'Death Note',
+            'Fullmetal Alchemist: Brotherhood'
+        ];
+        
+        const showTypes = ['Anime', 'TV Series', 'Movie'];
+        const showYears = ['2024', '2023', '2022', '2021', '2020'];
+        
+        for(let i = 1; i <= 21; i++) {
             const img = recImages[i % 2];
-            const title = i % 2 === 0 ? 'Spirited Away' : 'Pulp Fiction';
-            const year = i % 2 === 0 ? '2001' : '1994';
-            const type = i % 2 === 0 ? 'Anime' : 'Movie';
+            const titleIndex = i % showTitles.length;
+            const title = showTitles[titleIndex];
+            const year = showYears[i % showYears.length];
+            const type = showTypes[i % showTypes.length];
+            const rating = (7.5 + (i * 0.1)).toFixed(1);
+            
             recHtml += `
-                <a class="block group relative" href="#">
-                    <div class="aspect-[2/3] w-full bg-gray-200 dark:bg-gray-800 rounded-lg overflow-hidden relative shadow-sm mb-2">
-                        <img class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110" src="${img}" alt="Poster" loading="lazy"/>
-                        <div class="absolute top-2 right-2 bg-primary/90 backdrop-blur-sm text-white text-[10px] font-bold px-1.5 py-0.5 rounded shadow-sm">HD</div>
-                         <div class="absolute inset-0 flex items-center justify-center bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-200">
-                            <span class="material-symbols-outlined text-white text-4xl drop-shadow-lg">play_circle</span>
+                <div class="group flex flex-col gap-2 recommended-card">
+                    <div class="relative aspect-[2/3] overflow-hidden rounded-lg shadow-md">
+                        <img src="${img}" alt="${title}" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110">
+                        
+                        <div class="absolute top-2 right-2 bg-primary text-white text-[10px] font-bold px-1.5 py-0.5 rounded shadow-sm">
+                            HD
+                        </div>
+                        
+                        <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                            <span class="material-symbols-outlined text-4xl text-white">play_circle</span>
                         </div>
                     </div>
-                    <div>
-                        <h4 class="text-sm font-semibold truncate text-gray-900 dark:text-gray-100 group-hover:text-primary transition-colors" title="${title} ${i}">${title} ${i}</h4>
-                        <div class="flex items-center justify-between text-xs text-gray-500 dark:text-gray-400 mt-1">
+
+                    <div class="space-y-1">
+                        <h3 class="text-sm font-semibold truncate group-hover:text-primary transition-colors dark:text-gray-100">
+                            ${title} ${i <= 10 ? i : ''}
+                        </h3>
+                        <div class="flex items-center gap-2 text-[11px] text-gray-500 dark:text-gray-400">
+                            <span>${type}</span>
+                            <span class="w-1 h-1 bg-gray-500 rounded-full"></span>
                             <span>${year}</span>
-                            <span class="border border-gray-200 dark:border-gray-700 px-1 rounded text-[10px]">${type}</span>
+                            <span class="ml-auto flex items-center gap-0.5">
+                                <span class="material-symbols-outlined text-[12px] text-yellow-500">star</span> ${rating}
+                            </span>
                         </div>
                     </div>
-                </a>
+                </div>
             `;
         }
-        if (recContainer) recContainer.innerHTML = recHtml;
+        recContainer.innerHTML = recHtml;
         
-        // Generate 18 items for Most Popular
+        // Generate 12 items for Most Popular
         let popHtml = '';
-        for(let i = 1; i <= 18; i++) {
+        for(let i = 1; i <= 12; i++) {
             const img = popImages[i % 2];
             const title = i % 2 === 0 ? 'The Dark Knight' : 'The Godfather';
             const year = i % 2 === 0 ? '2008' : '1972';
+            const rating = (8.0 + (i * 0.1)).toFixed(1);
+            
             popHtml += `
-                <a class="flex gap-3 p-2 hover:bg-gray-100 dark:hover:bg-white/5 rounded-lg transition-colors group" href="#">
-                    <div class="w-12 h-16 bg-gray-200 rounded overflow-hidden flex-shrink-0 relative">
-                        <img class="w-full h-full object-cover" src="${img}" alt="Poster" loading="lazy"/>
-                        <div class="absolute bottom-0 left-0 right-0 bg-primary/90 text-white text-[9px] text-center font-bold">HD</div>
-                    </div>
-                    <div class="flex-1 min-w-0 flex flex-col justify-center">
-                        <h4 class="text-sm font-medium truncate group-hover:text-primary transition-colors text-gray-900 dark:text-gray-100">${title} ${i}</h4>
-                        <div class="text-xs text-gray-500 mt-1 flex items-center gap-2">
-                            <span>${year}</span>
-                            <span class="w-1 h-1 bg-gray-500 rounded-full"></span>
-                            <span>Movie</span>
+                <div class="group flex flex-col gap-2 recommended-card">
+                    <div class="relative aspect-[2/3] overflow-hidden rounded-lg shadow-md">
+                        <img src="${img}" alt="${title}" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110">
+                        
+                        <div class="absolute top-2 right-2 bg-primary text-white text-[10px] font-bold px-1.5 py-0.5 rounded shadow-sm">
+                            HD
+                        </div>
+                        
+                        <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                            <span class="material-symbols-outlined text-4xl text-white">play_circle</span>
                         </div>
                     </div>
-                    <div class="flex items-center text-gray-400">
-                        <span class="material-symbols-outlined text-lg">add</span>
+
+                    <div class="space-y-1">
+                        <h3 class="text-sm font-semibold truncate group-hover:text-primary transition-colors dark:text-gray-100">
+                            ${title} ${i}
+                        </h3>
+                        <div class="flex items-center gap-2 text-[11px] text-gray-500 dark:text-gray-400">
+                            <span>Movie</span>
+                            <span class="w-1 h-1 bg-gray-500 rounded-full"></span>
+                            <span>${year}</span>
+                            <span class="ml-auto flex items-center gap-0.5">
+                                <span class="material-symbols-outlined text-[12px] text-yellow-500">star</span> ${rating}
+                            </span>
+                        </div>
                     </div>
-                </a>
+                </div>
             `;
         }
-        if (popContainer) popContainer.innerHTML = popHtml;
+        popContainer.innerHTML = popHtml;
     }
     
     // Local Storage logic for "Add to list" button
+    const listButtonText = document.getElementById('current-list-status-text');
+    const storageKey = 'quravel_list_status_alya';
+    
+    // Initialize button text from local storage
+    const savedStatus = localStorage.getItem(storageKey);
+    if (savedStatus) {
+         if(savedStatus === 'Add to List') {
+             listButtonText.innerText = 'Add to List';
+        } else {
+             listButtonText.innerText = savedStatus;
+        }
+    }
+    
     function updateListStatus(status) {
-        const listButtonText = document.getElementById('current-list-status-text');
-        const storageKey = 'quravel_list_status_shawshank';
-        
-        if (!listButtonText) return;
-        
         if (status === 'Add to List') {
             listButtonText.innerText = 'Add to List';
+            document.getElementById('current-list-status-text-mobile').innerText = 'Add to List';
             localStorage.removeItem(storageKey);
         } else {
             listButtonText.innerText = status;
+            document.getElementById('current-list-status-text-mobile').innerText = status;
             localStorage.setItem(storageKey, status);
         }
     }
     
     // Rating Feature Logic
     function rateShow(sentiment) {
-        const ratedKey = 'quravel_rated_shawshank';
+        const ratedKey = 'quravel_rated_alya';
         if(localStorage.getItem(ratedKey)) {
             alert('You have already rated this show!');
             return;
@@ -1508,57 +1820,32 @@
     function toggleMobileMenu() {
         const menu = document.getElementById('mobile-menu');
         const overlay = document.getElementById('mobile-menu-overlay');
-        if (menu && overlay) {
-            menu.classList.toggle('menu-open');
-            overlay.classList.toggle('hidden');
-        }
+        menu.classList.toggle('menu-open');
+        overlay.classList.toggle('hidden');
     }
     
     // Mobile Search Toggle
     function toggleMobileSearch() {
         const searchBar = document.getElementById('mobile-search-bar');
-        if (searchBar) searchBar.classList.toggle('hidden');
+        searchBar.classList.toggle('hidden');
     }
     
     // Mobile Dropdown Accordion
     function toggleMobileDropdown(id) {
         const dropdown = document.getElementById(id);
-        if (!dropdown) return;
-        
         dropdown.classList.toggle('hidden');
+        // Rotate arrow
         const arrowId = id === 'genre-mobile' ? 'genre-arrow' : 'country-arrow';
         const arrow = document.getElementById(arrowId);
-        if (arrow) {
-            arrow.style.transform = dropdown.classList.contains('hidden') ? 'rotate(0deg)' : 'rotate(180deg)';
-        }
-    }
-    
-    function toggleDescription() {
-        const description = document.getElementById('description-text');
-        if (!description) return;
-        
-        const isExpanded = description.classList.contains('expanded');
-        
-        if (isExpanded) {
-            description.classList.remove('line-clamp-none', 'expanded');
-            description.classList.add('line-clamp-4');
+        if (dropdown.classList.contains('hidden')) {
+            arrow.style.transform = 'rotate(0deg)';
         } else {
-            description.classList.remove('line-clamp-4');
-            description.classList.add('line-clamp-none', 'expanded');
+            arrow.style.transform = 'rotate(180deg)';
         }
     }
     
-    // Initialize everything
-    document.addEventListener('DOMContentLoaded', function() {
-        // Setup season scrolling event listeners
-        const seasonContainer = document.getElementById('season-tabs-container');
-        if (seasonContainer) {
-            seasonContainer.addEventListener('scroll', updateSeasonArrows);
-            window.addEventListener('resize', updateSeasonArrows);
-        }
-        
-        initializePage();
-    });
+    // Initialize everything when DOM is loaded
+    document.addEventListener('DOMContentLoaded', initializePage);
 </script>
 </body>
 </html>
