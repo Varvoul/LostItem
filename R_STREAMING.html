@@ -243,6 +243,7 @@
 </div>
 <a class="block text-sm font-medium hover:text-primary py-2 border-b border-gray-100 dark:border-gray-800" href="#">Top IMDB</a>
 <a class="block text-sm font-medium hover:text-primary py-2" href="#">Updates</a>
+<a class="block text-sm font-medium hover:text-primary py-2" href="#">Sent Request</a>
 </div>
 </div>
 
@@ -279,6 +280,7 @@
 </div>
 <a class="hover:text-primary transition-colors" href="#">Top IMDB</a>
 <a class="hover:text-primary transition-colors" href="#">Updates</a>
+<a class="block text-sm font-medium hover:text-primary py-2" href="#">Sent Request</a>
 </nav>
 </div>
 <div class="absolute left-1/2 transform -translate-x-1/2">
@@ -408,6 +410,8 @@
                                 <button class="server-btn px-3 py-2 rounded text-xs font-medium bg-primary text-white shadow-sm hover:bg-primary/90 transition" data-server="SUB-HD-01" onclick="selectServer(this)">HD-01</button>
                                 <button class="server-btn px-3 py-2 rounded text-xs font-medium bg-gray-200 dark:bg-gray-800 text-gray-700 dark:text-gray-300 hover:bg-gray-300 dark:hover:bg-gray-700 transition" data-server="SUB-HD-02" onclick="selectServer(this)">HD-02</button>
                                 <button class="server-btn px-3 py-2 rounded text-xs font-medium bg-gray-200 dark:bg-gray-800 text-gray-700 dark:text-gray-300 hover:bg-gray-300 dark:hover:bg-gray-700 transition" data-server="SUB-HD-03" onclick="selectServer(this)">HD-03</button>
+                                <button class="server-btn px-3 py-2 rounded text-xs font-medium bg-gray-200 dark:bg-gray-800 text-gray-700 dark:text-gray-300 hover:bg-gray-300 dark:hover:bg-gray-700 transition" data-server="SUB-HD-04" onclick="selectServer(this)">HD-04</button>
+                                <button class="server-btn px-3 py-2 rounded text-xs font-medium bg-gray-200 dark:bg-gray-800 text-gray-700 dark:text-gray-300 hover:bg-gray-300 dark:hover:bg-gray-700 transition" data-server="SUB-HD-05" onclick="selectServer(this)">HD-05</button>
                             </div>
                         </div>
                         <div class="flex flex-col sm:flex-row gap-4 items-start sm:items-center">
@@ -416,6 +420,8 @@
                                 <button class="server-btn px-3 py-2 rounded text-xs font-medium bg-gray-200 dark:bg-gray-800 text-gray-700 dark:text-gray-300 hover:bg-gray-300 dark:hover:bg-gray-700 transition" data-server="DUB-HD-01" onclick="selectServer(this)">HD-01</button>
                                 <button class="server-btn px-3 py-2 rounded text-xs font-medium bg-gray-200 dark:bg-gray-800 text-gray-700 dark:text-gray-300 hover:bg-gray-300 dark:hover:bg-gray-700 transition" data-server="DUB-HD-02" onclick="selectServer(this)">HD-02</button>
                                 <button class="server-btn px-3 py-2 rounded text-xs font-medium bg-gray-200 dark:bg-gray-800 text-gray-700 dark:text-gray-300 hover:bg-gray-300 dark:hover:bg-gray-700 transition" data-server="DUB-HD-03" onclick="selectServer(this)">HD-03</button>
+                                <button class="server-btn px-3 py-2 rounded text-xs font-medium bg-gray-200 dark:bg-gray-800 text-gray-700 dark:text-gray-300 hover:bg-gray-300 dark:hover:bg-gray-700 transition" data-server="DUB-HD-04" onclick="selectServer(this)">HD-04</button>
+                                <button class="server-btn px-3 py-2 rounded text-xs font-medium bg-gray-200 dark:bg-gray-800 text-gray-700 dark:text-gray-300 hover:bg-gray-300 dark:hover:bg-gray-700 transition" data-server="DUB-HD-05" onclick="selectServer(this)">HD-05</button>
                             </div>
                         </div>
                         <div class="flex flex-col sm:flex-row gap-4 items-start sm:items-center">
@@ -424,6 +430,8 @@
                                 <button class="server-btn px-3 py-2 rounded text-xs font-medium bg-gray-200 dark:bg-gray-800 text-gray-700 dark:text-gray-300 hover:bg-gray-300 dark:hover:bg-gray-700 transition" data-server="RAW-HD-01" onclick="selectServer(this)">HD-01</button>
                                 <button class="server-btn px-3 py-2 rounded text-xs font-medium bg-gray-200 dark:bg-gray-800 text-gray-700 dark:text-gray-300 hover:bg-gray-300 dark:hover:bg-gray-700 transition" data-server="RAW-HD-02" onclick="selectServer(this)">HD-02</button>
                                 <button class="server-btn px-3 py-2 rounded text-xs font-medium bg-gray-200 dark:bg-gray-800 text-gray-700 dark:text-gray-300 hover:bg-gray-300 dark:hover:bg-gray-700 transition" data-server="RAW-HD-03" onclick="selectServer(this)">HD-03</button>
+                                <button class="server-btn px-3 py-2 rounded text-xs font-medium bg-gray-200 dark:bg-gray-800 text-gray-700 dark:text-gray-300 hover:bg-gray-300 dark:hover:bg-gray-700 transition" data-server="RAW-HD-04" onclick="selectServer(this)">HD-04</button>
+                                <button class="server-btn px-3 py-2 rounded text-xs font-medium bg-gray-200 dark:bg-gray-800 text-gray-700 dark:text-gray-300 hover:bg-gray-300 dark:hover:bg-gray-700 transition" data-server="RAW-HD-05" onclick="selectServer(this)">HD-05</button>
                             </div>
                         </div>
                     </div>
@@ -626,16 +634,28 @@
     ];
     
     // Video URLs for ALL servers - each server has all 13 episodes
+    // UPDATED: Added HD-04 and HD-05 for all types
     const episodeUrls = {
+        // SUB servers
         'SUB-HD-01': allEpisodeUrls,
         'SUB-HD-02': allEpisodeUrls,
         'SUB-HD-03': allEpisodeUrls,
+        'SUB-HD-04': allEpisodeUrls,
+        'SUB-HD-05': allEpisodeUrls,
+        
+        // DUB servers
         'DUB-HD-01': allEpisodeUrls,
         'DUB-HD-02': allEpisodeUrls,
         'DUB-HD-03': allEpisodeUrls,
+        'DUB-HD-04': allEpisodeUrls,
+        'DUB-HD-05': allEpisodeUrls,
+        
+        // RAW servers
         'RAW-HD-01': allEpisodeUrls,
         'RAW-HD-02': allEpisodeUrls,
-        'RAW-HD-03': allEpisodeUrls
+        'RAW-HD-03': allEpisodeUrls,
+        'RAW-HD-04': allEpisodeUrls,
+        'RAW-HD-05': allEpisodeUrls
     };
 
     // Mock episode data structure
