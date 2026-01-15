@@ -32,7 +32,7 @@
 </script>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
 <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
-<style>
+    <style>
     body {
         font-family: 'Inter', sans-serif;
     }
@@ -129,23 +129,85 @@
         -webkit-line-clamp: unset;
         display: block;
     }
-    /* Responsive grid adjustments */
-    @media (max-width: 1024px) {
-        .main-content {
+    /* Season tabs scrolling enhancement */
+    .season-tabs {
+        scroll-behavior: smooth;
+        -webkit-overflow-scrolling: touch;
+        padding-bottom: 8px;
+        margin-bottom: -8px;
+    }
+    
+    /* Show arrows only on desktop */
+    .season-nav-btn-prev,
+    .season-nav-btn-next {
+        display: none;
+    }
+    
+    @media (min-width: 1024px) {
+        .season-nav-btn-prev,
+        .season-nav-btn-next {
+            display: flex;
+        }
+        
+        .season-tabs {
+            padding-left: 20px;
+            padding-right: 20px;
+        }
+        
+        /* Hide scrollbar on desktop since we have arrows */
+        .season-tabs::-webkit-scrollbar {
+            display: none;
+        }
+        
+        .season-tabs {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    }
+    
+    /* Touch-friendly scroll indicators */
+    @media (max-width: 1023px) {
+        .season-tabs {
+            /* Gradient fade indicators for mobile */
+            mask-image: linear-gradient(to right, transparent, black 20px, black 90%, transparent);
+            -webkit-mask-image: linear-gradient(to right, transparent, black 20px, black 90%, transparent);
+        }
+    }
+    
+    /* Active season styling */
+    .season-btn.active {
+        color: #498BBB;
+        border-bottom-color: #498BBB;
+        font-weight: 600;
+    }
+    
+    /* Hover effects */
+    .season-btn:hover:not(.active) {
+        transform: translateY(-1px);
+    }
+    
+    /* Smooth transition for active state */
+    .season-btn {
+        transition: all 0.2s ease;
+    }
+    
+    /* Main Grid Layout */
+    .main-content-grid {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+    
+    /* Mobile & Tablet (up to 1023px) */
+    @media (max-width: 1023px) {
+        .main-content-grid {
             grid-template-columns: 1fr !important;
         }
-        .sidebar-content {
-            order: 2;
+        
+        .mobile-full-width {
+            width: 100% !important;
         }
-        .episode-content {
-            order: 1;
-        }
-        .recommended-section {
-            order: 3;
-        }
-        .comments-section {
-            order: 4;
-        }
+        
         /* Adjust description gradient for mobile */
         .expandable-description::after {
             background: linear-gradient(90deg, transparent, #ffffff 40%);
@@ -153,7 +215,40 @@
         .dark .expandable-description::after {
             background: linear-gradient(90deg, transparent, #1f2937 40%);
         }
+        
+        /* Reset orders for mobile stacking */
+        .main-content,
+        .sidebar-content {
+            order: 0 !important;
+        }
     }
+    
+    /* Desktop (1024px and above) */
+    @media (min-width: 1024px) {
+        .main-content-grid {
+            grid-template-columns: 3fr 1fr !important;
+            gap: 1.5rem;
+        }
+        
+        /* Sidebar content styling */
+        .sidebar-content > * {
+            max-width: 100%;
+        }
+        
+        /* Adjust spacing for sidebar sections */
+        .sidebar-content > * + * {
+            margin-top: 1.5rem;
+        }
+        
+        /* Make poster responsive in details section */
+        .details-poster {
+            width: 100%;
+            max-width: 192px;
+            height: auto;
+            aspect-ratio: 2/3;
+        }
+    }
+    
     /* Mobile optimizations */
     @media (max-width: 768px) {
         .server-buttons {
@@ -187,7 +282,13 @@
         .expandable-description.expanded::after {
             font-size: 0.8125rem;
         }
+        
+        /* Make poster smaller on mobile */
+        .details-poster {
+            max-width: 120px;
+        }
     }
+    
     @media (max-width: 480px) {
         .recommended-grid {
             grid-template-columns: repeat(2, 1fr) !important;
@@ -202,6 +303,11 @@
         /* Small mobile description adjustments */
         .expandable-description::after {
             padding-left: 30px;
+        }
+        
+        /* Make poster even smaller on very small screens */
+        .details-poster {
+            max-width: 100px;
         }
     }
 </style>
@@ -437,15 +543,40 @@
                     </div>
                     
                     <!-- Season Selection -->
-                    <div class="flex items-center gap-2 overflow-x-auto hide-scrollbar mb-4 border-b border-gray-200 dark:border-gray-700 pb-2 season-tabs">
-                        <button class="season-btn px-4 py-2 text-sm font-medium text-primary border-b-2 border-primary whitespace-nowrap transition-colors" data-season="1" onclick="selectSeason(this)">Season 1</button>
-                        <button class="season-btn px-4 py-2 text-sm font-medium text-gray-500 dark:text-gray-400 hover:text-gray-800 dark:hover:text-gray-200 whitespace-nowrap transition-colors border-b-2 border-transparent" data-season="2" onclick="selectSeason(this)">Season 2</button>
-                        <button class="season-btn px-4 py-2 text-sm font-medium text-gray-500 dark:text-gray-400 hover:text-gray-800 dark:hover:text-gray-200 whitespace-nowrap transition-colors border-b-2 border-transparent" data-season="3" onclick="selectSeason(this)">Season 3</button>
-                        <button class="season-btn px-4 py-2 text-sm font-medium text-gray-500 dark:text-gray-400 hover:text-gray-800 dark:hover:text-gray-200 whitespace-nowrap transition-colors border-b-2 border-transparent" data-season="ova" onclick="selectSeason(this)">OVA</button>
-                    </div>
-                </div>
-            </div>
-
+<div class="relative mb-4">
+    <!-- Desktop Arrow Navigation -->
+    <div class="hidden lg:flex absolute left-0 top-0 bottom-0 items-center z-10">
+        <button class="season-nav-btn-prev bg-white dark:bg-gray-800 shadow-lg rounded-full p-2 -ml-2 hover:bg-gray-100 dark:hover:bg-gray-700 transition-all disabled:opacity-50 disabled:cursor-not-allowed" onclick="scrollSeasons('left')" aria-label="Scroll seasons left">
+            <svg class="w-5 h-5 text-gray-700 dark:text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+            </svg>
+        </button>
+    </div>
+    
+    <div class="hidden lg:flex absolute right-0 top-0 bottom-0 items-center z-10">
+        <button class="season-nav-btn-next bg-white dark:bg-gray-800 shadow-lg rounded-full p-2 -mr-2 hover:bg-gray-100 dark:hover:bg-gray-700 transition-all disabled:opacity-50 disabled:cursor-not-allowed" onclick="scrollSeasons('right')" aria-label="Scroll seasons right">
+            <svg class="w-5 h-5 text-gray-700 dark:text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+            </svg>
+        </button>
+    </div>
+    
+    <!-- Season Tabs Container -->
+    <div class="flex items-center gap-2 overflow-x-auto hide-scrollbar pb-2 border-b border-gray-200 dark:border-gray-700 season-tabs" id="season-tabs-container">
+        <button class="season-btn px-4 py-2 text-sm font-medium text-primary border-b-2 border-primary whitespace-nowrap transition-colors flex-shrink-0" data-season="1" onclick="selectSeason(this)">Season 1</button>
+        <button class="season-btn px-4 py-2 text-sm font-medium text-gray-500 dark:text-gray-400 hover:text-gray-800 dark:hover:text-gray-200 whitespace-nowrap transition-colors border-b-2 border-transparent flex-shrink-0" data-season="2" onclick="selectSeason(this)">Season 2</button>
+        <button class="season-btn px-4 py-2 text-sm font-medium text-gray-500 dark:text-gray-400 hover:text-gray-800 dark:hover:text-gray-200 whitespace-nowrap transition-colors border-b-2 border-transparent flex-shrink-0" data-season="3" onclick="selectSeason(this)">Season 3</button>
+        <button class="season-btn px-4 py-2 text-sm font-medium text-gray-500 dark:text-gray-400 hover:text-gray-800 dark:hover:text-gray-200 whitespace-nowrap transition-colors border-b-2 border-transparent flex-shrink-0" data-season="4" onclick="selectSeason(this)">Season 4</button>
+        <button class="season-btn px-4 py-2 text-sm font-medium text-gray-500 dark:text-gray-400 hover:text-gray-800 dark:hover:text-gray-200 whitespace-nowrap transition-colors border-b-2 border-transparent flex-shrink-0" data-season="5" onclick="selectSeason(this)">Season 5</button>
+        <button class="season-btn px-4 py-2 text-sm font-medium text-gray-500 dark:text-gray-400 hover:text-gray-800 dark:hover:text-gray-200 whitespace-nowrap transition-colors border-b-2 border-transparent flex-shrink-0" data-season="6" onclick="selectSeason(this)">Season 6</button>
+        <button class="season-btn px-4 py-2 text-sm font-medium text-gray-500 dark:text-gray-400 hover:text-gray-800 dark:hover:text-gray-200 whitespace-nowrap transition-colors border-b-2 border-transparent flex-shrink-0" data-season="7" onclick="selectSeason(this)">Season 7</button>
+        <button class="season-btn px-4 py-2 text-sm font-medium text-gray-500 dark:text-gray-400 hover:text-gray-800 dark:hover:text-gray-200 whitespace-nowrap transition-colors border-b-2 border-transparent flex-shrink-0" data-season="8" onclick="selectSeason(this)">Season 8</button>
+        <button class="season-btn px-4 py-2 text-sm font-medium text-gray-500 dark:text-gray-400 hover:text-gray-800 dark:hover:text-gray-200 whitespace-nowrap transition-colors border-b-2 border-transparent flex-shrink-0" data-season="9" onclick="selectSeason(this)">Season 9</button>
+        <button class="season-btn px-4 py-2 text-sm font-medium text-gray-500 dark:text-gray-400 hover:text-gray-800 dark:hover:text-gray-200 whitespace-nowrap transition-colors border-b-2 border-transparent flex-shrink-0" data-season="ova" onclick="selectSeason(this)">OVA</button>
+        <button class="season-btn px-4 py-2 text-sm font-medium text-gray-500 dark:text-gray-400 hover:text-gray-800 dark:hover:text-gray-200 whitespace-nowrap transition-colors border-b-2 border-transparent flex-shrink-0" data-season="specials" onclick="selectSeason(this)">Specials</button>
+        <button class="season-btn px-4 py-2 text-sm font-medium text-gray-500 dark:text-gray-400 hover:text-gray-800 dark:hover:text-gray-200 whitespace-nowrap transition-colors border-b-2 border-transparent flex-shrink-0" data-season="movies" onclick="selectSeason(this)">Movies</button>
+    </div>
+</div>
             <!-- Episode List -->
             <div class="bg-white dark:bg-[#151926] rounded-xl overflow-hidden shadow-sm border border-gray-200 dark:border-gray-800">
                 <div class="p-4 border-b border-gray-200 dark:border-gray-700 font-bold text-lg">Episodes</div>
@@ -616,49 +747,133 @@
     let currentSeason = '1';
     let isVideoLoaded = false;
     
-    // ALL 13 EPISODE URLs for Season 1
-    const allEpisodeUrls = [
-        'https://filemoon.in/e/bzd5u1d7rzql',    // Episode 1
-        'https://filemoon.in/e/85jphgrl8l82',    // Episode 2
-        'https://filemoon.in/e/bof3lye419lq',    // Episode 3
-        'https://filemoon.in/e/ywgs23cxk5i5',    // Episode 4
-        'https://filemoon.in/e/jtjobjam5v1p',    // Episode 5
-        'https://filemoon.in/e/gy31eb38sq5h',    // Episode 6
-        'https://filemoon.in/e/l35uymelfik6',    // Episode 7
-        'https://filemoon.in/e/smzk83075q3s',    // Episode 8
-        'https://filemoon.in/e/y8liviumbcg5',    // Episode 9
-        'https://filemoon.in/e/887ppm2lxvtp',    // Episode 10
-        'https://filemoon.in/e/cmnzrzc7t0io',    // Episode 11
-        'https://filemoon.in/e/5g4slx1i6tlt',    // Episode 12
-        'https://filemoon.in/e/fcln6lu754yb'     // Episode 13
-    ];
+    // EPISODE URLs FOR EACH SEASON
+    const seasonEpisodeUrls = {
+        '1': [ // Season 1 episodes
+            'https://filemoon.in/e/bzd5u1d7rzql',    // Episode 1
+            'https://filemoon.in/e/85jphgrl8l82',    // Episode 2
+            'https://filemoon.in/e/bof3lye419lq',    // Episode 3
+            'https://filemoon.in/e/ywgs23cxk5i5',    // Episode 4
+            'https://filemoon.in/e/jtjobjam5v1p',    // Episode 5
+            'https://filemoon.in/e/gy31eb38sq5h',    // Episode 6
+            'https://filemoon.in/e/l35uymelfik6',    // Episode 7
+            'https://filemoon.in/e/smzk83075q3s',    // Episode 8
+            'https://filemoon.in/e/y8liviumbcg5',    // Episode 9
+            'https://filemoon.in/e/887ppm2lxvtp',    // Episode 10
+            'https://filemoon.in/e/cmnzrzc7t0io',    // Episode 11
+            'https://filemoon.in/e/5g4slx1i6tlt',    // Episode 12
+            'https://filemoon.in/e/fcln6lu754yb'     // Episode 13
+        ],
+        '2': [ // Season 2 episodes
+            'https://filemoon.in/e/s2e1-url',
+            'https://filemoon.in/e/s2e2-url',
+            'https://filemoon.in/e/s2e3-url'
+        ],
+        '3': [ // Season 3 episodes
+            'https://filemoon.in/e/s3e1-url',
+            'https://filemoon.in/e/s3e2-url'
+        ],
+        '4': [ // Season 4 episodes
+            'https://filemoon.in/e/s4e1-url',
+            'https://filemoon.in/e/s4e2-url',
+            'https://filemoon.in/e/s4e3-url'
+        ],
+        '5': [ // Season 5 episodes
+            'https://filemoon.in/e/s5e1-url',
+            'https://filemoon.in/e/s5e2-url'
+        ],
+        '6': [ // Season 6 episodes
+            'https://filemoon.in/e/s6e1-url'
+        ],
+        '7': [],
+        '8': [],
+        '9': [],
+        'ova': [ // OVA episodes
+            'https://filemoon.in/e/ova1-url'
+        ],
+        'specials': [ // Specials
+            'https://filemoon.in/e/special1-url',
+            'https://filemoon.in/e/special2-url'
+        ],
+        'movies': [ // Movies
+            'https://filemoon.in/e/movie1-url',
+            'https://filemoon.in/e/movie2-url'
+        ]
+    };
     
-    // Video URLs for ALL servers - each server has all 13 episodes
-    // UPDATED: Added HD-04 and HD-05 for all types
-    const episodeUrls = {
-        // SUB servers
-        'SUB-HD-01': allEpisodeUrls,
-        'SUB-HD-02': allEpisodeUrls,
-        'SUB-HD-03': allEpisodeUrls,
-        'SUB-HD-04': allEpisodeUrls,
-        'SUB-HD-05': allEpisodeUrls,
-        
-        // DUB servers
-        'DUB-HD-01': allEpisodeUrls,
-        'DUB-HD-02': allEpisodeUrls,
-        'DUB-HD-03': allEpisodeUrls,
-        'DUB-HD-04': allEpisodeUrls,
-        'DUB-HD-05': allEpisodeUrls,
-        
-        // RAW servers
-        'RAW-HD-01': allEpisodeUrls,
-        'RAW-HD-02': allEpisodeUrls,
-        'RAW-HD-03': allEpisodeUrls,
-        'RAW-HD-04': allEpisodeUrls,
-        'RAW-HD-05': allEpisodeUrls
+    // SERVERS DATA FOR EACH SEASON
+    const seasonServersData = {
+        '1': { // Season 1 servers
+            'SUB-HD-01': seasonEpisodeUrls['1'],
+            'SUB-HD-02': seasonEpisodeUrls['1'],
+            'SUB-HD-03': seasonEpisodeUrls['1'],
+            'SUB-HD-04': seasonEpisodeUrls['1'],
+            'SUB-HD-05': seasonEpisodeUrls['1'],
+            'DUB-HD-01': seasonEpisodeUrls['1'],
+            'DUB-HD-02': seasonEpisodeUrls['1'],
+            'DUB-HD-03': seasonEpisodeUrls['1'],
+            'DUB-HD-04': seasonEpisodeUrls['1'],
+            'DUB-HD-05': seasonEpisodeUrls['1'],
+            'RAW-HD-01': seasonEpisodeUrls['1'],
+            'RAW-HD-02': seasonEpisodeUrls['1'],
+            'RAW-HD-03': seasonEpisodeUrls['1'],
+            'RAW-HD-04': seasonEpisodeUrls['1'],
+            'RAW-HD-05': seasonEpisodeUrls['1']
+        },
+        '2': { // Season 2 servers
+            'SUB-HD-01': seasonEpisodeUrls['2'],
+            'SUB-HD-02': seasonEpisodeUrls['2'],
+            'SUB-HD-03': seasonEpisodeUrls['2'],
+            'SUB-HD-04': seasonEpisodeUrls['2'],
+            'SUB-HD-05': seasonEpisodeUrls['2'],
+            'DUB-HD-01': seasonEpisodeUrls['2'],
+            'DUB-HD-02': seasonEpisodeUrls['2'],
+            'DUB-HD-03': seasonEpisodeUrls['2'],
+            'DUB-HD-04': seasonEpisodeUrls['2'],
+            'DUB-HD-05': seasonEpisodeUrls['2'],
+            'RAW-HD-01': seasonEpisodeUrls['2'],
+            'RAW-HD-02': seasonEpisodeUrls['2'],
+            'RAW-HD-03': seasonEpisodeUrls['2'],
+            'RAW-HD-04': seasonEpisodeUrls['2'],
+            'RAW-HD-05': seasonEpisodeUrls['2']
+        },
+        '3': { // Season 3 servers
+            'SUB-HD-01': seasonEpisodeUrls['3'],
+            'SUB-HD-02': seasonEpisodeUrls['3'],
+            'SUB-HD-03': seasonEpisodeUrls['3'],
+            'SUB-HD-04': seasonEpisodeUrls['3'],
+            'SUB-HD-05': seasonEpisodeUrls['3'],
+            'DUB-HD-01': seasonEpisodeUrls['3'],
+            'DUB-HD-02': seasonEpisodeUrls['3'],
+            'DUB-HD-03': seasonEpisodeUrls['3'],
+            'DUB-HD-04': seasonEpisodeUrls['3'],
+            'DUB-HD-05': seasonEpisodeUrls['3'],
+            'RAW-HD-01': seasonEpisodeUrls['3'],
+            'RAW-HD-02': seasonEpisodeUrls['3'],
+            'RAW-HD-03': seasonEpisodeUrls['3'],
+            'RAW-HD-04': seasonEpisodeUrls['3'],
+            'RAW-HD-05': seasonEpisodeUrls['3']
+        },
+        '4': {
+            'SUB-HD-01': seasonEpisodeUrls['4'],
+            'SUB-HD-02': seasonEpisodeUrls['4'],
+            'SUB-HD-03': seasonEpisodeUrls['4']
+        },
+        '5': {
+            'SUB-HD-01': seasonEpisodeUrls['5'],
+            'SUB-HD-02': seasonEpisodeUrls['5']
+        },
+        '6': {
+            'SUB-HD-01': seasonEpisodeUrls['6']
+        },
+        'ova': {
+            'SUB-HD-01': seasonEpisodeUrls['ova'],
+            'SUB-HD-02': seasonEpisodeUrls['ova'],
+            'SUB-HD-03': seasonEpisodeUrls['ova']
+        }
     };
 
-    // Mock episode data structure
+    // EPISODE TITLES FOR EACH SEASON
     const episodeData = {
         '1': [
             { id: 1, title: 'Pilot' }, 
@@ -684,45 +899,42 @@
              { id: 1, title: 'Return' }, 
              { id: 2, title: 'Conquest' }
         ],
+        '4': [
+            { id: 1, title: 'Rebirth' },
+            { id: 2, title: 'Evolution' },
+            { id: 3, title: 'Revolution' }
+        ],
+        '5': [
+            { id: 1, title: 'Destiny' },
+            { id: 2, title: 'Fate' }
+        ],
+        '6': [
+            { id: 1, title: 'Final Chapter' }
+        ],
+        '7': [],
+        '8': [],
+        '9': [],
         'ova': [
             { id: 1, title: 'Special Episode' }
+        ],
+        'specials': [
+            { id: 1, title: 'Christmas Special' },
+            { id: 2, title: 'New Year Special' }
+        ],
+        'movies': [
+            { id: 1, title: 'The Movie: Part 1' },
+            { id: 2, title: 'The Movie: Part 2' }
         ]
     };
     
-    // For demo purposes, Season 2 and 3 will use the same URLs
-    const season2Urls = [
-        'https://filemoon.in/e/bzd5u1d7rzql',
-        'https://filemoon.in/e/85jphgrl8l82',
-        'https://filemoon.in/e/bof3lye419lq'
-    ];
-    
-    const season3Urls = [
-        'https://filemoon.in/e/ywgs23cxk5i5',
-        'https://filemoon.in/e/jtjobjam5v1p'
-    ];
-    
-    const ovaUrls = [
-        'https://filemoon.in/e/gy31eb38sq5h'
-    ];
-    
     // --- COMMENTS FEATURE ---
     const commentsStorageKey = 'quravel_comments_shawshank';
-    // Default 20 demo comments
     const defaultComments = [
         { id: 1, user: 'MovieBuff99', avatarColor: 'bg-red-500', time: '2 hours ago', text: 'This episode was absolutely mind-blowing! The cinematography is top-notch.', likes: 45, dislikes: 2, replies: [
             { id: 101, user: 'CinephileX', time: '1 hour ago', text: 'Totally agree, especially the final scene.' }
         ]},
         { id: 2, user: 'AnimeLover', avatarColor: 'bg-blue-500', time: '3 hours ago', text: 'Can anyone explain what happened at the 15-minute mark?', likes: 12, dislikes: 0, replies: [] },
-        { id: 3, user: 'Hater123', avatarColor: 'bg-gray-500', time: '5 hours ago', text: 'Honestly, pacing was a bit slow for me. Expected more action.', likes: 3, dislikes: 15, replies: [] },
-        { id: 4, user: 'SarahJ', avatarColor: 'bg-green-500', time: '6 hours ago', text: 'Does anyone know the name of the soundtrack used in the intro?', likes: 8, dislikes: 0, replies: [
-             { id: 102, user: 'MusicMan', time: '4 hours ago', text: 'It\'s "Endless Night" by The Composers.' }
-        ]},
-        { id: 5, user: 'ShadowWalker', avatarColor: 'bg-purple-500', time: '1 day ago', text: 'The character development here is insane.', likes: 22, dislikes: 1, replies: [] },
-        { id: 6, user: 'CriticPro', avatarColor: 'bg-yellow-500', time: '1 day ago', text: 'A solid 8/10 episode, though the dialogue felt a bit forced in places.', likes: 10, dislikes: 5, replies: [] },
-        { id: 7, user: 'NewbieStreamer', avatarColor: 'bg-pink-500', time: '1 day ago', text: 'Is this the season finale? I\'m confused.', likes: 2, dislikes: 0, replies: [] },
-        { id: 8, user: 'OldFan', avatarColor: 'bg-indigo-500', time: '2 days ago', text: 'Better than the manga honestly.', likes: 50, dislikes: 10, replies: [] },
-        { id: 9, user: 'JustWatching', avatarColor: 'bg-teal-500', time: '2 days ago', text: 'Meh, it was okay.', likes: 1, dislikes: 8, replies: [] },
-        { id: 10, user: 'SuperStar', avatarColor: 'bg-orange-500', time: '2 days ago', text: 'First time watching this series, I\'m hooked!', likes: 30, dislikes: 0, replies: [] }
+        { id: 3, user: 'Hater123', avatarColor: 'bg-gray-500', time: '5 hours ago', text: 'Honestly, pacing was a bit slow for me. Expected more action.', likes: 3, dislikes: 15, replies: [] }
     ];
     let comments = [];
     
@@ -733,29 +945,20 @@
         initComments();
         renderRelatedLists();
         setupVideoPlayer();
+        updateSeasonArrows();
         
-        // Handle window resize for responsive adjustments
         window.addEventListener('resize', handleResponsiveLayout);
         handleResponsiveLayout();
     }
     
-    // Handle responsive layout adjustments
     function handleResponsiveLayout() {
         const isMobile = window.innerWidth < 768;
-        const isTablet = window.innerWidth >= 768 && window.innerWidth < 1024;
-        
-        // Adjust episode list height for mobile
         const episodeContainer = document.getElementById('episode-list-container');
         if (episodeContainer) {
-            if (isMobile) {
-                episodeContainer.style.maxHeight = '400px';
-            } else {
-                episodeContainer.style.maxHeight = '500px';
-            }
+            episodeContainer.style.maxHeight = isMobile ? '400px' : '500px';
         }
     }
     
-    // Setup video player
     function setupVideoPlayer() {
         const playButton = document.getElementById('play-button');
         const videoContainer = document.getElementById('video-player-container');
@@ -768,57 +971,49 @@
             }
         });
         
-        // Load first video initially
         loadVideo();
         isVideoLoaded = true;
         document.getElementById('video-loading-overlay').style.display = 'none';
     }
     
-    // Load Video based on current state
+    // UPDATED: Load Video based on current season and server
     function loadVideo() {
         const container = document.getElementById('video-player-container');
         const episodes = episodeData[currentSeason] || [];
         
-        // Check if episode exists
+        // Check if episode exists for this season
         if (currentEpisode > episodes.length) {
             currentEpisode = 1;
         }
         
-        // Get the correct episode index (arrays are 0-based)
         const episodeIndex = currentEpisode - 1;
         
-        // Determine which URL array to use based on season
-        let urlArray;
-        switch(currentSeason) {
-            case '1':
-                urlArray = allEpisodeUrls;
-                break;
-            case '2':
-                urlArray = season2Urls;
-                break;
-            case '3':
-                urlArray = season3Urls;
-                break;
-            case 'ova':
-                urlArray = ovaUrls;
-                break;
-            default:
-                urlArray = allEpisodeUrls;
+        // Get server data for current season
+        const seasonServers = seasonServersData[currentSeason] || seasonServersData['1'];
+        if (!seasonServers) {
+            console.error(`No server data found for season ${currentSeason}`);
+            return;
+        }
+        
+        // Get URLs for current server in current season
+        const serverUrls = seasonServers[currentServer];
+        if (!serverUrls || serverUrls.length === 0) {
+            console.error(`No URLs found for server ${currentServer} in season ${currentSeason}`);
+            return;
         }
         
         // Get video URL based on episode index
         let videoUrl = '';
-        if (episodeIndex < urlArray.length) {
-            videoUrl = urlArray[episodeIndex];
+        if (episodeIndex < serverUrls.length) {
+            videoUrl = serverUrls[episodeIndex];
+        } else if (serverUrls.length > 0) {
+            videoUrl = serverUrls[0];
         } else {
-            // Fallback to first episode if index is out of bounds
-            videoUrl = urlArray[0] || 'https://filemoon.in/e/bzd5u1d7rzql';
+            videoUrl = 'https://filemoon.in/e/bzd5u1d7rzql';
         }
         
-        // Create embed URL (assuming FileMoon embed structure)
         const embedUrl = `${videoUrl}?autoplay=1&controls=1&modestbranding=1&rel=0`;
         
-        // Clear container and add iframe
         container.innerHTML = '';
         const iframe = document.createElement('iframe');
         iframe.className = 'video-container';
@@ -826,47 +1021,74 @@
         iframe.frameBorder = '0';
         iframe.allow = 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture';
         iframe.allowFullscreen = true;
-        iframe.title = `Episode ${currentEpisode} - The Shawshank Redemption`;
+        iframe.title = `Season ${currentSeason} Episode ${currentEpisode}`;
         container.appendChild(iframe);
         
-        console.log(`Loading video: Season ${currentSeason}, Episode ${currentEpisode}, Server: ${currentServer}, URL: ${videoUrl}`);
+        console.log(`Loading: Season ${currentSeason}, Episode ${currentEpisode}, Server: ${currentServer}`);
     }
     
-    // Handle Season Selection
+    // UPDATED: Season Selection with proper season-based loading
     function selectSeason(btn) {
+        // Update UI
+        document.querySelectorAll('.season-btn').forEach(b => {
+            b.classList.remove('active', 'text-primary', 'border-primary');
+            b.classList.add('text-gray-500', 'dark:text-gray-400', 'border-transparent');
+        });
+        
+        btn.classList.remove('text-gray-500', 'dark:text-gray-400', 'border-transparent');
+        btn.classList.add('active', 'text-primary', 'border-primary');
+        
+        // Update current season
         currentSeason = btn.getAttribute('data-season');
+        
         // Reset to first episode of new season
         currentEpisode = 1; 
+        
+        // Reset to default server for the season
+        currentServer = 'SUB-HD-01';
+        
+        // Re-render everything
         renderEpisodeList();
         updateUI();
         loadVideo();
+        
+        // Scroll the selected season into view
+        setTimeout(() => {
+            if (btn) {
+                btn.scrollIntoView({
+                    behavior: 'smooth',
+                    inline: 'center',
+                    block: 'nearest'
+                });
+            }
+        }, 100);
     }
     
-    // Handle Server Selection
+    // UPDATED: Server Selection with season-based URLs
     function selectServer(btn) {
         currentServer = btn.getAttribute('data-server');
         updateUI();
         loadVideo();
     }
     
-    // Handle Episode Selection
     function selectEpisode(btn) {
         const ep = parseInt(btn.getAttribute('data-episode'));
         currentEpisode = ep;
         updateUI();
-        renderEpisodeList(); // Re-render to update active state styles
+        renderEpisodeList();
         loadVideo();
     }
     
-    // Handle Previous/Next Buttons
     function changeEpisode(direction) {
-        const episodes = episodeData[currentSeason];
+        const episodes = episodeData[currentSeason] || [];
         const currentIndex = episodes.findIndex(ep => ep.id === currentEpisode);
         
         if (direction === 'next' && currentIndex < episodes.length - 1) {
             currentEpisode = episodes[currentIndex + 1].id;
         } else if (direction === 'prev' && currentIndex > 0) {
             currentEpisode = episodes[currentIndex - 1].id;
+        } else {
+            return;
         }
         
         updateUI();
@@ -874,10 +1096,20 @@
         loadVideo();
     }
     
-    // Render Episode List
+    // UPDATED: Render episode list for current season
     function renderEpisodeList() {
         const container = document.getElementById('episode-list-container');
         const episodes = episodeData[currentSeason] || [];
+        
+        if (episodes.length === 0) {
+            container.innerHTML = `
+                <div class="text-center py-8 text-gray-500 dark:text-gray-400">
+                    <span class="material-symbols-outlined text-4xl mb-2">movie</span>
+                    <p class="text-sm">No episodes available for this season</p>
+                </div>
+            `;
+            return;
+        }
         
         let html = '<div class="space-y-1">';
         episodes.forEach(ep => {
@@ -912,10 +1144,11 @@
         container.innerHTML = html;
     }
     
-    // Update General UI (Active Classes, Text)
     function updateUI() {
-        // Update "You are watching" text
-        document.getElementById('current-episode-display').innerText = `Episode ${currentEpisode}`;
+        const episodeDisplay = document.getElementById('current-episode-display');
+        if (episodeDisplay) {
+            episodeDisplay.innerText = `Episode ${currentEpisode}`;
+        }
         
         // Update Season Buttons
         document.querySelectorAll('.season-btn').forEach(btn => {
@@ -940,6 +1173,48 @@
         });
     }
     
+    // --- SEASON SCROLLING FUNCTIONS ---
+    function scrollSeasons(direction) {
+        const container = document.getElementById('season-tabs-container');
+        if (!container) return;
+        
+        const scrollAmount = 200;
+        
+        if (direction === 'left') {
+            container.scrollLeft -= scrollAmount;
+        } else {
+            container.scrollLeft += scrollAmount;
+        }
+        
+        updateSeasonArrows();
+    }
+    
+    function updateSeasonArrows() {
+        const container = document.getElementById('season-tabs-container');
+        if (!container) return;
+        
+        const prevBtn = document.querySelector('.season-nav-btn-prev');
+        const nextBtn = document.querySelector('.season-nav-btn-next');
+        
+        if (!prevBtn || !nextBtn) return;
+        
+        if (container.scrollLeft <= 10) {
+            prevBtn.disabled = true;
+            prevBtn.classList.add('opacity-50', 'cursor-not-allowed');
+        } else {
+            prevBtn.disabled = false;
+            prevBtn.classList.remove('opacity-50', 'cursor-not-allowed');
+        }
+        
+        if (container.scrollLeft + container.clientWidth >= container.scrollWidth - 10) {
+            nextBtn.disabled = true;
+            nextBtn.classList.add('opacity-50', 'cursor-not-allowed');
+        } else {
+            nextBtn.disabled = false;
+            nextBtn.classList.remove('opacity-50', 'cursor-not-allowed');
+        }
+    }
+    
     // --- COMMENTS FUNCTIONS ---
     function initComments() {
         const saved = localStorage.getItem(commentsStorageKey);
@@ -959,7 +1234,10 @@
     
     function renderComments() {
         const container = document.getElementById('comments-list-container');
-        document.getElementById('comment-count-badge').innerText = `(${comments.length})`;
+        const badge = document.getElementById('comment-count-badge');
+        if (!container || !badge) return;
+        
+        badge.innerText = `(${comments.length})`;
         
         let html = '';
         comments.forEach(comment => {
@@ -1078,11 +1356,13 @@
     
     function toggleReplyBox(id) {
         const box = document.getElementById(`reply-box-${id}`);
-        box.classList.toggle('hidden');
+        if (box) box.classList.toggle('hidden');
     }
     
     function postReply(commentId) {
         const input = document.getElementById(`reply-input-${commentId}`);
+        if (!input) return;
+        
         const text = input.value.trim();
         if(text) {
             const comment = comments.find(c => c.id === commentId);
@@ -1138,7 +1418,7 @@
                 </a>
             `;
         }
-        recContainer.innerHTML = recHtml;
+        if (recContainer) recContainer.innerHTML = recHtml;
         
         // Generate 18 items for Most Popular
         let popHtml = '';
@@ -1166,24 +1446,16 @@
                 </a>
             `;
         }
-        popContainer.innerHTML = popHtml;
+        if (popContainer) popContainer.innerHTML = popHtml;
     }
     
     // Local Storage logic for "Add to list" button
-    const listButtonText = document.getElementById('current-list-status-text');
-    const storageKey = 'quravel_list_status_shawshank';
-    
-    // Initialize button text from local storage
-    const savedStatus = localStorage.getItem(storageKey);
-    if (savedStatus) {
-         if(savedStatus === 'Add to List') {
-             listButtonText.innerText = 'Add to List';
-        } else {
-             listButtonText.innerText = savedStatus;
-        }
-    }
-    
     function updateListStatus(status) {
+        const listButtonText = document.getElementById('current-list-status-text');
+        const storageKey = 'quravel_list_status_shawshank';
+        
+        if (!listButtonText) return;
+        
         if (status === 'Add to List') {
             listButtonText.innerText = 'Add to List';
             localStorage.removeItem(storageKey);
@@ -1213,47 +1485,57 @@
     function toggleMobileMenu() {
         const menu = document.getElementById('mobile-menu');
         const overlay = document.getElementById('mobile-menu-overlay');
-        menu.classList.toggle('menu-open');
-        overlay.classList.toggle('hidden');
+        if (menu && overlay) {
+            menu.classList.toggle('menu-open');
+            overlay.classList.toggle('hidden');
+        }
     }
     
     // Mobile Search Toggle
     function toggleMobileSearch() {
         const searchBar = document.getElementById('mobile-search-bar');
-        searchBar.classList.toggle('hidden');
+        if (searchBar) searchBar.classList.toggle('hidden');
     }
     
     // Mobile Dropdown Accordion
     function toggleMobileDropdown(id) {
         const dropdown = document.getElementById(id);
+        if (!dropdown) return;
+        
         dropdown.classList.toggle('hidden');
-        // Rotate arrow
         const arrowId = id === 'genre-mobile' ? 'genre-arrow' : 'country-arrow';
         const arrow = document.getElementById(arrowId);
-        if (dropdown.classList.contains('hidden')) {
-            arrow.style.transform = 'rotate(0deg)';
-        } else {
-            arrow.style.transform = 'rotate(180deg)';
+        if (arrow) {
+            arrow.style.transform = dropdown.classList.contains('hidden') ? 'rotate(0deg)' : 'rotate(180deg)';
         }
     }
-
+    
     function toggleDescription() {
-    const description = document.getElementById('description-text');
-    const isExpanded = description.classList.contains('expanded');
-    
-    if (isExpanded) {
-        // Collapse
-        description.classList.remove('line-clamp-none', 'expanded');
-        description.classList.add('line-clamp-4');
-    } else {
-        // Expand
-        description.classList.remove('line-clamp-4');
-        description.classList.add('line-clamp-none', 'expanded');
+        const description = document.getElementById('description-text');
+        if (!description) return;
+        
+        const isExpanded = description.classList.contains('expanded');
+        
+        if (isExpanded) {
+            description.classList.remove('line-clamp-none', 'expanded');
+            description.classList.add('line-clamp-4');
+        } else {
+            description.classList.remove('line-clamp-4');
+            description.classList.add('line-clamp-none', 'expanded');
+        }
     }
-}
     
-    // Initialize everything when DOM is loaded
-    document.addEventListener('DOMContentLoaded', initializePage);
+    // Initialize everything
+    document.addEventListener('DOMContentLoaded', function() {
+        // Setup season scrolling event listeners
+        const seasonContainer = document.getElementById('season-tabs-container');
+        if (seasonContainer) {
+            seasonContainer.addEventListener('scroll', updateSeasonArrows);
+            window.addEventListener('resize', updateSeasonArrows);
+        }
+        
+        initializePage();
+    });
 </script>
 </body>
 </html>
