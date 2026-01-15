@@ -383,7 +383,7 @@
 </div>
 <div class="grid grid-cols-3 gap-2">
 <span class="font-medium text-gray-900 dark:text-white">Duration:</span>
-<span class="col-span-2 text-xs">142 min</span>
+<span class="col-span-2 text-xs">2h 25min</span>
 </div>
 <div class="grid grid-cols-3 gap-2">
 <span class="font-medium text-gray-900 dark:text-white">Status:</span>
