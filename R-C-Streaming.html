@@ -460,255 +460,278 @@
 </header>
 
 <main class="flex-grow pt-20 pb-12 w-full max-w-[1920px] mx-auto">
-<div class="container mx-auto px-4 lg:px-6">
-    <!-- Responsive Grid Layout -->
-    <div class="main-content-grid grid grid-cols-1 lg:grid-cols-4 gap-6">
-        
-        <!-- Left Column (Video + Controls + Episodes + Recommended) -->
-        <div class="main-content lg:col-span-3 space-y-6">
+    <div class="container mx-auto px-4 lg:px-6">
+        <!-- Main Grid Container -->
+        <div class="main-content-grid">
             
-            <!-- Video Player -->
-            <div class="bg-white dark:bg-[#151926] rounded-xl overflow-hidden shadow-sm border border-gray-200 dark:border-gray-800">
-                <div class="video-container-wrapper" id="video-player-container">
-                    <!-- Video will be loaded here dynamically -->
-                    <div class="absolute inset-0 flex items-center justify-center bg-black" id="video-loading-overlay">
-                        <span class="material-symbols-outlined text-6xl text-white opacity-50 group-hover:opacity-100 transition-opacity cursor-pointer" id="play-button">play_circle</span>
+            <!-- Left Column (Main Content) -->
+            <div class="main-content">
+                
+                <!-- Video Player -->
+                <div class="bg-white dark:bg-[#151926] rounded-xl overflow-hidden shadow-sm border border-gray-200 dark:border-gray-800">
+                    <div class="video-container-wrapper" id="video-player-container">
+                        <div class="absolute inset-0 flex items-center justify-center bg-black" id="video-loading-overlay">
+                            <span class="material-symbols-outlined text-6xl text-white opacity-50 group-hover:opacity-100 transition-opacity cursor-pointer" id="play-button">play_circle</span>
+                        </div>
+                    </div>
+                    
+                    <!-- Video Controls -->
+                    <div class="p-4 border-t border-gray-200 dark:border-gray-700">
+                        <div class="flex flex-col md:flex-row items-start md:items-center justify-between gap-4 mb-4 video-controls">
+                            <div class="flex items-center gap-2">
+                                <span class="text-sm text-gray-500 dark:text-gray-400">You are watching:</span>
+                                <span class="font-bold text-primary" id="current-episode-display">Episode 1</span>
+                            </div>
+                            <div class="flex items-center gap-2">
+                                <button class="flex items-center gap-1 text-xs bg-gray-100 dark:bg-gray-800 hover:bg-primary hover:text-white px-3 py-2 rounded transition-colors dark:text-gray-300" onclick="changeEpisode('prev')">
+                                    <span class="material-symbols-outlined text-sm">skip_previous</span> Prev
+                                </button>
+                                <button class="flex items-center gap-1 text-xs bg-gray-100 dark:bg-gray-800 hover:bg-primary hover:text-white px-3 py-2 rounded transition-colors dark:text-gray-300" onclick="changeEpisode('next')">
+                                    Next <span class="material-symbols-outlined text-sm">skip_next</span>
+                                </button>
+                                <div class="relative group ml-2">
+                                    <button class="flex items-center gap-1 text-xs bg-primary/10 text-primary hover:bg-primary hover:text-white px-3 py-2 rounded transition-colors" id="add-to-list-btn">
+                                        <span class="material-symbols-outlined text-sm">add</span>
+                                        <span id="current-list-status-text">Add to List</span>
+                                    </button>
+                                    <div class="absolute right-0 top-full mt-2 w-48 bg-white dark:bg-surface-dark rounded-lg shadow-xl py-1 z-20 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 border border-gray-200 dark:border-gray-700 text-xs">
+                                        <button class="block w-full text-left px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-800 text-gray-700 dark:text-gray-300" onclick="updateListStatus('Planning to watch')">Planning to watch</button>
+                                        <button class="block w-full text-left px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-800 text-gray-700 dark:text-gray-300" onclick="updateListStatus('Watching')">Watching</button>
+                                        <button class="block w-full text-left px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-800 text-gray-700 dark:text-gray-300" onclick="updateListStatus('Completed')">Completed</button>
+                                        <button class="block w-full text-left px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-800 text-gray-700 dark:text-gray-300" onclick="updateListStatus('Rewatching')">Rewatching</button>
+                                        <button class="block w-full text-left px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-800 text-gray-700 dark:text-gray-300" onclick="updateListStatus('Dropped')">Dropped</button>
+                                        <div class="border-t border-gray-200 dark:border-gray-700 my-1"></div>
+                                        <button class="block w-full text-left px-4 py-2 hover:bg-red-50 dark:hover:bg-red-900/20 text-red-500" onclick="updateListStatus('Add to List')">Remove from list</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Server Selection -->
+                        <div class="space-y-3 mb-6 bg-gray-50 dark:bg-black/20 p-4 rounded-lg">
+                            <div class="flex flex-col sm:flex-row gap-4 items-start sm:items-center">
+                                <span class="text-xs font-bold text-gray-500 dark:text-gray-400 w-12 flex-shrink-0">SUB:</span>
+                                <div class="flex flex-wrap gap-2 server-buttons">
+                                    <button class="server-btn px-3 py-2 rounded text-xs font-medium bg-primary text-white shadow-sm hover:bg-primary/90 transition" data-server="SUB-HD-01" onclick="selectServer(this)">HD-01</button>
+                                    <button class="server-btn px-3 py-2 rounded text-xs font-medium bg-gray-200 dark:bg-gray-800 text-gray-700 dark:text-gray-300 hover:bg-gray-300 dark:hover:bg-gray-700 transition" data-server="SUB-HD-02" onclick="selectServer(this)">HD-02</button>
+                                    <button class="server-btn px-3 py-2 rounded text-xs font-medium bg-gray-200 dark:bg-gray-800 text-gray-700 dark:text-gray-300 hover:bg-gray-300 dark:hover:bg-gray-700 transition" data-server="SUB-HD-03" onclick="selectServer(this)">HD-03</button>
+                                    <button class="server-btn px-3 py-2 rounded text-xs font-medium bg-gray-200 dark:bg-gray-800 text-gray-700 dark:text-gray-300 hover:bg-gray-300 dark:hover:bg-gray-700 transition" data-server="SUB-HD-04" onclick="selectServer(this)">HD-04</button>
+                                    <button class="server-btn px-3 py-2 rounded text-xs font-medium bg-gray-200 dark:bg-gray-800 text-gray-700 dark:text-gray-300 hover:bg-gray-300 dark:hover:bg-gray-700 transition" data-server="SUB-HD-05" onclick="selectServer(this)">HD-05</button>
+                                </div>
+                            </div>
+                            <div class="flex flex-col sm:flex-row gap-4 items-start sm:items-center">
+                                <span class="text-xs font-bold text-gray-500 dark:text-gray-400 w-12 flex-shrink-0">DUB:</span>
+                                <div class="flex flex-wrap gap-2 server-buttons">
+                                    <button class="server-btn px-3 py-2 rounded text-xs font-medium bg-gray-200 dark:bg-gray-800 text-gray-700 dark:text-gray-300 hover:bg-gray-300 dark:hover:bg-gray-700 transition" data-server="DUB-HD-01" onclick="selectServer(this)">HD-01</button>
+                                    <button class="server-btn px-3 py-2 rounded text-xs font-medium bg-gray-200 dark:bg-gray-800 text-gray-700 dark:text-gray-300 hover:bg-gray-300 dark:hover:bg-gray-700 transition" data-server="DUB-HD-02" onclick="selectServer(this)">HD-02</button>
+                                    <button class="server-btn px-3 py-2 rounded text-xs font-medium bg-gray-200 dark:bg-gray-800 text-gray-700 dark:text-gray-300 hover:bg-gray-300 dark:hover:bg-gray-700 transition" data-server="DUB-HD-03" onclick="selectServer(this)">HD-03</button>
+                                    <button class="server-btn px-3 py-2 rounded text-xs font-medium bg-gray-200 dark:bg-gray-800 text-gray-700 dark:text-gray-300 hover:bg-gray-300 dark:hover:bg-gray-700 transition" data-server="DUB-HD-04" onclick="selectServer(this)">HD-04</button>
+                                    <button class="server-btn px-3 py-2 rounded text-xs font-medium bg-gray-200 dark:bg-gray-800 text-gray-700 dark:text-gray-300 hover:bg-gray-300 dark:hover:bg-gray-700 transition" data-server="DUB-HD-05" onclick="selectServer(this)">HD-05</button>
+                                </div>
+                            </div>
+                            <div class="flex flex-col sm:flex-row gap-4 items-start sm:items-center">
+                                <span class="text-xs font-bold text-gray-500 dark:text-gray-400 w-12 flex-shrink-0">RAW:</span>
+                                <div class="flex flex-wrap gap-2 server-buttons">
+                                    <button class="server-btn px-3 py-2 rounded text-xs font-medium bg-gray-200 dark:bg-gray-800 text-gray-700 dark:text-gray-300 hover:bg-gray-300 dark:hover:bg-gray-700 transition" data-server="RAW-HD-01" onclick="selectServer(this)">HD-01</button>
+                                    <button class="server-btn px-3 py-2 rounded text-xs font-medium bg-gray-200 dark:bg-gray-800 text-gray-700 dark:text-gray-300 hover:bg-gray-300 dark:hover:bg-gray-700 transition" data-server="RAW-HD-02" onclick="selectServer(this)">HD-02</button>
+                                    <button class="server-btn px-3 py-2 rounded text-xs font-medium bg-gray-200 dark:bg-gray-800 text-gray-700 dark:text-gray-300 hover:bg-gray-300 dark:hover:bg-gray-700 transition" data-server="RAW-HD-03" onclick="selectServer(this)">HD-03</button>
+                                    <button class="server-btn px-3 py-2 rounded text-xs font-medium bg-gray-200 dark:bg-gray-800 text-gray-700 dark:text-gray-300 hover:bg-gray-300 dark:hover:bg-gray-700 transition" data-server="RAW-HD-04" onclick="selectServer(this)">HD-04</button>
+                                    <button class="server-btn px-3 py-2 rounded text-xs font-medium bg-gray-200 dark:bg-gray-800 text-gray-700 dark:text-gray-300 hover:bg-gray-300 dark:hover:bg-gray-700 transition" data-server="RAW-HD-05" onclick="selectServer(this)">HD-05</button>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Season Selection -->
+                        <div class="relative mb-4">
+                            <!-- Desktop Arrow Navigation -->
+                            <div class="hidden lg:flex absolute left-0 top-0 bottom-0 items-center z-10">
+                                <button class="season-nav-btn-prev bg-white dark:bg-gray-800 shadow-lg rounded-full p-2 -ml-2 hover:bg-gray-100 dark:hover:bg-gray-700 transition-all disabled:opacity-50 disabled:cursor-not-allowed" onclick="scrollSeasons('left')" aria-label="Scroll seasons left">
+                                    <svg class="w-5 h-5 text-gray-700 dark:text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+                                    </svg>
+                                </button>
+                            </div>
+                            
+                            <div class="hidden lg:flex absolute right-0 top-0 bottom-0 items-center z-10">
+                                <button class="season-nav-btn-next bg-white dark:bg-gray-800 shadow-lg rounded-full p-2 -mr-2 hover:bg-gray-100 dark:hover:bg-gray-700 transition-all disabled:opacity-50 disabled:cursor-not-allowed" onclick="scrollSeasons('right')" aria-label="Scroll seasons right">
+                                    <svg class="w-5 h-5 text-gray-700 dark:text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                                    </svg>
+                                </button>
+                            </div>
+                            
+                            <!-- Season Tabs Container -->
+                            <div class="flex items-center gap-2 overflow-x-auto hide-scrollbar pb-2 border-b border-gray-200 dark:border-gray-700 season-tabs" id="season-tabs-container">
+                                <button class="season-btn px-4 py-2 text-sm font-medium text-primary border-b-2 border-primary whitespace-nowrap transition-colors flex-shrink-0" data-season="1" onclick="selectSeason(this)">Season 1</button>
+                                <button class="season-btn px-4 py-2 text-sm font-medium text-gray-500 dark:text-gray-400 hover:text-gray-800 dark:hover:text-gray-200 whitespace-nowrap transition-colors border-b-2 border-transparent flex-shrink-0" data-season="2" onclick="selectSeason(this)">Season 2</button>
+                                <button class="season-btn px-4 py-2 text-sm font-medium text-gray-500 dark:text-gray-400 hover:text-gray-800 dark:hover:text-gray-200 whitespace-nowrap transition-colors border-b-2 border-transparent flex-shrink-0" data-season="3" onclick="selectSeason(this)">Season 3</button>
+                                <button class="season-btn px-4 py-2 text-sm font-medium text-gray-500 dark:text-gray-400 hover:text-gray-800 dark:hover:text-gray-200 whitespace-nowrap transition-colors border-b-2 border-transparent flex-shrink-0" data-season="4" onclick="selectSeason(this)">Season 4</button>
+                                <button class="season-btn px-4 py-2 text-sm font-medium text-gray-500 dark:text-gray-400 hover:text-gray-800 dark:hover:text-gray-200 whitespace-nowrap transition-colors border-b-2 border-transparent flex-shrink-0" data-season="5" onclick="selectSeason(this)">Season 5</button>
+                                <button class="season-btn px-4 py-2 text-sm font-medium text-gray-500 dark:text-gray-400 hover:text-gray-800 dark:hover:text-gray-200 whitespace-nowrap transition-colors border-b-2 border-transparent flex-shrink-0" data-season="6" onclick="selectSeason(this)">Season 6</button>
+                                <button class="season-btn px-4 py-2 text-sm font-medium text-gray-500 dark:text-gray-400 hover:text-gray-800 dark:hover:text-gray-200 whitespace-nowrap transition-colors border-b-2 border-transparent flex-shrink-0" data-season="7" onclick="selectSeason(this)">Season 7</button>
+                                <button class="season-btn px-4 py-2 text-sm font-medium text-gray-500 dark:text-gray-400 hover:text-gray-800 dark:hover:text-gray-200 whitespace-nowrap transition-colors border-b-2 border-transparent flex-shrink-0" data-season="8" onclick="selectSeason(this)">Season 8</button>
+                                <button class="season-btn px-4 py-2 text-sm font-medium text-gray-500 dark:text-gray-400 hover:text-gray-800 dark:hover:text-gray-200 whitespace-nowrap transition-colors border-b-2 border-transparent flex-shrink-0" data-season="9" onclick="selectSeason(this)">Season 9</button>
+                                <button class="season-btn px-4 py-2 text-sm font-medium text-gray-500 dark:text-gray-400 hover:text-gray-800 dark:hover:text-gray-200 whitespace-nowrap transition-colors border-b-2 border-transparent flex-shrink-0" data-season="ova" onclick="selectSeason(this)">OVA</button>
+                                <button class="season-btn px-4 py-2 text-sm font-medium text-gray-500 dark:text-gray-400 hover:text-gray-800 dark:hover:text-gray-200 whitespace-nowrap transition-colors border-b-2 border-transparent flex-shrink-0" data-season="specials" onclick="selectSeason(this)">Specials</button>
+                                <button class="season-btn px-4 py-2 text-sm font-medium text-gray-500 dark:text-gray-400 hover:text-gray-800 dark:hover:text-gray-200 whitespace-nowrap transition-colors border-b-2 border-transparent flex-shrink-0" data-season="movies" onclick="selectSeason(this)">Movies</button>
+                            </div>
+                        </div>
                     </div>
                 </div>
-                
-                <!-- Video Controls -->
-                <div class="p-4 border-t border-gray-200 dark:border-gray-700">
-                    <div class="flex flex-col md:flex-row items-start md:items-center justify-between gap-4 mb-4 video-controls">
-                        <div class="flex items-center gap-2">
-                            <span class="text-sm text-gray-500 dark:text-gray-400">You are watching:</span>
-                            <span class="font-bold text-primary" id="current-episode-display">Episode 1</span>
-                        </div>
-                        <div class="flex items-center gap-2">
-                            <button class="flex items-center gap-1 text-xs bg-gray-100 dark:bg-gray-800 hover:bg-primary hover:text-white px-3 py-2 rounded transition-colors dark:text-gray-300" onclick="changeEpisode('prev')">
-                                <span class="material-symbols-outlined text-sm">skip_previous</span> Prev
-                            </button>
-                            <button class="flex items-center gap-1 text-xs bg-gray-100 dark:bg-gray-800 hover:bg-primary hover:text-white px-3 py-2 rounded transition-colors dark:text-gray-300" onclick="changeEpisode('next')">
-                                Next <span class="material-symbols-outlined text-sm">skip_next</span>
-                            </button>
-                            <div class="relative group ml-2">
-                                <button class="flex items-center gap-1 text-xs bg-primary/10 text-primary hover:bg-primary hover:text-white px-3 py-2 rounded transition-colors" id="add-to-list-btn">
-                                    <span class="material-symbols-outlined text-sm">add</span>
-                                    <span id="current-list-status-text">Add to List</span>
-                                </button>
-                                <div class="absolute right-0 top-full mt-2 w-48 bg-white dark:bg-surface-dark rounded-lg shadow-xl py-1 z-20 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 border border-gray-200 dark:border-gray-700 text-xs">
-                                    <button class="block w-full text-left px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-800 text-gray-700 dark:text-gray-300" onclick="updateListStatus('Planning to watch')">Planning to watch</button>
-                                    <button class="block w-full text-left px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-800 text-gray-700 dark:text-gray-300" onclick="updateListStatus('Watching')">Watching</button>
-                                    <button class="block w-full text-left px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-800 text-gray-700 dark:text-gray-300" onclick="updateListStatus('Completed')">Completed</button>
-                                    <button class="block w-full text-left px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-800 text-gray-700 dark:text-gray-300" onclick="updateListStatus('Rewatching')">Rewatching</button>
-                                    <button class="block w-full text-left px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-800 text-gray-700 dark:text-gray-300" onclick="updateListStatus('Dropped')">Dropped</button>
-                                    <div class="border-t border-gray-200 dark:border-gray-700 my-1"></div>
-                                    <button class="block w-full text-left px-4 py-2 hover:bg-red-50 dark:hover:bg-red-900/20 text-red-500" onclick="updateListStatus('Add to List')">Remove from list</button>
+
+                <!-- Episode List -->
+                <div class="bg-white dark:bg-[#151926] rounded-xl overflow-hidden shadow-sm border border-gray-200 dark:border-gray-800">
+                    <div class="p-4 border-b border-gray-200 dark:border-gray-700 font-bold text-lg">Episodes</div>
+                    <div class="max-h-[500px] overflow-y-auto custom-scrollbar p-2" id="episode-list-container">
+                        <!-- Episodes will be loaded here -->
+                    </div>
+                </div>
+
+                <!-- Recommended for You -->
+                <div class="bg-white dark:bg-[#151926] rounded-xl overflow-hidden shadow-sm border border-gray-200 dark:border-gray-800 recommended-section">
+                    <div class="p-4 border-b border-gray-200 dark:border-gray-700 font-bold text-lg text-primary">Recommended for you</div>
+                    <div class="max-h-[600px] overflow-y-auto custom-scrollbar p-4 grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 xl:grid-cols-7 gap-4 recommended-grid" id="recommended-list-container">
+                        <!-- Recommended content will be loaded here -->
+                    </div>
+                </div>
+
+                <!-- Comments Section -->
+                <div class="bg-white dark:bg-[#151926] rounded-xl overflow-hidden shadow-sm border border-gray-200 dark:border-gray-800 comments-section">
+                    <div class="p-4 border-b border-gray-200 dark:border-gray-700 flex justify-between items-center">
+                        <span class="font-bold text-lg text-gray-900 dark:text-white">Comments <span class="text-primary text-sm font-normal ml-1" id="comment-count-badge"></span></span>
+                    </div>
+                    <div class="p-4 bg-gray-50 dark:bg-black/20">
+                        <div class="flex gap-4 comment-input-section">
+                            <div class="w-10 h-10 rounded-full bg-primary/20 flex items-center justify-center text-primary font-bold flex-shrink-0">You</div>
+                            <div class="flex-1">
+                                <textarea class="w-full bg-white dark:bg-gray-800 border-0 rounded-lg p-3 text-sm focus:ring-2 focus:ring-primary dark:text-white placeholder-gray-400" id="new-comment-input" placeholder="Join the discussion..." rows="3"></textarea>
+                                <div class="flex justify-end mt-2">
+                                    <button class="bg-primary hover:bg-opacity-90 text-white text-xs font-semibold py-2 px-6 rounded-full transition-colors shadow-sm" onclick="postNewComment()">Post Comment</button>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    
-                    <!-- Server Selection -->
-                    <div class="space-y-3 mb-6 bg-gray-50 dark:bg-black/20 p-4 rounded-lg">
-                        <div class="flex flex-col sm:flex-row gap-4 items-start sm:items-center">
-                            <span class="text-xs font-bold text-gray-500 dark:text-gray-400 w-12 flex-shrink-0">SUB:</span>
-                            <div class="flex flex-wrap gap-2 server-buttons">
-                                <button class="server-btn px-3 py-2 rounded text-xs font-medium bg-primary text-white shadow-sm hover:bg-primary/90 transition" data-server="SUB-HD-01" onclick="selectServer(this)">HD-01</button>
-                                <button class="server-btn px-3 py-2 rounded text-xs font-medium bg-gray-200 dark:bg-gray-800 text-gray-700 dark:text-gray-300 hover:bg-gray-300 dark:hover:bg-gray-700 transition" data-server="SUB-HD-02" onclick="selectServer(this)">HD-02</button>
-                                <button class="server-btn px-3 py-2 rounded text-xs font-medium bg-gray-200 dark:bg-gray-800 text-gray-700 dark:text-gray-300 hover:bg-gray-300 dark:hover:bg-gray-700 transition" data-server="SUB-HD-03" onclick="selectServer(this)">HD-03</button>
-                                <button class="server-btn px-3 py-2 rounded text-xs font-medium bg-gray-200 dark:bg-gray-800 text-gray-700 dark:text-gray-300 hover:bg-gray-300 dark:hover:bg-gray-700 transition" data-server="SUB-HD-04" onclick="selectServer(this)">HD-04</button>
-                                <button class="server-btn px-3 py-2 rounded text-xs font-medium bg-gray-200 dark:bg-gray-800 text-gray-700 dark:text-gray-300 hover:bg-gray-300 dark:hover:bg-gray-700 transition" data-server="SUB-HD-05" onclick="selectServer(this)">HD-05</button>
+                    <div class="max-h-[600px] overflow-y-auto custom-scrollbar" id="comments-list-container">
+                        <!-- Comments will be loaded here -->
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right Sidebar Column -->
+            <div class="sidebar-content">
+                
+                <!-- Movie Details Card (TOP) -->
+                <div class="bg-white dark:bg-[#151926] rounded-xl p-6 shadow-sm border border-gray-200 dark:border-gray-800 h-fit">
+                    <div class="flex gap-4 mb-4">
+                        <img alt="Poster" class="details-poster w-24 h-36 object-cover rounded-lg shadow-md flex-shrink-0" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBL8sSKQhkIHjJRpfaXPOb2Ntr-YMNUhdTfQQNGnnmqGZu3SSewBEFAnXpGTo1YxqHXlb8pOCJCZrgrSF00Ey3CMmhZW5Q7dqz5o0qIOeV3DXsmqV-RKQGF2yEnwCFPLqyZ1R9luYVGdw-P_L6bRKjMPRM2RO5ISubiOat46Ovv-uMFsJfxGzRT0ngWoCZXAiiHQbJOA91N5Wyn21gKPKb6rWilqbabiqUYqUEEe31UdFQXOki6b3glJcCnNMssztZkZ0UYU_mwBbY"/>
+                        <div>
+                            <h1 class="text-xl font-bold leading-tight mb-2">The Shawshank Redemption</h1>
+                            <div class="flex flex-wrap gap-2 text-xs text-gray-500 dark:text-gray-400 mb-2">
+                                <span class="px-1.5 py-0.5 border border-gray-300 dark:border-gray-700 rounded">TV-MA</span>
+                                <span class="px-1.5 py-0.5 bg-primary text-white rounded font-bold">HD</span>
+                                <span class="flex items-center gap-1"><span class="material-symbols-outlined text-sm">mic</span> 12</span>
+                                <span class="flex items-center gap-1"><span class="material-symbols-outlined text-sm">subtitles</span> 12</span>
                             </div>
-                        </div>
-                        <div class="flex flex-col sm:flex-row gap-4 items-start sm:items-center">
-                            <span class="text-xs font-bold text-gray-500 dark:text-gray-400 w-12 flex-shrink-0">DUB:</span>
-                            <div class="flex flex-wrap gap-2 server-buttons">
-                                <button class="server-btn px-3 py-2 rounded text-xs font-medium bg-gray-200 dark:bg-gray-800 text-gray-700 dark:text-gray-300 hover:bg-gray-300 dark:hover:bg-gray-700 transition" data-server="DUB-HD-01" onclick="selectServer(this)">HD-01</button>
-                                <button class="server-btn px-3 py-2 rounded text-xs font-medium bg-gray-200 dark:bg-gray-800 text-gray-700 dark:text-gray-300 hover:bg-gray-300 dark:hover:bg-gray-700 transition" data-server="DUB-HD-02" onclick="selectServer(this)">HD-02</button>
-                                <button class="server-btn px-3 py-2 rounded text-xs font-medium bg-gray-200 dark:bg-gray-800 text-gray-700 dark:text-gray-300 hover:bg-gray-300 dark:hover:bg-gray-700 transition" data-server="DUB-HD-03" onclick="selectServer(this)">HD-03</button>
-                                <button class="server-btn px-3 py-2 rounded text-xs font-medium bg-gray-200 dark:bg-gray-800 text-gray-700 dark:text-gray-300 hover:bg-gray-300 dark:hover:bg-gray-700 transition" data-server="DUB-HD-04" onclick="selectServer(this)">HD-04</button>
-                                <button class="server-btn px-3 py-2 rounded text-xs font-medium bg-gray-200 dark:bg-gray-800 text-gray-700 dark:text-gray-300 hover:bg-gray-300 dark:hover:bg-gray-700 transition" data-server="DUB-HD-05" onclick="selectServer(this)">HD-05</button>
-                            </div>
-                        </div>
-                        <div class="flex flex-col sm:flex-row gap-4 items-start sm:items-center">
-                            <span class="text-xs font-bold text-gray-500 dark:text-gray-400 w-12 flex-shrink-0">RAW:</span>
-                            <div class="flex flex-wrap gap-2 server-buttons">
-                                <button class="server-btn px-3 py-2 rounded text-xs font-medium bg-gray-200 dark:bg-gray-800 text-gray-700 dark:text-gray-300 hover:bg-gray-300 dark:hover:bg-gray-700 transition" data-server="RAW-HD-01" onclick="selectServer(this)">HD-01</button>
-                                <button class="server-btn px-3 py-2 rounded text-xs font-medium bg-gray-200 dark:bg-gray-800 text-gray-700 dark:text-gray-300 hover:bg-gray-300 dark:hover:bg-gray-700 transition" data-server="RAW-HD-02" onclick="selectServer(this)">HD-02</button>
-                                <button class="server-btn px-3 py-2 rounded text-xs font-medium bg-gray-200 dark:bg-gray-800 text-gray-700 dark:text-gray-300 hover:bg-gray-300 dark:hover:bg-gray-700 transition" data-server="RAW-HD-03" onclick="selectServer(this)">HD-03</button>
-                                <button class="server-btn px-3 py-2 rounded text-xs font-medium bg-gray-200 dark:bg-gray-800 text-gray-700 dark:text-gray-300 hover:bg-gray-300 dark:hover:bg-gray-700 transition" data-server="RAW-HD-04" onclick="selectServer(this)">HD-04</button>
-                                <button class="server-btn px-3 py-2 rounded text-xs font-medium bg-gray-200 dark:bg-gray-800 text-gray-700 dark:text-gray-300 hover:bg-gray-300 dark:hover:bg-gray-700 transition" data-server="RAW-HD-05" onclick="selectServer(this)">HD-05</button>
+                            <div class="text-xs text-gray-500 dark:text-gray-400">
+                                Movie • 2h 22m
                             </div>
                         </div>
                     </div>
                     
-                    <!-- Season Selection -->
-<div class="relative mb-4">
-    <!-- Desktop Arrow Navigation -->
-    <div class="hidden lg:flex absolute left-0 top-0 bottom-0 items-center z-10">
-        <button class="season-nav-btn-prev bg-white dark:bg-gray-800 shadow-lg rounded-full p-2 -ml-2 hover:bg-gray-100 dark:hover:bg-gray-700 transition-all disabled:opacity-50 disabled:cursor-not-allowed" onclick="scrollSeasons('left')" aria-label="Scroll seasons left">
-            <svg class="w-5 h-5 text-gray-700 dark:text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
-            </svg>
-        </button>
-    </div>
-    
-    <div class="hidden lg:flex absolute right-0 top-0 bottom-0 items-center z-10">
-        <button class="season-nav-btn-next bg-white dark:bg-gray-800 shadow-lg rounded-full p-2 -mr-2 hover:bg-gray-100 dark:hover:bg-gray-700 transition-all disabled:opacity-50 disabled:cursor-not-allowed" onclick="scrollSeasons('right')" aria-label="Scroll seasons right">
-            <svg class="w-5 h-5 text-gray-700 dark:text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
-            </svg>
-        </button>
-    </div>
-    
-    <!-- Season Tabs Container -->
-    <div class="flex items-center gap-2 overflow-x-auto hide-scrollbar pb-2 border-b border-gray-200 dark:border-gray-700 season-tabs" id="season-tabs-container">
-        <button class="season-btn px-4 py-2 text-sm font-medium text-primary border-b-2 border-primary whitespace-nowrap transition-colors flex-shrink-0" data-season="1" onclick="selectSeason(this)">Season 1</button>
-        <button class="season-btn px-4 py-2 text-sm font-medium text-gray-500 dark:text-gray-400 hover:text-gray-800 dark:hover:text-gray-200 whitespace-nowrap transition-colors border-b-2 border-transparent flex-shrink-0" data-season="2" onclick="selectSeason(this)">Season 2</button>
-        <button class="season-btn px-4 py-2 text-sm font-medium text-gray-500 dark:text-gray-400 hover:text-gray-800 dark:hover:text-gray-200 whitespace-nowrap transition-colors border-b-2 border-transparent flex-shrink-0" data-season="3" onclick="selectSeason(this)">Season 3</button>
-        <button class="season-btn px-4 py-2 text-sm font-medium text-gray-500 dark:text-gray-400 hover:text-gray-800 dark:hover:text-gray-200 whitespace-nowrap transition-colors border-b-2 border-transparent flex-shrink-0" data-season="4" onclick="selectSeason(this)">Season 4</button>
-        <button class="season-btn px-4 py-2 text-sm font-medium text-gray-500 dark:text-gray-400 hover:text-gray-800 dark:hover:text-gray-200 whitespace-nowrap transition-colors border-b-2 border-transparent flex-shrink-0" data-season="5" onclick="selectSeason(this)">Season 5</button>
-        <button class="season-btn px-4 py-2 text-sm font-medium text-gray-500 dark:text-gray-400 hover:text-gray-800 dark:hover:text-gray-200 whitespace-nowrap transition-colors border-b-2 border-transparent flex-shrink-0" data-season="6" onclick="selectSeason(this)">Season 6</button>
-        <button class="season-btn px-4 py-2 text-sm font-medium text-gray-500 dark:text-gray-400 hover:text-gray-800 dark:hover:text-gray-200 whitespace-nowrap transition-colors border-b-2 border-transparent flex-shrink-0" data-season="7" onclick="selectSeason(this)">Season 7</button>
-        <button class="season-btn px-4 py-2 text-sm font-medium text-gray-500 dark:text-gray-400 hover:text-gray-800 dark:hover:text-gray-200 whitespace-nowrap transition-colors border-b-2 border-transparent flex-shrink-0" data-season="8" onclick="selectSeason(this)">Season 8</button>
-        <button class="season-btn px-4 py-2 text-sm font-medium text-gray-500 dark:text-gray-400 hover:text-gray-800 dark:hover:text-gray-200 whitespace-nowrap transition-colors border-b-2 border-transparent flex-shrink-0" data-season="9" onclick="selectSeason(this)">Season 9</button>
-        <button class="season-btn px-4 py-2 text-sm font-medium text-gray-500 dark:text-gray-400 hover:text-gray-800 dark:hover:text-gray-200 whitespace-nowrap transition-colors border-b-2 border-transparent flex-shrink-0" data-season="ova" onclick="selectSeason(this)">OVA</button>
-        <button class="season-btn px-4 py-2 text-sm font-medium text-gray-500 dark:text-gray-400 hover:text-gray-800 dark:hover:text-gray-200 whitespace-nowrap transition-colors border-b-2 border-transparent flex-shrink-0" data-season="specials" onclick="selectSeason(this)">Specials</button>
-        <button class="season-btn px-4 py-2 text-sm font-medium text-gray-500 dark:text-gray-400 hover:text-gray-800 dark:hover:text-gray-200 whitespace-nowrap transition-colors border-b-2 border-transparent flex-shrink-0" data-season="movies" onclick="selectSeason(this)">Movies</button>
-    </div>
-</div>
-            <!-- Episode List -->
-            <div class="bg-white dark:bg-[#151926] rounded-xl overflow-hidden shadow-sm border border-gray-200 dark:border-gray-800">
-                <div class="p-4 border-b border-gray-200 dark:border-gray-700 font-bold text-lg">Episodes</div>
-                <div class="max-h-[500px] overflow-y-auto custom-scrollbar p-2" id="episode-list-container">
-                    <!-- Episodes will be loaded here -->
-                </div>
-            </div>
-
-            <!-- Recommended for You -->
-            <div class="bg-white dark:bg-[#151926] rounded-xl overflow-hidden shadow-sm border border-gray-200 dark:border-gray-800 recommended-section">
-                <div class="p-4 border-b border-gray-200 dark:border-gray-700 font-bold text-lg text-primary">Recommended for you</div>
-                <div class="max-h-[600px] overflow-y-auto custom-scrollbar p-4 grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 xl:grid-cols-7 gap-4 recommended-grid" id="recommended-list-container">
-                    <!-- Recommended content will be loaded here -->
-                </div>
-            </div>
-
-            <!-- Comments Section -->
-            <div class="bg-white dark:bg-[#151926] rounded-xl overflow-hidden shadow-sm border border-gray-200 dark:border-gray-800 comments-section">
-                <div class="p-4 border-b border-gray-200 dark:border-gray-700 flex justify-between items-center">
-                    <span class="font-bold text-lg text-gray-900 dark:text-white">Comments <span class="text-primary text-sm font-normal ml-1" id="comment-count-badge"></span></span>
-                </div>
-                <div class="p-4 bg-gray-50 dark:bg-black/20">
-                    <div class="flex gap-4 comment-input-section">
-                        <div class="w-10 h-10 rounded-full bg-primary/20 flex items-center justify-center text-primary font-bold flex-shrink-0">You</div>
-                        <div class="flex-1">
-                            <textarea class="w-full bg-white dark:bg-gray-800 border-0 rounded-lg p-3 text-sm focus:ring-2 focus:ring-primary dark:text-white placeholder-gray-400" id="new-comment-input" placeholder="Join the discussion..." rows="3"></textarea>
-                            <div class="flex justify-end mt-2">
-                                <button class="bg-primary hover:bg-opacity-90 text-white text-xs font-semibold py-2 px-6 rounded-full transition-colors shadow-sm" onclick="postNewComment()">Post Comment</button>
+                    <div class="mb-6">
+                        <h3 class="text-lg font-semibold text-gray-900 dark:text-white mb-2">Description</h3>
+                        <p id="description-text" 
+                           class="text-sm text-gray-600 dark:text-gray-300 line-clamp-4 mb-4 leading-relaxed expandable-description"
+                           onclick="toggleDescription()">
+                            Framed in the 1940s for the double murder of his wife and her lover, upstanding banker Andy Dufresne begins a new life at the Shawshank prison, where he puts his accounting skills to work for an amoral warden.
+                        </p>
+                    </div>
+                    
+                    <!-- Detailed Info -->
+                    <div class="space-y-4 text-gray-600 dark:text-gray-400 border-l border-gray-200 dark:border-gray-700 pl-0 md:pl-6">
+                        <div class="grid grid-cols-3 gap-2">
+                            <span class="font-medium text-gray-900 dark:text-white">Title:</span>
+                            <span class="col-span-2 text-xs">The Shawshank Redemption</span>
+                        </div>
+                        <div class="grid grid-cols-3 gap-2">
+                            <span class="font-medium text-gray-900 dark:text-white">Original:</span>
+                            <span class="col-span-2 text-xs">The Shawshank Redemption</span>
+                        </div>
+                        <div class="grid grid-cols-3 gap-2">
+                            <span class="font-medium text-gray-900 dark:text-white">Aired:</span>
+                            <span class="col-span-2 text-xs">1994</span>
+                        </div>
+                        <div class="grid grid-cols-3 gap-2">
+                            <span class="font-medium text-gray-900 dark:text-white">Duration:</span>
+                            <span class="col-span-2 text-xs">2h 22m</span>
+                        </div>
+                        <div class="grid grid-cols-3 gap-2">
+                            <span class="font-medium text-gray-900 dark:text-white">Status:</span>
+                            <span class="col-span-2 text-xs">Completed</span>
+                        </div>
+                        <div class="grid grid-cols-3 gap-2">
+                            <span class="font-medium text-gray-900 dark:text-white">Genres:</span>
+                            <div class="col-span-2 flex flex-wrap gap-1">
+                                <span class="border border-gray-300 dark:border-gray-600 rounded px-1.5 py-0.5 text-[10px]">Drama</span>
+                                <span class="border border-gray-300 dark:border-gray-600 rounded px-1.5 py-0.5 text-[10px]">Crime</span>
                             </div>
                         </div>
-                    </div>
-                </div>
-                <div class="max-h-[600px] overflow-y-auto custom-scrollbar" id="comments-list-container">
-                    <!-- Comments will be loaded here -->
-                </div>
-            </div>
-        </div>
-
-        <!-- Right Column (Sidebar - Desktop) -->
-        <div class="sidebar-content lg:col-span-1 space-y-6">
-            <!-- Movie Details Card -->
-            <div class="bg-white dark:bg-[#151926] rounded-xl p-6 shadow-sm border border-gray-200 dark:border-gray-800 h-fit">
-                <div class="flex gap-4 mb-4">
-                    <<img alt="Poster" class="details-poster w-24 h-36 object-cover rounded-lg shadow-md flex-shrink-0" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBL8sSKQhkIHjJRpfaXPOb2Ntr-YMNUhdTfQQNGnnmqGZu3SSewBEFAnXpGTo1YxqHXlb8pOCJCZrgrSF00Ey3CMmhZW5Q7dqz5o0qIOeV3DXsmqV-RKQGF2yEnwCFPLqyZ1R9luYVGdw-P_L6bRKjMPRM2RO5ISubiOat46Ovv-uMFsJfxGzRT0ngWoCZXAiiHQbJOA91N5Wyn21gKPKb6rWilqbabiqUYqUEEe31UdFQXOki6b3glJcCnNMssztZkZ0UYU_mwBbY"/>
-                    <div>
-                        <h1 class="text-xl font-bold leading-tight mb-2">The Shawshank Redemption</h1>
-                        <div class="flex flex-wrap gap-2 text-xs text-gray-500 dark:text-gray-400 mb-2">
-                            <span class="px-1.5 py-0.5 border border-gray-300 dark:border-gray-700 rounded">TV-MA</span>
-                            <span class="px-1.5 py-0.5 bg-primary text-white rounded font-bold">HD</span>
-                            <span class="flex items-center gap-1"><span class="material-symbols-outlined text-sm">mic</span> 12</span>
-                            <span class="flex items-center gap-1"><span class="material-symbols-outlined text-sm">subtitles</span> 12</span>
+                        <div class="grid grid-cols-3 gap-2">
+                            <span class="font-medium text-gray-900 dark:text-white">Cast:</span>
+                            <span class="col-span-2 text-xs">Tim Robbins, Morgan Freeman, Bob Gunton</span>
                         </div>
-                        <div class="text-xs text-gray-500 dark:text-gray-400">
-                            Movie • 2h 22m
+                        <div class="grid grid-cols-3 gap-2">
+                            <span class="font-medium text-gray-900 dark:text-white">Score:</span>
+                            <div class="col-span-2 text-xs flex items-center gap-3">
+                                <span class="flex items-center gap-1">
+                                    <span class="material-symbols-outlined text-[14px] text-yellow-500">star</span> 
+                                    IMDb: 9.3
+                                </span>
+                            </div>
+                        </div>
+                        <div class="grid grid-cols-3 gap-2">
+                            <span class="font-medium text-gray-900 dark:text-white">Studio:</span>
+                            <span class="col-span-2 text-xs text-primary">Castle Rock Entertainment</span>
                         </div>
                     </div>
                 </div>
-<div class="mb-6">
-    <h3 class="text-lg font-semibold text-gray-900 dark:text-white mb-2">Description</h3>
-    <p id="description-text" 
-       class="text-sm text-gray-600 dark:text-gray-300 line-clamp-4 mb-4 leading-relaxed expandable-description"
-       onclick="toggleDescription()">
-        Framed in the 1940s for the double murder of his wife and her lover, upstanding banker Andy Dufresne begins a new life at the Shawshank prison, where he puts his accounting skills to work for an amoral warden.
-    </p>
-</div>
-               <div class="grid grid-cols-2 gap-2 text-xs text-gray-500 dark:text-gray-400 border-t border-gray-100 dark:border-gray-700 pt-4">
-    <div class="col-span-2">
-        <span class="font-semibold text-gray-700 dark:text-gray-200">Title:</span> To Be Hero X
-    </div>
-    <div class="col-span-2">
-        <span class="font-semibold text-gray-700 dark:text-gray-200">Original:</span> Tu Bian Yingxiong X
-    </div>
-    <div class="col-span-2">
-        <span class="font-semibold text-gray-700 dark:text-gray-200">Japanese:</span> 凸変英雄X
-    </div>
-    <div class="col-span-2">
-        <span class="font-semibold text-gray-700 dark:text-gray-200">Synonyms:</span> To Be Hero X, Tu Bian Yingxiong X
-    </div>
-    <div><span class="font-semibold text-gray-700 dark:text-gray-200">Aired:</span> 2025</div>
-    <div><span class="font-semibold text-gray-700 dark:text-gray-200">Premiered:</span> Spring 2025</div>
-    <div><span class="font-semibold text-gray-700 dark:text-gray-200">Popularity:</span> #75</div>
-    <div><span class="font-semibold text-gray-700 dark:text-gray-200">Genres:</span> Action, Superhero, Drama</div>
-    <div class="col-span-2">
-        <span class="font-semibold text-gray-700 dark:text-gray-200">Cast:</span> Natsuki Hanae, Nobunaga Shimazaki, Koichi Yamadera, Inori Minase, Ayane Sakura
-    </div>
-    <div><span class="font-semibold text-gray-700 dark:text-gray-200">Certification:</span> TV-14</div>
-    <div><span class="font-semibold text-gray-700 dark:text-gray-200">Country:</span> China</div>
-    <div><span class="font-semibold text-gray-700 dark:text-gray-200">Studio:</span> BeDream</div>
-    <div class="col-span-2">
-        <span class="font-semibold text-gray-700 dark:text-gray-200">Producers:</span> BeDream, Bilibili, Aniplex
-    </div>
-    <div class="col-span-2">
-        <span class="font-semibold text-gray-700 dark:text-gray-200">Scores:</span> MAL: 8.39 | IMDb: 7.47
-    </div>
-               </div>
 
-            <!-- Rating Card -->
-            <div class="bg-[#1A1D29] rounded-xl p-5 shadow-lg border border-gray-800">
-                <div class="flex items-center justify-between mb-4">
-                    <div class="flex items-center gap-2">
-                        <span class="material-symbols-outlined text-yellow-500 fill-current">star</span>
-                        <span class="text-2xl font-bold text-white">9.3</span>
+                <!-- Rating Card (SECOND) -->
+                <div class="bg-[#1A1D29] rounded-xl p-5 shadow-lg border border-gray-800">
+                    <div class="flex items-center justify-between mb-4">
+                        <div class="flex items-center gap-2">
+                            <span class="material-symbols-outlined text-yellow-500 fill-current">star</span>
+                            <span class="text-2xl font-bold text-white">9.3</span>
+                        </div>
+                        <span class="text-sm font-semibold text-white">Vote now</span>
                     </div>
-                    <span class="text-sm font-semibold text-white">Vote now</span>
+                    <div class="text-sm text-gray-400 mb-6 text-center">What do you think about this show?</div>
+                    <div class="flex justify-between px-2">
+                        <button class="flex flex-col items-center gap-2 group" onclick="rateShow('boring')">
+                            <span class="text-3xl grayscale group-hover:grayscale-0 transition-all transform group-hover:scale-110">😩</span>
+                            <span class="text-xs font-medium text-gray-400 group-hover:text-white transition-colors">Boring</span>
+                        </button>
+                        <button class="flex flex-col items-center gap-2 group" onclick="rateShow('great')">
+                            <span class="text-3xl grayscale group-hover:grayscale-0 transition-all transform group-hover:scale-110">😃</span>
+                            <span class="text-xs font-medium text-gray-400 group-hover:text-white transition-colors">Great</span>
+                        </button>
+                        <button class="flex flex-col items-center gap-2 group" onclick="rateShow('amazing')">
+                            <span class="text-3xl grayscale group-hover:grayscale-0 transition-all transform group-hover:scale-110">🤩</span>
+                            <span class="text-xs font-medium text-gray-400 group-hover:text-white transition-colors">Amazing</span>
+                        </button>
+                    </div>
                 </div>
-                <div class="text-sm text-gray-400 mb-6 text-center">What do you think about this show?</div>
-                <div class="flex justify-between px-2">
-                    <button class="flex flex-col items-center gap-2 group" onclick="rateShow('boring')">
-                        <span class="text-3xl grayscale group-hover:grayscale-0 transition-all transform group-hover:scale-110">😩</span>
-                        <span class="text-xs font-medium text-gray-400 group-hover:text-white transition-colors">Boring</span>
-                    </button>
-                    <button class="flex flex-col items-center gap-2 group" onclick="rateShow('great')">
-                        <span class="text-3xl grayscale group-hover:grayscale-0 transition-all transform group-hover:scale-110">😃</span>
-                        <span class="text-xs font-medium text-gray-400 group-hover:text-white transition-colors">Great</span>
-                    </button>
-                    <button class="flex flex-col items-center gap-2 group" onclick="rateShow('amazing')">
-                        <span class="text-3xl grayscale group-hover:grayscale-0 transition-all transform group-hover:scale-110">🤩</span>
-                        <span class="text-xs font-medium text-gray-400 group-hover:text-white transition-colors">Amazing</span>
-                    </button>
-                </div>
-            </div>
 
-            <!-- Most Popular (Desktop: In right sidebar, Mobile: In proper order) -->
-            <div class="bg-white dark:bg-[#151926] rounded-xl overflow-hidden shadow-sm border border-gray-200 dark:border-gray-800">
-                <div class="p-4 border-b border-gray-200 dark:border-gray-700 font-bold text-lg">Most Popular</div>
-                <div class="max-h-[500px] overflow-y-auto custom-scrollbar p-2 space-y-2" id="most-popular-list-container">
-                    <!-- Most Popular content will be loaded here -->
+                <!-- Most Popular (THIRD) -->
+                <div class="bg-white dark:bg-[#151926] rounded-xl overflow-hidden shadow-sm border border-gray-200 dark:border-gray-800">
+                    <div class="p-4 border-b border-gray-200 dark:border-gray-700 font-bold text-lg">Most Popular</div>
+                    <div class="max-h-[500px] overflow-y-auto custom-scrollbar p-2 space-y-2" id="most-popular-list-container">
+                        <!-- Most Popular content will be loaded here -->
+                    </div>
                 </div>
             </div>
         </div>
     </div>
-</div>
 </main>
 
 <footer class="bg-white dark:bg-footer-dark border-t border-gray-200 dark:border-gray-800 mt-auto">
