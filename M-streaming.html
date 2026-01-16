@@ -310,12 +310,49 @@
     
     /* Mobile video controls */
     .video-controls-mobile {
-        background: white;
-        dark:bg-[#151926];
+        background: var(--page-bg, #F3F4F6);
         border-radius: 0.75rem;
         margin-top: 12px;
         padding: 16px;
         box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    }
+    
+    .dark .video-controls-mobile {
+        background: var(--page-bg, #0B0E19);
+    }
+    
+    /* Responsive layout for sidebars */
+    @media (min-width: 1024px) {
+        .sidebar-left {
+            width: 20%;
+            flex: 0 0 20%;
+        }
+        
+        .sidebar-main {
+            width: 60%;
+            flex: 0 0 60%;
+        }
+        
+        .sidebar-right {
+            width: 20%;
+            flex: 0 0 20%;
+        }
+    }
+    
+    /* Mobile unified block styling */
+    .mobile-video-block {
+        background: white;
+        dark:bg-[#151926];
+        border-radius: 0.75rem;
+        overflow: hidden;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        border: 1px solid #e5e7eb;
+        dark:border-gray-800;
+    }
+    
+    .dark .mobile-video-block {
+        background: #151926;
+        border-color: #374151;
     }
 </style>
 </head>
@@ -465,52 +502,114 @@
 </header>
 
 <main class="flex-grow pt-20 pb-12 w-full max-w-screen-2xl mx-auto px-4">
-    <!-- Mobile Video Controls (Below Video Player) -->
-    <div class="lg:hidden video-controls-mobile mb-6">
-        <div class="flex flex-col gap-4">
-            <!-- Current watching info -->
-            <div class="flex items-center justify-between">
-                <div class="flex items-center gap-2">
-                    <span class="text-sm text-gray-500 dark:text-gray-400">Watching:</span>
-                    <span class="font-bold text-primary" id="current-episode-display-mobile">Episode 1</span>
-                </div>
-                <div class="flex items-center gap-1 text-xs text-gray-500 dark:text-gray-400">
-                    <span class="material-symbols-outlined text-sm">tv</span>
-                    <span id="current-season-display-mobile">S1</span>
+    <!-- Mobile Unified Video Block -->
+    <div class="lg:hidden mb-6 mobile-video-block">
+        <!-- Video Player -->
+        <div class="p-0">
+            <div class="video-container-wrapper" id="video-player-container">
+                <!-- Video will be loaded here dynamically -->
+                <div class="absolute inset-0 flex items-center justify-center bg-black" id="video-loading-overlay">
+                    <span class="material-symbols-outlined text-6xl text-white opacity-50 group-hover:opacity-100 transition-opacity cursor-pointer" id="play-button">play_circle</span>
                 </div>
             </div>
-            
-            <!-- Server info -->
-            <div class="flex items-center gap-2">
-                <span class="text-xs text-gray-500 dark:text-gray-400">Server:</span>
-                <span class="text-xs font-bold text-primary" id="current-server-display-mobile">SUB-HD-01</span>
-            </div>
-            
-            <!-- Episode navigation and Add to List -->
-            <div class="flex items-center justify-between gap-3">
-                <button class="flex items-center gap-1 flex-1 justify-center text-xs bg-gray-100 dark:bg-gray-800 hover:bg-primary hover:text-white px-4 py-3 rounded-lg transition-colors dark:text-gray-300" onclick="changeEpisode('prev')">
-                    <span class="material-symbols-outlined text-sm">skip_previous</span> Prev
-                </button>
-                
-                <div class="relative group">
-                    <button class="flex items-center gap-1 text-xs bg-primary/10 text-primary hover:bg-primary hover:text-white px-4 py-3 rounded-lg transition-colors" id="add-to-list-btn-mobile">
-                        <span class="material-symbols-outlined text-sm">add</span>
-                        <span id="current-list-status-text-mobile">Add to List</span>
-                    </button>
-                    <div class="absolute left-0 top-full mt-2 w-48 bg-white dark:bg-surface-dark rounded-lg shadow-xl py-1 z-20 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 border border-gray-200 dark:border-gray-700 text-xs">
-                        <button class="block w-full text-left px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-800 text-gray-700 dark:text-gray-300" onclick="updateListStatus('Planning to watch')">Planning to watch</button>
-                        <button class="block w-full text-left px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-800 text-gray-700 dark:text-gray-300" onclick="updateListStatus('Watching')">Watching</button>
-                        <button class="block w-full text-left px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-800 text-gray-700 dark:text-gray-300" onclick="updateListStatus('Completed')">Completed</button>
-                        <button class="block w-full text-left px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-800 text-gray-700 dark:text-gray-300" onclick="updateListStatus('Rewatching')">Rewatching</button>
-                        <button class="block w-full text-left px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-800 text-gray-700 dark:text-gray-300" onclick="updateListStatus('Dropped')">Dropped</button>
-                        <div class="border-t border-gray-200 dark:border-gray-700 my-1"></div>
-                        <button class="block w-full text-left px-4 py-2 hover:bg-red-50 dark:hover:bg-red-900/20 text-red-500" onclick="updateListStatus('Add to List')">Remove from list</button>
+        </div>
+        
+        <!-- Mobile Video Controls -->
+        <div class="video-controls-mobile bg-background-light dark:bg-background-dark" id="mobile-video-controls">
+            <div class="flex flex-col gap-4">
+                <!-- Current watching info -->
+                <div class="flex items-center justify-between">
+                    <div class="flex items-center gap-2">
+                        <span class="text-sm text-gray-500 dark:text-gray-400">Watching:</span>
+                        <span class="font-bold text-primary" id="current-episode-display-mobile">Episode 1</span>
+                    </div>
+                    <div class="flex items-center gap-1 text-xs text-gray-500 dark:text-gray-400">
+                        <span class="material-symbols-outlined text-sm">tv</span>
+                        <span id="current-season-display-mobile">S1</span>
                     </div>
                 </div>
                 
-                <button class="flex items-center gap-1 flex-1 justify-center text-xs bg-gray-100 dark:bg-gray-800 hover:bg-primary hover:text-white px-4 py-3 rounded-lg transition-colors dark:text-gray-300" onclick="changeEpisode('next')">
-                    Next <span class="material-symbols-outlined text-sm">skip_next</span>
-                </button>
+                <!-- Server info -->
+                <div class="flex items-center gap-2">
+                    <span class="text-xs text-gray-500 dark:text-gray-400">Server:</span>
+                    <span class="text-xs font-bold text-primary" id="current-server-display-mobile">SUB-HD-01</span>
+                </div>
+                
+                <!-- Episode navigation and Add to List -->
+                <div class="flex items-center justify-between gap-3">
+                    <button class="flex items-center gap-1 flex-1 justify-center text-xs bg-gray-100 dark:bg-gray-800 hover:bg-primary hover:text-white px-4 py-3 rounded-lg transition-colors dark:text-gray-300" onclick="changeEpisode('prev')">
+                        <span class="material-symbols-outlined text-sm">skip_previous</span> Prev
+                    </button>
+                    
+                    <div class="relative group">
+                        <button class="flex items-center gap-1 text-xs bg-primary/10 text-primary hover:bg-primary hover:text-white px-4 py-3 rounded-lg transition-colors" id="add-to-list-btn-mobile">
+                            <span class="material-symbols-outlined text-sm">add</span>
+                            <span id="current-list-status-text-mobile">Add to List</span>
+                        </button>
+                        <div class="absolute left-0 top-full mt-2 w-48 bg-white dark:bg-surface-dark rounded-lg shadow-xl py-1 z-20 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 border border-gray-200 dark:border-gray-700 text-xs">
+                            <button class="block w-full text-left px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-800 text-gray-700 dark:text-gray-300" onclick="updateListStatus('Planning to watch')">Planning to watch</button>
+                            <button class="block w-full text-left px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-800 text-gray-700 dark:text-gray-300" onclick="updateListStatus('Watching')">Watching</button>
+                            <button class="block w-full text-left px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-800 text-gray-700 dark:text-gray-300" onclick="updateListStatus('Completed')">Completed</button>
+                            <button class="block w-full text-left px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-800 text-gray-700 dark:text-gray-300" onclick="updateListStatus('Rewatching')">Rewatching</button>
+                            <button class="block w-full text-left px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-800 text-gray-700 dark:text-gray-300" onclick="updateListStatus('Dropped')">Dropped</button>
+                            <div class="border-t border-gray-200 dark:border-gray-700 my-1"></div>
+                            <button class="block w-full text-left px-4 py-2 hover:bg-red-50 dark:hover:bg-red-900/20 text-red-500" onclick="updateListStatus('Add to List')">Remove from list</button>
+                        </div>
+                    </div>
+                    
+                    <button class="flex items-center gap-1 flex-1 justify-center text-xs bg-gray-100 dark:bg-gray-800 hover:bg-primary hover:text-white px-4 py-3 rounded-lg transition-colors dark:text-gray-300" onclick="changeEpisode('next')">
+                        Next <span class="material-symbols-outlined text-sm">skip_next</span>
+                    </button>
+                </div>
+                
+                <!-- Season Selection for Mobile -->
+                <div class="pt-4 border-t border-gray-200 dark:border-gray-700">
+                    <h3 class="text-sm font-medium text-gray-700 dark:text-gray-300 mb-3">Select Season:</h3>
+                    <div class="flex overflow-x-auto gap-2 pb-2 hide-scrollbar">
+                        <button class="season-btn px-4 py-2 text-sm font-medium text-primary border-b-2 border-primary whitespace-nowrap transition-colors active" data-season="1" onclick="selectSeason(this)">Season 1</button>
+                        <button class="season-btn px-4 py-2 text-sm font-medium text-gray-500 dark:text-gray-400 hover:text-gray-800 dark:hover:text-gray-200 whitespace-nowrap transition-colors border-b-2 border-transparent" data-season="2" onclick="selectSeason(this)">Season 2</button>
+                        <button class="season-btn px-4 py-2 text-sm font-medium text-gray-500 dark:text-gray-400 hover:text-gray-800 dark:hover:text-gray-200 whitespace-nowrap transition-colors border-b-2 border-transparent" data-season="3" onclick="selectSeason(this)">Season 3</button>
+                        <button class="season-btn px-4 py-2 text-sm font-medium text-gray-500 dark:text-gray-400 hover:text-gray-800 dark:hover:text-gray-200 whitespace-nowrap transition-colors border-b-2 border-transparent" data-season="4" onclick="selectSeason(this)">Season 4</button>
+                        <button class="season-btn px-4 py-2 text-sm font-medium text-gray-500 dark:text-gray-400 hover:text-gray-800 dark:hover:text-gray-200 whitespace-nowrap transition-colors border-b-2 border-transparent" data-season="ova" onclick="selectSeason(this)">OVA</button>
+                    </div>
+                </div>
+                
+                <!-- Server Selection for Mobile -->
+                <div class="pt-4 border-t border-gray-200 dark:border-gray-700">
+                    <h3 class="text-sm font-medium text-gray-700 dark:text-gray-300 mb-3">Select Server:</h3>
+                    <div class="space-y-4">
+                        <div>
+                            <span class="text-xs font-bold text-gray-500 dark:text-gray-400 mb-2 block">SUB:</span>
+                            <div class="flex flex-wrap gap-2 server-buttons">
+                                <button class="server-btn px-3 py-2 rounded text-xs font-medium bg-primary text-white shadow-sm hover:bg-primary/90 transition" data-server="SUB-HD-01" onclick="selectServer(this)">HD-01</button>
+                                <button class="server-btn px-3 py-2 rounded text-xs font-medium bg-gray-200 dark:bg-gray-800 text-gray-700 dark:text-gray-300 hover:bg-gray-300 dark:hover:bg-gray-700 transition" data-server="SUB-HD-02" onclick="selectServer(this)">HD-02</button>
+                                <button class="server-btn px-3 py-2 rounded text-xs font-medium bg-gray-200 dark:bg-gray-800 text-gray-700 dark:text-gray-300 hover:bg-gray-300 dark:hover:bg-gray-700 transition" data-server="SUB-HD-03" onclick="selectServer(this)">HD-03</button>
+                                <button class="server-btn px-3 py-2 rounded text-xs font-medium bg-gray-200 dark:bg-gray-800 text-gray-700 dark:text-gray-300 hover:bg-gray-300 dark:hover:bg-gray-700 transition" data-server="SUB-HD-04" onclick="selectServer(this)">HD-04</button>
+                                <button class="server-btn px-3 py-2 rounded text-xs font-medium bg-gray-200 dark:bg-gray-800 text-gray-700 dark:text-gray-300 hover:bg-gray-300 dark:hover:bg-gray-700 transition" data-server="SUB-HD-05" onclick="selectServer(this)">HD-05</button>
+                            </div>
+                        </div>
+                        <div>
+                            <span class="text-xs font-bold text-gray-500 dark:text-gray-400 mb-2 block">DUB:</span>
+                            <div class="flex flex-wrap gap-2 server-buttons">
+                                <button class="server-btn px-3 py-2 rounded text-xs font-medium bg-gray-200 dark:bg-gray-800 text-gray-700 dark:text-gray-300 hover:bg-gray-300 dark:hover:bg-gray-700 transition" data-server="DUB-HD-01" onclick="selectServer(this)">HD-01</button>
+                                <button class="server-btn px-3 py-2 rounded text-xs font-medium bg-gray-200 dark:bg-gray-800 text-gray-700 dark:text-gray-300 hover:bg-gray-300 dark:hover:bg-gray-700 transition" data-server="DUB-HD-02" onclick="selectServer(this)">HD-02</button>
+                                <button class="server-btn px-3 py-2 rounded text-xs font-medium bg-gray-200 dark:bg-gray-800 text-gray-700 dark:text-gray-300 hover:bg-gray-300 dark:hover:bg-gray-700 transition" data-server="DUB-HD-03" onclick="selectServer(this)">HD-03</button>
+                                <button class="server-btn px-3 py-2 rounded text-xs font-medium bg-gray-200 dark:bg-gray-800 text-gray-700 dark:text-gray-300 hover:bg-gray-300 dark:hover:bg-gray-700 transition" data-server="DUB-HD-04" onclick="selectServer(this)">HD-04</button>
+                                <button class="server-btn px-3 py-2 rounded text-xs font-medium bg-gray-200 dark:bg-gray-800 text-gray-700 dark:text-gray-300 hover:bg-gray-300 dark:hover:bg-gray-700 transition" data-server="DUB-HD-05" onclick="selectServer(this)">HD-05</button>
+                            </div>
+                        </div>
+                        <div>
+                            <span class="text-xs font-bold text-gray-500 dark:text-gray-400 mb-2 block">RAW:</span>
+                            <div class="flex flex-wrap gap-2 server-buttons">
+                                <button class="server-btn px-3 py-2 rounded text-xs font-medium bg-gray-200 dark:bg-gray-800 text-gray-700 dark:text-gray-300 hover:bg-gray-300 dark:hover:bg-gray-700 transition" data-server="RAW-HD-01" onclick="selectServer(this)">HD-01</button>
+                                <button class="server-btn px-3 py-2 rounded text-xs font-medium bg-gray-200 dark:bg-gray-800 text-gray-700 dark:text-gray-300 hover:bg-gray-300 dark:hover:bg-gray-700 transition" data-server="RAW-HD-02" onclick="selectServer(this)">HD-02</button>
+                                <button class="server-btn px-3 py-2 rounded text-xs font-medium bg-gray-200 dark:bg-gray-800 text-gray-700 dark:text-gray-300 hover:bg-gray-300 dark:hover:bg-gray-700 transition" data-server="RAW-HD-03" onclick="selectServer(this)">HD-03</button>
+                                <button class="server-btn px-3 py-2 rounded text-xs font-medium bg-gray-200 dark:bg-gray-800 text-gray-700 dark:text-gray-300 hover:bg-gray-300 dark:hover:bg-gray-700 transition" data-server="RAW-HD-04" onclick="selectServer(this)">HD-04</button>
+                                <button class="server-btn px-3 py-2 rounded text-xs font-medium bg-gray-200 dark:bg-gray-800 text-gray-700 dark:text-gray-300 hover:bg-gray-300 dark:hover:bg-gray-700 transition" data-server="RAW-HD-05" onclick="selectServer(this)">HD-05</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
@@ -518,15 +617,28 @@
     <!-- Responsive Layout - Mobile: Stacked, Desktop: Sidebar -->
     <div class="flex flex-col lg:flex-row gap-6">
         
-        <!-- Main Content - 75% width on desktop -->
-        <div class="w-full lg:w-[75%] space-y-6">
+        <!-- Left Sidebar - 20% width on desktop -->
+        <div class="w-full lg:w-1/5 sidebar-left space-y-6">
+            <!-- Episode List (Desktop - Moved from Right Sidebar) -->
+            <div class="hidden lg:block bg-white dark:bg-[#151926] rounded-xl overflow-hidden shadow-sm border border-gray-200 dark:border-gray-800">
+                <div class="p-4 border-b border-gray-200 dark:border-gray-700 font-bold text-lg">Episodes</div>
+                <div class="p-4">
+                    <div class="max-h-[500px] overflow-y-auto custom-scrollbar" id="episode-list-container">
+                        <!-- Episodes will be loaded here for desktop -->
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Main Content - 60% width on desktop -->
+        <div class="w-full lg:w-3/5 sidebar-main space-y-6">
             
-            <!-- Video Player -->
-            <div class="bg-white dark:bg-[#151926] rounded-xl overflow-hidden shadow-sm border border-gray-200 dark:border-gray-800">
-                <div class="video-container-wrapper" id="video-player-container">
+            <!-- Video Player (Desktop) -->
+            <div class="hidden lg:block bg-white dark:bg-[#151926] rounded-xl overflow-hidden shadow-sm border border-gray-200 dark:border-gray-800">
+                <div class="video-container-wrapper" id="desktop-video-player-container">
                     <!-- Video will be loaded here dynamically -->
-                    <div class="absolute inset-0 flex items-center justify-center bg-black" id="video-loading-overlay">
-                        <span class="material-symbols-outlined text-6xl text-white opacity-50 group-hover:opacity-100 transition-opacity cursor-pointer" id="play-button">play_circle</span>
+                    <div class="absolute inset-0 flex items-center justify-center bg-black" id="desktop-video-loading-overlay">
+                        <span class="material-symbols-outlined text-6xl text-white opacity-50 group-hover:opacity-100 transition-opacity cursor-pointer" id="desktop-play-button">play_circle</span>
                     </div>
                 </div>
                 
@@ -617,59 +729,172 @@
                 </div>
             </div>
 
-            <!-- Mobile Server and Season Selection -->
-            <div class="lg:hidden bg-white dark:bg-[#151926] rounded-xl p-4 shadow-sm border border-gray-200 dark:border-gray-800">
-                <div class="space-y-4">
-                    <!-- Season Selection for Mobile -->
+            <!-- Show Details (Mobile) -->
+            <div class="lg:hidden bg-white dark:bg-[#151926] rounded-xl p-6 shadow-sm border border-gray-200 dark:border-gray-800 h-fit">
+                <div class="flex gap-4 mb-4">
+                    <img alt="Poster" class="w-24 h-36 object-cover rounded-lg shadow-md flex-shrink-0" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBL8sSKQhkIHjJRpfaXPOb2Ntr-YMNUhdTfQQNGnnmqGZu3SSewBEFAnXpGTo1YxqHXlb8pOCJCZrgrSF00Ey3CMmhZW5Q7dqz5o0qIOeV3DXsmqV-RKQGF2yEnwCFPLqyZ1R9luYVGdw-P_L6bRKjMPRM2RO5ISubiOat46Ovv-uMFsJfxGzRT0ngWoCZXAiiHQbJOA91N5Wyn21gKPKb6rWilqbabiqUYqUEEe31UdFQXOki6b3glJcCnNMssztZkZ0UYU_mwBbY"/>
                     <div>
-                        <h3 class="text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">Select Season:</h3>
-                        <div class="flex overflow-x-auto gap-2 pb-2 hide-scrollbar">
-                            <button class="season-btn px-4 py-2 text-sm font-medium text-primary border-b-2 border-primary whitespace-nowrap transition-colors active" data-season="1" onclick="selectSeason(this)">Season 1</button>
-                            <button class="season-btn px-4 py-2 text-sm font-medium text-gray-500 dark:text-gray-400 hover:text-gray-800 dark:hover:text-gray-200 whitespace-nowrap transition-colors border-b-2 border-transparent" data-season="2" onclick="selectSeason(this)">Season 2</button>
-                            <button class="season-btn px-4 py-2 text-sm font-medium text-gray-500 dark:text-gray-400 hover:text-gray-800 dark:hover:text-gray-200 whitespace-nowrap transition-colors border-b-2 border-transparent" data-season="3" onclick="selectSeason(this)">Season 3</button>
-                            <button class="season-btn px-4 py-2 text-sm font-medium text-gray-500 dark:text-gray-400 hover:text-gray-800 dark:hover:text-gray-200 whitespace-nowrap transition-colors border-b-2 border-transparent" data-season="4" onclick="selectSeason(this)">Season 4</button>
-                            <button class="season-btn px-4 py-2 text-sm font-medium text-gray-500 dark:text-gray-400 hover:text-gray-800 dark:hover:text-gray-200 whitespace-nowrap transition-colors border-b-2 border-transparent" data-season="ova" onclick="selectSeason(this)">OVA</button>
+                        <h1 class="text-xl font-bold leading-tight mb-2">Alya Sometimes Hides Her Feelings in Russian</h1>
+                        <div class="flex flex-wrap gap-2 text-xs text-gray-500 dark:text-gray-400 mb-2">
+                            <span class="px-1.5 py-0.5 border border-gray-300 dark:border-gray-700 rounded">TV-14</span>
+                            <span class="px-1.5 py-0.5 bg-primary text-white rounded font-bold">HD</span>
+                            <span class="flex items-center gap-1"><span class="material-symbols-outlined text-sm">mic</span> 12</span>
+                            <span class="flex items-center gap-1"><span class="material-symbols-outlined text-sm">subtitles</span> 12</span>
+                        </div>
+                        <div class="text-xs text-gray-500 dark:text-gray-400">
+                            Anime • 12 Episodes
+                        </div>
+                    </div>
+                </div>
+                <div class="description-container collapsed" id="description-container-mobile">
+                    <p class="text-sm text-gray-600 dark:text-gray-300 leading-relaxed mb-2">
+                        Alisa Mikhailovna Kujou is a beautiful half-Russian girl who sits next to Masachika Kuze in class. Despite her appearance, she's a tsundere who is always glaring at Kuze. She's also the vice president of the student council and is secretly a light novel author. Kuze is a lazy student who always naps in class, but he's actually quite capable when he wants to be. He understands Russian and can hear Alisa's affectionate mutterings in Russian, but he pretends not to understand to tease her.
+                    </p>
+                </div>
+                <div class="description-toggle" id="description-toggle-mobile" onclick="toggleDescriptionMobile()">
+                    <span>Read more</span>
+                    <span class="material-symbols-outlined">arrow_forward</span>
+                </div>
+                <!-- SHOW DETAILS INFORMATION -->
+                <div class="grid grid-cols-1 gap-3 text-xs text-gray-500 dark:text-gray-400 border-t border-gray-100 dark:border-gray-700 pt-4 mt-4">
+                    <!-- Title Information -->
+                    <div>
+                        <span class="font-semibold text-gray-700 dark:text-gray-200">Title:</span> 
+                        <span class="ml-1">Alya Sometimes Hides Her Feelings in Russian</span>
+                    </div>
+                    <div>
+                        <span class="font-semibold text-gray-700 dark:text-gray-200">Original:</span> 
+                        <span class="ml-1">Tokidoki Bosotto Russia-go de Dereru Tonari no Alya-san</span>
+                    </div>
+                    <div>
+                        <span class="font-semibold text-gray-700 dark:text-gray-200">Japanese:</span> 
+                        <span class="ml-1">時々ボソッとロシア語でデレる隣のアーリャさん</span>
+                    </div>
+                    
+                    <!-- Synonyms -->
+                    <div>
+                        <span class="font-semibold text-gray-700 dark:text-gray-200">Synonyms:</span> 
+                        <span class="ml-1">Roshidere, Alya-san, who sits besides me and sometimes murmurs affectionately in Russian., Arya Next Door Sometimes Lapses into Russian</span>
+                    </div>
+                    
+                    <!-- Airing Information -->
+                    <div class="grid grid-cols-2 gap-2 mt-1">
+                        <div>
+                            <span class="font-semibold text-gray-700 dark:text-gray-200">Aired:</span> 
+                            <span class="ml-1">2023</span>
+                        </div>
+                        <div>
+                            <span class="font-semibold text-gray-700 dark:text-gray-200">Premiered:</span> 
+                            <span class="ml-1">Fall 2023</span>
                         </div>
                     </div>
                     
-                    <!-- Server Selection for Mobile -->
-                    <div class="space-y-3">
+                    <!-- Duration & Status -->
+                    <div class="grid grid-cols-2 gap-2">
                         <div>
-                            <h3 class="text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">Select Server:</h3>
-                            <div class="space-y-3">
-                                <div>
-                                    <span class="text-xs font-bold text-gray-500 dark:text-gray-400">SUB:</span>
-                                    <div class="flex flex-wrap gap-2 mt-1 server-buttons">
-                                        <button class="server-btn px-3 py-2 rounded text-xs font-medium bg-primary text-white shadow-sm hover:bg-primary/90 transition" data-server="SUB-HD-01" onclick="selectServer(this)">HD-01</button>
-                                        <button class="server-btn px-3 py-2 rounded text-xs font-medium bg-gray-200 dark:bg-gray-800 text-gray-700 dark:text-gray-300 hover:bg-gray-300 dark:hover:bg-gray-700 transition" data-server="SUB-HD-02" onclick="selectServer(this)">HD-02</button>
-                                        <button class="server-btn px-3 py-2 rounded text-xs font-medium bg-gray-200 dark:bg-gray-800 text-gray-700 dark:text-gray-300 hover:bg-gray-300 dark:hover:bg-gray-700 transition" data-server="SUB-HD-03" onclick="selectServer(this)">HD-03</button>
-                                        <button class="server-btn px-3 py-2 rounded text-xs font-medium bg-gray-200 dark:bg-gray-800 text-gray-700 dark:text-gray-300 hover:bg-gray-300 dark:hover:bg-gray-700 transition" data-server="SUB-HD-04" onclick="selectServer(this)">HD-04</button>
-                                        <button class="server-btn px-3 py-2 rounded text-xs font-medium bg-gray-200 dark:bg-gray-800 text-gray-700 dark:text-gray-300 hover:bg-gray-300 dark:hover:bg-gray-700 transition" data-server="SUB-HD-05" onclick="selectServer(this)">HD-05</button>
-                                    </div>
-                                </div>
-                                <div>
-                                    <span class="text-xs font-bold text-gray-500 dark:text-gray-400">DUB:</span>
-                                    <div class="flex flex-wrap gap-2 mt-1 server-buttons">
-                                        <button class="server-btn px-3 py-2 rounded text-xs font-medium bg-gray-200 dark:bg-gray-800 text-gray-700 dark:text-gray-300 hover:bg-gray-300 dark:hover:bg-gray-700 transition" data-server="DUB-HD-01" onclick="selectServer(this)">HD-01</button>
-                                        <button class="server-btn px-3 py-2 rounded text-xs font-medium bg-gray-200 dark:bg-gray-800 text-gray-700 dark:text-gray-300 hover:bg-gray-300 dark:hover:bg-gray-700 transition" data-server="DUB-HD-02" onclick="selectServer(this)">HD-02</button>
-                                        <button class="server-btn px-3 py-2 rounded text-xs font-medium bg-gray-200 dark:bg-gray-800 text-gray-700 dark:text-gray-300 hover:bg-gray-300 dark:hover:bg-gray-700 transition" data-server="DUB-HD-03" onclick="selectServer(this)">HD-03</button>
-                                        <button class="server-btn px-3 py-2 rounded text-xs font-medium bg-gray-200 dark:bg-gray-800 text-gray-700 dark:text-gray-300 hover:bg-gray-300 dark:hover:bg-gray-700 transition" data-server="DUB-HD-04" onclick="selectServer(this)">HD-04</button>
-                                        <button class="server-btn px-3 py-2 rounded text-xs font-medium bg-gray-200 dark:bg-gray-800 text-gray-700 dark:text-gray-300 hover:bg-gray-300 dark:hover:bg-gray-700 transition" data-server="DUB-HD-05" onclick="selectServer(this)">HD-05</button>
-                                    </div>
-                                </div>
-                                <div>
-                                    <span class="text-xs font-bold text-gray-500 dark:text-gray-400">RAW:</span>
-                                    <div class="flex flex-wrap gap-2 mt-1 server-buttons">
-                                        <button class="server-btn px-3 py-2 rounded text-xs font-medium bg-gray-200 dark:bg-gray-800 text-gray-700 dark:text-gray-300 hover:bg-gray-300 dark:hover:bg-gray-700 transition" data-server="RAW-HD-01" onclick="selectServer(this)">HD-01</button>
-                                        <button class="server-btn px-3 py-2 rounded text-xs font-medium bg-gray-200 dark:bg-gray-800 text-gray-700 dark:text-gray-300 hover:bg-gray-300 dark:hover:bg-gray-700 transition" data-server="RAW-HD-02" onclick="selectServer(this)">HD-02</button>
-                                        <button class="server-btn px-3 py-2 rounded text-xs font-medium bg-gray-200 dark:bg-gray-800 text-gray-700 dark:text-gray-300 hover:bg-gray-300 dark:hover:bg-gray-700 transition" data-server="RAW-HD-03" onclick="selectServer(this)">HD-03</button>
-                                        <button class="server-btn px-3 py-2 rounded text-xs font-medium bg-gray-200 dark:bg-gray-800 text-gray-700 dark:text-gray-300 hover:bg-gray-300 dark:hover:bg-gray-700 transition" data-server="RAW-HD-04" onclick="selectServer(this)">HD-04</button>
-                                        <button class="server-btn px-3 py-2 rounded text-xs font-medium bg-gray-200 dark:bg-gray-800 text-gray-700 dark:text-gray-300 hover:bg-gray-300 dark:hover:bg-gray-700 transition" data-server="RAW-HD-05" onclick="selectServer(this)">HD-05</button>
-                                    </div>
-                                </div>
+                            <span class="font-semibold text-gray-700 dark:text-gray-200">Duration:</span> 
+                            <span class="ml-1">24 min</span>
+                        </div>
+                        <div>
+                            <span class="font-semibold text-gray-700 dark:text-gray-200">Status:</span> 
+                            <span class="ml-1 text-blue-500">Finished Airing</span>
+                        </div>
+                    </div>
+                    
+                    <!-- Score -->
+                    <div class="mt-1 flex items-center flex-wrap gap-x-2 gap-y-1">
+                        <span class="font-semibold text-gray-700 dark:text-gray-200">Score:</span>
+                        
+                        <div class="flex items-center gap-1 text-gray-600 dark:text-gray-400">
+                            <span style="color: #5391cf;">★</span>
+                            <span>MAL</span>
+                        </div>
+                        
+                        <span class="text-gray-400 dark:text-gray-500">|</span>
+                        
+                        <div class="flex items-center gap-1 text-gray-600 dark:text-gray-400">
+                            <span style="color: #ccbd5e;">★</span>
+                            <span>IMDb</span>
+                        </div>
+                    </div>
+                    <!-- Popularity -->
+                    <div>
+                        <span class="font-semibold text-gray-700 dark:text-gray-200">Popularity:</span> 
+                        <span class="ml-1">#5488</span>
+                    </div>
+                    
+                    <!-- Genres -->
+                    <div class="flex flex-wrap items-center gap-x-2 gap-y-1">
+                        <span class="font-semibold text-gray-700 dark:text-gray-200">Genres:</span>
+                        <span class="px-2 py-1 bg-gray-100 dark:bg-gray-800 rounded text-xs text-gray-700 dark:text-gray-200 hover:bg-[#4d85bd] focus:bg-[#4d85bd] focus:outline-none focus:ring-2 focus:ring-[#4d85bd] focus:ring-opacity-50 transition-colors cursor-pointer">Action</span>
+                        <span class="px-2 py-1 bg-gray-100 dark:bg-gray-800 rounded text-xs text-gray-700 dark:text-gray-200 hover:bg-[#4d85bd] focus:bg-[#4d85bd] focus:outline-none focus:ring-2 focus:ring-[#4d85bd] focus:ring-opacity-50 transition-colors cursor-pointer">Comedy</span>
+                        <span class="px-2 py-1 bg-gray-100 dark:bg-gray-800 rounded text-xs text-gray-700 dark:text-gray-200 hover:bg-[#4d85bd] focus:bg-[#4d85bd] focus:outline-none focus:ring-2 focus:ring-[#4d85bd] focus:ring-opacity-50 transition-colors cursor-pointer">Slice of Life</span>
+                        <span class="px-2 py-1 bg-gray-100 dark:bg-gray-800 rounded text-xs text-gray-700 dark:text-gray-200 hover:bg-[#4d85bd] focus:bg-[#4d85bd] focus:outline-none focus:ring-2 focus:ring-[#4d85bd] focus:ring-opacity-50 transition-colors cursor-pointer">Shounen</span>
+                    </div>
+                    
+                    <!-- Cast -->
+                    <div class="mt-1 flex flex-wrap items-center gap-x-2 gap-y-1">
+                        <span class="font-semibold text-gray-700 dark:text-gray-200">Cast:</span>
+                        <span class="px-3 py-1 bg-[#9e265a] text-white rounded-full text-xs font-medium whitespace-nowrap">Takuya Eguchi</span>
+                        <span class="px-3 py-1 bg-[#9e265a] text-white rounded-full text-xs font-medium whitespace-nowrap">Atsumi Tanezaki</span>
+                        <span class="px-3 py-1 bg-[#9e265a] text-white rounded-full text-xs font-medium whitespace-nowrap">Saori Hayami</span>
+                    </div>
+                    
+                    <!-- Certification & Country -->
+                    <div class="grid grid-cols-2 gap-2 mt-1">
+                        <div>
+                            <span class="font-semibold text-gray-700 dark:text-gray-200">Country:</span> 
+                            <span class="ml-1">Japan</span>
+                        </div>
+                    </div>
+                    <!-- Studio & Producers -->
+                    <div class="mt-1">
+                        <span class="font-semibold text-gray-700 dark:text-gray-200">Studio:</span> 
+                        <span class="ml-1">Wit Studio, CloverWorks</span>
+                    </div>
+                    <div>
+                        <span class="font-semibold text-gray-700 dark:text-gray-200">Producers:</span> 
+                        <div class="mt-1 space-y-1">
+                            <div class="flex items-center gap-2">
+                                <span class="text-gray-600 dark:text-gray-400">•</span>
+                                <span>TOHO</span>
+                            </div>
+                            <div class="flex items-center gap-2">
+                                <span class="text-gray-600 dark:text-gray-400">•</span>
+                                <span>TV Tokyo</span>
+                            </div>
+                            <div class="flex items-center gap-2">
+                                <span class="text-gray-600 dark:text-gray-400">•</span>
+                                <span>Shueisha</span>
                             </div>
                         </div>
                     </div>
+                </div>
+            </div>
+            
+            <!-- Rating Card (Mobile - Moved below Show Details) -->
+            <div class="lg:hidden bg-[#1A1D29] rounded-xl p-5 shadow-lg border border-gray-800">
+                <div class="flex items-center justify-between mb-4">
+                    <div class="flex items-center gap-2">
+                        <span class="material-symbols-outlined text-yellow-500 fill-current">star</span>
+                        <span class="text-2xl font-bold text-white">8.2</span>
+                    </div>
+                    <span class="text-sm font-semibold text-white">Vote now</span>
+                </div>
+                <div class="text-sm text-gray-400 mb-6 text-center">What do you think about this show?</div>
+                <div class="flex justify-between px-2">
+                    <button class="flex flex-col items-center gap-2 group" onclick="rateShow('boring')">
+                        <span class="text-3xl grayscale group-hover:grayscale-0 transition-all transform group-hover:scale-110">😩</span>
+                        <span class="text-xs font-medium text-gray-400 group-hover:text-white transition-colors">Boring</span>
+                    </button>
+                    <button class="flex flex-col items-center gap-2 group" onclick="rateShow('great')">
+                        <span class="text-3xl grayscale group-hover:grayscale-0 transition-all transform group-hover:scale-110">😃</span>
+                        <span class="text-xs font-medium text-gray-400 group-hover:text-white transition-colors">Great</span>
+                    </button>
+                    <button class="flex flex-col items-center gap-2 group" onclick="rateShow('amazing')">
+                        <span class="text-3xl grayscale group-hover:grayscale-0 transition-all transform group-hover:scale-110">🤩</span>
+                        <span class="text-xs font-medium text-gray-400 group-hover:text-white transition-colors">Amazing</span>
+                    </button>
                 </div>
             </div>
 
@@ -682,149 +907,6 @@
                     </div>
                 </div>
             </div>
-
-           <!-- Show Details (Mobile) -->
-<div class="lg:hidden bg-white dark:bg-[#151926] rounded-xl p-6 shadow-sm border border-gray-200 dark:border-gray-800 h-fit">
-    <div class="flex gap-4 mb-4">
-        <img alt="Poster" class="w-24 h-36 object-cover rounded-lg shadow-md flex-shrink-0" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBL8sSKQhkIHjJRpfaXPOb2Ntr-YMNUhdTfQQNGnnmqGZu3SSewBEFAnXpGTo1YxqHXlb8pOCJCZrgrSF00Ey3CMmhZW5Q7dqz5o0qIOeV3DXsmqV-RKQGF2yEnwCFPLqyZ1R9luYVGdw-P_L6bRKjMPRM2RO5ISubiOat46Ovv-uMFsJfxGzRT0ngWoCZXAiiHQbJOA91N5Wyn21gKPKb6rWilqbabiqUYqUEEe31UdFQXOki6b3glJcCnNMssztZkZ0UYU_mwBbY"/>
-        <div>
-            <h1 class="text-xl font-bold leading-tight mb-2">Alya Sometimes Hides Her Feelings in Russian</h1>
-            <div class="flex flex-wrap gap-2 text-xs text-gray-500 dark:text-gray-400 mb-2">
-                <span class="px-1.5 py-0.5 border border-gray-300 dark:border-gray-700 rounded">TV-14</span>
-                <span class="px-1.5 py-0.5 bg-primary text-white rounded font-bold">HD</span>
-                <span class="flex items-center gap-1"><span class="material-symbols-outlined text-sm">mic</span> 12</span>
-                <span class="flex items-center gap-1"><span class="material-symbols-outlined text-sm">subtitles</span> 12</span>
-            </div>
-            <div class="text-xs text-gray-500 dark:text-gray-400">
-                Anime • 12 Episodes
-            </div>
-        </div>
-    </div>
-    <div class="description-container collapsed" id="description-container-mobile">
-        <p class="text-sm text-gray-600 dark:text-gray-300 leading-relaxed mb-2">
-            Alisa Mikhailovna Kujou is a beautiful half-Russian girl who sits next to Masachika Kuze in class. Despite her appearance, she's a tsundere who is always glaring at Kuze. She's also the vice president of the student council and is secretly a light novel author. Kuze is a lazy student who always naps in class, but he's actually quite capable when he wants to be. He understands Russian and can hear Alisa's affectionate mutterings in Russian, but he pretends not to understand to tease her.
-        </p>
-    </div>
-    <div class="description-toggle" id="description-toggle-mobile" onclick="toggleDescriptionMobile()">
-        <span>Read more</span>
-        <span class="material-symbols-outlined">arrow_forward</span>
-    </div>
-    <!-- SHOW DETAILS INFORMATION -->
-    <div class="grid grid-cols-1 gap-3 text-xs text-gray-500 dark:text-gray-400 border-t border-gray-100 dark:border-gray-700 pt-4 mt-4">
-        <!-- Title Information -->
-        <div>
-            <span class="font-semibold text-gray-700 dark:text-gray-200">Title:</span> 
-            <span class="ml-1">Alya Sometimes Hides Her Feelings in Russian</span>
-        </div>
-        <div>
-            <span class="font-semibold text-gray-700 dark:text-gray-200">Original:</span> 
-            <span class="ml-1">Tokidoki Bosotto Russia-go de Dereru Tonari no Alya-san</span>
-        </div>
-        <div>
-            <span class="font-semibold text-gray-700 dark:text-gray-200">Japanese:</span> 
-            <span class="ml-1">時々ボソッとロシア語でデレる隣のアーリャさん</span>
-        </div>
-        
-        <!-- Synonyms -->
-        <div>
-            <span class="font-semibold text-gray-700 dark:text-gray-200">Synonyms:</span> 
-            <span class="ml-1">Roshidere, Alya-san, who sits besides me and sometimes murmurs affectionately in Russian., Arya Next Door Sometimes Lapses into Russian</span>
-        </div>
-        
-        <!-- Airing Information -->
-        <div class="grid grid-cols-2 gap-2 mt-1">
-            <div>
-                <span class="font-semibold text-gray-700 dark:text-gray-200">Aired:</span> 
-                <span class="ml-1">2023</span>
-            </div>
-            <div>
-                <span class="font-semibold text-gray-700 dark:text-gray-200">Premiered:</span> 
-                <span class="ml-1">Fall 2023</span>
-            </div>
-        </div>
-        
-        <!-- Duration & Status -->
-        <div class="grid grid-cols-2 gap-2">
-            <div>
-                <span class="font-semibold text-gray-700 dark:text-gray-200">Duration:</span> 
-                <span class="ml-1">24 min</span>
-            </div>
-            <div>
-                <span class="font-semibold text-gray-700 dark:text-gray-200">Status:</span> 
-                <span class="ml-1 text-blue-500">Finished Airing</span>
-            </div>
-        </div>
-        
-     <!-- Score -->
-<div class="mt-1 flex items-center flex-wrap gap-x-2 gap-y-1">
-    <span class="font-semibold text-gray-700 dark:text-gray-200">Score:</span>
-    
-    <div class="flex items-center gap-1 text-gray-600 dark:text-gray-400">
-        <span style="color: #5391cf;">★</span>
-        <span>MAL</span>
-    </div>
-    
-    <span class="text-gray-400 dark:text-gray-500">|</span>
-    
-    <div class="flex items-center gap-1 text-gray-600 dark:text-gray-400">
-        <span style="color: #ccbd5e;">★</span>
-        <span>IMDb</span>
-    </div>
-</div>
-        <!-- Popularity -->
-        <div>
-            <span class="font-semibold text-gray-700 dark:text-gray-200">Popularity:</span> 
-            <span class="ml-1">#5488</span>
-        </div>
-        
-       <!-- Genres -->
-<div class="flex flex-wrap items-center gap-x-2 gap-y-1">
-    <span class="font-semibold text-gray-700 dark:text-gray-200">Genres:</span>
-    <span class="px-2 py-1 bg-gray-100 dark:bg-gray-800 rounded text-xs text-gray-700 dark:text-gray-200 hover:bg-[#4d85bd] focus:bg-[#4d85bd] focus:outline-none focus:ring-2 focus:ring-[#4d85bd] focus:ring-opacity-50 transition-colors cursor-pointer">Action</span>
-    <span class="px-2 py-1 bg-gray-100 dark:bg-gray-800 rounded text-xs text-gray-700 dark:text-gray-200 hover:bg-[#4d85bd] focus:bg-[#4d85bd] focus:outline-none focus:ring-2 focus:ring-[#4d85bd] focus:ring-opacity-50 transition-colors cursor-pointer">Comedy</span>
-    <span class="px-2 py-1 bg-gray-100 dark:bg-gray-800 rounded text-xs text-gray-700 dark:text-gray-200 hover:bg-[#4d85bd] focus:bg-[#4d85bd] focus:outline-none focus:ring-2 focus:ring-[#4d85bd] focus:ring-opacity-50 transition-colors cursor-pointer">Slice of Life</span>
-    <span class="px-2 py-1 bg-gray-100 dark:bg-gray-800 rounded text-xs text-gray-700 dark:text-gray-200 hover:bg-[#4d85bd] focus:bg-[#4d85bd] focus:outline-none focus:ring-2 focus:ring-[#4d85bd] focus:ring-opacity-50 transition-colors cursor-pointer">Shounen</span>
-</div>
-        
-      <!-- Cast -->
-<div class="mt-1 flex flex-wrap items-center gap-x-2 gap-y-1">
-    <span class="font-semibold text-gray-700 dark:text-gray-200">Cast:</span>
-    <span class="px-3 py-1 bg-[#9e265a] text-white rounded-full text-xs font-medium whitespace-nowrap">Takuya Eguchi</span>
-    <span class="px-3 py-1 bg-[#9e265a] text-white rounded-full text-xs font-medium whitespace-nowrap">Atsumi Tanezaki</span>
-    <span class="px-3 py-1 bg-[#9e265a] text-white rounded-full text-xs font-medium whitespace-nowrap">Saori Hayami</span>
-</div>
-        
-        <!-- Certification & Country -->
-        <div class="grid grid-cols-2 gap-2 mt-1">
-            <div>
-                <span class="font-semibold text-gray-700 dark:text-gray-200">Country:</span> 
-                <span class="ml-1">Japan</span>
-            </div>
-        </div>
-         <!-- Studio & Producers -->
-        <div class="mt-1">
-            <span class="font-semibold text-gray-700 dark:text-gray-200">Studio:</span> 
-            <span class="ml-1">Wit Studio, CloverWorks</span>
-        </div>
-        <div>
-            <span class="font-semibold text-gray-700 dark:text-gray-200">Producers:</span> 
-            <div class="mt-1 space-y-1">
-                <div class="flex items-center gap-2">
-                    <span class="text-gray-600 dark:text-gray-400">•</span>
-                    <span>TOHO</span>
-                </div>
-                <div class="flex items-center gap-2">
-                    <span class="text-gray-600 dark:text-gray-400">•</span>
-                    <span>TV Tokyo</span>
-                </div>
-                <div class="flex items-center gap-2">
-                    <span class="text-gray-600 dark:text-gray-400">•</span>
-                    <span>Shueisha</span>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
 
             <!-- Recommended for You -->
             <div class="bg-white dark:bg-[#151926] rounded-xl overflow-hidden shadow-sm border border-gray-200 dark:border-gray-800">
@@ -858,69 +940,70 @@
             </div>
         </div>
 
-        <!-- Right Sidebar - 25% width on desktop -->
-        <div class="w-full lg:w-[25%] space-y-6">
-           <!-- Show Details Card (Desktop) -->
-<div class="hidden lg:block bg-white dark:bg-[#151926] rounded-xl p-6 shadow-sm border border-gray-200 dark:border-gray-800 h-fit">
-    <div class="flex gap-4 mb-4">
-        <img alt="Poster" class="w-24 h-36 object-cover rounded-lg shadow-md flex-shrink-0" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBL8sSKQhkIHjJRpfaXPOb2Ntr-YMNUhdTfQQNGnnmqGZu3SSewBEFAnXpGTo1YxqHXlb8pOCJCZrgrSF00Ey3CMmhZW5Q7dqz5o0qIOeV3DXsmqV-RKQGF2yEnwCFPLqyZ1R9luYVGdw-P_L6bRKjMPRM2RO5ISubiOat46Ovv-uMFsJfxGzRT0ngWoCZXAiiHQbJOA91N5Wyn21gKPKb6rWilqbabiqUYqUEEe31UdFQXOki6b3glJcCnNMssztZkZ0UYU_mwBbY"/>
-        <div>
-            <h1 class="text-xl font-bold leading-tight mb-2">Alya Sometimes Hides Her Feelings in Russian</h1>
-            <div class="flex flex-wrap gap-2 text-xs text-gray-500 dark:text-gray-400 mb-2">
-                <span class="px-1.5 py-0.5 border border-gray-300 dark:border-gray-700 rounded">TV-14</span>
-                <span class="px-1.5 py-0.5 bg-primary text-white rounded font-bold">HD</span>
-                <span class="flex items-center gap-1"><span class="material-symbols-outlined text-sm">mic</span> 12</span>
-                <span class="flex items-center gap-1"><span class="material-symbols-outlined text-sm">subtitles</span> 12</span>
+        <!-- Right Sidebar - 20% width on desktop -->
+        <div class="w-full lg:w-1/5 sidebar-right space-y-6">
+            <!-- Show Details Card (Desktop) -->
+            <div class="hidden lg:block bg-white dark:bg-[#151926] rounded-xl p-6 shadow-sm border border-gray-200 dark:border-gray-800 h-fit">
+                <div class="flex gap-4 mb-4">
+                    <img alt="Poster" class="w-24 h-36 object-cover rounded-lg shadow-md flex-shrink-0" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBL8sSKQhkIHjJRpfaXPOb2Ntr-YMNUhdTfQQNGnnmqGZu3SSewBEFAnXpGTo1YxqHXlb8pOCJCZrgrSF00Ey3CMmhZW5Q7dqz5o0qIOeV3DXsmqV-RKQGF2yEnwCFPLqyZ1R9luYVGdw-P_L6bRKjMPRM2RO5ISubiOat46Ovv-uMFsJfxGzRT0ngWoCZXAiiHQbJOA91N5Wyn21gKPKb6rWilqbabiqUYqUEEe31UdFQXOki6b3glJcCnNMssztZkZ0UYU_mwBbY"/>
+                    <div>
+                        <h1 class="text-xl font-bold leading-tight mb-2">Alya Sometimes Hides Her Feelings in Russian</h1>
+                        <div class="flex flex-wrap gap-2 text-xs text-gray-500 dark:text-gray-400 mb-2">
+                            <span class="px-1.5 py-0.5 border border-gray-300 dark:border-gray-700 rounded">TV-14</span>
+                            <span class="px-1.5 py-0.5 bg-primary text-white rounded font-bold">HD</span>
+                            <span class="flex items-center gap-1"><span class="material-symbols-outlined text-sm">mic</span> 12</span>
+                            <span class="flex items-center gap-1"><span class="material-symbols-outlined text-sm">subtitles</span> 12</span>
+                        </div>
+                        <div class="text-xs text-gray-500 dark:text-gray-400">
+                            Anime • 12 Episodes
+                        </div>
+                    </div>
+                </div>
+                <div class="description-container collapsed" id="description-container-desktop">
+                    <p class="text-sm text-gray-600 dark:text-gray-300 leading-relaxed mb-2">
+                        Alisa Mikhailovna Kujou is a beautiful half-Russian girl who sits next to Masachika Kuze in class. Despite her appearance, she's a tsundere who is always glaring at Kuze. She's also the vice president of the student council and is secretly a light novel author. Kuze is a lazy student who always naps in class, but he's actually quite capable when he wants to be. He understands Russian and can hear Alisa's affectionate mutterings in Russian, but he pretends not to understand to tease her.
+                    </p>
+                </div>
+                <div class="description-toggle" id="description-toggle-desktop" onclick="toggleDescriptionDesktop()">
+                    <span>Read more</span>
+                    <span class="material-symbols-outlined">arrow_forward</span>
+                </div>
+                <div class="grid grid-cols-2 gap-2 text-xs text-gray-500 dark:text-gray-400 border-t border-gray-100 dark:border-gray-700 pt-4">
+                    <div><span class="font-semibold text-gray-700 dark:text-gray-200">Title:</span> Alya Sometimes Hides Her Feelings in Russian</div>
+                    <div><span class="font-semibold text-gray-700 dark:text-gray-200">Original:</span> Tokidoki Bosotto Russia-go de Dereru Tonari no Alya-san</div>
+                    <div><span class="font-semibold text-gray-700 dark:text-gray-200">Japanese:</span> 時々ボソッとロシア語でデレる隣のアーリャさん</div>
+                    <div class="col-span-2"><span class="font-semibold text-gray-700 dark:text-gray-200">Synonyms:</span> Roshidere | Alya-san, who sits besides me and sometimes murmurs affectionately in Russian. | Arya Next Door Sometimes Lapses into Russian</div>
+                    <div><span class="font-semibold text-gray-700 dark:text-gray-200">Aired Year:</span> 2023</div>
+                    <div><span class="font-semibold text-gray-700 dark:text-gray-200">Premiered:</span> Fall 2023</div>
+                    <div><span class="font-semibold text-gray-700 dark:text-gray-200">Duration:</span> 24 min</div>
+                    <div><span class="font-semibold text-gray-700 dark:text-gray-200">Status:</span> Finished Airing</div>
+                    <div class="col-span-2"><span class="font-semibold text-gray-700 dark:text-gray-200">Scores:</span> 
+                        <svg class="w-4 h-4 inline fill-blue-500" viewBox="0 0 24 24">
+                            <path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/>
+                        </svg> 8.16 | 
+                        <svg class="w-4 h-4 inline fill-yellow-500" viewBox="0 0 24 24">
+                            <path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/>
+                        </svg> 8.2
+                    </div>
+                    <div class="col-span-2"><span class="font-semibold text-gray-700 dark:text-gray-200">Popularity:</span> #88</div>
+                    <div class="col-span-2">
+                        <span class="font-semibold text-gray-700 dark:text-gray-200 mr-2">Genres:</span>
+                        <div class="inline-flex flex-wrap gap-2 mt-1">
+                            <span class="px-3 py-1 rounded-full border border-gray-300 dark:border-gray-600 bg-transparent text-gray-700 dark:text-gray-300 text-xs transition-all duration-200 hover:bg-[#46678C] hover:border-[#46678C] hover:text-white dark:hover:text-white hover:scale-105 hover:shadow-sm cursor-pointer">Action</span>
+                            <span class="px-3 py-1 rounded-full border border-gray-300 dark:border-gray-600 bg-transparent text-gray-700 dark:text-gray-300 text-xs transition-all duration-200 hover:bg-[#46678C] hover:border-[#46678C] hover:text-white dark:hover:text-white hover:scale-105 hover:shadow-sm cursor-pointer">Comedy</span>
+                            <span class="px-3 py-1 rounded-full border border-gray-300 dark:border-gray-600 bg-transparent text-gray-700 dark:text-gray-300 text-xs transition-all duration-200 hover:bg-[#46678C] hover:border-[#46678C] hover:text-white dark:hover:text-white hover:scale-105 hover:shadow-sm cursor-pointer">Slice of Life</span>
+                            <span class="px-3 py-1 rounded-full border border-gray-300 dark:border-gray-600 bg-transparent text-gray-700 dark:text-gray-300 text-xs transition-all duration-200 hover:bg-[#46678C] hover:border-[#46678C] hover:text-white dark:hover:text-white hover:scale-105 hover:shadow-sm cursor-pointer">Shounen</span>
+                        </div>
+                    </div>
+                    <div class="col-span-2"><span class="font-semibold text-gray-700 dark:text-gray-200">Cast:</span> Takuya Eguchi | Atsumi Tanezaki | Saori Hayami</div>
+                    <div><span class="font-semibold text-gray-700 dark:text-gray-200">Country:</span> Japan</div>
+                    <div><span class="font-semibold text-gray-700 dark:text-gray-200">Studio:</span> Wit Studio | CloverWorks</div>
+                    <div class="col-span-2"><span class="font-semibold text-gray-700 dark:text-gray-200">Producers:</span> TOHO | TV Tokyo | Shueisha</div>
+                </div>
             </div>
-            <div class="text-xs text-gray-500 dark:text-gray-400">
-                Anime • 12 Episodes
-            </div>
-        </div>
-    </div>
-    <div class="description-container collapsed" id="description-container-desktop">
-        <p class="text-sm text-gray-600 dark:text-gray-300 leading-relaxed mb-2">
-            Alisa Mikhailovna Kujou is a beautiful half-Russian girl who sits next to Masachika Kuze in class. Despite her appearance, she's a tsundere who is always glaring at Kuze. She's also the vice president of the student council and is secretly a light novel author. Kuze is a lazy student who always naps in class, but he's actually quite capable when he wants to be. He understands Russian and can hear Alisa's affectionate mutterings in Russian, but he pretends not to understand to tease her.
-        </p>
-    </div>
-    <div class="description-toggle" id="description-toggle-desktop" onclick="toggleDescriptionDesktop()">
-        <span>Read more</span>
-        <span class="material-symbols-outlined">arrow_forward</span>
-    </div>
-    <div class="grid grid-cols-2 gap-2 text-xs text-gray-500 dark:text-gray-400 border-t border-gray-100 dark:border-gray-700 pt-4">
-         <div><span class="font-semibold text-gray-700 dark:text-gray-200">Title:</span> Alya Sometimes Hides Her Feelings in Russian</div>
-        <div><span class="font-semibold text-gray-700 dark:text-gray-200">Original:</span> Tokidoki Bosotto Russia-go de Dereru Tonari no Alya-san</div>
-        <div><span class="font-semibold text-gray-700 dark:text-gray-200">Japanese:</span> 時々ボソッとロシア語でデレる隣のアーリャさん</div>
-        <div class="col-span-2"><span class="font-semibold text-gray-700 dark:text-gray-200">Synonyms:</span> Roshidere | Alya-san, who sits besides me and sometimes murmurs affectionately in Russian. | Arya Next Door Sometimes Lapses into Russian</div>
-        <div><span class="font-semibold text-gray-700 dark:text-gray-200">Aired Year:</span> 2023</div>
-        <div><span class="font-semibold text-gray-700 dark:text-gray-200">Premiered:</span> Fall 2023</div>
-        <div><span class="font-semibold text-gray-700 dark:text-gray-200">Duration:</span> 24 min</div>
-        <div><span class="font-semibold text-gray-700 dark:text-gray-200">Status:</span> Finished Airing</div>
-       <div class="col-span-2"><span class="font-semibold text-gray-700 dark:text-gray-200">Scores:</span> 
-  <svg class="w-4 h-4 inline fill-blue-500" viewBox="0 0 24 24">
-    <path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/>
-  </svg> 8.16 | 
-  <svg class="w-4 h-4 inline fill-yellow-500" viewBox="0 0 24 24">
-    <path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/>
-  </svg> 8.2
-</div>
-        <div class="col-span-2"><span class="font-semibold text-gray-700 dark:text-gray-200">Popularity:</span> #88</div>
-        <div class="col-span-2">
-            <span class="font-semibold text-gray-700 dark:text-gray-200 mr-2">Genres:</span>
-            <div class="inline-flex flex-wrap gap-2 mt-1">
-                <span class="px-3 py-1 rounded-full border border-gray-300 dark:border-gray-600 bg-transparent text-gray-700 dark:text-gray-300 text-xs transition-all duration-200 hover:bg-[#46678C] hover:border-[#46678C] hover:text-white dark:hover:text-white hover:scale-105 hover:shadow-sm cursor-pointer">Action</span>
-                <span class="px-3 py-1 rounded-full border border-gray-300 dark:border-gray-600 bg-transparent text-gray-700 dark:text-gray-300 text-xs transition-all duration-200 hover:bg-[#46678C] hover:border-[#46678C] hover:text-white dark:hover:text-white hover:scale-105 hover:shadow-sm cursor-pointer">Comedy</span>
-                <span class="px-3 py-1 rounded-full border border-gray-300 dark:border-gray-600 bg-transparent text-gray-700 dark:text-gray-300 text-xs transition-all duration-200 hover:bg-[#46678C] hover:border-[#46678C] hover:text-white dark:hover:text-white hover:scale-105 hover:shadow-sm cursor-pointer">Slice of Life</span>
-                <span class="px-3 py-1 rounded-full border border-gray-300 dark:border-gray-600 bg-transparent text-gray-700 dark:text-gray-300 text-xs transition-all duration-200 hover:bg-[#46678C] hover:border-[#46678C] hover:text-white dark:hover:text-white hover:scale-105 hover:shadow-sm cursor-pointer">Shounen</span>
-            </div>
-        </div>
-        <div class="col-span-2"><span class="font-semibold text-gray-700 dark:text-gray-200">Cast:</span> Takuya Eguchi | Atsumi Tanezaki | Saori Hayami</div>
-        <div><span class="font-semibold text-gray-700 dark:text-gray-200">Country:</span> Japan</div>
-        <div><span class="font-semibold text-gray-700 dark:text-gray-200">Studio:</span> Wit Studio | CloverWorks</div>
-        <div class="col-span-2"><span class="font-semibold text-gray-700 dark:text-gray-200">Producers:</span> TOHO | TV Tokyo | Shueisha</div>
-    </div>
-</div>
-            <!-- Rating Card -->
-            <div class="bg-[#1A1D29] rounded-xl p-5 shadow-lg border border-gray-800">
+
+            <!-- Rating Card (Desktop) -->
+            <div class="hidden lg:block bg-[#1A1D29] rounded-xl p-5 shadow-lg border border-gray-800">
                 <div class="flex items-center justify-between mb-4">
                     <div class="flex items-center gap-2">
                         <span class="material-symbols-outlined text-yellow-500 fill-current">star</span>
@@ -942,16 +1025,6 @@
                         <span class="text-3xl grayscale group-hover:grayscale-0 transition-all transform group-hover:scale-110">🤩</span>
                         <span class="text-xs font-medium text-gray-400 group-hover:text-white transition-colors">Amazing</span>
                     </button>
-                </div>
-            </div>
-
-            <!-- Episode List (Desktop) -->
-            <div class="hidden lg:block bg-white dark:bg-[#151926] rounded-xl overflow-hidden shadow-sm border border-gray-200 dark:border-gray-800">
-                <div class="p-4 border-b border-gray-200 dark:border-gray-700 font-bold text-lg">Episodes</div>
-                <div class="p-4">
-                    <div class="max-h-[500px] overflow-y-auto custom-scrollbar" id="episode-list-container">
-                        <!-- Episodes will be loaded here for desktop -->
-                    </div>
                 </div>
             </div>
 
@@ -1003,6 +1076,7 @@
     let currentServer = 'SUB-HD-01';
     let currentSeason = '1';
     let isVideoLoaded = false;
+    let isVideoLoadedDesktop = false;
     let isDescriptionExpandedDesktop = false;
     let isDescriptionExpandedMobile = false;
     
@@ -1141,8 +1215,12 @@
         window.addEventListener('resize', handleResponsiveLayout);
         handleResponsiveLayout();
         
+        // Initialize mobile video controls background color
+        updateMobileVideoControlsBackground();
+        
         // Load first video
         loadVideo();
+        loadDesktopVideo();
     }
     
     // Update mobile display information
@@ -1160,9 +1238,20 @@
         document.getElementById('current-server-display-mobile').innerText = `${serverType}-${serverNumber}`;
     }
     
+    // Update mobile video controls background color
+    function updateMobileVideoControlsBackground() {
+        const mobileVideoControls = document.getElementById('mobile-video-controls');
+        if (mobileVideoControls) {
+            const isDarkMode = document.documentElement.classList.contains('dark');
+            mobileVideoControls.style.backgroundColor = isDarkMode ? '#0B0E19' : '#F3F4F6';
+        }
+    }
+    
     // Setup season navigation
     function setupSeasonNavigation() {
         const seasonTabs = document.getElementById('season-tabs-container');
+        if (!seasonTabs) return;
+        
         const leftBtn = document.querySelector('.season-nav-btn.left');
         const rightBtn = document.querySelector('.season-nav-btn.right');
         
@@ -1187,6 +1276,8 @@
     // Scroll season tabs horizontally
     function scrollSeasons(direction) {
         const seasonTabs = document.getElementById('season-tabs-container');
+        if (!seasonTabs) return;
+        
         const scrollAmount = 200;
         
         if (direction === 1) {
@@ -1219,6 +1310,8 @@
         const container = document.getElementById('description-container-desktop');
         const toggle = document.getElementById('description-toggle-desktop');
         
+        if (!container || !toggle) return;
+        
         isDescriptionExpandedDesktop = !isDescriptionExpandedDesktop;
         
         if (isDescriptionExpandedDesktop) {
@@ -1238,6 +1331,8 @@
     function toggleDescriptionMobile() {
         const container = document.getElementById('description-container-mobile');
         const toggle = document.getElementById('description-toggle-mobile');
+        
+        if (!container || !toggle) return;
         
         isDescriptionExpandedMobile = !isDescriptionExpandedMobile;
         
@@ -1259,6 +1354,9 @@
         const isMobile = window.innerWidth < 768;
         const isTablet = window.innerWidth >= 768 && window.innerWidth < 1024;
         
+        // Update mobile video controls background color
+        updateMobileVideoControlsBackground();
+        
         // For mobile and tablet, add smooth scrolling to season tabs
         const seasonTabs = document.getElementById('season-tabs-container');
         if (seasonTabs) {
@@ -1273,20 +1371,40 @@
     // Setup video player
     function setupVideoPlayer() {
         const playButton = document.getElementById('play-button');
-        const videoContainer = document.getElementById('video-player-container');
+        const desktopPlayButton = document.getElementById('desktop-play-button');
         
-        playButton.addEventListener('click', function() {
-            if (!isVideoLoaded) {
-                loadVideo();
-                isVideoLoaded = true;
-                document.getElementById('video-loading-overlay').style.display = 'none';
-            }
-        });
+        if (playButton) {
+            playButton.addEventListener('click', function() {
+                if (!isVideoLoaded) {
+                    loadVideo();
+                    isVideoLoaded = true;
+                    const videoLoadingOverlay = document.getElementById('video-loading-overlay');
+                    if (videoLoadingOverlay) {
+                        videoLoadingOverlay.style.display = 'none';
+                    }
+                }
+            });
+        }
+        
+        if (desktopPlayButton) {
+            desktopPlayButton.addEventListener('click', function() {
+                if (!isVideoLoadedDesktop) {
+                    loadDesktopVideo();
+                    isVideoLoadedDesktop = true;
+                    const desktopVideoLoadingOverlay = document.getElementById('desktop-video-loading-overlay');
+                    if (desktopVideoLoadingOverlay) {
+                        desktopVideoLoadingOverlay.style.display = 'none';
+                    }
+                }
+            });
+        }
     }
     
-    // Load Video based on current state
+    // Load Mobile Video based on current state
     function loadVideo() {
         const container = document.getElementById('video-player-container');
+        if (!container) return;
+        
         const episodes = episodeData[currentSeason] || [];
         
         // Check if episode exists
@@ -1328,13 +1446,74 @@
         container.appendChild(iframe);
         
         // Hide loading overlay
-        document.getElementById('video-loading-overlay').style.display = 'none';
+        const videoLoadingOverlay = document.getElementById('video-loading-overlay');
+        if (videoLoadingOverlay) {
+            videoLoadingOverlay.style.display = 'none';
+        }
         isVideoLoaded = true;
         
         // Update mobile display
         updateMobileDisplay();
         
-        console.log(`Loading video: Season ${currentSeason}, Episode ${currentEpisode}, Server: ${currentServer}`);
+        console.log(`Loading mobile video: Season ${currentSeason}, Episode ${currentEpisode}, Server: ${currentServer}`);
+    }
+    
+    // Load Desktop Video based on current state
+    function loadDesktopVideo() {
+        const container = document.getElementById('desktop-video-player-container');
+        if (!container) return;
+        
+        const episodes = episodeData[currentSeason] || [];
+        
+        // Check if episode exists
+        if (currentEpisode > episodes.length) {
+            currentEpisode = 1;
+        }
+        
+        // Get the correct episode index (arrays are 0-based)
+        const episodeIndex = currentEpisode - 1;
+        
+        // Get video URL based on current server
+        let videoUrl = '';
+        const serverUrls = episodeUrls[currentServer] || subEpisodes;
+        
+        if (episodeIndex < serverUrls.length) {
+            videoUrl = serverUrls[episodeIndex];
+        } else {
+            // Fallback to first episode if index is out of bounds
+            videoUrl = serverUrls[0] || subEpisodes[0];
+        }
+        
+        // Determine if it's a StreamHLS or Filemoon link
+        let embedUrl = videoUrl;
+        if (videoUrl.includes('streamhls.to')) {
+            embedUrl = `${videoUrl}?autoplay=1&controls=1&modestbranding=1&rel=0`;
+        } else if (videoUrl.includes('filemoon.to')) {
+            embedUrl = `${videoUrl}?autoplay=1&controls=1`;
+        }
+        
+        // Clear container and add iframe
+        container.innerHTML = '';
+        const iframe = document.createElement('iframe');
+        iframe.className = 'video-container';
+        iframe.src = embedUrl;
+        iframe.frameBorder = '0';
+        iframe.allow = 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture';
+        iframe.allowFullscreen = true;
+        iframe.title = `Season ${currentSeason} Episode ${currentEpisode} - Alya Sometimes Hides Her Feelings in Russian`;
+        container.appendChild(iframe);
+        
+        // Hide loading overlay
+        const desktopVideoLoadingOverlay = document.getElementById('desktop-video-loading-overlay');
+        if (desktopVideoLoadingOverlay) {
+            desktopVideoLoadingOverlay.style.display = 'none';
+        }
+        isVideoLoadedDesktop = true;
+        
+        // Update desktop display
+        document.getElementById('current-episode-display').innerText = `Episode ${currentEpisode}`;
+        
+        console.log(`Loading desktop video: Season ${currentSeason}, Episode ${currentEpisode}, Server: ${currentServer}`);
     }
     
     // Handle Season Selection
@@ -1355,7 +1534,13 @@
         renderEpisodeList();
         updateUI();
         updateMobileDisplay();
-        loadVideo();
+        
+        // Load video for current platform
+        if (window.innerWidth < 1024) {
+            loadVideo();
+        } else {
+            loadDesktopVideo();
+        }
     }
     
     // Handle Server Selection
@@ -1373,7 +1558,13 @@
         currentServer = btn.getAttribute('data-server');
         updateUI();
         updateMobileDisplay();
-        loadVideo();
+        
+        // Load video for current platform
+        if (window.innerWidth < 1024) {
+            loadVideo();
+        } else {
+            loadDesktopVideo();
+        }
     }
     
     // Handle Episode Selection
@@ -1383,7 +1574,13 @@
         updateUI();
         updateMobileDisplay();
         renderEpisodeList();
-        loadVideo();
+        
+        // Load video for current platform
+        if (window.innerWidth < 1024) {
+            loadVideo();
+        } else {
+            loadDesktopVideo();
+        }
     }
     
     // Handle Previous/Next Buttons
@@ -1400,7 +1597,13 @@
         updateUI();
         updateMobileDisplay();
         renderEpisodeList();
-        loadVideo();
+        
+        // Load video for current platform
+        if (window.innerWidth < 1024) {
+            loadVideo();
+        } else {
+            loadDesktopVideo();
+        }
     }
     
     // Render Episode List
@@ -1449,14 +1652,20 @@
     // Update General UI (Active Classes, Text)
     function updateUI() {
         // Update "You are watching" text for desktop
-        document.getElementById('current-episode-display').innerText = `Episode ${currentEpisode}`;
+        const desktopDisplay = document.getElementById('current-episode-display');
+        if (desktopDisplay) {
+            desktopDisplay.innerText = `Episode ${currentEpisode}`;
+        }
         
         // Update list status text for desktop and mobile
         const savedStatus = localStorage.getItem('quravel_list_status_alya');
         const listStatusText = savedStatus && savedStatus !== 'Add to List' ? savedStatus : 'Add to List';
         
-        document.getElementById('current-list-status-text').innerText = listStatusText;
-        document.getElementById('current-list-status-text-mobile').innerText = listStatusText;
+        const desktopListBtn = document.getElementById('current-list-status-text');
+        const mobileListBtn = document.getElementById('current-list-status-text-mobile');
+        
+        if (desktopListBtn) desktopListBtn.innerText = listStatusText;
+        if (mobileListBtn) mobileListBtn.innerText = listStatusText;
         
         // Update Season Buttons
         document.querySelectorAll('.season-btn').forEach(btn => {
@@ -1489,7 +1698,11 @@
     
     function renderComments() {
         const container = document.getElementById('comments-list-container');
-        document.getElementById('comment-count-badge').innerText = `(${comments.length})`;
+        const commentCountBadge = document.getElementById('comment-count-badge');
+        
+        if (!container || !commentCountBadge) return;
+        
+        commentCountBadge.innerText = `(${comments.length})`;
         
         let html = '';
         comments.forEach(comment => {
@@ -1608,11 +1821,15 @@
     
     function toggleReplyBox(id) {
         const box = document.getElementById(`reply-box-${id}`);
-        box.classList.toggle('hidden');
+        if (box) {
+            box.classList.toggle('hidden');
+        }
     }
     
     function postReply(commentId) {
         const input = document.getElementById(`reply-input-${commentId}`);
+        if (!input) return;
+        
         const text = input.value.trim();
         if(text) {
             const comment = comments.find(c => c.id === commentId);
@@ -1633,6 +1850,8 @@
     function renderRelatedLists() {
         const recContainer = document.getElementById('recommended-list-container');
         const popContainer = document.getElementById('most-popular-list-container');
+        
+        if (!recContainer || !popContainer) return;
         
         const recImages = [
             'https://lh3.googleusercontent.com/aida-public/AB6AXuB6aKroKe4_Hr_QOThhIQ1eSBsj6XHa6M1h1ij1beOOwYZsLuAKaEUwhzePp5w2e0ZiNq23ueXCujFcscvpvX5l0fSEO1JhKa6gwDDPDrdfapY86HeYs5fG_M99b926v37WwsUlyZ7ugSX23giOl25toAwGLS8wOeBXwUajaxUzaTcHC_Yh5fJqnnwy6HgEx_QviGDLtROQ6LVPu2Z1BRIxBOEdc9fz9ozk1sYgF_aWaLm0ZXBf9Mh7BLQkJKaAnfSKTVLxnnvAS1o',
@@ -1760,11 +1979,17 @@
     function updateListStatus(status) {
         if (status === 'Add to List') {
             listButtonText.innerText = 'Add to List';
-            document.getElementById('current-list-status-text-mobile').innerText = 'Add to List';
+            const mobileListBtn = document.getElementById('current-list-status-text-mobile');
+            if (mobileListBtn) {
+                mobileListBtn.innerText = 'Add to List';
+            }
             localStorage.removeItem(storageKey);
         } else {
             listButtonText.innerText = status;
-            document.getElementById('current-list-status-text-mobile').innerText = status;
+            const mobileListBtn = document.getElementById('current-list-status-text-mobile');
+            if (mobileListBtn) {
+                mobileListBtn.innerText = status;
+            }
             localStorage.setItem(storageKey, status);
         }
     }
