@@ -26,6 +26,9 @@
                 borderRadius: {
                     DEFAULT: "0.5rem",
                 },
+                screens: {
+                    'xs': '475px',
+                },
             },
         },
     };
@@ -33,35 +36,50 @@
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
 <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
 <style>
+    /* Prevent horizontal scrolling */
+    html, body {
+        overflow-x: hidden;
+        width: 100%;
+    }
+    
     body {
         font-family: 'Inter', sans-serif;
     }
+    
     .hide-scrollbar::-webkit-scrollbar {
         display: none;
     }
+    
     .hide-scrollbar {
         -ms-overflow-style: none;
         scrollbar-width: none;
     }
+    
     #mobile-menu {
         transition: transform 0.3s ease-in-out;
     }
+    
     .menu-open {
         transform: translateX(0) !important;
     }
+    
     .custom-scrollbar::-webkit-scrollbar {
         width: 6px;
     }
+    
     .custom-scrollbar::-webkit-scrollbar-track {
         background: rgba(255, 255, 255, 0.05);
     }
+    
     .custom-scrollbar::-webkit-scrollbar-thumb {
         background: rgba(255, 255, 255, 0.2);
         border-radius: 3px;
     }
+    
     .custom-scrollbar::-webkit-scrollbar-thumb:hover {
         background: rgba(255, 255, 255, 0.3);
     }
+    
     /* Video Container Responsive */
     .video-container-wrapper {
         position: relative;
@@ -72,6 +90,7 @@
         border-radius: 0.75rem;
         background: #000;
     }
+    
     .video-container {
         position: absolute;
         top: 0;
@@ -80,29 +99,22 @@
         height: 100%;
         border: none;
     }
+    
     /* Episode list responsive styles */
+    .episode-list-item {
+        transition: all 0.2s ease;
+    }
+    
+    .episode-list-item:hover {
+        background: linear-gradient(90deg, rgba(73, 139, 187, 0.1) 0%, rgba(73, 139, 187, 0.05) 100%) !important;
+        transform: translateX(4px);
+    }
+    
     .episode-list-item.active {
-        background: linear-gradient(90deg, rgba(73, 139, 187, 0.15) 0%, rgba(73, 139, 187, 0.05) 100%);
+        background: linear-gradient(90deg, rgba(73, 139, 187, 0.15) 0%, rgba(73, 139, 187, 0.05) 100%) !important;
         border-left: 4px solid #498BBB !important;
     }
-    /* Responsive grid adjustments */
-    @media (max-width: 1024px) {
-        .main-content {
-            grid-template-columns: 1fr !important;
-        }
-        .sidebar-content {
-            order: 2;
-        }
-        .episode-content {
-            order: 1;
-        }
-        .recommended-section {
-            order: 3;
-        }
-        .comments-section {
-            order: 4;
-        }
-    }
+    
     /* Mobile optimizations */
     @media (max-width: 768px) {
         .server-buttons {
@@ -110,49 +122,48 @@
             overflow-x: auto;
             padding-bottom: 8px;
         }
+        
         .server-buttons button {
             flex-shrink: 0;
         }
+        
         .season-tabs {
             overflow-x: auto;
             padding-bottom: 4px;
         }
-        .video-controls {
-            flex-wrap: wrap;
-            gap: 8px;
-        }
-        .video-controls > div {
-            width: 100%;
-            justify-content: space-between;
-        }
-        .recommended-grid {
-            grid-template-columns: repeat(2, 1fr) !important;
+        
+        /* Hide desktop episode section in mobile */
+        #desktop-episode-section {
+            display: none !important;
         }
     }
-    @media (max-width: 480px) {
-        .recommended-grid {
-            grid-template-columns: repeat(2, 1fr) !important;
+    
+    @media (min-width: 769px) {
+        .video-controls-mobile {
+            display: none;
         }
-        .comment-input-section {
-            flex-direction: column;
-            gap: 12px;
-        }
-        .comment-input-section > div:first-child {
-            align-self: flex-start;
+        
+        /* Hide mobile episode section in desktop */
+        #mobile-episode-section {
+            display: none !important;
         }
     }
+    
     /* New styles for description expansion */
     .description-container {
         position: relative;
         overflow: hidden;
         transition: max-height 0.3s ease-out;
     }
+    
     .description-container.collapsed {
         max-height: 4.5rem; /* Approximately 3 lines */
     }
+    
     .description-container.expanded {
         max-height: 1000px;
     }
+    
     .description-toggle {
         display: flex;
         align-items: center;
@@ -164,13 +175,16 @@
         margin-top: 8px;
         transition: color 0.2s;
     }
+    
     .description-toggle:hover {
         color: #3a6ea5;
     }
+    
     .description-toggle .material-symbols-outlined {
         font-size: 18px;
         transition: transform 0.3s;
     }
+    
     .description-toggle.expanded .material-symbols-outlined {
         transform: rotate(90deg);
     }
@@ -183,11 +197,13 @@
         gap: 8px;
         margin-bottom: 16px;
     }
+    
     .season-tabs-wrapper {
         position: relative;
         flex: 1;
         overflow: hidden;
     }
+    
     .season-tabs {
         display: flex;
         gap: 4px;
@@ -196,9 +212,11 @@
         padding: 8px 0;
         -webkit-overflow-scrolling: touch;
     }
+    
     .season-tabs::-webkit-scrollbar {
         display: none;
     }
+    
     .season-nav-btn {
         position: absolute;
         top: 50%;
@@ -219,36 +237,44 @@
         visibility: hidden;
         box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
     }
+    
     .season-nav-btn:hover {
         background: #498BBB;
         transform: translateY(-50%) scale(1.1);
     }
+    
     .season-nav-btn.left {
         left: 0;
     }
+    
     .season-nav-btn.right {
         right: 0;
     }
+    
     .season-navigation-container:hover .season-nav-btn {
         opacity: 1;
         visibility: visible;
     }
+    
     /* Show arrows only on desktop */
     @media (max-width: 1024px) {
         .season-nav-btn {
             display: none;
         }
     }
+    
     /* Mobile touch scrolling enhancement */
     @media (max-width: 768px) {
         .season-tabs {
             scroll-snap-type: x mandatory;
             scroll-padding: 16px;
         }
+        
         .season-btn {
             scroll-snap-align: start;
         }
     }
+    
     /* Season button hover effects */
     .season-btn {
         position: relative;
@@ -258,15 +284,136 @@
         min-width: 100px;
         text-align: center;
     }
+    
     .season-btn:hover:not(.active) {
         background: rgba(73, 139, 187, 0.1);
         transform: translateY(-1px);
         box-shadow: 0 2px 8px rgba(73, 139, 187, 0.15);
     }
+    
     .season-btn.active {
         background: rgba(73, 139, 187, 0.15);
         box-shadow: 0 4px 12px rgba(73, 139, 187, 0.2);
         transform: translateY(-1px);
+    }
+    
+    /* Mobile header adjustments */
+    @media (max-width: 640px) {
+        .header-logo {
+            position: static !important;
+            transform: none !important;
+            margin-left: auto;
+            margin-right: auto;
+            width: fit-content;
+        }
+        
+        .header-left {
+            width: 40px;
+            flex-shrink: 0;
+        }
+        
+        .header-right {
+            width: 40px;
+            flex-shrink: 0;
+        }
+    }
+    
+    /* Card hover effects */
+    .recommended-card {
+        transition: transform 0.3s ease;
+    }
+    
+    .recommended-card:hover {
+        transform: translateY(-4px);
+    }
+    
+    /* Mobile video controls */
+    .video-controls-mobile {
+        background: var(--page-bg, #F3F4F6);
+        border-radius: 0.75rem;
+        margin-top: 12px;
+        padding: 16px;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    }
+    
+    .dark .video-controls-mobile {
+        background: var(--page-bg, #0B0E19);
+    }
+    
+    /* Responsive layout for sidebars */
+    @media (min-width: 1024px) {
+        .sidebar-main {
+            width: 70%;
+            flex: 0 0 70%;
+        }
+        
+        .sidebar-right {
+            width: 30%;
+            flex: 0 0 30%;
+        }
+    }
+    
+    /* Mobile unified block styling */
+    .mobile-video-block {
+        background: white;
+        dark:bg-[#151926];
+        border-radius: 0.75rem;
+        overflow: hidden;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        border: 1px solid #e5e7eb;
+        dark:border-gray-800;
+    }
+    
+    .dark .mobile-video-block {
+        background: #151926;
+        border-color: #374151;
+    }
+    
+    /* Episode list styling for both layouts */
+    .episode-list-container {
+        max-height: 400px;
+        overflow-y: auto;
+    }
+    
+    /* Desktop episode section styling */
+    .desktop-episode-list {
+        max-height: 500px;
+        overflow-y: auto;
+    }
+    
+    .desktop-episode-list .episode-list-item {
+        padding: 12px 16px;
+        margin-bottom: 4px;
+        border-radius: 6px;
+        border-left: 3px solid transparent;
+    }
+    
+    .desktop-episode-list .episode-list-item:hover {
+        background: rgba(73, 139, 187, 0.1) !important;
+        border-left: 3px solid rgba(73, 139, 187, 0.3);
+    }
+    
+    .desktop-episode-list .episode-list-item.active {
+        background: rgba(73, 139, 187, 0.15) !important;
+        border-left: 3px solid #498BBB;
+    }
+    
+    /* Mobile episode section styling */
+    .mobile-episode-list .episode-list-item {
+        padding: 14px 16px;
+        margin-bottom: 4px;
+        border-radius: 8px;
+        border-left: 4px solid transparent;
+    }
+    
+    .mobile-episode-list .episode-list-item:hover {
+        background: rgba(73, 139, 187, 0.1) !important;
+        border-left: 4px solid rgba(73, 139, 187, 0.3);
+    }
+    
+    .mobile-episode-list .episode-list-item.active {
+        background: rgba(73, 139, 187, 0.15) !important;
+        border-left: 4px solid #498BBB;
     }
 </style>
 </head>
@@ -313,7 +460,7 @@
 <!-- Header -->
 <header class="fixed top-0 w-full z-40 bg-white/95 dark:bg-[#0B0E19]/95 backdrop-blur-sm border-b border-gray-200 dark:border-gray-800 shadow-sm">
 <div class="container mx-auto px-4 h-16 flex items-center justify-between">
-<div class="flex items-center gap-4">
+<div class="flex items-center gap-4 header-left">
 <button class="lg:hidden text-gray-600 dark:text-gray-200 focus:outline-none" onclick="toggleMobileMenu()">
 <span class="material-symbols-outlined text-3xl">menu</span>
 </button>
@@ -324,7 +471,7 @@
 <span>Genre</span>
 <span class="material-symbols-outlined text-sm">expand_more</span>
 </button>
-<div class="absolute top-full left-0 w-[600px] bg-white dark:bg-[#1A1D29] rounded-b-lg shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 border-t-2 border-primary grid grid-cols-4 gap-4 p-6 z-50">
+<div class="absolute top-full left-0 w-48 sm:w-64 md:w-[600px] bg-white dark:bg-[#1A1D29] rounded-b-lg shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 border-t-2 border-primary grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4 p-6 z-50">
 <a class="hover:text-primary block text-sm text-gray-600 dark:text-gray-400" href="#">Action</a>
 <a class="hover:text-primary block text-sm text-gray-600 dark:text-gray-400" href="#">Adventure</a>
 <a class="hover:text-primary block text-sm text-gray-600 dark:text-gray-400" href="#">Comedy</a>
@@ -336,7 +483,7 @@
 <span>Country</span>
 <span class="material-symbols-outlined text-sm">expand_more</span>
 </button>
-<div class="absolute top-full left-0 w-[600px] bg-white dark:bg-[#1A1D29] rounded-b-lg shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 border-t-2 border-primary grid grid-cols-4 gap-4 p-6 z-50">
+<div class="absolute top-full left-0 w-48 sm:w-64 md:w-[600px] bg-white dark:bg-[#1A1D29] rounded-b-lg shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 border-t-2 border-primary grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4 p-6 z-50">
 <a class="hover:text-primary block text-sm text-gray-600 dark:text-gray-400" href="#">USA</a>
 <a class="hover:text-primary block text-sm text-gray-600 dark:text-gray-400" href="#">Japan</a>
 </div>
@@ -345,12 +492,12 @@
 <a class="hover:text-primary transition-colors" href="#">Updates</a>
 </nav>
 </div>
-<div class="absolute left-1/2 transform -translate-x-1/2">
+<div class="header-logo absolute left-1/2 transform -translate-x-1/2 sm:static sm:transform-none sm:mx-auto">
 <a class="block" href="/">
 <img alt="Quravel Logo" class="h-8 md:h-10 object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBJUVSMqcvlsLRod5Xj-MZhjFAWxv45A-9D1r1RCogjetrU2yKas3rRIuvSZRytOe6KmnI1y8NBGlIDGaE0UV5-mx19YpDf5v0SsajVxTc0VUCDku8E8PC54rDIUGGhmt44NSDXMGfnGVTtfzGJ8Cj6U15erHms74L8zDNtfVtIjG013mT9k-H5Psf5KSd570YR8_DAtEfUBmcVIMfE5LNH3WO14T7Cv3psWjV5O4UWogAMASg1czrkMA4qcRagH2Mtb7wqzWRn0BQ"/>
 </a>
 </div>
-<div class="flex items-center space-x-4">
+<div class="flex items-center space-x-4 header-right">
 <div class="relative hidden sm:block group z-50">
 <input class="bg-gray-100 dark:bg-gray-800 text-sm rounded-full py-2 pl-4 pr-10 focus:outline-none focus:ring-2 focus:ring-primary w-48 transition-all dark:text-white border-none group-focus-within:w-64" placeholder="Search..." type="text"/>
 <span class="material-symbols-outlined absolute right-3 top-2 text-gray-400 text-lg cursor-pointer hover:text-primary">search</span>
@@ -415,25 +562,144 @@
 </div>
 </header>
 
-<main class="flex-grow pt-20 pb-12 w-full max-w-[1920px] mx-auto">
-<div class="container mx-auto px-4 lg:px-6">
-    <!-- Responsive Grid Layout -->
-    <div class="main-content grid grid-cols-1 lg:grid-cols-4 gap-6">
+<main class="flex-grow pt-20 pb-12 w-full max-w-screen-2xl mx-auto px-4">
+    <!-- Mobile Unified Video Block -->
+    <div class="lg:hidden mb-6 mobile-video-block">
+        <!-- Video Player -->
+        <div class="p-0">
+            <div class="video-container-wrapper" id="video-player-container">
+                <!-- Video will be loaded here dynamically -->
+                <div class="absolute inset-0 flex items-center justify-center bg-black" id="video-loading-overlay">
+                    <span class="material-symbols-outlined text-6xl text-white opacity-50 group-hover:opacity-100 transition-opacity cursor-pointer" id="play-button">play_circle</span>
+                </div>
+            </div>
+        </div>
         
-        <!-- Left Column (Video + Controls + Episodes + Recommended) -->
-        <div class="episode-content lg:col-span-3 space-y-6">
-            
-            <!-- Video Player -->
-            <div class="bg-white dark:bg-[#151926] rounded-xl overflow-hidden shadow-sm border border-gray-200 dark:border-gray-800">
-                <div class="video-container-wrapper" id="video-player-container">
-                    <!-- Video will be loaded here dynamically -->
-                    <div class="absolute inset-0 flex items-center justify-center bg-black" id="video-loading-overlay">
-                        <span class="material-symbols-outlined text-6xl text-white opacity-50 group-hover:opacity-100 transition-opacity cursor-pointer" id="play-button">play_circle</span>
+        <!-- Mobile Video Controls -->
+        <div class="video-controls-mobile bg-background-light dark:bg-background-dark" id="mobile-video-controls">
+            <div class="flex flex-col gap-4">
+                <!-- Current watching info -->
+                <div class="flex items-center justify-between">
+                    <div class="flex items-center gap-2">
+                        <span class="text-sm text-gray-500 dark:text-gray-400">You R Watching:</span>
+                        <span class="font-bold text-primary" id="current-episode-display-mobile">Episode 1</span>
+                    </div>
+                    <div class="flex items-center gap-1 text-xs text-gray-500 dark:text-gray-400">
+                        <span class="material-symbols-outlined text-sm">tv</span>
+                        <span id="current-season-display-mobile">S1</span>
                     </div>
                 </div>
                 
-                <!-- Video Controls -->
-                <div class="p-4 border-t border-gray-200 dark:border-gray-700">
+                <!-- Server info -->
+                <div class="flex items-center gap-2">
+                    <span class="text-xs text-gray-500 dark:text-gray-400">Server:</span>
+                    <span class="text-xs font-bold text-primary" id="current-server-display-mobile">SUB-HD-01</span>
+                </div>
+                
+                <!-- Episode navigation and Add to List -->
+                <div class="flex items-center justify-between gap-3">
+                    <button class="flex items-center gap-1 flex-1 justify-center text-xs bg-gray-100 dark:bg-gray-800 hover:bg-primary hover:text-white px-4 py-3 rounded-lg transition-colors dark:text-gray-300" onclick="changeEpisode('prev')">
+                        <span class="material-symbols-outlined text-sm">skip_previous</span> Prev
+                    </button>
+                    
+                    <div class="relative group">
+                        <button class="flex items-center gap-1 text-xs bg-primary/10 text-primary hover:bg-primary hover:text-white px-4 py-3 rounded-lg transition-colors" id="add-to-list-btn-mobile">
+                            <span class="material-symbols-outlined text-sm">add</span>
+                            <span id="current-list-status-text-mobile">Add to List</span>
+                        </button>
+                        <div class="absolute left-0 top-full mt-2 w-48 bg-white dark:bg-surface-dark rounded-lg shadow-xl py-1 z-20 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 border border-gray-200 dark:border-gray-700 text-xs">
+                            <button class="block w-full text-left px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-800 text-gray-700 dark:text-gray-300" onclick="updateListStatus('Planning to watch')">Planning to watch</button>
+                            <button class="block w-full text-left px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-800 text-gray-700 dark:text-gray-300" onclick="updateListStatus('Watching')">Watching</button>
+                            <button class="block w-full text-left px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-800 text-gray-700 dark:text-gray-300" onclick="updateListStatus('Completed')">Completed</button>
+                            <button class="block w-full text-left px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-800 text-gray-700 dark:text-gray-300" onclick="updateListStatus('Rewatching')">Rewatching</button>
+                            <button class="block w-full text-left px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-800 text-gray-700 dark:text-gray-300" onclick="updateListStatus('Dropped')">Dropped</button>
+                            <div class="border-t border-gray-200 dark:border-gray-700 my-1"></div>
+                            <button class="block w-full text-left px-4 py-2 hover:bg-red-50 dark:hover:bg-red-900/20 text-red-500" onclick="updateListStatus('Add to List')">Remove from list</button>
+                        </div>
+                    </div>
+                    
+                    <button class="flex items-center gap-1 flex-1 justify-center text-xs bg-gray-100 dark:bg-gray-800 hover:bg-primary hover:text-white px-4 py-3 rounded-lg transition-colors dark:text-gray-300" onclick="changeEpisode('next')">
+                        Next <span class="material-symbols-outlined text-sm">skip_next</span>
+                    </button>
+                </div>
+                
+                <!-- Season Selection for Mobile -->
+                <div class="pt-4 border-t border-gray-200 dark:border-gray-700">
+                    <h3 class="text-sm font-medium text-gray-700 dark:text-gray-300 mb-3">Select Season:</h3>
+                    <div class="flex overflow-x-auto gap-2 pb-2 hide-scrollbar">
+                        <button class="season-btn px-4 py-2 text-sm font-medium text-primary border-b-2 border-primary whitespace-nowrap transition-colors active" data-season="1" onclick="selectSeason(this)">Season 1</button>
+                        <button class="season-btn px-4 py-2 text-sm font-medium text-gray-500 dark:text-gray-400 hover:text-gray-800 dark:hover:text-gray-200 whitespace-nowrap transition-colors border-b-2 border-transparent" data-season="2" onclick="selectSeason(this)">Season 2</button>
+                        <button class="season-btn px-4 py-2 text-sm font-medium text-gray-500 dark:text-gray-400 hover:text-gray-800 dark:hover:text-gray-200 whitespace-nowrap transition-colors border-b-2 border-transparent" data-season="3" onclick="selectSeason(this)">Season 3</button>
+                        <button class="season-btn px-4 py-2 text-sm font-medium text-gray-500 dark:text-gray-400 hover:text-gray-800 dark:hover:text-gray-200 whitespace-nowrap transition-colors border-b-2 border-transparent" data-season="4" onclick="selectSeason(this)">Season 4</button>
+                        <button class="season-btn px-4 py-2 text-sm font-medium text-gray-500 dark:text-gray-400 hover:text-gray-800 dark:hover:text-gray-200 whitespace-nowrap transition-colors border-b-2 border-transparent" data-season="ova" onclick="selectSeason(this)">OVA</button>
+                    </div>
+                </div>
+                
+                <!-- Episode Selection for Mobile - Now appears as a list below season selection -->
+                <div id="mobile-episode-section" class="pt-4 border-t border-gray-200 dark:border-gray-700">
+                    <h3 class="text-sm font-medium text-gray-700 dark:text-gray-300 mb-3">Select Episode:</h3>
+                    <div class="mobile-episode-list episode-list-container custom-scrollbar" id="episode-list-mobile">
+                        <!-- Episodes will be loaded here as a list -->
+                    </div>
+                </div>
+                
+                <!-- Server Selection for Mobile -->
+                <div class="pt-4 border-t border-gray-200 dark:border-gray-700">
+                    <h3 class="text-sm font-medium text-gray-700 dark:text-gray-300 mb-3">Select Server:</h3>
+                    <div class="space-y-4">
+                        <div>
+                            <span class="text-xs font-bold text-gray-500 dark:text-gray-400 mb-2 block">SUB:</span>
+                            <div class="flex flex-wrap gap-2 server-buttons">
+                                <button class="server-btn px-3 py-2 rounded text-xs font-medium bg-primary text-white shadow-sm hover:bg-primary/90 transition" data-server="SUB-HD-01" onclick="selectServer(this)">HD-01</button>
+                                <button class="server-btn px-3 py-2 rounded text-xs font-medium bg-gray-200 dark:bg-gray-800 text-gray-700 dark:text-gray-300 hover:bg-gray-300 dark:hover:bg-gray-700 transition" data-server="SUB-HD-02" onclick="selectServer(this)">HD-02</button>
+                                <button class="server-btn px-3 py-2 rounded text-xs font-medium bg-gray-200 dark:bg-gray-800 text-gray-700 dark:text-gray-300 hover:bg-gray-300 dark:hover:bg-gray-700 transition" data-server="SUB-HD-03" onclick="selectServer(this)">HD-03</button>
+                                <button class="server-btn px-3 py-2 rounded text-xs font-medium bg-gray-200 dark:bg-gray-800 text-gray-700 dark:text-gray-300 hover:bg-gray-300 dark:hover:bg-gray-700 transition" data-server="SUB-HD-04" onclick="selectServer(this)">HD-04</button>
+                                <button class="server-btn px-3 py-2 rounded text-xs font-medium bg-gray-200 dark:bg-gray-800 text-gray-700 dark:text-gray-300 hover:bg-gray-300 dark:hover:bg-gray-700 transition" data-server="SUB-HD-05" onclick="selectServer(this)">HD-05</button>
+                            </div>
+                        </div>
+                        <div>
+                            <span class="text-xs font-bold text-gray-500 dark:text-gray-400 mb-2 block">DUB:</span>
+                            <div class="flex flex-wrap gap-2 server-buttons">
+                                <button class="server-btn px-3 py-2 rounded text-xs font-medium bg-gray-200 dark:bg-gray-800 text-gray-700 dark:text-gray-300 hover:bg-gray-300 dark:hover:bg-gray-700 transition" data-server="DUB-HD-01" onclick="selectServer(this)">HD-01</button>
+                                <button class="server-btn px-3 py-2 rounded text-xs font-medium bg-gray-200 dark:bg-gray-800 text-gray-700 dark:text-gray-300 hover:bg-gray-300 dark:hover:bg-gray-700 transition" data-server="DUB-HD-02" onclick="selectServer(this)">HD-02</button>
+                                <button class="server-btn px-3 py-2 rounded text-xs font-medium bg-gray-200 dark:bg-gray-800 text-gray-700 dark:text-gray-300 hover:bg-gray-300 dark:hover:bg-gray-700 transition" data-server="DUB-HD-03" onclick="selectServer(this)">HD-03</button>
+                                <button class="server-btn px-3 py-2 rounded text-xs font-medium bg-gray-200 dark:bg-gray-800 text-gray-700 dark:text-gray-300 hover:bg-gray-300 dark:hover:bg-gray-700 transition" data-server="DUB-HD-04" onclick="selectServer(this)">HD-04</button>
+                                <button class="server-btn px-3 py-2 rounded text-xs font-medium bg-gray-200 dark:bg-gray-800 text-gray-700 dark:text-gray-300 hover:bg-gray-300 dark:hover:bg-gray-700 transition" data-server="DUB-HD-05" onclick="selectServer(this)">HD-05</button>
+                            </div>
+                        </div>
+                        <div>
+                            <span class="text-xs font-bold text-gray-500 dark:text-gray-400 mb-2 block">RAW:</span>
+                            <div class="flex flex-wrap gap-2 server-buttons">
+                                <button class="server-btn px-3 py-2 rounded text-xs font-medium bg-gray-200 dark:bg-gray-800 text-gray-700 dark:text-gray-300 hover:bg-gray-300 dark:hover:bg-gray-700 transition" data-server="RAW-HD-01" onclick="selectServer(this)">HD-01</button>
+                                <button class="server-btn px-3 py-2 rounded text-xs font-medium bg-gray-200 dark:bg-gray-800 text-gray-700 dark:text-gray-300 hover:bg-gray-300 dark:hover:bg-gray-700 transition" data-server="RAW-HD-02" onclick="selectServer(this)">HD-02</button>
+                                <button class="server-btn px-3 py-2 rounded text-xs font-medium bg-gray-200 dark:bg-gray-800 text-gray-700 dark:text-gray-300 hover:bg-gray-300 dark:hover:bg-gray-700 transition" data-server="RAW-HD-03" onclick="selectServer(this)">HD-03</button>
+                                <button class="server-btn px-3 py-2 rounded text-xs font-medium bg-gray-200 dark:bg-gray-800 text-gray-700 dark:text-gray-300 hover:bg-gray-300 dark:hover:bg-gray-700 transition" data-server="RAW-HD-04" onclick="selectServer(this)">HD-04</button>
+                                <button class="server-btn px-3 py-2 rounded text-xs font-medium bg-gray-200 dark:bg-gray-800 text-gray-700 dark:text-gray-300 hover:bg-gray-300 dark:hover:bg-gray-700 transition" data-server="RAW-HD-05" onclick="selectServer(this)">HD-05</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Responsive Layout - Mobile: Stacked, Desktop: Sidebar -->
+    <div class="flex flex-col lg:flex-row gap-6">
+        
+        <!-- Main Content - 70% width on desktop -->
+        <div class="w-full lg:w-7/10 sidebar-main space-y-8">
+            
+            <!-- Video Player (Desktop) -->
+            <div class="hidden lg:block bg-white dark:bg-[#151926] rounded-xl overflow-hidden shadow-sm border border-gray-200 dark:border-gray-800">
+                <div class="video-container-wrapper" id="desktop-video-player-container">
+                    <!-- Video will be loaded here dynamically -->
+                    <div class="absolute inset-0 flex items-center justify-center bg-black" id="desktop-video-loading-overlay">
+                        <span class="material-symbols-outlined text-6xl text-white opacity-50 group-hover:opacity-100 transition-opacity cursor-pointer" id="desktop-play-button">play_circle</span>
+                    </div>
+                </div>
+                
+                <!-- Video Controls (Desktop) -->
+                <div class="hidden lg:block p-4 border-t border-gray-200 dark:border-gray-700">
                     <div class="flex flex-col md:flex-row items-start md:items-center justify-between gap-4 mb-4 video-controls">
                         <div class="flex items-center gap-2">
                             <span class="text-sm text-gray-500 dark:text-gray-400">You are watching:</span>
@@ -472,7 +738,6 @@
                                 <button class="server-btn px-3 py-2 rounded text-xs font-medium bg-primary text-white shadow-sm hover:bg-primary/90 transition" data-server="SUB-HD-01" onclick="selectServer(this)">HD-01</button>
                                 <button class="server-btn px-3 py-2 rounded text-xs font-medium bg-gray-200 dark:bg-gray-800 text-gray-700 dark:text-gray-300 hover:bg-gray-300 dark:hover:bg-gray-700 transition" data-server="SUB-HD-02" onclick="selectServer(this)">HD-02</button>
                                 <button class="server-btn px-3 py-2 rounded text-xs font-medium bg-gray-200 dark:bg-gray-800 text-gray-700 dark:text-gray-300 hover:bg-gray-300 dark:hover:bg-gray-700 transition" data-server="SUB-HD-03" onclick="selectServer(this)">HD-03</button>
-                                <!-- NEW: Added HD-04 and HD-05 -->
                                 <button class="server-btn px-3 py-2 rounded text-xs font-medium bg-gray-200 dark:bg-gray-800 text-gray-700 dark:text-gray-300 hover:bg-gray-300 dark:hover:bg-gray-700 transition" data-server="SUB-HD-04" onclick="selectServer(this)">HD-04</button>
                                 <button class="server-btn px-3 py-2 rounded text-xs font-medium bg-gray-200 dark:bg-gray-800 text-gray-700 dark:text-gray-300 hover:bg-gray-300 dark:hover:bg-gray-700 transition" data-server="SUB-HD-05" onclick="selectServer(this)">HD-05</button>
                             </div>
@@ -483,7 +748,6 @@
                                 <button class="server-btn px-3 py-2 rounded text-xs font-medium bg-gray-200 dark:bg-gray-800 text-gray-700 dark:text-gray-300 hover:bg-gray-300 dark:hover:bg-gray-700 transition" data-server="DUB-HD-01" onclick="selectServer(this)">HD-01</button>
                                 <button class="server-btn px-3 py-2 rounded text-xs font-medium bg-gray-200 dark:bg-gray-800 text-gray-700 dark:text-gray-300 hover:bg-gray-300 dark:hover:bg-gray-700 transition" data-server="DUB-HD-02" onclick="selectServer(this)">HD-02</button>
                                 <button class="server-btn px-3 py-2 rounded text-xs font-medium bg-gray-200 dark:bg-gray-800 text-gray-700 dark:text-gray-300 hover:bg-gray-300 dark:hover:bg-gray-700 transition" data-server="DUB-HD-03" onclick="selectServer(this)">HD-03</button>
-                                <!-- NEW: Added HD-04 and HD-05 -->
                                 <button class="server-btn px-3 py-2 rounded text-xs font-medium bg-gray-200 dark:bg-gray-800 text-gray-700 dark:text-gray-300 hover:bg-gray-300 dark:hover:bg-gray-700 transition" data-server="DUB-HD-04" onclick="selectServer(this)">HD-04</button>
                                 <button class="server-btn px-3 py-2 rounded text-xs font-medium bg-gray-200 dark:bg-gray-800 text-gray-700 dark:text-gray-300 hover:bg-gray-300 dark:hover:bg-gray-700 transition" data-server="DUB-HD-05" onclick="selectServer(this)">HD-05</button>
                             </div>
@@ -494,7 +758,6 @@
                                 <button class="server-btn px-3 py-2 rounded text-xs font-medium bg-gray-200 dark:bg-gray-800 text-gray-700 dark:text-gray-300 hover:bg-gray-300 dark:hover:bg-gray-700 transition" data-server="RAW-HD-01" onclick="selectServer(this)">HD-01</button>
                                 <button class="server-btn px-3 py-2 rounded text-xs font-medium bg-gray-200 dark:bg-gray-800 text-gray-700 dark:text-gray-300 hover:bg-gray-300 dark:hover:bg-gray-700 transition" data-server="RAW-HD-02" onclick="selectServer(this)">HD-02</button>
                                 <button class="server-btn px-3 py-2 rounded text-xs font-medium bg-gray-200 dark:bg-gray-800 text-gray-700 dark:text-gray-300 hover:bg-gray-300 dark:hover:bg-gray-700 transition" data-server="RAW-HD-03" onclick="selectServer(this)">HD-03</button>
-                                <!-- NEW: Added HD-04 and HD-05 -->
                                 <button class="server-btn px-3 py-2 rounded text-xs font-medium bg-gray-200 dark:bg-gray-800 text-gray-700 dark:text-gray-300 hover:bg-gray-300 dark:hover:bg-gray-700 transition" data-server="RAW-HD-04" onclick="selectServer(this)">HD-04</button>
                                 <button class="server-btn px-3 py-2 rounded text-xs font-medium bg-gray-200 dark:bg-gray-800 text-gray-700 dark:text-gray-300 hover:bg-gray-300 dark:hover:bg-gray-700 transition" data-server="RAW-HD-05" onclick="selectServer(this)">HD-05</button>
                             </div>
@@ -519,51 +782,19 @@
                             <span class="material-symbols-outlined text-lg">chevron_right</span>
                         </button>
                     </div>
-                </div>
-            </div>
-
-            <!-- Episode List -->
-            <div class="bg-white dark:bg-[#151926] rounded-xl overflow-hidden shadow-sm border border-gray-200 dark:border-gray-800">
-                <div class="p-4 border-b border-gray-200 dark:border-gray-700 font-bold text-lg">Episodes</div>
-                <div class="max-h-[500px] overflow-y-auto custom-scrollbar p-2" id="episode-list-container">
-                    <!-- Episodes will be loaded here -->
-                </div>
-            </div>
-
-            <!-- Recommended for You -->
-            <div class="bg-white dark:bg-[#151926] rounded-xl overflow-hidden shadow-sm border border-gray-200 dark:border-gray-800 recommended-section">
-                <div class="p-4 border-b border-gray-200 dark:border-gray-700 font-bold text-lg text-primary">Recommended for you</div>
-                <div class="max-h-[600px] overflow-y-auto custom-scrollbar p-4 grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 xl:grid-cols-7 gap-4 recommended-grid" id="recommended-list-container">
-                    <!-- Recommended content will be loaded here -->
-                </div>
-            </div>
-
-            <!-- Comments Section -->
-            <div class="bg-white dark:bg-[#151926] rounded-xl overflow-hidden shadow-sm border border-gray-200 dark:border-gray-800 comments-section">
-                <div class="p-4 border-b border-gray-200 dark:border-gray-700 flex justify-between items-center">
-                    <span class="font-bold text-lg text-gray-900 dark:text-white">Comments <span class="text-primary text-sm font-normal ml-1" id="comment-count-badge"></span></span>
-                </div>
-                <div class="p-4 bg-gray-50 dark:bg-black/20">
-                    <div class="flex gap-4 comment-input-section">
-                        <div class="w-10 h-10 rounded-full bg-primary/20 flex items-center justify-center text-primary font-bold flex-shrink-0">You</div>
-                        <div class="flex-1">
-                            <textarea class="w-full bg-white dark:bg-gray-800 border-0 rounded-lg p-3 text-sm focus:ring-2 focus:ring-primary dark:text-white placeholder-gray-400" id="new-comment-input" placeholder="Join the discussion..." rows="3"></textarea>
-                            <div class="flex justify-end mt-2">
-                                <button class="bg-primary hover:bg-opacity-90 text-white text-xs font-semibold py-2 px-6 rounded-full transition-colors shadow-sm" onclick="postNewComment()">Post Comment</button>
-                            </div>
+                    
+                    <!-- Episode Selection (Desktop) - List format with hover effect -->
+                    <div id="desktop-episode-section" class="mt-6 pt-6 border-t border-gray-200 dark:border-gray-700">
+                        <h3 class="text-sm font-medium text-gray-700 dark:text-gray-300 mb-3">Select Episode:</h3>
+                        <div class="desktop-episode-list episode-list-container custom-scrollbar" id="episode-list-desktop">
+                            <!-- Episodes will be loaded here as a list -->
                         </div>
                     </div>
                 </div>
-                <div class="max-h-[600px] overflow-y-auto custom-scrollbar" id="comments-list-container">
-                    <!-- Comments will be loaded here -->
-                </div>
             </div>
-        </div>
 
-        <!-- Right Column (Sidebar - Desktop) -->
-        <div class="sidebar-content lg:col-span-1 space-y-6">
-            <!-- Movie Details Card -->
-            <div class="bg-white dark:bg-[#151926] rounded-xl p-6 shadow-sm border border-gray-200 dark:border-gray-800 h-fit">
+            <!-- Show Details (Mobile) -->
+            <div class="lg:hidden bg-white dark:bg-[#151926] rounded-xl p-6 shadow-sm border border-gray-200 dark:border-gray-800 h-fit">
                 <div class="flex gap-4 mb-4">
                     <img alt="Poster" class="w-24 h-36 object-cover rounded-lg shadow-md flex-shrink-0" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBL8sSKQhkIHjJRpfaXPOb2Ntr-YMNUhdTfQQNGnnmqGZu3SSewBEFAnXpGTo1YxqHXlb8pOCJCZrgrSF00Ey3CMmhZW5Q7dqz5o0qIOeV3DXsmqV-RKQGF2yEnwCFPLqyZ1R9luYVGdw-P_L6bRKjMPRM2RO5ISubiOat46Ovv-uMFsJfxGzRT0ngWoCZXAiiHQbJOA91N5Wyn21gKPKb6rWilqbabiqUYqUEEe31UdFQXOki6b3glJcCnNMssztZkZ0UYU_mwBbY"/>
                     <div>
@@ -579,37 +810,134 @@
                         </div>
                     </div>
                 </div>
-                <div class="description-container collapsed" id="description-container">
+                <div class="description-container collapsed" id="description-container-mobile">
                     <p class="text-sm text-gray-600 dark:text-gray-300 leading-relaxed mb-2">
                         Alisa Mikhailovna Kujou is a beautiful half-Russian girl who sits next to Masachika Kuze in class. Despite her appearance, she's a tsundere who is always glaring at Kuze. She's also the vice president of the student council and is secretly a light novel author. Kuze is a lazy student who always naps in class, but he's actually quite capable when he wants to be. He understands Russian and can hear Alisa's affectionate mutterings in Russian, but he pretends not to understand to tease her.
                     </p>
                 </div>
-                <div class="description-toggle" id="description-toggle" onclick="toggleDescription()">
+                <div class="description-toggle" id="description-toggle-mobile" onclick="toggleDescriptionMobile()">
                     <span>Read more</span>
                     <span class="material-symbols-outlined">arrow_forward</span>
                 </div>
-                <div class="grid grid-cols-2 gap-2 text-xs text-gray-500 dark:text-gray-400 border-t border-gray-100 dark:border-gray-700 pt-4">
-                    <div><span class="font-semibold text-gray-700 dark:text-gray-200">Genre:</span> Romance, Comedy</div>
-                    <div><span class="font-semibold text-gray-700 dark:text-gray-200">Year:</span> 2024</div>
-                    <div><span class="font-semibold text-gray-700 dark:text-gray-200">Country:</span> Japan</div>
-                    <div><span class="font-semibold text-gray-700 dark:text-gray-200">Studio:</span> Doga Kobo</div>
-                    <div class="col-span-2 mt-2">
-                        <span class="font-semibold text-gray-700 dark:text-gray-200">Title (EN):</span> Alya Sometimes Hides Her Feelings in Russian
+                <!-- SHOW DETAILS INFORMATION -->
+                <div class="grid grid-cols-1 gap-3 text-xs text-gray-500 dark:text-gray-400 border-t border-gray-100 dark:border-gray-700 pt-4 mt-4">
+                    <!-- Title Information -->
+                    <div>
+                        <span class="font-semibold text-gray-700 dark:text-gray-200">Title:</span> 
+                        <span class="ml-1">Alya Sometimes Hides Her Feelings in Russian</span>
                     </div>
-                    <div class="col-span-2">
-                        <span class="font-semibold text-gray-700 dark:text-gray-200">Synonyms:</span> Tokidoki Bosotto Russian-go de Dereru Tonari no Alya-san
+                    <div>
+                        <span class="font-semibold text-gray-700 dark:text-gray-200">Original:</span> 
+                        <span class="ml-1">Tokidoki Bosotto Russia-go de Dereru Tonari no Alya-san</span>
                     </div>
-                    <div class="col-span-2">
-                        <span class="font-semibold text-gray-700 dark:text-gray-200">Scores:</span> MAL: 7.5 | IMDb: 8.2
+                    <div>
+                        <span class="font-semibold text-gray-700 dark:text-gray-200">Japanese:</span> 
+                        <span class="ml-1">時々ボソッとロシア語でデレる隣のアーリャさん</span>
                     </div>
-                    <div class="col-span-2">
-                        <span class="font-semibold text-gray-700 dark:text-gray-200">Producers:</span> Kadokawa
+                    
+                    <!-- Synonyms -->
+                    <div>
+                        <span class="font-semibold text-gray-700 dark:text-gray-200">Synonyms:</span> 
+                        <span class="ml-1">Roshidere, Alya-san, who sits besides me and sometimes murmurs affectionately in Russian., Arya Next Door Sometimes Lapses into Russian</span>
+                    </div>
+                    
+                    <!-- Airing Information -->
+                    <div class="grid grid-cols-2 gap-2 mt-1">
+                        <div>
+                            <span class="font-semibold text-gray-700 dark:text-gray-200">Aired:</span> 
+                            <span class="ml-1">2023</span>
+                        </div>
+                        <div>
+                            <span class="font-semibold text-gray-700 dark:text-gray-200">Premiered:</span> 
+                            <span class="ml-1">Fall 2023</span>
+                        </div>
+                    </div>
+                    
+                    <!-- Duration & Status -->
+                    <div class="grid grid-cols-2 gap-2">
+                        <div>
+                            <span class="font-semibold text-gray-700 dark:text-gray-200">Duration:</span> 
+                            <span class="ml-1">24 min</span>
+                        </div>
+                        <div>
+                            <span class="font-semibold text-gray-700 dark:text-gray-200">Status:</span> 
+                            <span class="ml-1 text-blue-500">Finished Airing</span>
+                        </div>
+                    </div>
+                    
+                    <!-- Score -->
+                    <div class="mt-1 flex items-center flex-wrap gap-x-2 gap-y-1">
+                        <span class="font-semibold text-gray-700 dark:text-gray-200">Score:</span>
+                        
+                        <div class="flex items-center gap-1 text-gray-600 dark:text-gray-400">
+                            <span style="color: #5391cf;">★</span>
+                            <span>MAL</span>
+                        </div>
+                        
+                        <span class="text-gray-400 dark:text-gray-500">|</span>
+                        
+                        <div class="flex items-center gap-1 text-gray-600 dark:text-gray-400">
+                            <span style="color: #ccbd5e;">★</span>
+                            <span>IMDb</span>
+                        </div>
+                    </div>
+                    <!-- Popularity -->
+                    <div>
+                        <span class="font-semibold text-gray-700 dark:text-gray-200">Popularity:</span> 
+                        <span class="ml-1">#5488</span>
+                    </div>
+                    
+                    <!-- Genres -->
+                    <div class="flex flex-wrap items-center gap-x-2 gap-y-1">
+                        <span class="font-semibold text-gray-700 dark:text-gray-200">Genres:</span>
+                        <span class="px-2 py-1 bg-gray-100 dark:bg-gray-800 rounded text-xs text-gray-700 dark:text-gray-200 hover:bg-[#4d85bd] focus:bg-[#4d85bd] focus:outline-none focus:ring-2 focus:ring-[#4d85bd] focus:ring-opacity-50 transition-colors cursor-pointer">Action</span>
+                        <span class="px-2 py-1 bg-gray-100 dark:bg-gray-800 rounded text-xs text-gray-700 dark:text-gray-200 hover:bg-[#4d85bd] focus:bg-[#4d85bd] focus:outline-none focus:ring-2 focus:ring-[#4d85bd] focus:ring-opacity-50 transition-colors cursor-pointer">Comedy</span>
+                        <span class="px-2 py-1 bg-gray-100 dark:bg-gray-800 rounded text-xs text-gray-700 dark:text-gray-200 hover:bg-[#4d85bd] focus:bg-[#4d85bd] focus:outline-none focus:ring-2 focus:ring-[#4d85bd] focus:ring-opacity-50 transition-colors cursor-pointer">Slice of Life</span>
+                        <span class="px-2 py-1 bg-gray-100 dark:bg-gray-800 rounded text-xs text-gray-700 dark:text-gray-200 hover:bg-[#4d85bd] focus:bg-[#4d85bd] focus:outline-none focus:ring-2 focus:ring-[#4d85bd] focus:ring-opacity-50 transition-colors cursor-pointer">Shounen</span>
+                    </div>
+                    
+                    <!-- Cast -->
+                    <div class="mt-1 flex flex-wrap items-center gap-x-2 gap-y-1">
+                        <span class="font-semibold text-gray-700 dark:text-gray-200">Cast:</span>
+                        <span class="px-3 py-1 bg-[#9e265a] text-white rounded-full text-xs font-medium whitespace-nowrap">Takuya Eguchi</span>
+                        <span class="px-3 py-1 bg-[#9e265a] text-white rounded-full text-xs font-medium whitespace-nowrap">Atsumi Tanezaki</span>
+                        <span class="px-3 py-1 bg-[#9e265a] text-white rounded-full text-xs font-medium whitespace-nowrap">Saori Hayami</span>
+                    </div>
+                    
+                    <!-- Certification & Country -->
+                    <div class="grid grid-cols-2 gap-2 mt-1">
+                        <div>
+                            <span class="font-semibold text-gray-700 dark:text-gray-200">Country:</span> 
+                            <span class="ml-1">Japan</span>
+                        </div>
+                    </div>
+                    <!-- Studio & Producers -->
+                    <div class="mt-1">
+                        <span class="font-semibold text-gray-700 dark:text-gray-200">Studio:</span> 
+                        <span class="ml-1">Wit Studio, CloverWorks</span>
+                    </div>
+                    <div>
+                        <span class="font-semibold text-gray-700 dark:text-gray-200">Producers:</span> 
+                        <div class="mt-1 space-y-1">
+                            <div class="flex items-center gap-2">
+                                <span class="text-gray-600 dark:text-gray-400">•</span>
+                                <span>TOHO</span>
+                            </div>
+                            <div class="flex items-center gap-2">
+                                <span class="text-gray-600 dark:text-gray-400">•</span>
+                                <span>TV Tokyo</span>
+                            </div>
+                            <div class="flex items-center gap-2">
+                                <span class="text-gray-600 dark:text-gray-400">•</span>
+                                <span>Shueisha</span>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
-
-            <!-- Rating Card -->
-            <div class="bg-[#1A1D29] rounded-xl p-5 shadow-lg border border-gray-800">
+            
+            <!-- Rating Card (Mobile - Moved below Show Details) -->
+            <div class="lg:hidden bg-[#1A1D29] rounded-xl p-5 shadow-lg border border-gray-800">
                 <div class="flex items-center justify-between mb-4">
                     <div class="flex items-center gap-2">
                         <span class="material-symbols-outlined text-yellow-500 fill-current">star</span>
@@ -634,16 +962,137 @@
                 </div>
             </div>
 
-            <!-- Most Popular (Desktop: In right sidebar, Mobile: In proper order) -->
+            <!-- Recommended for You -->
+            <div class="bg-white dark:bg-[#151926] rounded-xl overflow-hidden shadow-sm border border-gray-200 dark:border-gray-800">
+                <div class="p-4 border-b border-gray-200 dark:border-gray-700 font-bold text-lg text-primary">Recommended for you</div>
+                <div class="p-4">
+                    <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 2xl:grid-cols-7 gap-4" id="recommended-list-container">
+                        <!-- Recommended content will be loaded here -->
+                    </div>
+                </div>
+            </div>
+
+            <!-- Comments Section -->
+            <div class="bg-white dark:bg-[#151926] rounded-xl overflow-hidden shadow-sm border border-gray-200 dark:border-gray-800">
+                <div class="p-4 border-b border-gray-200 dark:border-gray-700 flex justify-between items-center">
+                    <span class="font-bold text-lg text-gray-900 dark:text-white">Comments <span class="text-primary text-sm font-normal ml-1" id="comment-count-badge"></span></span>
+                </div>
+                <div class="p-4 bg-gray-50 dark:bg-black/20">
+                    <div class="flex gap-4 comment-input-section">
+                        <div class="w-10 h-10 rounded-full bg-primary/20 flex items-center justify-center text-primary font-bold flex-shrink-0">You</div>
+                        <div class="flex-1">
+                            <textarea class="w-full bg-white dark:bg-gray-800 border-0 rounded-lg p-3 text-sm focus:ring-2 focus:ring-primary dark:text-white placeholder-gray-400" id="new-comment-input" placeholder="Join the discussion..." rows="3"></textarea>
+                            <div class="flex justify-end mt-2">
+                                <button class="bg-primary hover:bg-opacity-90 text-white text-xs font-semibold py-2 px-6 rounded-full transition-colors shadow-sm" onclick="postNewComment()">Post Comment</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="max-h-[600px] overflow-y-auto custom-scrollbar" id="comments-list-container">
+                    <!-- Comments will be loaded here -->
+                </div>
+            </div>
+        </div>
+
+        <!-- Right Sidebar - 30% width on desktop -->
+        <div class="w-full lg:w-3/10 sidebar-right space-y-6">
+            <!-- Show Details Card (Desktop) -->
+            <div class="hidden lg:block bg-white dark:bg-[#151926] rounded-xl p-6 shadow-sm border border-gray-200 dark:border-gray-800 h-fit">
+                <div class="flex gap-4 mb-4">
+                    <img alt="Poster" class="w-24 h-36 object-cover rounded-lg shadow-md flex-shrink-0" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBL8sSKQhkIHjJRpfaXPOb2Ntr-YMNUhdTfQQNGnnmqGZu3SSewBEFAnXpGTo1YxqHXlb8pOCJCZrgrSF00Ey3CMmhZW5Q7dqz5o0qIOeV3DXsmqV-RKQGF2yEnwCFPLqyZ1R9luYVGdw-P_L6bRKjMPRM2RO5ISubiOat46Ovv-uMFsJfxGzRT0ngWoCZXAiiHQbJOA91N5Wyn21gKPKb6rWilqbabiqUYqUEEe31UdFQXOki6b3glJcCnNMssztZkZ0UYU_mwBbY"/>
+                    <div>
+                        <h1 class="text-xl font-bold leading-tight mb-2">Alya Sometimes Hides Her Feelings in Russian</h1>
+                        <div class="flex flex-wrap gap-2 text-xs text-gray-500 dark:text-gray-400 mb-2">
+                            <span class="px-1.5 py-0.5 border border-gray-300 dark:border-gray-700 rounded">TV-14</span>
+                            <span class="px-1.5 py-0.5 bg-primary text-white rounded font-bold">HD</span>
+                            <span class="flex items-center gap-1"><span class="material-symbols-outlined text-sm">mic</span> 12</span>
+                            <span class="flex items-center gap-1"><span class="material-symbols-outlined text-sm">subtitles</span> 12</span>
+                        </div>
+                        <div class="text-xs text-gray-500 dark:text-gray-400">
+                            Anime • 12 Episodes
+                        </div>
+                    </div>
+                </div>
+                <div class="description-container collapsed" id="description-container-desktop">
+                    <p class="text-sm text-gray-600 dark:text-gray-300 leading-relaxed mb-2">
+                        Alisa Mikhailovna Kujou is a beautiful half-Russian girl who sits next to Masachika Kuze in class. Despite her appearance, she's a tsundere who is always glaring at Kuze. She's also the vice president of the student council and is secretly a light novel author. Kuze is a lazy student who always naps in class, but he's actually quite capable when he wants to be. He understands Russian and can hear Alisa's affectionate mutterings in Russian, but he pretends not to understand to tease her.
+                    </p>
+                </div>
+                <div class="description-toggle" id="description-toggle-desktop" onclick="toggleDescriptionDesktop()">
+                    <span>Read more</span>
+                    <span class="material-symbols-outlined">arrow_forward</span>
+                </div>
+                <div class="grid grid-cols-2 gap-2 text-xs text-gray-500 dark:text-gray-400 border-t border-gray-100 dark:border-gray-700 pt-4">
+                    <div><span class="font-semibold text-gray-700 dark:text-gray-200">Title:</span> Alya Sometimes Hides Her Feelings in Russian</div>
+                    <div><span class="font-semibold text-gray-700 dark:text-gray-200">Original:</span> Tokidoki Bosotto Russia-go de Dereru Tonari no Alya-san</div>
+                    <div><span class="font-semibold text-gray-700 dark:text-gray-200">Japanese:</span> 時々ボソッとロシア語でデレる隣のアーリャさん</div>
+                    <div class="col-span-2"><span class="font-semibold text-gray-700 dark:text-gray-200">Synonyms:</span> Roshidere | Alya-san, who sits besides me and sometimes murmurs affectionately in Russian. | Arya Next Door Sometimes Lapses into Russian</div>
+                    <div><span class="font-semibold text-gray-700 dark:text-gray-200">Aired Year:</span> 2023</div>
+                    <div><span class="font-semibold text-gray-700 dark:text-gray-200">Premiered:</span> Fall 2023</div>
+                    <div><span class="font-semibold text-gray-700 dark:text-gray-200">Duration:</span> 24 min</div>
+                    <div><span class="font-semibold text-gray-700 dark:text-gray-200">Status:</span> Finished Airing</div>
+                    <div class="col-span-2"><span class="font-semibold text-gray-700 dark:text-gray-200">Scores:</span> 
+                        <svg class="w-4 h-4 inline fill-blue-500" viewBox="0 0 24 24">
+                            <path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/>
+                        </svg> 8.16 | 
+                        <svg class="w-4 h-4 inline fill-yellow-500" viewBox="0 0 24 24">
+                            <path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/>
+                        </svg> 8.2
+                    </div>
+                    <div class="col-span-2"><span class="font-semibold text-gray-700 dark:text-gray-200">Popularity:</span> #88</div>
+                    <div class="col-span-2">
+                        <span class="font-semibold text-gray-700 dark:text-gray-200 mr-2">Genres:</span>
+                        <div class="inline-flex flex-wrap gap-2 mt-1">
+                            <span class="px-3 py-1 rounded-full border border-gray-300 dark:border-gray-600 bg-transparent text-gray-700 dark:text-gray-300 text-xs transition-all duration-200 hover:bg-[#46678C] hover:border-[#46678C] hover:text-white dark:hover:text-white hover:scale-105 hover:shadow-sm cursor-pointer">Action</span>
+                            <span class="px-3 py-1 rounded-full border border-gray-300 dark:border-gray-600 bg-transparent text-gray-700 dark:text-gray-300 text-xs transition-all duration-200 hover:bg-[#46678C] hover:border-[#46678C] hover:text-white dark:hover:text-white hover:scale-105 hover:shadow-sm cursor-pointer">Comedy</span>
+                            <span class="px-3 py-1 rounded-full border border-gray-300 dark:border-gray-600 bg-transparent text-gray-700 dark:text-gray-300 text-xs transition-all duration-200 hover:bg-[#46678C] hover:border-[#46678C] hover:text-white dark:hover:text-white hover:scale-105 hover:shadow-sm cursor-pointer">Slice of Life</span>
+                            <span class="px-3 py-1 rounded-full border border-gray-300 dark:border-gray-600 bg-transparent text-gray-700 dark:text-gray-300 text-xs transition-all duration-200 hover:bg-[#46678C] hover:border-[#46678C] hover:text-white dark:hover:text-white hover:scale-105 hover:shadow-sm cursor-pointer">Shounen</span>
+                        </div>
+                    </div>
+                    <div class="col-span-2"><span class="font-semibold text-gray-700 dark:text-gray-200">Cast:</span> Takuya Eguchi | Atsumi Tanezaki | Saori Hayami</div>
+                    <div><span class="font-semibold text-gray-700 dark:text-gray-200">Country:</span> Japan</div>
+                    <div><span class="font-semibold text-gray-700 dark:text-gray-200">Studio:</span> Wit Studio | CloverWorks</div>
+                    <div class="col-span-2"><span class="font-semibold text-gray-700 dark:text-gray-200">Producers:</span> TOHO | TV Tokyo | Shueisha</div>
+                </div>
+            </div>
+
+            <!-- Rating Card (Desktop) -->
+            <div class="hidden lg:block bg-[#1A1D29] rounded-xl p-5 shadow-lg border border-gray-800">
+                <div class="flex items-center justify-between mb-4">
+                    <div class="flex items-center gap-2">
+                        <span class="material-symbols-outlined text-yellow-500 fill-current">star</span>
+                        <span class="text-2xl font-bold text-white">8.2</span>
+                    </div>
+                    <span class="text-sm font-semibold text-white">Vote now</span>
+                </div>
+                <div class="text-sm text-gray-400 mb-6 text-center">What do you think about this show?</div>
+                <div class="flex justify-between px-2">
+                    <button class="flex flex-col items-center gap-2 group" onclick="rateShow('boring')">
+                        <span class="text-3xl grayscale group-hover:grayscale-0 transition-all transform group-hover:scale-110">😩</span>
+                        <span class="text-xs font-medium text-gray-400 group-hover:text-white transition-colors">Boring</span>
+                    </button>
+                    <button class="flex flex-col items-center gap-2 group" onclick="rateShow('great')">
+                        <span class="text-3xl grayscale group-hover:grayscale-0 transition-all transform group-hover:scale-110">😃</span>
+                        <span class="text-xs font-medium text-gray-400 group-hover:text-white transition-colors">Great</span>
+                    </button>
+                    <button class="flex flex-col items-center gap-2 group" onclick="rateShow('amazing')">
+                        <span class="text-3xl grayscale group-hover:grayscale-0 transition-all transform group-hover:scale-110">🤩</span>
+                        <span class="text-xs font-medium text-gray-400 group-hover:text-white transition-colors">Amazing</span>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Most Popular -->
             <div class="bg-white dark:bg-[#151926] rounded-xl overflow-hidden shadow-sm border border-gray-200 dark:border-gray-800">
                 <div class="p-4 border-b border-gray-200 dark:border-gray-700 font-bold text-lg">Most Popular</div>
-                <div class="max-h-[500px] overflow-y-auto custom-scrollbar p-2 space-y-2" id="most-popular-list-container">
-                    <!-- Most Popular content will be loaded here -->
+                <div class="p-4">
+                    <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-1 xl:grid-cols-2 gap-4" id="most-popular-list-container">
+                        <!-- Most Popular content will be loaded here -->
+                    </div>
                 </div>
             </div>
         </div>
     </div>
-</div>
 </main>
 
 <footer class="bg-white dark:bg-footer-dark border-t border-gray-200 dark:border-gray-800 mt-auto">
@@ -681,7 +1130,25 @@
     let currentServer = 'SUB-HD-01';
     let currentSeason = '1';
     let isVideoLoaded = false;
-    let isDescriptionExpanded = false;
+    let isVideoLoadedDesktop = false;
+    let isDescriptionExpandedDesktop = false;
+    let isDescriptionExpandedMobile = false;
+    
+    // Episode titles you provided
+    const episodeTitles = [
+        "Alya Hides Her Feelings in Russian",
+        "So Much For Childhood Friends",
+        "And So They Met",
+        "An Outpouring of Emotion",
+        "Different People, Common Undercurrent",
+        "A Kiss of the Indirect Variety",
+        "A Storm Arrives",
+        "Student Congress",
+        "Rom-commy with a Chance of Hypnosis",
+        "Birthday Party, Much Belated",
+        "An Unexpected Curtain-Raiser",
+        "Chin Up and Face Forward"
+    ];
     
     // Updated streaming links from your provided data
     const subEpisodes = [
@@ -751,18 +1218,18 @@
     // Episode data for Season 1 (Alya Sometimes Hides Her Feelings in Russian)
     const episodeData = {
         '1': [
-            { id: 1, title: 'I Sometimes Express Myself in Russian' },
-            { id: 2, title: 'The Confused Tsundere' },
-            { id: 3, title: 'Cultural Festival Preparations' },
-            { id: 4, title: 'The Russian Secret' },
-            { id: 5, title: 'Library Encounter' },
-            { id: 6, title: 'Summer Festival' },
-            { id: 7, title: 'Beach Episode' },
-            { id: 8, title: 'Cultural Festival Day' },
-            { id: 9, title: 'The Light Novel Author' },
-            { id: 10, title: 'Winter Confessions' },
-            { id: 11, title: 'Valentines Day' },
-            { id: 12, title: 'My Feelings in Russian' }
+            { id: 1, title: 'Alya Hides Her Feelings in Russian' },
+            { id: 2, title: 'So Much For Childhood Friends' },
+            { id: 3, title: 'And So They Met' },
+            { id: 4, title: 'An Outpouring of Emotion' },
+            { id: 5, title: 'Different People, Common Undercurrent' },
+            { id: 6, title: 'A Kiss of the Indirect Variety' },
+            { id: 7, title: 'A Storm Arrives' },
+            { id: 8, title: 'Student Congress' },
+            { id: 9, title: 'Rom-commy with a Chance of Hypnosis' },
+            { id: 10, title: 'Birthday Party, Much Belated' },
+            { id: 11, title: 'An Unexpected Curtain-Raiser' },
+            { id: 12, title: 'Chin Up and Face Forward' }
         ],
         '2': [
             { id: 1, title: 'Second Year Begins' },
@@ -806,8 +1273,9 @@
     
     // Initialize all features
     function initializePage() {
-        renderEpisodeList();
+        renderEpisodeLists();
         updateUI();
+        updateMobileDisplay();
         initComments();
         renderRelatedLists();
         setupVideoPlayer();
@@ -817,13 +1285,105 @@
         window.addEventListener('resize', handleResponsiveLayout);
         handleResponsiveLayout();
         
+        // Initialize mobile video controls background color
+        updateMobileVideoControlsBackground();
+        
         // Load first video
         loadVideo();
+        loadDesktopVideo();
+    }
+    
+    // Render episode lists for both desktop and mobile
+    function renderEpisodeLists() {
+        const desktopContainer = document.getElementById('episode-list-desktop');
+        const mobileContainer = document.getElementById('episode-list-mobile');
+        const episodes = episodeData[currentSeason] || [];
+        
+        let desktopHtml = '<div class="space-y-2">';
+        let mobileHtml = '<div class="space-y-2">';
+        
+        episodes.forEach(ep => {
+            const isActive = ep.id === currentEpisode;
+            const activeClass = isActive ? 'active' : '';
+            const bgClass = isActive ? 'bg-primary/10' : 'bg-gray-50 dark:bg-white/5';
+            
+            // Format: "EP 01: episode title"
+            const episodeNumber = ep.id.toString().padStart(2, '0');
+            const displayText = `EP ${episodeNumber}: ${ep.title}`;
+            
+            // Desktop list item
+            desktopHtml += `
+                <button class="episode-list-item ${activeClass} ${bgClass} group flex items-center justify-between p-3 rounded-lg text-left transition-all w-full hover:bg-gray-100 dark:hover:bg-white/10" 
+                        data-episode="${ep.id}" 
+                        onclick="selectEpisode(this)">
+                    <div class="flex items-center gap-3">
+                        <div class="flex flex-col items-start">
+                            <span class="text-sm font-medium ${isActive ? 'text-primary' : 'text-gray-900 dark:text-gray-100'}">
+                                ${displayText}
+                            </span>
+                        </div>
+                    </div>
+                    <span class="material-symbols-outlined ${isActive ? 'text-primary' : 'text-gray-400'} text-lg">
+                        ${isActive ? 'play_circle' : 'play_circle_outline'}
+                    </span>
+                </button>
+            `;
+            
+            // Mobile list item
+            mobileHtml += `
+                <button class="episode-list-item ${activeClass} ${bgClass} group flex items-center justify-between p-3 rounded-lg text-left transition-all w-full hover:bg-gray-100 dark:hover:bg-white/10" 
+                        data-episode="${ep.id}" 
+                        onclick="selectEpisode(this)">
+                    <div class="flex items-center gap-3">
+                        <div class="flex flex-col items-start">
+                            <span class="text-sm font-medium ${isActive ? 'text-primary' : 'text-gray-900 dark:text-gray-100'}">
+                                ${displayText}
+                            </span>
+                        </div>
+                    </div>
+                    <span class="material-symbols-outlined ${isActive ? 'text-primary' : 'text-gray-400'} text-lg">
+                        ${isActive ? 'play_circle' : 'play_circle_outline'}
+                    </span>
+                </button>
+            `;
+        });
+        
+        desktopHtml += '</div>';
+        mobileHtml += '</div>';
+        
+        if (desktopContainer) desktopContainer.innerHTML = desktopHtml;
+        if (mobileContainer) mobileContainer.innerHTML = mobileHtml;
+    }
+    
+    // Update mobile display information
+    function updateMobileDisplay() {
+        // Update episode display
+        document.getElementById('current-episode-display-mobile').innerText = `Episode ${currentEpisode}`;
+        
+        // Update season display
+        document.getElementById('current-season-display-mobile').innerText = `S${currentSeason}`;
+        
+        // Update server display (extract server type from currentServer)
+        const serverType = currentServer.includes('SUB') ? 'SUB' : 
+                          currentServer.includes('DUB') ? 'DUB' : 'RAW';
+        const serverNumber = currentServer.split('-').pop();
+        document.getElementById('current-server-display-mobile').innerText = `${serverType}-${serverNumber}`;
+    }
+    
+    // Update mobile video controls background color
+    function updateMobileVideoControlsBackground() {
+        const mobileVideoControls = document.getElementById('mobile-video-controls');
+        if (mobileVideoControls) {
+            const isDarkMode = document.documentElement.classList.contains('dark');
+            mobileVideoControls.style.backgroundColor = isDarkMode ? '#0B0E19' : '#F3F4F6';
+        }
     }
     
     // Setup season navigation
     function setupSeasonNavigation() {
         const seasonTabs = document.getElementById('season-tabs-container');
+        if (!seasonTabs) return;
+        
         const leftBtn = document.querySelector('.season-nav-btn.left');
         const rightBtn = document.querySelector('.season-nav-btn.right');
         
@@ -848,6 +1408,8 @@
     // Scroll season tabs horizontally
     function scrollSeasons(direction) {
         const seasonTabs = document.getElementById('season-tabs-container');
+        if (!seasonTabs) return;
+        
         const scrollAmount = 200;
         
         if (direction === 1) {
@@ -875,14 +1437,38 @@
         }, 300);
     }
     
-    // Toggle description expansion
-    function toggleDescription() {
-        const container = document.getElementById('description-container');
-        const toggle = document.getElementById('description-toggle');
+    // Toggle description expansion for desktop
+    function toggleDescriptionDesktop() {
+        const container = document.getElementById('description-container-desktop');
+        const toggle = document.getElementById('description-toggle-desktop');
         
-        isDescriptionExpanded = !isDescriptionExpanded;
+        if (!container || !toggle) return;
         
-        if (isDescriptionExpanded) {
+        isDescriptionExpandedDesktop = !isDescriptionExpandedDesktop;
+        
+        if (isDescriptionExpandedDesktop) {
+            container.classList.remove('collapsed');
+            container.classList.add('expanded');
+            toggle.innerHTML = '<span>Show less</span><span class="material-symbols-outlined">arrow_forward</span>';
+            toggle.classList.add('expanded');
+        } else {
+            container.classList.remove('expanded');
+            container.classList.add('collapsed');
+            toggle.innerHTML = '<span>Read more</span><span class="material-symbols-outlined">arrow_forward</span>';
+            toggle.classList.remove('expanded');
+        }
+    }
+    
+    // Toggle description expansion for mobile
+    function toggleDescriptionMobile() {
+        const container = document.getElementById('description-container-mobile');
+        const toggle = document.getElementById('description-toggle-mobile');
+        
+        if (!container || !toggle) return;
+        
+        isDescriptionExpandedMobile = !isDescriptionExpandedMobile;
+        
+        if (isDescriptionExpandedMobile) {
             container.classList.remove('collapsed');
             container.classList.add('expanded');
             toggle.innerHTML = '<span>Show less</span><span class="material-symbols-outlined">arrow_forward</span>';
@@ -900,15 +1486,8 @@
         const isMobile = window.innerWidth < 768;
         const isTablet = window.innerWidth >= 768 && window.innerWidth < 1024;
         
-        // Adjust episode list height for mobile
-        const episodeContainer = document.getElementById('episode-list-container');
-        if (episodeContainer) {
-            if (isMobile) {
-                episodeContainer.style.maxHeight = '400px';
-            } else {
-                episodeContainer.style.maxHeight = '500px';
-            }
-        }
+        // Update mobile video controls background color
+        updateMobileVideoControlsBackground();
         
         // For mobile and tablet, add smooth scrolling to season tabs
         const seasonTabs = document.getElementById('season-tabs-container');
@@ -924,20 +1503,40 @@
     // Setup video player
     function setupVideoPlayer() {
         const playButton = document.getElementById('play-button');
-        const videoContainer = document.getElementById('video-player-container');
+        const desktopPlayButton = document.getElementById('desktop-play-button');
         
-        playButton.addEventListener('click', function() {
-            if (!isVideoLoaded) {
-                loadVideo();
-                isVideoLoaded = true;
-                document.getElementById('video-loading-overlay').style.display = 'none';
-            }
-        });
+        if (playButton) {
+            playButton.addEventListener('click', function() {
+                if (!isVideoLoaded) {
+                    loadVideo();
+                    isVideoLoaded = true;
+                    const videoLoadingOverlay = document.getElementById('video-loading-overlay');
+                    if (videoLoadingOverlay) {
+                        videoLoadingOverlay.style.display = 'none';
+                    }
+                }
+            });
+        }
+        
+        if (desktopPlayButton) {
+            desktopPlayButton.addEventListener('click', function() {
+                if (!isVideoLoadedDesktop) {
+                    loadDesktopVideo();
+                    isVideoLoadedDesktop = true;
+                    const desktopVideoLoadingOverlay = document.getElementById('desktop-video-loading-overlay');
+                    if (desktopVideoLoadingOverlay) {
+                        desktopVideoLoadingOverlay.style.display = 'none';
+                    }
+                }
+            });
+        }
     }
     
-    // Load Video based on current state
+    // Load Mobile Video based on current state
     function loadVideo() {
         const container = document.getElementById('video-player-container');
+        if (!container) return;
+        
         const episodes = episodeData[currentSeason] || [];
         
         // Check if episode exists
@@ -979,10 +1578,74 @@
         container.appendChild(iframe);
         
         // Hide loading overlay
-        document.getElementById('video-loading-overlay').style.display = 'none';
+        const videoLoadingOverlay = document.getElementById('video-loading-overlay');
+        if (videoLoadingOverlay) {
+            videoLoadingOverlay.style.display = 'none';
+        }
         isVideoLoaded = true;
         
-        console.log(`Loading video: Season ${currentSeason}, Episode ${currentEpisode}, Server: ${currentServer}`);
+        // Update mobile display
+        updateMobileDisplay();
+        
+        console.log(`Loading mobile video: Season ${currentSeason}, Episode ${currentEpisode}, Server: ${currentServer}`);
+    }
+    
+    // Load Desktop Video based on current state
+    function loadDesktopVideo() {
+        const container = document.getElementById('desktop-video-player-container');
+        if (!container) return;
+        
+        const episodes = episodeData[currentSeason] || [];
+        
+        // Check if episode exists
+        if (currentEpisode > episodes.length) {
+            currentEpisode = 1;
+        }
+        
+        // Get the correct episode index (arrays are 0-based)
+        const episodeIndex = currentEpisode - 1;
+        
+        // Get video URL based on current server
+        let videoUrl = '';
+        const serverUrls = episodeUrls[currentServer] || subEpisodes;
+        
+        if (episodeIndex < serverUrls.length) {
+            videoUrl = serverUrls[episodeIndex];
+        } else {
+            // Fallback to first episode if index is out of bounds
+            videoUrl = serverUrls[0] || subEpisodes[0];
+        }
+        
+        // Determine if it's a StreamHLS or Filemoon link
+        let embedUrl = videoUrl;
+        if (videoUrl.includes('streamhls.to')) {
+            embedUrl = `${videoUrl}?autoplay=1&controls=1&modestbranding=1&rel=0`;
+        } else if (videoUrl.includes('filemoon.to')) {
+            embedUrl = `${videoUrl}?autoplay=1&controls=1`;
+        }
+        
+        // Clear container and add iframe
+        container.innerHTML = '';
+        const iframe = document.createElement('iframe');
+        iframe.className = 'video-container';
+        iframe.src = embedUrl;
+        iframe.frameBorder = '0';
+        iframe.allow = 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture';
+        iframe.allowFullscreen = true;
+        iframe.title = `Season ${currentSeason} Episode ${currentEpisode} - Alya Sometimes Hides Her Feelings in Russian`;
+        container.appendChild(iframe);
+        
+        // Hide loading overlay
+        const desktopVideoLoadingOverlay = document.getElementById('desktop-video-loading-overlay');
+        if (desktopVideoLoadingOverlay) {
+            desktopVideoLoadingOverlay.style.display = 'none';
+        }
+        isVideoLoadedDesktop = true;
+        
+        // Update desktop display
+        document.getElementById('current-episode-display').innerText = `Episode ${currentEpisode}`;
+        
+        console.log(`Loading desktop video: Season ${currentSeason}, Episode ${currentEpisode}, Server: ${currentServer}`);
     }
     
     // Handle Season Selection
@@ -1000,9 +1663,16 @@
         currentSeason = btn.getAttribute('data-season');
         // Reset to first episode of new season
         currentEpisode = 1; 
-        renderEpisodeList();
+        renderEpisodeLists();
         updateUI();
-        loadVideo();
+        updateMobileDisplay();
+        
+        // Load video for current platform
+        if (window.innerWidth < 1024) {
+            loadVideo();
+        } else {
+            loadDesktopVideo();
+        }
     }
     
     // Handle Server Selection
@@ -1019,7 +1689,14 @@
         
         currentServer = btn.getAttribute('data-server');
         updateUI();
-        loadVideo();
+        updateMobileDisplay();
+        
+        // Load video for current platform
+        if (window.innerWidth < 1024) {
+            loadVideo();
+        } else {
+            loadDesktopVideo();
+        }
     }
     
     // Handle Episode Selection
@@ -1027,8 +1704,15 @@
         const ep = parseInt(btn.getAttribute('data-episode'));
         currentEpisode = ep;
         updateUI();
-        renderEpisodeList(); // Re-render to update active state styles
-        loadVideo();
+        updateMobileDisplay();
+        renderEpisodeLists();
+        
+        // Load video for current platform
+        if (window.innerWidth < 1024) {
+            loadVideo();
+        } else {
+            loadDesktopVideo();
+        }
     }
     
     // Handle Previous/Next Buttons
@@ -1043,52 +1727,34 @@
         }
         
         updateUI();
-        renderEpisodeList();
-        loadVideo();
-    }
-    
-    // Render Episode List
-    function renderEpisodeList() {
-        const container = document.getElementById('episode-list-container');
-        const episodes = episodeData[currentSeason] || [];
+        updateMobileDisplay();
+        renderEpisodeLists();
         
-        let html = '<div class="space-y-1">';
-        episodes.forEach(ep => {
-            const isActive = ep.id === currentEpisode;
-            const activeClass = isActive ? 'active episode-list-item' : '';
-            const bgClass = isActive ? 'bg-primary/10' : 'bg-gray-50 dark:bg-white/5 hover:bg-gray-100 dark:hover:bg-white/10';
-            
-            html += `
-                <button class="${activeClass} ${bgClass} group flex items-center justify-between p-3 rounded-lg border-l-4 border-transparent text-left transition-all w-full" 
-                        data-episode="${ep.id}" 
-                        onclick="selectEpisode(this)">
-                    <div class="flex items-center gap-3">
-                        <span class="flex items-center justify-center w-8 h-8 rounded ${isActive ? 'bg-primary text-white' : 'bg-gray-200 dark:bg-gray-700 text-gray-600 dark:text-gray-300'} font-bold text-sm">
-                            ${ep.id}
-                        </span>
-                        <div class="flex flex-col items-start">
-                            <span class="text-sm font-medium ${isActive ? 'text-primary' : 'text-gray-900 dark:text-gray-100'}">
-                                Episode ${ep.id}
-                            </span>
-                            <span class="text-xs ${isActive ? 'text-primary' : 'text-gray-500 dark:text-gray-400'}">
-                                ${ep.title}
-                            </span>
-                        </div>
-                    </div>
-                    <span class="material-symbols-outlined ${isActive ? 'text-primary' : 'text-gray-400'} text-lg">
-                        ${isActive ? 'play_circle' : 'play_circle_outline'}
-                    </span>
-                </button>
-            `;
-        });
-        html += '</div>';
-        container.innerHTML = html;
+        // Load video for current platform
+        if (window.innerWidth < 1024) {
+            loadVideo();
+        } else {
+            loadDesktopVideo();
+        }
     }
     
     // Update General UI (Active Classes, Text)
     function updateUI() {
-        // Update "You are watching" text
-        document.getElementById('current-episode-display').innerText = `Episode ${currentEpisode}`;
+        // Update "You are watching" text for desktop
+        const desktopDisplay = document.getElementById('current-episode-display');
+        if (desktopDisplay) {
+            desktopDisplay.innerText = `Episode ${currentEpisode}`;
+        }
+        
+        // Update list status text for desktop and mobile
+        const savedStatus = localStorage.getItem('quravel_list_status_alya');
+        const listStatusText = savedStatus && savedStatus !== 'Add to List' ? savedStatus : 'Add to List';
+        
+        const desktopListBtn = document.getElementById('current-list-status-text');
+        const mobileListBtn = document.getElementById('current-list-status-text-mobile');
+        
+        if (desktopListBtn) desktopListBtn.innerText = listStatusText;
+        if (mobileListBtn) mobileListBtn.innerText = listStatusText;
         
         // Update Season Buttons
         document.querySelectorAll('.season-btn').forEach(btn => {
@@ -1121,7 +1787,11 @@
     
     function renderComments() {
         const container = document.getElementById('comments-list-container');
-        document.getElementById('comment-count-badge').innerText = `(${comments.length})`;
+        const commentCountBadge = document.getElementById('comment-count-badge');
+        
+        if (!container || !commentCountBadge) return;
+        
+        commentCountBadge.innerText = `(${comments.length})`;
         
         let html = '';
         comments.forEach(comment => {
@@ -1240,11 +1910,15 @@
     
     function toggleReplyBox(id) {
         const box = document.getElementById(`reply-box-${id}`);
-        box.classList.toggle('hidden');
+        if (box) {
+            box.classList.toggle('hidden');
+        }
     }
     
     function postReply(commentId) {
         const input = document.getElementById(`reply-input-${commentId}`);
+        if (!input) return;
+        
         const text = input.value.trim();
         if(text) {
             const comment = comments.find(c => c.id === commentId);
@@ -1265,67 +1939,113 @@
     function renderRelatedLists() {
         const recContainer = document.getElementById('recommended-list-container');
         const popContainer = document.getElementById('most-popular-list-container');
+        
+        if (!recContainer || !popContainer) return;
+        
         const recImages = [
             'https://lh3.googleusercontent.com/aida-public/AB6AXuB6aKroKe4_Hr_QOThhIQ1eSBsj6XHa6M1h1ij1beOOwYZsLuAKaEUwhzePp5w2e0ZiNq23ueXCujFcscvpvX5l0fSEO1JhKa6gwDDPDrdfapY86HeYs5fG_M99b926v37WwsUlyZ7ugSX23giOl25toAwGLS8wOeBXwUajaxUzaTcHC_Yh5fJqnnwy6HgEx_QviGDLtROQ6LVPu2Z1BRIxBOEdc9fz9ozk1sYgF_aWaLm0ZXBf9Mh7BLQkJKaAnfSKTVLxnnvAS1o',
             'https://lh3.googleusercontent.com/aida-public/AB6AXuC4DL0CgtcYAUCgstMJaa3MOKxfRf-4gMF5Pz7AA-vJqjO992P2Ln_vsEztjSVehozCL5rsHt1KXYxgOpHPykUZEMDio6Kowlgy6GWvo4do0-5lXXQYfWesN_lwBCxnEcWF4XBvqDH9JFtqGEnkTLf_a-dREBJUINFFoE2kBQ0XpDqfi5NlPjxrmCbvXX31J0PHegzUCxDnemVeINrotIOfjM7FeAzSPl6Y0W2Xlf5WxpWq7OBZ7oPcgpUXCPkvHT-o8GnA6D-kHow'
         ];
+        
         const popImages = [
             'https://lh3.googleusercontent.com/aida-public/AB6AXuB74Fp72ev7QNZU469wTbrsvPSqgnjiWWoMOtIa0MAjQhQ1L33JGPpodM_sMQek4yZw6tRKlWPbMR6A8WeRapMkaH-T11LXGfejWy1r1bhWBwFgHhBoYl8KvmFdP0z1AzCeyDBbQAk4qqrgXQgFIiUfJh05RZYjZZz8rG09UvMIVFX4ZI-oP6j8oSExgu_KvJ_nvGwbgNIhEzXE5b5_lwPMYOzIs3TCBjMzWi8UdDqiKr2W9XaPSF7JhbMvJhQVj0heWtGm59mVp1E',
             'https://lh3.googleusercontent.com/aida-public/AB6AXuCwH3f4VjulnnLYk8EgFSCiOqFs12q4ivPSqucW7P7k4uOAN3qXURGd7iOxByylKHLJhbpiobEV442fMLZHwobXplWdRez-c71bcZODHHIHORqZw97zdSx_JgA4Cdym9n6VMtpcJXo3o5jc7jvKx13nsU2frrHJ8wgbcRH1cHIY8n7jLkRIsYOLDQ1uZWoGe99Imz98f_X9qskRvSTRVJiiJKF_DtE-ce0qw825vrwhgb66FQM3e_ymqoB8eBbjLZ5HuUePqbU5kYg'
         ];
         
-        // Generate 18 items for Recommended
+        // Generate 21 items for Recommended with perfect responsive card layout
         let recHtml = '';
-        for(let i = 1; i <= 18; i++) {
+        const showTitles = [
+            'Demon Slayer: Kimetsu no Yaiba',
+            'Jujutsu Kaisen',
+            'Attack on Titan',
+            'My Hero Academia',
+            'One Piece',
+            'Spy x Family',
+            'Chainsaw Man',
+            'Haikyuu!!',
+            'Death Note',
+            'Fullmetal Alchemist: Brotherhood'
+        ];
+        
+        const showTypes = ['Anime', 'TV Series', 'Movie'];
+        const showYears = ['2024', '2023', '2022', '2021', '2020'];
+        
+        for(let i = 1; i <= 21; i++) {
             const img = recImages[i % 2];
-            const title = i % 2 === 0 ? 'Spirited Away' : 'Pulp Fiction';
-            const year = i % 2 === 0 ? '2001' : '1994';
-            const type = i % 2 === 0 ? 'Anime' : 'Movie';
+            const titleIndex = i % showTitles.length;
+            const title = showTitles[titleIndex];
+            const year = showYears[i % showYears.length];
+            const type = showTypes[i % showTypes.length];
+            const rating = (7.5 + (i * 0.1)).toFixed(1);
+            
             recHtml += `
-                <a class="block group relative" href="#">
-                    <div class="aspect-[2/3] w-full bg-gray-200 dark:bg-gray-800 rounded-lg overflow-hidden relative shadow-sm mb-2">
-                        <img class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110" src="${img}" alt="Poster" loading="lazy"/>
-                        <div class="absolute top-2 right-2 bg-primary/90 backdrop-blur-sm text-white text-[10px] font-bold px-1.5 py-0.5 rounded shadow-sm">HD</div>
-                         <div class="absolute inset-0 flex items-center justify-center bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-200">
-                            <span class="material-symbols-outlined text-white text-4xl drop-shadow-lg">play_circle</span>
+                <div class="group flex flex-col gap-2 recommended-card">
+                    <div class="relative aspect-[2/3] overflow-hidden rounded-lg shadow-md">
+                        <img src="${img}" alt="${title}" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110">
+                        
+                        <div class="absolute top-2 right-2 bg-primary text-white text-[10px] font-bold px-1.5 py-0.5 rounded shadow-sm">
+                            HD
+                        </div>
+                        
+                        <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                            <span class="material-symbols-outlined text-4xl text-white">play_circle</span>
                         </div>
                     </div>
-                    <div>
-                        <h4 class="text-sm font-semibold truncate text-gray-900 dark:text-gray-100 group-hover:text-primary transition-colors" title="${title} ${i}">${title} ${i}</h4>
-                        <div class="flex items-center justify-between text-xs text-gray-500 dark:text-gray-400 mt-1">
+
+                    <div class="space-y-1">
+                        <h3 class="text-sm font-semibold truncate group-hover:text-primary transition-colors dark:text-gray-100">
+                            ${title} ${i <= 10 ? i : ''}
+                        </h3>
+                        <div class="flex items-center gap-2 text-[11px] text-gray-500 dark:text-gray-400">
+                            <span>${type}</span>
+                            <span class="w-1 h-1 bg-gray-500 rounded-full"></span>
                             <span>${year}</span>
-                            <span class="border border-gray-200 dark:border-gray-700 px-1 rounded text-[10px]">${type}</span>
+                            <span class="ml-auto flex items-center gap-0.5">
+                                <span class="material-symbols-outlined text-[12px] text-yellow-500">star</span> ${rating}
+                            </span>
                         </div>
                     </div>
-                </a>
+                </div>
             `;
         }
         recContainer.innerHTML = recHtml;
         
-        // Generate 18 items for Most Popular
+        // Generate 12 items for Most Popular
         let popHtml = '';
-        for(let i = 1; i <= 18; i++) {
+        for(let i = 1; i <= 12; i++) {
             const img = popImages[i % 2];
             const title = i % 2 === 0 ? 'The Dark Knight' : 'The Godfather';
             const year = i % 2 === 0 ? '2008' : '1972';
+            const rating = (8.0 + (i * 0.1)).toFixed(1);
+            
             popHtml += `
-                <a class="flex gap-3 p-2 hover:bg-gray-100 dark:hover:bg-white/5 rounded-lg transition-colors group" href="#">
-                    <div class="w-12 h-16 bg-gray-200 rounded overflow-hidden flex-shrink-0 relative">
-                        <img class="w-full h-full object-cover" src="${img}" alt="Poster" loading="lazy"/>
-                        <div class="absolute bottom-0 left-0 right-0 bg-primary/90 text-white text-[9px] text-center font-bold">HD</div>
-                    </div>
-                    <div class="flex-1 min-w-0 flex flex-col justify-center">
-                        <h4 class="text-sm font-medium truncate group-hover:text-primary transition-colors text-gray-900 dark:text-gray-100">${title} ${i}</h4>
-                        <div class="text-xs text-gray-500 mt-1 flex items-center gap-2">
-                            <span>${year}</span>
-                            <span class="w-1 h-1 bg-gray-500 rounded-full"></span>
-                            <span>Movie</span>
+                <div class="group flex flex-col gap-2 recommended-card">
+                    <div class="relative aspect-[2/3] overflow-hidden rounded-lg shadow-md">
+                        <img src="${img}" alt="${title}" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110">
+                        
+                        <div class="absolute top-2 right-2 bg-primary text-white text-[10px] font-bold px-1.5 py-0.5 rounded shadow-sm">
+                            HD
+                        </div>
+                        
+                        <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                            <span class="material-symbols-outlined text-4xl text-white">play_circle</span>
                         </div>
                     </div>
-                    <div class="flex items-center text-gray-400">
-                        <span class="material-symbols-outlined text-lg">add</span>
+
+                    <div class="space-y-1">
+                        <h3 class="text-sm font-semibold truncate group-hover:text-primary transition-colors dark:text-gray-100">
+                            ${title} ${i}
+                        </h3>
+                        <div class="flex items-center gap-2 text-[11px] text-gray-500 dark:text-gray-400">
+                            <span>Movie</span>
+                            <span class="w-1 h-1 bg-gray-500 rounded-full"></span>
+                            <span>${year}</span>
+                            <span class="ml-auto flex items-center gap-0.5">
+                                <span class="material-symbols-outlined text-[12px] text-yellow-500">star</span> ${rating}
+                            </span>
+                        </div>
                     </div>
-                </a>
+                </div>
             `;
         }
         popContainer.innerHTML = popHtml;
@@ -1348,9 +2068,17 @@
     function updateListStatus(status) {
         if (status === 'Add to List') {
             listButtonText.innerText = 'Add to List';
+            const mobileListBtn = document.getElementById('current-list-status-text-mobile');
+            if (mobileListBtn) {
+                mobileListBtn.innerText = 'Add to List';
+            }
             localStorage.removeItem(storageKey);
         } else {
             listButtonText.innerText = status;
+            const mobileListBtn = document.getElementById('current-list-status-text-mobile');
+            if (mobileListBtn) {
+                mobileListBtn.innerText = status;
+            }
             localStorage.setItem(storageKey, status);
         }
     }
