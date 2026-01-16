@@ -101,8 +101,17 @@
     }
     
     /* Episode list responsive styles */
+    .episode-list-item {
+        transition: all 0.2s ease;
+    }
+    
+    .episode-list-item:hover {
+        background: linear-gradient(90deg, rgba(73, 139, 187, 0.1) 0%, rgba(73, 139, 187, 0.05) 100%) !important;
+        transform: translateX(4px);
+    }
+    
     .episode-list-item.active {
-        background: linear-gradient(90deg, rgba(73, 139, 187, 0.15) 0%, rgba(73, 139, 187, 0.05) 100%);
+        background: linear-gradient(90deg, rgba(73, 139, 187, 0.15) 0%, rgba(73, 139, 187, 0.05) 100%) !important;
         border-left: 4px solid #498BBB !important;
     }
     
@@ -122,11 +131,21 @@
             overflow-x: auto;
             padding-bottom: 4px;
         }
+        
+        /* Hide desktop episode section in mobile */
+        #desktop-episode-section {
+            display: none !important;
+        }
     }
     
     @media (min-width: 769px) {
         .video-controls-mobile {
             display: none;
+        }
+        
+        /* Hide mobile episode section in desktop */
+        #mobile-episode-section {
+            display: none !important;
         }
     }
     
@@ -323,19 +342,14 @@
     
     /* Responsive layout for sidebars */
     @media (min-width: 1024px) {
-        .sidebar-left {
-            width: 25%;
-            flex: 0 0 25%;
-        }
-        
         .sidebar-main {
-            width: 50%;
-            flex: 0 0 50%;
+            width: 70%;
+            flex: 0 0 70%;
         }
         
         .sidebar-right {
-            width: 25%;
-            flex: 0 0 25%;
+            width: 30%;
+            flex: 0 0 30%;
         }
     }
     
@@ -353,6 +367,53 @@
     .dark .mobile-video-block {
         background: #151926;
         border-color: #374151;
+    }
+    
+    /* Episode list styling for both layouts */
+    .episode-list-container {
+        max-height: 400px;
+        overflow-y: auto;
+    }
+    
+    /* Desktop episode section styling */
+    .desktop-episode-list {
+        max-height: 500px;
+        overflow-y: auto;
+    }
+    
+    .desktop-episode-list .episode-list-item {
+        padding: 12px 16px;
+        margin-bottom: 4px;
+        border-radius: 6px;
+        border-left: 3px solid transparent;
+    }
+    
+    .desktop-episode-list .episode-list-item:hover {
+        background: rgba(73, 139, 187, 0.1) !important;
+        border-left: 3px solid rgba(73, 139, 187, 0.3);
+    }
+    
+    .desktop-episode-list .episode-list-item.active {
+        background: rgba(73, 139, 187, 0.15) !important;
+        border-left: 3px solid #498BBB;
+    }
+    
+    /* Mobile episode section styling */
+    .mobile-episode-list .episode-list-item {
+        padding: 14px 16px;
+        margin-bottom: 4px;
+        border-radius: 8px;
+        border-left: 4px solid transparent;
+    }
+    
+    .mobile-episode-list .episode-list-item:hover {
+        background: rgba(73, 139, 187, 0.1) !important;
+        border-left: 4px solid rgba(73, 139, 187, 0.3);
+    }
+    
+    .mobile-episode-list .episode-list-item.active {
+        background: rgba(73, 139, 187, 0.15) !important;
+        border-left: 4px solid #498BBB;
     }
 </style>
 </head>
@@ -574,6 +635,14 @@
                     </div>
                 </div>
                 
+                <!-- Episode Selection for Mobile - Now appears as a list below season selection -->
+                <div id="mobile-episode-section" class="pt-4 border-t border-gray-200 dark:border-gray-700">
+                    <h3 class="text-sm font-medium text-gray-700 dark:text-gray-300 mb-3">Select Episode:</h3>
+                    <div class="mobile-episode-list episode-list-container custom-scrollbar" id="episode-list-mobile">
+                        <!-- Episodes will be loaded here as a list -->
+                    </div>
+                </div>
+                
                 <!-- Server Selection for Mobile -->
                 <div class="pt-4 border-t border-gray-200 dark:border-gray-700">
                     <h3 class="text-sm font-medium text-gray-700 dark:text-gray-300 mb-3">Select Server:</h3>
@@ -617,21 +686,8 @@
     <!-- Responsive Layout - Mobile: Stacked, Desktop: Sidebar -->
     <div class="flex flex-col lg:flex-row gap-6">
         
-        <!-- Left Sidebar - 20% width on desktop -->
-        <div class="w-full lg:w-1/4 sidebar-left space-y-6">
-            <!-- Episode List (Desktop - Moved from Right Sidebar) -->
-            <div class="hidden lg:block bg-white dark:bg-[#151926] rounded-xl overflow-hidden shadow-sm border border-gray-200 dark:border-gray-800">
-                <div class="p-4 border-b border-gray-200 dark:border-gray-700 font-bold text-lg">Episodes</div>
-                <div class="p-4">
-                    <div class="max-h-[500px] overflow-y-auto custom-scrollbar" id="episode-list-container">
-                        <!-- Episodes will be loaded here for desktop -->
-                    </div>
-                </div>
-            </div>
-        </div>
-        
-        <!-- Main Content - 60% width on desktop -->
-        <div class="w-full lg:w-1/2 sidebar-main space-y-8">
+        <!-- Main Content - 70% width on desktop -->
+        <div class="w-full lg:w-7/10 sidebar-main space-y-8">
             
             <!-- Video Player (Desktop) -->
             <div class="hidden lg:block bg-white dark:bg-[#151926] rounded-xl overflow-hidden shadow-sm border border-gray-200 dark:border-gray-800">
@@ -725,6 +781,14 @@
                         <button class="season-nav-btn right" onclick="scrollSeasons(1)">
                             <span class="material-symbols-outlined text-lg">chevron_right</span>
                         </button>
+                    </div>
+                    
+                    <!-- Episode Selection (Desktop) - List format with hover effect -->
+                    <div id="desktop-episode-section" class="mt-6 pt-6 border-t border-gray-200 dark:border-gray-700">
+                        <h3 class="text-sm font-medium text-gray-700 dark:text-gray-300 mb-3">Select Episode:</h3>
+                        <div class="desktop-episode-list episode-list-container custom-scrollbar" id="episode-list-desktop">
+                            <!-- Episodes will be loaded here as a list -->
+                        </div>
                     </div>
                 </div>
             </div>
@@ -898,16 +962,6 @@
                 </div>
             </div>
 
-            <!-- Episodes List (Mobile) -->
-            <div class="lg:hidden bg-white dark:bg-[#151926] rounded-xl overflow-hidden shadow-sm border border-gray-200 dark:border-gray-800">
-                <div class="p-4 border-b border-gray-200 dark:border-gray-700 font-bold text-lg">Episodes</div>
-                <div class="p-4">
-                    <div class="max-h-[400px] overflow-y-auto custom-scrollbar" id="episode-list-container-mobile">
-                        <!-- Episodes will be loaded here for mobile -->
-                    </div>
-                </div>
-            </div>
-
             <!-- Recommended for You -->
             <div class="bg-white dark:bg-[#151926] rounded-xl overflow-hidden shadow-sm border border-gray-200 dark:border-gray-800">
                 <div class="p-4 border-b border-gray-200 dark:border-gray-700 font-bold text-lg text-primary">Recommended for you</div>
@@ -940,8 +994,8 @@
             </div>
         </div>
 
-        <!-- Right Sidebar - 25% width on desktop -->
-        <div class="w-full lg:w-1/4 sidebar-right space-y-6">
+        <!-- Right Sidebar - 30% width on desktop -->
+        <div class="w-full lg:w-3/10 sidebar-right space-y-6">
             <!-- Show Details Card (Desktop) -->
             <div class="hidden lg:block bg-white dark:bg-[#151926] rounded-xl p-6 shadow-sm border border-gray-200 dark:border-gray-800 h-fit">
                 <div class="flex gap-4 mb-4">
@@ -1080,6 +1134,22 @@
     let isDescriptionExpandedDesktop = false;
     let isDescriptionExpandedMobile = false;
     
+    // Episode titles you provided
+    const episodeTitles = [
+        "Alya Hides Her Feelings in Russian",
+        "So Much For Childhood Friends",
+        "And So They Met",
+        "An Outpouring of Emotion",
+        "Different People, Common Undercurrent",
+        "A Kiss of the Indirect Variety",
+        "A Storm Arrives",
+        "Student Congress",
+        "Rom-commy with a Chance of Hypnosis",
+        "Birthday Party, Much Belated",
+        "An Unexpected Curtain-Raiser",
+        "Chin Up and Face Forward"
+    ];
+    
     // Updated streaming links from your provided data
     const subEpisodes = [
         'https://streamhls.to/e/0p9iw7b3utgf',    // Episode 1 (Link 1)
@@ -1148,18 +1218,18 @@
     // Episode data for Season 1 (Alya Sometimes Hides Her Feelings in Russian)
     const episodeData = {
         '1': [
-            { id: 1, title: 'I Sometimes Express Myself in Russian' },
-            { id: 2, title: 'The Confused Tsundere' },
-            { id: 3, title: 'Cultural Festival Preparations' },
-            { id: 4, title: 'The Russian Secret' },
-            { id: 5, title: 'Library Encounter' },
-            { id: 6, title: 'Summer Festival' },
-            { id: 7, title: 'Beach Episode' },
-            { id: 8, title: 'Cultural Festival Day' },
-            { id: 9, title: 'The Light Novel Author' },
-            { id: 10, title: 'Winter Confessions' },
-            { id: 11, title: 'Valentines Day' },
-            { id: 12, title: 'My Feelings in Russian' }
+            { id: 1, title: 'Alya Hides Her Feelings in Russian' },
+            { id: 2, title: 'So Much For Childhood Friends' },
+            { id: 3, title: 'And So They Met' },
+            { id: 4, title: 'An Outpouring of Emotion' },
+            { id: 5, title: 'Different People, Common Undercurrent' },
+            { id: 6, title: 'A Kiss of the Indirect Variety' },
+            { id: 7, title: 'A Storm Arrives' },
+            { id: 8, title: 'Student Congress' },
+            { id: 9, title: 'Rom-commy with a Chance of Hypnosis' },
+            { id: 10, title: 'Birthday Party, Much Belated' },
+            { id: 11, title: 'An Unexpected Curtain-Raiser' },
+            { id: 12, title: 'Chin Up and Face Forward' }
         ],
         '2': [
             { id: 1, title: 'Second Year Begins' },
@@ -1203,7 +1273,7 @@
     
     // Initialize all features
     function initializePage() {
-        renderEpisodeList();
+        renderEpisodeLists();
         updateUI();
         updateMobileDisplay();
         initComments();
@@ -1221,6 +1291,68 @@
         // Load first video
         loadVideo();
         loadDesktopVideo();
+    }
+    
+    // Render episode lists for both desktop and mobile
+    function renderEpisodeLists() {
+        const desktopContainer = document.getElementById('episode-list-desktop');
+        const mobileContainer = document.getElementById('episode-list-mobile');
+        const episodes = episodeData[currentSeason] || [];
+        
+        let desktopHtml = '<div class="space-y-2">';
+        let mobileHtml = '<div class="space-y-2">';
+        
+        episodes.forEach(ep => {
+            const isActive = ep.id === currentEpisode;
+            const activeClass = isActive ? 'active' : '';
+            const bgClass = isActive ? 'bg-primary/10' : 'bg-gray-50 dark:bg-white/5';
+            
+            // Format: "EP 01: episode title"
+            const episodeNumber = ep.id.toString().padStart(2, '0');
+            const displayText = `EP ${episodeNumber}: ${ep.title}`;
+            
+            // Desktop list item
+            desktopHtml += `
+                <button class="episode-list-item ${activeClass} ${bgClass} group flex items-center justify-between p-3 rounded-lg text-left transition-all w-full hover:bg-gray-100 dark:hover:bg-white/10" 
+                        data-episode="${ep.id}" 
+                        onclick="selectEpisode(this)">
+                    <div class="flex items-center gap-3">
+                        <div class="flex flex-col items-start">
+                            <span class="text-sm font-medium ${isActive ? 'text-primary' : 'text-gray-900 dark:text-gray-100'}">
+                                ${displayText}
+                            </span>
+                        </div>
+                    </div>
+                    <span class="material-symbols-outlined ${isActive ? 'text-primary' : 'text-gray-400'} text-lg">
+                        ${isActive ? 'play_circle' : 'play_circle_outline'}
+                    </span>
+                </button>
+            `;
+            
+            // Mobile list item
+            mobileHtml += `
+                <button class="episode-list-item ${activeClass} ${bgClass} group flex items-center justify-between p-3 rounded-lg text-left transition-all w-full hover:bg-gray-100 dark:hover:bg-white/10" 
+                        data-episode="${ep.id}" 
+                        onclick="selectEpisode(this)">
+                    <div class="flex items-center gap-3">
+                        <div class="flex flex-col items-start">
+                            <span class="text-sm font-medium ${isActive ? 'text-primary' : 'text-gray-900 dark:text-gray-100'}">
+                                ${displayText}
+                            </span>
+                        </div>
+                    </div>
+                    <span class="material-symbols-outlined ${isActive ? 'text-primary' : 'text-gray-400'} text-lg">
+                        ${isActive ? 'play_circle' : 'play_circle_outline'}
+                    </span>
+                </button>
+            `;
+        });
+        
+        desktopHtml += '</div>';
+        mobileHtml += '</div>';
+        
+        if (desktopContainer) desktopContainer.innerHTML = desktopHtml;
+        if (mobileContainer) mobileContainer.innerHTML = mobileHtml;
     }
     
     // Update mobile display information
@@ -1531,7 +1663,7 @@
         currentSeason = btn.getAttribute('data-season');
         // Reset to first episode of new season
         currentEpisode = 1; 
-        renderEpisodeList();
+        renderEpisodeLists();
         updateUI();
         updateMobileDisplay();
         
@@ -1573,7 +1705,7 @@
         currentEpisode = ep;
         updateUI();
         updateMobileDisplay();
-        renderEpisodeList();
+        renderEpisodeLists();
         
         // Load video for current platform
         if (window.innerWidth < 1024) {
@@ -1596,7 +1728,7 @@
         
         updateUI();
         updateMobileDisplay();
-        renderEpisodeList();
+        renderEpisodeLists();
         
         // Load video for current platform
         if (window.innerWidth < 1024) {
@@ -1604,49 +1736,6 @@
         } else {
             loadDesktopVideo();
         }
-    }
-    
-    // Render Episode List
-    function renderEpisodeList() {
-        // Desktop episode list
-        const desktopContainer = document.getElementById('episode-list-container');
-        // Mobile episode list
-        const mobileContainer = document.getElementById('episode-list-container-mobile');
-        const episodes = episodeData[currentSeason] || [];
-        
-        let html = '<div class="space-y-2">';
-        episodes.forEach(ep => {
-            const isActive = ep.id === currentEpisode;
-            const activeClass = isActive ? 'active episode-list-item' : '';
-            const bgClass = isActive ? 'bg-primary/10' : 'bg-gray-50 dark:bg-white/5 hover:bg-gray-100 dark:hover:bg-white/10';
-            
-            html += `
-                <button class="${activeClass} ${bgClass} group flex items-center justify-between p-3 rounded-lg border-l-4 border-transparent text-left transition-all w-full" 
-                        data-episode="${ep.id}" 
-                        onclick="selectEpisode(this)">
-                    <div class="flex items-center gap-3">
-                        <span class="flex items-center justify-center w-8 h-8 rounded ${isActive ? 'bg-primary text-white' : 'bg-gray-200 dark:bg-gray-700 text-gray-600 dark:text-gray-300'} font-bold text-sm">
-                            ${ep.id}
-                        </span>
-                        <div class="flex flex-col items-start">
-                            <span class="text-sm font-medium ${isActive ? 'text-primary' : 'text-gray-900 dark:text-gray-100'}">
-                                Episode ${ep.id}
-                            </span>
-                            <span class="text-xs ${isActive ? 'text-primary' : 'text-gray-500 dark:text-gray-400'} truncate max-w-[180px]">
-                                ${ep.title}
-                            </span>
-                        </div>
-                    </div>
-                    <span class="material-symbols-outlined ${isActive ? 'text-primary' : 'text-gray-400'} text-lg">
-                        ${isActive ? 'play_circle' : 'play_circle_outline'}
-                    </span>
-                </button>
-            `;
-        });
-        html += '</div>';
-        
-        if (desktopContainer) desktopContainer.innerHTML = html;
-        if (mobileContainer) mobileContainer.innerHTML = html;
     }
     
     // Update General UI (Active Classes, Text)
