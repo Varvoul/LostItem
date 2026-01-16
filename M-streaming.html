@@ -485,24 +485,8 @@
                 <span class="text-xs text-gray-500 dark:text-gray-400">Server:</span>
                 <span class="text-xs font-bold text-primary" id="current-server-display-mobile">SUB-HD-01</span>
             </div>
-          
-    <!-- Responsive Layout - Mobile: Stacked, Desktop: Sidebar -->
-    <div class="flex flex-col lg:flex-row gap-6">
-        
-        <!-- Main Content - 75% width on desktop -->
-        <div class="w-full lg:w-[75%] space-y-6">
             
-            <!-- Video Player -->
-            <div class="bg-white dark:bg-[#151926] rounded-xl overflow-hidden shadow-sm border border-gray-200 dark:border-gray-800">
-                <div class="video-container-wrapper" id="video-player-container">
-                    <!-- Video will be loaded here dynamically -->
-                    <div class="absolute inset-0 flex items-center justify-center bg-black" id="video-loading-overlay">
-                        <span class="material-symbols-outlined text-6xl text-white opacity-50 group-hover:opacity-100 transition-opacity cursor-pointer" id="play-button">play_circle</span>
-                    </div>
-                </div>
-
-
-               <!-- Episode navigation and Add to List -->
+            <!-- Episode navigation and Add to List -->
             <div class="flex items-center justify-between gap-3">
                 <button class="flex items-center gap-1 flex-1 justify-center text-xs bg-gray-100 dark:bg-gray-800 hover:bg-primary hover:text-white px-4 py-3 rounded-lg transition-colors dark:text-gray-300" onclick="changeEpisode('prev')">
                     <span class="material-symbols-outlined text-sm">skip_previous</span> Prev
@@ -530,6 +514,53 @@
             </div>
         </div>
     </div>
+
+    <!-- Responsive Layout - Mobile: Stacked, Desktop: Sidebar -->
+    <div class="flex flex-col lg:flex-row gap-6">
+        
+        <!-- Main Content - 75% width on desktop -->
+        <div class="w-full lg:w-[75%] space-y-6">
+            
+            <!-- Video Player -->
+            <div class="bg-white dark:bg-[#151926] rounded-xl overflow-hidden shadow-sm border border-gray-200 dark:border-gray-800">
+                <div class="video-container-wrapper" id="video-player-container">
+                    <!-- Video will be loaded here dynamically -->
+                    <div class="absolute inset-0 flex items-center justify-center bg-black" id="video-loading-overlay">
+                        <span class="material-symbols-outlined text-6xl text-white opacity-50 group-hover:opacity-100 transition-opacity cursor-pointer" id="play-button">play_circle</span>
+                    </div>
+                </div>
+                
+                <!-- Video Controls (Desktop) -->
+                <div class="hidden lg:block p-4 border-t border-gray-200 dark:border-gray-700">
+                    <div class="flex flex-col md:flex-row items-start md:items-center justify-between gap-4 mb-4 video-controls">
+                        <div class="flex items-center gap-2">
+                            <span class="text-sm text-gray-500 dark:text-gray-400">You are watching:</span>
+                            <span class="font-bold text-primary" id="current-episode-display">Episode 1</span>
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <button class="flex items-center gap-1 text-xs bg-gray-100 dark:bg-gray-800 hover:bg-primary hover:text-white px-3 py-2 rounded transition-colors dark:text-gray-300" onclick="changeEpisode('prev')">
+                                <span class="material-symbols-outlined text-sm">skip_previous</span> Prev
+                            </button>
+                            <button class="flex items-center gap-1 text-xs bg-gray-100 dark:bg-gray-800 hover:bg-primary hover:text-white px-3 py-2 rounded transition-colors dark:text-gray-300" onclick="changeEpisode('next')">
+                                Next <span class="material-symbols-outlined text-sm">skip_next</span>
+                            </button>
+                            <div class="relative group ml-2">
+                                <button class="flex items-center gap-1 text-xs bg-primary/10 text-primary hover:bg-primary hover:text-white px-3 py-2 rounded transition-colors" id="add-to-list-btn">
+                                    <span class="material-symbols-outlined text-sm">add</span>
+                                    <span id="current-list-status-text">Add to List</span>
+                                </button>
+                                <div class="absolute right-0 top-full mt-2 w-48 bg-white dark:bg-surface-dark rounded-lg shadow-xl py-1 z-20 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 border border-gray-200 dark:border-gray-700 text-xs">
+                                    <button class="block w-full text-left px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-800 text-gray-700 dark:text-gray-300" onclick="updateListStatus('Planning to watch')">Planning to watch</button>
+                                    <button class="block w-full text-left px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-800 text-gray-700 dark:text-gray-300" onclick="updateListStatus('Watching')">Watching</button>
+                                    <button class="block w-full text-left px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-800 text-gray-700 dark:text-gray-300" onclick="updateListStatus('Completed')">Completed</button>
+                                    <button class="block w-full text-left px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-800 text-gray-700 dark:text-gray-300" onclick="updateListStatus('Rewatching')">Rewatching</button>
+                                    <button class="block w-full text-left px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-800 text-gray-700 dark:text-gray-300" onclick="updateListStatus('Dropped')">Dropped</button>
+                                    <div class="border-t border-gray-200 dark:border-gray-700 my-1"></div>
+                                    <button class="block w-full text-left px-4 py-2 hover:bg-red-50 dark:hover:bg-red-900/20 text-red-500" onclick="updateListStatus('Add to List')">Remove from list</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                     
                     <!-- Server Selection -->
                     <div class="space-y-3 mb-6 bg-gray-50 dark:bg-black/20 p-4 rounded-lg">
@@ -564,6 +595,27 @@
                             </div>
                         </div>
                     </div>
+                    
+                    <!-- Season Selection with Navigation Arrows -->
+                    <div class="season-navigation-container">
+                        <button class="season-nav-btn left" onclick="scrollSeasons(-1)">
+                            <span class="material-symbols-outlined text-lg">chevron_left</span>
+                        </button>
+                        <div class="season-tabs-wrapper">
+                            <div class="season-tabs hide-scrollbar" id="season-tabs-container">
+                                <button class="season-btn px-4 py-2 text-sm font-medium text-primary border-b-2 border-primary whitespace-nowrap transition-colors active" data-season="1" onclick="selectSeason(this)">Season 1</button>
+                                <button class="season-btn px-4 py-2 text-sm font-medium text-gray-500 dark:text-gray-400 hover:text-gray-800 dark:hover:text-gray-200 whitespace-nowrap transition-colors border-b-2 border-transparent" data-season="2" onclick="selectSeason(this)">Season 2</button>
+                                <button class="season-btn px-4 py-2 text-sm font-medium text-gray-500 dark:text-gray-400 hover:text-gray-800 dark:hover:text-gray-200 whitespace-nowrap transition-colors border-b-2 border-transparent" data-season="3" onclick="selectSeason(this)">Season 3</button>
+                                <button class="season-btn px-4 py-2 text-sm font-medium text-gray-500 dark:text-gray-400 hover:text-gray-800 dark:hover:text-gray-200 whitespace-nowrap transition-colors border-b-2 border-transparent" data-season="4" onclick="selectSeason(this)">Season 4</button>
+                                <button class="season-btn px-4 py-2 text-sm font-medium text-gray-500 dark:text-gray-400 hover:text-gray-800 dark:hover:text-gray-200 whitespace-nowrap transition-colors border-b-2 border-transparent" data-season="ova" onclick="selectSeason(this)">OVA</button>
+                            </div>
+                        </div>
+                        <button class="season-nav-btn right" onclick="scrollSeasons(1)">
+                            <span class="material-symbols-outlined text-lg">chevron_right</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
 
             <!-- Mobile Server and Season Selection -->
             <div class="lg:hidden bg-white dark:bg-[#151926] rounded-xl p-4 shadow-sm border border-gray-200 dark:border-gray-800">
@@ -665,11 +717,11 @@
             <span class="ml-1">Alya Sometimes Hides Her Feelings in Russian</span>
         </div>
         <div>
-            <span class="font-semibold text-gray-700 dark:text-gray-200">Original Title:</span> 
+            <span class="font-semibold text-gray-700 dark:text-gray-200">Original:</span> 
             <span class="ml-1">Tokidoki Bosotto Russia-go de Dereru Tonari no Alya-san</span>
         </div>
         <div>
-            <span class="font-semibold text-gray-700 dark:text-gray-200">Japanese Title:</span> 
+            <span class="font-semibold text-gray-700 dark:text-gray-200">Japanese:</span> 
             <span class="ml-1">時々ボソッとロシア語でデレる隣のアーリャさん</span>
         </div>
         
@@ -682,7 +734,7 @@
         <!-- Airing Information -->
         <div class="grid grid-cols-2 gap-2 mt-1">
             <div>
-                <span class="font-semibold text-gray-700 dark:text-gray-200">Aired Year:</span> 
+                <span class="font-semibold text-gray-700 dark:text-gray-200">Aired:</span> 
                 <span class="ml-1">2023</span>
             </div>
             <div>
@@ -699,107 +751,57 @@
             </div>
             <div>
                 <span class="font-semibold text-gray-700 dark:text-gray-200">Status:</span> 
-                <span class="ml-1 text-green-500">Finished Airing</span>
+                <span class="ml-1 text-blue-500">Finished Airing</span>
             </div>
         </div>
         
-        <!-- Scores with Star Icons -->
-        <div class="mt-2">
-            <span class="font-semibold text-gray-700 dark:text-gray-200">Score:</span> 
-            <div class="flex items-center gap-3 mt-1">
-                <!-- MAL Score with Blue Star -->
-                <div class="flex items-center gap-1">
-                    <!-- Blue Star for MAL -->
-                    <svg class="w-4 h-4 text-blue-500 fill-current" viewBox="0 0 24 24">
-                        <path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/>
-                    </svg>
-                    <span class="font-medium text-gray-700 dark:text-gray-200">8.16</span>
-                    <span class="text-gray-500 text-xs">MAL</span>
-                </div>
-                
-                <!-- Separator -->
-                <span class="text-gray-400">|</span>
-                
-                <!-- IMDb Score with Yellow Star -->
-                <div class="flex items-center gap-1">
-                    <!-- Yellow Star for IMDb -->
-                    <svg class="w-4 h-4 text-yellow-500 fill-current" viewBox="0 0 24 24">
-                        <path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/>
-                    </svg>
-                    <span class="font-medium text-gray-700 dark:text-gray-200">8.2</span>
-                    <span class="text-gray-500 text-xs">IMDb</span>
-                </div>
-            </div>
-        </div>
-        
+     <!-- Score -->
+<div class="mt-1 flex items-center flex-wrap gap-x-2 gap-y-1">
+    <span class="font-semibold text-gray-700 dark:text-gray-200">Score:</span>
+    
+    <div class="flex items-center gap-1 text-gray-600 dark:text-gray-400">
+        <span style="color: #5391cf;">★</span>
+        <span>MAL</span>
+    </div>
+    
+    <span class="text-gray-400 dark:text-gray-500">|</span>
+    
+    <div class="flex items-center gap-1 text-gray-600 dark:text-gray-400">
+        <span style="color: #ccbd5e;">★</span>
+        <span>IMDb</span>
+    </div>
+</div>
         <!-- Popularity -->
         <div>
             <span class="font-semibold text-gray-700 dark:text-gray-200">Popularity:</span> 
-            <span class="ml-1">#88</span>
+            <span class="ml-1">#5488</span>
         </div>
         
-       <!-- Genre -->
-<div class="mt-1">
-    <span class="font-semibold text-gray-700 dark:text-gray-200">Genre:</span> 
-    <div class="mt-1 flex flex-wrap gap-2">
-        <span class="px-3 py-1 rounded-full border border-transparent transition-all duration-200 cursor-pointer
-                     hover:bg-[#285480] hover:border-[#285480] hover:text-white
-                     focus:bg-[#285480] focus:border-[#285480] focus:text-white focus:outline-none"
-              tabindex="0">
-            Action
-        </span>
-        <span class="px-3 py-1 rounded-full border border-transparent transition-all duration-200 cursor-pointer
-                     hover:bg-[#285480] hover:border-[#285480] hover:text-white
-                     focus:bg-[#285480] focus:border-[#285480] focus:text-white focus:outline-none"
-              tabindex="0">
-            Fantasy
-        </span>
-        <span class="px-3 py-1 rounded-full border border-transparent transition-all duration-200 cursor-pointer
-                     hover:bg-[#285480] hover:border-[#285480] hover:text-white
-                     focus:bg-[#285480] focus:border-[#285480] focus:text-white focus:outline-none"
-              tabindex="0">
-            Drama
-        </span>
-    </div>
+       <!-- Genres -->
+<div class="flex flex-wrap items-center gap-x-2 gap-y-1">
+    <span class="font-semibold text-gray-700 dark:text-gray-200">Genres:</span>
+    <span class="px-2 py-1 bg-gray-100 dark:bg-gray-800 rounded text-xs text-gray-700 dark:text-gray-200 hover:bg-[#4d85bd] focus:bg-[#4d85bd] focus:outline-none focus:ring-2 focus:ring-[#4d85bd] focus:ring-opacity-50 transition-colors cursor-pointer">Action</span>
+    <span class="px-2 py-1 bg-gray-100 dark:bg-gray-800 rounded text-xs text-gray-700 dark:text-gray-200 hover:bg-[#4d85bd] focus:bg-[#4d85bd] focus:outline-none focus:ring-2 focus:ring-[#4d85bd] focus:ring-opacity-50 transition-colors cursor-pointer">Comedy</span>
+    <span class="px-2 py-1 bg-gray-100 dark:bg-gray-800 rounded text-xs text-gray-700 dark:text-gray-200 hover:bg-[#4d85bd] focus:bg-[#4d85bd] focus:outline-none focus:ring-2 focus:ring-[#4d85bd] focus:ring-opacity-50 transition-colors cursor-pointer">Slice of Life</span>
+    <span class="px-2 py-1 bg-gray-100 dark:bg-gray-800 rounded text-xs text-gray-700 dark:text-gray-200 hover:bg-[#4d85bd] focus:bg-[#4d85bd] focus:outline-none focus:ring-2 focus:ring-[#4d85bd] focus:ring-opacity-50 transition-colors cursor-pointer">Shounen</span>
 </div>
-       <!-- Cast -->
-<div class="mt-1">
-    <span class="font-semibold text-gray-700 dark:text-gray-200">Cast:</span> 
-    <div class="mt-1 flex flex-wrap gap-2">
-        <span class="px-3 py-1 rounded-full border border-transparent transition-all duration-200 cursor-pointer
-                     hover:bg-[#492954] hover:border-[#492954] hover:text-white
-                     focus:bg-[#492954] focus:border-[#492954] focus:text-white focus:outline-none"
-              tabindex="0">
-            Takuya Eguchi
-        </span>
-        <span class="px-3 py-1 rounded-full border border-transparent transition-all duration-200 cursor-pointer
-                     hover:bg-[#492954] hover:border-[#492954] hover:text-white
-                     focus:bg-[#492954] focus:border-[#492954] focus:text-white focus:outline-none"
-              tabindex="0">
-            Atsumi Tanezaki
-        </span>
-        <span class="px-3 py-1 rounded-full border border-transparent transition-all duration-200 cursor-pointer
-                     hover:bg-[#492954] hover:border-[#492954] hover:text-white
-                     focus:bg-[#492954] focus:border-[#492954] focus:text-white focus:outline-none"
-              tabindex="0">
-            Saori Hayami
-        </span>
-    </div>
+        
+      <!-- Cast -->
+<div class="mt-1 flex flex-wrap items-center gap-x-2 gap-y-1">
+    <span class="font-semibold text-gray-700 dark:text-gray-200">Cast:</span>
+    <span class="px-3 py-1 bg-[#9e265a] text-white rounded-full text-xs font-medium whitespace-nowrap">Takuya Eguchi</span>
+    <span class="px-3 py-1 bg-[#9e265a] text-white rounded-full text-xs font-medium whitespace-nowrap">Atsumi Tanezaki</span>
+    <span class="px-3 py-1 bg-[#9e265a] text-white rounded-full text-xs font-medium whitespace-nowrap">Saori Hayami</span>
 </div>
         
         <!-- Certification & Country -->
         <div class="grid grid-cols-2 gap-2 mt-1">
             <div>
-                <span class="font-semibold text-gray-700 dark:text-gray-200">Certification:</span> 
-                <span class="ml-1">TV-14</span>
-            </div>
-            <div>
                 <span class="font-semibold text-gray-700 dark:text-gray-200">Country:</span> 
                 <span class="ml-1">Japan</span>
             </div>
         </div>
-        
-        <!-- Studio & Producers -->
+         <!-- Studio & Producers -->
         <div class="mt-1">
             <span class="font-semibold text-gray-700 dark:text-gray-200">Studio:</span> 
             <span class="ml-1">Wit Studio, CloverWorks</span>
@@ -1816,4 +1818,3 @@
 </script>
 </body>
 </html>
-
