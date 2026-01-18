@@ -21,7 +21,7 @@
     "backdropUrl": "https://image.tmdb.org/t/p/original/6v6pBvM6oXG7WpYm8M9r8R0R6j.jpg",
     "trailerUrl": "https://www.youtube.com/watch?v=-77UEct0K7Q",
     "malScore": 7.96,
-    "imbdScore": 8.4,
+    "imdbScore": 8.4,
     "popularity": 99,
     "genres": ["Super Hero", "Action", "Fantasy", "School"],
     "cast": ["Daiki Yamashita", "Kenta Miyake", "Nobuhiko Okamoto"],
@@ -81,7 +81,7 @@
     "backdropUrl": "https://image.tmdb.org/t/p/original/6v6pBvM6oXG7WpYm8M9r8R0R6j.jpg",
     "trailerUrl": "https://www.youtube.com/watch?v=42X4H9G5I6c",
     "malScore": 8.15,
-    "imbdScore": 8.5,
+    "imdbScore": 8.5,
     "popularity": 97,
     "genres": ["Animation", "Action", "School", "Shounen"],
     "cast": ["Daiki Yamashita", "Nobuhiko Okamoto", "Yuki Kaji"],
@@ -135,7 +135,7 @@
     "backdropUrl": "https://image.tmdb.org/t/p/original/9r9rYm8M9r8R0R6j.jpg",
     "trailerUrl": "https://www.youtube.com/watch?v=VQGCKyvzIM4",
     "malScore": 8.12,
-    "imbdScore": 8.6,
+    "imdbScore": 8.6,
     "popularity": 96,
     "genres": ["Super Hero", "Action", "School", "Shounen"],
     "cast": ["Daiki Yamashita", "Kenta Miyake", "Akio Otsuka"],
@@ -189,7 +189,7 @@
     "backdropUrl": "https://image.tmdb.org/t/p/original/nTvMzcB7vicU2YNQUnS64fsEzbL.jpg",
     "trailerUrl": "https://www.youtube.com/watch?v=PraFso1sVIc",
     "malScore": 7.94,
-    "imbdScore": 8.3,
+    "imdbScore": 8.3,
     "popularity": 95,
     "genres": ["Super Hero", "Action", "School", "Shounen"],
     "cast": ["Daiki Yamashita", "Shin-ichiro Miki", "Seiran Kobayashi"],
@@ -243,7 +243,7 @@
     "backdropUrl": "https://image.tmdb.org/t/p/original/o969966p377N2776R8L.jpg",
     "trailerUrl": "https://www.youtube.com/watch?v=8pI7_V_0V9c",
     "malScore": 7.42,
-    "imbdScore": 7.8,
+    "imdbScore": 7.8,
     "popularity": 94,
     "genres": ["Super Hero", "Action", "School", "Shounen"],
     "cast": ["Daiki Yamashita", "Koki Uchiyama", "Misato Fukuen"],
@@ -297,7 +297,7 @@
     "backdropUrl": "https://image.tmdb.org/t/p/original/tcYO8ay3A0liCWxHu2creU3Q9IB.jpg",
     "trailerUrl": "https://www.youtube.com/watch?v=PraFso1sVIc",
     "malScore": 8.24,
-    "imbdScore": 8.7,
+    "imdbScore": 8.7,
     "popularity": 97,
     "genres": ["Super Hero", "Action", "School", "Shounen"],
     "cast": ["Daiki Yamashita", "Nobuhiko Okamoto", "Koki Uchiyama"],
@@ -351,7 +351,7 @@
     "backdropUrl": "https://i.postimg.cc/hvL6RgYP/145802l.jpg",
     "trailerUrl": "https://www.youtube.com/watch?v=7oxoT2w9cCA",
     "malScore": 8.34,
-    "imbdScore": 8.8,
+    "imdbScore": 8.8,
     "popularity": 98,
     "genres": ["Super Hero", "Action", "School", "Shounen"],
     "cast": ["Daiki Yamashita", "Nobuhiko Okamoto", "Yuki Kaji"],
@@ -400,12 +400,12 @@
     "premiered": "2025",
     "duration": "24 min",
     "status": "Upcoming",
-    "description": "The appearance of 'quirks,' newly discovered super powers, has been steadily increasing over the years, with 80 percent of humanity possessing various abilities from manipulation of elements to shapeshifting. This leaves the remainder of the world completely powerless, and Izuku Midoriya is one such individual.",
+    "description": "The appearance of 'quirks,' newly discovered superpowers, has been steadily increasing over the years, with 80 percent of humanity possessing various abilities from manipulation of elements to shapeshifting. This leaves the remainder of the world completely powerless, and Izuku Midoriya is one such individual.",
     "posterUrl": "https://cdn.myanimelist.net/images/anime/1959/151055l.jpg",
     "backdropUrl": "https://cdn.myanimelist.net/images/anime/1441/148713l.jpg",
     "trailerUrl": "https://www.youtube.com/watch?v=example",
     "malScore": null,
-    "imbdScore": 0.0,
+    "imdbScore": 0.0,
     "popularity": 98,
     "genres": ["Super Hero", "Action", "School", "Shounen"],
     "cast": ["Daiki Yamashita", "Nobuhiko Okamoto", "Yuki Kaji"],
@@ -459,7 +459,7 @@
     "backdropUrl": "https://image.tmdb.org/t/p/original/jjk0_backdrop.jpg",
     "trailerUrl": "https://www.youtube.com/watch?v=example-fantastic-four-trailer",
     "malScore": null,
-    "imbdScore": 0.0,
+    "imdbScore": 0.0,
     "popularity": 97,
     "genres": ["Action", "Sci-Fi", "Adventure", "Superhero"],
     "cast": ["Pedro Pascal", "Vanessa Kirby", "Joseph Quinn", "Ebon Moss-Bachrach", "Julia Garner"],
@@ -516,7 +516,7 @@
     "backdropUrl": "https://image.tmdb.org/t/p/original/tcYO8ay3A0liCWxHu2creU3Q9IB.jpg",
     "trailerUrl": "https://www.youtube.com/watch?v=example-jurassic-rebirth-trailer",
     "malScore": null,
-    "imbdScore": 7.0,
+    "imdbScore": 7.0,
     "popularity": 96,
     "genres": ["Action", "Sci-Fi", "Adventure", "Thriller"],
     "cast": ["Scarlett Johansson", "Jonathan Bailey", "Mahershala Ali", "Manuel Garcia-Rulfo"],
@@ -574,7 +574,7 @@
     "backdropUrl": "https://image.tmdb.org/t/p/original/s16H6tpS2bnqUZv9pUlynpxC2no.jpg",
     "trailerUrl": "https://www.youtube.com/watch?v=example-harry-potter-trailer",
     "malScore": null,
-    "imbdScore": 0.0,
+    "imdbScore": 0.0,
     "popularity": 94,
     "genres": ["Fantasy", "Drama", "Adventure", "Mystery"],
     "cast": ["To Be Announced"],
@@ -628,7 +628,7 @@
     "backdropUrl": "https://image.tmdb.org/t/p/original/5mY69M7sIu7j69HkWvM7sIu7j.jpg",
     "trailerUrl": "https://www.youtube.com/watch?v=example-superman-trailer",
     "malScore": null,
-    "imbdScore": 0.0,
+    "imdbScore": 0.0,
     "popularity": 90,
     "genres": ["Action", "Adventure", "Sci-Fi", "Superhero"],
     "cast": ["David Corenswet", "Rachel Brosnahan", "Nicholas Hoult", "Isabela Merced", "Nathan Fillion"],
@@ -686,7 +686,7 @@
     "backdropUrl": "https://image.tmdb.org/t/p/original/vL5o40STRXS2Zrx0mR95t996qqW.jpg",
     "trailerUrl": "https://www.youtube.com/watch?v=example-mi8-trailer",
     "malScore": null,
-    "imbdScore": 8.4,
+    "imdbScore": 8.4,
     "popularity": 98,
     "genres": ["Action", "Adventure", "Thriller"],
     "cast": ["Tom Cruise", "Hayley Atwell", "Ving Rhames", "Simon Pegg", "Rebecca Ferguson"],
@@ -743,7 +743,7 @@
     "backdropUrl": "https://image.tmdb.org/t/p/original/r9oUsaruelv3YmZdqaoBcSD9p1X.jpg",
     "trailerUrl": "https://www.youtube.com/watch?v=RqrXhwS33yc",
     "malScore": null,
-    "imbdScore": 7.8,
+    "imdbScore": 7.8,
     "popularity": 95,
     "genres": ["Animation", "Adventure", "Comedy", "Family"],
     "cast": ["Antonio Banderas", "Salma Hayek", "Harvey Guillén", "Florence Pugh", "John Mulaney"],
@@ -800,7 +800,7 @@
     "backdropUrl": "https://image.tmdb.org/t/p/original/Aa91p7mq13L7vYStFc09a9N9YmB.jpg",
     "trailerUrl": "https://www.youtube.com/watch?v=giXco2jaZ_4",
     "malScore": null,
-    "imbdScore": 8.2,
+    "imdbScore": 8.2,
     "popularity": 97,
     "genres": ["Action", "Drama"],
     "cast": ["Tom Cruise", "Miles Teller", "Jennifer Connelly", "Jon Hamm", "Glen Powell"],
@@ -857,7 +857,7 @@
   "backdropUrl": "https://i.postimg.cc/90xnmJDX/67e7ac7eba4c00db1e17c1f2509a26d1.jpg",
   "trailerUrl": "https://www.youtube.com/watch?v=MGRm4IzK1SQ",
   "malScore": 9.11,
-  "imbdScore": 9.1,
+  "imdbScore": 9.1,
   "popularity": 100,
   "genres": ["Action", "Dark Fantasy", "Drama", "Gore", "Military", "Survival"],
   "cast": ["Yûki Kaji", "Yui Ishikawa", "Marina Inoue", "Hiroshi Kamiya", "Daisuke Ono"],
@@ -1221,7 +1221,7 @@
     "backdropUrl": "https://image.tmdb.org/t/p/original/xUfRZu2mi8jH6SzQEJGP6tjBuYj.jpg",
     "trailerUrl": "https://www.youtube.com/watch?v=VQGCKyvzIM4",
     "malScore": 8.46,
-    "imbdScore": 8.6,
+    "imdbScore": 8.6,
     "popularity": 99,
     "genres": ["Action", "Fantasy", "Adventure", "Historical", "Gore"],
     "cast": ["Natsuki Hanae", "Akari Kito", "Hiro Shimono", "Yoshitsugu Matsuoka"],
@@ -1310,7 +1310,7 @@
     "backdropUrl": "https://i.postimg.cc/L8ZvZHJk/26098d0117516e87ad8c708c13df229a.jpg",
     "trailerUrl": "https://www.youtube.com/watch?v=ATJYac_dORw",
     "malScore": 8.62,
-    "imbdScore": 8.2,
+    "imdbScore": 8.2,
     "popularity": 100,
     "genres": ["Action", "Fantasy", "Adventure", "Drama"],
     "cast": ["Natsuki Hanae", "Akari Kito", "Satoshi Hino", "Daisuke Hirakawa"],
@@ -1366,7 +1366,7 @@
     "backdropUrl": "https://i.postimg.cc/rskDy2dc/103624l.jpg",
     "trailerUrl": "https://www.youtube.com/watch?v=0Lsh_mP8rI0",
     "malScore": 8.35,
-    "imbdScore": 8.5,
+    "imdbScore": 8.5,
     "popularity": 97,
     "genres": ["Action", "Fantasy", "Adventure"],
     "cast": ["Natsuki Hanae", "Satoshi Hino", "Daisuke Hirakawa"],
@@ -1421,7 +1421,7 @@
     "backdropUrl": "https://i.postimg.cc/T13XJtFb/120549l.jpg",
     "trailerUrl": "https://www.youtube.com/watch?v=0Lsh_mP8rI0",
     "malScore": 8.76,
-    "imbdScore": 8.9,
+    "imdbScore": 8.9,
     "popularity": 98,
     "genres": ["Action", "Fantasy", "Adventure", "Historical"],
     "cast": ["Natsuki Hanae", "Katsuyuki Konishi", "Miyuki Sawashiro"],
@@ -1493,7 +1493,7 @@
     "backdropUrl": "https://i.postimg.cc/8PyR1wSR/135985l.jpg",
     "trailerUrl": "https://www.youtube.com/watch?v=7oxoT2w9cCA",
     "malScore": 8.18,
-    "imbdScore": 8.4,
+    "imdbScore": 8.4,
     "popularity": 97,
     "genres": ["Action", "Fantasy", "Adventure", "Historical"],
     "cast": ["Natsuki Hanae", "Kengo Kawanishi", "Kana Hanazawa"],
@@ -1565,7 +1565,7 @@
     "backdropUrl": "https://i.postimg.cc/HLb3s53X/136536l.jpg",
     "trailerUrl": "https://www.youtube.com/watch?v=PraFso1sVIc",
     "malScore": 8.12,
-    "imbdScore": 8.3,
+    "imdbScore": 8.3,
     "popularity": 96,
     "genres": ["Action", "Fantasy", "Adventure", "Training"],
     "cast": ["Natsuki Hanae", "Tomokazu Sugita", "Kenichi Suzumura"],
@@ -1637,7 +1637,7 @@
     "backdropUrl": "https://i.postimg.cc/bNd7YCt7/150778l.jpg",
     "trailerUrl": "https://www.youtube.com/watch?v=x7uLutVRBfI",
     "malScore": 8.70,
-    "imbdScore": 0.0,
+    "imdbScore": 0.0,
     "popularity": 100,
     "genres": ["Action", "Fantasy", "Adventure", "Drama"],
     "cast": ["Natsuki Hanae", "Akira Ishida", "Mamoru Miyano"],
@@ -1692,7 +1692,7 @@
   "backdropUrl": "https://i.postimg.cc/RZLyXk5b/147105l.jpg",
   "trailerUrl": null,
   "malScore": 9.14,
-  "imbdScore": 0.0,
+  "imdbScore": 0.0,
   "popularity": 99,
   "genres": ["Action", "Supernatural", "Dark Fantasy", "Comedy"],
   "cast": ["Kikunosuke Toya", "Reina Ueda", "Tomori Kusunoki", "Shogo Sakata", "Natsuki Hanae"],
@@ -1750,7 +1750,7 @@
   "backdropUrl": "https://i.postimg.cc/0QPNLRb6/147458l.jpg",
   "trailerUrl": null,
   "malScore": 8.91,
-  "imbdScore": 0.0,
+  "imdbScore": 0.0,
   "popularity": 85,
   "genres": ["Historical", "Mystery", "Romance", "Drama"],
   "cast": [],
@@ -1760,33 +1760,31 @@
   "producers": ["TOHO animation STUDIO"],
   "seasons": [
     {
-    "[
-  {
-    "seasonNumber": 2,
-    "episodes": [
-      {
-        "number": 1,
-        "title": "The Apothecary Diaries (Season 2) Episode 1",
-        "japaneseTitle": "薬屋のひとりごと 第2期 第1話 (Kusuriya no Hitorigoto Dai Ni-ki Dai I-wa)",
-        "duration": "24 min",
-        "servers": {
-          "raw": [
-            { "name": "HD-01", "url": "https://server-raw.com/apothecary-diaries-s2-e1-1" },
-            { "name": "HD-02", "url": "https://server-raw.com/apothecary-diaries-s2-e1-2" },
-            { "name": "HD-03", "url": "https://server-raw.com/apothecary-diaries-s2-e1-3" }
-          ],
-          "sub": [
-            { "name": "HD-01", "url": "https://server-sub.com/apothecary-diaries-s2-e1-1" },
-            { "name": "HD-02", "url": "https://server-sub.com/apothecary-diaries-s2-e1-2" },
-            { "name": "HD-03", "url": "https://server-sub.com/apothecary-diaries-s2-e1-3" }
-          ],
-          "dub": [
-            { "name": "HD-01", "url": "https://server-dub.com/apothecary-diaries-s2-e1-1" },
-            { "name": "HD-02", "url": "https://server-dub.com/apothecary-diaries-s2-e1-2" },
-            { "name": "HD-03", "url": "https://server-dub.com/apothecary-diaries-s2-e1-3" }
-          ]
-        }
-      },
+      "seasonNumber": 2,
+      "episodes": [
+        {
+          "number": 1,
+          "title": "The Apothecary Diaries (Season 2) Episode 1",
+          "japaneseTitle": "薬屋のひとりごと 第2期 第1話 (Kusuriya no Hitorigoto Dai Ni-ki Dai I-wa)",
+          "duration": "24 min",
+          "servers": {
+            "raw": [
+              { "name": "HD-01", "url": "https://server-raw.com/apothecary-diaries-s2-e1-1" },
+              { "name": "HD-02", "url": "https://server-raw.com/apothecary-diaries-s2-e1-2" },
+              { "name": "HD-03", "url": "https://server-raw.com/apothecary-diaries-s2-e1-3" }
+            ],
+            "sub": [
+              { "name": "HD-01", "url": "https://server-sub.com/apothecary-diaries-s2-e1-1" },
+              { "name": "HD-02", "url": "https://server-sub.com/apothecary-diaries-s2-e1-2" },
+              { "name": "HD-03", "url": "https://server-sub.com/apothecary-diaries-s2-e1-3" }
+            ],
+            "dub": [
+              { "name": "HD-01", "url": "https://server-dub.com/apothecary-diaries-s2-e1-1" },
+              { "name": "HD-02", "url": "https://server-dub.com/apothecary-diaries-s2-e1-2" },
+              { "name": "HD-03", "url": "https://server-dub.com/apothecary-diaries-s2-e1-3" }
+            ]
+          }
+        },
       {
         "number": 2,
         "title": "The Apothecary Diaries (Season 2) Episode 2",
@@ -2342,7 +2340,7 @@
   "backdropUrl": "https://example.com/backdrops/takopi-original-sin.jpg  ",
   "trailerUrl": null,
   "malScore": 8.78,
-  "imbdScore": 0.0,
+  "imdbScore": 8.0,
   "popularity": 80,
   "genres": ["Drama", "Psychological", "Supernatural", "Time Travel"],
   "cast": ["Kurumi Mamiya", "Reina Ueda", "Konomi Kohara", "Anna Nagase"],
@@ -2518,7 +2516,7 @@
   "backdropUrl": "https://example.com/backdrops/to-be-hero-x.jpg",
   "trailerUrl": null,
   "malScore": 8.72,
-  "imbdScore": 0.0,
+  "imdbScore": 0.0,
   "popularity": 75,
   "genres": ["Action", "Superhero", "Drama"],
   "cast": ["Natsuki Hanae", "Nobunaga Shimazaki", "Koichi Yamadera", "Inori Minase", "Ayane Sakura"],
@@ -2580,7 +2578,7 @@
   "backdropUrl": "https://example.com/backdrops/uma-musume-cinderella-gray-combined.jpg  ",
   "trailerUrl": null,
   "malScore": 8.7,
-  "imbdScore": 0.0,
+  "imdbScore": 7.3,
   "popularity": 82,
   "genres": ["Drama", "Sports", "Racing", "Anthropomorphic"],
   "cast": ["Tomoyo Takayanagi", "Naomi Oozora", "Yumiri Hanamori"],
@@ -3109,12 +3107,12 @@
           "airedDate": "2025-11-30",
           "servers": {
             "raw": [
-              { "name": "HD-01", "url": "" }, // Link not provided in initial input
+              { "name": "HD-01", "url": "" },
               { "name": "HD-02", "url": "https://filemoon.to/e/pupjbn9rnfm6/Watch_Umamusume__Cinderella_Gray_Part_2_Sub_09" },
               { "name": "HD-03", "url": "https://mxdrop.to/e/1n4dwr7kiexwxj" }
             ],
             "sub": [
-              { "name": "HD-01", "url": "" }, // Link not provided in initial input
+              { "name": "HD-01", "url": "" },
               { "name": "HD-02", "url": "https://filemoon.to/e/pupjbn9rnfm6/Watch_Umamusume__Cinderella_Gray_Part_2_Sub_09" },
               { "name": "HD-03", "url": "https://mxdrop.to/e/1n4dwr7kiexwxj" }
             ],
@@ -3168,14 +3166,14 @@
   "rating": 8.69,
   "category": "seinen",
   "premiered": "Fall 2025",
-  "duration": "23 ep (23m)", // Combined duration
-  "status": "Finished",
+  "duration": "23 min",
+  "status": "Finished Airing",
   "description": "Oguri Cap continues her quest to become Japan's top horse girl, facing rivals like Tamamo Cross and international racers in the Japan Cup. With support from her loved ones, she pushes her limits to win. [Combined Season 1 & 2 Entry for Part 2 Release]",
-  "posterUrl": "https://cdn.myanimelist.net/images/anime/1120/152280l.jpg  ",
-  "backdropUrl": "https://example.com/backdrops/uma-musume-cinderella-gray-p2-combined.jpg  ", // Placeholder
+  "posterUrl": "https://cdn.myanimelist.net/images/anime/1120/152280l.jpg",
+  "backdropUrl": "https://example.com/backdrops/uma-musume-cinderella-gray-p2-combined.jpg", 
   "trailerUrl": null,
   "malScore": 8.69,
-  "imbdScore": 0.0,
+  "imdbScore": 0.0,
   "popularity": 82,
   "genres": ["Drama", "Sports", "Racing", "Anthropomorphic"],
   "cast": ["Tomoyo Takayanagi", "Naomi Oozora", "Yumiri Hanamori"],
@@ -3387,12 +3385,12 @@
           "airedDate": "2024-06-01",
           "servers": {
             "raw": [
-              { "name": "HD-01", "url": "https://strmup.cc/e8984b82e5837" }, // Note: Link for S1E9 is the same as S1E5 based on provided data
+              { "name": "HD-01", "url": "https://strmup.cc/e8984b82e5837" }, 
               { "name": "HD-02", "url": "https://filemoon.to/e/onzu2yufk0md/Umamusume__Cinderella_Gray_sub_09" },
               { "name": "HD-03", "url": "https://mxdrop.to/e/1n4dz466tkwvvr3" }
             ],
             "sub": [
-              { "name": "HD-01", "url": "https://strmup.cc/e8984b82e5837" }, // Note: Link for S1E9 is the same as S1E5 based on provided data
+              { "name": "HD-01", "url": "https://strmup.cc/e8984b82e5837" },
               { "name": "HD-02", "url": "https://filemoon.to/e/onzu2yufk0md/Umamusume__Cinderella_Gray_sub_09" },
               { "name": "HD-03", "url": "https://mxdrop.to/e/1n4dz466tkwvvr3" }
             ],
@@ -4167,7 +4165,7 @@
   "backdropUrl": "https://i.postimg.cc/Zq8p0zGv/MV5BNWRk_N2I1ZTMt_MGY4ZS00Y2Q3LWE2Zjct_NTY3Nz_Rl_Mz_Vi_ZWMw_Xk_Ey_Xk_Fqc_Gc_V1_FMjpg_UX1000.jpg",
   "trailerUrl": "www.youtube.com",
   "malScore": null,
-  "imbdScore": 8.2,
+  "imdbScore": 8.2,
   "popularity": 850,
   "genres": ["Drama", "Neo-Western", "Thriller"],
   "cast": ["Billy Bob Thornton", "Ali Larter", "Jacob Lofland", "Demi Moore", "Jon Hamm", "Sam Elliott", "Andy Garcia"],
@@ -4649,10 +4647,10 @@
   "status": "Currently Airing",
   "description": "The saga continues in West Texas as Tommy Norris steps into the role of CEO following the dramatic fallout of the first season. With corporate stakes higher than ever and Sam Elliott joining as Tommy's father, the family must navigate new betrayals and explosive confrontations as they attempt to hold onto their oil empire in an increasingly ruthless landscape.",
   "posterUrl": "https://i.postimg.cc/VvVb2ft1/MV5BNTRk_Y2Zk_Nz_Ut_Mz_Bl_NC00NTc0LWE0ZDQt_MWZi_NGU5OWEy_ZGU4Xk_Ey_Xk_Fqc_Gc_V1_FMjpg_UX1000.jpg",
-  "backdropUrl": "i.postimg.cc",
+  "backdropUrl": "https://image.tmdb.org/t/p/original/euP1ytkbTAbpHwSv5vGdCip9mOH.jpg",
   "trailerUrl": "www.youtube.com",
   "malScore": null,
-  "imbdScore": 8.4,
+  "imdbScore": 8.4,
   "popularity": 420,
   "genres": ["Drama", "Thriller", "Neo-Western"],
   "cast": ["Billy Bob Thornton", "Ali Larter", "Sam Elliott", "Demi Moore", "Andy Garcia"],
@@ -5137,7 +5135,7 @@
   "backdropUrl": "https://i.postimg.cc/x1dtPfmB/134324l.jpg",
   "trailerUrl": "https://www.youtube.com/watch?v=CgacdWLGd0Y",
   "malScore": 7.71,
-  "imbdScore": 7.5,
+  "imdbScore": 7.5,
   "popularity": 250,
   "genres": ["Comedy", "Romance", "School"],
   "cast": ["Sumire Uesaka", "Kohei Amasaki", "Wakana Maruoka", "Yukiyo Fujii"],
@@ -5436,10 +5434,10 @@
   "status": "Finished Airing",
   "description": "Noor falls deeply in love with Shuili, but his intense devotion slowly turns into an unhealthy obsession. As his temper and insecurities grow, their once beautiful marriage begins to unravel. When Shuili leaves, Noor's life spirals out of control, leading him to a path of redemption and confronting memories of a love that nearly destroyed them both.",
   "posterUrl": "https://i.postimg.cc/PJ38fjqN/img-1-1767197184087.jpg",
-  "backdropUrl": "i.postimg.cc",
+  "backdropUrl": "https://i.postimg.cc",
   "trailerUrl": "https://www.youtube.com/watch?v=SPpYzFCj0io",
   "malScore": null,
-  "imbdScore": 7.8,
+  "imdbScore": 7.8,
   "popularity": 310,
   "genres": ["Drama", "Romance", "Social"],
   "cast": ["Arifin Shuvoo", "Jannatul Ferdous Oishee", "Somu Chowdhury", "Mili Bashar"],
@@ -5497,9 +5495,9 @@
   "description": "Ko Yamori, a middle schooler suffering from insomnia, wanders the city streets at night. His life changes when he meets Nazuna Nanakusa, a flirtatious vampire who shows him the freedom of the night. To become a vampire himself, Ko must fall in love with her, beginning a nocturnal journey of self-discovery.",
   "posterUrl": "https://cdn.myanimelist.net/images/anime/1045/123711l.jpg",
   "backdropUrl": "https://i.postimg.cc/K8tFbhQQ/120967l.jpg",
-  "trailerUrl": "www.youtube.com",
+  "trailerUrl": "https://www.youtube.com/watch?v=example", 
   "malScore": 8.02,
-  "imbdScore": 7.5,
+  "imdbScore": 7.5,
   "popularity": 180,
   "genres": ["Supernatural", "Romance", "Shounen", "Vampire", "Comedy"],
   "cast": ["Gen Sato", "Sora Amamiya", "Yumiri Hanamori", "Haruka Tomatsu"],
@@ -5798,276 +5796,276 @@
           }
         }
       ]
-    }
-  ]
-},
-{
-  "seasonNumber": 2,
-  "airedYear": 2025,
-  "episodes": [
-    {
-      "number": 1,
-      "title": "That Time's Not for Us",
-      "duration": "24 min",
-      "servers": {
-        "raw": [
-          { "name": "HD-01", "url": "https://filemoon.to/e/dcrsa67d0wk1/Watch_Call_of_the_Night_Season_2_Ep01_sub" },
-          { "name": "HD-02", "url": "https://hglink.to/e/bf3sqtuvb7vj" },
-          { "name": "HD-03", "url": "https://server-raw.com/call-night-s2-e1-3" }
-        ],
-        "sub": [
-          { "name": "HD-01", "url": "https://filemoon.to/e/dcrsa67d0wk1/Watch_Call_of_the_Night_Season_2_Ep01_sub" },
-          { "name": "HD-02", "url": "https://hglink.to/e/bf3sqtuvb7vj" },
-          { "name": "HD-03", "url": "https://server-sub.com/call-night-s2-e1-3" }
-        ],
-        "dub": [
-          { "name": "HD-01", "url": "https://filemoon.to/e/cdp4useagri2/Watch_Call_of_the_Night_Season_2_Ep01" },
-          { "name": "HD-02", "url": "https://hglink.to/e/7u04nzidzhxn" },
-          { "name": "HD-03", "url": "https://server-dub.com/call-night-s2-e1-3" }
-        ]
-      }
     },
     {
-      "number": 2,
-      "title": "I've Been Looking for You",
-      "duration": "24 min",
-      "servers": {
-        "raw": [
-          { "name": "HD-01", "url": "https://filemoon.to/e/6evjjwmd818j/Watch_Call_of_the_Night_Season_2_Ep02" },
-          { "name": "HD-02", "url": "https://hglink.to/e/si36i81l93pt" },
-          { "name": "HD-03", "url": "https://server-raw.com/call-night-s2-e2-3" }
-        ],
-        "sub": [
-          { "name": "HD-01", "url": "https://filemoon.to/e/6evjjwmd818j/Watch_Call_of_the_Night_Season_2_Ep02" },
-          { "name": "HD-02", "url": "https://hglink.to/e/si36i81l93pt" },
-          { "name": "HD-03", "url": "https://server-sub.com/call-night-s2-e2-3" }
-        ],
-        "dub": [
-          { "name": "HD-01", "url": "https://filemoon.to/e/cjow1plavlrv/Watch_Call_of_the_Night_Season_2_Ep02_Dub" },
-          { "name": "HD-02", "url": "https://hglink.to/e/7ro8vwb5rxao" },
-          { "name": "HD-03", "url": "https://server-dub.com/call-night-s2-e2-3" }
-        ]
-      }
-    },
-    {
-      "number": 3,
-      "title": "There Aren't Any Ghosts in a Haunted House",
-      "duration": "24 min",
-      "servers": {
-        "raw": [
-          { "name": "HD-01", "url": "https://filemoon.to/e/3u7rp4o4uqjk/Watch_Call_of_the_Night_Season_2_Ep03" },
-          { "name": "HD-02", "url": "https://hglink.to/e/xq5zb8mtiz6q" },
-          { "name": "HD-03", "url": "https://server-raw.com/call-night-s2-e3-3" }
-        ],
-        "sub": [
-          { "name": "HD-01", "url": "https://filemoon.to/e/3u7rp4o4uqjk/Watch_Call_of_the_Night_Season_2_Ep03" },
-          { "name": "HD-02", "url": "https://hglink.to/e/xq5zb8mtiz6q" },
-          { "name": "HD-03", "url": "https://server-sub.com/call-night-s2-e3-3" }
-        ],
-        "dub": [
-          { "name": "HD-01", "url": "https://filemoon.to/e/ahtjgrc9pxew/Watch_Call_of_the_Night_Season_2_Ep03_Dub" },
-          { "name": "HD-02", "url": "https://hglink.to/e/aoex1c42pyt1" },
-          { "name": "HD-03", "url": "https://server-dub.com/call-night-s2-e3-3" }
-        ]
-      }
-    },
-    {
-      "number": 4,
-      "title": "Do You Want to Be Able to Run?",
-      "duration": "24 min",
-      "servers": {
-        "raw": [
-          { "name": "HD-01", "url": "https://filemoon.to/e/ogairpcepewh/Watch_Call_of_the_Night_Season_2_Ep04" },
-          { "name": "HD-02", "url": "https://hglink.to/e/8otroo832h5t" },
-          { "name": "HD-03", "url": "https://server-raw.com/call-night-s2-e4-3" }
-        ],
-        "sub": [
-          { "name": "HD-01", "url": "https://filemoon.to/e/ogairpcepewh/Watch_Call_of_the_Night_Season_2_Ep04" },
-          { "name": "HD-02", "url": "https://hglink.to/e/8otroo832h5t" },
-          { "name": "HD-03", "url": "https://server-sub.com/call-night-s2-e4-3" }
-        ],
-        "dub": [
-          { "name": "HD-01", "url": "https://filemoon.to/e/02tcflse2v5a/Watch_Call_of_the_Night_Season_2_Ep04_Dub" },
-          { "name": "HD-02", "url": "https://hglink.to/e/n7s2bf5uwgil" },
-          { "name": "HD-03", "url": "https://server-dub.com/call-night-s2-e4-3" }
-        ]
-      }
-    },
-    {
-      "number": 5,
-      "title": "The Few Years I Spent with You...",
-      "duration": "24 min",
-      "servers": {
-        "raw": [
-          { "name": "HD-01", "url": "https://filemoon.to/e/ui2yxnqht3da/Watch_Call_of_the_Night_Season_2_Ep05" },
-          { "name": "HD-02", "url": "https://hglink.to/e/ngc6hau6ibcy" },
-          { "name": "HD-03", "url": "https://server-raw.com/call-night-s2-e5-3" }
-        ],
-        "sub": [
-          { "name": "HD-01", "url": "https://filemoon.to/e/ui2yxnqht3da/Watch_Call_of_the_Night_Season_2_Ep05" },
-          { "name": "HD-02", "url": "https://hglink.to/e/ngc6hau6ibcy" },
-          { "name": "HD-03", "url": "https://server-sub.com/call-night-s2-e5-3" }
-        ],
-        "dub": [
-          { "name": "HD-01", "url": "https://filemoon.to/e/8qdourkozzlw/Watch_Call_of_the_Night_Season_2_Ep05_Dub" },
-          { "name": "HD-02", "url": "https://hglink.to/e/9jbk3ztxs6dc" },
-          { "name": "HD-03", "url": "https://server-dub.com/call-night-s2-e5-3" }
-        ]
-      }
-    },
-    {
-      "number": 6,
-      "title": "I'm Not Asking About the Quality",
-      "duration": "24 min",
-      "servers": {
-        "raw": [
-          { "name": "HD-01", "url": "https://filemoon.to/e/6oej7jehxogx/Watch_Call_of_the_Night_Season_2_Ep06" },
-          { "name": "HD-02", "url": "https://hglink.to/e/ijz9ajr233jk" },
-          { "name": "HD-03", "url": "https://server-raw.com/call-night-s2-e6-3" }
-        ],
-        "sub": [
-          { "name": "HD-01", "url": "https://filemoon.to/e/6oej7jehxogx/Watch_Call_of_the_Night_Season_2_Ep06" },
-          { "name": "HD-02", "url": "https://hglink.to/e/ijz9ajr233jk" },
-          { "name": "HD-03", "url": "https://server-sub.com/call-night-s2-e6-3" }
-        ],
-        "dub": [
-          { "name": "HD-01", "url": "https://filemoon.to/e/m9rxde8xs9l9/Watch_Call_of_the_Night_Season_2_Ep06_Dub" },
-          { "name": "HD-02", "url": "https://hglink.to/e/sqqs3qpbhjkn" },
-          { "name": "HD-03", "url": "https://server-dub.com/call-night-s2-e6-3" }
-        ]
-      }
-    },
-    {
-      "number": 7,
-      "title": "You're Too Stupid",
-      "duration": "24 min",
-      "servers": {
-        "raw": [
-          { "name": "HD-01", "url": "https://filemoon.to/e/gpen4elrihsa/Watch_Call_of_the_Night_Season_2_Ep07" },
-          { "name": "HD-02", "url": "https://hglink.to/e/ncz3ryuszatg" },
-          { "name": "HD-03", "url": "https://server-raw.com/call-night-s2-e7-3" }
-        ],
-        "sub": [
-          { "name": "HD-01", "url": "https://filemoon.to/e/gpen4elrihsa/Watch_Call_of_the_Night_Season_2_Ep07" },
-          { "name": "HD-02", "url": "https://hglink.to/e/ncz3ryuszatg" },
-          { "name": "HD-03", "url": "https://server-sub.com/call-night-s2-e7-3" }
-        ],
-        "dub": [
-          { "name": "HD-01", "url": "https://filemoon.to/e/ru3wjrapssi7/Watch_Call_of_the_Night_Season_2_Ep07_Dub" },
-          { "name": "HD-02", "url": "https://hglink.to/e/1p6y0dbqgh5z" },
-          { "name": "HD-03", "url": "https://server-dub.com/call-night-s2-e7-3" }
-        ]
-      }
-    },
-    {
-      "number": 8,
-      "title": "Wait, Don't Kill Her",
-      "duration": "24 min",
-      "servers": {
-        "raw": [
-          { "name": "HD-01", "url": "https://filemoon.to/e/oak5mt9ktggs/Watch_Call_of_the_Night_Season_2_Ep08" },
-          { "name": "HD-02", "url": "https://hglink.to/e/dwqll7i1f51u" },
-          { "name": "HD-03", "url": "https://server-raw.com/call-night-s2-e8-3" }
-        ],
-        "sub": [
-          { "name": "HD-01", "url": "https://filemoon.to/e/oak5mt9ktggs/Watch_Call_of_the_Night_Season_2_Ep08" },
-          { "name": "HD-02", "url": "https://hglink.to/e/dwqll7i1f51u" },
-          { "name": "HD-03", "url": "https://server-sub.com/call-night-s2-e8-3" }
-        ],
-        "dub": [
-          { "name": "HD-01", "url": "https://filemoon.to/e/c7ia125nqwwh/Watch_Call_of_the_Night_Season_2_Ep08_Dub" },
-          { "name": "HD-02", "url": "https://hglink.to/e/6ue0c3z0in2h" },
-          { "name": "HD-03", "url": "https://server-dub.com/call-night-s2-e8-3" }
-        ]
-      }
-    },
-    {
-      "number": 9,
-      "title": "Why Did You Start Killing?",
-      "duration": "24 min",
-      "servers": {
-        "raw": [
-          { "name": "HD-01", "url": "https://filemoon.to/e/guh7yhhm3e6w/Watch_Call_of_the_Night_Season_2_Ep09" },
-          { "name": "HD-02", "url": "https://hglink.to/e/udtb3oauvvvi" },
-          { "name": "HD-03", "url": "https://server-raw.com/call-night-s2-e9-3" }
-        ],
-        "sub": [
-          { "name": "HD-01", "url": "https://filemoon.to/e/guh7yhhm3e6w/Watch_Call_of_the_Night_Season_2_Ep09" },
-          { "name": "HD-02", "url": "https://hglink.to/e/udtb3oauvvvi" },
-          { "name": "HD-03", "url": "https://server-sub.com/call-night-s2-e9-3" }
-        ],
-        "dub": [
-          { "name": "HD-01", "url": "https://filemoon.to/e/8ovt03i4b0hf/Watch_Call_of_the_Night_Season_2_Ep09_Dub" },
-          { "name": "HD-02", "url": "https://hglink.to/e/qcn12ae02dta" },
-          { "name": "HD-03", "url": "https://server-dub.com/call-night-s2-e9-3" }
-        ]
-      }
-    },
-    {
-      "number": 10,
-      "title": "I Wanted It to Be You",
-      "duration": "24 min",
-      "servers": {
-        "raw": [
-          { "name": "HD-01", "url": "https://filemoon.to/e/ryscm8s3v3cz/Watch_Call_of_the_Night_Season_2_Ep10" },
-          { "name": "HD-02", "url": "https://hglink.to/e/jsk3og56pw79" },
-          { "name": "HD-03", "url": "https://server-raw.com/call-night-s2-e10-3" }
-        ],
-        "sub": [
-          { "name": "HD-01", "url": "https://filemoon.to/e/ryscm8s3v3cz/Watch_Call_of_the_Night_Season_2_Ep10" },
-          { "name": "HD-02", "url": "https://hglink.to/e/jsk3og56pw79" },
-          { "name": "HD-03", "url": "https://server-sub.com/call-night-s2-e10-3" }
-        ],
-        "dub": [
-          { "name": "HD-01", "url": "https://filemoon.to/e/ts3j08iu1djm/Watch_Call_of_the_Night_Season_2_Ep10_Dub" },
-          { "name": "HD-02", "url": "https://hglink.to/e/qv7ohdgcx98o" },
-          { "name": "HD-03", "url": "https://server-dub.com/call-night-s2-e10-3" }
-        ]
-      }
-    },
-    {
-      "number": 11,
-      "title": "The Night Isn't Over",
-      "duration": "24 min",
-      "servers": {
-        "raw": [
-          { "name": "HD-01", "url": "https://filemoon.to/e/8spkqdtcwpa9/Watch_Call_of_the_Night_Season_2_Ep11" },
-          { "name": "HD-02", "url": "https://hglink.to/e/sv120gncdrg9" },
-          { "name": "HD-03", "url": "https://server-raw.com/call-night-s2-e11-3" }
-        ],
-        "sub": [
-          { "name": "HD-01", "url": "https://filemoon.to/e/8spkqdtcwpa9/Watch_Call_of_the_Night_Season_2_Ep11" },
-          { "name": "HD-02", "url": "https://hglink.to/e/sv120gncdrg9" },
-          { "name": "HD-03", "url": "https://server-sub.com/call-night-s2-e11-3" }
-        ],
-        "dub": [
-          { "name": "HD-01", "url": "https://filemoon.to/e/x4wc6rwyk365/Watch_Call_of_the_Night_Season_2_Ep11_Dub" },
-          { "name": "HD-02", "url": "https://hglink.to/e/2g2vtuac6ndj" },
-          { "name": "HD-03", "url": "https://server-dub.com/call-night-s2-e11-3" }
-        ]
-      }
-    },
-    {
-      "number": 12,
-      "title": "Call of the Night",
-      "duration": "25 min",
-      "servers": {
-        "raw": [
-          { "name": "HD-01", "url": "https://filemoon.to/e/87my0ggltk86/Watch_Call_of_the_Night_Season_2_Ep12" },
-          { "name": "HD-02", "url": "https://hglink.to/e/65ek77sayv2g" },
-          { "name": "HD-03", "url": "https://server-raw.com/call-night-s2-e12-3" }
-        ],
-        "sub": [
-          { "name": "HD-01", "url": "https://filemoon.to/e/87my0ggltk86/Watch_Call_of_the_Night_Season_2_Ep12" },
-          { "name": "HD-02", "url": "https://hglink.to/e/65ek77sayv2g" },
-          { "name": "HD-03", "url": "https://server-sub.com/call-night-s2-e12-3" }
-        ],
-        "dub": [
-          { "name": "HD-01", "url": "https://filemoon.to/e/w8va59hmojiu/Watch_Call_of_the_Night_Season_2_Ep12_Dub" },
-          { "name": "HD-02", "url": "https://hglink.to/e/m9fno28f0i98" },
-          { "name": "HD-03", "url": "https://server-dub.com/call-night-s2-e12-3" }
-        ]
-      }
+      "seasonNumber": 2,
+      "airedYear": 2025,
+      "episodes": [
+        {
+          "number": 1,
+          "title": "That Time's Not for Us",
+          "duration": "24 min",
+          "servers": {
+            "raw": [
+              { "name": "HD-01", "url": "https://filemoon.to/e/dcrsa67d0wk1/Watch_Call_of_the_Night_Season_2_Ep01_sub" },
+              { "name": "HD-02", "url": "https://hglink.to/e/bf3sqtuvb7vj" },
+              { "name": "HD-03", "url": "https://server-raw.com/call-night-s2-e1-3" }
+            ],
+            "sub": [
+              { "name": "HD-01", "url": "https://filemoon.to/e/dcrsa67d0wk1/Watch_Call_of_the_Night_Season_2_Ep01_sub" },
+              { "name": "HD-02", "url": "https://hglink.to/e/bf3sqtuvb7vj" },
+              { "name": "HD-03", "url": "https://server-sub.com/call-night-s2-e1-3" }
+            ],
+            "dub": [
+              { "name": "HD-01", "url": "https://filemoon.to/e/cdp4useagri2/Watch_Call_of_the_Night_Season_2_Ep01" },
+              { "name": "HD-02", "url": "https://hglink.to/e/7u04nzidzhxn" },
+              { "name": "HD-03", "url": "https://server-dub.com/call-night-s2-e1-3" }
+            ]
+          }
+        },
+        {
+          "number": 2,
+          "title": "I've Been Looking for You",
+          "duration": "24 min",
+          "servers": {
+            "raw": [
+              { "name": "HD-01", "url": "https://filemoon.to/e/6evjjwmd818j/Watch_Call_of_the_Night_Season_2_Ep02" },
+              { "name": "HD-02", "url": "https://hglink.to/e/si36i81l93pt" },
+              { "name": "HD-03", "url": "https://server-raw.com/call-night-s2-e2-3" }
+            ],
+            "sub": [
+              { "name": "HD-01", "url": "https://filemoon.to/e/6evjjwmd818j/Watch_Call_of_the_Night_Season_2_Ep02" },
+              { "name": "HD-02", "url": "https://hglink.to/e/si36i81l93pt" },
+              { "name": "HD-03", "url": "https://server-sub.com/call-night-s2-e2-3" }
+            ],
+            "dub": [
+              { "name": "HD-01", "url": "https://filemoon.to/e/cjow1plavlrv/Watch_Call_of_the_Night_Season_2_Ep02_Dub" },
+              { "name": "HD-02", "url": "https://hglink.to/e/7ro8vwb5rxao" },
+              { "name": "HD-03", "url": "https://server-dub.com/call-night-s2-e2-3" }
+            ]
+          }
+        },
+        {
+          "number": 3,
+          "title": "There Aren't Any Ghosts in a Haunted House",
+          "duration": "24 min",
+          "servers": {
+            "raw": [
+              { "name": "HD-01", "url": "https://filemoon.to/e/3u7rp4o4uqjk/Watch_Call_of_the_Night_Season_2_Ep03" },
+              { "name": "HD-02", "url": "https://hglink.to/e/xq5zb8mtiz6q" },
+              { "name": "HD-03", "url": "https://server-raw.com/call-night-s2-e3-3" }
+            ],
+            "sub": [
+              { "name": "HD-01", "url": "https://filemoon.to/e/3u7rp4o4uqjk/Watch_Call_of_the_Night_Season_2_Ep03" },
+              { "name": "HD-02", "url": "https://hglink.to/e/xq5zb8mtiz6q" },
+              { "name": "HD-03", "url": "https://server-sub.com/call-night-s2-e3-3" }
+            ],
+            "dub": [
+              { "name": "HD-01", "url": "https://filemoon.to/e/ahtjgrc9pxew/Watch_Call_of_the_Night_Season_2_Ep03_Dub" },
+              { "name": "HD-02", "url": "https://hglink.to/e/aoex1c42pyt1" },
+              { "name": "HD-03", "url": "https://server-dub.com/call-night-s2-e3-3" }
+            ]
+          }
+        },
+        {
+          "number": 4,
+          "title": "Do You Want to Be Able to Run?",
+          "duration": "24 min",
+          "servers": {
+            "raw": [
+              { "name": "HD-01", "url": "https://filemoon.to/e/ogairpcepewh/Watch_Call_of_the_Night_Season_2_Ep04" },
+              { "name": "HD-02", "url": "https://hglink.to/e/8otroo832h5t" },
+              { "name": "HD-03", "url": "https://server-raw.com/call-night-s2-e4-3" }
+            ],
+            "sub": [
+              { "name": "HD-01", "url": "https://filemoon.to/e/ogairpcepewh/Watch_Call_of_the_Night_Season_2_Ep04" },
+              { "name": "HD-02", "url": "https://hglink.to/e/8otroo832h5t" },
+              { "name": "HD-03", "url": "https://server-sub.com/call-night-s2-e4-3" }
+            ],
+            "dub": [
+              { "name": "HD-01", "url": "https://filemoon.to/e/02tcflse2v5a/Watch_Call_of_the_Night_Season_2_Ep04_Dub" },
+              { "name": "HD-02", "url": "https://hglink.to/e/n7s2bf5uwgil" },
+              { "name": "HD-03", "url": "https://server-dub.com/call-night-s2-e4-3" }
+            ]
+          }
+        },
+        {
+          "number": 5,
+          "title": "The Few Years I Spent with You...",
+          "duration": "24 min",
+          "servers": {
+            "raw": [
+              { "name": "HD-01", "url": "https://filemoon.to/e/ui2yxnqht3da/Watch_Call_of_the_Night_Season_2_Ep05" },
+              { "name": "HD-02", "url": "https://hglink.to/e/ngc6hau6ibcy" },
+              { "name": "HD-03", "url": "https://server-raw.com/call-night-s2-e5-3" }
+            ],
+            "sub": [
+              { "name": "HD-01", "url": "https://filemoon.to/e/ui2yxnqht3da/Watch_Call_of_the_Night_Season_2_Ep05" },
+              { "name": "HD-02", "url": "https://hglink.to/e/ngc6hau6ibcy" },
+              { "name": "HD-03", "url": "https://server-sub.com/call-night-s2-e5-3" }
+            ],
+            "dub": [
+              { "name": "HD-01", "url": "https://filemoon.to/e/8qdourkozzlw/Watch_Call_of_the_Night_Season_2_Ep05_Dub" },
+              { "name": "HD-02", "url": "https://hglink.to/e/9jbk3ztxs6dc" },
+              { "name": "HD-03", "url": "https://server-dub.com/call-night-s2-e5-3" }
+            ]
+          }
+        },
+        {
+          "number": 6,
+          "title": "I'm Not Asking About the Quality",
+          "duration": "24 min",
+          "servers": {
+            "raw": [
+              { "name": "HD-01", "url": "https://filemoon.to/e/6oej7jehxogx/Watch_Call_of_the_Night_Season_2_Ep06" },
+              { "name": "HD-02", "url": "https://hglink.to/e/ijz9ajr233jk" },
+              { "name": "HD-03", "url": "https://server-raw.com/call-night-s2-e6-3" }
+            ],
+            "sub": [
+              { "name": "HD-01", "url": "https://filemoon.to/e/6oej7jehxogx/Watch_Call_of_the_Night_Season_2_Ep06" },
+              { "name": "HD-02", "url": "https://hglink.to/e/ijz9ajr233jk" },
+              { "name": "HD-03", "url": "https://server-sub.com/call-night-s2-e6-3" }
+            ],
+            "dub": [
+              { "name": "HD-01", "url": "https://filemoon.to/e/m9rxde8xs9l9/Watch_Call_of_the_Night_Season_2_Ep06_Dub" },
+              { "name": "HD-02", "url": "https://hglink.to/e/sqqs3qpbhjkn" },
+              { "name": "HD-03", "url": "https://server-dub.com/call-night-s2-e6-3" }
+            ]
+          }
+        },
+        {
+          "number": 7,
+          "title": "You're Too Stupid",
+          "duration": "24 min",
+          "servers": {
+            "raw": [
+              { "name": "HD-01", "url": "https://filemoon.to/e/gpen4elrihsa/Watch_Call_of_the_Night_Season_2_Ep07" },
+              { "name": "HD-02", "url": "https://hglink.to/e/ncz3ryuszatg" },
+              { "name": "HD-03", "url": "https://server-raw.com/call-night-s2-e7-3" }
+            ],
+            "sub": [
+              { "name": "HD-01", "url": "https://filemoon.to/e/gpen4elrihsa/Watch_Call_of_the_Night_Season_2_Ep07" },
+              { "name": "HD-02", "url": "https://hglink.to/e/ncz3ryuszatg" },
+              { "name": "HD-03", "url": "https://server-sub.com/call-night-s2-e7-3" }
+            ],
+            "dub": [
+              { "name": "HD-01", "url": "https://filemoon.to/e/ru3wjrapssi7/Watch_Call_of_the_Night_Season_2_Ep07_Dub" },
+              { "name": "HD-02", "url": "https://hglink.to/e/1p6y0dbqgh5z" },
+              { "name": "HD-03", "url": "https://server-dub.com/call-night-s2-e7-3" }
+            ]
+          }
+        },
+        {
+          "number": 8,
+          "title": "Wait, Don't Kill Her",
+          "duration": "24 min",
+          "servers": {
+            "raw": [
+              { "name": "HD-01", "url": "https://filemoon.to/e/oak5mt9ktggs/Watch_Call_of_the_Night_Season_2_Ep08" },
+              { "name": "HD-02", "url": "https://hglink.to/e/dwqll7i1f51u" },
+              { "name": "HD-03", "url": "https://server-raw.com/call-night-s2-e8-3" }
+            ],
+            "sub": [
+              { "name": "HD-01", "url": "https://filemoon.to/e/oak5mt9ktggs/Watch_Call_of_the_Night_Season_2_Ep08" },
+              { "name": "HD-02", "url": "https://hglink.to/e/dwqll7i1f51u" },
+              { "name": "HD-03", "url": "https://server-sub.com/call-night-s2-e8-3" }
+            ],
+            "dub": [
+              { "name": "HD-01", "url": "https://filemoon.to/e/c7ia125nqwwh/Watch_Call_of_the_Night_Season_2_Ep08_Dub" },
+              { "name": "HD-02", "url": "https://hglink.to/e/6ue0c3z0in2h" },
+              { "name": "HD-03", "url": "https://server-dub.com/call-night-s2-e8-3" }
+            ]
+          }
+        },
+        {
+          "number": 9,
+          "title": "Why Did You Start Killing?",
+          "duration": "24 min",
+          "servers": {
+            "raw": [
+              { "name": "HD-01", "url": "https://filemoon.to/e/guh7yhhm3e6w/Watch_Call_of_the_Night_Season_2_Ep09" },
+              { "name": "HD-02", "url": "https://hglink.to/e/udtb3oauvvvi" },
+              { "name": "HD-03", "url": "https://server-raw.com/call-night-s2-e9-3" }
+            ],
+            "sub": [
+              { "name": "HD-01", "url": "https://filemoon.to/e/guh7yhhm3e6w/Watch_Call_of_the_Night_Season_2_Ep09" },
+              { "name": "HD-02", "url": "https://hglink.to/e/udtb3oauvvvi" },
+              { "name": "HD-03", "url": "https://server-sub.com/call-night-s2-e9-3" }
+            ],
+            "dub": [
+              { "name": "HD-01", "url": "https://filemoon.to/e/8ovt03i4b0hf/Watch_Call_of_the_Night_Season_2_Ep09_Dub" },
+              { "name": "HD-02", "url": "https://hglink.to/e/qcn12ae02dta" },
+              { "name": "HD-03", "url": "https://server-dub.com/call-night-s2-e9-3" }
+            ]
+          }
+        },
+        {
+          "number": 10,
+          "title": "I Wanted It to Be You",
+          "duration": "24 min",
+          "servers": {
+            "raw": [
+              { "name": "HD-01", "url": "https://filemoon.to/e/ryscm8s3v3cz/Watch_Call_of_the_Night_Season_2_Ep10" },
+              { "name": "HD-02", "url": "https://hglink.to/e/jsk3og56pw79" },
+              { "name": "HD-03", "url": "https://server-raw.com/call-night-s2-e10-3" }
+            ],
+            "sub": [
+              { "name": "HD-01", "url": "https://filemoon.to/e/ryscm8s3v3cz/Watch_Call_of_the_Night_Season_2_Ep10" },
+              { "name": "HD-02", "url": "https://hglink.to/e/jsk3og56pw79" },
+              { "name": "HD-03", "url": "https://server-sub.com/call-night-s2-e10-3" }
+            ],
+            "dub": [
+              { "name": "HD-01", "url": "https://filemoon.to/e/ts3j08iu1djm/Watch_Call_of_the_Night_Season_2_Ep10_Dub" },
+              { "name": "HD-02", "url": "https://hglink.to/e/qv7ohdgcx98o" },
+              { "name": "HD-03", "url": "https://server-dub.com/call-night-s2-e10-3" }
+            ]
+          }
+        },
+        {
+          "number": 11,
+          "title": "The Night Isn't Over",
+          "duration": "24 min",
+          "servers": {
+            "raw": [
+              { "name": "HD-01", "url": "https://filemoon.to/e/8spkqdtcwpa9/Watch_Call_of_the_Night_Season_2_Ep11" },
+              { "name": "HD-02", "url": "https://hglink.to/e/sv120gncdrg9" },
+              { "name": "HD-03", "url": "https://server-raw.com/call-night-s2-e11-3" }
+            ],
+            "sub": [
+              { "name": "HD-01", "url": "https://filemoon.to/e/8spkqdtcwpa9/Watch_Call_of_the_Night_Season_2_Ep11" },
+              { "name": "HD-02", "url": "https://hglink.to/e/sv120gncdrg9" },
+              { "name": "HD-03", "url": "https://server-sub.com/call-night-s2-e11-3" }
+            ],
+            "dub": [
+              { "name": "HD-01", "url": "https://filemoon.to/e/x4wc6rwyk365/Watch_Call_of_the_Night_Season_2_Ep11_Dub" },
+              { "name": "HD-02", "url": "https://hglink.to/e/2g2vtuac6ndj" },
+              { "name": "HD-03", "url": "https://server-dub.com/call-night-s2-e11-3" }
+            ]
+          }
+        },
+        {
+          "number": 12,
+          "title": "Call of the Night",
+          "duration": "25 min",
+          "servers": {
+            "raw": [
+              { "name": "HD-01", "url": "https://filemoon.to/e/87my0ggltk86/Watch_Call_of_the_Night_Season_2_Ep12" },
+              { "name": "HD-02", "url": "https://hglink.to/e/65ek77sayv2g" },
+              { "name": "HD-03", "url": "https://server-raw.com/call-night-s2-e12-3" }
+            ],
+            "sub": [
+              { "name": "HD-01", "url": "https://filemoon.to/e/87my0ggltk86/Watch_Call_of_the_Night_Season_2_Ep12" },
+              { "name": "HD-02", "url": "https://hglink.to/e/65ek77sayv2g" },
+              { "name": "HD-03", "url": "https://server-sub.com/call-night-s2-e12-3" }
+            ],
+            "dub": [
+              { "name": "HD-01", "url": "https://filemoon.to/e/w8va59hmojiu/Watch_Call_of_the_Night_Season_2_Ep12_Dub" },
+              { "name": "HD-02", "url": "https://hglink.to/e/m9fno28f0i98" },
+              { "name": "HD-03", "url": "https://server-dub.com/call-night-s2-e12-3" }
+            ]
+          }
+        }
+      ]
     }
   ]
 },
@@ -6090,10 +6088,10 @@
   "status": "Finished Airing",
   "description": "Picking up after the events of the first season, Ko's resolve to fall in love with Nazuna is tested as a mysterious detective, Anko Uguisu, begins hunting vampires. The season delves into the dark history of vampires and Nazuna's forgotten human past, culminating in the 'Cigarette Case' arc.",
   "posterUrl": "https://cdn.myanimelist.net/images/anime/1997/141936l.jpg",
-  "backdropUrl": "i.postimg.cc",
+  "backdropUrl": null
   "trailerUrl": "www.youtube.com",
   "malScore": 8.45,
-  "imbdScore": 8.6,
+  "imdbScore": 8.6,
   "popularity": 145,
   "genres": ["Supernatural", "Mystery", "Vampire", "Romance", "Shounen"],
   "cast": ["Gen Sato", "Sora Amamiya", "Miyuki Sawashiro", "Maaya Uchida", "Yumiri Hanamori", "Haruka Tomatsu"],
@@ -6667,13 +6665,13 @@
   ]
 },
 {
-  "id": "spy-family-s3",
+  "id": "spy-family-season-3",
   "slug": "spy-family-season-3",
   "title": "SPY×FAMILY Season 3",
   "originalTitle": "SPY×FAMILY Season 3",
   "japaneseTitle": "SPY×FAMILY 第3期",
   "synonyms": ["Spy x Family S3"],
-  "searchableTitle": "SPY×FAMILY Season 3 Loid Anya Yor Bond Forger",
+  "searchableTitle": "SPY×FAMILY Season 3 Loid Anya Yor Bond Forger 2025",
   "airedYear": 2025,
   "dateAdded": "2025-10-04",
   "type": "anime",
@@ -6683,14 +6681,14 @@
   "premiered": "Fall 2025",
   "duration": "24 min",
   "status": "Finished Airing",
-  "description": "Twilight, Yor, and Anya return as their pretend family life gets even more complicated with higher stakes for world peace.",
-  "posterUrl": "cdn.myanimelist.net",
-  "backdropUrl": "image.tmdb.org",
-  "trailerUrl": "www.youtube.com",
+  "description": "Twilight, Yor, and Anya return as their pretend family life gets even more complicated with higher stakes for world peace. The Forger family faces new challenges as they navigate school life, secret missions, and unexpected adventures in the third season of this hit series.",
+  "posterUrl": "https://cdn.myanimelist.net/images/anime/1216/151792l.jpg",
+  "backdropUrl": "https://i.postimg.cc/VNkgJt2Y/spy-family-season-3-backdrop.jpg",
+  "trailerUrl": "https://www.youtube.com/watch?v=example-trailer",
   "malScore": 8.40,
-  "imbdScore": 8.5,
+  "imdbScore": 8.5,
   "popularity": 25,
-  "genres": ["Comedy", "Action", "Slice of Life"],
+  "genres": ["Comedy", "Action", "Slice of Life", "Spy"],
   "cast": ["Takuya Eguchi", "Atsumi Tanezaki", "Saori Hayami"],
   "certification": "TV-14",
   "country": "Japan",
@@ -6698,1369 +6696,296 @@
   "producers": ["TOHO", "TV Tokyo"],
   "seasons": [
     {
-  "seasonNumber": 1,
-  "part": 1,
-  "totalEpisodes": 12,
-  "episodes": [
-    {
-      "episodeNumber": 1,
-      "title": "Operation Strix",
-      "duration": "24 min",
-      "servers": {
-        "sub": [
-          {
-            "name": "HD-01",
-            "url": "https://filemoon.in/e/38ts0we8oisx/Watch_SPY_x_FAMILY_01_sub"
-          },
-          {
-            "name": "HD-03",
-            "url": "https://mxdrop.to/e/jdkrlwkxskoqo1"
-          }
-        ],
-        "dub": [
-          {
-            "name": "HD-01",
-            "url": "https://filemoon.in/e/vptksq123b8h/Watch_SPY_x_FAMILY_Ep01_Dub"
-          },
-          {
-            "name": "HD-03",
-            "url": "https://mxdrop.to/e/67rxnj11il6nopd"
-          }
-        ]
-      }
-    },
-    {
-      "episodeNumber": 2,
-      "title": "Secure a Wife",
-      "duration": "24 min",
-      "servers": {
-        "sub": [
-          {
-            "name": "HD-01",
-            "url": "https://filemoon.in/e/7wl7g7lstzdv/Watch_SPY_x_FAMILY_02_sub"
-          },
-          {
-            "name": "HD-03",
-            "url": "https://mxdrop.to/e/elzgodz7c1ekg3"
-          }
-        ],
-        "dub": [
-          {
-            "name": "HD-01",
-            "url": "https://filemoon.in/e/an1smvvzqrnq/Watch_SPY_x_FAMILY_Ep02_Dub"
-          },
-          {
-            "name": "HD-03",
-            "url": "https://mxdrop.to/e/k0eoj9emu33npr8"
-          }
-        ]
-      }
-    },
-    {
-      "episodeNumber": 3,
-      "title": "Prepare for the Interview",
-      "duration": "24 min",
-      "servers": {
-        "sub": [
-          {
-            "name": "HD-01",
-            "url": "https://filemoon.in/e/v4ct3s3niz15/Watch_SPY_x_FAMILY_03_sub"
-          },
-          {
-            "name": "HD-03",
-            "url": "https://mxdrop.to/e/vkqjw4z9uqqggj6"
-          }
-        ],
-        "dub": [
-          {
-            "name": "HD-01",
-            "url": "https://filemoon.in/e/7eivwg65joj4/Watch_SPY_x_FAMILY_Ep03_Dub"
-          },
-          {
-            "name": "HD-02",
-            "url": "https://hglink.to/e/0mlawb1wav4v"
-          },
-          {
-            "name": "HD-03",
-            "url": "https://mxdrop.to/e/mkzpmoz4tx64oz8"
-          }
-        ]
-      }
-    },
-    {
-      "episodeNumber": 4,
-      "title": "The Prestigious School's Interview",
-      "duration": "24 min",
-      "servers": {
-        "sub": [
-          {
-            "name": "HD-01",
-            "url": "https://filemoon.in/e/5ili32dzf74z/Watch_SPY_x_FAMILY_04_sub"
-          },
-          {
-            "name": "HD-03",
-            "url": "https://mxdrop.to/e/nlne3zg0cgzedm"
-          }
-        ],
-        "dub": [
-          {
-            "name": "HD-01",
-            "url": "https://filemoon.in/e/huypf50jkjkv/Watch_SPY_x_FAMILY_04_Dub"
-          },
-          {
-            "name": "HD-03",
-            "url": "https://mxdrop.to/e/r607eowgfv8p9l3"
-          }
-        ]
-      }
-    },
-    {
-      "episodeNumber": 5,
-      "title": "Will They Pass or Fail?",
-      "duration": "24 min",
-      "servers": {
-        "sub": [
-          {
-            "name": "HD-01",
-            "url": "https://filemoon.in/e/oeakgpef3pls/Watch_SPY_x_FAMILY_05_sub"
-          },
-          {
-            "name": "HD-03",
-            "url": "https://mxdrop.to/e/7kjzo7dqizjg6q"
-          }
-        ],
-        "dub": [
-          {
-            "name": "HD-01",
-            "url": "https://filemoon.in/e/mlomjys9920i/Watch_SPY_x_FAMILY_05_dub"
-          },
-          {
-            "name": "HD-03",
-            "url": "https://mxdrop.to/e/67rxnj1zuoojxg"
-          }
-        ]
-      }
-    },
-    {
-      "episodeNumber": 6,
-      "title": "The Friendship Scheme",
-      "duration": "24 min",
-      "servers": {
-        "sub": [
-          {
-            "name": "HD-01",
-            "url": "https://filemoon.in/e/8g8vk3u3rhcd/Watch_SPY_x_FAMILY_06_sub"
-          },
-          {
-            "name": "HD-02",
-            "url": "https://hglink.to/e/evioksvmdimo"
-          },
-          {
-            "name": "HD-03",
-            "url": "https://mxdrop.to/e/gjd8971eidkxj1"
-          }
-        ],
-        "dub": [
-          {
-            "name": "HD-01",
-            "url": "https://filemoon.in/e/frhxhe9w9m3i/Watch_SPY_x_FAMILY_06_dub"
-          },
-          {
-            "name": "HD-03",
-            "url": "https://mxdrop.to/e/nlne3ow9sl89x4"
-          }
-        ]
-      }
-    },
-    {
-      "episodeNumber": 7,
-      "title": "The Target's Second Son",
-      "duration": "24 min",
-      "servers": {
-        "sub": [
-          {
-            "name": "HD-01",
-            "url": "https://filemoon.in/e/6g69m0u915k5/Watch_SPY_x_FAMILY_07_sub"
-          },
-          {
-            "name": "HD-02",
-            "url": "https://hglink.to/e/w9nhmfpjqzz9"
-          },
-          {
-            "name": "HD-03",
-            "url": "https://mxdrop.to/e/jdkrlwg8u79vqw9"
-          }
-        ],
-        "dub": [
-          {
-            "name": "HD-01",
-            "url": "https://filemoon.in/e/xjqdos1sceys/Watch_SPY_x_FAMILY_07_dub"
-          },
-          {
-            "name": "HD-03",
-            "url": "https://mxdrop.to/e/r607eoj8t6pqpd"
-          }
-        ]
-      }
-    },
-    {
-      "episodeNumber": 8,
-      "title": "The Counter-Secret Police Cover Operation",
-      "duration": "24 min",
-      "servers": {
-        "sub": [
-          {
-            "name": "HD-01",
-            "url": "https://filemoon.in/e/jbh3qwv56djl/Watch_SPY_x_FAMILY_08_sub"
-          },
-          {
-            "name": "HD-02",
-            "url": "https://hglink.to/e/5l6krr5usflf"
-          },
-          {
-            "name": "HD-03",
-            "url": "https://mxdrop.to/e/8ljmpkdqu64ew3k"
-          }
-        ],
-        "dub": [
-          {
-            "name": "HD-01",
-            "url": "https://filemoon.in/e/81ie6b7opp6z/Watch_SPY_x_FAMILY_08_dub"
-          },
-          {
-            "name": "HD-03",
-            "url": "https://mxdrop.to/e/q1d04zvpu6loqq"
-          }
-        ]
-      }
-    },
-    {
-      "episodeNumber": 9,
-      "title": "Show Off How In Love You Are",
-      "duration": "24 min",
-      "servers": {
-        "sub": [
-          {
-            "name": "HD-01",
-            "url": "https://filemoon.in/e/2pfjmzkolg2m/Watch_SPY_x_FAMILY_09_sub"
-          },
-          {
-            "name": "HD-02",
-            "url": "https://hglink.to/e/xg3cc5blrafq"
-          },
-          {
-            "name": "HD-03",
-            "url": "https://mxdrop.to/e/xw9xz34rcm9k00"
-          }
-        ],
-        "dub": [
-          {
-            "name": "HD-01",
-            "url": "https://filemoon.in/e/wze441aimvm9/Watch_SPY_x_FAMILY_09_dub"
-          },
-          {
-            "name": "HD-03",
-            "url": "https://mxdrop.to/e/nlne3jlxhez89k"
-          }
-        ]
-      }
-    },
-    {
-      "episodeNumber": 10,
-      "title": "The Great Dodgeball Plan",
-      "duration": "24 min",
-      "servers": {
-        "sub": [
-          {
-            "name": "HD-01",
-            "url": "https://filemoon.in/e/se4qlejo2d4p/Watch_SPY_x_FAMILY_10_sub"
-          },
-          {
-            "name": "HD-02",
-            "url": "https://hglink.to/e/oauf4xuprr5g"
-          },
-          {
-            "name": "HD-03",
-            "url": "https://mxdrop.to/e/elzgoddlhq066r8"
-          }
-        ],
-        "dub": [
-          {
-            "name": "HD-01",
-            "url": "https://filemoon.in/e/olujrn9d5i3s/Watch_SPY_x_FAMILY_10_dub"
-          },
-          {
-            "name": "HD-03",
-            "url": "https://mxdrop.to/e/k0eoj9zjszl60g"
-          }
-        ]
-      }
-    },
-    {
-      "episodeNumber": 11,
-      "title": "Stella",
-      "duration": "24 min",
-      "servers": {
-        "sub": [
-          {
-            "name": "HD-01",
-            "url": "https://filemoon.in/e/f6ag1ks1ujqr/Watch_SPY_x_FAMILY_11_sub"
-          }
-        ],
-        "dub": [
-          {
-            "name": "HD-01",
-            "url": "https://filemoon.in/e/xqbstefqcry4/Watch_SPY_x_FAMILY_11_dub"
-          },
-          {
-            "name": "HD-03",
-            "url": "https://mxdrop.to/e/gjd8960rbpvdv4"
-          }
-        ]
-      }
-    },
-    {
-      "episodeNumber": 12,
-      "title": "Penguin Park",
-      "duration": "24 min",
-      "servers": {
-        "sub": [
-          {
-            "name": "HD-01",
-            "url": "https://filemoon.in/e/kkax09s7b24c/Watch_SPY_x_FAMILY_12_sub"
-          }
-        ],
-        "dub": [
-          {
-            "name": "HD-01",
-            "url": "https://filemoon.in/e/wvydv7p48xe0/Watch_SPY_x_FAMILY_12_dub"
-          },
-          {
-            "name": "HD-03",
-            "url": "https://mxdrop.to/e/67rxnj3etl69e6r"
-          }
-        ]
-      }
-    }
-  ]
-},
-{
-  "seasonNumber": 1,
-  "part": 2,
-  "totalEpisodes": 13,
-  "previousPart": "Season 01 Part 01 (Episodes 1-12)",
-  "episodes": [
-    {
-      "episodeNumber": 1,
-      "title": "Project Apple",
-      "duration": "24 min",
-      "servers": {
-        "sub": [
-          {
-            "name": "HD-01",
-            "url": "https://filemoon.in/e/h044iu8bm419/Watch_SPY_x_FAMILY_Cour_2_Ep_01_sub"
-          },
-          {
-            "name": "HD-02",
-            "url": "https://mxdrop.to/e/xw9xzz93b9493v"
-          }
-        ],
-        "dub": [
-          {
-            "name": "HD-01",
-            "url": "https://filemoon.in/e/iaatg2snxmso/Watch_SPY_x_FAMILY_Cour_2_Dub_Ep_01"
-          },
-          {
-            "name": "HD-02",
-            "url": "https://mxdrop.to/e/nln38ol4uljxpzo"
-          }
-        ]
-      }
-    },
-    {
-      "episodeNumber": 2,
-      "title": "Disarm the Time Bomb",
-      "duration": "24 min",
-      "servers": {
-        "sub": [
-          {
-            "name": "HD-01",
-            "url": "https://filemoon.in/e/3ifliesh34rm/Watch_SPY_x_FAMILY_Cour_2_SUB_Ep_02"
-          },
-          {
-            "name": "HD-02",
-            "url": "https://mxdrop.to/e/9wxg996gc3nk9lj"
-          }
-        ],
-        "dub": [
-          {
-            "name": "HD-01",
-            "url": "https://filemoon.in/e/t1ygfc1otw7i/Watch_SPY_x_FAMILY_Cour_2_Dub_Ep_02"
-          },
-          {
-            "name": "HD-02",
-            "url": "https://mxdrop.to/e/1nowdl0zs3xmdw"
-          }
-        ]
-      }
-    },
-    {
-      "episodeNumber": 3,
-      "title": "A New Family Member",
-      "duration": "24 min",
-      "servers": {
-        "sub": [
-          {
-            "name": "HD-01",
-            "url": "https://filemoon.in/e/aliilcg1cvot/Watch_SPY_x_FAMILY_Cour_2_Sub_Ep_03"
-          },
-          {
-            "name": "HD-02",
-            "url": "https://mxdrop.to/e/k0eojj1mh1emqp"
-          }
-        ],
-        "dub": [
-          {
-            "name": "HD-01",
-            "url": "https://filemoon.in/e/c8x2uv2jopm1/Watch_SPY_x_FAMILY_Cour_2_Dub_ep_03"
-          },
-          {
-            "name": "HD-02",
-            "url": "https://mxdrop.to/e/7kjo4mn8idwm0wr"
-          }
-        ]
-      }
-    },
-    {
-      "episodeNumber": 4,
-      "title": "Yor's Kitchen / The Informant's Great Romance Plan",
-      "duration": "24 min",
-      "servers": {
-        "sub": [
-          {
-            "name": "HD-01",
-            "url": "https://filemoon.in/e/11j3dkfvppzy/Watch_SPY_x_FAMILY_Cour_2_sub_ep_04"
-          },
-          {
-            "name": "HD-02",
-            "url": "https://mxdrop.to/e/mkzpmp6dto8er3"
-          }
-        ],
-        "dub": [
-          {
-            "name": "HD-01",
-            "url": "https://filemoon.in/e/p3ffhhvp23u7/Watch_SPY_x_FAMILY_Cour_2_Dub_ep_04"
-          },
-          {
-            "name": "HD-02",
-            "url": "https://mxdrop.to/e/k0ejv99vhrol9z"
-          }
-        ]
-      }
-    },
-    {
-      "episodeNumber": 5,
-      "title": "Carry Out the Griffin Plan / Fullmetal Lady / Omelet Rice",
-      "duration": "24 min",
-      "servers": {
-        "sub": [
-          {
-            "name": "HD-01",
-            "url": "https://filemoon.in/e/10gre3qc074i/Watch_SPY_x_FAMILY_Cour_2_sub_ep_05"
-          },
-          {
-            "name": "HD-02",
-            "url": "https://mxdrop.to/e/nlne3edzade38r"
-          }
-        ],
-        "dub": [
-          {
-            "name": "HD-01",
-            "url": "https://filemoon.in/e/lz38fondybid/Watch_SPY_x_FAMILY_Cour_2_dub_ep_05"
-          },
-          {
-            "name": "HD-02",
-            "url": "https://mxdrop.to/e/elzor97kfrkole"
-          }
-        ]
-      }
-    },
-    {
-      "episodeNumber": 6,
-      "title": "Uncle the Private Tutor / Daybreak",
-      "duration": "24 min",
-      "servers": {
-        "sub": [
-          {
-            "name": "HD-01",
-            "url": "https://filemoon.in/e/bta1qz18kipm/Watch_SPY_x_FAMILY_Cour_2_sub_ep_06"
-          },
-          {
-            "name": "HD-02",
-            "url": "https://mxdrop.to/e/dkrmnnllig44r7"
-          }
-        ],
-        "dub": [
-          {
-            "name": "HD-01",
-            "url": "https://filemoon.in/e/w1kmskkcxtrs/Watch_SPY_x_FAMILY_Cour_2_dib_ep_06"
-          },
-          {
-            "name": "HD-02",
-            "url": "https://mxdrop.to/e/xw9z1d3gf6o1dn"
-          }
-        ]
-      }
-    },
-    {
-      "episodeNumber": 7,
-      "title": "A Revenge Plot Against Desmond / Mama Becomes the Wind",
-      "duration": "24 min",
-      "servers": {
-        "sub": [
-          {
-            "name": "HD-01",
-            "url": "https://filemoon.in/e/omn0yjab9hfr/Watch_SPY_x_FAMILY_Cour_2_Sub_ep_07"
-          },
-          {
-            "name": "HD-02",
-            "url": "https://mxdrop.to/e/owz6vv73ugwx99"
-          }
-        ],
-        "dub": [
-          {
-            "name": "HD-01",
-            "url": "https://filemoon.in/e/4kjgl6nbr5cd/Watch_SPY_x_FAMILY_Cour_2_dub_ep_07"
-          },
-          {
-            "name": "HD-02",
-            "url": "https://mxdrop.to/e/36qzojdrtmwzqqg"
-          }
-        ]
-      }
-    },
-    {
-      "episodeNumber": 8,
-      "title": "Investigate the General Hospital / Decipher the Code",
-      "duration": "24 min",
-      "servers": {
-        "sub": [
-          {
-            "name": "HD-01",
-            "url": "https://filemoon.in/e/kbwsx9b8ciee/Watch_SPY_x_FAMILY_Cour_2_Sub_ep_08"
-          },
-          {
-            "name": "HD-02",
-            "url": "https://mxdrop.to/e/vkqjwwoqse6q38"
-          }
-        ],
-        "dub": [
-          {
-            "name": "HD-01",
-            "url": "https://filemoon.in/e/g8uykzjynmyx/Watch_SPY_x_FAMILY_Cour_2_dub_ep_08"
-          },
-          {
-            "name": "HD-02",
-            "url": "https://mxdrop.to/e/67rnwzk1ikmmpm"
-          }
-        ]
-      }
-    },
-    {
-      "episodeNumber": 9,
-      "title": "Nightfall / First Fit of Jealousy",
-      "duration": "24 min",
-      "servers": {
-        "sub": [
-          {
-            "name": "HD-01",
-            "url": "https://filemoon.in/e/j5qem87mx9ik/Watch_SPY_x_FAMILY_Cour_2_sub_ep_09"
-          },
-          {
-            "name": "HD-02",
-            "url": "https://mxdrop.to/e/l794xxm9cqdqed"
-          }
-        ],
-        "dub": [
-          {
-            "name": "HD-01",
-            "url": "https://filemoon.in/e/kku4gnojhp4z/Watch_SPY_x_FAMILY_Cour_2_dub_ep_09"
-          },
-          {
-            "name": "HD-02",
-            "url": "https://mxdrop.to/e/r60evoloh3oll1"
-          }
-        ]
-      }
-    },
-    {
-      "episodeNumber": 10,
-      "title": "The Underground Tennis Tournament: The Campbelldon",
-      "duration": "24 min",
-      "servers": {
-        "sub": [
-          {
-            "name": "HD-01",
-            "url": "https://filemoon.in/e/xewcgbqaqa7s/Watch_SPY_x_FAMILY_Cour_2_sub_ep_10"
-          },
-          {
-            "name": "HD-02",
-            "url": "https://mxdrop.to/e/03z7kkeqi13gel"
-          }
-        ],
-        "dub": [
-          {
-            "name": "HD-01",
-            "url": "https://filemoon.in/e/yo0hw0ctbk5i/Watch_SPY_x_FAMILY_Cour_2_dub_ep_10"
-          },
-          {
-            "name": "HD-02",
-            "url": "https://mxdrop.to/e/owzvdov7br0rlw"
-          }
-        ]
-      }
-    },
-    {
-      "episodeNumber": 11,
-      "title": "The Unwavering Path",
-      "duration": "24 min",
-      "servers": {
-        "sub": [
-          {
-            "name": "HD-01",
-            "url": "https://filemoon.in/e/f17mtcj0hn3z/Watch_SPY_x_FAMILY_Cour_2_Sub_ep_11"
-          },
-          {
-            "name": "HD-02",
-            "url": "https://mxdrop.to/e/gjd8998ntdxgog"
-          }
-        ],
-        "dub": [
-          {
-            "name": "HD-01",
-            "url": "https://filemoon.in/e/unv0zp16e9u6/Watch_SPY_x_FAMILY_Cour_2_dub_ep_11"
-          },
-          {
-            "name": "HD-02",
-            "url": "https://mxdrop.to/e/l79xv1eqidvjl6"
-          }
-        ]
-      }
-    },
-    {
-      "episodeNumber": 12,
-      "title": "The Role of a Mother and Wife / Shopping with Friends",
-      "duration": "24 min",
-      "servers": {
-        "sub": [
-          {
-            "name": "HD-01",
-            "url": "https://filemoon.in/e/38i8juxmo4bn/Watch_SPY_x_FAMILY_Cour_2_sub_ep_12"
-          },
-          {
-            "name": "HD-02",
-            "url": "https://mxdrop.to/e/k0eojjjdbvmg3v"
-          }
-        ],
-        "dub": [
-          {
-            "name": "HD-01",
-            "url": "https://filemoon.in/e/6ajb9y94k3ku/Watch_SPY_x_FAMILY_Cour_2_dub_ep_12"
-          },
-          {
-            "name": "HD-02",
-            "url": "https://mxdrop.to/e/pj6r0gpph76e73"
-          }
-        ]
-      }
-    },
-    {
-      "episodeNumber": 13,
-      "title": "First Contact",
-      "duration": "24 min",
-      "servers": {
-        "sub": [
-          {
-            "name": "HD-01",
-            "url": "https://filemoon.in/e/1v01bpj8e8kv/Watch_SPY_x_FAMILY_Cour_2_sub_ep_13"
-          },
-          {
-            "name": "HD-02",
-            "url": "https://mxdrop.to/e/67rnlg3gad6pg8"
-          }
-        ],
-        "dub": [
-          {
-            "name": "HD-01",
-            "url": "https://filemoon.in/e/612vpjcyyt49/Watch_SPY_x_FAMILY_Cour_2_Dub_ep_13"
-          },
-          {
-            "name": "HD-02",
-            "url": "https://mxdrop.to/e/gjd9mwz1hdn344"
-          }
-        ]
-      }
-    }
-  ]
-},
-{
-  "seasonNumber": 2,
-  "totalEpisodes": 12,
-  "previousSeason": "Season 01 Part 02 (Episodes 1-13)",
-  "episodes": [
-    {
-      "episodeNumber": 1,
-      "title": "Follow Mama and Papa",
-      "duration": "24 min",
-      "servers": {
-        "sub": [
-          {
-            "name": "HD-01",
-            "url": "https://filemoon.in/e/i314ntezw1m9/Watch_SPY_x_FAMILY_Season_2_sub_01"
-          },
-          {
-            "name": "HD-02",
-            "url": "https://mxdrop.to/e/36qzpmogb031k1"
-          }
-        ],
-        "dub": [
-          {
-            "name": "HD-01",
-            "url": "https://filemoon.in/e/lvi6q7bxq79x/Watch_SPY_x_FAMILY_Season_2_Dub_01"
-          },
-          {
-            "name": "HD-02",
-            "url": "https://mxdrop.to/e/l79xepe8i31lpg"
-          }
-        ]
-      }
-    },
-    {
-      "episodeNumber": 2,
-      "title": "Bond's Strategy to Stay Alive / Damian's Field Research Trip",
-      "duration": "24 min",
-      "servers": {
-        "sub": [
-          {
-            "name": "HD-01",
-            "url": "https://filemoon.in/e/0w7tda6nd3h1/Watch_SPY_x_FAMILY_Season_2_sub_02"
-          },
-          {
-            "name": "HD-02",
-            "url": "https://mxdrop.to/e/7kjo3vwrbqmj1r"
-          }
-        ],
-        "dub": [
-          {
-            "name": "HD-01",
-            "url": "https://filemoon.in/e/5dqucg5rd0ts/Watch_SPY_x_FAMILY_Season_2_Dub_02"
-          },
-          {
-            "name": "HD-02",
-            "url": "https://mxdrop.to/e/9wx9ve9lbrkvkl"
-          }
-        ]
-      }
-    },
-    {
-      "episodeNumber": 3,
-      "title": "Mission and Family / The Elegant Bondman / Waking Up",
-      "duration": "24 min",
-      "servers": {
-        "sub": [
-          {
-            "name": "HD-01",
-            "url": "https://filemoon.in/e/asb0ke1pdtb7/Watch_SPY_x_FAMILY_Season_2_sub_03"
-          },
-          {
-            "name": "HD-02",
-            "url": "https://mxdrop.to/e/7kjo3l9vh6d0xk"
-          }
-        ],
-        "dub": [
-          {
-            "name": "HD-01",
-            "url": "https://filemoon.in/e/x7lsfp0m223x/Watch_SPY_x_FAMILY_Season_2_dub_03"
-          },
-          {
-            "name": "HD-02",
-            "url": "https://mxdrop.to/e/q1d4pjk4fx78176"
-          }
-        ]
-      }
-    },
-    {
-      "episodeNumber": 4,
-      "title": "The Pastry of Knowledge / The Informant's Romance Plan II",
-      "duration": "24 min",
-      "servers": {
-        "sub": [
-          {
-            "name": "HD-01",
-            "url": "https://filemoon.in/e/pu3w9r7g30ot/Watch_SPY_x_FAMILY_Season_2_sub_04"
-          },
-          {
-            "name": "HD-02",
-            "url": "https://mxdrop.to/e/1nowmr9ei68xg4"
-          }
-        ],
-        "dub": [
-          {
-            "name": "HD-01",
-            "url": "https://filemoon.in/e/7wir3s0l3s02/Watch_SPY_x_FAMILY_Season_2_dub_04"
-          },
-          {
-            "name": "HD-02",
-            "url": "https://mxdrop.to/e/gjd9eve1cw0lqpk"
-          }
-        ]
-      }
-    },
-    {
-      "episodeNumber": 5,
-      "title": "Plan to Cross the Border",
-      "duration": "24 min",
-      "servers": {
-        "sub": [
-          {
-            "name": "HD-01",
-            "url": "https://filemoon.in/e/my1gyqjbyp8k/Watch_SPY_x_FAMILY_Season_2_sub_05"
-          },
-          {
-            "name": "HD-02",
-            "url": "https://mxdrop.to/e/vkqw68rzf39nv6"
-          }
-        ],
-        "dub": [
-          {
-            "name": "HD-01",
-            "url": "https://filemoon.in/e/0ul9rsyk8s6r/Watch_SPY_x_FAMILY_Season_2_Dub_05"
-          },
-          {
-            "name": "HD-02",
-            "url": "https://mxdrop.to/e/jdklpovjf8dok"
-          }
-        ]
-      }
-    },
-    {
-      "episodeNumber": 6,
-      "title": "The Fearsome Luxury Cruise Ship",
-      "duration": "24 min",
-      "servers": {
-        "sub": [
-          {
-            "name": "HD-01",
-            "url": "https://filemoon.in/e/r9xayo7e0hhj/Watch_SPY_x_FAMILY_Season_2_sub_06"
-          },
-          {
-            "name": "HD-02",
-            "url": "https://mxdrop.to/e/l79xekmkt48lnw"
-          }
-        ],
-        "dub": [
-          {
-            "name": "HD-01",
-            "url": "https://filemoon.in/e/0tvr921xof24/Watch_SPY_x_FAMILY_Season_2_Dub_06"
-          },
-          {
-            "name": "HD-02",
-            "url": "https://mxdrop.to/e/1nowm7g6f4zlv8"
-          }
-        ]
-      }
-    },
-    {
-      "episodeNumber": 7,
-      "title": "Who Is This Mission For?",
-      "duration": "24 min",
-      "servers": {
-        "sub": [
-          {
-            "name": "HD-01",
-            "url": "https://filemoon.in/e/oc136yrnymfv/Watch_SPY_x_FAMILY_Season_2_sub_ep_o7"
-          },
-          {
-            "name": "HD-02",
-            "url": "https://mxdrop.to/e/wlw1dvg3c03ljdo"
-          }
-        ],
-        "dub": [
-          {
-            "name": "HD-01",
-            "url": "https://filemoon.in/e/xxmswyuxd2a1/Watch_SPY_x_FAMILY_Season_2_Dub_07"
-          },
-          {
-            "name": "HD-02",
-            "url": "https://mxdrop.to/e/8ljp3z8rt7xe74"
-          }
-        ]
-      }
-    },
-    {
-      "episodeNumber": 8,
-      "title": "The Symphony Upon the Ship",
-      "duration": "24 min",
-      "servers": {
-        "sub": [
-          {
-            "name": "HD-01",
-            "url": "https://filemoon.in/e/nnbj7ifssgm8/Watch_SPY_x_FAMILY_Season_2_sub_08"
-          },
-          {
-            "name": "HD-02",
-            "url": "https://mxdrop.to/e/vkqw68jxu06pg6"
-          }
-        ],
-        "dub": [
-          {
-            "name": "HD-01",
-            "url": "https://filemoon.in/e/o1q2eu3mv4ld/Watch_SPY_x_FAMILY_Season_2_Dub_08"
-          },
-          {
-            "name": "HD-02",
-            "url": "https://mxdrop.to/e/owzvp01wf4rkkx"
-          }
-        ]
-      }
-    },
-    {
-      "episodeNumber": 9,
-      "title": "The Hand That Connects to the Future",
-      "duration": "24 min",
-      "servers": {
-        "sub": [
-          {
-            "name": "HD-01",
-            "url": "https://filemoon.in/e/l7g7z6tfhz14/Watch_SPY_x_FAMILY_Season_2_sub_ep_09"
-          },
-          {
-            "name": "HD-02",
-            "url": "https://mxdrop.to/e/vkqw688kspd06o"
-          }
-        ],
-        "dub": [
-          {
-            "name": "HD-01",
-            "url": "https://filemoon.in/e/zaiztr6debol/Watch_SPY_x_FAMILY_Season_2_Dub_09"
-          },
-          {
-            "name": "HD-02",
-            "url": "https://mxdrop.to/e/r60enl41bw14lg"
-          }
-        ]
-      }
-    },
-    {
-      "episodeNumber": 10,
-      "title": "Enjoy the Resort to the Fullest / Bragging About Vacation",
-      "duration": "24 min",
-      "servers": {
-        "sub": [
-          {
-            "name": "HD-01",
-            "url": "https://filemoon.in/e/6ilaru5w8u0h/Watch_SPY_x_FAMILY_Season_2_coir_2_sub_ep_10"
-          },
-          {
-            "name": "HD-02",
-            "url": "https://mxdrop.to/e/dkrn1pnvs73eeg1"
-          }
-        ],
-        "dub": [
-          {
-            "name": "HD-01",
-            "url": "https://filemoon.in/e/l9g043a937gc/Watch_SPY_x_FAMILY_Season_2_dub_10"
-          },
-          {
-            "name": "HD-02",
-            "url": "https://mxdrop.to/e/03zkp0qeceo73n"
-          }
-        ]
-      }
-    },
-    {
-      "episodeNumber": 11,
-      "title": "Berlint in Love / Nightfall's Daily Life",
-      "duration": "24 min",
-      "servers": {
-        "sub": [
-          {
-            "name": "HD-01",
-            "url": "https://filemoon.in/e/ev4up8lee064/Watch_SPY_x_FAMILY_Season_2_sub_ep_11"
-          }
-        ],
-        "dub": [
-          {
-            "name": "HD-01",
-            "url": "https://filemoon.in/e/ewnoarq82mrm/Watch_SPY_x_FAMILY_Season_2_Dub_11"
-          },
-          {
-            "name": "HD-02",
-            "url": "https://mxdrop.to/e/7kjo3x11adpowdo"
-          }
-        ]
-      }
-    },
-    {
-      "episodeNumber": 12,
-      "title": "Part of the Family",
-      "duration": "24 min",
-      "servers": {
-        "sub": [
-          {
-            "name": "HD-01",
-            "url": "https://filemoon.in/e/a7n03cp2194o/Watch_SPY_x_FAMILY_Season_2_sub_12"
-          },
-          {
-            "name": "HD-02",
-            "url": "https://mxdrop.to/e/dkrn1z6osv76p9"
-          }
-        ],
-        "dub": [
-          {
-            "name": "HD-01",
-            "url": "https://filemoon.in/e/b7vqmu69m5bu/Watch_SPY_x_FAMILY_Season_2_Dub_12"
-          },
-          {
-            "name": "HD-02",
-            "url": "https://mxdrop.to/e/owzvp0krbq3wjj"
-          }
-        ]
-      }
-    }
-  ]
-},
-{
-  "seasonNumber": 3,
-  "totalEpisodes": 13,
-  "previousSeason": "Season 02 (Episodes 1-12)",
-  "episodes": [
-    {
-      "episodeNumber": 1,
-      "title": "Berlint Panic / The Informant and Nightfall",
-      "duration": "24 min",
-      "servers": {
-        "sub": [
-          {
-            "name": "HD-01",
-            "url": "https://filemoon.in/e/9ro0sk8chc2i/Watch_Spy_x_Family_Season_3_Sub_01"
-          },
-          {
-            "name": "HD-02",
-            "url": "https://mxdrop.to/e/l79x9exlh8jlq7"
-          }
-        ],
-        "dub": [
-          {
-            "name": "HD-01",
-            "url": "https://filemoon.in/e/rvzqvvmn6gmo/Watch_Spy_x_Family_Season_3_Dub_01"
-          },
-          {
-            "name": "HD-02",
-            "url": "https://mxdrop.to/e/8ljpj0r6ckjg43"
-          }
-        ]
-      }
-    },
-    {
-      "episodeNumber": 2,
-      "title": "Avoid Getting Tonitrus Bolts / Memories I",
-      "duration": "24 min",
-      "servers": {
-        "sub": [
-          {
-            "name": "HD-01",
-            "url": "https://filemoon.in/e/qtjlshorwlwj/Watch_Spy_x_Family_Season_3_sub_02"
-          },
-          {
-            "name": "HD-02",
-            "url": "https://mxdrop.to/e/67rnrdw6idq8qm"
-          }
-        ],
-        "dub": [
-          {
-            "name": "HD-01",
-            "url": "https://filemoon.in/e/c62kstosvzga/Spy_x_Family_dub_02"
-          },
-          {
-            "name": "HD-02",
-            "url": "https://mxdrop.to/e/q1d4dgorf7vpx8"
-          }
-        ]
-      }
-    },
-    {
-      "episodeNumber": 3,
-      "title": "Memories II",
-      "duration": "24 min",
-      "servers": {
-        "sub": [
-          {
-            "name": "HD-01",
-            "url": "https://filemoon.in/e/14d9xuvuyib8/Watch_Spy_x_Family_Season_3_sub_03"
-          },
-          {
-            "name": "HD-02",
-            "url": "https://mxdrop.to/e/4d9g9r0ji3ee8v"
-          }
-        ],
-        "dub": [
-          {
-            "name": "HD-01",
-            "url": "https://filemoon.in/e/g0y28fpilu36/Spy_x_Family_Eng_dub_03"
-          },
-          {
-            "name": "HD-02",
-            "url": "https://mxdrop.to/e/9wx9x693b3vm4po"
-          }
-        ]
-      }
-    },
-    {
-      "episodeNumber": 4,
-      "title": "Behind the Scandal / The Path to an Imperial Scholar",
-      "duration": "24 min",
-      "servers": {
-        "sub": [
-          {
-            "name": "HD-01",
-            "url": "https://filemoon.in/e/m4wu7x8yiwj3/Watch_Spy_x_Family_Season_3_sub_04"
-          },
-          {
-            "name": "HD-02",
-            "url": "https://mxdrop.to/e/owzvzp0pid93p1"
-          }
-        ],
-        "dub": [
-          {
-            "name": "HD-01",
-            "url": "https://filemoon.in/e/py1uv6fvs5xp/Spy_x_Family_Eng_dub_04"
-          },
-          {
-            "name": "HD-02",
-            "url": "https://mxdrop.to/e/03zkzokkc1xwnd"
-          }
-        ]
-      }
-    },
-    {
-      "episodeNumber": 5,
-      "title": "The Mommy-Friends Scheme",
-      "duration": "24 min",
-      "servers": {
-        "sub": [
-          {
-            "name": "HD-01",
-            "url": "https://filemoon.in/e/8kp5ioch0pc3/Watch_Spy_x_Family_Season_3_sub_05"
-          },
-          {
-            "name": "HD-02",
-            "url": "https://mxdrop.to/e/9wx9xv9ei3vwej3"
-          }
-        ],
-        "dub": [
-          {
-            "name": "HD-01",
-            "url": "https://filemoon.in/e/1j4dlq6ayhkw/Spy_x_Family_Eng_dub_05"
-          },
-          {
-            "name": "HD-02",
-            "url": "https://mxdrop.to/e/mkzmz46nbk0gqk"
-          }
-        ]
-      }
-    },
-    {
-      "episodeNumber": 6,
-      "title": "White Jealousy / The Eden College Busjacking Incident",
-      "duration": "24 min",
-      "servers": {
-        "sub": [
-          {
-            "name": "HD-01",
-            "url": "https://filemoon.in/e/fqwpf5qsukx0/Watch_Spy_x_Family_Season_3_sub_06"
-          },
-          {
-            "name": "HD-02",
-            "url": "https://mxdrop.to/e/gjd9dog7hd96jw"
-          }
-        ],
-        "dub": [
-          {
-            "name": "HD-01",
-            "url": "https://filemoon.in/e/cgy7bagga9mb/Spy_x_Family_Eng_Dub_-_06"
-          },
-          {
-            "name": "HD-02",
-            "url": "https://mxdrop.to/e/wlw1w848al4mk7"
-          }
-        ]
-      }
-    },
-    {
-      "episodeNumber": 7,
-      "title": "The Red Circus",
-      "duration": "24 min",
-      "servers": {
-        "sub": [
-          {
-            "name": "HD-01",
-            "url": "https://filemoon.in/e/sq3y5x64y5u1/Watch_Spy_x_Family_Season_3_sub_07"
-          },
-          {
-            "name": "HD-02",
-            "url": "https://mxdrop.to/e/1nowo6mwtkq8ej1"
-          }
-        ],
-        "dub": [
-          {
-            "name": "HD-01",
-            "url": "https://filemoon.in/e/yzgk584eqoar/Spy_x_Family_Eng_Dub_-_7"
-          },
-          {
-            "name": "HD-02",
-            "url": "https://mxdrop.to/e/9wx9x6lnbvjz3n"
-          }
-        ]
-      }
-    },
-    {
-      "episodeNumber": 8,
-      "title": "Take Down the Busjacker",
-      "duration": "24 min",
-      "servers": {
-        "sub": [
-          {
-            "name": "HD-01",
-            "url": "https://filemoon.in/e/ju02f66lfr61/Watch_Spy_x_Family_Season_3_sub_08"
-          },
-          {
-            "name": "HD-02",
-            "url": "https://mxdrop.to/e/z1j8jdj9tgw8e0"
-          }
-        ],
-        "dub": [
-          {
-            "name": "HD-01",
-            "url": "https://filemoon.in/e/3ttu2bpmjdkj/Spy_x_Family_Eng_Dub_-_08"
-          },
-          {
-            "name": "HD-02",
-            "url": "https://mxdrop.to/e/xw9z9pnpslll9jp"
-          }
-        ]
-      }
-    },
-    {
-      "episodeNumber": 9,
-      "title": "Anya's Era Has Come",
-      "duration": "24 min",
-      "servers": {
-        "sub": [
-          {
-            "name": "HD-01",
-            "url": "https://filemoon.in/e/qxk39jej0gry/Watch_Spy_x_Family_Season_3_sub_09"
-          },
-          {
-            "name": "HD-02",
-            "url": "https://mxdrop.to/e/nln3nmxohx6r91"
-          }
-        ],
-        "dub": [
-          {
-            "name": "HD-01",
-            "url": "https://filemoon.in/e/p37b2o39lnm0/Spy_x_Family_Eng_Dub_09"
-          },
-          {
-            "name": "HD-02",
-            "url": "https://mxdrop.to/e/jdklk4o8t9nv8n"
-          }
-        ]
-      }
-    },
-    {
-      "episodeNumber": 10,
-      "title": "Austin's Troubles / A Normal Mixer / Moon Landing",
-      "duration": "24 min",
-      "servers": {
-        "sub": [
-          {
-            "name": "HD-01",
-            "url": "https://filemoon.in/e/u6dczxua5cgi/Watch_Spy_x_Family_Season_3_sub_10"
-          },
-          {
-            "name": "HD-02",
-            "url": "https://mxdrop.to/e/wlw1wxdli64olq"
-          }
-        ],
-        "dub": [
-          {
-            "name": "HD-01",
-            "url": "https://filemoon.in/e/wrcg8dovy2wb/Spy_x_Family_Eng_Dub_10"
-          },
-          {
-            "name": "HD-02",
-            "url": "https://mxdrop.to/e/nln3ngepilzkwx"
-          }
-        ]
-      }
-    },
-    {
-      "episodeNumber": 11,
-      "title": "Extreme Level 3 Situation",
-      "duration": "24 min",
-      "servers": {
-        "sub": [
-          {
-            "name": "HD-01",
-            "url": "https://filemoon.in/e/ml2888rptjj5/Watch_Spy_x_Family_Season_3_sub_11"
-          }
-        ],
-        "dub": [
-          {
-            "name": "Coming Soon",
-            "url": "#"
-          }
-        ]
-      }
-    },
-    {
-      "episodeNumber": 12,
-      "title": "Battle to the Death in the Sewers",
-      "duration": "24 min",
-      "servers": {
-        "sub": [
-          {
-            "name": "HD-01",
-            "url": "https://filemoon.in/e/si6tdyx7idq2/Watch_Spy_x_Family_Season_3_sub_12"
-          }
-        ],
-        "dub": [
-          {
-            "name": "Coming Soon",
-            "url": "#"
-          }
-        ]
-      }
-    },
-    {
-      "episodeNumber": 13,
-      "title": "A World Where We Cannot Survive",
-      "duration": "24 min",
-      "servers": {
-        "sub": [
-          {
-            "name": "HD-01",
-            "url": "https://filemoon.in/e/ef1o4jjxt9v4/Watch_Spy_x_Family_Season_3_sub_13"
-          }
-        ],
-        "dub": [
-          {
-            "name": "Coming Soon",
-            "url": "#"
-          }
-        ]
-      }
+      "seasonNumber": 3,
+      "totalEpisodes": 13,
+      "episodes": [
+        {
+          "number": 1,
+          "title": "Berlint Panic / The Informant and Nightfall",
+          "duration": "24 min",
+          "servers": {
+            "raw": [
+              { "name": "HD-01", "url": "https://filemoon.to/e/9ro0sk8chc2i/Watch_Spy_x_Family_Season_3_Sub_01" },
+              { "name": "HD-02", "url": "https://hglink.to/e/l79x9exlh8jlq7" },
+              { "name": "HD-03", "url": "https://server-raw.com/spy-family-s3-e1-3" }
+            ],
+            "sub": [
+              { "name": "HD-01", "url": "https://filemoon.to/e/9ro0sk8chc2i/Watch_Spy_x_Family_Season_3_Sub_01" },
+              { "name": "HD-02", "url": "https://hglink.to/e/l79x9exlh8jlq7" },
+              { "name": "HD-03", "url": "https://server-sub.com/spy-family-s3-e1-3" }
+            ],
+            "dub": [
+              { "name": "HD-01", "url": "https://filemoon.to/e/rvzqvvmn6gmo/Watch_Spy_x_Family_Season_3_Dub_01" },
+              { "name": "HD-02", "url": "https://hglink.to/e/8ljpj0r6ckjg43" },
+              { "name": "HD-03", "url": "https://server-dub.com/spy-family-s3-e1-3" }
+            ]
+          }
+        },
+        {
+          "number": 2,
+          "title": "Avoid Getting Tonitrus Bolts / Memories I",
+          "duration": "24 min",
+          "servers": {
+            "raw": [
+              { "name": "HD-01", "url": "https://filemoon.to/e/qtjlshorwlwj/Watch_Spy_x_Family_Season_3_sub_02" },
+              { "name": "HD-02", "url": "https://hglink.to/e/67rnrdw6idq8qm" },
+              { "name": "HD-03", "url": "https://server-raw.com/spy-family-s3-e2-3" }
+            ],
+            "sub": [
+              { "name": "HD-01", "url": "https://filemoon.to/e/qtjlshorwlwj/Watch_Spy_x_Family_Season_3_sub_02" },
+              { "name": "HD-02", "url": "https://hglink.to/e/67rnrdw6idq8qm" },
+              { "name": "HD-03", "url": "https://server-sub.com/spy-family-s3-e2-3" }
+            ],
+            "dub": [
+              { "name": "HD-01", "url": "https://filemoon.to/e/c62kstosvzga/Spy_x_Family_dub_02" },
+              { "name": "HD-02", "url": "https://hglink.to/e/q1d4dgorf7vpx8" },
+              { "name": "HD-03", "url": "https://server-dub.com/spy-family-s3-e2-3" }
+            ]
+          }
+        },
+        {
+          "number": 3,
+          "title": "Memories II",
+          "duration": "24 min",
+          "servers": {
+            "raw": [
+              { "name": "HD-01", "url": "https://filemoon.to/e/14d9xuvuyib8/Watch_Spy_x_Family_Season_3_sub_03" },
+              { "name": "HD-02", "url": "https://hglink.to/e/4d9g9r0ji3ee8v" },
+              { "name": "HD-03", "url": "https://server-raw.com/spy-family-s3-e3-3" }
+            ],
+            "sub": [
+              { "name": "HD-01", "url": "https://filemoon.to/e/14d9xuvuyib8/Watch_Spy_x_Family_Season_3_sub_03" },
+              { "name": "HD-02", "url": "https://hglink.to/e/4d9g9r0ji3ee8v" },
+              { "name": "HD-03", "url": "https://server-sub.com/spy-family-s3-e3-3" }
+            ],
+            "dub": [
+              { "name": "HD-01", "url": "https://filemoon.to/e/g0y28fpilu36/Spy_x_Family_Eng_dub_03" },
+              { "name": "HD-02", "url": "https://hglink.to/e/9wx9x693b3vm4po" },
+              { "name": "HD-03", "url": "https://server-dub.com/spy-family-s3-e3-3" }
+            ]
+          }
+        },
+        {
+          "number": 4,
+          "title": "Behind the Scandal / The Path to an Imperial Scholar",
+          "duration": "24 min",
+          "servers": {
+            "raw": [
+              { "name": "HD-01", "url": "https://filemoon.to/e/m4wu7x8yiwj3/Watch_Spy_x_Family_Season_3_sub_04" },
+              { "name": "HD-02", "url": "https://hglink.to/e/owzvzp0pid93p1" },
+              { "name": "HD-03", "url": "https://server-raw.com/spy-family-s3-e4-3" }
+            ],
+            "sub": [
+              { "name": "HD-01", "url": "https://filemoon.to/e/m4wu7x8yiwj3/Watch_Spy_x_Family_Season_3_sub_04" },
+              { "name": "HD-02", "url": "https://hglink.to/e/owzvzp0pid93p1" },
+              { "name": "HD-03", "url": "https://server-sub.com/spy-family-s3-e4-3" }
+            ],
+            "dub": [
+              { "name": "HD-01", "url": "https://filemoon.to/e/py1uv6fvs5xp/Spy_x_Family_Eng_dub_04" },
+              { "name": "HD-02", "url": "https://hglink.to/e/03zkzokkc1xwnd" },
+              { "name": "HD-03", "url": "https://server-dub.com/spy-family-s3-e4-3" }
+            ]
+          }
+        },
+        {
+          "number": 5,
+          "title": "The Mommy-Friends Scheme",
+          "duration": "24 min",
+          "servers": {
+            "raw": [
+              { "name": "HD-01", "url": "https://filemoon.to/e/8kp5ioch0pc3/Watch_Spy_x_Family_Season_3_sub_05" },
+              { "name": "HD-02", "url": "https://hglink.to/e/9wx9xv9ei3vwej3" },
+              { "name": "HD-03", "url": "https://server-raw.com/spy-family-s3-e5-3" }
+            ],
+            "sub": [
+              { "name": "HD-01", "url": "https://filemoon.to/e/8kp5ioch0pc3/Watch_Spy_x_Family_Season_3_sub_05" },
+              { "name": "HD-02", "url": "https://hglink.to/e/9wx9xv9ei3vwej3" },
+              { "name": "HD-03", "url": "https://server-sub.com/spy-family-s3-e5-3" }
+            ],
+            "dub": [
+              { "name": "HD-01", "url": "https://filemoon.to/e/1j4dlq6ayhkw/Spy_x_Family_Eng_dub_05" },
+              { "name": "HD-02", "url": "https://hglink.to/e/mkzmz46nbk0gqk" },
+              { "name": "HD-03", "url": "https://server-dub.com/spy-family-s3-e5-3" }
+            ]
+          }
+        },
+        {
+          "number": 6,
+          "title": "White Jealousy / The Eden College Busjacking Incident",
+          "duration": "24 min",
+          "servers": {
+            "raw": [
+              { "name": "HD-01", "url": "https://filemoon.to/e/fqwpf5qsukx0/Watch_Spy_x_Family_Season_3_sub_06" },
+              { "name": "HD-02", "url": "https://hglink.to/e/gjd9dog7hd96jw" },
+              { "name": "HD-03", "url": "https://server-raw.com/spy-family-s3-e6-3" }
+            ],
+            "sub": [
+              { "name": "HD-01", "url": "https://filemoon.to/e/fqwpf5qsukx0/Watch_Spy_x_Family_Season_3_sub_06" },
+              { "name": "HD-02", "url": "https://hglink.to/e/gjd9dog7hd96jw" },
+              { "name": "HD-03", "url": "https://server-sub.com/spy-family-s3-e6-3" }
+            ],
+            "dub": [
+              { "name": "HD-01", "url": "https://filemoon.to/e/cgy7bagga9mb/Spy_x_Family_Eng_Dub_-_06" },
+              { "name": "HD-02", "url": "https://hglink.to/e/wlw1w848al4mk7" },
+              { "name": "HD-03", "url": "https://server-dub.com/spy-family-s3-e6-3" }
+            ]
+          }
+        },
+        {
+          "number": 7,
+          "title": "The Red Circus",
+          "duration": "24 min",
+          "servers": {
+            "raw": [
+              { "name": "HD-01", "url": "https://filemoon.to/e/sq3y5x64y5u1/Watch_Spy_x_Family_Season_3_sub_07" },
+              { "name": "HD-02", "url": "https://hglink.to/e/1nowo6mwtkq8ej1" },
+              { "name": "HD-03", "url": "https://server-raw.com/spy-family-s3-e7-3" }
+            ],
+            "sub": [
+              { "name": "HD-01", "url": "https://filemoon.to/e/sq3y5x64y5u1/Watch_Spy_x_Family_Season_3_sub_07" },
+              { "name": "HD-02", "url": "https://hglink.to/e/1nowo6mwtkq8ej1" },
+              { "name": "HD-03", "url": "https://server-sub.com/spy-family-s3-e7-3" }
+            ],
+            "dub": [
+              { "name": "HD-01", "url": "https://filemoon.to/e/yzgk584eqoar/Spy_x_Family_Eng_Dub_-_7" },
+              { "name": "HD-02", "url": "https://hglink.to/e/9wx9x6lnbvjz3n" },
+              { "name": "HD-03", "url": "https://server-dub.com/spy-family-s3-e7-3" }
+            ]
+          }
+        },
+        {
+          "number": 8,
+          "title": "Take Down the Busjacker",
+          "duration": "24 min",
+          "servers": {
+            "raw": [
+              { "name": "HD-01", "url": "https://filemoon.to/e/ju02f66lfr61/Watch_Spy_x_Family_Season_3_sub_08" },
+              { "name": "HD-02", "url": "https://hglink.to/e/z1j8jdj9tgw8e0" },
+              { "name": "HD-03", "url": "https://server-raw.com/spy-family-s3-e8-3" }
+            ],
+            "sub": [
+              { "name": "HD-01", "url": "https://filemoon.to/e/ju02f66lfr61/Watch_Spy_x_Family_Season_3_sub_08" },
+              { "name": "HD-02", "url": "https://hglink.to/e/z1j8jdj9tgw8e0" },
+              { "name": "HD-03", "url": "https://server-sub.com/spy-family-s3-e8-3" }
+            ],
+            "dub": [
+              { "name": "HD-01", "url": "https://filemoon.to/e/3ttu2bpmjdkj/Spy_x_Family_Eng_Dub_-_08" },
+              { "name": "HD-02", "url": "https://hglink.to/e/xw9z9pnpslll9jp" },
+              { "name": "HD-03", "url": "https://server-dub.com/spy-family-s3-e8-3" }
+            ]
+          }
+        },
+        {
+          "number": 9,
+          "title": "Anya's Era Has Come",
+          "duration": "24 min",
+          "servers": {
+            "raw": [
+              { "name": "HD-01", "url": "https://filemoon.to/e/qxk39jej0gry/Watch_Spy_x_Family_Season_3_sub_09" },
+              { "name": "HD-02", "url": "https://hglink.to/e/nln3nmxohx6r91" },
+              { "name": "HD-03", "url": "https://server-raw.com/spy-family-s3-e9-3" }
+            ],
+            "sub": [
+              { "name": "HD-01", "url": "https://filemoon.to/e/qxk39jej0gry/Watch_Spy_x_Family_Season_3_sub_09" },
+              { "name": "HD-02", "url": "https://hglink.to/e/nln3nmxohx6r91" },
+              { "name": "HD-03", "url": "https://server-sub.com/spy-family-s3-e9-3" }
+            ],
+            "dub": [
+              { "name": "HD-01", "url": "https://filemoon.to/e/p37b2o39lnm0/Spy_x_Family_Eng_Dub_09" },
+              { "name": "HD-02", "url": "https://hglink.to/e/jdklk4o8t9nv8n" },
+              { "name": "HD-03", "url": "https://server-dub.com/spy-family-s3-e9-3" }
+            ]
+          }
+        },
+        {
+          "number": 10,
+          "title": "Austin's Troubles / A Normal Mixer / Moon Landing",
+          "duration": "24 min",
+          "servers": {
+            "raw": [
+              { "name": "HD-01", "url": "https://filemoon.to/e/u6dczxua5cgi/Watch_Spy_x_Family_Season_3_sub_10" },
+              { "name": "HD-02", "url": "https://hglink.to/e/wlw1wxdli64olq" },
+              { "name": "HD-03", "url": "https://server-raw.com/spy-family-s3-e10-3" }
+            ],
+            "sub": [
+              { "name": "HD-01", "url": "https://filemoon.to/e/u6dczxua5cgi/Watch_Spy_x_Family_Season_3_sub_10" },
+              { "name": "HD-02", "url": "https://hglink.to/e/wlw1wxdli64olq" },
+              { "name": "HD-03", "url": "https://server-sub.com/spy-family-s3-e10-3" }
+            ],
+            "dub": [
+              { "name": "HD-01", "url": "https://filemoon.to/e/wrcg8dovy2wb/Spy_x_Family_Eng_Dub_10" },
+              { "name": "HD-02", "url": "https://hglink.to/e/nln3ngepilzkwx" },
+              { "name": "HD-03", "url": "https://server-dub.com/spy-family-s3-e10-3" }
+            ]
+          }
+        },
+        {
+          "number": 11,
+          "title": "Extreme Level 3 Situation",
+          "duration": "24 min",
+          "servers": {
+            "raw": [
+              { "name": "HD-01", "url": "https://filemoon.to/e/ml2888rptjj5/Watch_Spy_x_Family_Season_3_sub_11" },
+              { "name": "HD-02", "url": "https://hglink.to/e/spy-family-s3-e11-2" },
+              { "name": "HD-03", "url": "https://server-raw.com/spy-family-s3-e11-3" }
+            ],
+            "sub": [
+              { "name": "HD-01", "url": "https://filemoon.to/e/ml2888rptjj5/Watch_Spy_x_Family_Season_3_sub_11" },
+              { "name": "HD-02", "url": "https://hglink.to/e/spy-family-s3-e11-2" },
+              { "name": "HD-03", "url": "https://server-sub.com/spy-family-s3-e11-3" }
+            ],
+            "dub": [
+              { "name": "HD-01", "url": "https://filemoon.to/e/spy-family-s3-e11-dub-1" },
+              { "name": "HD-02", "url": "https://hglink.to/e/spy-family-s3-e11-dub-2" },
+              { "name": "HD-03", "url": "https://server-dub.com/spy-family-s3-e11-3" }
+            ]
+          }
+        },
+        {
+          "number": 12,
+          "title": "Battle to the Death in the Sewers",
+          "duration": "24 min",
+          "servers": {
+            "raw": [
+              { "name": "HD-01", "url": "https://filemoon.to/e/si6tdyx7idq2/Watch_Spy_x_Family_Season_3_sub_12" },
+              { "name": "HD-02", "url": "https://hglink.to/e/spy-family-s3-e12-2" },
+              { "name": "HD-03", "url": "https://server-raw.com/spy-family-s3-e12-3" }
+            ],
+            "sub": [
+              { "name": "HD-01", "url": "https://filemoon.to/e/si6tdyx7idq2/Watch_Spy_x_Family_Season_3_sub_12" },
+              { "name": "HD-02", "url": "https://hglink.to/e/spy-family-s3-e12-2" },
+              { "name": "HD-03", "url": "https://server-sub.com/spy-family-s3-e12-3" }
+            ],
+            "dub": [
+              { "name": "HD-01", "url": "https://filemoon.to/e/spy-family-s3-e12-dub-1" },
+              { "name": "HD-02", "url": "https://hglink.to/e/spy-family-s3-e12-dub-2" },
+              { "name": "HD-03", "url": "https://server-dub.com/spy-family-s3-e12-3" }
+            ]
+          }
+        },
+        {
+          "number": 13,
+          "title": "A World Where We Cannot Survive",
+          "duration": "24 min",
+          "servers": {
+            "raw": [
+              { "name": "HD-01", "url": "https://filemoon.to/e/ef1o4jjxt9v4/Watch_Spy_x_Family_Season_3_sub_13" },
+              { "name": "HD-02", "url": "https://hglink.to/e/spy-family-s3-e13-2" },
+              { "name": "HD-03", "url": "https://server-raw.com/spy-family-s3-e13-3" }
+            ],
+            "sub": [
+              { "name": "HD-01", "url": "https://filemoon.to/e/ef1o4jjxt9v4/Watch_Spy_x_Family_Season_3_sub_13" },
+              { "name": "HD-02", "url": "https://hglink.to/e/spy-family-s3-e13-2" },
+              { "name": "HD-03", "url": "https://server-sub.com/spy-family-s3-e13-3" }
+            ],
+            "dub": [
+              { "name": "HD-01", "url": "https://filemoon.to/e/spy-family-s3-e13-dub-1" },
+              { "name": "HD-02", "url": "https://hglink.to/e/spy-family-s3-e13-dub-2" },
+              { "name": "HD-03", "url": "https://server-dub.com/spy-family-s3-e13-3" }
+            ]
+          }
+        }
+      ]
     }
   ]
 },
