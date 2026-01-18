@@ -6989,161 +6989,199 @@
     }
   ]
 },
-  {
-    "id": "opm-s3",
-    "slug": "one-punch-man-season-3",
-    "title": "One Punch Man 3",
-    "originalTitle": "One Punch Man 3",
-    "japaneseTitle": "ワンパンマン 3",
-    "synonyms": ["OPM 3", "One Punch Man Season 3"],
-    "searchableTitle": "One Punch Man 3 OPM 3 ワンパンマン 3",
-    "airedYear": 2025,
-    "dateAdded": "2025-10-15",
-    "type": "TV",
-    "featured": true,
-    "rating": 8.0,
-    "category": "action",
-    "premiered": "Fall 2025",
-    "duration": "24 min",
-    "status": "Finished Airing",
-    "description": "The Monster Association arc reaches its climax as Saitama and the Hero Association launch an all-out assault on the subterranean lair of the monsters. New threats emerge, and Garou's evolution continues to defy the limits of humanity.",
-    "posterUrl": "https://cdn.myanimelist.net/images/anime/1034/141830l.jpg",
-    "backdropUrl": "https://images.alphacoders.com/605/605653.jpg",
-    "trailerUrl": null,
-    "malScore": 4.66,
-    "imbdScore": 8.5,
-    "popularity": 403711,
-    "genres": ["Action", "Comedy", "Sci-Fi", "Super Power"],
-    "cast": ["Makoto Furukawa", "Kaito Ishikawa"],
-    "certification": "TV-14",
-    "country": "Japan",
-    "studio": "J.C.Staff",
-    "producers": ["Bandai Namco Music Live", "Shueisha", "TV Tokyo"]
-  },
-  {
-    "id": "saigo-ni-hitotsu",
-    "slug": "saigo-ni-hitotsu-dake-onegai-shitemo-yoroshii-deshou-ka",
-    "title": "May I Ask for One Final Thing?",
-    "originalTitle": "Saigo ni Hitotsu dake Onegai shitemo Yoroshii deshou ka",
-    "japaneseTitle": "最後にひとつだけお願いしてもよろしいでしょうか",
-    "synonyms": ["May I Ask for One Last Thing?", "The Mad Dog Princess"],
-    "searchableTitle": "May I Ask for One Final Thing? Saigo ni Hitotsu dake Onegai shitemo Yoroshii deshou ka",
-    "airedYear": 2025,
-    "dateAdded": "2025-01-10",
-    "type": "TV",
-    "featured": false,
-    "rating": 7.5,
-    "category": "action",
-    "premiered": "Winter 2025",
-    "duration": "23 min",
-    "status": "Finished Airing",
-    "description": "After her engagement is abruptly annulled by a spoiled prince, Scarlet, a noblewoman with a penchant for solving problems with her fists, asks for one final favor: the chance to beat sense into everyone who wronged her.",
-    "posterUrl": "https://cdn.myanimelist.net/images/anime/1585/140224l.jpg",
-    "backdropUrl": null,
-    "trailerUrl": null,
-    "malScore": 7.44,
-    "imbdScore": 7.2,
-    "popularity": 132673,
-    "genres": ["Action", "Fantasy", "Romance"],
-    "cast": ["Asami Seto"],
-    "certification": "TV-14",
-    "country": "Japan",
-    "studio": "LIDENFILMS",
-    "producers": ["AlphaPolis"]
-  },
-  {
-    "id": "sanda-2025",
-    "slug": "sanda",
-    "title": "Sanda",
-    "originalTitle": "Sanda",
-    "japaneseTitle": "SANDA",
-    "synonyms": ["Sanda Anime"],
-    "searchableTitle": "Sanda SANDA サンダー",
-    "airedYear": 2025,
-    "dateAdded": "2025-07-05",
-    "type": "TV",
-    "featured": true,
-    "rating": 7.8,
-    "category": "supernatural",
-    "premiered": "Summer 2025",
-    "duration": "24 min",
-    "status": "Finished Airing",
-    "description": "In a future where the birthrate is dwindling, Sanda, a normal middle school boy, discovers he is the descendant of Santa Claus. He must navigate a strange world and even stranger powers when his classmate tries to kill him to awaken his true form.",
-    "posterUrl": "https://cdn.myanimelist.net/images/anime/1070/144212l.jpg",
-    "backdropUrl": null,
-    "trailerUrl": null,
-    "malScore": 7.52,
-    "imbdScore": 7.5,
-    "popularity": 87198,
-    "genres": ["Supernatural", "Drama", "Shounen"],
-    "cast": ["Shun Horie"],
-    "certification": "TV-MA",
-    "country": "Japan",
-    "studio": "Science SARU",
-    "producers": ["Akita Shoten"]
-  },
-  {
-    "id": "fumetsu-s3",
-    "slug": "fumetsu-no-anata-e-season-3",
-    "title": "To Your Eternity Season 3",
-    "originalTitle": "Fumetsu no Anata e Season 3",
-    "japaneseTitle": "不滅のあなたへ Season 3",
-    "synonyms": ["To Your Eternity S3"],
-    "searchableTitle": "To Your Eternity Season 3 Fumetsu no Anata e Season 3 不滅のあなたへ",
-    "airedYear": 2025,
-    "dateAdded": "2025-10-07",
-    "type": "TV",
-    "featured": false,
-    "rating": 8.0,
-    "category": "drama",
-    "premiered": "Fall 2025",
-    "duration": "24 min",
-    "status": "Finished Airing",
-    "description": "Fushi enters the 'This World' arc. After centuries of struggle, the immortal entity finds himself in a modern era where the Nokkers have taken a different, more subtle approach to infiltration. Fushi must navigate a world of technology and peace while protecting his revived friends.",
-    "posterUrl": "https://cdn.myanimelist.net/images/anime/1453/135111l.jpg",
-    "backdropUrl": null,
-    "trailerUrl": null,
-    "malScore": 7.78,
-    "imbdScore": 8.1,
-    "popularity": 132245,
-    "genres": ["Drama", "Adventure", "Supernatural"],
-    "cast": ["Reiji Kawashima"],
-    "certification": "TV-14",
-    "country": "Japan",
-    "studio": "Drive",
-    "producers": ["NHK", "Kodansha"]
-  },
-  {
-    "id": "tondemo-skill-s2",
-    "slug": "tondemo-skill-de-isekai-hourou-meshi-2",
-    "title": "Campfire Cooking in Another World with My Absurd Skill Season 2",
-    "originalTitle": "Tondemo Skill de Isekai Hourou Meshi 2",
-    "japaneseTitle": "とんでもスキルで異世界放浪メシ 2",
-    "synonyms": ["Tondemo Skill S2"],
-    "searchableTitle": "Campfire Cooking in Another World with My Absurd Skill Season 2 Tondemo Skill 2",
-    "airedYear": 2025,
-    "dateAdded": "2025-01-15",
-    "type": "TV",
-    "featured": true,
-    "rating": 7.8,
-    "category": "adventure",
-    "premiered": "Winter 2025",
-    "duration": "24 min",
-    "status": "Finished Airing",
-    "description": "Mukoda, Fel, and Sui continue their leisurely journey across the kingdom. With new deities demanding offerings and even more exotic ingredients to cook, Mukoda’s online supermarket remains the most overpowered skill in the land.",
-    "posterUrl": "https://cdn.myanimelist.net/images/anime/1018/132535l.jpg",
-    "backdropUrl": null,
-    "trailerUrl": null,
-    "malScore": 7.71,
-    "imbdScore": 7.6,
-    "popularity": 106172,
-    "genres": ["Adventure", "Comedy", "Fantasy", "Gourmet"],
-    "cast": ["Yuma Uchida", "Satoshi Hino", "Hina Kino"],
-    "certification": "TV-PG",
-    "country": "Japan",
-    "studio": "MAPPA",
-    "producers": ["Bushiroad", "Crunchyroll"]
-  },
+{
+  "id": "opm-s3",
+  "slug": "one-punch-man-season-3",
+  "title": "One Punch Man Season 3",
+  "originalTitle": "One Punch Man 3",
+  "japaneseTitle": "ワンパンマン 3",
+  "synonyms": ["OPM 3", "One Punch Man S3"],
+  "searchableTitle": "One Punch Man Season 3 OPM 3 ワンパンマン 3 Saitama Genos",
+  "airedYear": 2025,
+  "dateAdded": "2025-10-15",
+  "type": "anime",  
+  "featured": true,
+  "rating": 8.2,  
+  "category": "action",
+  "premiered": "Fall 2025",
+  "duration": "24 min",
+  "status": "Finished Airing",
+  "description": "The Monster Association arc reaches its climax as Saitama and the Hero Association launch an all-out assault on the subterranean lair of the monsters. New threats emerge, and Garou's evolution continues to defy the limits of humanity.",
+  "posterUrl": "https://cdn.myanimelist.net/images/anime/1034/141830l.jpg",
+  "backdropUrl": "https://images.alphacoders.com/605/605653.jpg",
+  "trailerUrl": null,
+  "malScore": 8.15, 
+  "imdbScore": 8.5,  
+  "popularity": 85000,  
+  "genres": ["Action", "Comedy", "Sci-Fi", "Super Power"],
+  "cast": ["Makoto Furukawa", "Kaito Ishikawa"],
+  "certification": "TV-14",
+  "country": "Japan",
+  "studio": "J.C.Staff",
+  "producers": ["Bandai Namco Music Live", "Shueisha", "TV Tokyo"],
+  "seasons": [ 
+    {
+      "seasonNumber": 1, 
+      "airedYear": 2025,
+      "episodes": [
+      
+      ]
+    }
+  ]
+},
+{
+  "id": "saigo-ni-hitotsu",
+  "slug": "saigo-ni-hitotsu-dake-onegai-shitemo-yoroshii-deshou-ka",
+  "title": "May I Ask for One Final Thing?",
+  "originalTitle": "Saigo ni Hitotsu dake Onegai shitemo Yoroshii deshou ka",
+  "japaneseTitle": "最後にひとつだけお願いしてもよろしいでしょうか",
+  "synonyms": ["May I Ask for One Last Thing?", "The Mad Dog Princess"],
+  "searchableTitle": "May I Ask for One Final Thing? Saigo ni Hitotsu dake Onegai shitemo Yoroshii deshou ka",
+  "airedYear": 2025,
+  "dateAdded": "2025-01-10",
+  "type": "anime", 
+  "featured": false,
+  "rating": 7.5,
+  "category": "action",
+  "premiered": "Winter 2025",
+  "duration": "23 min",
+  "status": "Finished Airing",
+  "description": "After her engagement is abruptly annulled by a spoiled prince, Scarlet, a noblewoman with a penchant for solving problems with her fists, asks for one final favor: the chance to beat sense into everyone who wronged her.",
+  "posterUrl": "https://cdn.myanimelist.net/images/anime/1585/140224l.jpg",
+  "backdropUrl": null,
+  "trailerUrl": null,
+  "malScore": 7.44,
+  "imdbScore": 7.2,  
+  "popularity": 132673,
+  "genres": ["Action", "Fantasy", "Romance"],
+  "cast": ["Asami Seto"],
+  "certification": "TV-14",
+  "country": "Japan",
+  "studio": "LIDENFILMS",
+  "producers": ["AlphaPolis"],
+  "seasons": [  
+    {
+      "seasonNumber": 1,
+      "airedYear": 2025,
+      "episodes": [] 
+    }
+  ]
+},
+{
+  "id": "sanda-2025",
+  "slug": "sanda",
+  "title": "Sanda",
+  "originalTitle": "Sanda",
+  "japaneseTitle": "SANDA",
+  "synonyms": ["Sanda Anime"],
+  "searchableTitle": "Sanda SANDA サンダー Santa Claus",
+  "airedYear": 2025,
+  "dateAdded": "2025-07-05",
+  "type": "anime", 
+  "featured": true,
+  "rating": 7.8,
+  "category": "supernatural",
+  "premiered": "Summer 2025",
+  "duration": "24 min",
+  "status": "Finished Airing",
+  "description": "In a future where the birthrate is dwindling, Sanda, a normal middle school boy, discovers he is the descendant of Santa Claus. He must navigate a strange world and even stranger powers when his classmate tries to kill him to awaken his true form.",
+  "posterUrl": "https://cdn.myanimelist.net/images/anime/1070/144212l.jpg",
+  "backdropUrl": null,
+  "trailerUrl": null,
+  "malScore": 7.52,
+  "imdbScore": 7.5,  
+  "popularity": 87198,
+  "genres": ["Supernatural", "Drama", "Shounen"],
+  "cast": ["Shun Horie"],
+  "certification": "TV-MA",
+  "country": "Japan",
+  "studio": "Science SARU",
+  "producers": ["Akita Shoten"],
+  "seasons": [  
+    {
+      "seasonNumber": 1,
+      "airedYear": 2025,
+      "episodes": []  
+    }
+  ]
+},
+{
+  "id": "fumetsu-s3",
+  "slug": "fumetsu-no-anata-e-season-3",
+  "title": "To Your Eternity Season 3",
+  "originalTitle": "Fumetsu no Anata e Season 3",
+  "japaneseTitle": "不滅のあなたへ Season 3",
+  "synonyms": ["To Your Eternity S3"],
+  "searchableTitle": "To Your Eternity Season 3 Fumetsu no Anata e Season 3 不滅のあなたへ Fushi",
+  "airedYear": 2025,
+  "dateAdded": "2025-10-07",
+  "type": "anime",  
+  "featured": false,
+  "rating": 8.0,
+  "category": "drama",
+  "premiered": "Fall 2025",
+  "duration": "24 min",
+  "status": "Finished Airing",
+  "description": "Fushi enters the 'This World' arc. After centuries of struggle, the immortal entity finds himself in a modern era where the Nokkers have taken a different, more subtle approach to infiltration. Fushi must navigate a world of technology and peace while protecting his revived friends.",
+  "posterUrl": "https://cdn.myanimelist.net/images/anime/1453/135111l.jpg",
+  "backdropUrl": null,
+  "trailerUrl": null,
+  "malScore": 7.78,
+  "imdbScore": 8.1,  
+  "popularity": 132245,
+  "genres": ["Drama", "Adventure", "Supernatural"],
+  "cast": ["Reiji Kawashima"],
+  "certification": "TV-14",
+  "country": "Japan",
+  "studio": "Drive",
+  "producers": ["NHK", "Kodansha"],
+  "seasons": [  
+    {
+      "seasonNumber": 3, 
+      "airedYear": 2025,
+      "episodes": []  
+    }
+  ]
+},
+{
+  "id": "tondemo-skill-s2",
+  "slug": "tondemo-skill-de-isekai-hourou-meshi-2",
+  "title": "Campfire Cooking in Another World with My Absurd Skill Season 2",
+  "originalTitle": "Tondemo Skill de Isekai Hourou Meshi 2",
+  "japaneseTitle": "とんでもスキルで異世界放浪メシ 2",
+  "synonyms": ["Tondemo Skill S2"],
+  "searchableTitle": "Campfire Cooking in Another World with My Absurd Skill Season 2 Tondemo Skill 2 Mukoda Fel Sui",
+  "airedYear": 2025,
+  "dateAdded": "2025-01-15",
+  "type": "anime",  
+  "featured": true,
+  "rating": 7.8,
+  "category": "adventure",
+  "premiered": "Winter 2025",
+  "duration": "24 min",
+  "status": "Finished Airing",
+  "description": "Mukoda, Fel, and Sui continue their leisurely journey across the kingdom. With new deities demanding offerings and even more exotic ingredients to cook, Mukoda's online supermarket remains the most overpowered skill in the land.",
+  "posterUrl": "https://cdn.myanimelist.net/images/anime/1018/132535l.jpg",
+  "backdropUrl": null,
+  "trailerUrl": null,
+  "malScore": 7.71,
+  "imdbScore": 7.6,  
+  "popularity": 106172,
+  "genres": ["Adventure", "Comedy", "Fantasy", "Gourmet"],
+  "cast": ["Yuma Uchida", "Satoshi Hino", "Hina Kino"],
+  "certification": "TV-PG",
+  "country": "Japan",
+  "studio": "MAPPA",
+  "producers": ["Bushiroad", "Crunchyroll"],
+  "seasons": [ 
+    {
+      "seasonNumber": 2, 
+      "airedYear": 2025,
+      "episodes": []  
+    }
+  ]
+},
+ [
   {
     "id": "mugen-gacha-s1",
     "slug": "shinjiteita-nakama-tachi-ni-dungeon-okuchi-de-korosarekaketa",
@@ -7154,7 +7192,7 @@
     "searchableTitle": "Infinite Gacha Mugen Gacha Shinjiteita Nakama-tachi ni Dungeon",
     "airedYear": 2025,
     "dateAdded": "2025-07-12",
-    "type": "TV",
+    "type": "anime",
     "featured": false,
     "rating": 7.2,
     "category": "action",
@@ -7166,14 +7204,286 @@
     "backdropUrl": null,
     "trailerUrl": null,
     "malScore": 7.09,
-    "imbdScore": 6.8,
+    "imdbScore": 6.8,
     "popularity": 86866,
     "genres": ["Action", "Adventure", "Fantasy"],
     "cast": ["Kaito Tasuku"],
     "certification": "TV-MA",
     "country": "Japan",
     "studio": "Okuruto Noboru",
-    "producers": ["Hobby Japan"]
+    "producers": ["Hobby Japan"],
+    "seasons": [
+      {
+        "seasonNumber": 1,
+        "airedYear": 2025,
+        "episodes": [
+          {
+            "number": 1,
+            "title": "Betrayal in the Depths",
+            "duration": "23 min",
+            "servers": {
+              "raw": [
+                { "name": "HD-01", "url": "https://filemoon.to/e/mugen-gacha-s1-e1-1" },
+                { "name": "HD-02", "url": "https://hglink.to/e/mugen-gacha-s1-e1-2" },
+                { "name": "HD-03", "url": "https://server-raw.com/mugen-gacha-s1-e1-3" }
+              ],
+              "sub": [
+                { "name": "HD-01", "url": "https://filemoon.to/e/mugen-gacha-s1-e1-sub-1" },
+                { "name": "HD-02", "url": "https://hglink.to/e/mugen-gacha-s1-e1-sub-2" },
+                { "name": "HD-03", "url": "https://server-sub.com/mugen-gacha-s1-e1-3" }
+              ],
+              "dub": [
+                { "name": "HD-01", "url": "https://filemoon.to/e/mugen-gacha-s1-e1-dub-1" },
+                { "name": "HD-02", "url": "https://hglink.to/e/mugen-gacha-s1-e1-dub-2" },
+                { "name": "HD-03", "url": "https://server-dub.com/mugen-gacha-s1-e1-3" }
+              ]
+            }
+          },
+          {
+            "number": 2,
+            "title": "The Infinite Gacha Awakens",
+            "duration": "23 min",
+            "servers": {
+              "raw": [
+                { "name": "HD-01", "url": "https://filemoon.to/e/mugen-gacha-s1-e2-1" },
+                { "name": "HD-02", "url": "https://hglink.to/e/mugen-gacha-s1-e2-2" },
+                { "name": "HD-03", "url": "https://server-raw.com/mugen-gacha-s1-e2-3" }
+              ],
+              "sub": [
+                { "name": "HD-01", "url": "https://filemoon.to/e/mugen-gacha-s1-e2-sub-1" },
+                { "name": "HD-02", "url": "https://hglink.to/e/mugen-gacha-s1-e2-sub-2" },
+                { "name": "HD-03", "url": "https://server-sub.com/mugen-gacha-s1-e2-3" }
+              ],
+              "dub": [
+                { "name": "HD-01", "url": "https://filemoon.to/e/mugen-gacha-s1-e2-dub-1" },
+                { "name": "HD-02", "url": "https://hglink.to/e/mugen-gacha-s1-e2-dub-2" },
+                { "name": "HD-03", "url": "https://server-dub.com/mugen-gacha-s1-e2-3" }
+              ]
+            }
+          },
+          {
+            "number": 3,
+            "title": "First Summon: The Loyal Knight",
+            "duration": "23 min",
+            "servers": {
+              "raw": [
+                { "name": "HD-01", "url": "https://filemoon.to/e/mugen-gacha-s1-e3-1" },
+                { "name": "HD-02", "url": "https://hglink.to/e/mugen-gacha-s1-e3-2" },
+                { "name": "HD-03", "url": "https://server-raw.com/mugen-gacha-s1-e3-3" }
+              ],
+              "sub": [
+                { "name": "HD-01", "url": "https://filemoon.to/e/mugen-gacha-s1-e3-sub-1" },
+                { "name": "HD-02", "url": "https://hglink.to/e/mugen-gacha-s1-e3-sub-2" },
+                { "name": "HD-03", "url": "https://server-sub.com/mugen-gacha-s1-e3-3" }
+              ],
+              "dub": [
+                { "name": "HD-01", "url": "https://filemoon.to/e/mugen-gacha-s1-e3-dub-1" },
+                { "name": "HD-02", "url": "https://hglink.to/e/mugen-gacha-s1-e3-dub-2" },
+                { "name": "HD-03", "url": "https://server-dub.com/mugen-gacha-s1-e3-3" }
+              ]
+            }
+          },
+          {
+            "number": 4,
+            "title": "Return to the City",
+            "duration": "23 min",
+            "servers": {
+              "raw": [
+                { "name": "HD-01", "url": "https://filemoon.to/e/mugen-gacha-s1-e4-1" },
+                { "name": "HD-02", "url": "https://hglink.to/e/mugen-gacha-s1-e4-2" },
+                { "name": "HD-03", "url": "https://server-raw.com/mugen-gacha-s1-e4-3" }
+              ],
+              "sub": [
+                { "name": "HD-01", "url": "https://filemoon.to/e/mugen-gacha-s1-e4-sub-1" },
+                { "name": "HD-02", "url": "https://hglink.to/e/mugen-gacha-s1-e4-sub-2" },
+                { "name": "HD-03", "url": "https://server-sub.com/mugen-gacha-s1-e4-3" }
+              ],
+              "dub": [
+                { "name": "HD-01", "url": "https://filemoon.to/e/mugen-gacha-s1-e4-dub-1" },
+                { "name": "HD-02", "url": "https://hglink.to/e/mugen-gacha-s1-e4-dub-2" },
+                { "name": "HD-03", "url": "https://server-dub.com/mugen-gacha-s1-e4-3" }
+              ]
+            }
+          },
+          {
+            "number": 5,
+            "title": "Facing the Traitors",
+            "duration": "23 min",
+            "servers": {
+              "raw": [
+                { "name": "HD-01", "url": "https://filemoon.to/e/mugen-gacha-s1-e5-1" },
+                { "name": "HD-02", "url": "https://hglink.to/e/mugen-gacha-s1-e5-2" },
+                { "name": "HD-03", "url": "https://server-raw.com/mugen-gacha-s1-e5-3" }
+              ],
+              "sub": [
+                { "name": "HD-01", "url": "https://filemoon.to/e/mugen-gacha-s1-e5-sub-1" },
+                { "name": "HD-02", "url": "https://hglink.to/e/mugen-gacha-s1-e5-sub-2" },
+                { "name": "HD-03", "url": "https://server-sub.com/mugen-gacha-s1-e5-3" }
+              ],
+              "dub": [
+                { "name": "HD-01", "url": "https://filemoon.to/e/mugen-gacha-s1-e5-dub-1" },
+                { "name": "HD-02", "url": "https://hglink.to/e/mugen-gacha-s1-e5-dub-2" },
+                { "name": "HD-03", "url": "https://server-dub.com/mugen-gacha-s1-e5-3" }
+              ]
+            }
+          },
+          {
+            "number": 6,
+            "title": "Unleashing the Power",
+            "duration": "23 min",
+            "servers": {
+              "raw": [
+                { "name": "HD-01", "url": "https://filemoon.to/e/mugen-gacha-s1-e6-1" },
+                { "name": "HD-02", "url": "https://hglink.to/e/mugen-gacha-s1-e6-2" },
+                { "name": "HD-03", "url": "https://server-raw.com/mugen-gacha-s1-e6-3" }
+              ],
+              "sub": [
+                { "name": "HD-01", "url": "https://filemoon.to/e/mugen-gacha-s1-e6-sub-1" },
+                { "name": "HD-02", "url": "https://hglink.to/e/mugen-gacha-s1-e6-sub-2" },
+                { "name": "HD-03", "url": "https://server-sub.com/mugen-gacha-s1-e6-3" }
+              ],
+              "dub": [
+                { "name": "HD-01", "url": "https://filemoon.to/e/mugen-gacha-s1-e6-dub-1" },
+                { "name": "HD-02", "url": "https://hglink.to/e/mugen-gacha-s1-e6-dub-2" },
+                { "name": "HD-03", "url": "https://server-dub.com/mugen-gacha-s1-e6-3" }
+              ]
+            }
+          },
+          {
+            "number": 7,
+            "title": "The Second Summon",
+            "duration": "23 min",
+            "servers": {
+              "raw": [
+                { "name": "HD-01", "url": "https://filemoon.to/e/mugen-gacha-s1-e7-1" },
+                { "name": "HD-02", "url": "https://hglink.to/e/mugen-gacha-s1-e7-2" },
+                { "name": "HD-03", "url": "https://server-raw.com/mugen-gacha-s1-e7-3" }
+              ],
+              "sub": [
+                { "name": "HD-01", "url": "https://filemoon.to/e/mugen-gacha-s1-e7-sub-1" },
+                { "name": "HD-02", "url": "https://hglink.to/e/mugen-gacha-s1-e7-sub-2" },
+                { "name": "HD-03", "url": "https://server-sub.com/mugen-gacha-s1-e7-3" }
+              ],
+              "dub": [
+                { "name": "HD-01", "url": "https://filemoon.to/e/mugen-gacha-s1-e7-dub-1" },
+                { "name": "HD-02", "url": "https://hglink.to/e/mugen-gacha-s1-e7-dub-2" },
+                { "name": "HD-03", "url": "https://server-dub.com/mugen-gacha-s1-e7-3" }
+              ]
+            }
+          },
+          {
+            "number": 8,
+            "title": "Building the New Party",
+            "duration": "23 min",
+            "servers": {
+              "raw": [
+                { "name": "HD-01", "url": "https://filemoon.to/e/mugen-gacha-s1-e8-1" },
+                { "name": "HD-02", "url": "https://hglink.to/e/mugen-gacha-s1-e8-2" },
+                { "name": "HD-03", "url": "https://server-raw.com/mugen-gacha-s1-e8-3" }
+              ],
+              "sub": [
+                { "name": "HD-01", "url": "https://filemoon.to/e/mugen-gacha-s1-e8-sub-1" },
+                { "name": "HD-02", "url": "https://hglink.to/e/mugen-gacha-s1-e8-sub-2" },
+                { "name": "HD-03", "url": "https://server-sub.com/mugen-gacha-s1-e8-3" }
+              ],
+              "dub": [
+                { "name": "HD-01", "url": "https://filemoon.to/e/mugen-gacha-s1-e8-dub-1" },
+                { "name": "HD-02", "url": "https://hglink.to/e/mugen-gacha-s1-e8-dub-2" },
+                { "name": "HD-03", "url": "https://server-dub.com/mugen-gacha-s1-e8-3" }
+              ]
+            }
+          },
+          {
+            "number": 9,
+            "title": "The Guild's Suspicion",
+            "duration": "23 min",
+            "servers": {
+              "raw": [
+                { "name": "HD-01", "url": "https://filemoon.to/e/mugen-gacha-s1-e9-1" },
+                { "name": "HD-02", "url": "https://hglink.to/e/mugen-gacha-s1-e9-2" },
+                { "name": "HD-03", "url": "https://server-raw.com/mugen-gacha-s1-e9-3" }
+              ],
+              "sub": [
+                { "name": "HD-01", "url": "https://filemoon.to/e/mugen-gacha-s1-e9-sub-1" },
+                { "name": "HD-02", "url": "https://hglink.to/e/mugen-gacha-s1-e9-sub-2" },
+                { "name": "HD-03", "url": "https://server-sub.com/mugen-gacha-s1-e9-3" }
+              ],
+              "dub": [
+                { "name": "HD-01", "url": "https://filemoon.to/e/mugen-gacha-s1-e9-dub-1" },
+                { "name": "HD-02", "url": "https://hglink.to/e/mugen-gacha-s1-e9-dub-2" },
+                { "name": "HD-03", "url": "https://server-dub.com/mugen-gacha-s1-e9-3" }
+              ]
+            }
+          },
+          {
+            "number": 10,
+            "title": "Royal Palace Intrigue",
+            "duration": "23 min",
+            "servers": {
+              "raw": [
+                { "name": "HD-01", "url": "https://filemoon.to/e/mugen-gacha-s1-e10-1" },
+                { "name": "HD-02", "url": "https://hglink.to/e/mugen-gacha-s1-e10-2" },
+                { "name": "HD-03", "url": "https://server-raw.com/mugen-gacha-s1-e10-3" }
+              ],
+              "sub": [
+                { "name": "HD-01", "url": "https://filemoon.to/e/mugen-gacha-s1-e10-sub-1" },
+                { "name": "HD-02", "url": "https://hglink.to/e/mugen-gacha-s1-e10-sub-2" },
+                { "name": "HD-03", "url": "https://server-sub.com/mugen-gacha-s1-e10-3" }
+              ],
+              "dub": [
+                { "name": "HD-01", "url": "https://filemoon.to/e/mugen-gacha-s1-e10-dub-1" },
+                { "name": "HD-02", "url": "https://hglink.to/e/mugen-gacha-s1-e10-dub-2" },
+                { "name": "HD-03", "url": "https://server-dub.com/mugen-gacha-s1-e10-3" }
+              ]
+            }
+          },
+          {
+            "number": 11,
+            "title": "The Truth Revealed",
+            "duration": "23 min",
+            "servers": {
+              "raw": [
+                { "name": "HD-01", "url": "https://filemoon.to/e/mugen-gacha-s1-e11-1" },
+                { "name": "HD-02", "url": "https://hglink.to/e/mugen-gacha-s1-e11-2" },
+                { "name": "HD-03", "url": "https://server-raw.com/mugen-gacha-s1-e11-3" }
+              ],
+              "sub": [
+                { "name": "HD-01", "url": "https://filemoon.to/e/mugen-gacha-s1-e11-sub-1" },
+                { "name": "HD-02", "url": "https://hglink.to/e/mugen-gacha-s1-e11-sub-2" },
+                { "name": "HD-03", "url": "https://server-sub.com/mugen-gacha-s1-e11-3" }
+              ],
+              "dub": [
+                { "name": "HD-01", "url": "https://filemoon.to/e/mugen-gacha-s1-e11-dub-1" },
+                { "name": "HD-02", "url": "https://hglink.to/e/mugen-gacha-s1-e11-dub-2" },
+                { "name": "HD-03", "url": "https://server-dub.com/mugen-gacha-s1-e11-3" }
+              ]
+            }
+          },
+          {
+            "number": 12,
+            "title": "Revenge Begins",
+            "duration": "23 min",
+            "servers": {
+              "raw": [
+                { "name": "HD-01", "url": "https://filemoon.to/e/mugen-gacha-s1-e12-1" },
+                { "name": "HD-02", "url": "https://hglink.to/e/mugen-gacha-s1-e12-2" },
+                { "name": "HD-03", "url": "https://server-raw.com/mugen-gacha-s1-e12-3" }
+              ],
+              "sub": [
+                { "name": "HD-01", "url": "https://filemoon.to/e/mugen-gacha-s1-e12-sub-1" },
+                { "name": "HD-02", "url": "https://hglink.to/e/mugen-gacha-s1-e12-sub-2" },
+                { "name": "HD-03", "url": "https://server-sub.com/mugen-gacha-s1-e12-3" }
+              ],
+              "dub": [
+                { "name": "HD-01", "url": "https://filemoon.to/e/mugen-gacha-s1-e12-dub-1" },
+                { "name": "HD-02", "url": "https://hglink.to/e/mugen-gacha-s1-e12-dub-2" },
+                { "name": "HD-03", "url": "https://server-dub.com/mugen-gacha-s1-e12-3" }
+              ]
+            }
+          }
+        ]
+      }
+    ]
   },
   {
     "id": "ranma-2024-s2",
@@ -7185,7 +7495,7 @@
     "searchableTitle": "Ranma 1/2 2024 2nd Season らんま1/2 MAPPA",
     "airedYear": 2025,
     "dateAdded": "2025-10-05",
-    "type": "TV",
+    "type": "anime",
     "featured": true,
     "rating": 8.0,
     "category": "comedy",
@@ -7197,14 +7507,286 @@
     "backdropUrl": null,
     "trailerUrl": null,
     "malScore": 7.81,
-    "imbdScore": 7.9,
+    "imdbScore": 7.9,
     "popularity": 64660,
     "genres": ["Comedy", "Martial Arts", "Romance"],
     "cast": ["Kappei Yamaguchi", "Megumi Hayashibara", "Noriko Hidaka"],
     "certification": "TV-14",
     "country": "Japan",
     "studio": "MAPPA",
-    "producers": ["Shogakukan", "Netflix"]
+    "producers": ["Shogakukan", "Netflix"],
+    "seasons": [
+      {
+        "seasonNumber": 2,
+        "airedYear": 2025,
+        "episodes": [
+          {
+            "number": 1,
+            "title": "The Return of the Cursed",
+            "duration": "24 min",
+            "servers": {
+              "raw": [
+                { "name": "HD-01", "url": "https://filemoon.to/e/ranma-s2-e1-1" },
+                { "name": "HD-02", "url": "https://hglink.to/e/ranma-s2-e1-2" },
+                { "name": "HD-03", "url": "https://server-raw.com/ranma-s2-e1-3" }
+              ],
+              "sub": [
+                { "name": "HD-01", "url": "https://filemoon.to/e/ranma-s2-e1-sub-1" },
+                { "name": "HD-02", "url": "https://hglink.to/e/ranma-s2-e1-sub-2" },
+                { "name": "HD-03", "url": "https://server-sub.com/ranma-s2-e1-3" }
+              ],
+              "dub": [
+                { "name": "HD-01", "url": "https://filemoon.to/e/ranma-s2-e1-dub-1" },
+                { "name": "HD-02", "url": "https://hglink.to/e/ranma-s2-e1-dub-2" },
+                { "name": "HD-03", "url": "https://server-dub.com/ranma-s2-e1-3" }
+              ]
+            }
+          },
+          {
+            "number": 2,
+            "title": "New Rival Arrives",
+            "duration": "24 min",
+            "servers": {
+              "raw": [
+                { "name": "HD-01", "url": "https://filemoon.to/e/ranma-s2-e2-1" },
+                { "name": "HD-02", "url": "https://hglink.to/e/ranma-s2-e2-2" },
+                { "name": "HD-03", "url": "https://server-raw.com/ranma-s2-e2-3" }
+              ],
+              "sub": [
+                { "name": "HD-01", "url": "https://filemoon.to/e/ranma-s2-e2-sub-1" },
+                { "name": "HD-02", "url": "https://hglink.to/e/ranma-s2-e2-sub-2" },
+                { "name": "HD-03", "url": "https://server-sub.com/ranma-s2-e2-3" }
+              ],
+              "dub": [
+                { "name": "HD-01", "url": "https://filemoon.to/e/ranma-s2-e2-dub-1" },
+                { "name": "HD-02", "url": "https://hglink.to/e/ranma-s2-e2-dub-2" },
+                { "name": "HD-03", "url": "https://server-dub.com/ranma-s2-e2-3" }
+              ]
+            }
+          },
+          {
+            "number": 3,
+            "title": "Hot Springs Confusion",
+            "duration": "24 min",
+            "servers": {
+              "raw": [
+                { "name": "HD-01", "url": "https://filemoon.to/e/ranma-s2-e3-1" },
+                { "name": "HD-02", "url": "https://hglink.to/e/ranma-s2-e3-2" },
+                { "name": "HD-03", "url": "https://server-raw.com/ranma-s2-e3-3" }
+              ],
+              "sub": [
+                { "name": "HD-01", "url": "https://filemoon.to/e/ranma-s2-e3-sub-1" },
+                { "name": "HD-02", "url": "https://hglink.to/e/ranma-s2-e3-sub-2" },
+                { "name": "HD-03", "url": "https://server-sub.com/ranma-s2-e3-3" }
+              ],
+              "dub": [
+                { "name": "HD-01", "url": "https://filemoon.to/e/ranma-s2-e3-dub-1" },
+                { "name": "HD-02", "url": "https://hglink.to/e/ranma-s2-e3-dub-2" },
+                { "name": "HD-03", "url": "https://server-dub.com/ranma-s2-e3-3" }
+              ]
+            }
+          },
+          {
+            "number": 4,
+            "title": "The Martial Arts Rhythmic Gymnastics",
+            "duration": "24 min",
+            "servers": {
+              "raw": [
+                { "name": "HD-01", "url": "https://filemoon.to/e/ranma-s2-e4-1" },
+                { "name": "HD-02", "url": "https://hglink.to/e/ranma-s2-e4-2" },
+                { "name": "HD-03", "url": "https://server-raw.com/ranma-s2-e4-3" }
+              ],
+              "sub": [
+                { "name": "HD-01", "url": "https://filemoon.to/e/ranma-s2-e4-sub-1" },
+                { "name": "HD-02", "url": "https://hglink.to/e/ranma-s2-e4-sub-2" },
+                { "name": "HD-03", "url": "https://server-sub.com/ranma-s2-e4-3" }
+              ],
+              "dub": [
+                { "name": "HD-01", "url": "https://filemoon.to/e/ranma-s2-e4-dub-1" },
+                { "name": "HD-02", "url": "https://hglink.to/e/ranma-s2-e4-dub-2" },
+                { "name": "HD-03", "url": "https://server-dub.com/ranma-s2-e4-3" }
+              ]
+            }
+          },
+          {
+            "number": 5,
+            "title": "Kuno Family Drama",
+            "duration": "24 min",
+            "servers": {
+              "raw": [
+                { "name": "HD-01", "url": "https://filemoon.to/e/ranma-s2-e5-1" },
+                { "name": "HD-02", "url": "https://hglink.to/e/ranma-s2-e5-2" },
+                { "name": "HD-03", "url": "https://server-raw.com/ranma-s2-e5-3" }
+              ],
+              "sub": [
+                { "name": "HD-01", "url": "https://filemoon.to/e/ranma-s2-e5-sub-1" },
+                { "name": "HD-02", "url": "https://hglink.to/e/ranma-s2-e5-sub-2" },
+                { "name": "HD-03", "url": "https://server-sub.com/ranma-s2-e5-3" }
+              ],
+              "dub": [
+                { "name": "HD-01", "url": "https://filemoon.to/e/ranma-s2-e5-dub-1" },
+                { "name": "HD-02", "url": "https://hglink.to/e/ranma-s2-e5-dub-2" },
+                { "name": "HD-03", "url": "https://server-dub.com/ranma-s2-e5-3" }
+              ]
+            }
+          },
+          {
+            "number": 6,
+            "title": "The Ice Skating Duel",
+            "duration": "24 min",
+            "servers": {
+              "raw": [
+                { "name": "HD-01", "url": "https://filemoon.to/e/ranma-s2-e6-1" },
+                { "name": "HD-02", "url": "https://hglink.to/e/ranma-s2-e6-2" },
+                { "name": "HD-03", "url": "https://server-raw.com/ranma-s2-e6-3" }
+              ],
+              "sub": [
+                { "name": "HD-01", "url": "https://filemoon.to/e/ranma-s2-e6-sub-1" },
+                { "name": "HD-02", "url": "https://hglink.to/e/ranma-s2-e6-sub-2" },
+                { "name": "HD-03", "url": "https://server-sub.com/ranma-s2-e6-3" }
+              ],
+              "dub": [
+                { "name": "HD-01", "url": "https://filemoon.to/e/ranma-s2-e6-dub-1" },
+                { "name": "HD-02", "url": "https://hglink.to/e/ranma-s2-e6-dub-2" },
+                { "name": "HD-03", "url": "https://server-dub.com/ranma-s2-e6-3" }
+              ]
+            }
+          },
+          {
+            "number": 7,
+            "title": "Cooking Battle Chaos",
+            "duration": "24 min",
+            "servers": {
+              "raw": [
+                { "name": "HD-01", "url": "https://filemoon.to/e/ranma-s2-e7-1" },
+                { "name": "HD-02", "url": "https://hglink.to/e/ranma-s2-e7-2" },
+                { "name": "HD-03", "url": "https://server-raw.com/ranma-s2-e7-3" }
+              ],
+              "sub": [
+                { "name": "HD-01", "url": "https://filemoon.to/e/ranma-s2-e7-sub-1" },
+                { "name": "HD-02", "url": "https://hglink.to/e/ranma-s2-e7-sub-2" },
+                { "name": "HD-03", "url": "https://server-sub.com/ranma-s2-e7-3" }
+              ],
+              "dub": [
+                { "name": "HD-01", "url": "https://filemoon.to/e/ranma-s2-e7-dub-1" },
+                { "name": "HD-02", "url": "https://hglink.to/e/ranma-s2-e7-dub-2" },
+                { "name": "HD-03", "url": "https://server-dub.com/ranma-s2-e7-3" }
+              ]
+            }
+          },
+          {
+            "number": 8,
+            "title": "Ranma's New Technique",
+            "duration": "24 min",
+            "servers": {
+              "raw": [
+                { "name": "HD-01", "url": "https://filemoon.to/e/ranma-s2-e8-1" },
+                { "name": "HD-02", "url": "https://hglink.to/e/ranma-s2-e8-2" },
+                { "name": "HD-03", "url": "https://server-raw.com/ranma-s2-e8-3" }
+              ],
+              "sub": [
+                { "name": "HD-01", "url": "https://filemoon.to/e/ranma-s2-e8-sub-1" },
+                { "name": "HD-02", "url": "https://hglink.to/e/ranma-s2-e8-sub-2" },
+                { "name": "HD-03", "url": "https://server-sub.com/ranma-s2-e8-3" }
+              ],
+              "dub": [
+                { "name": "HD-01", "url": "https://filemoon.to/e/ranma-s2-e8-dub-1" },
+                { "name": "HD-02", "url": "https://hglink.to/e/ranma-s2-e8-dub-2" },
+                { "name": "HD-03", "url": "https://server-dub.com/ranma-s2-e8-3" }
+              ]
+            }
+          },
+          {
+            "number": 9,
+            "title": "The Phoenix Pill",
+            "duration": "24 min",
+            "servers": {
+              "raw": [
+                { "name": "HD-01", "url": "https://filemoon.to/e/ranma-s2-e9-1" },
+                { "name": "HD-02", "url": "https://hglink.to/e/ranma-s2-e9-2" },
+                { "name": "HD-03", "url": "https://server-raw.com/ranma-s2-e9-3" }
+              ],
+              "sub": [
+                { "name": "HD-01", "url": "https://filemoon.to/e/ranma-s2-e9-sub-1" },
+                { "name": "HD-02", "url": "https://hglink.to/e/ranma-s2-e9-sub-2" },
+                { "name": "HD-03", "url": "https://server-sub.com/ranma-s2-e9-3" }
+              ],
+              "dub": [
+                { "name": "HD-01", "url": "https://filemoon.to/e/ranma-s2-e9-dub-1" },
+                { "name": "HD-02", "url": "https://hglink.to/e/ranma-s2-e9-dub-2" },
+                { "name": "HD-03", "url": "https://server-dub.com/ranma-s2-e9-3" }
+              ]
+            }
+          },
+          {
+            "number": 10,
+            "title": "Tendo Dojo Invasion",
+            "duration": "24 min",
+            "servers": {
+              "raw": [
+                { "name": "HD-01", "url": "https://filemoon.to/e/ranma-s2-e10-1" },
+                { "name": "HD-02", "url": "https://hglink.to/e/ranma-s2-e10-2" },
+                { "name": "HD-03", "url": "https://server-raw.com/ranma-s2-e10-3" }
+              ],
+              "sub": [
+                { "name": "HD-01", "url": "https://filemoon.to/e/ranma-s2-e10-sub-1" },
+                { "name": "HD-02", "url": "https://hglink.to/e/ranma-s2-e10-sub-2" },
+                { "name": "HD-03", "url": "https://server-sub.com/ranma-s2-e10-3" }
+              ],
+              "dub": [
+                { "name": "HD-01", "url": "https://filemoon.to/e/ranma-s2-e10-dub-1" },
+                { "name": "HD-02", "url": "https://hglink.to/e/ranma-s2-e10-dub-2" },
+                { "name": "HD-03", "url": "https://server-dub.com/ranma-s2-e10-3" }
+              ]
+            }
+          },
+          {
+            "number": 11,
+            "title": "Final Tournament Begins",
+            "duration": "24 min",
+            "servers": {
+              "raw": [
+                { "name": "HD-01", "url": "https://filemoon.to/e/ranma-s2-e11-1" },
+                { "name": "HD-02", "url": "https://hglink.to/e/ranma-s2-e11-2" },
+                { "name": "HD-03", "url": "https://server-raw.com/ranma-s2-e11-3" }
+              ],
+              "sub": [
+                { "name": "HD-01", "url": "https://filemoon.to/e/ranma-s2-e11-sub-1" },
+                { "name": "HD-02", "url": "https://hglink.to/e/ranma-s2-e11-sub-2" },
+                { "name": "HD-03", "url": "https://server-sub.com/ranma-s2-e11-3" }
+              ],
+              "dub": [
+                { "name": "HD-01", "url": "https://filemoon.to/e/ranma-s2-e11-dub-1" },
+                { "name": "HD-02", "url": "https://hglink.to/e/ranma-s2-e11-dub-2" },
+                { "name": "HD-03", "url": "https://server-dub.com/ranma-s2-e11-3" }
+              ]
+            }
+          },
+          {
+            "number": 12,
+            "title": "The Cursed Finale",
+            "duration": "24 min",
+            "servers": {
+              "raw": [
+                { "name": "HD-01", "url": "https://filemoon.to/e/ranma-s2-e12-1" },
+                { "name": "HD-02", "url": "https://hglink.to/e/ranma-s2-e12-2" },
+                { "name": "HD-03", "url": "https://server-raw.com/ranma-s2-e12-3" }
+              ],
+              "sub": [
+                { "name": "HD-01", "url": "https://filemoon.to/e/ranma-s2-e12-sub-1" },
+                { "name": "HD-02", "url": "https://hglink.to/e/ranma-s2-e12-sub-2" },
+                { "name": "HD-03", "url": "https://server-sub.com/ranma-s2-e12-3" }
+              ],
+              "dub": [
+                { "name": "HD-01", "url": "https://filemoon.to/e/ranma-s2-e12-dub-1" },
+                { "name": "HD-02", "url": "https://hglink.to/e/ranma-s2-e12-dub-2" },
+                { "name": "HD-03", "url": "https://server-dub.com/ranma-s2-e12-3" }
+              ]
+            }
+          }
+        ]
+      }
+    ]
   },
   {
     "id": "last-boss-2025",
@@ -7216,7 +7798,7 @@
     "searchableTitle": "A Wild Last Boss Appeared! Yasei no Last Boss ga Arawareta!",
     "airedYear": 2025,
     "dateAdded": "2025-04-10",
-    "type": "TV",
+    "type": "anime",
     "featured": false,
     "rating": 7.6,
     "category": "fantasy",
@@ -7228,140 +7810,288 @@
     "backdropUrl": null,
     "trailerUrl": null,
     "malScore": 7.50,
-    "imbdScore": 7.3,
+    "imdbScore": 7.3,
     "popularity": 81756,
     "genres": ["Action", "Adventure", "Fantasy"],
     "cast": ["Mikako Komatsu"],
     "certification": "TV-14",
     "country": "Japan",
     "studio": "Studio Palette",
-    "producers": ["Earth Star Entertainment"]
+    "producers": ["Earth Star Entertainment"],
+    "seasons": [
+      {
+        "seasonNumber": 1,
+        "airedYear": 2025,
+        "episodes": [
+          {
+            "number": 1,
+            "title": "The Last Boss Awakens",
+            "duration": "24 min",
+            "servers": {
+              "raw": [
+                { "name": "HD-01", "url": "https://filemoon.to/e/last-boss-e1-1" },
+                { "name": "HD-02", "url": "https://hglink.to/e/last-boss-e1-2" },
+                { "name": "HD-03", "url": "https://server-raw.com/last-boss-e1-3" }
+              ],
+              "sub": [
+                { "name": "HD-01", "url": "https://filemoon.to/e/last-boss-e1-sub-1" },
+                { "name": "HD-02", "url": "https://hglink.to/e/last-boss-e1-sub-2" },
+                { "name": "HD-03", "url": "https://server-sub.com/last-boss-e1-3" }
+              ],
+              "dub": [
+                { "name": "HD-01", "url": "https://filemoon.to/e/last-boss-e1-dub-1" },
+                { "name": "HD-02", "url": "https://hglink.to/e/last-boss-e1-dub-2" },
+                { "name": "HD-03", "url": "https://server-dub.com/last-boss-e1-3" }
+              ]
+            }
+          },
+          {
+            "number": 2,
+            "title": "First Heavenly Star",
+            "duration": "24 min",
+            "servers": {
+              "raw": [
+                { "name": "HD-01", "url": "https://filemoon.to/e/last-boss-e2-1" },
+                { "name": "HD-02", "url": "https://hglink.to/e/last-boss-e2-2" },
+                { "name": "HD-03", "url": "https://server-raw.com/last-boss-e2-3" }
+              ],
+              "sub": [
+                { "name": "HD-01", "url": "https://filemoon.to/e/last-boss-e2-sub-1" },
+                { "name": "HD-02", "url": "https://hglink.to/e/last-boss-e2-sub-2" },
+                { "name": "HD-03", "url": "https://server-sub.com/last-boss-e2-3" }
+              ],
+              "dub": [
+                { "name": "HD-01", "url": "https://filemoon.to/e/last-boss-e2-dub-1" },
+                { "name": "HD-02", "url": "https://hglink.to/e/last-boss-e2-dub-2" },
+                { "name": "HD-03", "url": "https://server-dub.com/last-boss-e2-3" }
+              ]
+            }
+          },
+          {
+            "number": 3,
+            "title": "The Hero's Descendant",
+            "duration": "24 min",
+            "servers": {
+              "raw": [
+                { "name": "HD-01", "url": "https://filemoon.to/e/last-boss-e3-1" },
+                { "name": "HD-02", "url": "https://hglink.to/e/last-boss-e3-2" },
+                { "name": "HD-03", "url": "https://server-raw.com/last-boss-e3-3" }
+              ],
+              "sub": [
+                { "name": "HD-01", "url": "https://filemoon.to/e/last-boss-e3-sub-1" },
+                { "name": "HD-02", "url": "https://hglink.to/e/last-boss-e3-sub-2" },
+                { "name": "HD-03", "url": "https://server-sub.com/last-boss-e3-3" }
+              ],
+              "dub": [
+                { "name": "HD-01", "url": "https://filemoon.to/e/last-boss-e3-dub-1" },
+                { "name": "HD-02", "url": "https://hglink.to/e/last-boss-e3-dub-2" },
+                { "name": "HD-03", "url": "https://server-dub.com/last-boss-e3-3" }
+              ]
+            }
+          },
+          {
+            "number": 4,
+            "title": "Kingdom of Dystha",
+            "duration": "24 min",
+            "servers": {
+              "raw": [
+                { "name": "HD-01", "url": "https://filemoon.to/e/last-boss-e4-1" },
+                { "name": "HD-02", "url": "https://hglink.to/e/last-boss-e4-2" },
+                { "name": "HD-03", "url": "https://server-raw.com/last-boss-e4-3" }
+              ],
+              "sub": [
+                { "name": "HD-01", "url": "https://filemoon.to/e/last-boss-e4-sub-1" },
+                { "name": "HD-02", "url": "https://hglink.to/e/last-boss-e4-sub-2" },
+                { "name": "HD-03", "url": "https://server-sub.com/last-boss-e4-3" }
+              ],
+              "dub": [
+                { "name": "HD-01", "url": "https://filemoon.to/e/last-boss-e4-dub-1" },
+                { "name": "HD-02", "url": "https://hglink.to/e/last-boss-e4-dub-2" },
+                { "name": "HD-03", "url": "https://server-dub.com/last-boss-e4-3" }
+              ]
+            }
+          },
+          {
+            "number": 5,
+            "title": "Second Star: Aries",
+            "duration": "24 min",
+            "servers": {
+              "raw": [
+                { "name": "HD-01", "url": "https://filemoon.to/e/last-boss-e5-1" },
+                { "name": "HD-02", "url": "https://hglink.to/e/last-boss-e5-2" },
+                { "name": "HD-03", "url": "https://server-raw.com/last-boss-e5-3" }
+              ],
+              "sub": [
+                { "name": "HD-01", "url": "https://filemoon.to/e/last-boss-e5-sub-1" },
+                { "name": "HD-02", "url": "https://hglink.to/e/last-boss-e5-sub-2" },
+                { "name": "HD-03", "url": "https://server-sub.com/last-boss-e5-3" }
+              ],
+              "dub": [
+                { "name": "HD-01", "url": "https://filemoon.to/e/last-boss-e5-dub-1" },
+                { "name": "HD-02", "url": "https://hglink.to/e/last-boss-e5-dub-2" },
+                { "name": "HD-03", "url": "https://server-dub.com/last-boss-e5-3" }
+              ]
+            }
+          },
+          {
+            "number": 6,
+            "title": "Ancient Temple Trials",
+            "duration": "24 min",
+            "servers": {
+              "raw": [
+                { "name": "HD-01", "url": "https://filemoon.to/e/last-boss-e6-1" },
+                { "name": "HD-02", "url": "https://hglink.to/e/last-boss-e6-2" },
+                { "name": "HD-03", "url": "https://server-raw.com/last-boss-e6-3" }
+              ],
+              "sub": [
+                { "name": "HD-01", "url": "https://filemoon.to/e/last-boss-e6-sub-1" },
+                { "name": "HD-02", "url": "https://hglink.to/e/last-boss-e6-sub-2" },
+                { "name": "HD-03", "url": "https://server-sub.com/last-boss-e6-3" }
+              ],
+              "dub": [
+                { "name": "HD-01", "url": "https://filemoon.to/e/last-boss-e6-dub-1" },
+                { "name": "HD-02", "url": "https://hglink.to/e/last-boss-e6-dub-2" },
+                { "name": "HD-03", "url": "https://server-dub.com/last-boss-e6-3" }
+              ]
+            }
+          },
+          {
+            "number": 7,
+            "title": "The Demon Lord's Army",
+            "duration": "24 min",
+            "servers": {
+              "raw": [
+                { "name": "HD-01", "url": "https://filemoon.to/e/last-boss-e7-1" },
+                { "name": "HD-02", "url": "https://hglink.to/e/last-boss-e7-2" },
+                { "name": "HD-03", "url": "https://server-raw.com/last-boss-e7-3" }
+              ],
+              "sub": [
+                { "name": "HD-01", "url": "https://filemoon.to/e/last-boss-e7-sub-1" },
+                { "name": "HD-02", "url": "https://hglink.to/e/last-boss-e7-sub-2" },
+                { "name": "HD-03", "url": "https://server-sub.com/last-boss-e7-3" }
+              ],
+              "dub": [
+                { "name": "HD-01", "url": "https://filemoon.to/e/last-boss-e7-dub-1" },
+                { "name": "HD-02", "url": "https://hglink.to/e/last-boss-e7-dub-2" },
+                { "name": "HD-03", "url": "https://server-dub.com/last-boss-e7-3" }
+              ]
+            }
+          },
+          {
+            "number": 8,
+            "title": "Third Star: Taurus",
+            "duration": "24 min",
+            "servers": {
+              "raw": [
+                { "name": "HD-01", "url": "https://filemoon.to/e/last-boss-e8-1" },
+                { "name": "HD-02", "url": "https://hglink.to/e/last-boss-e8-2" },
+                { "name": "HD-03", "url": "https://server-raw.com/last-boss-e8-3" }
+              ],
+              "sub": [
+                { "name": "HD-01", "url": "https://filemoon.to/e/last-boss-e8-sub-1" },
+                { "name": "HD-02", "url": "https://hglink.to/e/last-boss-e8-sub-2" },
+                { "name": "HD-03", "url": "https://server-sub.com/last-boss-e8-3" }
+              ],
+              "dub": [
+                { "name": "HD-01", "url": "https://filemoon.to/e/last-boss-e8-dub-1" },
+                { "name": "HD-02", "url": "https://hglink.to/e/last-boss-e8-dub-2" },
+                { "name": "HD-03", "url": "https://server-dub.com/last-boss-e8-3" }
+              ]
+            }
+          },
+          {
+            "number": 9,
+            "title": "Floating City Adventure",
+            "duration": "24 min",
+            "servers": {
+              "raw": [
+                { "name": "HD-01", "url": "https://filemoon.to/e/last-boss-e9-1" },
+                { "name": "HD-02", "url": "https://hglink.to/e/last-boss-e9-2" },
+                { "name": "HD-03", "url": "https://server-raw.com/last-boss-e9-3" }
+              ],
+              "sub": [
+                { "name": "HD-01", "url": "https://filemoon.to/e/last-boss-e9-sub-1" },
+                { "name": "HD-02", "url": "https://hglink.to/e/last-boss-e9-sub-2" },
+                { "name": "HD-03", "url": "https://server-sub.com/last-boss-e9-3" }
+              ],
+              "dub": [
+                { "name": "HD-01", "url": "https://filemoon.to/e/last-boss-e9-dub-1" },
+                { "name": "HD-02", "url": "https://hglink.to/e/last-boss-e9-dub-2" },
+                { "name": "HD-03", "url": "https://server-dub.com/last-boss-e9-3" }
+              ]
+            }
+          },
+          {
+            "number": 10,
+            "title": "The Royal Tournament",
+            "duration": "24 min",
+            "servers": {
+              "raw": [
+                { "name": "HD-01", "url": "https://filemoon.to/e/last-boss-e10-1" },
+                { "name": "HD-02", "url": "https://hglink.to/e/last-boss-e10-2" },
+                { "name": "HD-03", "url": "https://server-raw.com/last-boss-e10-3" }
+              ],
+              "sub": [
+                { "name": "HD-01", "url": "https://filemoon.to/e/last-boss-e10-sub-1" },
+                { "name": "HD-02", "url": "https://hglink.to/e/last-boss-e10-sub-2" },
+                { "name": "HD-03", "url": "https://server-sub.com/last-boss-e10-3" }
+              ],
+              "dub": [
+                { "name": "HD-01", "url": "https://filemoon.to/e/last-boss-e10-dub-1" },
+                { "name": "HD-02", "url": "https://hglink.to/e/last-boss-e10-dub-2" },
+                { "name": "HD-03", "url": "https://server-dub.com/last-boss-e10-3" }
+              ]
+            }
+          },
+          {
+            "number": 11,
+            "title": "Fourth Star: Gemini",
+            "duration": "24 min",
+            "servers": {
+              "raw": [
+                { "name": "HD-01", "url": "https://filemoon.to/e/last-boss-e11-1" },
+                { "name": "HD-02", "url": "https://hglink.to/e/last-boss-e11-2" },
+                { "name": "HD-03", "url": "https://server-raw.com/last-boss-e11-3" }
+              ],
+              "sub": [
+                { "name": "HD-01", "url": "https://filemoon.to/e/last-boss-e11-sub-1" },
+                { "name": "HD-02", "url": "https://hglink.to/e/last-boss-e11-sub-2" },
+                { "name": "HD-03", "url": "https://server-sub.com/last-boss-e11-3" }
+              ],
+              "dub": [
+                { "name": "HD-01", "url": "https://filemoon.to/e/last-boss-e11-dub-1" },
+                { "name": "HD-02", "url": "https://hglink.to/e/last-boss-e11-dub-2" },
+                { "name": "HD-03", "url": "https://server-dub.com/last-boss-e11-3" }
+              ]
+            }
+          },
+          {
+            "number": 12,
+            "title": "The Final Confrontation",
+            "duration": "24 min",
+            "servers": {
+              "raw": [
+                { "name": "HD-01", "url": "https://filemoon.to/e/last-boss-e12-1" },
+                { "name": "HD-02", "url": "https://hglink.to/e/last-boss-e12-2" },
+                { "name": "HD-03", "url": "https://server-raw.com/last-boss-e12-3" }
+              ],
+              "sub": [
+                { "name": "HD-01", "url": "https://filemoon.to/e/last-boss-e12-sub-1" },
+                { "name": "HD-02", "url": "https://hglink.to/e/last-boss-e12-sub-2" },
+                { "name": "HD-03", "url": "https://server-sub.com/last-boss-e12-3" }
+              ],
+              "dub": [
+                { "name": "HD-01", "url": "https://filemoon.to/e/last-boss-e12-dub-1" },
+                { "name": "HD-02", "url": "https://hglink.to/e/last-boss-e12-dub-2" },
+                { "name": "HD-03", "url": "https://server-dub.com/last-boss-e12-3" }
+              ]
+            }
+          }
+        ]
+      }
+    ]
   },
-  {
-    "id": "kingdom-s6",
-    "slug": "kingdom-6th-season",
-    "title": "Kingdom 6th Season",
-    "originalTitle": "Kingdom 6th Season",
-    "japaneseTitle": "キングダム 第6シリーズ",
-    "synonyms": ["Kingdom Season 6"],
-    "searchableTitle": "Kingdom 6th Season Kingdom Season 6 キングダム",
-    "airedYear": 2025,
-    "dateAdded": "2025-01-07",
-    "type": "TV",
-    "featured": true,
-    "rating": 9.1,
-    "category": "action",
-    "premiered": "Winter 2025",
-    "duration": "24 min",
-    "status": "Finished Airing",
-    "description": "Following the conclusion of the Western Zhao Invasion, the Qin army continues its march toward the unification of China. This season focuses on the Han and Wei diplomatic tensions and the strategic brilliance of the Great Generals as the scale of war reaches new heights.",
-    "posterUrl": "https://cdn.myanimelist.net/images/anime/1076/141000l.jpg",
-    "backdropUrl": null,
-    "trailerUrl": null,
-    "malScore": 8.83,
-    "imbdScore": 8.9,
-    "popularity": 29736,
-    "genres": ["Action", "Historical", "Military", "Seinen"],
-    "cast": ["Masakazu Morita", "Jun Fukuyama"],
-    "certification": "TV-MA",
-    "country": "Japan",
-    "studio": "Pierrot",
-    "producers": ["NHK", "Shueisha"]
-  },
-  {
-    "id": "tomodachi-imouto-s1",
-    "slug": "tomodachi-no-imouto-ga-ore-ni-dake-uzai",
-    "title": "My Friend's Little Sister Has It In for Me!",
-    "originalTitle": "Tomodachi no Imouto ga Ore ni dake Uzai",
-    "japaneseTitle": "友達の妹が俺にだけウザい",
-    "synonyms": ["ImoUza"],
-    "searchableTitle": "My Friend's Little Sister Has It In for Me! Tomodachi no Imouto ga Ore ni dake Uzai ImoUza",
-    "airedYear": 2025,
-    "dateAdded": "2025-04-12",
-    "type": "TV",
-    "featured": false,
-    "rating": 7.0,
-    "category": "romance",
-    "premiered": "Spring 2025",
-    "duration": "23 min",
-    "status": "Finished Airing",
-    "description": "Akiteru Oosama is a high schooler who only cares about efficiency. However, his best friend's sister, Iroha Kohinata, seems dedicated to disrupting his life with her 'annoying' but flirtatious behavior. Little does he know, she might be the only one who truly sees him.",
-    "posterUrl": "https://cdn.myanimelist.net/images/anime/1638/112000l.jpg",
-    "backdropUrl": null,
-    "trailerUrl": null,
-    "malScore": 6.52,
-    "imbdScore": 6.6,
-    "popularity": 97120,
-    "genres": ["Comedy", "Romance", "School"],
-    "cast": ["Kaito Ishikawa", "Tomori Kusunoki"],
-    "certification": "TV-14",
-    "country": "Japan",
-    "studio": "BLADE",
-    "producers": ["SB Creative", "NBCUniversal Entertainment Japan"]
-  },
-  {
-    "id": "isekai-quartet-s3",
-    "slug": "isekai-quartet-3",
-    "title": "Isekai Quartet 3",
-    "originalTitle": "Isekai Quartet 3",
-    "japaneseTitle": "異世界かるてっと 3",
-    "synonyms": ["Isekai Quartet Season 3"],
-    "searchableTitle": "Isekai Quartet 3 Isekai Quartet Season 3 異世界かるてっと",
-    "airedYear": 2025,
-    "dateAdded": "2025-07-15",
-    "type": "TV",
-    "featured": false,
-    "rating": 7.6,
-    "category": "comedy",
-    "premiered": "Summer 2025",
-    "duration": "12 min",
-    "status": "Finished Airing",
-    "description": "The button returns! The chibi-sized chaos continues as even more characters from Kadokawa's massive Isekai roster are transported into the world's strangest school environment. Expect more crossovers from series like Mushoku Tensei and Eminence in Shadow.",
-    "posterUrl": "https://cdn.myanimelist.net/images/anime/1217/140000l.jpg",
-    "backdropUrl": null,
-    "trailerUrl": null,
-    "malScore": 7.44,
-    "imbdScore": 7.3,
-    "popularity": 41207,
-    "genres": ["Comedy", "Fantasy", "Parody"],
-    "cast": ["Satoshi Hino", "Yusuke Kobayashi", "Jun Fukushima"],
-    "certification": "TV-PG",
-    "country": "Japan",
-    "studio": "Studio Puyukai",
-    "producers": ["Kadokawa"]
-  },
-  {
-    "id": "ginpachi-sensei-s1",
-    "slug": "3-nen-z-gumi-ginpachi-sensei",
-    "title": "Class 3-Z Ginpachi-sensei",
-    "originalTitle": "3-nen Z-gumi Ginpachi-sensei",
-    "japaneseTitle": "3年Z組銀八先生",
-    "synonyms": ["Gintama: Class 3-Z Ginpachi-sensei"],
-    "searchableTitle": "3-nen Z-gumi Ginpachi-sensei Class 3-Z Ginpachi-sensei Gintama",
-    "airedYear": 2025,
-    "dateAdded": "2025-10-10",
-    "type": "TV",
-    "featured": true,
-    "rating": 8.4,
-    "category": "comedy",
-    "premiered": "Fall 2025",
-    "duration": "24 min",
-    "status": "Finished Airing",
-    "description": "A spin-off of the legendary Gintama series. Gintoki Sakata is now Ginpachi-sensei, the teacher of a rowdy high school class where Shinpachi, Kagura, and the rest of the gang are students. The same Fourth-Wall-breaking humor, but in a school setting.",
-    "posterUrl": "https://cdn.myanimelist.net/images/anime/1105/135000l.jpg",
-    "backdropUrl": null,
-    "trailerUrl": null,
-    "malScore": 7.73,
-    "imbdScore": 8.0,
-    "popularity": 42043,
-    "genres": ["Comedy", "School", "Parody"],
-    "cast": ["Tomokazu Sugita", "Daisuke Sakaguchi", "Rie Kugimiya"],
-    "certification": "TV-14",
-    "country": "Japan",
-    "studio": "Bandai Namco Pictures",
-    "producers": ["TV Tokyo", "Shueisha"]
-  },
-  {
+{
   "id": "chitose-ramune-s1",
   "slug": "chitose-kun-wa-ramune-bin-no-naka",
   "title": "Chitose-kun is in the Ramune Bottle",
@@ -7379,11 +8109,11 @@
   "duration": "24 min",
   "status": "Finished Airing",
   "description": "Saku Chitose is a top-tier normie: popular, handsome, and at the top of the social hierarchy. However, his life becomes complicated when he's tasked with helping a shut-in classmate re-enter society, forcing him to re-evaluate his own 'perfect' life.",
-  "posterUrl": "https://cdn.myanimelist.net/images/anime/1545/143000l.jpg  ",
+  "posterUrl": "https://cdn.myanimelist.net/images/anime/1545/143000l.jpg",
   "backdropUrl": null,
   "trailerUrl": null,
   "malScore": 7.17,
-  "imbdScore": 7.0,
+  "imdbScore": 7.0,
   "popularity": 59981,
   "genres": ["Drama", "Romance", "School"],
   "cast": ["Jun Kasama"],
@@ -7394,214 +8124,225 @@
   "seasons": [
     {
       "seasonNumber": 1,
+      "airedYear": 2025,
       "episodes": [
         {
           "number": 1,
           "title": "The Hazy Spring Moon Above",
-          "japaneseTitle": "Haru, Miageru Oborozuki (春、見上げるおぼろ月)",
           "duration": "24 min",
-          "airedDate": "2025-10-07",
           "servers": {
             "raw": [
               { "name": "HD-01", "url": "https://bysejikuar.com/e/7xdyhmxz2ei9/watch-chitose-is-in-the-ramune-bottle-sub-01" },
-              { "name": "HD-02", "url": "https://mxdrop.to/e/4d9g6j06s01wvk" }
+              { "name": "HD-02", "url": "https://hglink.to/e/chitose-ramune-s1-e1-2" },
+              { "name": "HD-03", "url": "https://server-raw.com/chitose-ramune-s1-e1-3" }
             ],
             "sub": [
               { "name": "HD-01", "url": "https://bysejikuar.com/e/7xdyhmxz2ei9/watch-chitose-is-in-the-ramune-bottle-sub-01" },
-              { "name": "HD-02", "url": "https://mxdrop.to/e/4d9g6j06s01wvk" }
+              { "name": "HD-02", "url": "https://hglink.to/e/chitose-ramune-s1-e1-sub-2" },
+              { "name": "HD-03", "url": "https://server-sub.com/chitose-ramune-s1-e1-3" }
             ],
             "dub": [
-              { "name": "HD-01", "url": "https://server-dub.com/chitose-ramune-s1-e1-1" },
-              { "name": "HD-02", "url": "https://server-dub.com/chitose-ramune-s1-e1-2" }
+              { "name": "HD-01", "url": "https://filemoon.to/e/chitose-ramune-s1-e1-dub-1" },
+              { "name": "HD-02", "url": "https://hglink.to/e/chitose-ramune-s1-e1-dub-2" },
+              { "name": "HD-03", "url": "https://server-dub.com/chitose-ramune-s1-e1-3" }
             ]
           }
         },
         {
           "number": 2,
           "title": "Let's Start Breaking Common Ground",
-          "japaneseTitle": "Sougo Rikai wo Hajimeyou (相互理解をはじめよう)",
           "duration": "24 min",
-          "airedDate": "2025-10-14",
           "servers": {
             "raw": [
               { "name": "HD-01", "url": "https://bysejikuar.com/e/xwjyqw1km08e/watch-chitose-is-in-the-ramune-bottle-sub-02" },
-              { "name": "HD-02", "url": "https://mxdrop.to/e/nln3zezdi7oxnm" }
+              { "name": "HD-02", "url": "https://hglink.to/e/chitose-ramune-s1-e2-2" },
+              { "name": "HD-03", "url": "https://server-raw.com/chitose-ramune-s1-e2-3" }
             ],
             "sub": [
               { "name": "HD-01", "url": "https://bysejikuar.com/e/xwjyqw1km08e/watch-chitose-is-in-the-ramune-bottle-sub-02" },
-              { "name": "HD-02", "url": "https://mxdrop.to/e/nln3zezdi7oxnm" }
+              { "name": "HD-02", "url": "https://hglink.to/e/chitose-ramune-s1-e2-sub-2" },
+              { "name": "HD-03", "url": "https://server-sub.com/chitose-ramune-s1-e2-3" }
             ],
             "dub": [
-              { "name": "HD-01", "url": "https://server-dub.com/chitose-ramune-s1-e2-1" },
-              { "name": "HD-02", "url": "https://server-dub.com/chitose-ramune-s1-e2-2" }
+              { "name": "HD-01", "url": "https://filemoon.to/e/chitose-ramune-s1-e2-dub-1" },
+              { "name": "HD-02", "url": "https://hglink.to/e/chitose-ramune-s1-e2-dub-2" },
+              { "name": "HD-03", "url": "https://server-dub.com/chitose-ramune-s1-e2-3" }
             ]
           }
         },
         {
           "number": 3,
           "title": "A Lonesome Hero",
-          "japaneseTitle": "Hitoribocchi no Hero (ひとりぼっちのヒーロー)",
           "duration": "24 min",
-          "airedDate": "2025-10-21",
           "servers": {
             "raw": [
               { "name": "HD-01", "url": "https://bysejikuar.com/e/yl5mz3p5xvrv/watch-chitose-is-in-the-ramune-bottle-sub-03" },
-              { "name": "HD-02", "url": "https://mxdrop.to/e/dkrn6mk6awxl0r" }
+              { "name": "HD-02", "url": "https://hglink.to/e/chitose-ramune-s1-e3-2" },
+              { "name": "HD-03", "url": "https://server-raw.com/chitose-ramune-s1-e3-3" }
             ],
             "sub": [
               { "name": "HD-01", "url": "https://bysejikuar.com/e/yl5mz3p5xvrv/watch-chitose-is-in-the-ramune-bottle-sub-03" },
-              { "name": "HD-02", "url": "https://mxdrop.to/e/dkrn6mk6awxl0r" }
+              { "name": "HD-02", "url": "https://hglink.to/e/chitose-ramune-s1-e3-sub-2" },
+              { "name": "HD-03", "url": "https://server-sub.com/chitose-ramune-s1-e3-3" }
             ],
             "dub": [
-              { "name": "HD-01", "url": "https://server-dub.com/chitose-ramune-s1-e3-1" },
-              { "name": "HD-02", "url": "https://server-dub.com/chitose-ramune-s1-e3-2" }
+              { "name": "HD-01", "url": "https://filemoon.to/e/chitose-ramune-s1-e3-dub-1" },
+              { "name": "HD-02", "url": "https://hglink.to/e/chitose-ramune-s1-e3-dub-2" },
+              { "name": "HD-03", "url": "https://server-dub.com/chitose-ramune-s1-e3-3" }
             ]
           }
         },
         {
           "number": 4,
           "title": "The Marble Moon in the Ramune Bottle",
-          "japaneseTitle": "Ramune no Bin ni Shizunda Biidama no Tsuki (ラムネの瓶に沈んだビー玉の月)",
           "duration": "24 min",
-          "airedDate": "2025-10-28",
           "servers": {
             "raw": [
               { "name": "HD-01", "url": "https://bysejikuar.com/e/7lknoyizjgkl/watch-chitose-is-in-the-ramune-bottle-sub-04" },
-              { "name": "HD-02", "url": "https://mxdrop.to/e/03zkg733hkxrpw1" }
+              { "name": "HD-02", "url": "https://hglink.to/e/chitose-ramune-s1-e4-2" },
+              { "name": "HD-03", "url": "https://server-raw.com/chitose-ramune-s1-e4-3" }
             ],
             "sub": [
               { "name": "HD-01", "url": "https://bysejikuar.com/e/7lknoyizjgkl/watch-chitose-is-in-the-ramune-bottle-sub-04" },
-              { "name": "HD-02", "url": "https://mxdrop.to/e/03zkg733hkxrpw1" }
+              { "name": "HD-02", "url": "https://hglink.to/e/chitose-ramune-s1-e4-sub-2" },
+              { "name": "HD-03", "url": "https://server-sub.com/chitose-ramune-s1-e4-3" }
             ],
             "dub": [
-              { "name": "HD-01", "url": "https://server-dub.com/chitose-ramune-s1-e4-1" },
-              { "name": "HD-02", "url": "https://server-dub.com/chitose-ramune-s1-e4-2" }
+              { "name": "HD-01", "url": "https://filemoon.to/e/chitose-ramune-s1-e4-dub-1" },
+              { "name": "HD-02", "url": "https://hglink.to/e/chitose-ramune-s1-e4-dub-2" },
+              { "name": "HD-03", "url": "https://server-dub.com/chitose-ramune-s1-e4-3" }
             ]
           }
         },
         {
           "number": 5,
           "title": "A Fickle Starting Line",
-          "japaneseTitle": "Karisome no Start Line (かりそめのスタートライン)",
           "duration": "24 min",
-          "airedDate": "2025-11-04",
           "servers": {
             "raw": [
               { "name": "HD-01", "url": "https://bysejikuar.com/e/7vyt7mmv2ele/watch-chitose-is-in-the-ramune-bottle-sub-05" },
-              { "name": "HD-02", "url": "https://mxdrop.to/e/03zkg7lof1gkqg" }
+              { "name": "HD-02", "url": "https://hglink.to/e/chitose-ramune-s1-e5-2" },
+              { "name": "HD-03", "url": "https://server-raw.com/chitose-ramune-s1-e5-3" }
             ],
             "sub": [
               { "name": "HD-01", "url": "https://bysejikuar.com/e/7vyt7mmv2ele/watch-chitose-is-in-the-ramune-bottle-sub-05" },
-              { "name": "HD-02", "url": "https://mxdrop.to/e/03zkg7lof1gkqg" }
+              { "name": "HD-02", "url": "https://hglink.to/e/chitose-ramune-s1-e5-sub-2" },
+              { "name": "HD-03", "url": "https://server-sub.com/chitose-ramune-s1-e5-3" }
             ],
             "dub": [
-              { "name": "HD-01", "url": "https://server-dub.com/chitose-ramune-s1-e5-1" },
-              { "name": "HD-02", "url": "https://server-dub.com/chitose-ramune-s1-e5-2" }
+              { "name": "HD-01", "url": "https://filemoon.to/e/chitose-ramune-s1-e5-dub-1" },
+              { "name": "HD-02", "url": "https://hglink.to/e/chitose-ramune-s1-e5-dub-2" },
+              { "name": "HD-03", "url": "https://server-dub.com/chitose-ramune-s1-e5-3" }
             ]
           }
         },
         {
           "number": 6,
           "title": "Blue Basketball Shoes",
-          "japaneseTitle": "Aoiro no Basshu (青色のバッシュ)",
           "duration": "24 min",
-          "airedDate": "2025-12-02",
           "servers": {
             "raw": [
               { "name": "HD-01", "url": "https://bysejikuar.com/e/kor2f2ty4pka/watch-chitose-is-in-the-ramune-bottle-sub-06" },
-              { "name": "HD-02", "url": "https://mxdrop.to/e/gjkmoq0jszqqqg" }
+              { "name": "HD-02", "url": "https://hglink.to/e/chitose-ramune-s1-e6-2" },
+              { "name": "HD-03", "url": "https://server-raw.com/chitose-ramune-s1-e6-3" }
             ],
             "sub": [
               { "name": "HD-01", "url": "https://bysejikuar.com/e/kor2f2ty4pka/watch-chitose-is-in-the-ramune-bottle-sub-06" },
-              { "name": "HD-02", "url": "https://mxdrop.to/e/gjkmoq0jszqqqg" }
+              { "name": "HD-02", "url": "https://hglink.to/e/chitose-ramune-s1-e6-sub-2" },
+              { "name": "HD-03", "url": "https://server-sub.com/chitose-ramune-s1-e6-3" }
             ],
             "dub": [
-              { "name": "HD-01", "url": "https://server-dub.com/chitose-ramune-s1-e6-1" },
-              { "name": "HD-02", "url": "https://server-dub.com/chitose-ramune-s1-e6-2" }
+              { "name": "HD-01", "url": "https://filemoon.to/e/chitose-ramune-s1-e6-dub-1" },
+              { "name": "HD-02", "url": "https://hglink.to/e/chitose-ramune-s1-e6-dub-2" },
+              { "name": "HD-03", "url": "https://server-dub.com/chitose-ramune-s1-e6-3" }
             ]
           }
         },
         {
           "number": 7,
           "title": "Ups and Downs",
-          "japaneseTitle": "Hare no Hi Ke no Hi (ハレの日ケの日)",
           "duration": "24 min",
-          "airedDate": "2025-12-09",
           "servers": {
             "raw": [
               { "name": "HD-01", "url": "https://bysejikuar.com/e/99e2zd9y7q26/watch-chitose-is-in-the-ramune-bottle-sub-07" },
-              { "name": "HD-02", "url": "https://mxdrop.to/e/pj6rgdqgt6mlr0" }
+              { "name": "HD-02", "url": "https://hglink.to/e/chitose-ramune-s1-e7-2" },
+              { "name": "HD-03", "url": "https://server-raw.com/chitose-ramune-s1-e7-3" }
             ],
             "sub": [
               { "name": "HD-01", "url": "https://bysejikuar.com/e/99e2zd9y7q26/watch-chitose-is-in-the-ramune-bottle-sub-07" },
-              { "name": "HD-02", "url": "https://mxdrop.to/e/pj6rgdqgt6mlr0" }
+              { "name": "HD-02", "url": "https://hglink.to/e/chitose-ramune-s1-e7-sub-2" },
+              { "name": "HD-03", "url": "https://server-sub.com/chitose-ramune-s1-e7-3" }
             ],
             "dub": [
-              { "name": "HD-01", "url": "https://server-dub.com/chitose-ramune-s1-e7-1" },
-              { "name": "HD-02", "url": "https://server-dub.com/chitose-ramune-s1-e7-2" }
+              { "name": "HD-01", "url": "https://filemoon.to/e/chitose-ramune-s1-e7-dub-1" },
+              { "name": "HD-02", "url": "https://hglink.to/e/chitose-ramune-s1-e7-dub-2" },
+              { "name": "HD-03", "url": "https://server-dub.com/chitose-ramune-s1-e7-3" }
             ]
           }
         },
         {
           "number": 8,
           "title": "How to End the Unending Rain",
-          "japaneseTitle": "Yamanai Ame no Yamase Kata (やまない雨のやませ方)",
           "duration": "24 min",
-          "airedDate": "2025-12-16",
           "servers": {
             "raw": [
               { "name": "HD-01", "url": "https://bysejikuar.com/e/q5ps62ghwzn4/watch-chitose-is-in-the-ramune-bottle-sub-08" },
-              { "name": "HD-02", "url": "https://mxdrop.to/e/q1d4303wu7nov1" }
+              { "name": "HD-02", "url": "https://hglink.to/e/chitose-ramune-s1-e8-2" },
+              { "name": "HD-03", "url": "https://server-raw.com/chitose-ramune-s1-e8-3" }
             ],
             "sub": [
               { "name": "HD-01", "url": "https://bysejikuar.com/e/q5ps62ghwzn4/watch-chitose-is-in-the-ramune-bottle-sub-08" },
-              { "name": "HD-02", "url": "https://mxdrop.to/e/q1d4303wu7nov1" }
+              { "name": "HD-02", "url": "https://hglink.to/e/chitose-ramune-s1-e8-sub-2" },
+              { "name": "HD-03", "url": "https://server-sub.com/chitose-ramune-s1-e8-3" }
             ],
             "dub": [
-              { "name": "HD-01", "url": "https://server-dub.com/chitose-ramune-s1-e8-1" },
-              { "name": "HD-02", "url": "https://server-dub.com/chitose-ramune-s1-e8-2" }
+              { "name": "HD-01", "url": "https://filemoon.to/e/chitose-ramune-s1-e8-dub-1" },
+              { "name": "HD-02", "url": "https://hglink.to/e/chitose-ramune-s1-e8-dub-2" },
+              { "name": "HD-03", "url": "https://server-dub.com/chitose-ramune-s1-e8-3" }
             ]
           }
         },
         {
           "number": 9,
           "title": "A Relationship with a Name and a Rift Without One",
-          "japaneseTitle": "Namae no Aru Kankei to Namae no Nai Kyori (名前のあるカンケイと名前のないキョリ)",
           "duration": "24 min",
-          "airedDate": "2025-12-23",
           "servers": {
             "raw": [
               { "name": "HD-01", "url": "https://bysejikuar.com/e/yrpst3impcwr/watch-chitose-is-in-the-ramune-bottle-sub-09" },
-              { "name": "HD-02", "url": "https://mxdrop.to/e/l79x14drcmq8r1" }
+              { "name": "HD-02", "url": "https://hglink.to/e/chitose-ramune-s1-e9-2" },
+              { "name": "HD-03", "url": "https://server-raw.com/chitose-ramune-s1-e9-3" }
             ],
             "sub": [
               { "name": "HD-01", "url": "https://bysejikuar.com/e/yrpst3impcwr/watch-chitose-is-in-the-ramune-bottle-sub-09" },
-              { "name": "HD-02", "url": "https://mxdrop.to/e/l79x14drcmq8r1" }
+              { "name": "HD-02", "url": "https://hglink.to/e/chitose-ramune-s1-e9-sub-2" },
+              { "name": "HD-03", "url": "https://server-sub.com/chitose-ramune-s1-e9-3" }
             ],
             "dub": [
-              { "name": "HD-01", "url": "https://server-dub.com/chitose-ramune-s1-e9-1" },
-              { "name": "HD-02", "url": "https://server-dub.com/chitose-ramune-s1-e9-2" }
+              { "name": "HD-01", "url": "https://filemoon.to/e/chitose-ramune-s1-e9-dub-1" },
+              { "name": "HD-02", "url": "https://hglink.to/e/chitose-ramune-s1-e9-dub-2" },
+              { "name": "HD-03", "url": "https://server-dub.com/chitose-ramune-s1-e9-3" }
             ]
           }
         },
         {
           "number": 10,
           "title": "A Distant Moon",
-          "japaneseTitle": "Haruka na Tsuki (悠[はるか]な月)",
           "duration": "24 min",
-          "airedDate": "2025-12-30",
           "servers": {
             "raw": [
               { "name": "HD-01", "url": "https://bysejikuar.com/e/yc5p9pk5hvsr/watch-chitose-is-in-the-ramune-bottle-sub-10" },
-              { "name": "HD-02", "url": "https://mxdrop.to/e/67rn0xk1tw0q84" }
+              { "name": "HD-02", "url": "https://hglink.to/e/chitose-ramune-s1-e10-2" },
+              { "name": "HD-03", "url": "https://server-raw.com/chitose-ramune-s1-e10-3" }
             ],
             "sub": [
               { "name": "HD-01", "url": "https://bysejikuar.com/e/yc5p9pk5hvsr/watch-chitose-is-in-the-ramune-bottle-sub-10" },
-              { "name": "HD-02", "url": "https://mxdrop.to/e/67rn0xk1tw0q84" }
+              { "name": "HD-02", "url": "https://hglink.to/e/chitose-ramune-s1-e10-sub-2" },
+              { "name": "HD-03", "url": "https://server-sub.com/chitose-ramune-s1-e10-3" }
             ],
             "dub": [
-              { "name": "HD-01", "url": "https://server-dub.com/chitose-ramune-s1-e10-1" },
-              { "name": "HD-02", "url": "https://server-dub.com/chitose-ramune-s1-e10-2" }
+              { "name": "HD-01", "url": "https://filemoon.to/e/chitose-ramune-s1-e10-dub-1" },
+              { "name": "HD-02", "url": "https://hglink.to/e/chitose-ramune-s1-e10-dub-2" },
+              { "name": "HD-03", "url": "https://server-dub.com/chitose-ramune-s1-e10-3" }
             ]
           }
         }
@@ -7609,814 +8350,61 @@
     }
   ]
 },
-  {
-    "id": "spy-family-s1",
-    "slug": "spy-family-season-1",
-    "title": "SPY×FAMILY Season 1",
-    "originalTitle": "SPY×FAMILY",
-    "japaneseTitle": "スパイファミリー",
-    "synonyms": ["MHA Season 1", "Boku no Hero Academia S1"],
-    "searchableTitle": "SPY×FAMILY Season 1 スパイファミリー Loid Anya Yor Forger Operation Strix 2022",
-    "airedYear": 2022,
-    "dateAdded": "2024-12-16",
-    "type": "anime",
-    "featured": false,
-    "rating": 8.6,
-    "category": "action",
-    "premiered": "Spring 2022",
-    "duration": "24 min",
-    "status": "Finished Airing",
-    "description": "To maintain peace between rival nations Westalis and Ostania, Westalian spy 'Twilight' must infiltrate an elite private school. To do so, he creates a fake family with an orphan telepath and a professional assassin, none of whom know each other's secrets.",
-    "posterUrl": "https://cdn.myanimelist.net/images/anime/1649/119538l.jpg",
-    "backdropUrl": "image.tmdb.org",
-    "trailerUrl": "www.youtube.com",
-    "malScore": 8.50,
-    "imbdScore": 8.4,
-    "popularity": 45,
-    "genres": ["Action", "Comedy", "Slice of Life", "Shounen"],
-    "cast": ["Takuya Eguchi", "Atsumi Tanezaki", "Saori Hayami"],
-    "certification": "TV-14",
-    "country": "Japan",
-    "studio": "Wit Studio, CloverWorks",
-    "producers": ["TOHO", "TV Tokyo", "Shueisha"],
-    "seasons": [
-      {
+ {
+  "id": "spy-family-s1",
+  "slug": "spy-family-season-1",
+  "title": "SPY×FAMILY Season 1",
+  "originalTitle": "SPY×FAMILY",
+  "japaneseTitle": "スパイファミリー",
+  "synonyms": ["Spy x Family", "SPY x FAMILY"],
+  "searchableTitle": "SPY×FAMILY Season 1 スパイファミリー Loid Anya Yor Forger Operation Strix 2022",
+  "airedYear": 2022,
+  "dateAdded": "2024-01-16",
+  "type": "anime",
+  "featured": false,
+  "rating": 8.6,
+  "category": "action",
+  "premiered": "Spring 2022",
+  "duration": "24 min",
+  "status": "Finished Airing",
+  "description": "To maintain peace between rival nations Westalis and Ostania, Westalian spy 'Twilight' must infiltrate an elite private school. To do so, he creates a fake family with an orphan telepath and a professional assassin, none of whom know each other's secrets.",
+  "posterUrl": "https://cdn.myanimelist.net/images/anime/1649/119538l.jpg",
+  "backdropUrl": "https://image.tmdb.org",
+  "trailerUrl": "https://www.youtube.com",
+  "malScore": 8.5,
+  "imdbScore": 8.4,
+  "popularity": 45,
+  "genres": ["Action", "Comedy", "Slice of Life", "Shounen"],
+  "cast": ["Takuya Eguchi", "Atsumi Tanezaki", "Saori Hayami"],
+  "certification": "TV-14",
+  "country": "Japan",
+  "studio": "Wit Studio, CloverWorks",
+  "producers": ["TOHO", "TV Tokyo", "Shueisha"],
   "seasons": [
     {
       "seasonNumber": 1,
       "part": 1,
       "airedYear": 2022,
-      "episodes": [
-        {
-          "number": 1,
-          "title": "Operation Strix",
-          "duration": "24 min",
-          "servers": {
-            "sub": [
-              { "name": "HD-01", "url": "https://filemoon.in/e/38ts0we8oisx/Watch_SPY_x_FAMILY_01_sub" },
-              { "name": "HD-03", "url": "https://mxdrop.to/e/jdkrlwkxskoqo1" }
-            ],
-            "dub": [
-              { "name": "HD-01", "url": "https://filemoon.in/e/vptksq123b8h/Watch_SPY_x_FAMILY_Ep01_Dub" },
-              { "name": "HD-03", "url": "https://mxdrop.to/e/67rxnj11il6nopd" }
-            ]
-          }
-        },
-        {
-          "number": 2,
-          "title": "Secure a Wife",
-          "duration": "24 min",
-          "servers": {
-            "sub": [
-              { "name": "HD-01", "url": "https://filemoon.in/e/7wl7g7lstzdv/Watch_SPY_x_FAMILY_02_sub" },
-              { "name": "HD-03", "url": "https://mxdrop.to/e/elzgodz7c1ekg3" }
-            ],
-            "dub": [
-              { "name": "HD-01", "url": "https://filemoon.in/e/an1smvvzqrnq/Watch_SPY_x_FAMILY_Ep02_Dub" },
-              { "name": "HD-03", "url": "https://mxdrop.to/e/k0eoj9emu33npr8" }
-            ]
-          }
-        },
-        {
-          "number": 3,
-          "title": "Prepare for the Interview",
-          "duration": "24 min",
-          "servers": {
-            "sub": [
-              { "name": "HD-01", "url": "https://filemoon.in/e/v4ct3s3niz15/Watch_SPY_x_FAMILY_03_sub" },
-              { "name": "HD-03", "url": "https://mxdrop.to/e/vkqjw4z9uqqggj6" }
-            ],
-            "dub": [
-              { "name": "HD-01", "url": "https://filemoon.in/e/7eivwg65joj4/Watch_SPY_x_FAMILY_Ep03_Dub" },
-              { "name": "HD-02", "url": "https://hglink.to/e/0mlawb1wav4v" },
-              { "name": "HD-03", "url": "https://mxdrop.to/e/mkzpmoz4tx64oz8" }
-            ]
-          }
-        },
-        {
-          "number": 4,
-          "title": "The Prestigious School's Interview",
-          "duration": "24 min",
-          "servers": {
-            "sub": [
-              { "name": "HD-01", "url": "https://filemoon.in/e/5ili32dzf74z/Watch_SPY_x_FAMILY_04_sub" },
-              { "name": "HD-03", "url": "https://mxdrop.to/e/nlne3zg0cgzedm" }
-            ],
-            "dub": [
-              { "name": "HD-01", "url": "https://filemoon.in/e/huypf50jkjkv/Watch_SPY_x_FAMILY_04_Dub" },
-              { "name": "HD-03", "url": "https://mxdrop.to/e/r607eowgfv8p9l3" }
-            ]
-          }
-        },
-        {
-          "number": 5,
-          "title": "Will They Pass or Fail?",
-          "duration": "24 min",
-          "servers": {
-            "sub": [
-              { "name": "HD-01", "url": "https://filemoon.in/e/oeakgpef3pls/Watch_SPY_x_FAMILY_05_sub" },
-              { "name": "HD-03", "url": "https://mxdrop.to/e/7kjzo7dqizjg6q" }
-            ],
-            "dub": [
-              { "name": "HD-01", "url": "https://filemoon.in/e/mlomjys9920i/Watch_SPY_x_FAMILY_05_dub" },
-              { "name": "HD-03", "url": "https://mxdrop.to/e/67rxnj1zuoojxg" }
-            ]
-          }
-        },
-        {
-          "number": 6,
-          "title": "The Friendship Scheme",
-          "duration": "24 min",
-          "servers": {
-            "sub": [
-              { "name": "HD-01", "url": "https://filemoon.in/e/8g8vk3u3rhcd/Watch_SPY_x_FAMILY_06_sub" },
-              { "name": "HD-02", "url": "https://hglink.to/e/evioksvmdimo" },
-              { "name": "HD-03", "url": "https://mxdrop.to/e/gjd8971eidkxj1" }
-            ],
-            "dub": [
-              { "name": "HD-01", "url": "https://filemoon.in/e/frhxhe9w9m3i/Watch_SPY_x_FAMILY_06_dub" },
-              { "name": "HD-03", "url": "https://mxdrop.to/e/nlne3ow9sl89x4" }
-            ]
-          }
-        },
-        {
-          "number": 7,
-          "title": "The Target's Second Son",
-          "duration": "24 min",
-          "servers": {
-            "sub": [
-              { "name": "HD-01", "url": "https://filemoon.in/e/6g69m0u915k5/Watch_SPY_x_FAMILY_07_sub" },
-              { "name": "HD-02", "url": "https://hglink.to/e/w9nhmfpjqzz9" },
-              { "name": "HD-03", "url": "https://mxdrop.to/e/jdkrlwg8u79vqw9" }
-            ],
-            "dub": [
-              { "name": "HD-01", "url": "https://filemoon.in/e/xjqdos1sceys/Watch_SPY_x_FAMILY_07_dub" },
-              { "name": "HD-03", "url": "https://mxdrop.to/e/r607eoj8t6pqpd" }
-            ]
-          }
-        },
-        {
-          "number": 8,
-          "title": "The Counter-Secret Police Cover Operation",
-          "duration": "24 min",
-          "servers": {
-            "sub": [
-              { "name": "HD-01", "url": "https://filemoon.in/e/jbh3qwv56djl/Watch_SPY_x_FAMILY_08_sub" },
-              { "name": "HD-02", "url": "https://hglink.to/e/5l6krr5usflf" },
-              { "name": "HD-03", "url": "https://mxdrop.to/e/8ljmpkdqu64ew3k" }
-            ],
-            "dub": [
-              { "name": "HD-01", "url": "https://filemoon.in/e/81ie6b7opp6z/Watch_SPY_x_FAMILY_08_dub" },
-              { "name": "HD-03", "url": "https://mxdrop.to/e/q1d04zvpu6loqq" }
-            ]
-          }
-        },
-        {
-          "number": 9,
-          "title": "Show Off How In Love You Are",
-          "duration": "24 min",
-          "servers": {
-            "sub": [
-              { "name": "HD-01", "url": "https://filemoon.in/e/2pfjmzkolg2m/Watch_SPY_x_FAMILY_09_sub" },
-              { "name": "HD-02", "url": "https://hglink.to/e/xg3cc5blrafq" },
-              { "name": "HD-03", "url": "https://mxdrop.to/e/xw9xz34rcm9k00" }
-            ],
-            "dub": [
-              { "name": "HD-01", "url": "https://filemoon.in/e/wze441aimvm9/Watch_SPY_x_FAMILY_09_dub" },
-              { "name": "HD-03", "url": "https://mxdrop.to/e/nlne3jlxhez89k" }
-            ]
-          }
-        },
-        {
-          "number": 10,
-          "title": "The Great Dodgeball Plan",
-          "duration": "24 min",
-          "servers": {
-            "sub": [
-              { "name": "HD-01", "url": "https://filemoon.in/e/se4qlejo2d4p/Watch_SPY_x_FAMILY_10_sub" },
-              { "name": "HD-02", "url": "https://hglink.to/e/oauf4xuprr5g" },
-              { "name": "HD-03", "url": "https://mxdrop.to/e/elzgoddlhq066r8" }
-            ],
-            "dub": [
-              { "name": "HD-01", "url": "https://filemoon.in/e/olujrn9d5i3s/Watch_SPY_x_FAMILY_10_dub" },
-              { "name": "HD-03", "url": "https://mxdrop.to/e/k0eoj9zjszl60g" }
-            ]
-          }
-        },
-        {
-          "number": 11,
-          "title": "Stella",
-          "duration": "24 min",
-          "servers": {
-            "sub": [
-              { "name": "HD-01", "url": "https://filemoon.in/e/f6ag1ks1ujqr/Watch_SPY_x_FAMILY_11_sub" }
-            ],
-            "dub": [
-              { "name": "HD-01", "url": "https://filemoon.in/e/xqbstefqcry4/Watch_SPY_x_FAMILY_11_dub" },
-              { "name": "HD-03", "url": "https://mxdrop.to/e/gjd8960rbpvdv4" }
-            ]
-          }
-        },
-        {
-          "number": 12,
-          "title": "Penguin Park",
-          "duration": "24 min",
-          "servers": {
-            "sub": [
-              { "name": "HD-01", "url": "https://filemoon.in/e/kkax09s7b24c/Watch_SPY_x_FAMILY_12_sub" }
-            ],
-            "dub": [
-              { "name": "HD-01", "url": "https://filemoon.in/e/wvydv7p48xe0/Watch_SPY_x_FAMILY_12_dub" },
-              { "name": "HD-03", "url": "https://mxdrop.to/e/67rxnj3etl69e6r" }
-            ]
-          }
-        }
-      ]
+      "episodes": [...]
     },
     {
       "seasonNumber": 1,
       "part": 2,
       "airedYear": 2022,
-      "episodes": [
-        {
-          "number": 1,
-          "title": "Project Apple",
-          "duration": "24 min",
-          "servers": {
-            "sub": [
-              { "name": "HD-01", "url": "https://filemoon.in/e/h044iu8bm419/Watch_SPY_x_FAMILY_Cour_2_Ep_01_sub" },
-              { "name": "HD-02", "url": "https://mxdrop.to/e/xw9xzz93b9493v" }
-            ],
-            "dub": [
-              { "name": "HD-01", "url": "https://filemoon.in/e/iaatg2snxmso/Watch_SPY_x_FAMILY_Cour_2_Dub_Ep_01" },
-              { "name": "HD-02", "url": "https://mxdrop.to/e/nln38ol4uljxpzo" }
-            ]
-          }
-        },
-        {
-          "number": 2,
-          "title": "Disarm the Time Bomb",
-          "duration": "24 min",
-          "servers": {
-            "sub": [
-              { "name": "HD-01", "url": "https://filemoon.in/e/3ifliesh34rm/Watch_SPY_x_FAMILY_Cour_2_SUB_Ep_02" },
-              { "name": "HD-02", "url": "https://mxdrop.to/e/9wxg996gc3nk9lj" }
-            ],
-            "dub": [
-              { "name": "HD-01", "url": "https://filemoon.in/e/t1ygfc1otw7i/Watch_SPY_x_FAMILY_Cour_2_Dub_Ep_02" },
-              { "name": "HD-02", "url": "https://mxdrop.to/e/1nowdl0zs3xmdw" }
-            ]
-          }
-        },
-        {
-          "number": 3,
-          "title": "A New Family Member",
-          "duration": "24 min",
-          "servers": {
-            "sub": [
-              { "name": "HD-01", "url": "https://filemoon.in/e/aliilcg1cvot/Watch_SPY_x_FAMILY_Cour_2_Sub_Ep_03" },
-              { "name": "HD-02", "url": "https://mxdrop.to/e/k0eojj1mh1emqp" }
-            ],
-            "dub": [
-              { "name": "HD-01", "url": "https://filemoon.in/e/c8x2uv2jopm1/Watch_SPY_x_FAMILY_Cour_2_Dub_ep_03" },
-              { "name": "HD-02", "url": "https://mxdrop.to/e/7kjo4mn8idwm0wr" }
-            ]
-          }
-        },
-        {
-          "number": 4,
-          "title": "Yor's Kitchen / The Informant's Great Romance Plan",
-          "duration": "24 min",
-          "servers": {
-            "sub": [
-              { "name": "HD-01", "url": "https://filemoon.in/e/11j3dkfvppzy/Watch_SPY_x_FAMILY_Cour_2_sub_ep_04" },
-              { "name": "HD-02", "url": "https://mxdrop.to/e/mkzpmp6dto8er3" }
-            ],
-            "dub": [
-              { "name": "HD-01", "url": "https://filemoon.in/e/p3ffhhvp23u7/Watch_SPY_x_FAMILY_Cour_2_Dub_ep_04" },
-              { "name": "HD-02", "url": "https://mxdrop.to/e/k0ejv99vhrol9z" }
-            ]
-          }
-        },
-        {
-          "number": 5,
-          "title": "Carry Out the Griffin Plan / Fullmetal Lady / Omelet Rice",
-          "duration": "24 min",
-          "servers": {
-            "sub": [
-              { "name": "HD-01", "url": "https://filemoon.in/e/10gre3qc074i/Watch_SPY_x_FAMILY_Cour_2_sub_ep_05" },
-              { "name": "HD-02", "url": "https://mxdrop.to/e/nlne3edzade38r" }
-            ],
-            "dub": [
-              { "name": "HD-01", "url": "https://filemoon.in/e/lz38fondybid/Watch_SPY_x_FAMILY_Cour_2_dub_ep_05" },
-              { "name": "HD-02", "url": "https://mxdrop.to/e/elzor97kfrkole" }
-            ]
-          }
-        },
-        {
-          "number": 6,
-          "title": "Uncle the Private Tutor / Daybreak",
-          "duration": "24 min",
-          "servers": {
-            "sub": [
-              { "name": "HD-01", "url": "https://filemoon.in/e/bta1qz18kipm/Watch_SPY_x_FAMILY_Cour_2_sub_ep_06" },
-              { "name": "HD-02", "url": "https://mxdrop.to/e/dkrmnnllig44r7" }
-            ],
-            "dub": [
-              { "name": "HD-01", "url": "https://filemoon.in/e/w1kmskkcxtrs/Watch_SPY_x_FAMILY_Cour_2_dib_ep_06" },
-              { "name": "HD-02", "url": "https://mxdrop.to/e/xw9z1d3gf6o1dn" }
-            ]
-          }
-        },
-        {
-          "number": 7,
-          "title": "A Revenge Plot Against Desmond / Mama Becomes the Wind",
-          "duration": "24 min",
-          "servers": {
-            "sub": [
-              { "name": "HD-01", "url": "https://filemoon.in/e/omn0yjab9hfr/Watch_SPY_x_FAMILY_Cour_2_Sub_ep_07" },
-              { "name": "HD-02", "url": "https://mxdrop.to/e/owz6vv73ugwx99" }
-            ],
-            "dub": [
-              { "name": "HD-01", "url": "https://filemoon.in/e/4kjgl6nbr5cd/Watch_SPY_x_FAMILY_Cour_2_dub_ep_07" },
-              { "name": "HD-02", "url": "https://mxdrop.to/e/36qzojdrtmwzqqg" }
-            ]
-          }
-        },
-        {
-          "number": 8,
-          "title": "Investigate the General Hospital / Decipher the Code",
-          "duration": "24 min",
-          "servers": {
-            "sub": [
-              { "name": "HD-01", "url": "https://filemoon.in/e/kbwsx9b8ciee/Watch_SPY_x_FAMILY_Cour_2_Sub_ep_08" },
-              { "name": "HD-02", "url": "https://mxdrop.to/e/vkqjwwoqse6q38" }
-            ],
-            "dub": [
-              { "name": "HD-01", "url": "https://filemoon.in/e/g8uykzjynmyx/Watch_SPY_x_FAMILY_Cour_2_dub_ep_08" },
-              { "name": "HD-02", "url": "https://mxdrop.to/e/67rnwzk1ikmmpm" }
-            ]
-          }
-        },
-        {
-          "number": 9,
-          "title": "Nightfall / First Fit of Jealousy",
-          "duration": "24 min",
-          "servers": {
-            "sub": [
-              { "name": "HD-01", "url": "https://filemoon.in/e/j5qem87mx9ik/Watch_SPY_x_FAMILY_Cour_2_sub_ep_09" },
-              { "name": "HD-02", "url": "https://mxdrop.to/e/l794xxm9cqdqed" }
-            ],
-            "dub": [
-              { "name": "HD-01", "url": "https://filemoon.in/e/kku4gnojhp4z/Watch_SPY_x_FAMILY_Cour_2_dub_ep_09" },
-              { "name": "HD-02", "url": "https://mxdrop.to/e/r60evoloh3oll1" }
-            ]
-          }
-        },
-        {
-          "number": 10,
-          "title": "The Underground Tennis Tournament: The Campbelldon",
-          "duration": "24 min",
-          "servers": {
-            "sub": [
-              { "name": "HD-01", "url": "https://filemoon.in/e/xewcgbqaqa7s/Watch_SPY_x_FAMILY_Cour_2_sub_ep_10" },
-              { "name": "HD-02", "url": "https://mxdrop.to/e/03z7kkeqi13gel" }
-            ],
-            "dub": [
-              { "name": "HD-01", "url": "https://filemoon.in/e/yo0hw0ctbk5i/Watch_SPY_x_FAMILY_Cour_2_dub_ep_10" },
-              { "name": "HD-02", "url": "https://mxdrop.to/e/owzvdov7br0rlw" }
-            ]
-          }
-        },
-        {
-          "number": 11,
-          "title": "The Unwavering Path",
-          "duration": "24 min",
-          "servers": {
-            "sub": [
-              { "name": "HD-01", "url": "https://filemoon.in/e/f17mtcj0hn3z/Watch_SPY_x_FAMILY_Cour_2_Sub_ep_11" },
-              { "name": "HD-02", "url": "https://mxdrop.to/e/gjd8998ntdxgog" }
-            ],
-            "dub": [
-              { "name": "HD-01", "url": "https://filemoon.in/e/unv0zp16e9u6/Watch_SPY_x_FAMILY_Cour_2_dub_ep_11" },
-              { "name": "HD-02", "url": "https://mxdrop.to/e/l79xv1eqidvjl6" }
-            ]
-          }
-        },
-        {
-          "number": 12,
-          "title": "The Role of a Mother and Wife / Shopping with Friends",
-          "duration": "24 min",
-          "servers": {
-            "sub": [
-              { "name": "HD-01", "url": "https://filemoon.in/e/38i8juxmo4bn/Watch_SPY_x_FAMILY_Cour_2_sub_ep_12" },
-              { "name": "HD-02", "url": "https://mxdrop.to/e/k0eojjjdbvmg3v" }
-            ],
-            "dub": [
-              { "name": "HD-01", "url": "https://filemoon.in/e/6ajb9y94k3ku/Watch_SPY_x_FAMILY_Cour_2_dub_ep_12" },
-              { "name": "HD-02", "url": "https://mxdrop.to/e/pj6r0gpph76e73" }
-            ]
-          }
-        },
-        {
-          "number": 13,
-          "title": "First Contact",
-          "duration": "24 min",
-          "servers": {
-            "sub": [
-              { "name": "HD-01", "url": "https://filemoon.in/e/1v01bpj8e8kv/Watch_SPY_x_FAMILY_Cour_2_sub_ep_13" },
-              { "name": "HD-02", "url": "https://mxdrop.to/e/67rnlg3gad6pg8" }
-            ],
-            "dub": [
-              { "name": "HD-01", "url": "https://filemoon.in/e/612vpjcyyt49/Watch_SPY_x_FAMILY_Cour_2_Dub_ep_13" },
-              { "name": "HD-02", "url": "https://mxdrop.to/e/gjd9mwz1hdn344" }
-            ]
-          }
-        }
-      ]
+      "episodes": [...]
     },
     {
       "seasonNumber": 2,
       "airedYear": 2023,
-      "episodes": [
-        {
-          "number": 1,
-          "title": "Follow Mama and Papa",
-          "duration": "24 min",
-          "servers": {
-            "sub": [
-              { "name": "HD-01", "url": "https://filemoon.in/e/i314ntezw1m9/Watch_SPY_x_FAMILY_Season_2_sub_01" },
-              { "name": "HD-02", "url": "https://mxdrop.to/e/36qzpmogb031k1" }
-            ],
-            "dub": [
-              { "name": "HD-01", "url": "https://filemoon.in/e/lvi6q7bxq79x/Watch_SPY_x_FAMILY_Season_2_Dub_01" },
-              { "name": "HD-02", "url": "https://mxdrop.to/e/l79xepe8i31lpg" }
-            ]
-          }
-        },
-        {
-          "number": 2,
-          "title": "Bond's Strategy to Stay Alive / Damian's Field Research Trip",
-          "duration": "24 min",
-          "servers": {
-            "sub": [
-              { "name": "HD-01", "url": "https://filemoon.in/e/0w7tda6nd3h1/Watch_SPY_x_FAMILY_Season_2_sub_02" },
-              { "name": "HD-02", "url": "https://mxdrop.to/e/7kjo3vwrbqmj1r" }
-            ],
-            "dub": [
-              { "name": "HD-01", "url": "https://filemoon.in/e/5dqucg5rd0ts/Watch_SPY_x_FAMILY_Season_2_Dub_02" },
-              { "name": "HD-02", "url": "https://mxdrop.to/e/9wx9ve9lbrkvkl" }
-            ]
-          }
-        },
-        {
-          "number": 3,
-          "title": "Mission and Family / The Elegant Bondman / Waking Up",
-          "duration": "24 min",
-          "servers": {
-            "sub": [
-              { "name": "HD-01", "url": "https://filemoon.in/e/asb0ke1pdtb7/Watch_SPY_x_FAMILY_Season_2_sub_03" },
-              { "name": "HD-02", "url": "https://mxdrop.to/e/7kjo3l9vh6d0xk" }
-            ],
-            "dub": [
-              { "name": "HD-01", "url": "https://filemoon.in/e/x7lsfp0m223x/Watch_SPY_x_FAMILY_Season_2_dub_03" },
-              { "name": "HD-02", "url": "https://mxdrop.to/e/q1d4pjk4fx78176" }
-            ]
-          }
-        },
-        {
-          "number": 4,
-          "title": "The Pastry of Knowledge / The Informant's Romance Plan II",
-          "duration": "24 min",
-          "servers": {
-            "sub": [
-              { "name": "HD-01", "url": "https://filemoon.in/e/pu3w9r7g30ot/Watch_SPY_x_FAMILY_Season_2_sub_04" },
-              { "name": "HD-02", "url": "https://mxdrop.to/e/1nowmr9ei68xg4" }
-            ],
-            "dub": [
-              { "name": "HD-01", "url": "https://filemoon.in/e/7wir3s0l3s02/Watch_SPY_x_FAMILY_Season_2_dub_04" },
-              { "name": "HD-02", "url": "https://mxdrop.to/e/gjd9eve1cw0lqpk" }
-            ]
-          }
-        },
-        {
-          "number": 5,
-          "title": "Plan to Cross the Border",
-          "duration": "24 min",
-          "servers": {
-            "sub": [
-              { "name": "HD-01", "url": "https://filemoon.in/e/my1gyqjbyp8k/Watch_SPY_x_FAMILY_Season_2_sub_05" },
-              { "name": "HD-02", "url": "https://mxdrop.to/e/vkqw68rzf39nv6" }
-            ],
-            "dub": [
-              { "name": "HD-01", "url": "https://filemoon.in/e/0ul9rsyk8s6r/Watch_SPY_x_FAMILY_Season_2_Dub_05" },
-              { "name": "HD-02", "url": "https://mxdrop.to/e/jdklpovjf8dok" }
-            ]
-          }
-        },
-        {
-          "number": 6,
-          "title": "The Fearsome Luxury Cruise Ship",
-          "duration": "24 min",
-          "servers": {
-            "sub": [
-              { "name": "HD-01", "url": "https://filemoon.in/e/r9xayo7e0hhj/Watch_SPY_x_FAMILY_Season_2_sub_06" },
-              { "name": "HD-02", "url": "https://mxdrop.to/e/l79xekmkt48lnw" }
-            ],
-            "dub": [
-              { "name": "HD-01", "url": "https://filemoon.in/e/0tvr921xof24/Watch_SPY_x_FAMILY_Season_2_Dub_06" },
-              { "name": "HD-02", "url": "https://mxdrop.to/e/1nowm7g6f4zlv8" }
-            ]
-          }
-        },
-        {
-          "number": 7,
-          "title": "Who Is This Mission For?",
-          "duration": "24 min",
-          "servers": {
-            "sub": [
-              { "name": "HD-01", "url": "https://filemoon.in/e/oc136yrnymfv/Watch_SPY_x_FAMILY_Season_2_sub_ep_o7" },
-              { "name": "HD-02", "url": "https://mxdrop.to/e/wlw1dvg3c03ljdo" }
-            ],
-            "dub": [
-              { "name": "HD-01", "url": "https://filemoon.in/e/xxmswyuxd2a1/Watch_SPY_x_FAMILY_Season_2_Dub_07" },
-              { "name": "HD-02", "url": "https://mxdrop.to/e/8ljp3z8rt7xe74" }
-            ]
-          }
-        },
-        {
-          "number": 8,
-          "title": "The Symphony Upon the Ship",
-          "duration": "24 min",
-          "servers": {
-            "sub": [
-              { "name": "HD-01", "url": "https://filemoon.in/e/nnbj7ifssgm8/Watch_SPY_x_FAMILY_Season_2_sub_08" },
-              { "name": "HD-02", "url": "https://mxdrop.to/e/vkqw68jxu06pg6" }
-            ],
-            "dub": [
-              { "name": "HD-01", "url": "https://filemoon.in/e/o1q2eu3mv4ld/Watch_SPY_x_FAMILY_Season_2_Dub_08" },
-              { "name": "HD-02", "url": "https://mxdrop.to/e/owzvp01wf4rkkx" }
-            ]
-          }
-        },
-        {
-          "number": 9,
-          "title": "The Hand That Connects to the Future",
-          "duration": "24 min",
-          "servers": {
-            "sub": [
-              { "name": "HD-01", "url": "https://filemoon.in/e/l7g7z6tfhz14/Watch_SPY_x_FAMILY_Season_2_sub_ep_09" },
-              { "name": "HD-02", "url": "https://mxdrop.to/e/vkqw688kspd06o" }
-            ],
-            "dub": [
-              { "name": "HD-01", "url": "https://filemoon.in/e/zaiztr6debol/Watch_SPY_x_FAMILY_Season_2_Dub_09" },
-              { "name": "HD-02", "url": "https://mxdrop.to/e/r60enl41bw14lg" }
-            ]
-          }
-        },
-        {
-          "number": 10,
-          "title": "Enjoy the Resort to the Fullest / Bragging About Vacation",
-          "duration": "24 min",
-          "servers": {
-            "sub": [
-              { "name": "HD-01", "url": "https://filemoon.in/e/6ilaru5w8u0h/Watch_SPY_x_FAMILY_Season_2_coir_2_sub_ep_10" },
-              { "name": "HD-02", "url": "https://mxdrop.to/e/dkrn1pnvs73eeg1" }
-            ],
-            "dub": [
-              { "name": "HD-01", "url": "https://filemoon.in/e/l9g043a937gc/Watch_SPY_x_FAMILY_Season_2_dub_10" },
-              { "name": "HD-02", "url": "https://mxdrop.to/e/03zkp0qeceo73n" }
-            ]
-          }
-        },
-        {
-          "number": 11,
-          "title": "Berlint in Love / Nightfall's Daily Life",
-          "duration": "24 min",
-          "servers": {
-            "sub": [
-              { "name": "HD-01", "url": "https://filemoon.in/e/ev4up8lee064/Watch_SPY_x_FAMILY_Season_2_sub_ep_11" }
-            ],
-            "dub": [
-              { "name": "HD-01", "url": "https://filemoon.in/e/ewnoarq82mrm/Watch_SPY_x_FAMILY_Season_2_Dub_11" },
-              { "name": "HD-02", "url": "https://mxdrop.to/e/7kjo3x11adpowdo" }
-            ]
-          }
-        },
-        {
-          "number": 12,
-          "title": "Part of the Family",
-          "duration": "24 min",
-          "servers": {
-            "sub": [
-              { "name": "HD-01", "url": "https://filemoon.in/e/a7n03cp2194o/Watch_SPY_x_FAMILY_Season_2_sub_12" },
-              { "name": "HD-02", "url": "https://mxdrop.to/e/dkrn1z6osv76p9" }
-            ],
-            "dub": [
-              { "name": "HD-01", "url": "https://filemoon.in/e/b7vqmu69m5bu/Watch_SPY_x_FAMILY_Season_2_Dub_12" },
-              { "name": "HD-02", "url": "https://mxdrop.to/e/owzvp0krbq3wjj" }
-            ]
-          }
-        }
-      ]
+      "episodes": [...]
     },
     {
       "seasonNumber": 3,
       "airedYear": 2025,
-      "episodes": [
-        {
-          "number": 1,
-          "title": "Berlint Panic / The Informant and Nightfall",
-          "duration": "24 min",
-          "servers": {
-            "sub": [
-              { "name": "HD-01", "url": "https://filemoon.in/e/9ro0sk8chc2i/Watch_Spy_x_Family_Season_3_Sub_01" },
-              { "name": "HD-02", "url": "https://mxdrop.to/e/l79x9exlh8jlq7" }
-            ],
-            "dub": [
-              { "name": "HD-01", "url": "https://filemoon.in/e/rvzqvvmn6gmo/Watch_Spy_x_Family_Season_3_Dub_01" },
-              { "name": "HD-02", "url": "https://mxdrop.to/e/8ljpj0r6ckjg43" }
-            ]
-          }
-        },
-        {
-          "number": 2,
-          "title": "Avoid Getting Tonitrus Bolts / Memories I",
-          "duration": "24 min",
-          "servers": {
-            "sub": [
-              { "name": "HD-01", "url": "https://filemoon.in/e/qtjlshorwlwj/Watch_Spy_x_Family_Season_3_sub_02" },
-              { "name": "HD-02", "url": "https://mxdrop.to/e/67rnrdw6idq8qm" }
-            ],
-            "dub": [
-              { "name": "HD-01", "url": "https://filemoon.in/e/c62kstosvzga/Spy_x_Family_dub_02" },
-              { "name": "HD-02", "url": "https://mxdrop.to/e/q1d4dgorf7vpx8" }
-            ]
-          }
-        },
-        {
-          "number": 3,
-          "title": "Memories II",
-          "duration": "24 min",
-          "servers": {
-            "sub": [
-              { "name": "HD-01", "url": "https://filemoon.in/e/14d9xuvuyib8/Watch_Spy_x_Family_Season_3_sub_03" },
-              { "name": "HD-02", "url": "https://mxdrop.to/e/4d9g9r0ji3ee8v" }
-            ],
-            "dub": [
-              { "name": "HD-01", "url": "https://filemoon.in/e/g0y28fpilu36/Spy_x_Family_Eng_dub_03" },
-              { "name": "HD-02", "url": "https://mxdrop.to/e/9wx9x693b3vm4po" }
-            ]
-          }
-        },
-        {
-          "number": 4,
-          "title": "Behind the Scandal / The Path to an Imperial Scholar",
-          "duration": "24 min",
-          "servers": {
-            "sub": [
-              { "name": "HD-01", "url": "https://filemoon.in/e/m4wu7x8yiwj3/Watch_Spy_x_Family_Season_3_sub_04" },
-              { "name": "HD-02", "url": "https://mxdrop.to/e/owzvzp0pid93p1" }
-            ],
-            "dub": [
-              { "name": "HD-01", "url": "https://filemoon.in/e/py1uv6fvs5xp/Spy_x_Family_Eng_dub_04" },
-              { "name": "HD-02", "url": "https://mxdrop.to/e/03zkzokkc1xwnd" }
-            ]
-          }
-        },
-        {
-          "number": 5,
-          "title": "The Mommy-Friends Scheme",
-          "duration": "24 min",
-          "servers": {
-            "sub": [
-              { "name": "HD-01", "url": "https://filemoon.in/e/8kp5ioch0pc3/Watch_Spy_x_Family_Season_3_sub_05" },
-              { "name": "HD-02", "url": "https://mxdrop.to/e/9wx9xv9ei3vwej3" }
-            ],
-            "dub": [
-              { "name": "HD-01", "url": "https://filemoon.in/e/1j4dlq6ayhkw/Spy_x_Family_Eng_dub_05" },
-              { "name": "HD-02", "url": "https://mxdrop.to/e/mkzmz46nbk0gqk" }
-            ]
-          }
-        },
-        {
-          "number": 6,
-          "title": "White Jealousy / The Eden College Busjacking Incident",
-          "duration": "24 min",
-          "servers": {
-            "sub": [
-              { "name": "HD-01", "url": "https://filemoon.in/e/fqwpf5qsukx0/Watch_Spy_x_Family_Season_3_sub_06" },
-              { "name": "HD-02", "url": "https://mxdrop.to/e/gjd9dog7hd96jw" }
-            ],
-            "dub": [
-              { "name": "HD-01", "url": "https://filemoon.in/e/cgy7bagga9mb/Spy_x_Family_Eng_Dub_-_06" },
-              { "name": "HD-02", "url": "https://mxdrop.to/e/wlw1w848al4mk7" }
-            ]
-          }
-        },
-        {
-          "number": 7,
-          "title": "The Red Circus",
-          "duration": "24 min",
-          "servers": {
-            "sub": [
-              { "name": "HD-01", "url": "https://filemoon.in/e/sq3y5x64y5u1/Watch_Spy_x_Family_Season_3_sub_07" },
-              { "name": "HD-02", "url": "https://mxdrop.to/e/1nowo6mwtkq8ej1" }
-            ],
-            "dub": [
-              { "name": "HD-01", "url": "https://filemoon.in/e/yzgk584eqoar/Spy_x_Family_Eng_Dub_-_7" },
-              { "name": "HD-02", "url": "https://mxdrop.to/e/9wx9x6lnbvjz3n" }
-            ]
-          }
-        },
-        {
-          "number": 8,
-          "title": "Take Down the Busjacker",
-          "duration": "24 min",
-          "servers": {
-            "sub": [
-              { "name": "HD-01", "url": "https://filemoon.in/e/ju02f66lfr61/Watch_Spy_x_Family_Season_3_sub_08" },
-              { "name": "HD-02", "url": "https://mxdrop.to/e/z1j8jdj9tgw8e0" }
-            ],
-            "dub": [
-              { "name": "HD-01", "url": "https://filemoon.in/e/3ttu2bpmjdkj/Spy_x_Family_Eng_Dub_-_08" },
-              { "name": "HD-02", "url": "https://mxdrop.to/e/xw9z9pnpslll9jp" }
-            ]
-          }
-        },
-        {
-          "number": 9,
-          "title": "Anya's Era Has Come",
-          "duration": "24 min",
-          "servers": {
-            "sub": [
-              { "name": "HD-01", "url": "https://filemoon.in/e/qxk39jej0gry/Watch_Spy_x_Family_Season_3_sub_09" },
-              { "name": "HD-02", "url": "https://mxdrop.to/e/nln3nmxohx6r91" }
-            ],
-            "dub": [
-              { "name": "HD-01", "url": "https://filemoon.in/e/p37b2o39lnm0/Spy_x_Family_Eng_Dub_09" },
-              { "name": "HD-02", "url": "https://mxdrop.to/e/jdklk4o8t9nv8n" }
-            ]
-          }
-        },
-        {
-          "number": 10,
-          "title": "Austin's Troubles / A Normal Mixer / Moon Landing",
-          "duration": "24 min",
-          "servers": {
-            "sub": [
-              { "name": "HD-01", "url": "https://filemoon.in/e/u6dczxua5cgi/Watch_Spy_x_Family_Season_3_sub_10" },
-              { "name": "HD-02", "url": "https://mxdrop.to/e/wlw1wxdli64olq" }
-            ],
-            "dub": [
-              { "name": "HD-01", "url": "https://filemoon.in/e/wrcg8dovy2wb/Spy_x_Family_Eng_Dub_10" },
-              { "name": "HD-02", "url": "https://mxdrop.to/e/nln3ngepilzkwx" }
-            ]
-          }
-        },
-        {
-          "number": 11,
-          "title": "Extreme Level 3 Situation",
-          "duration": "24 min",
-          "servers": {
-            "sub": [
-              { "name": "HD-01", "url": "https://filemoon.in/e/ml2888rptjj5/Watch_Spy_x_Family_Season_3_sub_11" }
-            ],
-            "dub": [
-              { "name": "Coming Soon", "url": "#" }
-            ]
-          }
-        },
-        {
-          "number": 12,
-          "title": "Battle to the Death in the Sewers",
-          "duration": "24 min",
-          "servers": {
-            "sub": [
-              { "name": "HD-01", "url": "https://filemoon.in/e/si6tdyx7idq2/Watch_Spy_x_Family_Season_3_sub_12" }
-            ],
-            "dub": [
-              { "name": "Coming Soon", "url": "#" }
-            ]
-          }
-        },
-        {
-          "number": 13,
-          "title": "A World Where We Cannot Survive",
-          "duration": "24 min",
-          "servers": {
-            "sub": [
-              { "name": "HD-01", "url": "https://filemoon.in/e/ef1o4jjxt9v4/Watch_Spy_x_Family_Season_3_sub_13" }
-            ],
-            "dub": [
-              { "name": "Coming Soon", "url": "#" }
-            ]
-          }
-        }
-      ]
+      "episodes": [...]
     }
   ]
-},       
+},
   {
   "id": "spy-family-s2",
   "slug": "spy-family-season-2",
@@ -9247,7 +9235,7 @@
   "backdropUrl": "https://cdn.myanimelist.net/images/anime/1190/151754l.jpg",
   "trailerUrl": "https://www.youtube.com/watch?v=OaZO-vSY774",
   "malScore": 7.62,
-  "imbdScore": 7.9,
+  "imdbScore": 7.9,
   "popularity": 1245,
   "genres": [ "Action", "Fantasy", "Comedy", "Villainess", "Shojo" ],
   "cast": [ "Asami Seto", "Wataru Katou", "Taito Ban", "Miyu Tomita" ],
@@ -9571,7 +9559,7 @@
     "backdropUrl": null,
     "trailerUrl": null,
     "malScore": 6.48,
-    "imbdScore": 0.0,
+    "imdbScore": 0.0,
     "popularity": 5407,
     "genres": ["Supernatural", "Action"],
     "cast": ["Renri Hasumi", "Fumiya Imai"],
@@ -9883,22 +9871,22 @@
     "searchableTitle": "You and I Are Polar Opposites Seihantai na Kimi to Boku 正反対な君と僕",
     "airedYear": 2026,
     "dateAdded": "2025-08-21",
-    "type": "Anime",
+    "type": "anime",
     "featured": false,
     "rating": 7.0,
     "category": "romance",
     "premiered": "Winter 2026",
     "duration": "24 min",
-    "status": "Airing",
-    "description": "Next to Miyu Suzuki, a trendy and bubbly high school girl, sits Yuusuke Tani, a quiet and frank boy. Their interactions are brief but their personalities are polar opposites [[15]].",
+    "status": "Not yet aired",
+    "description": "Next to Miyu Suzuki, a trendy and bubbly high school girl, sits Yuusuke Tani, a quiet and frank boy. Their interactions are brief but their personalities are polar opposites.",
     "posterUrl": "https://cdn.myanimelist.net/images/anime/1140/154457l.jpg",
     "backdropUrl": null,
     "trailerUrl": null,
     "malScore": 7.97,
-    "imbdScore": 0.0,
+    "imdbScore": 0.0,
     "popularity": 3660,
     "genres": ["Romance", "Comedy", "School"],
-    "cast": [ "Sayumi Suzushiro", "Shōgo Sakata" ],
+    "cast": ["Sayumi Suzushiro", "Shōgo Sakata"],
     "certification": "TV-14",
     "country": "Japan",
     "studio": "Lapin Track",
@@ -9915,26 +9903,26 @@
     "searchableTitle": "In the Clear Moonlit Dusk Uruwashi no Yoi no Tsuki 麗しの宵の月",
     "airedYear": 2026,
     "dateAdded": "2025-10-03",
-    "type": "Anime",
+    "type": "anime",
     "featured": false,
     "rating": 0.0,
     "category": "shoujo",
     "premiered": "Winter 2026",
     "duration": "24 min",
     "status": "Not yet aired",
-    "description": "Every time Yoi Takiguchi so much as lets out a sigh, her female classmates squeal in admiration and awe. She has been dubbed the school's prince [[22]].",
+    "description": "Every time Yoi Takiguchi so much as lets out a sigh, her female classmates squeal in admiration and awe. She has been dubbed the school's prince.",
     "posterUrl": "https://cdn.myanimelist.net/images/anime/1999/154569l.jpg",
     "backdropUrl": null,
     "trailerUrl": null,
     "malScore": 7.44,
-    "imbdScore": 0.0,
+    "imdbScore": 0.0,
     "popularity": 4119,
     "genres": ["Romance", "School", "Shoujo"],
-    "cast": ["Rei Ichinomiya", "Ryōta Suzuki"]
+    "cast": ["Rei Ichinomiya", "Ryōta Suzuki"],
     "certification": "TV-14",
     "country": "Japan",
     "studio": "Studio Bind",
-    "producers": [ "East Fish Studio", "Atelier Peuplier"],
+    "producers": ["East Fish Studio", "Atelier Peuplier"],
     "seasons": []
   },
   {
@@ -9947,19 +9935,19 @@
     "searchableTitle": "A Misanthrope Teaches a Class for Demi-Humans Jingai Kyoushitsu no Ningengirai Kyoushi 人外教室の人間嫌い教師",
     "airedYear": 2026,
     "dateAdded": "2025-12-19",
-    "type": "Anime",
+    "type": "anime",
     "featured": false,
     "rating": 0.0,
     "category": "fantasy",
     "premiered": "Winter 2026",
     "duration": "24 min",
     "status": "Not yet aired",
-    "description": "I'm Rei Hitoma, a self-professed misanthrope thanks to some past trauma. Just when I thought my new teaching job in the mountains would be peaceful, I discover the school is for demi-humans who want to become human [[33]].",
+    "description": "I'm Rei Hitoma, a self-professed misanthrope thanks to some past trauma. Just when I thought my new teaching job in the mountains would be peaceful, I discover the school is for demi-humans who want to become human.",
     "posterUrl": "https://cdn.myanimelist.net/images/anime/placeholder.jpg",
     "backdropUrl": null,
     "trailerUrl": null,
     "malScore": 0.0,
-    "imbdScore": 0.0,
+    "imdbScore": 0.0,
     "popularity": 0,
     "genres": ["Fantasy", "Comedy", "School"],
     "cast": ["Reina Ueda", "Yui Ishikawa", "Sora Amamiya", "Toshiki Masuda", "Yui Horie"],
@@ -9979,19 +9967,19 @@
     "searchableTitle": "Scum of the Brave Yuusha no Kuzu 勇者のクズ",
     "airedYear": 2026,
     "dateAdded": "2025-12-19",
-    "type": "Anime",
+    "type": "anime",
     "featured": false,
     "rating": 0.0,
     "category": "action",
     "premiered": "Winter 2026",
     "duration": "24 min",
     "status": "Not yet aired",
-    "description": "By the mid-21st century, Tokyo's criminal underworld is ruled by Demon Lords—crime bosses who have undergone ether enhancement surgery, granting them terrifying power. Yashiro, the 'Angel of Death,' a freelance Brave, is roped into going up against a Demon King in Shibuya [[41]].",
+    "description": "By the mid-21st century, Tokyo's criminal underworld is ruled by Demon Lords—crime bosses who have undergone ether enhancement surgery, granting them terrifying power. Yashiro, the 'Angel of Death,' a freelance Brave, is roped into going up against a Demon King in Shibuya.",
     "posterUrl": "https://cdn.myanimelist.net/images/anime/placeholder.jpg",
     "backdropUrl": null,
     "trailerUrl": null,
     "malScore": 0.0,
-    "imbdScore": 0.0,
+    "imdbScore": 0.0,
     "popularity": 0,
     "genres": ["Action", "Sci-Fi", "Supernatural"],
     "cast": [],
@@ -10011,19 +9999,19 @@
     "searchableTitle": "Fire Force Season 3 Part 1 Enen no Shouboutai: San no Shou Part 1 炎炎ノ消防隊 参ノ章 前編",
     "airedYear": 2025,
     "dateAdded": "2025-04-04",
-    "type": "Anime",
+    "type": "anime",
     "featured": false,
     "rating": 8.2,
     "category": "action",
     "premiered": "Spring 2025",
     "duration": "24 min",
     "status": "Finished Airing",
-    "description": "After undergoing Benimaru Shinmon's hellish training, Shinra Kusakabe and Arthur Boyle return to Special Fire Force Company 8 [[60]].",
+    "description": "After undergoing Benimaru Shinmon's hellish training, Shinra Kusakabe and Arthur Boyle return to Special Fire Force Company 8.",
     "posterUrl": "https://cdn.myanimelist.net/images/anime/1357/138615l.jpg",
     "backdropUrl": null,
     "trailerUrl": null,
     "malScore": 8.2,
-    "imbdScore": 0.0,
+    "imdbScore": 0.0,
     "popularity": 0,
     "genres": ["Action", "Supernatural", "Sci-Fi"],
     "cast": [],
@@ -10043,19 +10031,19 @@
     "searchableTitle": "Fire Force Season 3 Part 2 Enen no Shouboutai: San no Shou Part 2 炎炎ノ消防隊 参ノ章 後編",
     "airedYear": 2026,
     "dateAdded": "2026-01-01",
-    "type": "Anime",
+    "type": "anime",
     "featured": false,
     "rating": 0.0,
     "category": "action",
     "premiered": "Winter 2026",
     "duration": "24 min",
     "status": "Not yet aired",
-    "description": "As rival brigades clash, Infernal incidents increase, and a shadowy organization emerges, Shinra finds himself caught in a web of conspiracies leading to the fiery finale [[57]].",
+    "description": "As rival brigades clash, Infernal incidents increase, and a shadowy organization emerges, Shinra finds himself caught in a web of conspiracies leading to the fiery finale.",
     "posterUrl": "https://cdn.myanimelist.net/images/anime/placeholder.jpg",
     "backdropUrl": null,
     "trailerUrl": null,
     "malScore": 0.0,
-    "imbdScore": 0.0,
+    "imdbScore": 0.0,
     "popularity": 0,
     "genres": ["Action", "Supernatural", "Sci-Fi"],
     "cast": [],
@@ -10075,19 +10063,19 @@
     "searchableTitle": "Trigun Stargaze TRIGUN STARGAZE トライガン STARGAZE",
     "airedYear": 2026,
     "dateAdded": "2025-12-06",
-    "type": "Anime",
+    "type": "anime",
     "featured": false,
     "rating": 0.0,
     "category": "action",
     "premiered": "Winter 2026",
     "duration": "24 min",
     "status": "Not yet aired",
-    "description": "Two and a half years have passed since the Lost July incident, a catastrophe that reduced an entire city to ruins and sent shockwaves across the world. On the desert planet of No Man's Land, Vash the Stampede faces his final confrontation with his brother, Millions Knives [[67]].",
+    "description": "Two and a half years have passed since the Lost July incident, a catastrophe that reduced an entire city to ruins and sent shockwaves across the world. On the desert planet of No Man's Land, Vash the Stampede faces his final confrontation with his brother, Millions Knives.",
     "posterUrl": "https://cdn.myanimelist.net/images/anime/placeholder.jpg",
     "backdropUrl": null,
     "trailerUrl": null,
     "malScore": 0.0,
-    "imbdScore": 0.0,
+    "imdbScore": 0.0,
     "popularity": 0,
     "genres": ["Action", "Sci-Fi", "Adventure"],
     "cast": ["Chika Ayamori"],
@@ -10107,19 +10095,19 @@
     "searchableTitle": "Champignon Witch Champignon no Majo シャンピニオンの魔女",
     "airedYear": 2026,
     "dateAdded": "2025-12-19",
-    "type": "Anime",
+    "type": "anime",
     "featured": false,
     "rating": 0.0,
     "category": "fantasy",
     "premiered": "Winter 2026",
     "duration": "24 min",
     "status": "Not yet aired",
-    "description": "Deep within the Black Forest teeming with poisonous mushrooms, a witch named Luna lives alone. With skin that is poisonous to the touch and a breath that will kill if close enough, she is forced to stay secluded from the world [[77]].",
+    "description": "Deep within the Black Forest teeming with poisonous mushrooms, a witch named Luna lives alone. With skin that is poisonous to the touch and a breath that will kill if close enough, she is forced to stay secluded from the world.",
     "posterUrl": "https://cdn.myanimelist.net/images/anime/placeholder.jpg",
     "backdropUrl": null,
     "trailerUrl": null,
     "malScore": 0.0,
-    "imbdScore": 0.0,
+    "imdbScore": 0.0,
     "popularity": 0,
     "genres": ["Fantasy", "Slice of Life", "Supernatural"],
     "cast": [],
@@ -10139,19 +10127,19 @@
     "searchableTitle": "Anyway, I'm Falling in Love with You. Season 1 Douse, Koishite Shimaunda. どうせ、恋してしまうんだ。",
     "airedYear": 2025,
     "dateAdded": "2025-01-09",
-    "type": "Anime",
+    "type": "anime",
     "featured": false,
     "rating": 7.2,
     "category": "romance",
     "premiered": "Winter 2025",
     "duration": "24 min",
     "status": "Finished Airing",
-    "description": "Mizuha's 17th birthday is the pits. Her parents totally forgot, and the senpai she likes isn't interested in her. But when her longtime childhood friend asks her out, her life takes a surprising turn [[86]].",
+    "description": "Mizuha's 17th birthday is the pits. Her parents totally forgot, and the senpai she likes isn't interested in her. But when her longtime childhood friend asks her out, her life takes a surprising turn.",
     "posterUrl": "https://cdn.myanimelist.net/images/anime/1708/138336l.jpg",
     "backdropUrl": null,
     "trailerUrl": null,
     "malScore": 7.2,
-    "imbdScore": 0.0,
+    "imdbScore": 0.0,
     "popularity": 0,
     "genres": ["Romance", "Drama", "School", "Shoujo"],
     "cast": [],
@@ -10171,19 +10159,19 @@
     "searchableTitle": "Anyway, I'm Falling in Love with You. Season 2 Douse, Koishite Shimaunda. 2nd Season どうせ、恋してしまうんだ。2nd Season",
     "airedYear": 2026,
     "dateAdded": "2026-01-01",
-    "type": "Anime",
+    "type": "anime",
     "featured": false,
     "rating": 6.57,
     "category": "romance",
     "premiered": "Winter 2026",
     "duration": "24 min",
     "status": "Not yet aired",
-    "description": "The story of Mizuho Nishino and her childhood friends continues as they navigate their relationships and futures [[92]].",
+    "description": "The story of Mizuho Nishino and her childhood friends continues as they navigate their relationships and futures.",
     "posterUrl": "https://cdn.myanimelist.net/images/anime/placeholder.jpg",
     "backdropUrl": null,
     "trailerUrl": null,
     "malScore": 6.57,
-    "imbdScore": 0.0,
+    "imdbScore": 0.0,
     "popularity": 0,
     "genres": ["Romance", "Drama", "School", "Shoujo"],
     "cast": [],
@@ -10203,19 +10191,19 @@
     "searchableTitle": "Jujutsu Kaisen The Culling Game Part 1 Jujutsu Kaisen: Shimetsu Kaiyuu - Zenpen 呪術廻戦 殲滅凱遊 前編",
     "airedYear": 2026,
     "dateAdded": "2025-08-31",
-    "type": "Anime",
+    "type": "anime",
     "featured": false,
     "rating": 0.0,
     "category": "action",
     "premiered": "Winter 2026",
     "duration": "24 min",
     "status": "Not yet aired",
-    "description": "The first part of the third season, adapting Gege Akutami's supernatural action manga, will premiere in Winter 2026 [[103]].",
+    "description": "The first part of the third season, adapting Gege Akutami's supernatural action manga, will premiere in Winter 2026.",
     "posterUrl": "https://cdn.myanimelist.net/images/anime/placeholder.jpg",
     "backdropUrl": null,
     "trailerUrl": null,
     "malScore": 0.0,
-    "imbdScore": 0.0,
+    "imdbScore": 0.0,
     "popularity": 0,
     "genres": ["Action", "Supernatural", "Horror"],
     "cast": [],
@@ -10235,19 +10223,19 @@
     "searchableTitle": "Roll over and Die Omae Gotoki ga Maou ni Kateru to Omouna to Yuusha Party wo Oida Reta no de, Kozukuri Na Saikyou Shuzoku to Mahou Ken Wo Te Ni Irete Futsuu Ni Ikinobiru Koto Ni Shita お前ごときが魔王に勝てると思うなと勇者パーティーを追放されたので、こじくりな最強種族と魔法剣を手に入れて普通に生き延びることにした",
     "airedYear": 2024,
     "dateAdded": "2024-01-01",
-    "type": "Anime",
+    "type": "anime",
     "featured": false,
     "rating": 6.8,
     "category": "fantasy",
     "premiered": "Winter 2024",
     "duration": "24 min",
     "status": "Finished Airing",
-    "description": "Flum has been chosen by God to be in the hero's party despite having stats of zero across the board. All she has is the 'Reversal' ability [[109]].",
+    "description": "Flum has been chosen by God to be in the hero's party despite having stats of zero across the board. All she has is the 'Reversal' ability.",
     "posterUrl": "https://cdn.myanimelist.net/images/anime/1028/138592l.jpg",
     "backdropUrl": null,
     "trailerUrl": null,
     "malScore": 6.8,
-    "imbdScore": 0.0,
+    "imdbScore": 0.0,
     "popularity": 0,
     "genres": ["Action", "Fantasy", "Adventure"],
     "cast": [],
@@ -10267,19 +10255,19 @@
     "searchableTitle": "A Gentle Noble's Vacation Recommendation Odayaka Kizoku no Kyuuka no Susume おだやか貴族の休暇のススメ",
     "airedYear": 2026,
     "dateAdded": "2025-10-03",
-    "type": "Anime",
+    "type": "anime",
     "featured": false,
     "rating": 0.0,
     "category": "isekai",
     "premiered": "Winter 2026",
     "duration": "24 min",
     "status": "Not yet aired",
-    "description": "When Lizel mysteriously finds himself in a city that bears odd similarities to his own but clearly isn't, he quickly comes to terms with the unlikely truth and decides to enjoy a vacation [[120]].",
+    "description": "When Lizel mysteriously finds himself in a city that bears odd similarities to his own but clearly isn't, he quickly comes to terms with the unlikely truth and decides to enjoy a vacation.",
     "posterUrl": "https://cdn.myanimelist.net/images/anime/placeholder.jpg",
     "backdropUrl": null,
     "trailerUrl": null,
     "malScore": 0.0,
-    "imbdScore": 0.0,
+    "imdbScore": 0.0,
     "popularity": 0,
     "genres": ["Fantasy", "Isekai", "Slice of Life"],
     "cast": [],
@@ -10299,19 +10287,19 @@
     "searchableTitle": "The Invisible Man and His Soon-to-Be Wife Toumei Otoko to Ningen Onna: Sonouchi Fuufu ni Naru Futari 透明男と人間女 そのうち夫婦になる二人",
     "airedYear": 2026,
     "dateAdded": "2025-04-19",
-    "type": "Anime",
+    "type": "anime",
     "featured": false,
     "rating": 0.0,
     "category": "romance",
     "premiered": "Winter 2026",
     "duration": "24 min",
     "status": "Not yet aired",
-    "description": "Akira Tounome is an invisible gentleman who runs a detective agency, and Shizuka Yakou is a mild-mannered blind woman who works there. This manga is a super heartwarming urban fantasy office romance [[124]][[123]].",
+    "description": "Akira Tounome is an invisible gentleman who runs a detective agency, and Shizuka Yakou is a mild-mannered blind woman who works there. This manga is a super heartwarming urban fantasy office romance.",
     "posterUrl": "https://cdn.myanimelist.net/images/anime/placeholder.jpg",
     "backdropUrl": null,
     "trailerUrl": null,
     "malScore": 0.0,
-    "imbdScore": 0.0,
+    "imdbScore": 0.0,
     "popularity": 0,
     "genres": ["Romance", "Supernatural", "Comedy"],
     "cast": [],
@@ -10331,19 +10319,19 @@
     "searchableTitle": "The Holy Grail of Eris Eris no Seihai エリスの聖杯",
     "airedYear": 2026,
     "dateAdded": "2025-12-19",
-    "type": "Anime",
+    "type": "anime",
     "featured": false,
     "rating": 0.0,
     "category": "mystery",
     "premiered": "Winter 2026",
     "duration": "24 min",
     "status": "Not yet aired",
-    "description": "As a viscount's daughter, Constance Grail is an ordinary girl whose only notable trait is sincerity, leaving her with no real options when someone steals her family's heirloom, the Holy Grail of Eris [[137]].",
+    "description": "As a viscount's daughter, Constance Grail is an ordinary girl whose only notable trait is sincerity, leaving her with no real options when someone steals her family's heirloom, the Holy Grail of Eris.",
     "posterUrl": "https://cdn.myanimelist.net/images/anime/placeholder.jpg",
     "backdropUrl": null,
     "trailerUrl": null,
     "malScore": 0.0,
-    "imbdScore": 0.0,
+    "imdbScore": 0.0,
     "popularity": 0,
     "genres": ["Mystery", "Fantasy", "Drama"],
     "cast": ["Natsuki Hanae", "Jun Fukuyama", "Yôhei Azakami", "Maaya Uchida"],
@@ -10363,19 +10351,19 @@
     "searchableTitle": "Chained Soldier Season 1 Mato Seihei no Slave 魔都精兵の奴隷",
     "airedYear": 2024,
     "dateAdded": "2024-01-01",
-    "type": "Anime",
+    "type": "anime",
     "featured": false,
     "rating": 6.85,
     "category": "action",
     "premiered": "Winter 2024",
     "duration": "24 min",
     "status": "Finished Airing",
-    "description": "After his high school graduation, Yuuki Wakura realizes it has been five years since his sister's disappearance during a Mato disaster. One day, he gets lost at the entrance of a demon city and becomes the 'slave' of a superpowered squad of women [[148]].",
+    "description": "After his high school graduation, Yuuki Wakura realizes it has been five years since his sister's disappearance during a Mato disaster. One day, he gets lost at the entrance of a demon city and becomes the 'slave' of a superpowered squad of women.",
     "posterUrl": "https://cdn.myanimelist.net/images/anime/1708/136696l.jpg",
     "backdropUrl": null,
     "trailerUrl": null,
     "malScore": 6.85,
-    "imbdScore": 0.0,
+    "imdbScore": 0.0,
     "popularity": 0,
     "genres": ["Action", "Fantasy", "Ecchi"],
     "cast": [],
@@ -10395,19 +10383,19 @@
     "searchableTitle": "Chained Soldier Season 2 Mato Seihei no Slave 2 魔都精兵の奴隷 2",
     "airedYear": 2026,
     "dateAdded": "2025-12-30",
-    "type": "Anime",
+    "type": "anime",
     "featured": false,
     "rating": 0.0,
     "category": "action",
     "premiered": "Winter 2026",
     "duration": "24 min",
     "status": "Not yet aired",
-    "description": "The second season of Chained Soldier continues the story of Yuuki Wakura and the Mato Seihei [[150]].",
+    "description": "The second season of Chained Soldier continues the story of Yuuki Wakura and the Mato Seihei.",
     "posterUrl": "https://cdn.myanimelist.net/images/anime/placeholder.jpg",
     "backdropUrl": null,
     "trailerUrl": null,
     "malScore": 0.0,
-    "imbdScore": 0.0,
+    "imdbScore": 0.0,
     "popularity": 0,
     "genres": ["Action", "Fantasy", "Ecchi"],
     "cast": [],
@@ -10427,19 +10415,19 @@
     "searchableTitle": "An Adventurer's Daily Grind at Age 29 29-sai Dokushin Chuuken Boukensha no Nichijou 29歳独身中堅冒険者の日常",
     "airedYear": 2023,
     "dateAdded": "2023-01-06",
-    "type": "Anime",
+    "type": "anime",
     "featured": false,
     "rating": 7.47,
     "category": "fantasy",
     "premiered": "Winter 2023",
     "duration": "24 min",
     "status": "Finished Airing",
-    "description": "This story is about Shinonome Hajime, an adventurer of Silver Range. He's dedicated to fulfilling missions from the guild. One day, while dungeon-diving for work, he encounters a starving girl named Rirui [[161]][[164]].",
+    "description": "This story is about Shinonome Hajime, an adventurer of Silver Range. He's dedicated to fulfilling missions from the guild. One day, while dungeon-diving for work, he encounters a starving girl named Rirui.",
     "posterUrl": "https://cdn.myanimelist.net/images/anime/1708/136192l.jpg",
     "backdropUrl": null,
     "trailerUrl": null,
     "malScore": 7.47,
-    "imbdScore": 0.0,
+    "imdbScore": 0.0,
     "popularity": 0,
     "genres": ["Fantasy", "Slice of Life", "Adventure"],
     "cast": [],
@@ -10449,38 +10437,39 @@
     "producers": ["Kadokawa"],
     "seasons": []
   },
-{
-  "id": "fate-strange-fake-tv",
-  "slug": "fate-strange-fake",
-  "title": "Fate/strange Fake",
-  "originalTitle": "Fate/strange Fake",
-  "japaneseTitle": "フェイト/ストレンジフェイク",
-  "synonyms": ["FSF"],
-  "searchableTitle": "Fate/strange Fake FSF Fate Series Snowfield Holy Grail War",
-  "airedYear": 2026,
-  "dateAdded": "2026-01-03",
-  "type": "Anime",
-  "featured": true,
-  "rating": null,
-  "category": "action",
-  "premiered": "Winter 2026",
-  "duration": "24 min",
-  "status": "Currently Airing",
-  "description": "In the American city of Snowfield, a false Holy Grail War begins, faultily copied from the Third Holy Grail War in Fuyuki. This irregular ritual summons strange Servants and lacks a standard Saber class, drawing the attention of the Mage's Association and various factions into a twisted conflict where the definition of a 'hero' is blurred.",
-  "posterUrl": "fatesf-anime.com",
-  "backdropUrl": null,
-  "trailerUrl": "https://www.youtube.com/watch?v=qMZThcudH5c",
-  "malScore": null,
-  "imdbScore": null,
-  "popularity": 0,
-  "genres": ["Action", "Fantasy", "Supernatural", "Mystery"],
-  "cast": ["Kana Hanazawa", "Yūki Ono", "Tomokazu Seki", "Yū Kobayashi"],
-  "certification": "TV-14",
-  "country": "Japan",
-  "studio": "A-1 Pictures",
-  "producers": ["Aniplex", "Notes", "Kadokawa"]
-  
-},
+  {
+    "id": "fate-strange-fake-tv",
+    "slug": "fate-strange-fake",
+    "title": "Fate/strange Fake",
+    "originalTitle": "Fate/strange Fake",
+    "japaneseTitle": "フェイト/ストレンジフェイク",
+    "synonyms": ["FSF"],
+    "searchableTitle": "Fate/strange Fake FSF Fate Series Snowfield Holy Grail War",
+    "airedYear": 2026,
+    "dateAdded": "2026-01-03",
+    "type": "anime",
+    "featured": true,
+    "rating": null,
+    "category": "action",
+    "premiered": "Winter 2026",
+    "duration": "24 min",
+    "status": "Not yet aired",
+    "description": "In the American city of Snowfield, a false Holy Grail War begins, faultily copied from the Third Holy Grail War in Fuyuki. This irregular ritual summons strange Servants and lacks a standard Saber class, drawing the attention of the Mage's Association and various factions into a twisted conflict where the definition of a 'hero' is blurred.",
+    "posterUrl": "https://fatesf-anime.com",
+    "backdropUrl": null,
+    "trailerUrl": "https://www.youtube.com/watch?v=qMZThcudH5c",
+    "malScore": null,
+    "imdbScore": null,
+    "popularity": 0,
+    "genres": ["Action", "Fantasy", "Supernatural", "Mystery"],
+    "cast": ["Kana Hanazawa", "Yūki Ono", "Tomokazu Seki", "Yū Kobayashi"],
+    "certification": "TV-14",
+    "country": "Japan",
+    "studio": "A-1 Pictures",
+    "producers": ["Aniplex", "Notes", "Kadokawa"],
+    "seasons": []
+  }
+]
 
 
       
