@@ -1,0 +1,9 @@
+            ]  // ← This closes the "dub" array (LINE 17 in your snippet)
+          }  // ← This closes the "servers" object
+        }  // ← This closes the episode 13 object
+      ]  // ← This closes the "episodes" array (contains all episodes 1-13)
+    }  // ← This closes the season 3 object
+  ]  // ← This closes the "seasons" array
+}  // ← This closes the main anime object
+,  // ← Comma would separate this object from next anime object in array
+{  // ← Would open next anime object if there was one
