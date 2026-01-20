@@ -622,27 +622,8 @@
                         Next <span class="material-symbols-outlined text-sm">skip_next</span>
                     </button>
                 </div>
-                
-                <!-- Season Selection for Mobile -->
-                <div class="pt-4 border-t border-gray-200 dark:border-gray-700">
-                    <h3 class="text-sm font-medium text-gray-700 dark:text-gray-300 mb-3">Select Season:</h3>
-                    <div class="flex overflow-x-auto gap-2 pb-2 hide-scrollbar">
-                        <button class="season-btn px-4 py-2 text-sm font-medium text-primary border-b-2 border-primary whitespace-nowrap transition-colors active" data-season="1" onclick="selectSeason(this)">Season 1</button>
-                        <button class="season-btn px-4 py-2 text-sm font-medium text-gray-500 dark:text-gray-400 hover:text-gray-800 dark:hover:text-gray-200 whitespace-nowrap transition-colors border-b-2 border-transparent" data-season="2" onclick="selectSeason(this)">Season 2</button>
-                        <button class="season-btn px-4 py-2 text-sm font-medium text-gray-500 dark:text-gray-400 hover:text-gray-800 dark:hover:text-gray-200 whitespace-nowrap transition-colors border-b-2 border-transparent" data-season="3" onclick="selectSeason(this)">Season 3</button>
-                        <button class="season-btn px-4 py-2 text-sm font-medium text-gray-500 dark:text-gray-400 hover:text-gray-800 dark:hover:text-gray-200 whitespace-nowrap transition-colors border-b-2 border-transparent" data-season="4" onclick="selectSeason(this)">Season 4</button>
-                        <button class="season-btn px-4 py-2 text-sm font-medium text-gray-500 dark:text-gray-400 hover:text-gray-800 dark:hover:text-gray-200 whitespace-nowrap transition-colors border-b-2 border-transparent" data-season="ova" onclick="selectSeason(this)">OVA</button>
-                    </div>
-                </div>
-                
-                <!-- Episode Selection for Mobile - Now appears as a list below season selection -->
-                <div id="mobile-episode-section" class="pt-4 border-t border-gray-200 dark:border-gray-700">
-                    <h3 class="text-sm font-medium text-gray-700 dark:text-gray-300 mb-3">Select Episode:</h3>
-                    <div class="mobile-episode-list episode-list-container custom-scrollbar" id="episode-list-mobile">
-                        <!-- Episodes will be loaded here as a list -->
-                    </div>
-                </div>
-                
+
+              
                 <!-- Server Selection for Mobile -->
                 <div class="pt-4 border-t border-gray-200 dark:border-gray-700">
                     <h3 class="text-sm font-medium text-gray-700 dark:text-gray-300 mb-3">Select Server:</h3>
@@ -682,6 +663,26 @@
             </div>
         </div>
     </div>
+  
+                <!-- Season Selection for Mobile -->
+                <div class="pt-4 border-t border-gray-200 dark:border-gray-700">
+                    <h3 class="text-sm font-medium text-gray-700 dark:text-gray-300 mb-3">Select Season:</h3>
+                    <div class="flex overflow-x-auto gap-2 pb-2 hide-scrollbar">
+                        <button class="season-btn px-4 py-2 text-sm font-medium text-primary border-b-2 border-primary whitespace-nowrap transition-colors active" data-season="1" onclick="selectSeason(this)">Season 1</button>
+                        <button class="season-btn px-4 py-2 text-sm font-medium text-gray-500 dark:text-gray-400 hover:text-gray-800 dark:hover:text-gray-200 whitespace-nowrap transition-colors border-b-2 border-transparent" data-season="2" onclick="selectSeason(this)">Season 2</button>
+                        <button class="season-btn px-4 py-2 text-sm font-medium text-gray-500 dark:text-gray-400 hover:text-gray-800 dark:hover:text-gray-200 whitespace-nowrap transition-colors border-b-2 border-transparent" data-season="3" onclick="selectSeason(this)">Season 3</button>
+                        <button class="season-btn px-4 py-2 text-sm font-medium text-gray-500 dark:text-gray-400 hover:text-gray-800 dark:hover:text-gray-200 whitespace-nowrap transition-colors border-b-2 border-transparent" data-season="4" onclick="selectSeason(this)">Season 4</button>
+                        <button class="season-btn px-4 py-2 text-sm font-medium text-gray-500 dark:text-gray-400 hover:text-gray-800 dark:hover:text-gray-200 whitespace-nowrap transition-colors border-b-2 border-transparent" data-season="ova" onclick="selectSeason(this)">OVA</button>
+                    </div>
+                </div>
+                
+                <!-- Episode Selection for Mobile - Now appears as a list below season selection -->
+                <div id="mobile-episode-section" class="pt-4 border-t border-gray-200 dark:border-gray-700">
+                    <h3 class="text-sm font-medium text-gray-700 dark:text-gray-300 mb-3">Select Episode:</h3>
+                    <div class="mobile-episode-list episode-list-container custom-scrollbar" id="episode-list-mobile">
+                        <!-- Episodes will be loaded here as a list -->
+                    </div>
+                </div>
 
     <!-- Responsive Layout - Mobile: Stacked, Desktop: Sidebar -->
     <div class="flex flex-col lg:flex-row gap-6">
