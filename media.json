@@ -3702,12 +3702,12 @@
           "airedDate": "2025-11-30",
           "servers": {
             "raw": [
-              { "name": "HD-01", "url": "" }, // Link not provided in initial input
+              { "name": "HD-01", "url": "https://server-raw.com/uma-musume-cinderella-gray-p2-s2-e9-1" }
               { "name": "HD-02", "url": "https://filemoon.to/e/pupjbn9rnfm6/Watch_Umamusume__Cinderella_Gray_Part_2_Sub_09" },
               { "name": "HD-03", "url": "https://mxdrop.to/e/1n4dwr7kiexwxj" }
             ],
             "sub": [
-              { "name": "HD-01", "url": "" }, // Link not provided in initial input
+              { "name": "HD-01", "url": "https://server-sub.com/uma-musume-cinderella-gray-p2-s2-e9-1" }, 
               { "name": "HD-02", "url": "https://filemoon.to/e/pupjbn9rnfm6/Watch_Umamusume__Cinderella_Gray_Part_2_Sub_09" },
               { "name": "HD-03", "url": "https://mxdrop.to/e/1n4dwr7kiexwxj" }
             ],
