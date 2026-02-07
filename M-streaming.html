@@ -35,6 +35,8 @@
 </script>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
 <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Ads Script -->
+<script src="https://pl28618037.effectivegatecpm.com/7a/03/70/7a0370708ca9313fa60058b5fa0c1022.js"></script>
 <style>
     /* Prevent horizontal scrolling */
     html, body {
@@ -581,7 +583,7 @@
                 <!-- Current watching info -->
                 <div class="flex items-center justify-between">
                     <div class="flex items-center gap-2">
-                        <span class="text-sm text-gray-500 dark:text-gray-400">You are Watching:</span>
+                        <span class="text-sm text-gray-500 dark:text-gray-400">You R Watching:</span>
                         <span class="font-bold text-primary" id="current-episode-display-mobile">Episode 1</span>
                     </div>
                     <div class="flex items-center gap-1 text-xs text-gray-500 dark:text-gray-400">
@@ -622,8 +624,27 @@
                         Next <span class="material-symbols-outlined text-sm">skip_next</span>
                     </button>
                 </div>
-
-              
+                
+                <!-- Season Selection for Mobile -->
+                <div class="pt-4 border-t border-gray-200 dark:border-gray-700">
+                    <h3 class="text-sm font-medium text-gray-700 dark:text-gray-300 mb-3">Select Season:</h3>
+                    <div class="flex overflow-x-auto gap-2 pb-2 hide-scrollbar">
+                        <button class="season-btn px-4 py-2 text-sm font-medium text-primary border-b-2 border-primary whitespace-nowrap transition-colors active" data-season="1" onclick="selectSeason(this)">Season 1</button>
+                        <button class="season-btn px-4 py-2 text-sm font-medium text-gray-500 dark:text-gray-400 hover:text-gray-800 dark:hover:text-gray-200 whitespace-nowrap transition-colors border-b-2 border-transparent" data-season="2" onclick="selectSeason(this)">Season 2</button>
+                        <button class="season-btn px-4 py-2 text-sm font-medium text-gray-500 dark:text-gray-400 hover:text-gray-800 dark:hover:text-gray-200 whitespace-nowrap transition-colors border-b-2 border-transparent" data-season="3" onclick="selectSeason(this)">Season 3</button>
+                        <button class="season-btn px-4 py-2 text-sm font-medium text-gray-500 dark:text-gray-400 hover:text-gray-800 dark:hover:text-gray-200 whitespace-nowrap transition-colors border-b-2 border-transparent" data-season="4" onclick="selectSeason(this)">Season 4</button>
+                        <button class="season-btn px-4 py-2 text-sm font-medium text-gray-500 dark:text-gray-400 hover:text-gray-800 dark:hover:text-gray-200 whitespace-nowrap transition-colors border-b-2 border-transparent" data-season="ova" onclick="selectSeason(this)">OVA</button>
+                    </div>
+                </div>
+                
+                <!-- Episode Selection for Mobile - Now appears as a list below season selection -->
+                <div id="mobile-episode-section" class="pt-4 border-t border-gray-200 dark:border-gray-700">
+                    <h3 class="text-sm font-medium text-gray-700 dark:text-gray-300 mb-3">Select Episode:</h3>
+                    <div class="mobile-episode-list episode-list-container custom-scrollbar" id="episode-list-mobile">
+                        <!-- Episodes will be loaded here as a list -->
+                    </div>
+                </div>
+                
                 <!-- Server Selection for Mobile -->
                 <div class="pt-4 border-t border-gray-200 dark:border-gray-700">
                     <h3 class="text-sm font-medium text-gray-700 dark:text-gray-300 mb-3">Select Server:</h3>
@@ -663,26 +684,6 @@
             </div>
         </div>
     </div>
-  
-                <!-- Season Selection for Mobile -->
-                <div class="pt-4 border-t border-gray-200 dark:border-gray-700">
-                    <h3 class="text-sm font-medium text-gray-700 dark:text-gray-300 mb-3">Select Season:</h3>
-                    <div class="flex overflow-x-auto gap-2 pb-2 hide-scrollbar">
-                        <button class="season-btn px-4 py-2 text-sm font-medium text-primary border-b-2 border-primary whitespace-nowrap transition-colors active" data-season="1" onclick="selectSeason(this)">Season 1</button>
-                        <button class="season-btn px-4 py-2 text-sm font-medium text-gray-500 dark:text-gray-400 hover:text-gray-800 dark:hover:text-gray-200 whitespace-nowrap transition-colors border-b-2 border-transparent" data-season="2" onclick="selectSeason(this)">Season 2</button>
-                        <button class="season-btn px-4 py-2 text-sm font-medium text-gray-500 dark:text-gray-400 hover:text-gray-800 dark:hover:text-gray-200 whitespace-nowrap transition-colors border-b-2 border-transparent" data-season="3" onclick="selectSeason(this)">Season 3</button>
-                        <button class="season-btn px-4 py-2 text-sm font-medium text-gray-500 dark:text-gray-400 hover:text-gray-800 dark:hover:text-gray-200 whitespace-nowrap transition-colors border-b-2 border-transparent" data-season="4" onclick="selectSeason(this)">Season 4</button>
-                        <button class="season-btn px-4 py-2 text-sm font-medium text-gray-500 dark:text-gray-400 hover:text-gray-800 dark:hover:text-gray-200 whitespace-nowrap transition-colors border-b-2 border-transparent" data-season="ova" onclick="selectSeason(this)">OVA</button>
-                    </div>
-                </div>
-                
-                <!-- Episode Selection for Mobile - Now appears as a list below season selection -->
-                <div id="mobile-episode-section" class="pt-4 border-t border-gray-200 dark:border-gray-700">
-                    <h3 class="text-sm font-medium text-gray-700 dark:text-gray-300 mb-3">Select Episode:</h3>
-                    <div class="mobile-episode-list episode-list-container custom-scrollbar" id="episode-list-mobile">
-                        <!-- Episodes will be loaded here as a list -->
-                    </div>
-                </div>
 
     <!-- Responsive Layout - Mobile: Stacked, Desktop: Sidebar -->
     <div class="flex flex-col lg:flex-row gap-6">
@@ -797,9 +798,9 @@
             <!-- Show Details (Mobile) -->
             <div class="lg:hidden bg-white dark:bg-[#151926] rounded-xl p-6 shadow-sm border border-gray-200 dark:border-gray-800 h-fit">
                 <div class="flex gap-4 mb-4">
-                    <img alt="Poster" class="w-24 h-36 object-cover rounded-lg shadow-md flex-shrink-0" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBL8sSKQhkIHjJRpfaXPOb2Ntr-YMNUhdTfQQNGnnmqGZu3SSewBEFAnXpGTo1YxqHXlb8pOCJCZrgrSF00Ey3CMmhZW5Q7dqz5o0qIOeV3DXsmqV-RKQGF2yEnwCFPLqyZ1R9luYVGdw-P_L6bRKjMPRM2RO5ISubiOat46Ovv-uMFsJfxGzRT0ngWoCZXAiiHQbJOA91N5Wyn21gKPKb6rWilqbabiqUYqUEEe31UdFQXOki6b3glJcCnNMssztZkZ0UYU_mwBbY"/>
+                    <img alt="Poster" class="w-24 h-36 object-cover rounded-lg shadow-md flex-shrink-0" src="https://cdn.myanimelist.net/images/anime/1588/152250l.jpg"/>
                     <div>
-                        <h1 class="text-xl font-bold leading-tight mb-2">Alya Sometimes Hides Her Feelings in Russian</h1>
+                        <h1 class="text-xl font-bold leading-tight mb-2">Pass the Monster Meat, Milady!</h1>
                         <div class="flex flex-wrap gap-2 text-xs text-gray-500 dark:text-gray-400 mb-2">
                             <span class="px-1.5 py-0.5 border border-gray-300 dark:border-gray-700 rounded">TV-14</span>
                             <span class="px-1.5 py-0.5 bg-primary text-white rounded font-bold">HD</span>
@@ -812,8 +813,12 @@
                     </div>
                 </div>
                 <div class="description-container collapsed" id="description-container-mobile">
-                    <p class="text-sm text-gray-600 dark:text-gray-300 leading-relaxed mb-2">
-                        Alisa Mikhailovna Kujou is a beautiful half-Russian girl who sits next to Masachika Kuze in class. Despite her appearance, she's a tsundere who is always glaring at Kuze. She's also the vice president of the student council and is secretly a light novel author. Kuze is a lazy student who always naps in class, but he's actually quite capable when he wants to be. He understands Russian and can hear Alisa's affectionate mutterings in Russian, but he pretends not to understand to tease her.
+                    <p class="text-sm text-gray-600 dark:text-gray-300 leading-relaxed mb-2">Melphiera Marchalrayd, the daughter of a count, dedicates her time to researching the culinary possibilities of monster meat—a peculiar endeavor started by her late mother. By teaching the people of the Marchalrayd lands to prepare such exotic ingredients, Melphiera hopes to help stave off famine. Unfortunately, her unique tastes and intimate knowledge of monsters have led to her social isolation: few nobles interact with her willingly, disdainfully calling her the "Voracious Villainess."
+
+When a monster attack erupts at a royal banquet—where Melphiera has been sent to find a husband—Aristide Rogier du Galbraith, the younger brother of the crown prince, leaps to her aid. Due to his terrifying skill in slaying monsters, Aristide has earned the title of "Blood-Man Duke." Charmed by Melphiera's fearlessness and intriguing culinary prowess, Aristide soon declares his intent to propose.
+
+Together, Melphiera and Aristide, high society's most eccentric couple, strive to see beyond the cruel rumors and encourage each other's fascination with monsters and the art of preparing them.
+
                     </p>
                 </div>
                 <div class="description-toggle" id="description-toggle-mobile" onclick="toggleDescriptionMobile()">
@@ -825,28 +830,28 @@
                     <!-- Title Information -->
                     <div>
                         <span class="font-semibold text-gray-700 dark:text-gray-200">Title:</span> 
-                        <span class="ml-1">Alya Sometimes Hides Her Feelings in Russian</span>
+                        <span class="ml-1"> Pass the Monster Meat, Milady!</span>
                     </div>
                     <div>
                         <span class="font-semibold text-gray-700 dark:text-gray-200">Original:</span> 
-                        <span class="ml-1">Tokidoki Bosotto Russia-go de Dereru Tonari no Alya-san</span>
+                        <span class="ml-1">Akujiki Reijō to Kyōketsu Kōshaku: Sono Mamono, Watashi ga Oishiku Itadakimasu!</span>
                     </div>
                     <div>
                         <span class="font-semibold text-gray-700 dark:text-gray-200">Japanese:</span> 
-                        <span class="ml-1">時々ボソッとロシア語でデレる隣のアーリャさん</span>
+                        <span class="ml-1">悪食令嬢と狂血公爵 〜その魔物、私が美味しくいただきます！〜</span>
                     </div>
                     
                     <!-- Synonyms -->
                     <div>
                         <span class="font-semibold text-gray-700 dark:text-gray-200">Synonyms:</span> 
-                        <span class="ml-1">Roshidere, Alya-san, who sits besides me and sometimes murmurs affectionately in Russian., Arya Next Door Sometimes Lapses into Russian</span>
+                        <span class="ml-1">R</span>
                     </div>
                     
                     <!-- Airing Information -->
                     <div class="grid grid-cols-2 gap-2 mt-1">
                         <div>
                             <span class="font-semibold text-gray-700 dark:text-gray-200">Aired:</span> 
-                            <span class="ml-1">2023</span>
+                            <span class="ml-1">October 3, 2025</span>
                         </div>
                         <div>
                             <span class="font-semibold text-gray-700 dark:text-gray-200">Premiered:</span> 
@@ -872,37 +877,38 @@
                         
                         <div class="flex items-center gap-1 text-gray-600 dark:text-gray-400">
                             <span style="color: #5391cf;">★</span>
-                            <span>MAL</span>
+                            <span>MAL: 7.1</span>
                         </div>
                         
                         <span class="text-gray-400 dark:text-gray-500">|</span>
                         
                         <div class="flex items-center gap-1 text-gray-600 dark:text-gray-400">
                             <span style="color: #ccbd5e;">★</span>
-                            <span>IMDb</span>
+                            <span>IMDb: 6.7</span>
                         </div>
                     </div>
                     <!-- Popularity -->
                     <div>
                         <span class="font-semibold text-gray-700 dark:text-gray-200">Popularity:</span> 
-                        <span class="ml-1">#5488</span>
+                        <span class="ml-1">#7492</span>
                     </div>
                     
                     <!-- Genres -->
                     <div class="flex flex-wrap items-center gap-x-2 gap-y-1">
                         <span class="font-semibold text-gray-700 dark:text-gray-200">Genres:</span>
-                        <span class="px-2 py-1 bg-gray-100 dark:bg-gray-800 rounded text-xs text-gray-700 dark:text-gray-200 hover:bg-[#4d85bd] focus:bg-[#4d85bd] focus:outline-none focus:ring-2 focus:ring-[#4d85bd] focus:ring-opacity-50 transition-colors cursor-pointer">Action</span>
-                        <span class="px-2 py-1 bg-gray-100 dark:bg-gray-800 rounded text-xs text-gray-700 dark:text-gray-200 hover:bg-[#4d85bd] focus:bg-[#4d85bd] focus:outline-none focus:ring-2 focus:ring-[#4d85bd] focus:ring-opacity-50 transition-colors cursor-pointer">Comedy</span>
-                        <span class="px-2 py-1 bg-gray-100 dark:bg-gray-800 rounded text-xs text-gray-700 dark:text-gray-200 hover:bg-[#4d85bd] focus:bg-[#4d85bd] focus:outline-none focus:ring-2 focus:ring-[#4d85bd] focus:ring-opacity-50 transition-colors cursor-pointer">Slice of Life</span>
+                        <span class="px-2 py-1 bg-gray-100 dark:bg-gray-800 rounded text-xs text-gray-700 dark:text-gray-200 hover:bg-[#4d85bd] focus:bg-[#4d85bd] focus:outline-none focus:ring-2 focus:ring-[#4d85bd] focus:ring-opacity-50 transition-colors cursor-pointer">Fantasy</span>
+                        <span class="px-2 py-1 bg-gray-100 dark:bg-gray-800 rounded text-xs text-gray-700 dark:text-gray-200 hover:bg-[#4d85bd] focus:bg-[#4d85bd] focus:outline-none focus:ring-2 focus:ring-[#4d85bd] focus:ring-opacity-50 transition-colors cursor-pointer">Romance</span>
+                        <span class="px-2 py-1 bg-gray-100 dark:bg-gray-800 rounded text-xs text-gray-700 dark:text-gray-200 hover:bg-[#4d85bd] focus:bg-[#4d85bd] focus:outline-none focus:ring-2 focus:ring-[#4d85bd] focus:ring-opacity-50 transition-colors cursor-pointer">Gourmet</span>
+                       <span class="px-2 py-1 bg-gray-100 dark:bg-gray-800 rounded text-xs text-gray-700 dark:text-gray-200 hover:bg-[#4d85bd] focus:bg-[#4d85bd] focus:outline-none focus:ring-2 focus:ring-[#4d85bd] focus:ring-opacity-50 transition-colors cursor-pointer">Comedy</span>
                         <span class="px-2 py-1 bg-gray-100 dark:bg-gray-800 rounded text-xs text-gray-700 dark:text-gray-200 hover:bg-[#4d85bd] focus:bg-[#4d85bd] focus:outline-none focus:ring-2 focus:ring-[#4d85bd] focus:ring-opacity-50 transition-colors cursor-pointer">Shounen</span>
                     </div>
                     
                     <!-- Cast -->
                     <div class="mt-1 flex flex-wrap items-center gap-x-2 gap-y-1">
                         <span class="font-semibold text-gray-700 dark:text-gray-200">Cast:</span>
-                        <span class="px-3 py-1 bg-[#9e265a] text-white rounded-full text-xs font-medium whitespace-nowrap">Takuya Eguchi</span>
-                        <span class="px-3 py-1 bg-[#9e265a] text-white rounded-full text-xs font-medium whitespace-nowrap">Atsumi Tanezaki</span>
-                        <span class="px-3 py-1 bg-[#9e265a] text-white rounded-full text-xs font-medium whitespace-nowrap">Saori Hayami</span>
+                        <span class="px-3 py-1 bg-[#9e265a] text-white rounded-full text-xs font-medium whitespace-nowrap">Kanna Nakamura</span>
+                        <span class="px-3 py-1 bg-[#9e265a] text-white rounded-full text-xs font-medium whitespace-nowrap">Taito Ban</span>
+                        <span class="px-3 py-1 bg-[#9e265a] text-white rounded-full text-xs font-medium whitespace-nowrap">Takashi Kondō</span>
                     </div>
                     
                     <!-- Certification & Country -->
@@ -915,18 +921,18 @@
                     <!-- Studio & Producers -->
                     <div class="mt-1">
                         <span class="font-semibold text-gray-700 dark:text-gray-200">Studio:</span> 
-                        <span class="ml-1">Wit Studio, CloverWorks</span>
+                        <span class="ml-1">Asahi Production</span>
                     </div>
                     <div>
                         <span class="font-semibold text-gray-700 dark:text-gray-200">Producers:</span> 
                         <div class="mt-1 space-y-1">
                             <div class="flex items-center gap-2">
                                 <span class="text-gray-600 dark:text-gray-400">•</span>
-                                <span>TOHO</span>
+                                <span>Hinako Watanabe</span>
                             </div>
                             <div class="flex items-center gap-2">
                                 <span class="text-gray-600 dark:text-gray-400">•</span>
-                                <span>TV Tokyo</span>
+                                <span>Junichirō Tanaka</span>
                             </div>
                             <div class="flex items-center gap-2">
                                 <span class="text-gray-600 dark:text-gray-400">•</span>
@@ -1112,7 +1118,7 @@
 </div>
 <div class="flex flex-col items-center md:items-end gap-2 w-full md:w-auto">
 <div class="flex gap-4 text-sm font-semibold text-gray-700 dark:text-gray-300">
-<a class="hover:text-primary transition-colors" href="#">REQUEST</a>
+<a class="hover:text-primary transition-colors" href="https://t.me/+S43mvneJVrY1ZWZl">REQUEST</a>
 <a class="hover:text-primary transition-colors" href="#">CONTACT</a>
 </div>
 <div class="text-xs text-gray-500 dark:text-gray-500 mt-2 text-center md:text-right w-full">
@@ -1135,102 +1141,223 @@
     let isDescriptionExpandedDesktop = false;
     let isDescriptionExpandedMobile = false;
     
-    // Episode titles you provided
-    const episodeTitles = [
-        "Alya Hides Her Feelings in Russian",
-        "So Much For Childhood Friends",
-        "And So They Met",
-        "An Outpouring of Emotion",
-        "Different People, Common Undercurrent",
-        "A Kiss of the Indirect Variety",
-        "A Storm Arrives",
-        "Student Congress",
-        "Rom-commy with a Chance of Hypnosis",
-        "Birthday Party, Much Belated",
-        "An Unexpected Curtain-Raiser",
-        "Chin Up and Face Forward"
-    ];
-    
-    // Updated streaming links from your provided data
-    const subEpisodes = [
-        'https://streamhls.to/e/0p9iw7b3utgf',    // Episode 1 (Link 1)
-        'https://streamhls.to/e/ybklzmszdyen',    // Episode 2
-        'https://streamhls.to/e/xtriwp7nrn64',    // Episode 3
-        'https://streamhls.to/e/hg1iob38mg5j',    // Episode 4
-        'https://streamhls.to/e/l0k2eoap3ing',    // Episode 5
-        'https://streamhls.to/e/yyo3p3pfv4lo',    // Episode 6
-        'https://streamhls.to/e/8kn01fu67h32',    // Episode 7
-        'https://streamhls.to/e/8a2evep9gf0v',    // Episode 8
-        'https://streamhls.to/e/zve9orpga80e',    // Episode 9
-        'https://streamhls.to/e/om8s1fksqdj5',    // Episode 10
-        'https://streamhls.to/e/5k61mcdh2a0a',    // Episode 11
-        'https://streamhls.to/e/ul5fhrhxc1og'     // Episode 12
-    ];
-    
-    const dubEpisodes = [
-        'https://streamhls.to/e/s4wjjoq9oc7c',    // Episode 1
-        'https://streamhls.to/e/q888456vf7gk',    // Episode 2
-        'https://streamhls.to/e/rhp8cuxkdcin',    // Episode 3
-        'https://streamhls.to/e/2axx0rqgad7p',    // Episode 4
-        'https://streamhls.to/e/4qieuu8umm5d',    // Episode 5
-        'https://streamhls.to/e/btm71yxg2nhj',    // Episode 6
-        'https://streamhls.to/e/cbj8lnlkyw2d',    // Episode 7
-        'https://streamhls.to/e/rss00ysbbrgz',    // Episode 8
-        'https://streamhls.to/e/crkafly2zsep',    // Episode 9
-        'https://streamhls.to/e/jb11468qa9pl',    // Episode 10
-        'https://streamhls.to/e/gi61kby6fzxx',    // Episode 11
-        'https://streamhls.to/e/mz3g5tlqcwyg'     // Episode 12
-    ];
-    
-    const rawEpisodes = [
-        'https://filemoon.to/e/m2t1dbe70xug/Alya_Sometimes_Hides_Her_Feelings_in_Russian_sub_01',
-        'https://filemoon.to/e/di5xfydskla9/Alya_Sometimes_Hides_Her_Feelings_in_Russian_sub_02',
-        'https://filemoon.to/e/8gpfd2057g14/Alya_Sometimes_Hides_Her_Feelings_in_Russian_sub_03',
-        'https://filemoon.to/e/m2dqbguw6hmn/Alya_Sometimes_Hides_Her_Feelings_in_Russian_sub_04',
-        'https://filemoon.to/e/b2midmp9x1zt/Alya_Sometimes_Hides_Her_Feelings_in_Russian_sub_05',
-        'https://filemoon.to/e/ep77yurju30z/Alya_Sometimes_Hides_Her_Feelings_in_Russian_sub_06',
-        'https://filemoon.to/e/56guf0ddp590/Alya_Sometimes_Hides_Her_Feelings_in_Russian_sub_07',
-        'https://filemoon.to/e/ufixpoucky98/Alya_Sometimes_Hides_Her_Feelings_in_Russian_sub_08',
-        'https://filemoon.to/e/qn63festgt4m/Alya_Sometimes_Hides_Her_Feelings_in_Russian_Watch_sub_09',
-        'https://filemoon.to/e/soiis8o28zd0/Alya_Sometimes_Hides_Her_Feelings_in_Russian_sub_10',
-        'https://filemoon.to/e/c6mx2hfvs3d8/Alya_Sometimes_Hides_Her_Feelings_in_Russian_sub_11',
-        'https://filemoon.to/e/4ht6iswfo984/Alya_Sometimes_Hides_Her_Feelings_in_Russian_sub_12'
-    ];
-    
-    // Video URLs for ALL servers
-    const episodeUrls = {
-        'SUB-HD-01': subEpisodes,
-        'SUB-HD-02': subEpisodes,
-        'SUB-HD-03': subEpisodes,
-        'SUB-HD-04': subEpisodes,
-        'SUB-HD-05': subEpisodes,
-        'DUB-HD-01': dubEpisodes,
-        'DUB-HD-02': dubEpisodes,
-        'DUB-HD-03': dubEpisodes,
-        'DUB-HD-04': dubEpisodes,
-        'DUB-HD-05': dubEpisodes,
-        'RAW-HD-01': rawEpisodes,
-        'RAW-HD-02': rawEpisodes,
-        'RAW-HD-03': rawEpisodes,
-        'RAW-HD-04': rawEpisodes,
-        'RAW-HD-05': rawEpisodes
-    };
+// Episode titles you provided
+const episodeTitles = [
+    "A Jerky is a Promise: Skatzbitt",
+    "A Proposal from Above with a Gift",
+    "Grilled Skewers of Prime Meat: Royal Moodle",
+    "Signaling Departure with a Pillar of Flame",
+    "Night at Fort Ritterd",
+    "In Season: Battered and Deep-Fried Monster Fish",
+    "Those Who Inherit The Galbraith Name",
+    "Uses for Cloudy Quartz",
+    "The Voracious Villainess's Resolve",
+    "The Blood-Mad Duke's Intentions",
+    "Sweet or Sour Fruit",
+    "The Voracious Villainess's First Appearance"
+];
 
-    // Episode data for Season 1 (Alya Sometimes Hides Her Feelings in Russian)
+// HD-01 Server (Strmup.to)
+const subEpisodesHD01 = [
+    'https://strmup.to/7c479d8ff859c',    // Episode 1
+    'https://strmup.to/31286346bcfbc',    // Episode 2
+    'https://strmup.to/9a08b5c192e88',    // Episode 3
+    'https://strmup.to/b89b9284a4f10',    // Episode 4
+    'https://strmup.to/c3ddcf7e349a6',    // Episode 5
+    'https://strmup.to/4b5dbac8ed41e',    // Episode 6
+    'https://strmup.to/998dc1d114e72',    // Episode 7
+    'https://strmup.to/3c207cb189720',    // Episode 8
+    'https://strmup.to/1959eddf612c1',    // Episode 9
+    'https://strmup.to/deed15ee6504a',    // Episode 10
+    'https://strmup.to/8c129ea4e8268',    // Episode 11
+    'https://strmup.to/1909eae877b60'     // Episode 12
+];
+
+const dubEpisodesHD01 = [
+    'https://strmup.to/7970f2a4c6728',    // Episode 1
+    'https://strmup.to/8d2a7e5ed92cf',    // Episode 2
+    'https://strmup.to/665b3076fae0b',    // Episode 3
+    'https://strmup.to/27ea9aa6396ac',    // Episode 4
+    'https://strmup.to/1a1228a170db0',    // Episode 5
+    'https://strmup.to/bfe693b2fe66e',    // Episode 6
+    'https://strmup.to/a3a171afa6f59',    // Episode 7
+    'https://strmup.to/ee4ef02871a9c',    // Episode 8
+    'https://strmup.to/4792cf161d45d',    // Episode 9
+    'https://strmup.to/bf8ce186c6f32',    // Episode 10
+    'https://strmup.to/3bae79aa13000',    // Episode 11
+    'https://strmup.to/61670302b4eeb'     // Episode 12
+];
+
+// HD-02 Server (Bysejikuar.com)
+const subEpisodesHD02 = [
+    'https://bysejikuar.com/e/4o8o4h6ubnnl/anime-pass-the-monster-meat-milady-sub-01',    // Episode 1
+    'https://bysejikuar.com/e/i96iqhpxqjpo/anime-pass-the-monster-meat-milady-sub-02',    // Episode 2
+    'https://bysejikuar.com/e/ojxp4ntr7jr3/pass-the-monster-meat-milady-sub-03',    // Episode 3
+    'https://bysejikuar.com/e/ad8dfepfe75w/pass-the-monster-meat-milady-sub-04',    // Episode 4
+    'https://bysejikuar.com/e/y45rpv3d4rv0/anime-pass-the-monster-meat-milady-sub-05',    // Episode 5
+    'https://bysejikuar.com/e/50dhilmodcqu/pass-the-monster-meat-milady-sub-06',    // Episode 6
+    'https://bysejikuar.com/e/bd8wq4xw0did/pass-the-monster-meat-milady-sub-07',    // Episode 7
+    'https://bysejikuar.com/e/25ywf7h63bp0/pass-the-monster-meat-milady-sub-08',    // Episode 8
+    'https://bysejikuar.com/e/kearh4plvnb1/pass-the-monster-meat-milady-sub-09',    // Episode 9
+    'https://bysejikuar.com/e/ae9ixql3grll/pass-the-monster-meat-milady-sub-10',    // Episode 10
+    'https://bysejikuar.com/e/mkfcvvychkzg/pass-the-monster-meat-milady-sub-11',    // Episode 11
+    'https://bysejikuar.com/e/ut3duycy0gm3/pass-the-monster-meat-milady-sub-12'     // Episode 12
+];
+
+const dubEpisodesHD02 = [
+    'https://bysejikuar.com/e/mdh9xo3xipqt/pass-the-monster-meat-milady-dub-01',    // Episode 1
+    'https://bysejikuar.com/e/dy0kvn8gk89e/pass-the-monster-meat-milady-dub-02',    // Episode 2
+    'https://bysejikuar.com/e/n1lsbqk8gf7d/pass-the-monster-meat-milady-dub-03',    // Episode 3
+    'https://bysejikuar.com/e/m6jjh6oyqvk0/pass-the-monster-meat-milady-dub-04',    // Episode 4
+    'https://bysejikuar.com/e/u65tdw7tcwep/pass-the-monster-meat-milady-dub-05',    // Episode 5
+    'https://bysejikuar.com/e/qdn2iisfra30/pass-the-monster-meat-milady-dub-06',    // Episode 6
+    'https://bysejikuar.com/e/qewc622o1vie/pass-the-monster-meat-milady-dub-07',    // Episode 7
+    'https://bysejikuar.com/e/zvmw9cazftwz/pass-the-monster-meat-milady-dub-08',    // Episode 8
+    'https://bysejikuar.com/e/4vc80es67vtr/pass-the-monster-meat-milady-dub-09',    // Episode 9
+    'https://bysejikuar.com/e/cm96szgfsogi/pass-the-monster-meat-milady-dub-10',    // Episode 10
+    'https://bysejikuar.com/e/uyebiqpv6gn8/pass-the-monster-meat-milady-dub-11',    // Episode 11
+    'https://bysejikuar.com/e/bp3ee9zadvol/pass-the-monster-meat-milady-dub-12'     // Episode 12
+];
+
+// HD-03 Server (Mixdrop.top)
+const subEpisodesHD03 = [
+    'https://mixdrop.top/e/el067k6phn6zoj',    // Episode 1
+    'https://mixdrop.top/e/ow94ejngclj3ldd',    // Episode 2
+    'https://mixdrop.top/e/jdzq108zfv73g7',    // Episode 3
+    'https://mixdrop.top/e/mkn1elqpixxw6o7',    // Episode 4
+    'https://mixdrop.top/e/dkd307kns6l919',    // Episode 5
+    'https://mixdrop.top/e/nlx19wnwukpzk9',    // Episode 6
+    'https://mixdrop.top/e/nlx19ql0bv1343',    // Episode 7
+    'https://mixdrop.top/e/8lq10w49urmgn6',    // Episode 8
+    'https://mixdrop.top/e/pj94e1eehnpg',    // Episode 9
+    'https://mixdrop.top/e/k0mwx70qfg36kj',    // Episode 10
+    'https://mixdrop.top/e/l7qnzkoecpq3m8',    // Episode 11
+    'https://mixdrop.top/e/vkz7e0k9hq719p'     // Episode 12
+];
+
+const dubEpisodesHD03 = [
+    'https://mixdrop.top/e/03j9w08jhx97l6',    // Episode 1
+    'https://mixdrop.top/e/8d2a7e5ed92cf',    // Episode 2
+    'https://mixdrop.top/e/dkd3wg4jfpe1rj',    // Episode 3
+    'https://mixdrop.top/e/z1zo03qzc83913',    // Episode 4
+    'https://mixdrop.top/e/q19vrk11srrrj9',    // Episode 5
+    'https://mixdrop.top/e/679pg1qjiwlw83',    // Episode 6
+    'https://mixdrop.top/e/03j9w041fde0r',    // Episode 7
+    'https://mixdrop.top/e/q19vrkd1fe67mn',    // Episode 8
+    'https://mixdrop.top/e/gjk0xvd8s31l7r',    // Episode 9
+    'https://mixdrop.top/e/bf8ce186c6f32',    // Episode 10
+    'https://mixdrop.top/e/9wq10mkwf88lkz',    // Episode 11
+    'https://mixdrop.top/e/679pg1d1unx1xg'     // Episode 12
+];
+
+// HD-04 Server (Add your HD-04 links here)
+const subEpisodesHD04 = [
+    'https://example.com/hd04-sub-01',    // Episode 1
+    'https://example.com/hd04-sub-02',    // Episode 2
+    'https://example.com/hd04-sub-03',    // Episode 3
+    'https://example.com/hd04-sub-04',    // Episode 4
+    'https://example.com/hd04-sub-05',    // Episode 5
+    'https://example.com/hd04-sub-06',    // Episode 6
+    'https://example.com/hd04-sub-07',    // Episode 7
+    'https://example.com/hd04-sub-08',    // Episode 8
+    'https://example.com/hd04-sub-09',    // Episode 9
+    'https://example.com/hd04-sub-10',    // Episode 10
+    'https://example.com/hd04-sub-11',    // Episode 11
+    'https://example.com/hd04-sub-12'     // Episode 12
+];
+
+const dubEpisodesHD04 = [
+    'https://example.com/hd04-dub-01',    // Episode 1
+    'https://example.com/hd04-dub-02',    // Episode 2
+    'https://example.com/hd04-dub-03',    // Episode 3
+    'https://example.com/hd04-dub-04',    // Episode 4
+    'https://example.com/hd04-dub-05',    // Episode 5
+    'https://example.com/hd04-dub-06',    // Episode 6
+    'https://example.com/hd04-dub-07',    // Episode 7
+    'https://example.com/hd04-dub-08',    // Episode 8
+    'https://example.com/hd04-dub-09',    // Episode 9
+    'https://example.com/hd04-dub-10',    // Episode 10
+    'https://example.com/hd04-dub-11',    // Episode 11
+    'https://example.com/hd04-dub-12'     // Episode 12
+];
+
+// HD-05 Server (Add your HD-05 links here)
+const subEpisodesHD05 = [
+    'https://example.com/hd05-sub-01',    // Episode 1
+    'https://example.com/hd05-sub-02',    // Episode 2
+    'https://example.com/hd05-sub-03',    // Episode 3
+    'https://example.com/hd05-sub-04',    // Episode 4
+    'https://example.com/hd05-sub-05',    // Episode 5
+    'https://example.com/hd05-sub-06',    // Episode 6
+    'https://example.com/hd05-sub-07',    // Episode 7
+    'https://example.com/hd05-sub-08',    // Episode 8
+    'https://example.com/hd05-sub-09',    // Episode 9
+    'https://example.com/hd05-sub-10',    // Episode 10
+    'https://example.com/hd05-sub-11',    // Episode 11
+    'https://example.com/hd05-sub-12'     // Episode 12
+];
+
+const dubEpisodesHD05 = [
+    'https://example.com/hd05-dub-01',    // Episode 1
+    'https://example.com/hd05-dub-02',    // Episode 2
+    'https://example.com/hd05-dub-03',    // Episode 3
+    'https://example.com/hd05-dub-04',    // Episode 4
+    'https://example.com/hd05-dub-05',    // Episode 5
+    'https://example.com/hd05-dub-06',    // Episode 6
+    'https://example.com/hd05-dub-07',    // Episode 7
+    'https://example.com/hd05-dub-08',    // Episode 8
+    'https://example.com/hd05-dub-09',    // Episode 9
+    'https://example.com/hd05-dub-10',    // Episode 10
+    'https://example.com/hd05-dub-11',    // Episode 11
+    'https://example.com/hd05-dub-12'     // Episode 12
+];
+
+// RAW servers (using HD-01 SUB links as placeholder - you can replace with actual RAW links)
+const rawEpisodesHD01 = subEpisodesHD01;
+const rawEpisodesHD02 = subEpisodesHD02;
+const rawEpisodesHD03 = subEpisodesHD03;
+const rawEpisodesHD04 = subEpisodesHD04;
+const rawEpisodesHD05 = subEpisodesHD05;
+
+// Video URLs for ALL servers - each server has individual links
+const episodeUrls = {
+    // SUB servers
+    'SUB-HD-01': subEpisodesHD01,
+    'SUB-HD-02': subEpisodesHD02,
+    'SUB-HD-03': subEpisodesHD03,
+    'SUB-HD-04': subEpisodesHD04,
+    'SUB-HD-05': subEpisodesHD05,
+    
+    // DUB servers
+    'DUB-HD-01': dubEpisodesHD01,
+    'DUB-HD-02': dubEpisodesHD02,
+    'DUB-HD-03': dubEpisodesHD03,
+    'DUB-HD-04': dubEpisodesHD04,
+    'DUB-HD-05': dubEpisodesHD05,
+    
+    // RAW servers
+    'RAW-HD-01': rawEpisodesHD01,
+    'RAW-HD-02': rawEpisodesHD02,
+    'RAW-HD-03': rawEpisodesHD03,
+    'RAW-HD-04': rawEpisodesHD04,
+    'RAW-HD-05': rawEpisodesHD05
+};
+
+    // Episode data for Season 1 (Pass the Monster Meat, Milady!)
     const episodeData = {
         '1': [
-            { id: 1, title: 'Alya Hides Her Feelings in Russian' },
-            { id: 2, title: 'So Much For Childhood Friends' },
-            { id: 3, title: 'And So They Met' },
-            { id: 4, title: 'An Outpouring of Emotion' },
-            { id: 5, title: 'Different People, Common Undercurrent' },
-            { id: 6, title: 'A Kiss of the Indirect Variety' },
-            { id: 7, title: 'A Storm Arrives' },
-            { id: 8, title: 'Student Congress' },
-            { id: 9, title: 'Rom-commy with a Chance of Hypnosis' },
-            { id: 10, title: 'Birthday Party, Much Belated' },
-            { id: 11, title: 'An Unexpected Curtain-Raiser' },
-            { id: 12, title: 'Chin Up and Face Forward' }
+            { id: 1, title: 'A Jerky is a Promise: Skatzbitt' },
+            { id: 2, title: ' A Proposal from Above with a Gift' },
+            { id: 3, title: 'Grilled Skewers of Prime Meat: Royal Moodle' },
+            { id: 4, title: 'Signaling Departure with a Pillar of Flame' },
+            { id: 5, title: 'Night at Fort Ritterd' },
+            { id: 6, title: 'In Season: Battered and Deep-Fried Monster Fish' },
+            { id: 7, title: 'Those Who Inherit The Galbraith Name' },
+            { id: 8, title: 'Uses for Cloudy Quartz' },
+            { id: 9, title: 'The Voracious Villainess\'s Resolve' },
+            { id: 10, title: 'The Blood-Mad Duke\'s Intentions' },
+            { id: 11, title: 'Sweet or Sour Fruit' },
+            { id: 12, title: 'The Voracious Villainess\'s First Appearance' }
         ],
         '2': [
             { id: 1, title: 'Second Year Begins' },
